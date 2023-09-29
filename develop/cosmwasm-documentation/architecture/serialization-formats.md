@@ -1,0 +1,21 @@
+# Serialization Formats
+
+## Serialization formats
+
+Serialization in CosmWasm allows you to inspect and debug messages sent on the blockchain, as well as parse results, without the need for complex libraries or downloading custom schemas and ABIs.
+
+## JSON
+
+JSON is self-describing, human-readable, and used in APIs everywhere. It does have some downsides, such as handling numbers over 2^53 (in that case, you can use strings), having no clear distinction between strings and base64-encoded binary, and having no hard-coded schema. We auto-generate JSON Schema descriptors for the public API of contracts, which can be used to inspect the supported API and optionally used in client-side tooling for auto-validation of messages.
+
+Note that contracts define their parsing logic for messages, and the code is not enforced by the framework. While there is extended support for JSON through cosmwasm::serde and cw-template, anyone can change it as long as client support for the custom format is provided.
+
+## Protobuf
+
+Protobuf is a well-known and widely-supported binary format that provides a stricter schema guarantee than JSON and a more compact format. Support for Protocol Buffers and gRPC was added with the Cosmos SDK v0.39.0 upgrade.
+
+## Cap'n proto
+
+Cap'n Proto is a super-lean encoding format with zero-copy reads and no parsing needed. This has been suggested for use in CosmWasm as an optional addition. It may be considered an opt-in format for contracts desiring such efficiency or strict schema, or possibly just used for encoding internal data structures (Params).
+
+\

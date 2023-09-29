@@ -10,7 +10,7 @@ The XION Daemon binary is the primary interaction point for a DAPP developer to 
 
 Note: $GOPATH/bin must be on your $PATH for this to work.
 
-For more information see [here](../full-nodes/build-the-xion-daemon.md).
+For more information see [here](../../../full-nodes/build-the-xion-daemon.md).
 
 ### Confirm Installation
 
@@ -22,13 +22,12 @@ $  xiond
 
 And you should see the following output
 
-```
-xion daemon (server)
+<pre><code>xion daemon (server)
 
 Usage:
   xiond [command]
-
-Available Commands:
+<strong>
+</strong>Available Commands:
   completion  Generate the autocompletion script for the specified shell
   config      Create or query an application CLI configuration file
   debug       Tool for helping with debugging your application
@@ -55,7 +54,7 @@ Flags:
       --trace               print out full stack trace on errors
 
 Use "xiond [command] --help" for more information about a command.
-```
+</code></pre>
 
 
 
