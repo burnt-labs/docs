@@ -1,8 +1,8 @@
 ---
-description: An account abstraction solution for CosmWasm-enabled chains
+description: A protocol level account abstraction solution
 ---
 
-# Account Abstractions
+# Account Abstraction
 
 On smart contract-enabled blockchains, a user will typically encounter two types of accounts:
 
@@ -12,7 +12,7 @@ This type of account is managed through a private key. It's referred to as "exte
 
 ### Smart Contract Account (SCA)
 
-&#x20;These accounts are governed by binary code that resides on the blockchain. The control is enforced through the code's execution.
+These accounts are governed by binary code that resides on the blockchain. The control is enforced through the code's execution.
 
 
 
