@@ -1,2 +1,0 @@
-# Comparison With Solidity Contracts
-
