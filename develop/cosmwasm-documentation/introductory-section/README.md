@@ -3,7 +3,7 @@
 The introductory section provides an overview of the core principles behind CosmWasm Smart Contracts. While a basic familiarity with Rust could be beneficial, the material is designed to cater to individuals of all proficiency levels, irrespective of their prior experience. Our goal is to offer clear and accessible guidance, allowing newcomers to gain practical insights through a comprehensive, step-by-step tutorial that delves into the following subjects:
 
 * Setting up environment
-* Deploying a smart contract to the Archway blockchain
+* Deploying a smart contract to the XION blockchain
 * Executing smart contract functions via the CLI
 * Modifying an existing contract
 
