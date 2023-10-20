@@ -6,9 +6,9 @@ To set up a local testnet, see Running a Local Testnet. For details on the avail
 
 To work with CosmWasm smart contract, a user will need rust installed on their machine. If the user does not have it installed, they can find installation instructions on the Rust website.
 
-Additionally, the user will need the Wasm rust compiler backend installed to build Wasm binaries. For information on how to install Wasm and Rust, head to the NAME page
+Additionally, the user will need the Wasm rust compiler backend installed to build Wasm binaries.&#x20;
 
-Also, to be able to upload Rust Wasm Contracts into the blockchain, a user will need to install docker. Information to install docker can be found on the BLANK page.
+Also, to be able to upload Rust Wasm Contracts into the blockchain, a user will need to install docker.&#x20;
 
 &#x20;To minimize their contract sizes, it will be required to run CosmWasm Rust Optimizer; without that, more complex contracts might exceed a size limit.&#x20;
 
