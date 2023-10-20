@@ -20,7 +20,7 @@ These representations allow humans to easily work with and understand IP address
 
 ### Addresses <a href="#addr" id="addr"></a>
 
-Addresses in the Cosmos SDK are 20-character long strings and include security checks, such as chain-prefix in Bech32, checksums in Bech32, and checksummed hex (EIP55). Since CosmWasm is an extension of the Cosmos SDK, it adheres to the same address rules; wallets, smart contracts, and modules each have an identifier address with a specific prefix. For instance, "archway1..." is used for Archway, while "wasm1..." is used for some CosmWasm-enabled chains.
+Addresses in the Cosmos SDK are 20-character long strings and include security checks, such as chain-prefix in Bech32, checksums in Bech32, and checksummed hex (EIP55). Since CosmWasm is an extension of the Cosmos SDK, it adheres to the same address rules; wallets, smart contracts, and modules each have an identifier address with a specific prefix.
 
 When providing an address to smart contracts, you can submit it as a string and subsequently validate the input as an Addr. The Addr serves as a wrapper for a plain string, offering valuable utility functions such as address validation through string validation.
 
