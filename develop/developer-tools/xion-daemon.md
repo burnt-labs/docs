@@ -1,2 +1,0 @@
-# XION Daemon
-

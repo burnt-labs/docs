@@ -1,2 +1,0 @@
-# CosmWasm and IBC
-
