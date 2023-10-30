@@ -21,7 +21,7 @@ cd contracts/nameservice
 
 ## Compile Contract
 
-In this section, we will go over how to compile using both Cargo and XIOND developer cli.
+In this section, we will go over how to compile using Cargo.
 
 #### Compile using Cargo
 
@@ -32,16 +32,6 @@ cargo wasm
 ```
 
 After the compilation process, you should find the file _target/wasm32-unknown-unknown/release/cw\_nameservice.wasm_ generated. Its size is roughly 1.9 MB, indicating that it's a release build but hasn't undergone the removal of all redundant code yet. To deploy the contract on-chain, optimization is necessary. Refer to the Optimized Compilation"section below for guidance on optimizing a contract.
-
-#### Compile using XIOND Developer cli
-
-Execute the following command to compile the contract:
-
-```
-// Some code
-```
-
-This process also produces an unoptimized version of the contract, which must undergo optimization before it can be stored on-chain
 
 ## Optimized Compilation&#x20;
 
@@ -72,10 +62,4 @@ docker run --rm -v "$(pwd)":/code \
 
 By running this command, the .wasm file will undergo optimization, resulting in an optimized .wasm file located in the artifacts directory.
 
-#### Optimize using XIOND developer cli
-
-To build an optimized wasm binary for storage on the blockchain, use the _<mark style="color:purple;">‘ – OUR XION FLAG’</mark>_ flag.
-
-```
-// Some code
-```
+####
