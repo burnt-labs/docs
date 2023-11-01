@@ -4,7 +4,7 @@
 
 ## Learn
 
-* [About XION](learn/about-xion.md)
+* [Burnt (XION): Business Overview](learn/burnt-xion-business-overview.md)
 * [Tokenomics](learn/tokenomics.md)
 * [Tech Stack](learn/tech-stack.md)
 * [Security](learn/security.md)
@@ -36,9 +36,7 @@
     * [Query](develop/cosmwasm-documentation/contract-semantics/query.md)
     * [Events](develop/cosmwasm-documentation/contract-semantics/events.md)
     * [Math](develop/cosmwasm-documentation/contract-semantics/math.md)
-    * [Verifying Smart Contracts](develop/cosmwasm-documentation/contract-semantics/verifying-smart-contracts.md)
     * [Migration](develop/cosmwasm-documentation/contract-semantics/migration.md)
-    * [Migrating a dapp](develop/cosmwasm-documentation/contract-semantics/migrating-a-dapp.md)
     * [Testing](develop/cosmwasm-documentation/contract-semantics/testing.md)
   * [Architecture of Multi-Chain Contracts](develop/cosmwasm-documentation/architecture-of-multi-chain-contracts/README.md)
     * [Actor Models for Contract Calls](develop/cosmwasm-documentation/architecture-of-multi-chain-contracts/actor-models-for-contract-calls.md)

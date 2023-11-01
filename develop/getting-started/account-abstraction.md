@@ -14,13 +14,11 @@ This type of account is managed through a private key. It's referred to as "exte
 
 These accounts are governed by binary code that resides on the blockchain. The control is enforced through the code's execution.
 
-
-
 In the traditional setup, only EOAs have the ability to initiate transactions (txs). They achieve this by securely signing the transactions using their private keys. The authenticity of a transaction is confirmed if it comes with a valid signature.
 
 Contrastingly, SCAs lack the capability to initiate transactions due to the absence of private keys. This absence creates ambiguity in verifying transaction authenticity.
 
-### &#x20;So, what makes this problematic?
+#### So, what makes this problematic?
 
 EOAs exhibit notable security vulnerabilities. To begin, altering the private/public key associated with an EOA is not feasible. Consequently, losing your seed phrase results in a permanent and irreversible loss of account access. Similarly, if an unauthorized individual gains possession of your seed phrase, they acquire perpetual and irreversible access to your account. In contrast, nearly all web2 logins permit password changes or recovery.
 
