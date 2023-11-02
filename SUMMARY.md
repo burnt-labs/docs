@@ -4,7 +4,7 @@
 
 ## Learn
 
-* [Burnt (XION): Business Overview](learn/burnt-xion-business-overview.md)
+* [Overview](learn/overview.md)
 * [Tokenomics](learn/tokenomics.md)
 * [Tech Stack](learn/tech-stack.md)
 * [Security](learn/security.md)
