@@ -50,16 +50,6 @@
     * [Key Value Storage](develop/cosmwasm-documentation/tutorials/key-value-storage/README.md)
       * [Indexes](develop/cosmwasm-documentation/tutorials/key-value-storage/indexes.md)
       * [State Modeling](develop/cosmwasm-documentation/tutorials/key-value-storage/state-modeling.md)
-    * [Cosmwasm By Example](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/README.md)
-      * [Math](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/math.md)
-      * [Instatiating CW Contracts](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/instatiating-cw-contracts.md)
-      * [Timelocks](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/timelocks.md)
-      * [Crowdfunding](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/crowdfunding.md)
-      * [Responses](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/responses.md)
-      * [Read & Write Within Contracts](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/read-and-write-within-contracts.md)
-      * [Sending Tokens](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/sending-tokens.md)
-      * [Token Vaults](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/token-vaults.md)
-      * [Constant Product AMM](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/constant-product-amm.md)
 * [Deploying Contracts to Testnet](develop/deploying-contracts-to-testnet.md)
 
 ## Full Nodes

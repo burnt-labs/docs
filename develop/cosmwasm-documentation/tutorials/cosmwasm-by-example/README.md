@@ -1,2 +1,0 @@
-# Cosmwasm By Example
-

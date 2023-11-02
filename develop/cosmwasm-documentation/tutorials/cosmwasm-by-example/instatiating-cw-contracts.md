@@ -1,2 +1,0 @@
-# Instatiating CW Contracts
-
