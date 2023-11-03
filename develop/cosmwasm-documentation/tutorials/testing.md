@@ -98,7 +98,7 @@ pub fn mock_env() -> Env {
       height: 12_345,
       time: 1_571_797_419,
       time_nanos: 879305533,
-      chain_id: "archway-testnet-14002".to_string(),
+      chain_id: "xion-testnet-1".to_string(),
     },
     contract: ContractInfo {
       address: HumanAddr::from(MOCK_CONTRACT_ADDR),
@@ -112,6 +112,7 @@ pub fn mock_env() -> Env {
 ```
 /// Just set sender and sent funds for the message.
 /// This is intended for use in test code only.
+
 pub fn mock_info<U: Into<HumanAddr>>(sender: U, sent: &[Coin]) -> MessageInfo {
   MessageInfo {
     sender: sender.into(),
@@ -133,10 +134,14 @@ fn transfer() {
     expires: 100_000,
   };
   let info = mock_info("creator", &coins(1, "BTC"));
+  
   // we can just call .unwrap() to assert this was a success
+  
   let res = init(deps.as_mut(), mock_env(), info, msg).unwrap();
   assert_eq!(0, res.messages.len());
+  
   // random cannot transfer
+  
   let info = mock_info("anyone", &[]);
   let err = handle_transfer(deps.as_mut(), mock_env(), info, HumanAddr::from("anyone"))
     .unwrap_err();
@@ -144,13 +149,17 @@ fn transfer() {
     ContractError::Unauthorized {} => {}
     e => panic!("unexpected error: {}", e),
   }
+  
   // owner can transfer
+  
   let info = mock_info("creator", &[]);
   let res =
     handle_transfer(deps.as_mut(), mock_env(), info, HumanAddr::from("someone")).unwrap();
   assert_eq!(res.attributes.len(), 2);
   assert_eq!(res.attributes[0], attr("action", "transfer"));
+  
   // check updated properly
+  
   let res = query_config(deps.as_ref()).unwrap();
   assert_eq!("someone", res.owner.as_str());
   assert_eq!("creator", res.creator.as_str());

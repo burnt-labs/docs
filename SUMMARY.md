@@ -52,7 +52,7 @@
       * [State Modeling](develop/cosmwasm-documentation/tutorials/key-value-storage/state-modeling.md)
     * [Cosmwasm By Example](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/README.md)
       * [Math](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/math.md)
-      * [Instatiating CW Contracts](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/instatiating-cw-contracts.md)
+      * [Instatiating CosmWasm Contract](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/instatiating-cosmwasm-contract.md)
       * [Timelocks](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/timelocks.md)
       * [Crowdfunding](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/crowdfunding.md)
       * [Responses](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/responses.md)
