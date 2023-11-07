@@ -10,4 +10,4 @@ We will have several endpoints for assist with various stages of development. To
 
 ## Testnet
 
-<table><thead><tr><th width="238"></th><th></th></tr></thead><tbody><tr><td>RPC Endpoint</td><td><a href="https://rpc.xion-testnet-1.burnt.com">https://rpc.xion-testnet-1.burnt.com:443</a></td></tr><tr><td>Rest Endpoint</td><td><a href="https://api.xion-testnet-1.burnt.com">https://api.xion-testnet-1.burnt.com</a></td></tr><tr><td>chain_id</td><td>xion-testnet-1</td></tr><tr><td>Block Explorer</td><td><a href="https://pingpub.xion-testnet-1.burnt.com/">https://pingpub.xion-testnet-1.burnt.com/</a></td></tr></tbody></table>
+<table><thead><tr><th width="238"></th><th></th></tr></thead><tbody><tr><td>RPC Endpoint</td><td><a href="https://rpc.xion-testnet-1.burnt.com">https://rpc.xion-testnet-1.burnt.com:443</a></td></tr><tr><td>Rest Endpoint</td><td><a href="https://api.xion-testnet-1.burnt.com">https://api.xion-testnet-1.burnt.com</a></td></tr><tr><td>chain_id</td><td>xion-testnet-1</td></tr><tr><td>Block Explorer</td><td><a href="https://explorer.burnt.com/xion-testnet-1/">https://explorer.burnt.com/xion-testnet-1/</a></td></tr></tbody></table>
