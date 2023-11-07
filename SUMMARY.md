@@ -54,12 +54,6 @@
       * [Math](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/math.md)
       * [Instatiating CosmWasm Contract](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/instatiating-cosmwasm-contract.md)
       * [Timelocks](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/timelocks.md)
-      * [Crowdfunding](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/crowdfunding.md)
-      * [Responses](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/responses.md)
-      * [Read & Write Within Contracts](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/read-and-write-within-contracts.md)
-      * [Sending Tokens](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/sending-tokens.md)
-      * [Token Vaults](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/token-vaults.md)
-      * [Constant Product AMM](develop/cosmwasm-documentation/tutorials/cosmwasm-by-example/constant-product-amm.md)
 * [Deploying Contracts to Testnet](develop/deploying-contracts-to-testnet.md)
 
 ## Full Nodes
