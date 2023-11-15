@@ -52,20 +52,6 @@ GENESIS_JSON="https://files.xion-testnet-1.burnt.com/genesis.json"
 curl ${GENESIS_JSON} -o ${BASEDIR}/config/genesis.json -s
 ```
 
-## Download an Addressbook JSON file
-
-We provide a sample snippet which will download the `addrbook.json` to the correct destination.
-
-```
-#!/usr/bin/env bash
-set -euxo pipefail
-
-BASEDIR="/home/xiond/.xiond"
-ADDRBOOK_JSON="https://files.xion-testnet-1.burnt.com/addrbook.json"
-
-curl ${ADDRBOOK_JSON} -o ${BASEDIR}/config/addrbook.json -s
-```
-
 ## Specify the Seed node to discover peers
 
 We provide a sample snippet which will edit the `config.toml` with a Seed node.
