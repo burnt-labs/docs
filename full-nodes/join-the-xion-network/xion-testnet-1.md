@@ -91,7 +91,7 @@ Instead, we highly recommend you either download a Node snapshot and restore it 
 
 Downloading the most recent Node Snapshot is the most reliable way to catch up with the chain.
 
-We produce Node Snapshots every four (4) hours, and keep the last six (6) tarballs. As a convenience, the latest Snapshot is available with the `-latest.tar.lz4` suffix.
+We produce Node Snapshots every twenty-four (24) hours, and keep the last six (6) tarballs. As a convenience, the latest Snapshot is available with the `-latest.tar.lz4` suffix.
 
 We provide a sample snippet, with which to download our latest public snapshot.
 
