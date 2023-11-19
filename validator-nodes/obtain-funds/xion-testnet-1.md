@@ -1,5 +1,5 @@
 ---
-description: Obtain funds from the xion-testnet-1 Faucet
+description: Obtain funds from the xion-testnet-1 faucet
 ---
 
 # xion-testnet-1
@@ -14,10 +14,7 @@ Your first step should be to join the community over on Discord:
 
 ## Obtain the Validator Role
 
-After you've validated that you're not a bot, please take the time to introduce yourself, and ask one of the Admins to grant you the Validator role.
-
-* [# introduce-yourself](https://discord.com/channels/823953904512401469/839515798372745226)
-* [# general-chat](https://discord.com/channels/823953904512401469/823953904512401472)
+Note: The current testnet has a genesis set and the Validator role is not currently being granted. It will be expanded in the future.
 
 
 
