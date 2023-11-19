@@ -1,5 +1,5 @@
 ---
-description: Obtain funds from the xion-testnet-1 faucet
+description: Obtain funds from the xion-testnet-1 faucet (for validators only)
 ---
 
 # xion-testnet-1
