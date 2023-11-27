@@ -44,7 +44,7 @@ XION utilizes Comet BFT (previously known as Tendermint), the Cosmos SDK, IBC, a
 
 
 
-### Coment BFT (Previously known as Tendermint)
+### Comet BFT (Previously known as Tendermint)
 
 Comet BFT is the battle-tested consensus framework used by the XION chain, which allows it to have instant finality. It secures over $50 billion in assets and has never suffered a security breach.
 
