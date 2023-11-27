@@ -14,14 +14,6 @@ Replace "mywallet" with the name of the wallet you established during the enviro
 
 Execute the following commands to store the contract on chain:
 
-#### Mainnet
-
-```
-// RES=$(...)
-```
-
-#### Testnet
-
 {% code fullWidth="true" %}
 ```sh
 RES=$(xiond tx wasm store artifacts/cw_nameservice.wasm --from mywallet $TXFLAG -y --output json)
@@ -50,14 +42,6 @@ echo $CODE_ID
 
 To view the contracts instantiated with the CODE\_ID generated above, execute the following command:
 
-#### Mainnet
-
-```
-// Some code
-```
-
-#### Testnet
-
 ```bash
 xiond query wasm list-contract-by-code $CODE_ID $NODE --output json
 ```
@@ -71,14 +55,6 @@ The response should be an empty list as no contracts have been instantiated at t
 Before proceeding to instantiate a contract using the Code ID and interact with it, let's first confirm that the code stored on the blockchain matches the cw\_namespace.wasm binary you uploaded.&#x20;
 
 To do this, download the wasm binary from the blockchain and perform a comparison with the original one:
-
-#### Mainnet
-
-```
-// Some code
-```
-
-#### Testnet
 
 ```bash
 xiond query wasm code $CODE_ID $NODE download.wasm
@@ -102,14 +78,6 @@ You can now create an instance of the wasm contract. After instantiation, you ca
 
 ### Instantiate using xiond
 
-#### mainnet
-
-```
-// Some code
-```
-
-#### testnet
-
 ```bash
 # Prepare the instantiation message
 INIT='{"purchase_price":{"amount":"100","denom":"uxion"},"transfer_price":{"amount":"999","denom":"uxion"}}'
@@ -122,14 +90,6 @@ xiond tx wasm instantiate $CODE_ID "$INIT" --from mywallet --label "name service
 Now that the contract is instantiated, you can register a name and transfer it to another address by paying the transfer fee.
 
 ### Interact using xiond
-
-#### mainnet
-
-```
-// Some code
-```
-
-#### testnet
 
 ```bash
 # Register a name for the wallet address
