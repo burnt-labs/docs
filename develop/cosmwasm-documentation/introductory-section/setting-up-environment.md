@@ -61,5 +61,19 @@ A user should be able to find their output binary in the t`arget/wasm32-unknown-
 
 `All contracts (1) passed checks!`
 
-\
-\
+If you intend to use xiond as your preferred client, we recommend you to set up these variables. Otherwise you will have to type in node, chain id and gas-price details with every command you execute.
+
+```bash
+# bash
+export NODE="--node $RPC"
+export TXFLAG="${NODE} --chain-id xion-testnet-1 --gas-prices 0.25uxion --gas auto --gas-adjustment 1.4"
+
+# zsh
+export NODE=(--node $RPC)
+export TXFLAG=($NODE --chain-id xion-testnet-1 --gas-prices 0.25uxion --gas auto --gas-adjustment 1.4)
+```
+
+{% hint style="info" %}
+Get the RPC endpoint from the [networks.md](../../networks.md "mention") section
+{% endhint %}
+

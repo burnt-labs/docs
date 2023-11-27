@@ -24,7 +24,7 @@ The **WasmMsg::Execute** type accepts the following parameters:
 
 To engage with the execute method of another contract, you can employ the **CosmosMsg::Wasm(WasmMsg::Execute{})** message type. Here's an illustrative example of how to achieve this:
 
-```
+```rust
 // Construct the Transfer message for the other contract
 let transfer_msg = to_binary(&Transfer {
     recipient: deps.api.addr_humanize(&recipient_raw)?,
