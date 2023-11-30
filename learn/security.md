@@ -12,7 +12,6 @@ XION has undergone multiple audits by some of the most respected security firms 
 
 \
 
-
 {% file src="../.gitbook/assets/Burnt_Cosmos_Security_Audit_Report_Halborn_Final.pdf" %}
 Audit 1
 {% endfile %}
