@@ -65,37 +65,7 @@ Conversely, the `after_tx` method is only triggered if both `before_tx` and ALL 
 
 #### To illustrate this in a graph:
 
-&#x20;           start
-
-&#x20;             ↓
-
-&#x20;   ┌───────────────────┐
-
-&#x20;   │     before\_tx     │
-
-&#x20;   └───────────────────┘
-
-&#x20;             ↓
-
-&#x20;   ┌───────────────────┐
-
-&#x20;   │        tx         │
-
-&#x20;   └───────────────────┘
-
-&#x20;             ↓
-
-&#x20;   ┌───────────────────┐
-
-&#x20;   │     after\_tx      │
-
-&#x20;   └───────────────────┘
-
-&#x20;             ↓
-
-&#x20;           Done
-
-
+<figure><img src="../../.gitbook/assets/Account Abstration Doc - Figure 1 (1).png" alt="" width="279"><figcaption></figcaption></figure>
 
 ### The State Machine Side
 
@@ -103,29 +73,7 @@ Now, let's delve into how this concept integrates within the transaction executi
 
 In the Cosmos ecosystem, every transaction comprises one or multiple messages (msgs). These messages essentially serve as execution directives, encompassing actions like token transfers, validator delegations, contract invocations, and more.
 
-
-
-&#x20;    ┌───── tx ─────┐
-
-&#x20;     │  ┌─────────┐  │
-
-&#x20;     │  │  msg 0  │  │
-
-&#x20;     │  └─────────┘  │
-
-&#x20;     │  ┌─────────┐  │
-
-&#x20;     │  │  msg 1  │  │
-
-&#x20;     │  └─────────┘  │
-
-&#x20;     │  ┌─────────┐  │
-
-&#x20;     │  │  msg 2  │  │
-
-&#x20;     │  └─────────┘  │
-
-&#x20;    └───────────┘
+<figure><img src="../../.gitbook/assets/Account Abstration Doc - Figure 2 (1).png" alt="" width="279"><figcaption></figcaption></figure>
 
 Upon delivery of a transaction (tx) to the state machine, it undergoes the following execution process:
 
@@ -135,75 +83,7 @@ Subsequently, the tx proceeds to execute its individual messages (msgs) in a seq
 
 Lastly, the PostHandler stage comes into play. Similar to the AnteHandler, the PostHandler encompasses its own array of decorators, which are executed as part of the process.
 
-&#x20;           start
-
-&#x20;             ↓
-
-&#x20; ┌───── Antehandler ─────┐
-
-&#x20; │   ┌───────────────┐   │
-
-&#x20; │   │  decorator 0  │   │
-
-&#x20; │   └───────────────┘   │
-
-&#x20; │   ┌───────────────┐   │
-
-&#x20; │   │  decorator 1  │   │
-
-&#x20; │   └───────────────┘   │
-
-&#x20; │   ┌───────────────┐   │
-
-&#x20; │   │  decorator 2  │   │
-
-&#x20; │   └───────────────┘   │
-
-└──────────────────┘
-
-&#x20;             ↓
-
-&#x20;        ┌─────────┐
-
-&#x20;                    │ msg 0  │
-
-&#x20;        └─────────┘
-
-&#x20;        ┌─────────┐
-
-&#x20;                    │  msg 1  │
-
-&#x20;        └─────────┘
-
-&#x20;        ┌─────────┐
-
-&#x20;                    │  msg 2  │
-
-&#x20;        └─────────┘
-
-&#x20;             ↓
-
-&#x20; ┌───── Posthandler ─────┐
-
-&#x20; │   ┌───────────────┐   │
-
-&#x20; │   │  decorator 0  │   │
-
-&#x20; │   └───────────────┘   │
-
-&#x20; │   ┌───────────────┐   │
-
-&#x20; │   │  decorator 1  │   │
-
-&#x20; │   └───────────────┘   │
-
-└───────────────────┘
-
-&#x20;             ↓
-
-&#x20;           Done
-
-
+<figure><img src="../../.gitbook/assets/Account Abstration Doc - Figure 3 (1).png" alt=""><figcaption></figcaption></figure>
 
 In the process of implementing account abstraction, we substitute the default SigVerificationDecorator, responsible for authentication, with our bespoke `BeforeTxDecorator`.
 
