@@ -1,6 +1,6 @@
-# XION Daemon
+# Interact with XION chain: Setup XION Daemon
 
-The XION Daemon binary is the primary interaction point for a DAPP developer to the Xion blockchain both locally and on testnet.
+The XION Daemon binary is the primary interaction point for a DAPP developer to the XION blockchain both locally and on testnet.
 
 ## Installation
 
@@ -10,7 +10,7 @@ The XION Daemon binary is the primary interaction point for a DAPP developer to 
 
 Note: $GOPATH/bin must be on your $PATH for this to work.
 
-For more information see [here](../../../full-nodes/build-the-xion-daemon.md).
+For more information see [here](../../../nodes-and-validators/run-a-node/build-the-xion-daemon.md).
 
 ### Confirm Installation
 

@@ -12,4 +12,6 @@ description: Additional resources and relevant links
 
 **Discord**: [https://discord.gg/burnt](https://discord.gg/burnt)
 
-**Guild**: [https://guild.xyz/burnt](https://guild.xyz/burnt)\
+**Guild**: [https://guild.xyz/burnt](https://guild.xyz/burnt)
+
+**XION Brand Kit**: [https://drive.google.com/drive/folders/1QJdAVN3vCD7Cu28h6SaKvDeY8PY7xA0w?usp=sharing](https://drive.google.com/drive/folders/1QJdAVN3vCD7Cu28h6SaKvDeY8PY7xA0w?usp=sharing)\

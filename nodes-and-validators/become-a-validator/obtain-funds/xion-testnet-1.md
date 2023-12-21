@@ -26,11 +26,11 @@ Among its denizens is the Beelzebot, which listens for slash commands.
 
 Request your Funds using the `/faucet` slash command, like so:
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-03-12 at 10.07.16 AM.png" alt=""><figcaption><p>The <code>/faucet</code> slashcommand</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-03-12 at 10.07.16 AM.png" alt=""><figcaption><p>The <code>/faucet</code> slashcommand</p></figcaption></figure>
 
 You'll be prompted for confirmation; double-check that your destination wallet address is correct.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-03-12 at 10.12.35 AM (1).png" alt=""><figcaption><p>The <code>/faucet</code> slashcommand confirmation prompt</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-03-12 at 10.12.35 AM (1).png" alt=""><figcaption><p>The <code>/faucet</code> slashcommand confirmation prompt</p></figcaption></figure>
 
 * Selecting `No` will cancel the transaction.
 * Selecting `Yes` will send funds to the desired wallet address.

@@ -1,4 +1,4 @@
-# Installation
+# Installation Prerequisites: Setup Local Environment
 
 ## **Getting Started**
 
@@ -132,7 +132,7 @@ If you prefer, you can use Docker Engine instead of Docker Desktop.
 
 1. Run `docker compose up testnet`
 2. On first run, it can take several minutes to build the images locally and start the testnet.
-3. Install `xiond` cli locally following [these directions](xion-daemon.md)
+3. Install `xiond` cli locally following [these directions](interact-with-xion-chain-setup-xion-daemon.md)
 
 Run the following to confirm the testnet is running:
 

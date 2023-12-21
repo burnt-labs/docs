@@ -2,7 +2,7 @@
 
 A user can choose to either set up a local testnet or connect to an existing network. For easy testing, the XION testnet is available for deploying and running ones contracts.
 
-To set up a local testnet, see Running a Local Testnet. For details on the available XION networks, see the [Networks](../../networks.md) page.
+To set up a local testnet, see Running a Local Testnet. For details on the available XION networks, see the [Networks](../../public-endpoints-and-resources.md) page.
 
 To work with CosmWasm smart contract, a user will need rust installed on their machine. If the user does not have it installed, they can find installation instructions on the Rust website.
 
@@ -74,6 +74,6 @@ export TXFLAG=($NODE --chain-id xion-testnet-1 --gas-prices 0.25uxion --gas auto
 ```
 
 {% hint style="info" %}
-Get the RPC endpoint from the [networks.md](../../networks.md "mention") section
+Get the RPC endpoint from the [public-endpoints-and-resources.md](../../public-endpoints-and-resources.md "mention") section
 {% endhint %}
 
