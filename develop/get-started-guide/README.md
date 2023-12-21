@@ -4,5 +4,5 @@ Within the ‘Get Started Guide’ section, a tour of the fundamental aspects of
 
 ## Section Content
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Setup</strong><br></td><td>Begin by setting up your XION developer environment</td><td></td></tr><tr><td><strong>Deploy a CosmWasm Smart Contract</strong></td><td>Learn to deploy your first smart contract</td><td></td></tr><tr><td><strong>XION TypeScript</strong></td><td><p></p><p>Access XION from TypeScript.</p></td><td></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Setup</strong><br></td><td>Begin by setting up your XION developer environment</td><td></td><td><a href="setup/">setup</a></td></tr><tr><td><strong>Deploy a CosmWasm Smart Contract</strong></td><td>Learn to deploy your first smart contract</td><td></td><td><a href="deploy-a-cosmwasm-smart-contract.md">deploy-a-cosmwasm-smart-contract.md</a></td></tr><tr><td><strong>XION TypeScript</strong></td><td><p></p><p>Access XION from TypeScript.</p></td><td></td><td><a href="xion-typescript.md">xion-typescript.md</a></td></tr></tbody></table>
 
