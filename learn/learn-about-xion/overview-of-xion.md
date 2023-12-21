@@ -6,7 +6,7 @@ description: The Generalized Abstraction layer one blockchain
 
 ## Intro
 
-&#x20;**XION is the first modular Generalized Abstraction layer, purpose built for consumer adoption by enabling seamless user experiences for everyday users.**
+XION is the first modular Generalized Abstraction layer, purpose built for consumer adoption by enabling seamless user experiences for everyday users.
 
 
 
@@ -18,7 +18,7 @@ Read more about XION's Generalized Abstraction layer at [xion.burnt.com/whitepap
 
 
 
-## **Infrastructure - Generalized Abstraction Layer 1 Chain**
+## **Generalized Abstraction Layer 1 Chain**
 
 * Generalized Abstraction: unique protocol-level abstraction that spans Accounts, Signatures, Payments, Pricing, Interoperability, Devices, Gas, and more to make Web3 accessible to everyone, everywhere.
   * Account Abstraction — XION has account abstraction (aka Meta Accounts) at the protocol level

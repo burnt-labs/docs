@@ -14,6 +14,8 @@ Start developing on XION right away.
 
 <table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Getting Started: Setup your dev environment</strong></td><td></td><td>Begin by setting up your XION developer environment</td><td><a href="develop/get-started-guide/">get-started-guide</a></td></tr><tr><td><strong>Featured Guides</strong></td><td><br></td><td><p>Follow featured guides to help you submit your first transaction, deploy your first smart contract, and build your first front-end</p><p></p><p></p></td><td><a href="develop/featured-guides/">featured-guides</a></td></tr><tr><td><strong>Build a dApp with Account Abstraction</strong></td><td><p></p><p>Implement XION's account abstraction solution into your app</p></td><td></td><td><a href="develop/featured-guides/build-react-dapp-with-account-abstraxion/">build-react-dapp-with-account-abstraxion</a></td></tr></tbody></table>
 
+##
+
 ## Learn More About XION
 
 Explore XION and its core concepts.
@@ -26,4 +28,4 @@ Explore XION and its core concepts.
 
 Get in touch with the community & find the support you need.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>Developer Support</strong></td><td>Chat with XION developers on Discord<br><br>Click to navigate to Discord.</td><td><a href="https://discord.gg/burnt">https://discord.gg/burnt</a></td></tr><tr><td></td><td><strong>Found an issue in the docs?</strong></td><td>Report it, or simply submit a pull request on the page where you found it.<br><br>Click to report issue.</td><td><a href="https://discord.gg/burnt">https://discord.gg/burnt</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Developer Support</strong></td><td>Chat with XION developers on Discord<br></td><td>Click to navigate to Discord.</td><td><a href="https://discord.gg/burnt">https://discord.gg/burnt</a></td></tr><tr><td><strong>Found an issue in the docs?</strong></td><td>Report it, or simply submit a pull request on the page where you found it.</td><td><br>Click to report issue.</td><td><a href="https://discord.gg/burnt">https://discord.gg/burnt</a></td></tr></tbody></table>

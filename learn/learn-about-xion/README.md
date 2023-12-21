@@ -1,3 +1,9 @@
+---
+description: >-
+  In this section you'll learn more about XION, its Generalized Abstraction, and
+  its core architecture.
+---
+
 # Learn About XION
 
 ## Section Content
