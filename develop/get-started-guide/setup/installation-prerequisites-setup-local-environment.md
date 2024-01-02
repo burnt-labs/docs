@@ -56,7 +56,7 @@ The installer will download and install the necessary components. You might be a
 
 `rustc --version`
 
-With the instructions provided, a user should guide themselves through the process of installing Rust on both macOS and Windows systems. If the user encounters any issues, you can refer to the official Rust documentation for troubleshooting and more information: https://www.rust-lang.org/tools/install
+With the instructions provided, a user should guide themselves through the process of installing Rust on both macOS and Windows systems. If the user encounters any issues, you can refer to the official Rust documentation for troubleshooting and more information: [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install)
 
 ## Cargo
 
