@@ -28,13 +28,30 @@ xiond keys show <keyname> -p
 
 Use the generated key pair to create an account on the network. This involves sending a transaction to the network's blockchain to register your account. The simplest way to do this is to request testnet tokens from a member of the team or in discord.&#x20;
 
-#### Deploying Contract on Testnet
+#### Deploying Contracts
 
 Use the CosmWasm CLI to deploy the created contract to the testnet. The specific command and options may vary depending depending on version.
 
 `xiond tx wasm store contract.tar.gz --from <sender_address> --chain-id <chain_id> --gas auto --gas-prices <gas_prices> --node <testnet_rpc_url>`
 
 [Replace `<sender_address>, <chain_id>, <gas_prices>`, and `<testnet_rpc_url>` with the appropriate values for your testnet environment.](#user-content-fn-1)[^1] These can be found in the [Network](../public-endpoints-and-resources.md) section.
+
+or use the populated version here:
+
+```bash
+ xiond tx wasm store ./contract.wasm \
+    --chain-id xion-local-testnet-1 \
+    --gas-adjustment 1.3 \
+    --gas-prices 0uxion \
+    --gas auto \
+    --chain-id xion-testnet-1 \
+    --node https://rpc.xion-testnet-1.burnt.com:443
+    --from <sender_address>
+```
+
+{% hint style="danger" %}
+Our testnet allows for zero gas price but will not be the case with our mainnet.
+{% endhint %}
 
 #### Where to find appropriate values?
 
