@@ -49,59 +49,48 @@ See the [repo](https://github.com/burnt-labs/contracts)
 ## Supported Authentication Methods
 
 * Email login
-* Keplr (or any wallet supporting [ADR-036](https://github.com/cosmos/cosmos-sdk/blob/main/docs/architecture/adr-036-arbitrary-signature.md))
-* EIP-191 Signatures
 * (MetaMask, biometrics, and many more coming soon)
 
 ## Workflows
 
-### Account Create
+
 
 ```mermaid
 sequenceDiagram
-    participant User as User/Authentication Method
-    participant Abstraxion as Abstraxion Library
-    participant API as Account API
-    participant Contract as Meta Account Smart Contract
-
-    User->>Abstraxion: Initial Connect
-    Abstraxion->>Abstraxion: Check if Meta Account Exists
-    alt Meta Account Doesn't Exist
-        Abstraxion->>User: Prompt to Create Meta Account
-        User->>Abstraxion: Agree to Create Meta Account
-        Abstraxion->>Abstraxion: Precompute Contract Address using Instantiate2
-        Abstraxion->>User: Prompt for Authentication Method Signature
-        User->>Abstraxion: Provide Signature
-        Abstraxion->>API: Submit Details to Accounts API
-        API->>Contract: Instantiate Contract and Add Authentication Method
-        Contract->>Abstraxion: Confirm Contract Creation
-
-        Abstraxion->>User: User is shown as connected
+    Actor User
+    participant DAPP
+    participant AbstraxionLibrary as Abstraxion Library
+    participant AccountManagementDashboard as Account Management Dashboard
+    participant XionChain as Xion Chain
+    User->>DAPP: Load Dapp
+    User->>DAPP: Clicks 'Mint NFT'
+    DAPP->>AbstraxionLibrary: connect()
+    AbstraxionLibrary->>AbstraxionLibrary: Check for Dapp SessionKey 
+    AbstraxionLibrary->>AbstraxionLibrary: Check Dapp SessionKey Authz Expiry
+    Note right of AbstraxionLibrary: Note: Authz grants are a "session"
+    alt no active Dapp SessionKey
+        AbstraxionLibrary->>AbstraxionLibrary: Generate one time private SessionKey
+        AbstraxionLibrary->>AccountManagementDashboard: Redirect user along with permission scope 
+        AccountManagementDashboard->>AccountManagementDashboard: Check for an active connection
+        alt no active connection
+            AccountManagementDashboard->>User: Initiate and complete connect flow
+        end
+        AccountManagementDashboard->>User: Show authz permission dialog
     end
+    User->>AccountManagementDashboard: Accept permissions
+    AccountManagementDashboard->>XionChain: Submit transaction with authz grants
+    alt transaction successful
+        XionChain->>DAPP: Notify transaction success
+        DAPP->>User: Return user to dapp
+    else transaction failed
+        XionChain->>AccountManagementDashboard: Notify transaction failure
+        AccountManagementDashboard->>User: Show error modal
+    end
+    User->>DAPP: Clicks 'Mint NFT'
+    DAPP->>AbstraxionLibrary: Locally sourced transaction
+    AbstraxionLibrary->>AbstraxionLibrary: Autosigned using Dapp SessionKey 
+    AbstraxionLibrary->>XionChain: Submitted 
 ```
-
-### Transaction submission
-
-```mermaid
-sequenceDiagram
-    participant User as User/Authentication Method
-    participant Abstraxion as Abstraxion Library
-    participant API as Transaction API
-    participant Xion as Xion
-    User->>Abstraxion: Intention to submit transaction
-    Abstraxion->>Abstraxion: Precompute Transaction Hash using method from Signature 
-    Abstraxion->>User: Prompt for Signature
-    User->>Abstraxion: Provide Signature
-    Note over Abstraxion,User: Social login autosigns
-    Abstraxion->>API: Submit Transaction Details to Transaction API
-    API->>Xion: Execute Transaction 
-    Xion->>Abstraxion: Confirm Transaction Execution
-    Abstraxion->>User: User is shown transaction status
-```
-
-
-
-
 
 
 
