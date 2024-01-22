@@ -141,7 +141,7 @@ We have the wasm binary executable ready. Now it is time to store the code to th
 
 ```
 # store the code on chain
-RES=$(xiond tx wasm store artifacts/my_first_contract.wasm --from wallet --gas-prices 0.1uosmo --gas auto --gas-adjustment 1.3 -y --output json -b block)
+RES=$(xiond tx wasm store artifacts/my_first_contract.wasm --from wallet --gas-prices 0.1uxion --gas auto --gas-adjustment 1.3 -y --output json -b block)
 ```
 
 * `xiond tx wasm store` : upload a wasm binary
@@ -217,7 +217,7 @@ INIT='{"count":100}'
 
 # instantiate the contract
 xiond tx wasm instantiate $CODE_ID "$INIT" \
-    --from wallet --label "my first contract" --gas-prices 0.025uosmo --gas auto --gas-adjustment 1.3 -b block -y --no-admin
+    --from wallet --label "my first contract" --gas-prices 0.025uxion --gas auto --gas-adjustment 1.3 -b block -y --no-admin
 ```
 
 * `xiond tx wasm instantiate` : instantiate a wasm contract using CODE\_ID of the uploaded binary.
@@ -257,7 +257,7 @@ If you run the `get_count` query again after sending the `increment` transaction
 
 ```
 TRY_INCREMENT='{"increment": {}}'
-xiond tx wasm execute $CONTRACT_ADDR "$TRY_INCREMENT" --from wallet --gas-prices 0.025uosmo --gas auto --gas-adjustment 1.3 -y
+xiond tx wasm execute $CONTRACT_ADDR "$TRY_INCREMENT" --from wallet --gas-prices 0.025uxion --gas auto --gas-adjustment 1.3 -y
 ```
 
 * `xiond tx wasm execute` : execute a command on a wasm contract
@@ -268,7 +268,7 @@ Lastly, let’s send a `reset` transaction. Like increment, reset transaction al
 
 ```
 RESET='{"reset": {"count": 0}}'
-xiond tx wasm execute $CONTRACT_ADDR "$RESET" --from wallet --gas-prices 0.025uosmo --gas auto --gas-adjustment 1.3 -y
+xiond tx wasm execute $CONTRACT_ADDR "$RESET" --from wallet --gas-prices 0.025uxion --gas auto --gas-adjustment 1.3 -y
 ```
 
 \
