@@ -38,11 +38,27 @@ See the [repo](https://github.com/burnt-labs/abstraxion)
 
 <details>
 
-<summary>Meta Account Smart Contract</summary>
+<summary>Meta Account</summary>
 
 This contract along with a custom XION module represent the core of the meta account functionality.
 
 See the [repo](https://github.com/burnt-labs/contracts)
+
+</details>
+
+<details>
+
+<summary>UserSessionKey</summary>
+
+The temporary key generated on the DAPP side which is granted ContractExecutionAuthorization by the user's Meta Account on a temporary basis.
+
+</details>
+
+<details>
+
+<summary>FeeGrantTreasury</summary>
+
+A account a dapp may user to sponsor transactions submitted by the UserSessionKey.
 
 </details>
 
@@ -65,11 +81,11 @@ sequenceDiagram
     User->>DAPP: Load Dapp
     User->>DAPP: Clicks 'Mint NFT'
     DAPP->>AbstraxionLibrary: connect()
-    AbstraxionLibrary->>AbstraxionLibrary: Check for Dapp SessionKey 
-    AbstraxionLibrary->>AbstraxionLibrary: Check Dapp SessionKey Authz Expiry
+    AbstraxionLibrary->>AbstraxionLibrary: Check for Dapp UserSessionKey 
+    AbstraxionLibrary->>AbstraxionLibrary: Check Dapp UserSessionKey Authz Expiry
     Note right of AbstraxionLibrary: Note: Authz grants are a "session"
-    alt no active Dapp SessionKey
-        AbstraxionLibrary->>AbstraxionLibrary: Generate one time private SessionKey
+    alt no active Dapp UserSessionKey
+        AbstraxionLibrary->>AbstraxionLibrary: Generate one time private UserSessionKey
         AbstraxionLibrary->>AccountManagementDashboard: Redirect user along with permission scope 
         AccountManagementDashboard->>AccountManagementDashboard: Check for an active connection
         alt no active connection
@@ -88,7 +104,7 @@ sequenceDiagram
     end
     User->>DAPP: Clicks 'Mint NFT'
     DAPP->>AbstraxionLibrary: Locally sourced transaction
-    AbstraxionLibrary->>AbstraxionLibrary: Autosigned using Dapp SessionKey 
+    AbstraxionLibrary->>AbstraxionLibrary: Autosigned using Dapp UserSessionKey  
     AbstraxionLibrary->>XionChain: Submitted 
 ```
 
