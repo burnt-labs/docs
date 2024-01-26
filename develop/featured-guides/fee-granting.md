@@ -1,8 +1,12 @@
+---
+description: Learn to create a gas-less experience for your end users
+---
+
 # Fee Granting
 
-#### Demonstrating Fee Allowance in Cosmos
+#### Demonstrating Fee Allowance
 
-This guide outlines how to grant a fee allowance in the Cosmos SDK and validate its functionality by sending tokens back using AAClient. The process involves:
+This guide outlines how to grant a fee allowance, so that you can enable a gas-less experience for your end users. This guide also demonstrates how to validate its functionality by sending tokens back using AAClient. The process involves:
 
 1. **Initial Setup:** Creating client instances for a funding account and a recipient account.
 2. **Granting Fee Allowance:** Allowing the recipient account to use the funding account's resources for transaction fees.
@@ -116,4 +120,4 @@ To confirm the fee allowance, send a token back from the recipient account to th
   console.log("sendResponse", sendResponse);
 ```
 
-This complete example shows how to set up a fee allowance in the Cosmos SDK and verify its success through a token transaction.
+This complete example shows how to set up a fee allowance and verify its success through a token transaction.
