@@ -25,15 +25,21 @@ Adequate installation and configuration of your environment is out of scope. Ple
 * We do not use the `latest` tag, to avoid confusion and mistakes.
 
 ```
-$ docker pull burntnetwork/xion:sha-abcdef9
+$ docker pull burntnetwork/xion:latest
 ```
+
+{% hint style="info" %}
+For more up to date tags checkout the docker hub page for this image [here](https://hub.docker.com/r/burntnetwork/xion/tags)
+{% endhint %}
+
+
 
 ## Obtain a shell in the Docker container
 
 * We can now invoke the `xiond` binary inside the container.
 
 ```
-$ docker run -ti burntnetwork/xion:sha-abcdef9 /bin/bash
+$ docker run -ti burntnetwork/xion:latest /bin/bash
 # xiond version
 # xiond version --long
 # xiond --help
