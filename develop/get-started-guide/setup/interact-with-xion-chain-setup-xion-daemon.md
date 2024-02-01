@@ -8,7 +8,16 @@ The XION Daemon binary is the primary interaction point for a DAPP developer to 
 2. Run `make install` in the above directory
 3. The \`xiond\` command will be installed into your $GOPATH
 
-Note: $GOPATH/bin must be on your $PATH for this to work.
+{% hint style="warning" %}
+$GOPATH/bin must be on your $PATH for this to work. You can do this by adding the following to your .zshrc or .bashrc file.
+
+```bash
+export GOPATH=$(go env GOPATH)
+export PATH=$GOPATH/bin:$PATH
+```
+{% endhint %}
+
+
 
 For more information see [here](../../../nodes-and-validators/run-a-node/build-the-xion-daemon.md).
 
