@@ -12,7 +12,7 @@ Built at the protocol-level, _meta accounts_ have a host of benefits over tradit
 
 <summary>Identity Provider</summary>
 
-In the case of social login a trusted Identity provider must be used to handle the confirmation of identity, in this case [Stytch](https://stytch.com/) is being used.
+In the case of social login an identity provider is used to handle the confirmation of identity.
 
 </details>
 
