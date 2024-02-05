@@ -30,9 +30,9 @@ See the [repo](https://github.com/burnt-labs/account-abstraction-api)
 
 <summary>Abstraxion Library</summary>
 
-This graz-based frontend library aids in integration with your react front end.
+This frontend library aids in integration with your react front end.
 
-See the [repo](https://github.com/burnt-labs/abstraxion)
+See the [repo](https://github.com/burnt-labs/xion.js)
 
 </details>
 
