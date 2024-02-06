@@ -55,8 +55,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import {AbstraxionProvider} from "@burnt-labs/abstraxion";
 
-import "@burnt-labs/abstraxion/styles.css";
-import "@burnt-labs/ui/styles.css";
+import "@burnt-labs/abstraxion/dist/index.css";
+import "@burnt-labs/ui/dist/index.css";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -165,7 +165,7 @@ import {
   useAbstraxionSigningClient,
 } from "@burnt-labs/abstraxion";
 import { Button } from "@burnt-labs/ui";
-import "@burnt-labs/ui/styles.css";
+import "@burnt-labs/ui/dist/index.css";
 import type { ExecuteResult } from "@cosmjs/cosmwasm-stargate";
 import { seatContractAddress } from "./layout";
 
