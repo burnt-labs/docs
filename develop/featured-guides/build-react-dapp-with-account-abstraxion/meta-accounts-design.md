@@ -22,8 +22,6 @@ In the case of social login an identity provider is used to handle the confirmat
 
 A set of services used to assist and sponsor new meta account creation.&#x20;
 
-See the [repo](https://github.com/burnt-labs/account-abstraction-api)
-
 </details>
 
 <details>
