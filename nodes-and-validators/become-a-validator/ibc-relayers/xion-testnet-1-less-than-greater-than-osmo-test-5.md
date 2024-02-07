@@ -8,44 +8,44 @@ description: Channel information
 
 ```
 # Chain: osmo-test-5
-  - Client: 07-tendermint-713
-    * Connection: connection-645
+  - Client: 07-tendermint-1474
+    * Connection: connection-1380
       | State: OPEN
       | Counterparty state: OPEN
-      + Channel: channel-1299
+      + Channel: channel-4410
         | Port: transfer
         | State: OPEN
-        | Counterparty: channel-8
+        | Counterparty: channel-12
 # Chain: xion-testnet-1
-  - Client: 07-tendermint-13
-    * Connection: connection-8
+  - Client: 07-tendermint-22
+    * Connection: connection-12
       | State: OPEN
       | Counterparty state: OPEN
-      + Channel: channel-8
+      + Channel: channel-12
         | Port: transfer
         | State: OPEN
-        | Counterparty: channel-1299
+        | Counterparty: channel-4410
 ```
 
 **fee abstraction**
 
 ```
 # Chain: osmo-test-5
-  - Client: 07-tendermint-967
-    * Connection: connection-867
+  - Client: 07-tendermint-1475
+    * Connection: connection-1381
       | State: OPEN
       | Counterparty state: OPEN
-      + Channel: channel-1575
+      + Channel: channel-4411
         | Port: icqhost
         | State: OPEN
-        | Counterparty: channel-11
+        | Counterparty: channel-13
 # Chain: xion-testnet-1
-  - Client: 07-tendermint-19
-    * Connection: connection-11
+  - Client: 07-tendermint-23
+    * Connection: connection-13
       | State: OPEN
       | Counterparty state: OPEN
-      + Channel: channel-11
+      + Channel: channel-13
         | Port: feeabs
         | State: OPEN
-        | Counterparty: channel-1575
+        | Counterparty: channel-4411
 ```
