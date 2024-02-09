@@ -104,6 +104,7 @@ import { useEffect, useState } from "react";
 import {
   Abstraxion,
   useAbstraxionAccount,
+  useModal
 } from "@burnt-labs/abstraxion";
 import { Button } from "@burnt-labs/ui";
 
@@ -112,7 +113,7 @@ export default function Page(): JSX.Element {
   const { data: account } = useAbstraxionAccount();
 
   // General state hooks
-  const [isOpen, setIsOpen] = useState(false);
+ const [showAbstraxion, setShowAbstraxion] = useModal();
 
   return (
       <main className="m-auto flex min-h-screen max-w-xs flex-col items-center justify-center gap-4 p-4">
@@ -134,10 +135,9 @@ export default function Page(): JSX.Element {
           )}
         </Button>
         <Abstraxion
-            isOpen={isOpen}
-            onClose={() => {
-              setIsOpen(false);
-            }}
+          onClose={() => { 
+            setShowAbstraxion(false);
+          }}
         />
       </main>
   );
