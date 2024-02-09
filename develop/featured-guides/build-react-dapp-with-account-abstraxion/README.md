@@ -123,7 +123,7 @@ export default function Page(): JSX.Element {
         <Button
             fullWidth
             onClick={() => {
-              setIsOpen(true);
+              setShowAbstraxion(true);
             }}
             structure="base"
             theme="secondary"
