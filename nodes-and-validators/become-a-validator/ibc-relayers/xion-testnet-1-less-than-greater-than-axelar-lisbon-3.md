@@ -25,14 +25,14 @@
 
 **Denominations**
 
-AXL on Xion
+* AXL on Xion
 
 ```
 balances:
   denom: ibc/D934516FBE457F3A98AFABD87E0EFF7F95A15325C191EA8CDD7763C702FDDEC2
 ```
 
-XION on Axelar
+* XION on Axelar
 
 ```
 balances:

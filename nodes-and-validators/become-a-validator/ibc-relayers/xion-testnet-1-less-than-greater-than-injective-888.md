@@ -25,14 +25,14 @@
 
 **Denominations**
 
-INJ on Xion
+* INJ on Xion
 
 ```
 balances:
   denom: ibc/0166AE2224341A3F70943E315DAC6EDF012A638D0F9358794FF7525BA1DFC191
 ```
 
-XION on Injective
+* XION on Injective
 
 ```
 balances:
