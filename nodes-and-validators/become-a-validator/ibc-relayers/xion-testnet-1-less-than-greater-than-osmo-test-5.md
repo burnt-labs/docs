@@ -1,10 +1,6 @@
----
-description: Channel information
----
-
 # xion-testnet-1 <=> osmo-test-5
 
-**transfer**
+**Channel Information // transfer**
 
 ```
 # Chain: osmo-test-5
@@ -27,7 +23,7 @@ description: Channel information
         | Counterparty: channel-4410
 ```
 
-**fee abstraction**
+**Channel Information // fee abstraction**
 
 ```
 # Chain: osmo-test-5
@@ -48,4 +44,20 @@ description: Channel information
         | Port: feeabs
         | State: OPEN
         | Counterparty: channel-4411
+```
+
+**Denominations**
+
+* OSMO on Xion
+
+```
+balances:
+  - denom: ibc/6AE2756AA7EAA8FA06E11472EA05CA681BD8D3FBC1AAA9F06C79D1EC1C90DC9B
+```
+
+* XION on Osmosis
+
+```
+balances:
+- denom: ibc/3642669AD14386D3E38F43F30CFCA859B3E8A05BF6BD6A23DEBD2115AD1325E9
 ```
