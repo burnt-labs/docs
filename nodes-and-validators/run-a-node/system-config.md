@@ -14,12 +14,12 @@ If you're considering running another OS, your mileage may vary, and we'll be un
 
 ## Hardware Requirements
 
-The recommended specs for running an instance of `xiond` on the Burnt Networks are:
+The minimum recommended specs for running an instance of `xiond` on the Burnt Networks are:
 
-| Network          | CPU cores         | RAM         | Disk (SSD)       | Bandwidth  |
-| ---------------- | ----------------- | ----------- | ---------------- | ---------- |
-| `xion-testnet-1` | 8 (gen-purpose)   | 32 GB (min) | 128 GB SSD (min) | \~120 Mbps |
-| `xion-mainnet-1` | 8 (compute-optim) | 32 GB (min) | 256 GB SSD (min) | \~120 Mbps |
+| Network          | CPU cores         | RAM    | Disk (SSD) | Bandwidth  |
+| ---------------- | ----------------- | ------ | ---------- | ---------- |
+| `xion-testnet-1` | 8 (gen-purpose)   | 32 GB  | 128 GB     | \~120 Mbps |
+| `xion-mainnet-1` | 8 (compute-optim) | 32 GB  | 256 GB     | \~120 Mbps |
 
 {% hint style="info" %}
 :warning: **Monitor your system**
