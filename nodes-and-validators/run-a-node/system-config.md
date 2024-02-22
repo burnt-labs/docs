@@ -14,7 +14,7 @@ If you're considering running another OS, your mileage may vary, and we'll be un
 
 ## Hardware Requirements
 
-The recommended specs for running a node on the Burnt Networks are:
+The recommended specs for running an instance of `xiond` on the Burnt Networks are:
 
 | Network          | CPU cores         | RAM         | Disk (SSD)       | Bandwidth  |
 | ---------------- | ----------------- | ----------- | ---------------- | ---------- |
