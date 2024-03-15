@@ -12,7 +12,7 @@ While setting up a rudimentary validator node is easy, running a production-grad
 
 The tasks in this section describe how to set up a Validator Node on the Xion Network.&#x20;
 
-The Xion Network relies on CometBFT for its Network and Consensus layers, as we are leveraging Cosmos SDK `0.47.0`
+The Xion Network relies on CometBFT for its Network and Consensus layers, as we are leveraging Cosmos SDK `0.47.10`
 
 Validators run full nodes, participate in consensus by broadcasting votes, commit new blocks to the blockchain, and participate in governance of the blockchain.&#x20;
 
