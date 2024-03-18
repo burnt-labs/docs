@@ -38,12 +38,6 @@ npm run dev
 
 Open `https://localhost:3000` in a web browser and you will see a fancy animated react logo.
 
-{% hint style="warning" %}
-In tsconfig.json "moduleResolution" should be set to "node". The default ("bundler") does not work with the package and is a [known issue.](https://github.com/burnt-labs/xion.js/issues/29)
-{% endhint %}
-
-
-
 ## Setup Abstraxion Library
 
 Replace the contents of `src/app/layout.tsx` with the following body:
