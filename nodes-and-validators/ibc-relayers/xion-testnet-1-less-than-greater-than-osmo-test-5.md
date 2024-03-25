@@ -4,23 +4,23 @@
 
 ```
 # Chain: osmo-test-5
-  - Client: 07-tendermint-1474
-    * Connection: connection-1380
+  - Client: 07-tendermint-3125
+    * Connection: connection-2826
       | State: OPEN
       | Counterparty state: OPEN
-      + Channel: channel-4410
+      + Channel: channel-6668
         | Port: transfer
         | State: OPEN
-        | Counterparty: channel-12
+        | Counterparty: channel-490
 # Chain: xion-testnet-1
-  - Client: 07-tendermint-22
-    * Connection: connection-12
+  - Client: 07-tendermint-121
+    * Connection: connection-57
       | State: OPEN
       | Counterparty state: OPEN
-      + Channel: channel-12
+      + Channel: channel-490
         | Port: transfer
         | State: OPEN
-        | Counterparty: channel-4410
+        | Counterparty: channel-6668
 ```
 
 **Denominations**
@@ -29,12 +29,12 @@
 
 ```
 balances:
-  - denom: ibc/6AE2756AA7EAA8FA06E11472EA05CA681BD8D3FBC1AAA9F06C79D1EC1C90DC9B
+  - denom: ibc/484532EB74866F3FB8A71F909F7B1B470FE2E66313DA0A1F9EE5B7C5C046D195
 ```
 
 * XION on Osmosis
 
 ```
 balances:
-- denom: ibc/3642669AD14386D3E38F43F30CFCA859B3E8A05BF6BD6A23DEBD2115AD1325E9
+- denom: ibc/5C274155106FEB0C093F76A12BB67222E479E1EBE043F319CE4463E54F7A357C
 ```
