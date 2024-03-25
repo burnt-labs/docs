@@ -4,23 +4,23 @@
 
 ```
 # Chain: grand-1
-  - Client: 07-tendermint-25
-    * Connection: connection-24
+  - Client: 07-tendermint-224
+    * Connection: connection-176
       | State: OPEN
       | Counterparty state: OPEN
-      + Channel: channel-17
+      + Channel: channel-147
         | Port: transfer
         | State: OPEN
-        | Counterparty: channel-9
+        | Counterparty: channel-489
 # Chain: xion-testnet-1
-  - Client: 07-tendermint-17
-    * Connection: connection-9
+  - Client: 07-tendermint-120
+    * Connection: connection-56
       | State: OPEN
       | Counterparty state: OPEN
-      + Channel: channel-9
+      + Channel: channel-489
         | Port: transfer
         | State: OPEN
-        | Counterparty: channel-17
+        | Counterparty: channel-147
 ```
 
 **Denominations**
@@ -29,12 +29,12 @@
 
 ```
 balances:
-  denom: ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F
+  denom: ibc/57097251ED81A232CE3C9D899E7C8096D6D87EF84BA203E12E424AA4C9B57A64
 ```
 
 * XION on Noble
 
 ```
 balances:
-  denom: ibc/B795DCA63E4CCB4792CED14D45471CEBE1A68F7A6BC8C2AB0B039AE73C73DF53
+  denom: ibc/475ED5117C702EF62A36D41F1EB50AF2770427251920C605CA34014895FF10EC
 ```
