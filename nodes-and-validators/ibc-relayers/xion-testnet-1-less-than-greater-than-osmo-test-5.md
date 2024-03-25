@@ -23,29 +23,6 @@
         | Counterparty: channel-4410
 ```
 
-**Channel Information // fee abstraction**
-
-```
-# Chain: osmo-test-5
-  - Client: 07-tendermint-1475
-    * Connection: connection-1381
-      | State: OPEN
-      | Counterparty state: OPEN
-      + Channel: channel-4411
-        | Port: icqhost
-        | State: OPEN
-        | Counterparty: channel-13
-# Chain: xion-testnet-1
-  - Client: 07-tendermint-23
-    * Connection: connection-13
-      | State: OPEN
-      | Counterparty state: OPEN
-      + Channel: channel-13
-        | Port: feeabs
-        | State: OPEN
-        | Counterparty: channel-4411
-```
-
 **Denominations**
 
 * OSMO on Xion
