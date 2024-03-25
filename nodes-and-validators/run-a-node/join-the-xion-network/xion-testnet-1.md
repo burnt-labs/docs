@@ -4,6 +4,18 @@ description: Details to join the xion-testnet-1 network.
 
 # xion-testnet-1
 
+## Upgrade Path
+
+
+
+| Git Tag  | Docker Tag    | Git SHA                                    | Block Height | Requires Halt |
+| -------- | ------------- | ------------------------------------------ | ------------ | ------------- |
+| `v0.1.0` | `sha-2722f0f` | `2722f0fb1234db97e9bf9b98f744675eb8fb1b26` | `0`          | `false`       |
+| `v0.3.2` | `sha-455cfa5` | `455cfa5b78e79e1c50867f6d61a99b0e9df6b9b1` | `1929544`    | `true`        |
+| `v0.3.3` | `sha-79f0d91` | `79f0d91dfcd4c5916fa30ea246eed1677daf4e44` | `2147030`    | `true`        |
+| `v0.3.4` | `sha-74754c7` | `74754c7c206a7d0f27a23ac9431a4d09dbacff4c` | `3278095`    | `false`       |
+| `v0.3.7` | `sha-f13a74c` | `f13a74c7cf5a562d6902263e53c5ee4f0a9dfefe` | `6887750`    | `true`        |
+
 ## Hosts and Endpoints
 
 The different Hosts and Endpoints of `xion-testnet-1` are:
