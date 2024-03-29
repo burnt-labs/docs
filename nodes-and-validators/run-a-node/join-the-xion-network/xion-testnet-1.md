@@ -23,11 +23,11 @@ The different Hosts and Endpoints of `xion-testnet-1` are:
 
 *   **Seeds**
 
-    * `7900d5f177228def24170f9631db76afab20278e@xion-testnet-1.burnt.com:11656`
+    * `eb029462c82b46d842a47122d860617bff627fdf@xion-testnet-1.burnt.com:11656`
 
 
 * **Peers**
-  * `93db3539d6cc9603bbb6b9e43bfb473bdaff7e4b@xion-testnet-1.burnt.com:32656`
+  * `6bb70718db6af0a473c9d76e82d9ade33618b20d@xion-testnet-1.burnt.com:32656`
   * `0f2ccb6d7e8f233c03f91dee690f5ff714319fba@xion-testnet-1.burnt.com:33656`
   * `f684e3873191d62a74e5431202581d99fe3439b7@xion-testnet-1.burnt.com:34656`
 
