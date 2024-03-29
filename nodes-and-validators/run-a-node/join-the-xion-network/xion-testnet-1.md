@@ -15,6 +15,7 @@ description: Details to join the xion-testnet-1 network.
 | `v0.3.3` | `sha-79f0d91` | `79f0d91dfcd4c5916fa30ea246eed1677daf4e44` | `2147030`    | `true`        |
 | `v0.3.4` | `sha-74754c7` | `74754c7c206a7d0f27a23ac9431a4d09dbacff4c` | `3278095`    | `false`       |
 | `v0.3.7` | `sha-f13a74c` | `f13a74c7cf5a562d6902263e53c5ee4f0a9dfefe` | `6887750`    | `true`        |
+| `v0.3.8` | `sha-34c82a9` | `34c82a927b7ae7b67e8b76a1a66fe1b36f807f82` | `7130100`    | `true`        |
 
 ## Hosts and Endpoints
 
