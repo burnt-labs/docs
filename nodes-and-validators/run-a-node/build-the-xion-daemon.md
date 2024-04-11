@@ -11,7 +11,7 @@ If you want to build the `xiond` binary yourself, this section will show you how
 
 The Xion Daemon is written using [the Go programming language](https://go.dev/).
 
-This guide assumes you have a pre-existing installation on your workstation.&#x20;
+This guide assumes you have a pre-existing installation on your workstation.
 
 Adequate installation and configuration of your environment is out of scope. Please refer to [the appropriate documentation](https://go.dev/doc/install) for assistance.
 {% endhint %}
@@ -19,9 +19,9 @@ Adequate installation and configuration of your environment is out of scope. Ple
 {% hint style="info" %}
 :warning: **Go Versions**
 
-We use Go version 1.20 internally at Burnt.
+We use Go version 1.21 internally at Burnt.
 
-If you are building the binary yourself, please make sure you are using Go 1.19, as we have observed consensus-breaking behavior on nodes that are not running the same version as the majority of the network.\
+If you are building the binary yourself, please make sure you are using Go 1.21, as we have observed consensus-breaking behavior on nodes that are not running the same version as the majority of the network.\
 A specific symptom of this would be an `AppHash` mismatch.
 {% endhint %}
 
@@ -56,4 +56,3 @@ $ xiond version
 $ xiond version --long
 $ xiond --help
 ```
-
