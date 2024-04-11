@@ -19,7 +19,7 @@ Adequate installation and configuration of your environment is out of scope. Ple
 {% hint style="info" %}
 :warning: **Go Versions**
 
-We use Go version 1.19 internally at Burnt.
+We use Go version 1.20 internally at Burnt.
 
 If you are building the binary yourself, please make sure you are using Go 1.19, as we have observed consensus-breaking behavior on nodes that are not running the same version as the majority of the network.\
 A specific symptom of this would be an `AppHash` mismatch.
