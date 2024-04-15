@@ -38,7 +38,7 @@ moniker = "copypaste.com"
 # allows them to catchup quickly by downloading blocks in parallel
 # and verifying their commits
 #
-# Deprecated: this key will be removed and BlockSync will be enabled 
+# Deprecated: this key will be removed and BlockSync will be enabled
 # unconditionally in the next major release.
 block_sync = true
 
@@ -229,7 +229,7 @@ laddr = "tcp://0.0.0.0:26656"
 external_address = ""
 
 # Comma separated list of seed nodes to connect to
-seeds = ""
+seeds = "7900d5f177228def24170f9631db76afab20278e@seed.xion-testnet-1.burnt.com:11656"
 
 # Comma separated list of nodes to keep persistent connections to
 persistent_peers = ""
@@ -384,7 +384,7 @@ chunk_fetchers = "4"
 [blocksync]
 
 # Block Sync version to use:
-# 
+#
 # In v0.37, v1 and v2 of the block sync protocols were deprecated.
 # Please use v0 instead.
 #
