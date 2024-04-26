@@ -150,7 +150,7 @@ pub fn instantiate(
     deps: DepsMut,
     
     /* env gives access to global variables which represent environment information.
-    For exaample:
+    For example:
     - Block Time/Height
     - contract address
     - Transaction Info */
