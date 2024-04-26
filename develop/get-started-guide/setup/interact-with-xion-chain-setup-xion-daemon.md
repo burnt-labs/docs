@@ -95,7 +95,7 @@ The `name` field is an alias that can be used in some other commands.
 
 ### Checking an account balance
 
-To get the current balance the in the banking module in a given address.&#x20;
+To get the current balance in the banking module in a given address.&#x20;
 
 ```bash
 $ xiond query bank balances <address>
