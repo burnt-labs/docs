@@ -17,9 +17,17 @@ export PATH=$GOPATH/bin:$PATH
 ```
 {% endhint %}
 
-
-
 For more information see [here](../../../nodes-and-validators/run-a-node/build-the-xion-daemon.md).
+
+### Alternative Installation - Homebrew
+
+We have a [Github repo](https://github.com/burnt-labs/homebrew-xion) for Homebrew formulae
+
+To install xiond locally with the Homebrew package manager:
+
+1. `brew tap burnt-labs/xion`
+2. `brew install xiond` will install the latest version
+3. `brew install xiond@0.3.8` will install version 0.3.8, etc.
 
 ### Confirm Installation
 
