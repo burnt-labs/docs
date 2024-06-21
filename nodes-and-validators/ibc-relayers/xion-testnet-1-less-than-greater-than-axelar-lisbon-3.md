@@ -4,23 +4,23 @@
 
 ```
 # Chain: axelar-testnet-lisbon-3
-  - Client: 07-tendermint-895
-    * Connection: connection-685
+  - Client: 07-tendermint-970
+    * Connection: connection-752
       | State: OPEN
       | Counterparty state: OPEN
-      + Channel: channel-462
+      + Channel: channel-521
         | Port: transfer
         | State: OPEN
-        | Counterparty: channel-486
+        | Counterparty: channel-225057
 # Chain: xion-testnet-1
-  - Client: 07-tendermint-118
-    * Connection: connection-54
+  - Client: 07-tendermint-127
+    * Connection: connection-64
       | State: OPEN
       | Counterparty state: OPEN
-      + Channel: channel-486
+      + Channel: channel-225057
         | Port: transfer
         | State: OPEN
-        | Counterparty: channel-462
+        | Counterparty: channel-521
 ```
 
 **Denominations**
@@ -29,12 +29,12 @@
 
 ```
 balances:
-  denom: ibc/05007A23A23D8B3D286EC4A541189D86C0B76FD769008E4C85EBE977DDA437D3
+  denom: ibc/33517D439F5E545A1AAB148FAE43AAE17CF68FFB9BC97AE0048A3E3B64518C58
 ```
 
 * XION on Axelar
 
 ```
 balances:
-  denom: ibc/9DB9E3B9F7FAC6028C181E64027B291AE16FB36468A8E5AA88AED61B390286C3
+  denom: ibc/5EF71E3BE703AF789703FCFABEDDAD6EE008576B98810056333DF999A6BA7A16
 ```
