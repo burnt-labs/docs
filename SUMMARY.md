@@ -73,6 +73,7 @@
     * [config.toml](nodes-and-validators/run-a-node/configure-the-xion-daemon/config.toml.md)
   * [Join the XION Network](nodes-and-validators/run-a-node/join-the-xion-network/README.md)
     * [xion-testnet-1](nodes-and-validators/run-a-node/join-the-xion-network/xion-testnet-1.md)
+  * [Confirming node is running](nodes-and-validators/run-a-node/confirming-node-is-running.md)
 * [Become a Validator](nodes-and-validators/become-a-validator/README.md)
   * [Initial Setup](nodes-and-validators/become-a-validator/initial-setup.md)
   * [Obtain a XION Wallet Address](nodes-and-validators/become-a-validator/obtain-a-xion-wallet-address.md)
