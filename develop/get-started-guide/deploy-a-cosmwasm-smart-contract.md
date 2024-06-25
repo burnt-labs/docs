@@ -30,7 +30,7 @@ Use the generated key pair to create an account on the network. This involves se
 
 #### Deploying Contracts
 
-Use the CosmWasm CLI to deploy the created contract to the testnet. The specific command and options may vary depending depending on version.
+Use the CosmWasm CLI to deploy the created contract to the testnet. The specific command and options may vary depending on version.
 
 `xiond tx wasm store contract.tar.gz --from <sender_address> --chain-id <chain_id> --gas auto --gas-prices <gas_prices> --node <testnet_rpc_url>`
 

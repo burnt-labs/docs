@@ -31,7 +31,7 @@ Execute the following command to compile the contract:
 cargo wasm
 ```
 
-After the compilation process, you should find the file _target/wasm32-unknown-unknown/release/cw\_nameservice.wasm_ generated. Its size is roughly 1.9 MB, indicating that it's a release build but hasn't undergone the removal of all redundant code yet. To deploy the contract on-chain, optimization is necessary. Refer to the Optimized Compilation"section below for guidance on optimizing a contract.
+After the compilation process, you should find the file _target/wasm32-unknown-unknown/release/cw\_nameservice.wasm_ generated. Its size is roughly 1.9 MB, indicating that it's a release build but hasn't undergone the removal of all redundant code yet. To deploy the contract on-chain, optimization is necessary. Refer to the Optimized Compilation section below for guidance on optimizing a contract.
 
 ## Optimized Compilation&#x20;
 
