@@ -18,17 +18,17 @@ The [Cosmos SDK documentation](https://docs.cosmos.network/v0.47) is a good plac
 
 ## Initialize the Xion Daemon
 
-* As is the case for most Cosmos-based chains, the daemon is initialized like so:
+- As is the case for most Cosmos-based chains, the daemon is initialized like so:
 
 ```
 $ xiond init my-awesome-moniker \
     --chain-id xion-testnet-1 \
-    --home /tmp/node
+    --home /root/.xiond/
 ```
 
 ## Refer to the config directory
 
-* The `xiond init` command will output this structure to the specified `--home:`
+- The `xiond init` command will output this structure to the specified `--home:`
 
 ```
 .                                   # /tmp/node
@@ -52,4 +52,3 @@ However, if the purpose of your node is persistent, such as running a Validator,
 {% endhint %}
 
 <table data-view="cards"><thead><tr><th></th><th align="center"></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td align="center"><code>app.toml</code></td><td></td><td><a href="app.toml.md">app.toml.md</a></td></tr><tr><td></td><td align="center"><code>client.toml</code></td><td></td><td><a href="client.toml.md">client.toml.md</a></td></tr><tr><td></td><td align="center"><code>config.toml</code></td><td></td><td><a href="config.toml.md">config.toml.md</a></td></tr></tbody></table>
-

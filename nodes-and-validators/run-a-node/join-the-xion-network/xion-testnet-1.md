@@ -6,8 +6,6 @@ description: Details to join the xion-testnet-1 network.
 
 ## Upgrade Path
 
-
-
 | Git Tag  | Docker Tag    | Git SHA                                    | Block Height | Requires Halt |
 | -------- | ------------- | ------------------------------------------ | ------------ | ------------- |
 | `v0.1.0` | `sha-2722f0f` | `2722f0fb1234db97e9bf9b98f744675eb8fb1b26` | `0`          | `false`       |
@@ -21,15 +19,14 @@ description: Details to join the xion-testnet-1 network.
 
 The different Hosts and Endpoints of `xion-testnet-1` are:
 
-*   **Seeds**
+- **Seeds**
 
-    * `eb029462c82b46d842a47122d860617bff627fdf@xion-testnet-1.burnt.com:11656`
+  - `eb029462c82b46d842a47122d860617bff627fdf@xion-testnet-1.burnt.com:11656`
 
-
-* **Peers**
-  * `6bb70718db6af0a473c9d76e82d9ade33618b20d@xion-testnet-1.burnt.com:32656`
-  * `0f2ccb6d7e8f233c03f91dee690f5ff714319fba@xion-testnet-1.burnt.com:33656`
-  * `f684e3873191d62a74e5431202581d99fe3439b7@xion-testnet-1.burnt.com:34656`
+- **Peers**
+  - `6bb70718db6af0a473c9d76e82d9ade33618b20d@xion-testnet-1.burnt.com:32656`
+  - `0f2ccb6d7e8f233c03f91dee690f5ff714319fba@xion-testnet-1.burnt.com:33656`
+  - `f684e3873191d62a74e5431202581d99fe3439b7@xion-testnet-1.burnt.com:34656`
 
 ## Download the Genesis JSON file
 
@@ -39,7 +36,7 @@ We provide a sample snippet which will download the `genesis.json` to the correc
 #!/usr/bin/env bash
 set -euxo pipefail
 
-BASEDIR="/home/xiond/.xiond"
+BASEDIR="/root/.xiond/"
 GENESIS_JSON="https://files.xion-testnet-1.burnt.com/genesis.json"
 
 curl ${GENESIS_JSON} -o ${BASEDIR}/config/genesis.json -s
@@ -66,7 +63,7 @@ You may also want to download a fresh `addrbook.json` to help with peer discover
 #!/usr/bin/env bash
 set -euxo pipefail
 
-BASEDIR="/home/xiond/.xiond"
+BASEDIR="/root/.xiond/"
 ADDRBOOK_JSON="https://files.xion-testnet-1.burnt.com/addrbook.json"
 
 curl ${ADDRBOOK_JSON} -o ${BASEDIR}/config/addrbook.json -s
@@ -92,7 +89,7 @@ We provide a sample snippet, with which to download our latest public snapshot.
 #!/usr/bin/env bash
 set -euxo pipefail
 
-BASEDIR="/home/xiond/.xiond"
+BASEDIR="/root/.xiond/"
 TAR_LZ4="https://files.xion-testnet-1.burnt.com/xion-testnet-1-latest.tar.lz4"
 
 curl -o - -L ${TAR_LZ4} | lz4 -c -d - | tar -x -v -C ${BASEDIR}
@@ -118,7 +115,7 @@ TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.bloc
 sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
 s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
 s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
-s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.burnt/config/config.toml
+s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" /root/.xiond/config/config.toml
 ```
 
 {% hint style="info" %}
@@ -130,4 +127,3 @@ If State Sync just isn't working for you, **DON'T PANIC!**
 
 Try the restore using a Node snapshot instead.
 {% endhint %}
-
