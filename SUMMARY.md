@@ -60,6 +60,8 @@
       * [Instatiating CosmWasm Contract](develop/cosmwasm-resources/tutorials/cosmwasm-by-example/instatiating-cosmwasm-contract.md)
       * [Timelocks](develop/cosmwasm-resources/tutorials/cosmwasm-by-example/timelocks.md)
 * [Public Endpoints & Resources](develop/public-endpoints-and-resources.md)
+* [Indexers](develop/indexers/README.md)
+  * [SubQuery](develop/indexers/subquery.md)
 
 ## Nodes & Validators
 
