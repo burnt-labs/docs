@@ -53,13 +53,13 @@ _You will have needed to already install Docker in order to run the rust-optimiz
 
 Navigate to the project root and run the following command:
 
-```
+```bash
 docker run --rm -v "$(pwd)":/code \
   --mount type=volume,source="$(basename "$(pwd)")_cache",target=/code/target \
   --mount type=volume,source=registry_cache,target=/usr/local/cargo/registry \
-  cosmwasm/rust-optimizer:0.12.12
+  cosmwasm/rust-optimizer:0.16.0
 ```
 
-By running this command, the .wasm file will undergo optimization, resulting in an optimized .wasm file located in the artifacts directory.
+By running this command, the .wasm file will undergo optimization, resulting in an optimized .wasm file located in the artifacts directory. If you have multiple contracts in the workspace append the name of the specific project you want built.
 
 ####
