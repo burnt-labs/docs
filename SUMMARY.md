@@ -6,9 +6,9 @@
 
 * [Learn About XION](learn/learn-about-xion/README.md)
   * [Overview of XION](learn/learn-about-xion/overview-of-xion.md)
-  * [Chain Abstraction](learn/learn-about-xion/generalized-abstraction/README.md)
-    * [Intro to Account Abstraction](learn/learn-about-xion/generalized-abstraction/intro-to-account-abstraction.md)
-    * [XION's Meta Accounts](learn/learn-about-xion/generalized-abstraction/xions-meta-accounts.md)
+  * [Generalized Chain Abstraction](learn/learn-about-xion/generalized-chain-abstraction/README.md)
+    * [Intro to Account Abstraction](learn/learn-about-xion/generalized-chain-abstraction/intro-to-account-abstraction.md)
+    * [XION's Meta Accounts](learn/learn-about-xion/generalized-chain-abstraction/xions-meta-accounts.md)
   * [Architecture & Tech Glossary](learn/learn-about-xion/architecture-and-tech-glossary.md)
 
 ## Develop

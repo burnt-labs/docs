@@ -1,4 +1,4 @@
-# Chain Abstraction
+# Generalized Chain Abstraction
 
 ## **What is Chain Abstraction?**
 
@@ -8,7 +8,7 @@ XION is a layer-1 blockchain purpose-built to abstract away the complexities of 
 
 
 
-## How does it achieve this through Chain Abstraction?
+## How does it achieve this through Generalized Chain Abstraction?
 
 XION employs an all-encompassing solution for Chain Abstraction to be effective in solving adoption challenges. There are a myriad of complexities and technicalities in the current Web3 ecosystem that need to be abstracted away. Incremental solutions – such as adding the ability for a user to login with their email – might simplify one step of the user onboarding process, but if the user is then met with 15 additional steps to understand and manage gas fees, acquire tokens, grasp the inherent value of those tokens, and more, then the initial simplicity becomes moot.&#x20;
 

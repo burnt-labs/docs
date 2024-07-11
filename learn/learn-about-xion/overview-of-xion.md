@@ -10,7 +10,7 @@ XION is the first layer one blockchain purpose built for consumer adoption by en
 
 
 
-XION’s Generalized Abstraction layer includes protocol-level abstractions across Accounts, Signatures, Gas, Interoperability, Pricing, Devices, Payments, and more. By abstracting away all crypto complexities, XION allows the development of next-generation projects bringing Web3 to mainstream audiences worldwide.
+XION’s Generalized Chain Abstraction includes protocol-level abstractions across Accounts, Signatures, Gas, Interoperability, Pricing, Devices, Payments, and more. By abstracting away all crypto complexities, XION allows the development of next-generation projects bringing Web3 to mainstream audiences worldwide.
 
 
 
@@ -18,7 +18,7 @@ Read more about XION's Generalized Abstraction at [xion.burnt.com/whitepaper.pdf
 
 
 
-## **Generalized Abstraction Layer 1 Chain**
+## **Generalized Chain Abstraction Layer 1 Chain**
 
 * Generalized Abstraction: unique protocol-level abstraction that spans Accounts, Signatures, Payments, Pricing, Interoperability, Devices, Gas, and more to make Web3 accessible to everyone, everywhere.
   * Account Abstraction — XION pioneers modular account abstraction at the protocol level.
