@@ -1,8 +1,18 @@
-# Generalized Abstraction
+# Chain Abstraction
 
-## **What is Generalized Abstraction?**
+## **What is Chain Abstraction?**
 
-XION’s Generalized Abstraction is an all-encompassing infrastructure solution aimed at removing all complexities inherent to crypto to enable mainstream adoption. Its foundation is built upon the seamless integration of complex blockchain functionalities – such as accounts, signatures, fees, and interoperability – directly at the protocol level. In doing so, XION eliminates significant barriers to entry for new users, while circumventing fragmentation challenges that developers encounter in other ecosystems.
+Chain Abstraction is the process of removing complexities and technicalities that interfere with user experiences while maintaining the broader benefits of decentralized technology.
+
+XION is a layer-1 blockchain purpose-built to abstract away the complexities of Web3 technology. It was developed with Chain Abstraction at its core, with every element of its infrastructure designed to address the functional & cultural barriers prevalent in Web3 technology. As a result, XION is the first blockchain to enable versatile products and applications to flourish among non crypto-native audiences.
+
+
+
+## How does it achieve this through Chain Abstraction?
+
+XION employs an all-encompassing solution for Chain Abstraction to be effective in solving adoption challenges. There are a myriad of complexities and technicalities in the current Web3 ecosystem that need to be abstracted away. Incremental solutions – such as adding the ability for a user to login with their email – might simplify one step of the user onboarding process, but if the user is then met with 15 additional steps to understand and manage gas fees, acquire tokens, grasp the inherent value of those tokens, and more, then the initial simplicity becomes moot.&#x20;
+
+The robustness of XION’s all-encompassing Chain Abstraction solution is highlighted below through multiple distinct facets, each addressing specific pain points. Its foundation is built upon the seamless integration of complex blockchain functionalities – such as accounts, signatures, fees, and interoperability – directly at the protocol level. In doing so, XION eliminates significant barriers to entry for new users, while circumventing fragmentation challenges that developers encounter in other ecosystems. In addition, through its modular design, XION is designed to enable many more future extensions.&#x20;
 
 
 
