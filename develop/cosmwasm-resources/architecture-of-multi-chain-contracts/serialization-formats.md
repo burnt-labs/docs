@@ -1,7 +1,5 @@
 # Serialization Formats
 
-## Serialization formats
-
 Serialization in CosmWasm allows you to inspect and debug messages sent on the blockchain, as well as parse results, without the need for complex libraries or downloading custom schemas and ABIs.
 
 ## JSON
