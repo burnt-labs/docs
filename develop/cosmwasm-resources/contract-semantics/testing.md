@@ -111,7 +111,7 @@ let mocked_contract_addr = router
 During your testing process, you might encounter error messages such as:
 
 1. "No ContractData"
-2. "Contract \<contract> does not exist"
+2. "Contract does not exist"
 
 These errors often indicate that a crucial element is missing in your mocking setup. In the cw-multi-test environment, any component that your contract interacts with, even simple utility contracts, should be properly mocked. This applies to services that your contract interacts with, even if your immediate intention is not to test them.
 
