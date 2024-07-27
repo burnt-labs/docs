@@ -48,7 +48,7 @@ async function main() {
 main().catch(console.error);
 ```
 
-The \`mnemonic\` must be generated generated.
+The \`mnemonic\` must be generated.
 
 ### Initialize signing client with a private key
 
