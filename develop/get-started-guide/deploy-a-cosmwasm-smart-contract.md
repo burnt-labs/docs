@@ -100,7 +100,7 @@ Replace `<contract_address>, <sender_address>, <chain_id>, <gas_prices>`, and `<
 
 
     * `toolchain` means the compiler of Rust, and rust has three release channels: `stable`, `beta`, and `nightly`, of which the `stable` channel is the most recently released version. `rustup` helps you manage these different versions easily.
-    *   `cargo` is the _Rust package manager_. In the [.cargo/config](https://github.com/InterWasm/cw-template/blob/main/.cargo/config), you can view the wasm compilation options as follows:
+    * `cargo` is the _Rust package manager_. In the [.cargo/config](https://github.com/InterWasm/cw-template/blob/main/.cargo/config), you can view the wasm compilation options as follows:
 
         ```
         wasm = "build --release --target wasm32-unknown-unknown"
@@ -109,9 +109,9 @@ Replace `<contract_address>, <sender_address>, <chain_id>, <gas_prices>`, and `<
 
 
     So when we run the `cargo wasm` command, the `cargo build --release —-target wasm32-unknown-unknown` command is executed according to the option in the config file above.
-2.
 
-    After this compiles, it should produce a file in `target/wasm32-unknown-unknown/release/my_first_contract.wasm`. If you check the size of the file by using the `ls -lh` command, it shows around `1.8M`. This is a release build, but not stripped of all unneeded code. To produce a much smaller version, you can run this which tells the compiler to strip all unused code out:
+
+2.  After this compiles, it should produce a file in `target/wasm32-unknown-unknown/release/my_first_contract.wasm`. If you check the size of the file by using the `ls -lh` command, it shows around `1.8M`. This is a release build, but not stripped of all unneeded code. To produce a much smaller version, you can run this which tells the compiler to strip all unused code out:
 
     ```
     RUSTFLAGS='-C link-arg=-s' cargo wasm
@@ -271,7 +271,6 @@ RESET='{"reset": {"count": 0}}'
 xiond tx wasm execute $CONTRACT_ADDR "$RESET" --from wallet --gas-prices 0.025uxion --gas auto --gas-adjustment 1.3 -y
 ```
 
-\
 
 
 [^1]: 
