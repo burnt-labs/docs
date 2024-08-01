@@ -19,6 +19,7 @@
     * [Installation Prerequisites: Setup Local Environment](develop/get-started-guide/setup/installation-prerequisites-setup-local-environment.md)
     * [Interact with XION chain: Setup XION Daemon](develop/get-started-guide/setup/interact-with-xion-chain-setup-xion-daemon.md)
     * [Setup CosmWasm IDE](develop/get-started-guide/setup/setup-cosmwasm-ide.md)
+  * [Faucet](develop/get-started-guide/xion-testnet-1.md)
   * [Deploy a CosmWasm Smart Contract](develop/get-started-guide/deploy-a-cosmwasm-smart-contract.md)
   * [XION TypeScript](develop/get-started-guide/xion-typescript.md)
 * [Featured Guides](develop/featured-guides/README.md)
