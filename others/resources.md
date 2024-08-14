@@ -8,7 +8,7 @@ description: Additional resources and relevant links
 
 **Blog**: [https://xion.burnt.com/blog](https://xion.burnt.com/blog)
 
-** X (Twitter)**: [https://twitter.com/burnt\_xion](https://twitter.com/burnt\_xion)
+** X (formerly Twitter)**: [https://twitter.com/burnt\_xion](https://twitter.com/burnt\_xion)
 
 **Discord**: [https://discord.gg/burnt](https://discord.gg/burnt)
 
