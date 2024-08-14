@@ -29,7 +29,7 @@ $ docker pull burntnetwork/xion:latest
 ```
 
 {% hint style="info" %}
-For more up to date tags checkout the docker hub page for this image [here](https://hub.docker.com/r/burntnetwork/xion/tags).
+For more up to date tags checkout the docker hub page for this image [here](https://hub.docker.com/r/burntnetwork/xion).
 
 The most current generally is the release marked "latest" [here](https://github.com/burnt-labs/xion/releases).
 {% endhint %}
