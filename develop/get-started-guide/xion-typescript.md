@@ -19,7 +19,8 @@ See [public-endpoints-and-resources.md](../public-endpoints-and-resources.md "me
 ## Initialize the signing client with a mnemonic
 
 ```typescript
-import { DirectSecp256k1Wallet, SigningStargateClient, coins } from '@cosmjs/stargate';
+import { SigningStargateClient, coins } from '@cosmjs/stargate';
+import { DirectSecp256k1HdWallet } from "@cosmjs/proto-signing";
 
 // Mnemonic for the account you want to use
 const mnemonic = '<your-mnemonic>';
@@ -28,7 +29,7 @@ const rpcEndpoint = '<rpc-endpoint>';
 // The main function to create and use the SigningStargateClient
 async function main() {
     // Creating a wallet instance from a given mnemonic
-    const wallet = await DirectSecp256k1Wallet.fromMnemonic(mnemonic);
+    const wallet = await DirectSecp256k1HdWallet.fromMnemonic(mnemonic);
 
     // Fetching account from the wallet
     const [account] = await wallet.getAccounts();
