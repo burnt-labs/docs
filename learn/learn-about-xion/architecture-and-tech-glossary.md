@@ -1,6 +1,5 @@
 ---
-description: XION prioritizes dependability, flexibility, security, and speed
----
+description: XION prioritizing dependability, flexibility, security, speed & community
 
 # Architecture & Tech Glossary
 
