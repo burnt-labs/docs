@@ -79,6 +79,18 @@ By default all commands will assume you are accessing a local xion testnet unles
 
 ## Testing the CLI
 
+### Connecting to an External node
+
+The `--node` flag allows you to provide an external RPC to query from.
+
+#### Example: Query balance of an account on the testnet
+
+{% code overflow="wrap" %}
+```sh
+$ xiond query bank balances xion14yy92ae8eq0q3ezy9nasumt65hwdgryvpkf0a4 --node https://rpc.xion-testnet-1.burnt.com:443
+```
+{% endcode %}
+
 ### Creating and viewing Keys
 
 ```bash
@@ -133,7 +145,13 @@ The `name` field is an alias that can be used in some other commands.
 
 ### Checking an account balance
 
-To get the current balance the in the banking module in a given address. For the below command to not return `Error: post failed: Post "http://localhost:26657": dial tcp [::1]:26657: connect: connection refused`, make sure you either provide a node to connect to or a have local instance of Xion chain running in the background.
+To get the current balance the in the banking module in a given address.&#x20;
+
+For the below command to not return&#x20;
+
+`Error: post failed: Post "http://localhost:26657": dial tcp [::1]:26657: connect: connection refused`
+
+make sure you either provide a node to connect to or a have local instance of Xion chain running in the background.
 
 **To connect to an external node**
 
@@ -143,7 +161,7 @@ $ xiond query bank balances xion14yy92ae8eq0q3ezy9nasumt65hwdgryvpkf0a4 --node h
 ```
 {% endcode %}
 
-To query local instance running on `http://localhost:26657`
+[To query local instance running on `http://localhost:26657`](#user-content-fn-1)[^1]
 
 ```bash
 $ xiond query bank balances xion14yy92ae8eq0q3ezy9nasumt65hwdgryvpkf0a4
@@ -208,3 +226,5 @@ $ xiond query wasm list-codes
 ```
 
 If any contracts are deployed they will appear here along with their code id.
+
+[^1]: To run a local instance see [https://docs.burnt.com/xion/develop/get-started-guide/setup/installation-prerequisites-setup-local-environment#start-a-local-testnet](https://docs.burnt.com/xion/develop/get-started-guide/setup/installation-prerequisites-setup-local-environment#start-a-local-testnet)
