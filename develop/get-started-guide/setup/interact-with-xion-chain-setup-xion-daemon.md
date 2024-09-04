@@ -77,25 +77,55 @@ Use "xiond [command] --help" for more information about a command.
 
 By default all commands will assume you are accessing a local xion testnet unless you pass a parameter.
 
-## Common use case for the CLI (Locally)
+## Testing the CLI
 
-### Listing keys available to the cli
+### Creating and viewing Keys
 
 ```bash
 $ xiond keys list
 ```
 
-Output
+**Output**
 
-```bash
+If this is a fresh installation the output is going to be&#x20;
 
-- address: xion1e2fuwe3uhq8zd9nkkk876nawrwdulgv460vzg7
-  name: local-testnet-faucet
-  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"Ayrlj6q3WWs91p45LVKwI8JyfMYNmWMrcDinLNEdWYE4"}'
+```
+[]
+```
+
+**Create a new account**
+
+```
+$ xiond keys add test
+```
+
+**Output**
+
+```
+- address: xion1vmzvym7t4kn09lzmj9clxk24yanr08xfr6fghg
+  name: test
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AwrVIv+hI5g9PjnkWXPxFSpuA6h2S7hVdntt45SqlJKS"}'
   type: local
-- address: xion1h495zmkgm92664jfnc80n9p64xs5xf56qrg4vc
-  name: local-testnet-validator
-  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AiBl5S4fP+Ra2LD/EZ2XtWwNu9otOCFMTs8tfq5fwIXm"}'
+
+
+**Important** write this mnemonic phrase in a safe place.
+It is the only way to recover your account if you ever forget your password.
+
+reject waste alien movie abstract kangaroo find second phone home pet you regret horse crunch above faint govern gaze hammer fortune midnight can elephant
+```
+
+**List Keys**
+
+```
+$ xiond keys list
+```
+
+**Output**
+
+```
+- address: xion1vmzvym7t4kn09lzmj9clxk24yanr08xfr6fghg
+  name: test
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AwrVIv+hI5g9PjnkWXPxFSpuA6h2S7hVdntt45SqlJKS"}'
   type: local
 ```
 
@@ -103,14 +133,27 @@ The `name` field is an alias that can be used in some other commands.
 
 ### Checking an account balance
 
-To get the current balance the in the banking module in a given address.&#x20;
+To get the current balance the in the banking module in a given address. For the below command to not return `Error: post failed: Post "http://localhost:26657": dial tcp [::1]:26657: connect: connection refused`, make sure you either provide a node to connect to or a have local instance of Xion chain running in the background.
+
+**To connect to an external node**
+
+{% code overflow="wrap" %}
+```
+$ xiond query bank balances xion14yy92ae8eq0q3ezy9nasumt65hwdgryvpkf0a4 --node https://rpc.xion-testnet-1.burnt.com:443
+```
+{% endcode %}
+
+To query local instance running on `http://localhost:26657`
 
 ```bash
-$ xiond query bank balances <address>
+$ xiond query bank balances xion14yy92ae8eq0q3ezy9nasumt65hwdgryvpkf0a4
 ```
 
-Output:
+See instructions on [Setting up Local Environment](installation-prerequisites-setup-local-environment.md#start-a-local-testnet) (Start a Local Testnet) to initiate a local Xion instance
 
+**Output**&#x20;
+
+{% code title="amounts will vary" overflow="wrap" %}
 ```bash
 balances:
 - amount: "10000000000000"
@@ -119,6 +162,7 @@ pagination:
   next_key: null
   total: "0"
 ```
+{% endcode %}
 
 ### Send Xion tokens to another address
 
@@ -156,14 +200,6 @@ confirm transaction before signing and broadcasting [y/N]:
 ```
 
 This command is interactive. Enter `y` to execute and you will see the tx hash output along with a raw logs and various other information.&#x20;
-
-### Generating more keys
-
-```
-$ xiond keys add <alias>
-```
-
-Generates a key and adds it to your local keyring. The alias must be unique or it will overwrite an existing key.
 
 ### List WASM Contracts currently deployed
 
