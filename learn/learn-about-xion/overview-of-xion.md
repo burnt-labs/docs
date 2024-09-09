@@ -35,7 +35,7 @@ Read more about XION's Generalized Abstraction at [xion.burnt.com/whitepaper.pdf
 
 ### **Investors**
 
-Raised over $36M from industry leading investors including Animoca Brands, Circle Ventures, Multicoin, Valor, Hashkey, Spartan, Mechanism, Figment, Stateless Ventures, Coinlist Seed, Injective, Alliance DAO, Sandeep Nailwal (Polygon), and more.
+Raised over $36M from industry leading investors including Animoca Brands, Circle Ventures, Multicoin, Valor, Huobi, Hashkey, Spartan, Mechanism, Figment, Stateless Ventures, Coinlist Seed, Injective, Alliance DAO, Sandeep Nailwal (Polygon), and more.
 
 <figure><img src="../../.gitbook/assets/Burnt Investor Logos (1) (1).png" alt=""><figcaption></figcaption></figure>
 
