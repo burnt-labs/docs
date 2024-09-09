@@ -50,7 +50,7 @@ _**The following is listed to help guide the installation of the extension**_
 
 _For additional information as to the benefits and features of rust-analyzer, see the rust-analyzer_ [_User Manual_](https://rust-analyzer.github.io/manual.html)_._
 
-### Code LLBD
+### Code LLDB
 
 The CodeLLDB extension serves as a native debugger designed for the purpose of debugging Rust and other compiled programming languages.
 
