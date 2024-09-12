@@ -4,13 +4,13 @@
 
 ## developers
 
-* [Begin Learning](developers/learn-about-xion/README.md)
-  * [Overview](developers/learn-about-xion/overview-of-xion.md)
-  * [Generalized Chain Abstraction](developers/learn-about-xion/generalized-chain-abstraction/README.md)
-    * [Intro to Account Abstraction](developers/learn-about-xion/generalized-chain-abstraction/intro-to-account-abstraction.md)
-    * [XION's Meta Accounts](developers/learn-about-xion/generalized-chain-abstraction/xions-meta-accounts.md)
-  * [Architecture & Tech Glossary](developers/learn-about-xion/architecture-and-tech-glossary.md)
-  * [Use Cases](developers/learn-about-xion/use-cases.md)
+* [Begin Learning](developers/learn/README.md)
+  * [Overview](developers/learn/overview-of-xion.md)
+  * [Generalized Chain Abstraction](developers/learn/generalized-chain-abstraction/README.md)
+    * [Intro to Account Abstraction](developers/learn/generalized-chain-abstraction/intro-to-account-abstraction.md)
+    * [XION's Meta Accounts](developers/learn/generalized-chain-abstraction/xions-meta-accounts.md)
+  * [Architecture & Tech Glossary](developers/learn/architecture-and-tech-glossary.md)
+  * [Use Cases](developers/learn/use-cases.md)
 * [Guides](developers/featured-guides/README.md)
   * [Getting Started](developers/featured-guides/get-started-guide/README.md)
     * [Setup](developers/featured-guides/get-started-guide/setup/README.md)

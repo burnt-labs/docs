@@ -4,7 +4,7 @@
 
 XION’s modular _meta accounts_ introduce a highly adaptable and secure account creation & management framework.
 
-Built at the protocol-level, _meta accounts_ have a host of benefits over traditional crypto wallets and enable novel Web3 application use-cases. See [generalized-chain-abstraction](../../learn-about-xion/generalized-chain-abstraction/ "mention") for more information around use cases and features.
+Built at the protocol-level, _meta accounts_ have a host of benefits over traditional crypto wallets and enable novel Web3 application use-cases. See [generalized-chain-abstraction](../../learn/generalized-chain-abstraction/ "mention") for more information around use cases and features.
 
 ## Components
 
