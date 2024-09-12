@@ -13,7 +13,7 @@ npm install @cosmjs/stargate
 ```
 
 {% hint style="info" %}
-See [public-endpoints-and-resources.md](../public-endpoints-and-resources.md "mention")for`'<rpcEndpoint>'` values &#x20;
+See [public-endpoints-and-resources.md](../../section-overview/public-endpoints-and-resources.md "mention")for`'<rpcEndpoint>'` values &#x20;
 {% endhint %}
 
 ## Initialize the signing client with a mnemonic

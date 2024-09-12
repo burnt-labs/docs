@@ -10,8 +10,6 @@ It is important to have all prerequisites and dependencies installed and some kn
 
 Use the Cosmos SDK's cryptographic tools to generate a key pair for your account. This key pair will include a public key and a private key.
 
-
-
 To generate a key and add it to your local keybase:
 
 ```bash
@@ -26,7 +24,7 @@ xiond keys show <keyname> -p
 
 #### Create an Account on the Blockchain:
 
-Use the generated key pair to create an account on the network. This involves sending a transaction to the network's blockchain to register your account. The simplest way to do this is to request testnet tokens from a member of the team or in discord.&#x20;
+Use the generated key pair to create an account on the network. This involves sending a transaction to the network's blockchain to register your account. The simplest way to do this is to request testnet tokens from a member of the team or in discord.
 
 #### Deploying Contracts
 
@@ -34,7 +32,7 @@ Use the CosmWasm CLI to deploy the created contract to the testnet. The specific
 
 `xiond tx wasm store contract.tar.gz --from <sender_address> --chain-id <chain_id> --gas auto --gas-prices <gas_prices> --node <testnet_rpc_url>`
 
-[Replace `<sender_address>, <chain_id>, <gas_prices>`, and `<testnet_rpc_url>` with the appropriate values for your testnet environment.](#user-content-fn-1)[^1] These can be found in the [Network](../public-endpoints-and-resources.md) section.
+Replace `<sender_address>, <chain_id>, <gas_prices>`, and `<testnet_rpc_url>` with the appropriate values for your testnet environment. These can be found in the [Network](../../section-overview/public-endpoints-and-resources.md) section.
 
 or use the populated version here:
 
@@ -57,7 +55,7 @@ Our testnet allows for zero gas price but will not be the case with our mainnet.
 
 `<sender_address>`:
 
-This is the address of your account on the testnet. If you don't have one, you'll need to create an account on the XION's testnet and obtain the address. _More information on how to generate a key pair and the associated address can be found_ [_here_](https://www.techtarget.com/searchsecurity/tutorial/Use-ssh-keygen-to-create-SSH-key-pairs-and-more?Offer=abt\_pubpro\_AI-Insider)_._&#x20;
+This is the address of your account on the testnet. If you don't have one, you'll need to create an account on the XION's testnet and obtain the address. _More information on how to generate a key pair and the associated address can be found_ [_here_](https://www.techtarget.com/searchsecurity/tutorial/Use-ssh-keygen-to-create-SSH-key-pairs-and-more?Offer=abt\_pubpro\_AI-Insider)_._
 
 `<chain_id>`:
 
@@ -97,8 +95,6 @@ Replace `<contract_address>, <sender_address>, <chain_id>, <gas_prices>`, and `<
     cargo wasm
     ```
 
-
-
     * `toolchain` means the compiler of Rust, and rust has three release channels: `stable`, `beta`, and `nightly`, of which the `stable` channel is the most recently released version. `rustup` helps you manage these different versions easily.
     *   `cargo` is the _Rust package manager_. In the [.cargo/config](https://github.com/InterWasm/cw-template/blob/main/.cargo/config), you can view the wasm compilation options as follows:
 
@@ -106,21 +102,24 @@ Replace `<contract_address>, <sender_address>, <chain_id>, <gas_prices>`, and `<
         wasm = "build --release --target wasm32-unknown-unknown"
         ```
 
-
-
     So when we run the `cargo wasm` command, the `cargo build --release —-target wasm32-unknown-unknown` command is executed according to the option in the config file above.
 2.
 
-    After this compiles, it should produce a file in `target/wasm32-unknown-unknown/release/my_first_contract.wasm`. If you check the size of the file by using the `ls -lh` command, it shows around `1.8M`. This is a release build, but not stripped of all unneeded code. To produce a much smaller version, you can run this which tells the compiler to strip all unused code out:
+```
+After this compiles, it should produce a file in `target/wasm32-unknown-unknown/release/my_first_contract.wasm`. If you check the size of the file by using the `ls -lh` command, it shows around `1.8M`. This is a release build, but not stripped of all unneeded code. To produce a much smaller version, you can run this which tells the compiler to strip all unused code out:
+```
 
-    ```
-    RUSTFLAGS='-C link-arg=-s' cargo wasm
-    ```
+````
+```
+RUSTFLAGS='-C link-arg=-s' cargo wasm
+```
+````
 
+3\. This produces a file about `155K`. To reduce gas costs, the binary size should be as small as possible. This will result in a less costly deployment, and lower fees on every interaction.
 
-3.  This produces a file about `155K`. To reduce gas costs, the binary size should be as small as possible. This will result in a less costly deployment, and lower fees on every interaction.
-
-    Also, if you don’t use compilation optimization, CosmWasm smart contract will not be deployed well due to `exceeds limit` error.
+```
+Also, if you don’t use compilation optimization, CosmWasm smart contract will not be deployed well due to `exceeds limit` error.
+```
 
 ## Optimized Compilation[​](https://docs.osmosis.zone/cosmwasm/testnet/cosmwasm-deployment/#optimized-compilation) <a href="#optimized-compilation" id="optimized-compilation"></a>
 
@@ -169,7 +168,7 @@ If you are using an operating system other than the one listed above, please ref
 
 ### Set the $RES Variable to Parse Output
 
-The user can directly set the output of the xiond keys add myaccount command to a variable, and then use string manipulation to extract the address.&#x20;
+The user can directly set the output of the xiond keys add myaccount command to a variable, and then use string manipulation to extract the address.
 
 _Here's an example:_
 
@@ -271,7 +270,4 @@ RESET='{"reset": {"count": 0}}'
 xiond tx wasm execute $CONTRACT_ADDR "$RESET" --from wallet --gas-prices 0.025uxion --gas auto --gas-adjustment 1.3 -y
 ```
 
-\
-
-
-[^1]: 
+\\

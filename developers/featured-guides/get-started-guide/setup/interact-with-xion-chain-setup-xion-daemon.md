@@ -17,7 +17,7 @@ export PATH=$GOPATH/bin:$PATH
 ```
 {% endhint %}
 
-For more information see [here](../../../nodes-and-validators/run-a-node/build-the-xion-daemon.md).
+For more information see [here](../../../../nodes-and-validators/run-a-node/build-the-xion-daemon.md).
 
 ### Alternative Installation - Homebrew
 
