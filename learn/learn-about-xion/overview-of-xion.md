@@ -1,5 +1,7 @@
 # Overview
 
+<figure><img src="../../.gitbook/assets/XION Infrastructure Graphic Chain Abstraction.png" alt=""><figcaption></figcaption></figure>
+
 ## What is Xion?
 
 XION is a Blockchain that is purpose-built for user experience.
@@ -43,6 +45,3 @@ XION's approach to transaction fees includes global fee abstraction, allowing th
 
 XION enhances cross-chain user experiences through abstracted interoperability, allowing users to perform actions on any connected chain from a central account. This addresses account fragmentation issues in multichain environment
 
-
-
-<figure><img src="../../.gitbook/assets/XION Infrastructure Graphic Chain Abstraction.png" alt=""><figcaption></figcaption></figure>
