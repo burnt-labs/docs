@@ -1,22 +1,20 @@
----
-description: The first layer one blockchain for consumer adoption through chain abstraction
----
+# Overview
 
-# Overview of XION
+## What is Xion?
 
-## Intro
+XION is a Blockchain that is purpose-built for user experience.
 
-XION is the first layer one blockchain purpose built for consumer adoption by enabling seamless user experiences for everyday users through chain abstraction.
+### How is user-experience at the centre of the tech?
 
+Complex functionalities such as accounts, signatures, fee management, and interoperability are baked into the protocol. This is also referred to as Generalized Abstraction Layer. Other features that sets XION apart are:
 
+1. Generalized chain abstraction
+2. Meta-Accounts
+3. Signature Device Abstraction
+4. Parameterized Fee Layer
+5. Abstracted Interoperability
 
-XION’s Generalized Chain Abstraction includes protocol-level abstractions across Accounts, Signatures, Gas, Interoperability, Pricing, Devices, Payments, and more. By abstracting away all crypto complexities, XION allows the development of next-generation projects bringing Web3 to mainstream audiences worldwide.
-
-
-
-Read more about XION's Generalized Abstraction at [xion.burnt.com/whitepaper.pdf](https://xion.burnt.com/whitepaper.pdf)
-
-
+We'll go over what these features mean in detail in later sections but below you can find a general overview:
 
 ## **Generalized Chain Abstraction Layer 1 Chain**
 
@@ -28,15 +26,23 @@ Read more about XION's Generalized Abstraction at [xion.burnt.com/whitepaper.pdf
   * Abstracted Interoperability — XION is able to extend its Chain Abstraction solution to enable true interoperability across ecosystems.
   * Device Abstraction — XION provides safe and efficient operations across various devices through its Meta Accounts & signature abstraction, fully abstracting away the concept of wallet plugins or apps
   * Payment Abstraction — XION streamlines payments by eradicating the traditional purchasing complexities through its unique fee abstraction, enabling users to transact with any token of choice as well as direct credit and debit card transactions
-* XION’s infrastructure allows the development of next-generation mass-market projects through unparalleled user-friendly experiences. This is made possible by its Meta Accounts, seamless device support, lightning-fast gasless transactions, extremely low fees, native on & off ramps, global direct credit/debit card purchasing, familiar fiat denomination, interoperability with 50+ other networks, and more.
-  * XION’s L1 abstracts away all crypto complexities for users to enable mass adoption
+
+## Meta-Accounts
+
+The protocol-level implementation of meta accounts allows for more intuitive user interfaces by decoupling the traditional private-public key model. This enables users to interact with their accounts using familiar methods like email or biometric authentication, enhancing security and ease of use
+
+## Signature Device Abstraction
+
+XION's signature abstraction supports various cryptographic curves, ensuring compatibility and adaptability to future developments. Device abstraction allows users to access their accounts seamlessly across multiple devices without managing private keys, thus reducing complexity and risk
+
+## Parameterized Fee Layer
+
+XION's approach to transaction fees includes global fee abstraction, allowing the use of any token for fees, and a new fee type called PlatformSend. This enables gasless experiences for users and supports token-agnostic payments
+
+## Abstracted Interoperability
+
+XION enhances cross-chain user experiences through abstracted interoperability, allowing users to perform actions on any connected chain from a central account. This addresses account fragmentation issues in multichain environment
+
+
 
 <figure><img src="../../.gitbook/assets/XION Infrastructure Graphic Chain Abstraction.png" alt=""><figcaption></figcaption></figure>
-
-### **Investors**
-
-Raised over $36M from industry leading investors including Animoca Brands, Circle Ventures, Multicoin, Valor, Hashkey, Spartan, Mechanism, Figment, Stateless Ventures, Coinlist Seed, Injective, Alliance DAO, Sandeep Nailwal (Polygon), and more.
-
-<figure><img src="../../.gitbook/assets/Burnt Investor Logos (1) (1).png" alt=""><figcaption></figcaption></figure>
-
-###

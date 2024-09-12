@@ -23,3 +23,12 @@ Explore XION and its core concepts.
 Get in touch with the community & find the support you need.
 
 <table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Developer Support</strong></td><td>Chat with XION developers on Discord<br></td><td>Click to navigate to Discord.</td><td><a href="https://discord.gg/burnt">https://discord.gg/burnt</a></td></tr><tr><td><strong>Found an issue in the docs?</strong></td><td>Report it, or simply submit a pull request on the page where you found it.</td><td><br>Click to report issue.</td><td><a href="https://discord.gg/burnt">https://discord.gg/burnt</a></td></tr></tbody></table>
+
+
+
+## Investors
+
+Raised over $36M from industry leading investors including Animoca Brands, Circle Ventures, Multicoin, Valor, Hashkey, Spartan, Mechanism, Figment, Stateless Ventures, Coinlist Seed, Injective, Alliance DAO, Sandeep Nailwal (Polygon), and more.
+
+<figure><img src=".gitbook/assets/Burnt Investor Logos (1) (2).png" alt=""><figcaption></figcaption></figure>
+
