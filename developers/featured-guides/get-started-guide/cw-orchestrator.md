@@ -183,7 +183,7 @@ pub fn main() -> anyhow::Result<()> {
     dotenv::dotenv().ok(); // Used to load the `.env` file if any
     pretty_env_logger::init(); // Used to log contract and chain interactions
     let rt = Runtime::new()?;
-    let network = networks::LOCAL_JUNO;
+    let network = networks::LOCAl_XION;
     let chain = DaemonBuilder::default()
         .handle(rt.handle())
         .chain(network)
