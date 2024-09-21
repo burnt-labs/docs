@@ -19,9 +19,9 @@ Adequate installation and configuration of your environment is out of scope. Ple
 {% hint style="info" %}
 :warning: **Go Versions**
 
-We use Go version 1.21 internally at Burnt.
+We use Go version 1.22 internally at Burnt.
 
-If you are building the binary yourself, please make sure you are using Go 1.21, as we have observed consensus-breaking behavior on nodes that are not running the same version as the majority of the network.\
+If you are building the binary yourself, please make sure you are using Go 1.22, as we have observed consensus-breaking behavior on nodes that are not running the same version as the majority of the network.\
 A specific symptom of this would be an `AppHash` mismatch.
 {% endhint %}
 
@@ -44,6 +44,7 @@ $ git clone https://github.com/burnt-labs/xion.git -b vX.Y.Z
 * We provide a `Makefile` with several targets common to projects in the Cosmos ecosystem.
 
 ```
+$ cd xion
 $ make install
 ```
 
