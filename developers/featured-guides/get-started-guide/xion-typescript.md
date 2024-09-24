@@ -19,72 +19,56 @@ See [public-endpoints-and-resources.md](../../section-overview/public-endpoints-
 ## Initialize the signing client with a mnemonic
 
 ```typescript
-import { DirectSecp256k1Wallet, SigningStargateClient, coins } from '@cosmjs/stargate';
+import { GasPrice, SigningStargateClient, StargateClient, coins } from '@cosmjs/stargate';
+import { DirectSecp256k1Wallet } from '@cosmjs/proto-signing';
+import { toBech32 } from '@cosmjs/encoding';
+import { rawSecp256k1PubkeyToRawAddress } from '@cosmjs/amino'
 
 // Mnemonic for the account you want to use
-const mnemonic = '<your-mnemonic>';
-const rpcEndpoint = '<rpc-endpoint>';
+const key = process.env.PRIVATE_KEY!;
+const address = ADD_XION_ADDRESS_HERE
+const rpcEndpoint = 'https://rpc.xion-testnet-1.burnt.com:443';
+
+//Tx info
+const amount = coins('1', 'uxion');
+const gasPrice = GasPrice.fromString("0uxion");
+const txOptions = { gasPrice };
 
 // The main function to create and use the SigningStargateClient
 async function main() {
     // Creating a wallet instance from a given mnemonic
-    const wallet = await DirectSecp256k1Wallet.fromMnemonic(mnemonic);
+    const wallet = await DirectSecp256k1Wallet.fromKey(Buffer.from(key,'hex'), "xion");
 
     // Fetching account from the wallet
     const [account] = await wallet.getAccounts();
+    const sender = toBech32("xion",rawSecp256k1PubkeyToRawAddress(account.pubkey))
 
     // Creating an instance of SigningStargateClient
-    const client = await SigningStargateClient.connectWithSigner(rpcEndpoint, wallet);
+    const client = await SigningStargateClient.connectWithSigner(rpcEndpoint, wallet, txOptions);
 
     // Defining recipient and coins to be transferred
-    const recipient = '<recipient-address>';
-    const sendingAmount = coins(1000, 'uxion');
+    const recipient = address;
 
     // Broadcasting the transaction
-    const result = await client.sendTokens(account.address, recipient, sendingAmount);
+    const result = await client.sendTokens(sender, recipient, amount, "auto", "sending a msg!");
+
     console.log(result);
 }
 
 main().catch(console.error);
 ```
 
-The \`mnemonic\` must be generated generated.
+To fetch the private key from `xiond` execute the following in your terminal
 
-### Initialize signing client with a private key
+{% hint style="warning" %}
+The private key will be returned in plaintext, do NOT use `--unarmored-hex --unsafe` to export keys in production environments.&#x20;
+{% endhint %}
 
-```typescript
-import { DirectSecp256k1Wallet, SigningStargateClient, Secp256k1, makeCosmoshubPath, BroadcastTxResponse, coins } from '@cosmjs/stargate';
-import { fromBase64 } from '@cosmjs/encoding';
-
-// Private key for the account you want to use
-// Make sure to have it in base64 format
-const privkey = '<Your private key in base64>';  
-const rpcEndpoint = '<rpc-endpoint>';
-
-async function main() {
-    // Converting base64 private key into Uint8Array
-    const key = fromBase64(privkey);
-
-    // Making a wallet instance from the DirectSecp256k1Wallet
-    const wallet = await DirectSecp256k1Wallet.fromKey(key);
-
-    // Fetching account from the wallet
-    const [account] = await wallet.getAccounts();
-
-    // Creating an instance of SigningStargateClient
-    const client = await SigningStargateClient.connectWithSigner(rpcEndpoint, wallet);
-
-    // Defining recipient and coins to be transferred
-    const recipient = '<recipient-address>';
-    const sendingAmount = coins(1000, 'uxion');
-
-    // Broadcasting the transaction
-    const result: BroadcastTxResponse = await client.sendTokens(account.address, recipient, sendingAmount);
-    console.log(result);
-}
-
-main().catch(console.error);
 ```
+❯ xiond keys export ACCOUNT_NAME --unarmored-hex --unsafe
+```
+
+
 
 If you need to generate a quickly the following run the following in a terminal:
 
