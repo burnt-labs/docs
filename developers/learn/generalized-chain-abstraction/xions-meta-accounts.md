@@ -10,7 +10,7 @@ XION’s modular _meta accounts_ introduce a highly adaptable and secure account
 
 Built at the protocol-level, _meta accounts_ have a host of benefits over traditional crypto wallets and enable novel Web3 application use-cases.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Start Building Now</strong></td><td><p></p><p>Follow our Account Abstraction featured guide and start building with Meta Accounts today.</p></td><td></td><td><a href="../../featured-guides/build-react-dapp-with-account-abstraxion/">build-react-dapp-with-account-abstraxion</a></td></tr><tr><td><p><strong>Meta Accounts Design</strong></p><p></p><p>Learn about the technical design of XION's Meta Accounts.</p></td><td></td><td></td><td><a href="../../featured-guides/build-react-dapp-with-account-abstraxion/meta-accounts-design.md">meta-accounts-design.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Start Building Now</strong></td><td><p></p><p>Follow our Account Abstraction featured guide and start building with Meta Accounts today.</p></td><td></td><td><a href="../../featured-guides/build-react-dapp-with-account-abstraxion.md">build-react-dapp-with-account-abstraxion.md</a></td></tr><tr><td><p><strong>Meta Accounts Design</strong></p><p></p><p>Learn about the technical design of XION's Meta Accounts.</p></td><td></td><td></td><td><a href="meta-accounts-design.md">meta-accounts-design.md</a></td></tr></tbody></table>
 
 
 

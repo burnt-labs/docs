@@ -32,7 +32,7 @@ Use the CosmWasm CLI to deploy the created contract to the testnet. The specific
 
 `xiond tx wasm store contract.tar.gz --from <sender_address> --chain-id <chain_id> --gas auto --gas-prices <gas_prices> --node <testnet_rpc_url>`
 
-Replace `<sender_address>, <chain_id>, <gas_prices>`, and `<testnet_rpc_url>` with the appropriate values for your testnet environment. These can be found in the [Network](../../section-overview/public-endpoints-and-resources.md) section.
+Replace `<sender_address>, <chain_id>, <gas_prices>`, and `<testnet_rpc_url>` with the appropriate values for your testnet environment. These can be found in the [Network](../section-overview/public-endpoints-and-resources.md) section.
 
 or use the populated version here:
 
