@@ -20,12 +20,12 @@ Adequate installation and configuration of your environment is out of scope. Ple
 
 ## Download the image from Docker Hub
 
-* We publish Docker images to Docker Hub on every commit to `main`.
-* The image versions are tagged with the short Git SHA.
-* We do not use the `latest` tag, to avoid confusion and mistakes.
+- We publish Docker images to Docker Hub on every commit to `main`.
+- The image versions are tagged with the short Git SHA.
+- We do not use the `latest` tag, to avoid confusion and mistakes.
 
 ```
-$ docker pull burntnetwork/xion:latest
+$ docker pull burntnetwork/xion:sha-34c82a9
 ```
 
 {% hint style="info" %}
@@ -34,16 +34,13 @@ For more up to date tags checkout the docker hub page for this image [here](http
 The most current generally is the release marked "latest" [here](https://github.com/burnt-labs/xion/releases/latest).
 {% endhint %}
 
-
-
 ## Obtain a shell in the Docker container
 
-* We can now invoke the `xiond` binary inside the container.
+- We can now invoke the `xiond` binary inside the container.
 
 ```
-$ docker run -ti burntnetwork/xion:latest /bin/bash
+$ docker run -ti burntnetwork/xion:sha-34c82a9 /bin/bash
 # xiond version
 # xiond version --long
 # xiond --help
 ```
-
