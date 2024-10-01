@@ -94,53 +94,66 @@ Replace the contents of \`src/app/page.tsx\` with the following:
 {% code title="src/app/page.tsx" %}
 ```typescript
 "use client";
-import { useEffect, useState } from "react";
 import {
   Abstraxion,
   useAbstraxionAccount,
   useModal
 } from "@burnt-labs/abstraxion";
 import { Button } from "@burnt-labs/ui";
+import { useEffect } from "react";
 
 export default function Page(): JSX.Element {
   // Abstraxion hooks
-  const { data: account } = useAbstraxionAccount();
+  const { data: { bech32Address }, isConnected, isConnecting } = useAbstraxionAccount();
 
   // General state hooks
- const [showAbstraxion, setShowAbstraxion] = useModal();
+  const [, setShow] = useModal();
+
+  // watch isConnected and isConnecting
+  // only added for testing
+  useEffect(() => {
+    console.log({ isConnected, isConnecting });
+  }, [isConnected, isConnecting])
 
   return (
       <main className="m-auto flex min-h-screen max-w-xs flex-col items-center justify-center gap-4 p-4">
         <h1 className="text-2xl font-bold tracking-tighter text-black dark:text-white">
-          ABSTRAXION
+          Abstraxion
         </h1>
         <Button
             fullWidth
-            onClick={() => {
-              setShowAbstraxion(true);
-            }}
+            onClick={() => { setShow(true) }}
             structure="base"
-            theme="secondary"
         >
-          {account ? (
+          {bech32Address ? (
               <div className="flex items-center justify-center">VIEW ACCOUNT</div>
           ) : (
               "CONNECT"
           )}
         </Button>
-        <Abstraxion
-          onClose={() => { 
-            setShowAbstraxion(false);
-          }}
-        />
+        {
+          bech32Address &&
+            <div className="border-2 border-primary rounded-md p-4 flex flex-row gap-4">
+              <div className="flex flex-row gap-6">
+                <div>
+                  address
+                </div>
+                <div>
+                  {bech32Address}
+                </div>
+              </div>
+            </div>
+        }
+        <Abstraxion onClose={() => setShow(false)} />
       </main>
   );
 }
-
 ```
 {% endcode %}
 
 This will give a a button that initiates a meta account using social login.  Click the \`CONNECT\` button and try it out!
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 ## Transaction submission
 
@@ -294,7 +307,7 @@ export default function Page(): JSX.Element {
 
 If everything is successful you should see transaction results as shown above.
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>After clicking "Claim Seat" you should see the confirmation above.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>After clicking "Claim Seat" you should see the confirmation above.</p></figcaption></figure>
 
 ## Summary
 

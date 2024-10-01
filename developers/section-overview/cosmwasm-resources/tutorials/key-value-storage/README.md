@@ -13,7 +13,7 @@ To understand the workings of this key-value storage approach, let's delve into 
 \
 
 
-<figure><img src="../../../../.gitbook/assets/AVL-tree-.png" alt=""><figcaption><p><a href="https://github.com/cosmos/iavl">cosmos/iavl </a>tree model</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/AVL-tree-.png" alt=""><figcaption><p><a href="https://github.com/cosmos/iavl">cosmos/iavl </a>tree model</p></figcaption></figure>
 
 In order to facilitate your understanding of KV store iterators, let's employ a highly simplified analogy. Imagine letters enclosed within circles, where each letter represents a key, and each key is associated with a corresponding value.
 
