@@ -1,0 +1,4 @@
+root: ./
+
+redirects:
+  develop/get-started-guide: developers/learn/overview-of-xion.md
