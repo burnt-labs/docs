@@ -151,7 +151,7 @@ export default function Page(): JSX.Element {
 ```
 {% endcode %}
 
-This will give a a button that initiates a meta account using social login.  Click the \`CONNECT\` button and try it out!
+This will give a button that initiates a meta account using social login.  Click the \`CONNECT\` button and try it out!
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
