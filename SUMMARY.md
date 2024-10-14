@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Welcome to XION](README.md)
+* [Account Upgrade Guide (Testnet)](account-upgrade-guide-testnet.md)
 
 ## developers
 
