@@ -223,7 +223,7 @@ export default function Page(): JSX.Element {
           amount: [{ amount: "0", denom: "uxion" }],
           gas: "500000",
         },
-        "",
+        "auto",
         [],
       );
 
