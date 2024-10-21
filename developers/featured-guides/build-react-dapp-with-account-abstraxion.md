@@ -223,7 +223,7 @@ export default function Page(): JSX.Element {
           amount: [{ amount: "0", denom: "uxion" }],
           gas: "500000",
         },
-        "auto",
+        "", // memo
         [],
       );
 
@@ -304,6 +304,41 @@ export default function Page(): JSX.Element {
 
 ```
 {% endcode %}
+
+### Quick Note on Fee Config
+
+Inside the `claimSeat` function above, the `.execute()` is being called as such:
+
+{% code lineNumbers="true" %}
+```typescript
+const claimRes = await client?.execute(
+  account.bech32Address,
+  seatContractAddress,
+  msg,
+  {
+    amount: [{ amount: "0", denom: "uxion" }],
+    gas: "500000",
+  },
+  "", // memo
+  [],
+);
+```
+{% endcode %}
+
+The fourth parameter in the above function call represents the `fee` config - replacing the object with `auto` here will allow the SDK to handle fee configuration for you, eg.,
+
+```typescript
+const claimRes = await client?.execute(
+  account.bech32Address,
+  seatContractAddress,
+  msg,
+  auto,
+  "", // memo
+  [],
+);
+```
+
+
 
 If everything is successful you should see transaction results as shown above.
 
