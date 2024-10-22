@@ -69,7 +69,7 @@ Gas prices are typically denominated in the native token of the blockchain. You 
 
 You'll need this URL to submit transactions and query data. Testnets often provide RPC endpoints that you can use. These can be found in the XION's testnet's documentation or developer resources.
 
-_Remember that these values are specific to the XION testnet you''ll be deploying to._
+_Remember that these values are specific to the XION testnet you'll be deploying to._
 
 ## Interacting with the Deployed Contract
 
@@ -132,7 +132,7 @@ sudo docker run --rm -v "$(pwd)":/code \
     cosmwasm/rust-optimizer:0.12.6
 ```
 
-Binary file will be at `artifacts/my_first_contract.wasm` folder and its size will be about `130K`, which is more smaller than when only RUTFLAGS was used.
+Binary file will be at `artifacts/my_first_contract.wasm` folder and its size will be about `130K`, which is more smaller than when only RUSTFLAGS was used.
 
 #### Store to Xion Testnet chain[​](https://docs.osmosis.zone/cosmwasm/testnet/cosmwasm-deployment/#store-to-osmosis-testnet-chain) <a href="#store-to-osmosis-testnet-chain" id="store-to-osmosis-testnet-chain"></a>
 
@@ -225,7 +225,7 @@ xiond tx wasm instantiate $CODE_ID "$INIT" \
 
 If you have succeeded in instantiating the contract, you can search for output `txhash` in [Xion Explorer](https://pingpub.xion-testnet-1.burnt.com/) to verify your deployment.
 
-Get the contract address using the command following:
+Get the contract address using the following command:
 
 ```
 CONTRACT_ADDR=$(xiond query wasm list-contract-by-code $CODE_ID --output json | jq -r '.contracts[0]')
