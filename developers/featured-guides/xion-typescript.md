@@ -81,8 +81,7 @@ openssl rand -hex 32
 ### Query for the balance of a contract
 
 ```typescript
-import { QueryClient } from '@cosmjs/stargate';
-import { QueryAllBalancesResponse } from '@cosmjs/stargate/build/codec/cosmos/bank/v1beta1/query';
+import { StargateClient } from '@cosmjs/stargate';
 
 // Change this to your node endpoint
 const rpcEndpoint = '<rpc-endpoint>';
@@ -91,13 +90,11 @@ const rpcEndpoint = '<rpc-endpoint>';
 const addressToQuery = '<address-to-query>';
 
 async function main() {
-  const client = QueryClient.withExtensions({rpcEndpoint});
+  const client = await StargateClient.connect(rpcEndpoint);
 
-  const balances: QueryAllBalancesResponse = await client.bank.allBalances(addressToQuery);
+  const balance = await client.getAllBalances(addressToQuery);
 
   console.log('Balances:', balances);
-
-  client.disconnect();
 }
 
 main().catch(console.error);
