@@ -15,4 +15,7 @@ What you need to do:
 
     <figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
 If you have any questions or run into any issues, feel free to ask in our Telegram Developer Group (Join [here](https://t.me/+SC47NRhVz9Q2MDg0) :speech\_balloon:)
+{% endhint %}
+
