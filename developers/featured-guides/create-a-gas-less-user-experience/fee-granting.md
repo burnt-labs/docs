@@ -1,7 +1,3 @@
----
-description: Learn to create a gas-less experience for your end users
----
-
 # Fee Granting
 
 #### Demonstrating Fee Allowance
