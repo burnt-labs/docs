@@ -4,6 +4,15 @@ description: Details to join the xion-testnet-1 network.
 
 # xion-testnet-1
 
+## Hosts and Endpoints
+The different Hosts and Endpoints of `xion-testnet-1` are:
+*   **Seeds**
+    * `eb029462c82b46d842a47122d860617bff627fdf@xion-testnet-1.burnt.com:11656`
+* **Peers**
+  * `6bb70718db6af0a473c9d76e82d9ade33618b20d@xion-testnet-1.burnt.com:32656`
+  * `0f2ccb6d7e8f233c03f91dee690f5ff714319fba@xion-testnet-1.burnt.com:33656`
+  * `f684e3873191d62a74e5431202581d99fe3439b7@xion-testnet-1.burnt.com:34656`
+
 ## Download the Genesis JSON file
 
 We provide a sample snippet which will download the `genesis.json` to the correct destination.
