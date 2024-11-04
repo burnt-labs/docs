@@ -53,23 +53,9 @@ We provide a sample snippet which will edit the `config.toml` with our Seed node
 #!/usr/bin/env bash
 set -euxo pipefail
 
-SEED_NODE="7900d5f177228def24170f9631db76afab20278e@seed.xion-testnet-1.burnt.com:11656"
+SEED_NODE="eb029462c82b46d842a47122d860617bff627fdf@xion-testnet-1.burnt.com:11656,ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:22356"
 
 sed -i.bak -E "s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"$SEED_NODE\"|" ${BASEDIR}/config/config.toml
-```
-
-## Download the Address Book JSON file
-
-You may also want to download a fresh `addrbook.json` to help with peer discovery. This addrbook is sourced from the Seed node's public peers, and is updated periodically.
-
-```
-#!/usr/bin/env bash
-set -euxo pipefail
-
-BASEDIR="/home/xiond/.xiond"
-ADDRBOOK_JSON="https://files.xion-testnet-1.burnt.com/addrbook.json"
-
-curl ${ADDRBOOK_JSON} -o ${BASEDIR}/config/addrbook.json -s
 ```
 
 ## Synchronize the chain
