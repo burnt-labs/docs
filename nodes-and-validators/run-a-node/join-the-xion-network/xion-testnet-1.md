@@ -4,28 +4,10 @@ description: Details to join the xion-testnet-1 network.
 
 # xion-testnet-1
 
-## Upgrade Path
-
-
-
-| Git Tag  | Docker Tag    | Git SHA                                    | Block Height | Requires Halt |
-| -------- | ------------- | ------------------------------------------ | ------------ | ------------- |
-| `v0.1.0` | `sha-2722f0f` | `2722f0fb1234db97e9bf9b98f744675eb8fb1b26` | `0`          | `false`       |
-| `v0.3.2` | `sha-455cfa5` | `455cfa5b78e79e1c50867f6d61a99b0e9df6b9b1` | `1929544`    | `true`        |
-| `v0.3.3` | `sha-79f0d91` | `79f0d91dfcd4c5916fa30ea246eed1677daf4e44` | `2147030`    | `true`        |
-| `v0.3.4` | `sha-74754c7` | `74754c7c206a7d0f27a23ac9431a4d09dbacff4c` | `3278095`    | `false`       |
-| `v0.3.7` | `sha-f13a74c` | `f13a74c7cf5a562d6902263e53c5ee4f0a9dfefe` | `6887750`    | `true`        |
-| `v0.3.8` | `sha-34c82a9` | `34c82a927b7ae7b67e8b76a1a66fe1b36f807f82` | `7130100`    | `true`        |
-
 ## Hosts and Endpoints
-
 The different Hosts and Endpoints of `xion-testnet-1` are:
-
 *   **Seeds**
-
     * `eb029462c82b46d842a47122d860617bff627fdf@xion-testnet-1.burnt.com:11656`
-
-
 * **Peers**
   * `6bb70718db6af0a473c9d76e82d9ade33618b20d@xion-testnet-1.burnt.com:32656`
   * `0f2ccb6d7e8f233c03f91dee690f5ff714319fba@xion-testnet-1.burnt.com:33656`
@@ -53,23 +35,9 @@ We provide a sample snippet which will edit the `config.toml` with our Seed node
 #!/usr/bin/env bash
 set -euxo pipefail
 
-SEED_NODE="7900d5f177228def24170f9631db76afab20278e@seed.xion-testnet-1.burnt.com:11656"
+SEED_NODE="eb029462c82b46d842a47122d860617bff627fdf@xion-testnet-1.burnt.com:11656,ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:22356"
 
 sed -i.bak -E "s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"$SEED_NODE\"|" ${BASEDIR}/config/config.toml
-```
-
-## Download the Address Book JSON file
-
-You may also want to download a fresh `addrbook.json` to help with peer discovery. This addrbook is sourced from the Seed node's public peers, and is updated periodically.
-
-```
-#!/usr/bin/env bash
-set -euxo pipefail
-
-BASEDIR="/home/xiond/.xiond"
-ADDRBOOK_JSON="https://files.xion-testnet-1.burnt.com/addrbook.json"
-
-curl ${ADDRBOOK_JSON} -o ${BASEDIR}/config/addrbook.json -s
 ```
 
 ## Synchronize the chain

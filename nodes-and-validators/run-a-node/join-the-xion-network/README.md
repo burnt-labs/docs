@@ -27,6 +27,6 @@ For detailed information on how to join each network, please refer to its corres
 Finally, with all the configurations in place, we can start synchronizing our node:
 
 ```
-$ xiond start --x-crisis-skip-invariants --home /home/xiond/.xiond
+$ xiond start --x-crisis-skip-assert-invariants --home /home/xiond/.xiond
 ```
 
