@@ -1,5 +1,5 @@
 ---
-icon: book-open-cover
+icon: books
 ---
 
 # References
