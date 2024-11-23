@@ -18,7 +18,7 @@ Visual Studio Code, commonly referred to as VS Code, stands as a widely embraced
 
 ### _For macOS:_
 
-_For additional setup information for macOs, see_ [_Visual Studio Code on macOS_](https://code.visualstudio.com/docs/setup/mac)_._
+_For additional setup information for macOS, see_ [_Visual Studio Code on macOS_](https://code.visualstudio.com/docs/setup/mac)_._
 
 1. Download Visual Studio Code for macOS.
 2. Open the browser's download list and locate the downloaded app or archive.
@@ -34,7 +34,7 @@ _For additional setup information for Windows, see_ [_Visual Studio Code on Wind
 1. Download the Visual Studio Code installer for Windows.
 2. Once it is downloaded, run the installer (VSCodeUserSetup-{version}.exe).
 
-## Configure v. Code
+## Configure VS Code
 
 To activate Rust support within VS Code, it is essential to install a couple of extensions, specifically rust-analyzer and CodeLLDB. These extensions furnish crucial features such as syntax highlighting, code completion, debugging tools, and other indispensable functionalities.
 
@@ -81,11 +81,11 @@ rustc main.rs
 To execute the program, use the following command:
 
 ```
-./main
+.\main
 ```
 
 {% hint style="info" %}
-on Windows, this command may be **.**`/main.exe.`
+on Windows, this command may be **.**`.\main.exe.`
 {% endhint %}
 
 The output of the program should be: `Hello, XION!`
