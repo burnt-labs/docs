@@ -5,7 +5,7 @@
 
 ## developers
 
-* [Begin Learning](developers/learn/README.md)
+* [Learn](developers/learn/README.md)
   * [Overview](developers/learn/overview-of-xion.md)
   * [Generalized Chain Abstraction](developers/learn/generalized-chain-abstraction.md)
   * [Intro to Account Abstraction](developers/learn/intro-to-account-abstraction.md)
@@ -62,6 +62,7 @@
   * [Public Endpoints & Resources](developers/section-overview/public-endpoints-and-resources.md)
   * [Indexers](developers/section-overview/indexers/README.md)
     * [SubQuery](developers/section-overview/indexers/subquery.md)
+* [Builder FAQs](developers/builder-faqs.md)
 
 ## Nodes & Validators
 

@@ -31,7 +31,7 @@ const rpcEndpoint = 'https://rpc.xion-testnet-1.burnt.com:443';
 
 //Tx info
 const amount = coins('1', 'uxion');
-const gasPrice = GasPrice.fromString("0uxion");
+const gasPrice = GasPrice.fromString("0.001uxion");
 const txOptions = { gasPrice };
 
 // The main function to create and use the SigningStargateClient

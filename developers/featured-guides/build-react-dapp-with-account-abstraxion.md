@@ -220,7 +220,7 @@ export default function Page(): JSX.Element {
         seatContractAddress,
         msg,
         {
-          amount: [{ amount: "0", denom: "uxion" }],
+          amount: [{ amount: "0.001", denom: "uxion" }],
           gas: "500000",
         },
         "", // memo
@@ -316,8 +316,9 @@ const claimRes = await client?.execute(
   seatContractAddress,
   msg,
   {
-    amount: [{ amount: "0", denom: "uxion" }],
+    amount: [{ amount: "0.001", denom: "uxion" }],
     gas: "500000",
+    // ...
   },
   "", // memo
   [],

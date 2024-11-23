@@ -40,16 +40,12 @@ or use the populated version here:
  xiond tx wasm store ./contract.wasm \
     --chain-id xion-local-testnet-1 \
     --gas-adjustment 1.3 \
-    --gas-prices 0uxion \
+    --gas-prices 0.001uxion \
     --gas auto \
     --chain-id xion-testnet-1 \
     --node https://rpc.xion-testnet-1.burnt.com:443
     --from <sender_address>
 ```
-
-{% hint style="danger" %}
-Our testnet allows for zero gas price but will not be the case with our mainnet.
-{% endhint %}
 
 #### Where to find appropriate values?
 
@@ -146,7 +142,7 @@ RES=$(xiond tx wasm store artifacts/my_first_contract.wasm --from wallet --gas-p
 * `xiond tx wasm store` : upload a wasm binary
 * `--from` : name or address of private key with which to sign.
 * `--gas-prices` : gas prices in decimal format to determine the transaction fee.
-* `--gas` : gas limit to set per-transaction. set to "`auto`" to calculate sufficient gas automatically
+* `--gas` : gas limit to set per-transaction. set to "`auto`" to calculate gas automatically. Note: "auto" option doesn't always report accurate results. Set a valid coin value to adjust the result. Can be used instead of "fees". (default 200000)
 * `--gas-adjustment` : adjustment factor to be multiplied against the estimate returned by the tx simulation.
 * `-y` : to skip tx broadcasting prompt confirmation.
 * `--output` : output format.

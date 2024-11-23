@@ -1,5 +1,6 @@
 ---
 icon: bullhorn
+hidden: true
 ---
 
 # Account Upgrade Guide (Testnet)
