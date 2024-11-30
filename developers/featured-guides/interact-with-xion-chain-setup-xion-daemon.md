@@ -137,7 +137,7 @@ The `name` field is an alias that can be used in some other commands.
 
 To get the current balance the in the banking module in a given address.&#x20;
 
-For the below command to not return&#x20;
+For the below command not to return&#x20;
 
 `Error: post failed: Post "http://localhost:26657": dial tcp [::1]:26657: connect: connection refused`
 
@@ -180,7 +180,7 @@ To send xion to another address&#x20;
 $ xiond tx bank send <sender address> <receiver address> <amount>
 ```
 
-The sender must be an address in the list of keys shown above and the amount must be have a denomination such like \`100uxion\`.
+The sender must be an address in the list of keys shown above and the amount must be have a denomination such as \`100uxion\`.
 
 ```
 auth_info:
