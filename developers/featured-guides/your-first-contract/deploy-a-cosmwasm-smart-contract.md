@@ -32,7 +32,7 @@ Use the CosmWasm CLI to deploy the created contract to the testnet. The specific
 
 `xiond tx wasm store contract.tar.gz --from <sender_address> --chain-id <chain_id> --gas auto --gas-prices <gas_prices> --node <testnet_rpc_url>`
 
-Replace `<sender_address>, <chain_id>, <gas_prices>`, and `<testnet_rpc_url>` with the appropriate values for your testnet environment. These can be found in the [Network](../section-overview/public-endpoints-and-resources.md) section.
+Replace `<sender_address>, <chain_id>, <gas_prices>`, and `<testnet_rpc_url>` with the appropriate values for your testnet environment. These can be found in the [Network](../../section-overview/public-endpoints-and-resources.md) section.
 
 or use the populated version here:
 
@@ -51,7 +51,7 @@ or use the populated version here:
 
 `<sender_address>`:
 
-This is the address of your account on the testnet. If you don't have one, you'll need to create an account on the XION's testnet and obtain the address. _More information on how to generate a key pair and the associated address can be found_ [_here_](https://www.techtarget.com/searchsecurity/tutorial/Use-ssh-keygen-to-create-SSH-key-pairs-and-more?Offer=abt\_pubpro\_AI-Insider)_._
+This is the address of your account on the testnet. If you don't have one, you'll need to create an account on the XION's testnet and obtain the address. _More information on how to generate a key pair and the associated address can be found_ [_here_](https://www.techtarget.com/searchsecurity/tutorial/Use-ssh-keygen-to-create-SSH-key-pairs-and-more?Offer=abt_pubpro_AI-Insider)_._
 
 `<chain_id>`:
 
