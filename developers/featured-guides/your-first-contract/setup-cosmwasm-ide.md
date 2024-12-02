@@ -8,7 +8,7 @@ This tutorial will guide you through the process of setting up an Integrated Dev
 
 ## Prerequisites
 
-Prior to continuing, refer back to the [Installation](installation-prerequisites-setup-local-environment.md) guide to install the Rust compiler (rustc) before proceeding.
+Prior to continuing, refer back to the [Installation](../setup-local-environment/installation-prerequisites-setup-local-environment.md) guide to install the Rust compiler (rustc) before proceeding.
 
 ## Install Visual Studio Code
 

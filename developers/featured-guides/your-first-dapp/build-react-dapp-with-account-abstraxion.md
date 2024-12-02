@@ -153,7 +153,7 @@ export default function Page(): JSX.Element {
 
 This will give a a button that initiates a meta account using social login.  Click the \`CONNECT\` button and try it out!
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 ## Transaction submission
 
@@ -343,7 +343,7 @@ const claimRes = await client?.execute(
 
 If everything is successful you should see transaction results as shown above.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>After clicking "Claim Seat" you should see the confirmation above.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>After clicking "Claim Seat" you should see the confirmation above.</p></figcaption></figure>
 
 ## Summary
 
