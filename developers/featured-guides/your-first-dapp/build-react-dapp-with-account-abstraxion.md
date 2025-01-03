@@ -333,7 +333,7 @@ const claimRes = await client?.execute(
   account.bech32Address,
   seatContractAddress,
   msg,
-  auto,
+  "auto",
   "", // memo
   [],
 );
