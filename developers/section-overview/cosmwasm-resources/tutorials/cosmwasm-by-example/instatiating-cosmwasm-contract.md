@@ -1,4 +1,4 @@
-# Instatiating CosmWasm Contract
+# Instantiating CosmWasm Contract
 
 In this section, we elucidate the process of initializing a smart contract. This is achieved by presenting the structure of the "InstantiateMsg" passed during contract creation and the "Instantiate" function that is executed when the contract is initiated.
 

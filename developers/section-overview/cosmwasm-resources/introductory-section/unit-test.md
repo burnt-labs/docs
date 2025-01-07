@@ -8,7 +8,7 @@ In Rust, when creating unit tests for CosmWasm smart contracts, it's necessary t
 
 ## Running Unit Tests
 
-Execute the following command to perform the avalible unit ests:
+Execute the following command to perform the available unit tests:
 
 ```
 RUST_BACKTRACE=1 cargo unit-test
