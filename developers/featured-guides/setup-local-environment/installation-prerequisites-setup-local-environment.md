@@ -74,8 +74,6 @@ To verify that Cargo is installed, you can type the following command:
 
 This should display the version of Cargo that is installed.
 
-
-
 **Windows (Assuming you've installed Rust using rustup):**
 
 Open a Command Prompt or PowerShell window.
@@ -85,8 +83,6 @@ To verify that Cargo is installed, you can type the following command:
 `cargo --version`
 
 This should display the version of Cargo that is installed.
-
-
 
 ## Docker
 
@@ -108,13 +104,9 @@ Download and install Docker Desktop for Windows from the official Docker website
 
 After installation, the user should be able to run the docker command in their terminal to manage Docker containers and images.
 
-
-
 ## WASM
 
 WebAssembly, commonly known as the abbreviation as WASM, is a binary instruction format designed as a portable compilation target for high-performance web applications. It allows code to be executed efficiently and safely in web browsers, enabling developers to write web applications with near-native performance.
-
-
 
 ### Local Installations
 
@@ -126,27 +118,3 @@ For Linux users, it's recommended to run the Docker daemon in Rootless Mode
 
 If you prefer, you can use Docker Engine instead of Docker Desktop.
 
-
-
-## Start a local testnet
-
-1. Run `docker compose up testnet`
-2. On first run, it can take several minutes to build the images locally and start the testnet.
-3. Install `xiond` cli locally following [these directions](interact-with-xion-chain-setup-xion-daemon.md)
-
-Run the following to confirm the testnet is running:
-
-```
-$ xiond query bank total
-```
-
-Which will respond with the something resembling the following when the chain is operational
-
-```
-pagination:
-  next_key: null
-  total: "0"
-supply:
-- amount: "110215739277465"
-  denom: uxion
-```

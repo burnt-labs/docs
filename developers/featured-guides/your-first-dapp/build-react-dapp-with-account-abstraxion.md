@@ -1,14 +1,15 @@
 # Build React dApp with Account Abstraxion
 
-A working demo can be found [here](https://github.com/burnt-labs/xion.js/) in the \`apps/demo-app\` folder.
+A working demo can be found here: [https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app)
 
 ## Goal
 
-The intention here is to help you setup a basic dapp using the Abstraxion library showcasing both query and transaction submission.&#x20;
+The intention here is to help you setup a basic dapp using the Abstraxion library showcasing both query and transaction submission.
 
-## Requirements&#x20;
+## Requirements
 
 1. [Node.js](https://nodejs.org/)
+2. Nextjs
 
 ## Setup Project
 
@@ -38,7 +39,33 @@ npm run dev
 
 Open `https://localhost:3000` in a web browser and you will see a fancy animated react logo.
 
+{% hint style="warning" %}
+**NOTE:**&#x20;
+
+A package versioning mismatch can cause builds to break and you'll see an error on the lines of:\
+\
+`Module build failed: UnhandledSchemeError: Reading from "node:url" is not handled by plugins (Unhandled scheme).`
+
+\
+To fix this, update your `next.config.js` in the root of your app to this file: [https://gist.githubusercontent.com/probablyangg/4c520e376cdddf6991951e233d1f9bb6/raw/fa0ecaf1b2e52876610be9d36a8aeaaef53f0dd5/next.config.js](https://gist.githubusercontent.com/probablyangg/4c520e376cdddf6991951e233d1f9bb6/raw/fa0ecaf1b2e52876610be9d36a8aeaaef53f0dd5/next.config.js)
+{% endhint %}
+
 ## Setup Abstraxion Library
+
+**Before** we can get into setting up our abstraxion SDK in the app we'll be deploying a treasury contract here:&#x20;
+
+1. Login to the Developer portal
+2. Click on "New Treasury"&#x20;
+3.  Select appropriate config - to get started here's a config that should work for most of the use cases:
+
+    <figure><img src="../../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+
+    <figure><img src="../../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+4. **NOTE:** the contract address in "Grant config" is the contract your users will be interacting with
+
+{% hint style="info" %}
+Read more about the treasury contracts [here](create-a-gas-less-user-experience/).
+{% endhint %}
 
 Replace the contents of `src/app/layout.tsx` with the following body:
 
@@ -54,6 +81,11 @@ import "@burnt-labs/ui/dist/index.css";
 
 const inter = Inter({ subsets: ['latin'] })
 
+
+const treasuryConfig = {
+  treasury: "YOUR_TREASURY_CONTRACT_ADDRESS_HERE",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -63,10 +95,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <AbstraxionProvider
-          config={{
-            contracts: ["xion1z70cvc08qv5764zeg3dykcyymj5z6nu4sqr7x8vl4zjef2gyp69s9mmdka"],
-          }}
-        >
+          config={treasuryConfig}>
           {children}
         </AbstraxionProvider>
       </body>
@@ -81,11 +110,9 @@ export default function RootLayout({
 Without the "use client"; directive at the top, you will get a error
 {% endhint %}
 
-The `AbstraxionProvider` is required to provide context for  the `useAbstraxionAccount` and \`useAbstraxionSigningClient\` hooks.
 
-{% hint style="danger" %}
-Be sure to provide the array of contract addresses your DAPP intends to interact with.
-{% endhint %}
+
+The `AbstraxionProvider` is required to provide context for the `useAbstraxionAccount` and \`useAbstraxionSigningClient\` hooks.
 
 ## Add Hooks to the homepage
 
@@ -151,13 +178,13 @@ export default function Page(): JSX.Element {
 ```
 {% endcode %}
 
-This will give a a button that initiates a meta account using social login.  Click the \`CONNECT\` button and try it out!
+This will give a a button that initiates a meta account using social login. Click the \`CONNECT\` button and try it out!
 
 <figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 ## Transaction submission
 
-Querying the chain wouldn't be of much use without a mechanism to alter chain state.  Let's do that now.
+Querying the chain wouldn't be of much use without a mechanism to alter chain state. Let's do that now.
 
 Refresh the contents of `src/app/page.tsx` with the following:
 
@@ -339,8 +366,6 @@ const claimRes = await client?.execute(
 );
 ```
 
-
-
 If everything is successful you should see transaction results as shown above.
 
 <figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>After clicking "Claim Seat" you should see the confirmation above.</p></figcaption></figure>
@@ -349,17 +374,11 @@ If everything is successful you should see transaction results as shown above.
 
 We accomplished several things:
 
-1. **Setup a Next.js Project** Start by generating a Next.js project using `npx create-next-app@latest`.
-2. **Adding the Abstraxion Library** Add the Abstraxion library (`@burnt-labs/abstraxion`) to the project via `npm`.
-3. **Setup AbstraxionProvider** In the layout file, setup the `AbstraxionProvider` to provide context for the `useAbstraxionAccount` and `useAbstraxionSigningClient` hooks.
-4. **Landing Page Setup** Modify the home page content to allow initiating a meta account through a social login with a button.
-5. **Submit a Transaction** Alter the chain's state by submitting a transaction.&#x20;
+1. **Setup a Next.js Project** Start by generating a Next.js project using `npx create-next-app@latest`
+2. **Setting up our first treasury contract**
+3. **Adding the Abstraxion Library** Add the Abstraxion library (`@burnt-labs/abstraxion`) to the project via `npm`
+4. **Setup AbstraxionProvider** In the layout file, setup the `AbstraxionProvider` to provide context for the `useAbstraxionAccount` and `useAbstraxionSigningClient` hooks
+5. **Landing Page Setup** Modify the home page content to allow initiating a meta account through a social login with a button
+6. **Submit a Transaction** Alter the chain's state by submitting a transaction
 
-These basic components are the majority of what is needed to create and deploy a successful dapp! Feel free to reach out to us on discord or on our [Github](https://github.com/burnt-labs/xion.js).&#x20;
-
-
-
-
-
-
-
+These basic components are the majority of what is needed to create and deploy a successful dapp! Feel free to reach out to us on discord or on our [Github](https://github.com/burnt-labs/xion.js).
