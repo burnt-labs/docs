@@ -41,6 +41,25 @@ $ git clone https://github.com/burnt-labs/xion.git -b vX.Y.Z
 
 ## Build the Binary
 
+{% hint style="info" %}
+If using Windows the following must be run using WSL (Windows Subsystem for Linux)
+{% endhint %}
+
+```bash
+# If on windows run the following
+sudo apt update && sudo apt install coreutils
+
+# check if make is already installed
+make --version
+
+# if it's not installed run
+sudo apt install make
+```
+
+
+
+
+
 * We provide a `Makefile` with several targets common to projects in the Cosmos ecosystem.
 
 ```
