@@ -52,9 +52,9 @@ To fix this, update your `next.config.js` in the root of your app to this file: 
 
 ## Setup Abstraxion Library
 
-**Before** we can get into setting up our abstraxion SDK in the app we'll be deploying a treasury contract here:&#x20;
+Before we proceed with integrating the Abstraxion SDK into the application, we will first deploy a treasury contract:&#x20;
 
-1. Login to the Developer portal
+1. Login to the [Developer portal](https://dev.testnet.burnt.com/)
 2. Click on "New Treasury"&#x20;
 3.  Select appropriate config - to get started here's a config that should work for most of the use cases:
 
