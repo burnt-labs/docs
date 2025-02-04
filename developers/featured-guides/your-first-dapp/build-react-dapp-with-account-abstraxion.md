@@ -114,6 +114,12 @@ Learn more about Treasury Contracts [here](create-a-gas-less-user-experience/).
 
 
 
+## Deploying an NFT Contract On-Chain
+
+Follow this [guide](https://github.com/burnt-labs/potato/blob/main/README.md) to **compile and deploy an NFT contract** on-chain and create an instance of the contract, which will be used in the code below.
+
+
+
 ## Integrating the Abstraxion Library
 
 To set up the **Abstraxion Library**, replace the contents of **`src/app/layout.tsx`** with the following code:
