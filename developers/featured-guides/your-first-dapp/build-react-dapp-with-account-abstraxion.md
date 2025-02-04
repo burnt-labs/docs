@@ -68,6 +68,12 @@ To resolve this issue, update your `next.config.js` file located at the root of 
 
 
 
+## Deploying an NFT Contract On-Chain
+
+Follow this [guide](https://github.com/burnt-labs/potato/blob/main/README.md) to **compile and deploy an NFT contract** on-chain and create an instance of the contract. This contract will be referenced in the **Treasury contract** and the code updates below, as users will interact with it.
+
+
+
 ## Deploying a Treasury Contract for Gasless Transactions
 
 Before integrating the **Abstraxion SDK** into the application, we first need to deploy a **Treasury Contract**. This contract facilitates **gasless transactions** for your smart contract by handling **fee grants** on behalf of users.
@@ -94,7 +100,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 1. For the **"Type URL"** field, select `"/cosmwasm.wasm.v1.MsgExecuteContract"`.
 2. Enter a **"Description"** in the respective field. This will reflect the intended purpose of the request. This description will be displayed to users when they click **"Allow"** after connecting their account.
 3. In the **"Authorization Type"** field, select `"/cosmwasm.wasm.v1.ContractExecutionAuthorization"`.
-4. Enter the **contract address** in the **"Contract Address"** field—this should be the smart contract users will interact with.
+4. Enter the **contract address** in the **"Contract Address"** field — this should be the NFT smart contract created above.
 5. You **must** select at least one of the following::
    * **"Max Call"** – Limits the number of times a user can execute a transaction under this fee grant.
    * **"Max Funds"** – Specifies the maximum amount of funds allocated for covering transaction fees.
@@ -111,12 +117,6 @@ Once the preview is to your liking click the "**Create**" button to create the T
 {% hint style="info" %}
 Learn more about Treasury Contracts [here](create-a-gas-less-user-experience/).
 {% endhint %}
-
-
-
-## Deploying an NFT Contract On-Chain
-
-Follow this [guide](https://github.com/burnt-labs/potato/blob/main/README.md) to **compile and deploy an NFT contract** on-chain and create an instance of the contract, which will be used in the code below.
 
 
 
