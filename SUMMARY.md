@@ -13,7 +13,7 @@
     * [Setup CosmWasm IDE](developers/featured-guides/your-first-contract/setup-cosmwasm-ide.md)
     * [Deploy a CosmWasm Smart Contract](developers/featured-guides/your-first-contract/deploy-a-cosmwasm-smart-contract.md)
   * [Your First DApp](developers/featured-guides/your-first-dapp/README.md)
-    * [Build React dApp with Account Abstraxion](developers/featured-guides/your-first-dapp/build-react-dapp-with-account-abstraxion.md)
+    * [Account Abstraction with Gasless Transactions](developers/featured-guides/your-first-dapp/build-react-dapp-with-account-abstraxion.md)
     * [Creating a Gas-less UX: Treasury Contracts](developers/featured-guides/your-first-dapp/treasury-contracts.md)
     * [Create a Gas-less User Experience](developers/featured-guides/your-first-dapp/create-a-gas-less-user-experience/README.md)
       * [Fee Granting](developers/featured-guides/your-first-dapp/create-a-gas-less-user-experience/fee-granting.md)

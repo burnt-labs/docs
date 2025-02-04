@@ -1,4 +1,4 @@
-# Treasury Contracts
+# Creating a Gas-less UX: Treasury Contracts
 
 The introduction of treasury contracts enables an OAuth-like authentication flow (fully on-chain), creation of complex allowance systems that provides granular control of allowances to the developer, as well as gas-less experience for the end users. This guide demonstrates how to use the developer portal to deploy your dApp’s first treasury contract.
 
@@ -60,7 +60,7 @@ Grant config:
 
 After clicking “save config” for both Fee and Grant config, the modal will display two configuration JSON objects under “Treasury Instance Preview”
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 Once you have confirmed the data here - click “Create”
 

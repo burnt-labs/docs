@@ -1,73 +1,122 @@
-# Build React dApp with Account Abstraxion
+# Account Abstraction with Gasless Transactions
 
-A working demo can be found here: [https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app)
+In this guide, we will walk through building a basic dApp using the [Abstraxion library](https://www.npmjs.com/package/@burnt-labs/abstraxion), demonstrating how to create an Abstraxion account which can be done via a social account like Google, browser wallets (Keplr, Metamask, OKX), email address, biometrics via a passkey and other authentication options. Additionally, we will implement a gasless transaction experience for users by leveraging XION's fee grants through a Treasury contract.
 
-## Goal
+To better understand Account Abstraction also referred to as Meta Accounts you can visit the[ Introduction to Account Abstraction](https://docs.burnt.com/xion/developers/learn/intro-to-account-abstraction) page.
 
-The intention here is to help you setup a basic dapp using the Abstraxion library showcasing both query and transaction submission.
+A fully functional demo of this implementation is available in the[ Xion.js repository](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app), providing a hands-on reference for integrating these features into your dApp.
+
+
 
 ## Requirements
 
-1. [Node.js](https://nodejs.org/)
-2. Nextjs
+Before getting started, ensure you have the following installed:
 
-## Setup Project
+* [**Node.js**](https://nodejs.org/) (LTS version recommended) – Required for running the development environment and installing dependencies.
 
-For this example we will use [nextjs](https://nextjs.org/learn-pages-router/basics/create-nextjs-app) to scaffold the project
 
-Run the following commands in your terminal:
+
+## Setting up the Project
+
+In this example, we will use [**Next.js**](https://nextjs.org) to scaffold the project and set up a development environment with TypeScript, ESLint and Tailwind CSS.
+
+### Step 1: Create a New Next.js Project
+
+Run the following command in your terminal to generate a Next.js project with the required settings:
 
 ```bash
-# Generate project along with settings to avoid wizard.
-npx create-next-app@latest nextjs-xion-abstraxion-example --use-npm --ts --eslint --tailwind --app  --src-dir --import-alias "@/*"
+npx create-next-app@latest nextjs-xion-abstraxion-example \
+  --use-npm --ts --eslint --tailwind --app --src-dir --import-alias "@/*"
+```
 
-# Enter application directory
+### Step 2: Navigate to the Project Directory
+
+```
 cd nextjs-xion-abstraxion-example
 ```
 
-Add the Abstraxion library to the project:
+### Step 3: Install the Abstraxion Library
+
+Add the **Abstraxion** package to the project:
 
 ```bash
 npm i @burnt-labs/abstraxion
 ```
 
-Start the project in developer mode:
+### Step 4: Start the Development Server
+
+Run the following command to start the project in development mode:
 
 ```
 npm run dev
 ```
 
-Open `https://localhost:3000` in a web browser and you will see a fancy animated react logo.
+### Step 5: Open the Project in a Browser
+
+Once the server is running, open [**http://localhost:3000**](http://localhost:3000) in a web browser. You should see a Next.js welcome page with an animated React logo.
 
 {% hint style="warning" %}
 **NOTE:**&#x20;
 
-A package versioning mismatch can cause builds to break and you'll see an error on the lines of:\
+A mismatch in package versions can lead to build failures, resulting in an error similar to the following:\
 \
 `Module build failed: UnhandledSchemeError: Reading from "node:url" is not handled by plugins (Unhandled scheme).`
 
 \
-To fix this, update your `next.config.js` in the root of your app to this file: [https://gist.githubusercontent.com/probablyangg/4c520e376cdddf6991951e233d1f9bb6/raw/fa0ecaf1b2e52876610be9d36a8aeaaef53f0dd5/next.config.js](https://gist.githubusercontent.com/probablyangg/4c520e376cdddf6991951e233d1f9bb6/raw/fa0ecaf1b2e52876610be9d36a8aeaaef53f0dd5/next.config.js)
+To resolve this issue, update your `next.config.js` file located at the root of your project with the configuration provided in this file: [https://gist.githubusercontent.com/probablyangg/4c520e376cdddf6991951e233d1f9bb6/raw/fa0ecaf1b2e52876610be9d36a8aeaaef53f0dd5/next.config.js](https://gist.githubusercontent.com/probablyangg/4c520e376cdddf6991951e233d1f9bb6/raw/fa0ecaf1b2e52876610be9d36a8aeaaef53f0dd5/next.config.js)
 {% endhint %}
 
-## Setup Abstraxion Library
 
-Before we proceed with integrating the Abstraxion SDK into the application, we will first deploy a treasury contract:&#x20;
 
-1. Login to the [Developer portal](https://dev.testnet.burnt.com/)
-2. Click on "New Treasury"&#x20;
-3.  Select appropriate config - to get started here's a config that should work for most of the use cases:
+## Deploying a Treasury Contract for Gasless Transactions
 
-    <figure><img src="../../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+Before integrating the **Abstraxion SDK** into the application, we first need to deploy a **Treasury Contract**. This contract facilitates **gasless transactions** for your smart contract by handling **fee grants** on behalf of users.
 
-    <figure><img src="../../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
-4. **NOTE:** the contract address in "Grant config" is the contract your users will be interacting with
+### Steps to Deploy a Treasury Contract
+
+1. Login to the [XION Developer Portal](https://dev.testnet.burnt.com/).
+2. Click on **"New Treasury"** to create a new treasury contract.
+3. **Select the appropriate configuration** based on your use case. The following "**Fee Grant**" and "**Grant Config**" images gives a recommended configuration that works for most scenarios:
+
+#### Fee Grant
+
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Example of a general <strong>Fee Grant</strong> configuration</p></figcaption></figure>
+
+1. Enter a **"Description"** in the respective field. This will reflect the intended purpose of the request. This description will be displayed to users when they click **"Allow"** after connecting their account.
+2. In the **"Allowance Type"** field, enter `"/cosmwasm.feegrant.v1beta1.BasicAllowance"`.
+3. In the **"Spend Limit"** field, enter **`1000uxion`**.
+4. Click the **"Save"** button to apply the configuration.
+
+#### **Grant Config**
+
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Example of additional <strong>Grant</strong> configuration</p></figcaption></figure>
+
+1. For the **"Type URL"** field, select `"/cosmwasm.wasm.v1.MsgExecuteContract"`.
+2. Enter a **"Description"** in the respective field. This will reflect the intended purpose of the request. This description will be displayed to users when they click **"Allow"** after connecting their account.
+3. In the **"Authorization Type"** field, select `"/cosmwasm.wasm.v1.ContractExecutionAuthorization"`.
+4. Enter the **contract address** in the **"Contract Address"** field—this should be the smart contract users will interact with.
+5. You **must** select at least one of the following::
+   * **"Max Call"** – Limits the number of times a user can execute a transaction under this fee grant.
+   * **"Max Funds"** – Specifies the maximum amount of funds allocated for covering transaction fees.
+   * **"Both"** – Allows you to set both options.
+6. Click the **"Add Contract Grant"** button to apply the configuration.
+7. Then click the "**Save**" button which generates the "**Treasury Instance Preview**"
+
+#### Treasury Instance Preview
+
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+Once the preview is to your liking click the "**Create**" button to create the Treasury contract.
 
 {% hint style="info" %}
-Read more about the treasury contracts [here](create-a-gas-less-user-experience/).
+Learn more about Treasury Contracts [here](create-a-gas-less-user-experience/).
 {% endhint %}
 
-Replace the contents of `src/app/layout.tsx` with the following body:
+
+
+## Integrating the Abstraxion Library
+
+To set up the **Abstraxion Library**, replace the contents of **`src/app/layout.tsx`** with the following code:
 
 {% code title="src/app/layout.tsx" %}
 ```typescript
@@ -106,17 +155,21 @@ export default function RootLayout({
 ```
 {% endcode %}
 
-{% hint style="warning" %}
-Without the "use client"; directive at the top, you will get a error
-{% endhint %}
+* **`"use client";`**
+  * This directive is required to ensure that the file is treated as a **client component** in Next.js.
+  * Omitting this will result in an error.
+* **`AbstraxionProvider`**
+  * This component wraps the application and provides context for **Abstraxion hooks**, such as:
+    * `useAbstraxionAccount`
+    * `useAbstraxionSigningClient`
+* **`treasuryConfig`**
+  * Set the **Treasury Contract Address** to enable gasless transactions for users.
 
 
 
-The `AbstraxionProvider` is required to provide context for the `useAbstraxionAccount` and \`useAbstraxionSigningClient\` hooks.
+## Adding Hooks to the Homepage
 
-## Add Hooks to the homepage
-
-Replace the contents of \`src/app/page.tsx\` with the following:
+Replace the contents of **`src/app/page.tsx`** with the following code:
 
 {% code title="src/app/page.tsx" %}
 ```typescript
@@ -178,15 +231,29 @@ export default function Page(): JSX.Element {
 ```
 {% endcode %}
 
-This will give a a button that initiates a meta account using social login. Click the \`CONNECT\` button and try it out!
+#### What does this do?
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+1. **Displays a "CONNECT" button**
+   * Clicking the button initiates a **Meta Account** login.
+   * If the user is connected, it shows **"VIEW ACCOUNT"** instead.
+2. **Shows the user's blockchain address** when connected.
+3. **Handles connection state** with `useAbstraxionAccount()`:
+   * `bech32Address`: The user's address.
+   * `isConnected`: Whether the user is connected.
+   * `isConnecting`: Connection state status.
+4. **Includes the Abstraxion modal** for authentication.
 
-## Transaction submission
+Now, click **CONNECT** and try it out!
 
-Querying the chain wouldn't be of much use without a mechanism to alter chain state. Let's do that now.
 
-Refresh the contents of `src/app/page.tsx` with the following:
+
+<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+
+## Submitting Transactions
+
+Querying the blockchain is useful, but to fully interact with it, we need a way to modify the chain state. This section will implement transaction submission using the **Abstraxion SDK**.
+
+Replace the contents of **`src/app/page.tsx`** with the following code:
 
 {% code title="src/app/page.tsx" %}
 ```typescript
@@ -332,9 +399,25 @@ export default function Page(): JSX.Element {
 ```
 {% endcode %}
 
-### Quick Note on Fee Config
+#### What does this do?
 
-Inside the `claimSeat` function above, the `.execute()` is being called as such:
+1. **Implements transaction submission**
+   * The **"CLAIM SEAT"** button sends a transaction using **Abstraxion Signing Client**.
+2. **Manages user connection state**
+   * Uses `useAbstraxionAccount()` to check if the user is connected.
+   * If the user isn’t connected, the **"CONNECT"** button appears instead.
+3. **Handles transaction execution**
+   * Defines a `claimSeat()` function to interact with a **CosmWasm smart contract**.
+   * Sends an **ExecuteContract** transaction using `client.execute()`.
+4. **Displays transaction results**
+   * After submitting a transaction, it shows the **Transaction Hash** and **Block Height**.
+   * Provides a link to view the transaction in **XION’s Block Explorer**.
+
+
+
+### Quick Note on Fee Configuration
+
+In the `claimSeat` function, the `.execute()` method is called as follows:
 
 {% code lineNumbers="true" %}
 ```typescript
@@ -353,7 +436,7 @@ const claimRes = await client?.execute(
 ```
 {% endcode %}
 
-The fourth parameter in the above function call represents the `fee` config - replacing the object with `auto` here will allow the SDK to handle fee configuration for you, eg.,
+The **fourth parameter** in the function call represents the **fee configuration**. Instead of manually specifying the gas and fee amount, you can replace the object with `"auto"`, allowing the **SDK to automatically handle fee estimation**:
 
 ```typescript
 const claimRes = await client?.execute(
@@ -366,19 +449,17 @@ const claimRes = await client?.execute(
 );
 ```
 
-If everything is successful you should see transaction results as shown above.
+#### Why Use `"auto"`?
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>After clicking "Claim Seat" you should see the confirmation above.</p></figcaption></figure>
+* **Simplifies fee management** by automatically estimating optimal fees.
+* **Reduces errors** related to underestimating or overestimating gas.
 
-## Summary
+If everything is configured correctly, you should see the transaction results displayed as shown in the previous section.
 
-We accomplished several things:
 
-1. **Setup a Next.js Project** Start by generating a Next.js project using `npx create-next-app@latest`
-2. **Setting up our first treasury contract**
-3. **Adding the Abstraxion Library** Add the Abstraxion library (`@burnt-labs/abstraxion`) to the project via `npm`
-4. **Setup AbstraxionProvider** In the layout file, setup the `AbstraxionProvider` to provide context for the `useAbstraxionAccount` and `useAbstraxionSigningClient` hooks
-5. **Landing Page Setup** Modify the home page content to allow initiating a meta account through a social login with a button
-6. **Submit a Transaction** Alter the chain's state by submitting a transaction
 
-These basic components are the majority of what is needed to create and deploy a successful dapp! Feel free to reach out to us on discord or on our [Github](https://github.com/burnt-labs/xion.js).
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>After clicking "Claim Seat" you should see the confirmation above.</p></figcaption></figure>
+
+
+
+These core components form the foundation for building and deploying a successful dApp! If you have any questions or need support, feel free to reach out to us on **Discord** or [**GitHub**](https://github.com/burnt-labs/xion.js).
