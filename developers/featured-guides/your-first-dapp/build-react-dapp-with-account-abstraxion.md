@@ -161,6 +161,10 @@ export default function RootLayout({
 ```
 {% endcode %}
 
+{% hint style="warning" %}
+Update "**YOUR\_TREASURY\_CONTRACT\_ADDRESS\_HERE**" with the the Treasury Contract Address you created above to enable gasless transactions for users.
+{% endhint %}
+
 * **`"use client";`**
   * This directive is required to ensure that the file is treated as a **client component** in Next.js.
   * Omitting this will result in an error.
