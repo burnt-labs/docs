@@ -25,7 +25,7 @@ In this example, we will use [**Next.js**](https://nextjs.org) to scaffold the p
 Run the following command in your terminal to generate a Next.js project with the required settings:
 
 ```bash
-npx create-next-app@latest nextjs-xion-abstraxion-example \
+npx create-next-app@14.0.0 nextjs-xion-abstraxion-example \
   --use-npm --ts --eslint --tailwind --app --src-dir --import-alias "@/*"
 ```
 
