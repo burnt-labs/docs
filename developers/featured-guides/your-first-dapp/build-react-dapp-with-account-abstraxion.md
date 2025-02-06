@@ -1,10 +1,10 @@
 # Account Abstraction with Gasless Transactions
 
-In this guide, we will walk through building a basic dApp using the [Abstraxion library](https://www.npmjs.com/package/@burnt-labs/abstraxion), demonstrating how to create an Abstraxion account which can be done via a social account like Google, browser wallets (Keplr, Metamask, OKX), email address, biometrics via a passkey and other authentication options. Additionally, we will implement a gasless transaction experience for users by leveraging XION's fee grants through a Treasury contract.
+In this guide, we will walk through building a basic dApp using the [Abstraxion library](https://www.npmjs.com/package/@burnt-labs/abstraxion), demonstrating how to create an Abstraxion account which can be done via a social account like Google, browser wallets (Keplr, Metamask, OKX etc.), email address, passkey and other authentication options. We will also implement a gasless transaction experience for users by leveraging XION's fee grants through a Treasury contract.
 
-To better understand Account Abstraction also referred to as Meta Accounts you can visit the[ Introduction to Account Abstraction](https://docs.burnt.com/xion/developers/learn/intro-to-account-abstraction) page.
+To better understand Account Abstraction you can visit the[ Introduction to Account Abstraction](https://docs.burnt.com/xion/developers/learn/intro-to-account-abstraction) page.
 
-A fully functional demo of this implementation is available in the[ Xion.js repository](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app), providing a hands-on reference for integrating these features into your dApp.
+A fully functional demo of this dApp is also available in the [Xion.js](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app) repository.
 
 
 
@@ -35,7 +35,7 @@ npx create-next-app@14.0.0 nextjs-xion-abstraxion-example \
 cd nextjs-xion-abstraxion-example
 ```
 
-### Step 3: Install the Abstraxion Library
+### Step 3: Install the Abstraxion Package
 
 Add the **Abstraxion** package to the project:
 
@@ -45,7 +45,7 @@ npm i @burnt-labs/abstraxion
 
 ### Step 4: Start the Development Server
 
-Run the following command to start the project in development mode:
+Run the following command to start the development server:
 
 ```
 npm run dev
@@ -68,9 +68,15 @@ To resolve this issue, update your `next.config.js` file located at the root of 
 
 
 
-## Deploying an NFT Contract On-Chain
+## Deploying a Contract On-Chain
 
-Follow this [guide](https://github.com/burnt-labs/potato/blob/main/README.md) to **compile and deploy an NFT contract** on-chain and create an instance of the contract. This contract will be referenced in the **Treasury contract** and the code updates below, as users will interact with it.
+To interact with our dApp, we need to deploy a **smart contract** on-chain. In this guide, we will deploy a **basic Counter contract**, which allows you to:
+
+* **Set an initial counter value**
+* **Increment or reset the counter**
+* **Query the current counter value**
+
+Follow the steps in the following [guide](https://github.com/burnt-labs/cw-counter/blob/main/README.md) to **compile, deploy, and instantiate** the contract on-chain. Once deployed, this contract will be referenced in the **Treasury contract** and the **code updates** that follow.
 
 
 
@@ -181,10 +187,8 @@ Update "**YOUR\_TREASURY\_CONTRACT\_ADDRESS\_HERE**" with the the Treasury Contr
 
 Replace the contents of **`src/app/page.tsx`** with the following code:
 
-{% code title="src/app/page.tsx" %}
-```typescript
-"use client";
-import {
+<pre class="language-typescript" data-title="src/app/page.tsx"><code class="lang-typescript"><strong>"use client";
+</strong>import {
   Abstraxion,
   useAbstraxionAccount,
   useModal
@@ -206,40 +210,39 @@ export default function Page(): JSX.Element {
   }, [isConnected, isConnecting])
 
   return (
-      <main className="m-auto flex min-h-screen max-w-xs flex-col items-center justify-center gap-4 p-4">
-        <h1 className="text-2xl font-bold tracking-tighter text-black dark:text-white">
+      &#x3C;main className="m-auto flex min-h-screen max-w-xs flex-col items-center justify-center gap-4 p-4">
+        &#x3C;h1 className="text-2xl font-bold tracking-tighter text-black dark:text-white">
           Abstraxion
-        </h1>
-        <Button
+        &#x3C;/h1>
+        &#x3C;Button
             fullWidth
             onClick={() => { setShow(true) }}
             structure="base"
         >
           {bech32Address ? (
-              <div className="flex items-center justify-center">VIEW ACCOUNT</div>
+              &#x3C;div className="flex items-center justify-center">VIEW ACCOUNT&#x3C;/div>
           ) : (
               "CONNECT"
           )}
-        </Button>
+        &#x3C;/Button>
         {
-          bech32Address &&
-            <div className="border-2 border-primary rounded-md p-4 flex flex-row gap-4">
-              <div className="flex flex-row gap-6">
-                <div>
+          bech32Address &#x26;&#x26;
+            &#x3C;div className="border-2 border-primary rounded-md p-4 flex flex-row gap-4">
+              &#x3C;div className="flex flex-row gap-6">
+                &#x3C;div>
                   address
-                </div>
-                <div>
+                &#x3C;/div>
+                &#x3C;div>
                   {bech32Address}
-                </div>
-              </div>
-            </div>
+                &#x3C;/div>
+              &#x3C;/div>
+            &#x3C;/div>
         }
-        <Abstraxion onClose={() => setShow(false)} />
-      </main>
+        &#x3C;Abstraxion onClose={() => setShow(false)} />
+      &#x3C;/main>
   );
 }
-```
-{% endcode %}
+</code></pre>
 
 #### What does this do?
 
@@ -251,13 +254,162 @@ export default function Page(): JSX.Element {
    * `bech32Address`: The user's address.
    * `isConnected`: Whether the user is connected.
    * `isConnecting`: Connection state status.
-4. **Includes the Abstraxion modal** for authentication.
 
 Now, click **CONNECT** and try it out!
 
 
 
 <figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+
+## Querying the Contract
+
+The contract provides a method to query the current `count` value. Let's fetch this value and display it in the dApp.
+
+Replace the contents of `src/app/page.tsx` with the following code:
+
+```javascript
+"use client";
+import Link from "next/link";
+import { useState } from "react";
+import {
+  Abstraxion,
+  useAbstraxionAccount,
+  useAbstraxionSigningClient,
+  useAbstraxionClient,
+  useModal,
+} from "@burnt-labs/abstraxion";
+import { Button } from "@burnt-labs/ui";
+import "@burnt-labs/ui/dist/index.css";
+import type { ExecuteResult } from "@cosmjs/cosmwasm-stargate";
+
+const contractAddress =
+  "YOUR_COUNTER_CONTRACT_ADDRESS_HERE";
+
+type ExecuteResultOrUndefined = ExecuteResult | undefined;
+
+export default function Page(): JSX.Element {
+  // Abstraxion hooks
+  const { data: account } = useAbstraxionAccount();
+  const { client, signArb, logout } = useAbstraxionSigningClient();
+  const { client: queryClient } = useAbstraxionClient();
+
+  // Count
+  const [count, setCount] = useState<string | null>(null);
+
+  // General state hooks
+  const [, setShowModal]: [
+    boolean,
+    React.Dispatch<React.SetStateAction<boolean>>,
+  ] = useModal();
+  const [loading, setLoading] = useState(false);
+  const [executeResult, setExecuteResult] =
+    useState<ExecuteResultOrUndefined>(undefined);
+
+  const blockExplorerUrl = `https://explorer.burnt.com/xion-testnet-1/tx/${executeResult?.transactionHash}`;
+
+  function getTimestampInSeconds(date: Date | null): number {
+    if (!date) return 0;
+    const d = new Date(date);
+    return Math.floor(d.getTime() / 1000);
+  }
+  
+  const getCount = async () => {
+    setLoading(true);
+    //setError(null);
+
+    try {
+      // Query the contract
+      const response = await queryClient.queryContractSmart(contractAddress, {
+        get_count: { },
+      });
+      
+      setCount(response.count);
+
+      console.log("Get Count:", response);
+    } catch (error) {
+        console.error('Error querying contract:', error);
+        //setError('Failed to query the contract. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const now = new Date();
+  now.setSeconds(now.getSeconds() + 15);
+  const oneYearFromNow = new Date();
+  oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
+
+  return (
+    <main className="m-auto flex min-h-screen max-w-xs flex-col items-center justify-center gap-4 p-4">
+      <h1 className="text-2xl font-bold tracking-tighter text-white">
+        ABSTRAXION
+      </h1>
+      <Button
+        fullWidth
+        onClick={() => {
+          setShowModal(true);
+        }}
+        structure="base"
+      >
+        {account.bech32Address ? (
+          <div className="flex items-center justify-center">VIEW ACCOUNT</div>
+        ) : (
+          "CONNECT"
+        )}
+      </Button>
+      {client ? (
+        <>
+          <Button
+            disabled={loading}
+            fullWidth
+            onClick={() => {
+              void getCount();
+            }}
+            structure="base"
+          >
+            {loading ? "LOADING..." : "Get Count"}
+          </Button>
+          {logout ? (
+            <Button
+              disabled={loading}
+              fullWidth
+              onClick={() => {
+                logout();
+              }}
+              structure="base"
+            >
+              LOGOUT
+            </Button>
+          ) : null}
+        </>
+      ) : null}
+      <Abstraxion
+        onClose={() => {
+          setShowModal(false);
+        }}
+      />
+      {count ? (
+        <div className="border-2 border-primary rounded-md p-4 flex flex-row gap-4">
+              <div className="flex flex-row gap-6">
+                <div>
+                  Count:
+                </div>
+                <div>
+                  {count}
+                </div>
+              </div>
+            </div>
+      ) : null}
+    </main>
+  );
+}
+```
+
+{% hint style="info" %}
+Update "**YOUR\_COUNTER\_CONTRACT\_ADDRESS\_HERE**" with the the Counter Contract Address you created above.
+{% endhint %}
+
+<figure><img src="../../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
 ## Submitting Transactions
 
@@ -269,155 +421,147 @@ Replace the contents of **`src/app/page.tsx`** with the following code:
 ```typescript
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Abstraxion,
   useAbstraxionAccount,
   useAbstraxionSigningClient,
+  useAbstraxionClient,
+  useModal,
 } from "@burnt-labs/abstraxion";
 import { Button } from "@burnt-labs/ui";
 import "@burnt-labs/ui/dist/index.css";
 import type { ExecuteResult } from "@cosmjs/cosmwasm-stargate";
-import { seatContractAddress } from "./layout";
+
+const contractAddress = "YOUR_COUNTER_CONTRACT_ADDRESS_HERE";
 
 type ExecuteResultOrUndefined = ExecuteResult | undefined;
+
 export default function Page(): JSX.Element {
   // Abstraxion hooks
   const { data: account } = useAbstraxionAccount();
-  const { client } = useAbstraxionSigningClient();
+  const { client, signArb, logout } = useAbstraxionSigningClient();
+  const { client: queryClient } = useAbstraxionClient();
 
-  // General state hooks
-  const [isOpen, setIsOpen] = useState(false);
+  // State variables
+  const [count, setCount] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const [executeResult, setExecuteResult] =
-    useState<ExecuteResultOrUndefined>(undefined);
+  const [executeResult, setExecuteResult] = useState<ExecuteResultOrUndefined>(undefined);
+  const [, setShowModal]: [boolean, React.Dispatch<React.SetStateAction<boolean>>] = useModal();
 
   const blockExplorerUrl = `https://explorer.burnt.com/xion-testnet-1/tx/${executeResult?.transactionHash}`;
 
-  function getTimestampInSeconds(date: Date | null) {
-    if (!date) return 0;
-    const d = new Date(date);
-    return Math.floor(d.getTime() / 1000);
-  }
-
-  const now = new Date();
-  now.setSeconds(now.getSeconds() + 15);
-  const oneYearFromNow = new Date();
-  oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
-
-  async function claimSeat() {
+  // Fetch the count from the smart contract
+  const getCount = async () => {
     setLoading(true);
-    const msg = {
-      sales: {
-        claim_item: {
-          token_id: String(getTimestampInSeconds(now)),
-          owner: account.bech32Address,
-          token_uri: "",
-          extension: {},
-        },
-      },
-    };
-
     try {
-      const claimRes = await client?.execute(
-        account.bech32Address,
-        seatContractAddress,
-        msg,
-        {
-          amount: [{ amount: "0.001", denom: "uxion" }],
-          gas: "500000",
-        },
-        "", // memo
-        [],
-      );
-
-      setExecuteResult(claimRes);
+      const response = await queryClient.queryContractSmart(contractAddress, { get_count: {} });
+      setCount(response.count);
+      console.log("Get Count:", response);
     } catch (error) {
-      // eslint-disable-next-line no-console -- No UI exists yet to display errors
-      console.log(error);
+      console.error("Error querying contract:", error);
     } finally {
       setLoading(false);
     }
-  }
+  };
+
+  // Increment the count in the smart contract
+  const increment = async () => {
+    setLoading(true);
+    const msg = { increment: {} };
+
+    try {
+      const res = await client?.execute(account.bech32Address, contractAddress, msg, "auto");
+      setExecuteResult(res);
+      console.log("Transaction successful:", res);
+      await getCount(); // Refresh count after successful increment
+    } catch (error) {
+      console.error("Error executing transaction:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Fetch count on page load
+  useEffect(() => {
+    if (queryClient) {
+      getCount();
+    }
+  }, [queryClient]);
 
   return (
     <main className="m-auto flex min-h-screen max-w-xs flex-col items-center justify-center gap-4 p-4">
-      <h1 className="text-2xl font-bold tracking-tighter text-white">
-        ABSTRAXION
-      </h1>
-      <Button
-        fullWidth
-        onClick={() => {
-          setIsOpen(true);
-        }}
-        structure="base"
-      >
-        {account.bech32Address ? (
-          <div className="flex items-center justify-center">VIEW ACCOUNT</div>
-        ) : (
-          "CONNECT"
-        )}
+      <h1 className="text-2xl font-bold tracking-tighter text-white">ABSTRAXION</h1>
+
+      <Button fullWidth onClick={() => setShowModal(true)} structure="base">
+        {account?.bech32Address ? <div className="flex items-center justify-center">VIEW ACCOUNT</div> : "CONNECT"}
       </Button>
-      {client ? (
-        <Button
-          disabled={loading}
-          fullWidth
-          onClick={() => {
-            void claimSeat();
-          }}
-          structure="base"
-        >
-          {loading ? "LOADING..." : "CLAIM SEAT"}
-        </Button>
-      ) : null}
-      <Abstraxion
-        isOpen={isOpen}
-        onClose={() => {
-          setIsOpen(false);
-        }}
-      />
-      {executeResult ? (
+
+      {client && (
+        <>
+          <Button disabled={loading} fullWidth onClick={getCount} structure="base">
+            {loading ? "LOADING..." : "Get Count"}
+          </Button>
+          <Button disabled={loading} fullWidth onClick={increment} structure="base">
+            {loading ? "LOADING..." : "INCREMENT"}
+          </Button>
+          {logout && (
+            <Button disabled={loading} fullWidth onClick={logout} structure="base">
+              LOGOUT
+            </Button>
+          )}
+        </>
+      )}
+
+      <Abstraxion onClose={() => setShowModal(false)} />
+
+      {count !== null && (
+        <div className="border-2 border-primary rounded-md p-4 flex flex-row gap-4">
+          <div className="flex flex-row gap-6">
+            <div>Count:</div>
+            <div>{count}</div>
+          </div>
+        </div>
+      )}
+
+      {executeResult && (
         <div className="flex flex-col rounded border-2 border-black p-2 dark:border-white">
           <div className="mt-2">
-            <p className="text-zinc-500">
-              <span className="font-bold">Transaction Hash</span>
-            </p>
+            <p className="text-zinc-500"><span className="font-bold">Transaction Hash</span></p>
             <p className="text-sm">{executeResult.transactionHash}</p>
           </div>
           <div className="mt-2">
-            <p className=" text-zinc-500">
-              <span className="font-bold">Block Height:</span>
-            </p>
+            <p className=" text-zinc-500"><span className="font-bold">Block Height:</span></p>
             <p className="text-sm">{executeResult.height}</p>
           </div>
           <div className="mt-2">
-            <Link
-              className="text-black underline visited:text-purple-600 dark:text-white"
-              href={blockExplorerUrl}
-              target="_blank"
-            >
+            <Link className="text-black underline visited:text-purple-600 dark:text-white" href={blockExplorerUrl} target="_blank">
               View in Block Explorer
             </Link>
           </div>
         </div>
-      ) : null}
+      )}
     </main>
   );
 }
-
-
 ```
 {% endcode %}
+
+
+
+{% hint style="info" %}
+Update "**YOUR\_COUNTER\_CONTRACT\_ADDRESS\_HERE**" with the the NFT Contract Address you created above.
+{% endhint %}
 
 #### What does this do?
 
 1. **Implements transaction submission**
-   * The **"CLAIM SEAT"** button sends a transaction using **Abstraxion Signing Client**.
+   * The **"INCREMENT"** button sends a transaction using **Abstraxion Signing Client**.
 2. **Manages user connection state**
    * Uses `useAbstraxionAccount()` to check if the user is connected.
    * If the user isn’t connected, the **"CONNECT"** button appears instead.
 3. **Handles transaction execution**
-   * Defines a `claimSeat()` function to interact with a **CosmWasm smart contract**.
+   * Defines a `increment()` function to interact with a **CosmWasm smart contract**.
    * Sends an **ExecuteContract** transaction using `client.execute()`.
 4. **Displays transaction results**
    * After submitting a transaction, it shows the **Transaction Hash** and **Block Height**.
@@ -427,29 +571,11 @@ export default function Page(): JSX.Element {
 
 ### Quick Note on Fee Configuration
 
-In the `claimSeat` function, the `.execute()` method is called as follows:
+In the `increment` function, the `.execute()` method is called as follows:
 
 {% code lineNumbers="true" %}
 ```typescript
-const claimRes = await client?.execute(
-  account.bech32Address,
-  seatContractAddress,
-  msg,
-  {
-    amount: [{ amount: "0.001", denom: "uxion" }],
-    gas: "500000",
-    // ...
-  },
-  "", // memo
-  [],
-);
-```
-{% endcode %}
-
-The **fourth parameter** in the function call represents the **fee configuration**. Instead of manually specifying the gas and fee amount, you can replace the object with `"auto"`, allowing the **SDK to automatically handle fee estimation**:
-
-```typescript
-const claimRes = await client?.execute(
+const res = await client?.execute(
   account.bech32Address,
   seatContractAddress,
   msg,
@@ -458,6 +584,9 @@ const claimRes = await client?.execute(
   [],
 );
 ```
+{% endcode %}
+
+The **fourth parameter** in the function call represents the **fee configuration**. Instead of manually specifying the gas and fee amount, we use `"auto"`, allowing the **SDK to automatically handle fee estimation**:
 
 #### Why Use `"auto"`?
 
@@ -468,7 +597,7 @@ If everything is configured correctly, you should see the transaction results di
 
 
 
-<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>After clicking "Claim Seat" you should see the confirmation above.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (23).png" alt=""><figcaption><p>After clicking "Increment" you should see the confirmation above</p></figcaption></figure>
 
 
 
