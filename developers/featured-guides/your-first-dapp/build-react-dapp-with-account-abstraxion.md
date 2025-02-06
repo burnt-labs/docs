@@ -261,6 +261,10 @@ Now, click **CONNECT** and try it out!
 
 <figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+**Note:** If the treasury contract address is changed within the dApp, users who are already logged in must log out and log back in. This ensures that their account goes through the approval process again, allowing the fee grants to function properly.
+{% endhint %}
+
 ## Querying the Contract
 
 The contract provides a method to query the current `count` value. Let's fetch this value and display it in the dApp.
