@@ -70,7 +70,7 @@ To resolve this issue, update your `next.config.js` file located at the root of 
 
 ## Deploying a Contract On-Chain
 
-To interact with our dApp, we need to deploy a **smart contract** on-chain. In this guide, we will deploy a **basic Counter contract**, which allows you to:
+We need to deploy a smart contract on-chain for our dApp to interact with, so we'll deploy a basic **Counter** contract, which will allow you to:
 
 * **Set an initial counter value**
 * **Increment or reset the counter**
