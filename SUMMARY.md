@@ -11,7 +11,7 @@
     * [Interact with XION chain: Setup XION Daemon](developers/featured-guides/setup-local-environment/interact-with-xion-chain-setup-xion-daemon.md)
   * [Your First Contract](developers/featured-guides/your-first-contract/README.md)
     * [Setup CosmWasm IDE](developers/featured-guides/your-first-contract/setup-cosmwasm-ide.md)
-    * [Deploy a CosmWasm Smart Contract](developers/featured-guides/your-first-contract/deploy-a-cosmwasm-smart-contract.md)
+    * [Deploying Your First Smart Contract on XION](developers/featured-guides/your-first-contract/deploy-a-cosmwasm-smart-contract.md)
   * [Your First DApp](developers/featured-guides/your-first-dapp/README.md)
     * [Account Abstraction with Gasless Transactions](developers/featured-guides/your-first-dapp/build-react-dapp-with-account-abstraxion.md)
     * [Creating a Gas-less UX: Treasury Contracts](developers/featured-guides/your-first-dapp/treasury-contracts.md)
