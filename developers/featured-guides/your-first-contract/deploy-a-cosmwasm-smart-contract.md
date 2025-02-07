@@ -1,8 +1,6 @@
 # Deploying Your First Smart Contract on XION
 
-This guide will walk you through the process of deploying a smart contract on the **XION** network. Whether you're new to XION or transitioning from another smart contract platform, understanding how to **deploy**, **instantiate**, and **interact** with your contract is essential for building decentralized applications.
-
-The deployment process involves **compiling** an **optimized** version of your contract code, **uploading** it to the blockchain, and then creating an **instance** of the contract. Once instantiated, the contract will have its own **unique address and data store**, allowing you to interact with it through transactions and queries.
+This guide will walk you through the process of deploying a smart contract on the **XION** network. The deployment process involves **compiling** an **optimized** version of your contract code, **uploading** this optimized code to the blockchain, and then creating an **instance** of the contract. Once instantiated, the contract will have its own **unique address** and **data store**, allowing you to interact with it through transactions and queries.
 
 
 
