@@ -9,8 +9,6 @@ We maintain a list of recommended block explorers for both **mainnet** and **tes
 * **Testnet Explorers**\
   [XION Testnet explorers in the chain registry](https://github.com/cosmos/chain-registry/blob/master/testnets/xiontestnet/chain.json#L184-L202)
 
-Below is a brief summary of the explorers currently listed.
-
 ***
 
 ### Mainnet Explorers
