@@ -29,6 +29,7 @@
 * [Reference and Resources](developers/section-overview/README.md)
   * [Requesting XION Testnet Tokens](developers/section-overview/xion-testnet-1.md)
   * [Public Endpoints & Resources](developers/section-overview/public-endpoints-and-resources.md)
+  * [Block Explorers](developers/section-overview/block-explorers.md)
   * [CosmWasm Resources](developers/section-overview/cosmwasm-resources/README.md)
     * [Introductory Section](developers/section-overview/cosmwasm-resources/introductory-section/README.md)
       * [Setting Up Environment](developers/section-overview/cosmwasm-resources/introductory-section/setting-up-environment.md)
