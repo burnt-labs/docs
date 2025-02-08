@@ -24,4 +24,4 @@ Once you have [set up a discord account](https://discord.gg/burnt), you can also
 2. You'll then have access to the ⁠[🚰｜xion-faucet](https://discord.com/channels/823953904512401469/1308980450722840636) channel
 3. In the ⁠[🚰｜xion-faucet](https://discord.com/channels/823953904512401469/1308980450722840636) channel, type: `/faucet [your xion testnet address]`&#x20;
 
-This command will send testnet tokens to your specified address.
+This command will send testnet tokens to your specified address. Only **one request** can be made every **24 hours**.
