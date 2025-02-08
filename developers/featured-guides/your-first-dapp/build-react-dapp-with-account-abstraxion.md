@@ -76,7 +76,7 @@ We need to deploy a smart contract on-chain for our dApp to interact with, so we
 * **Increment or reset the counter**
 * **Query the current counter value**
 
-Follow the steps in the following [guide](https://github.com/burnt-labs/cw-counter/blob/main/README.md) to **compile, deploy, and instantiate** the contract on-chain. Once deployed, this contract will be referenced in the **Treasury contract** and the **code updates** that follow.
+Follow the steps in the following [guide](https://docs.burnt.com/xion/developers/featured-guides/your-first-contract/deploy-a-cosmwasm-smart-contract) to **compile, deploy, and instantiate** the contract on-chain. Once deployed, this contract will be referenced in the **Treasury contract** and the **code updates** that follow.
 
 
 
