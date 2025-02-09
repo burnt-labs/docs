@@ -1,120 +1,241 @@
-# Installation Prerequisites: Setup Local Environment
+# Setting up your Local Development Environment for XION
 
-## **Getting Started**
+A properly configured local development environment is essential for building and testing applications on XION. This guide covers the necessary tools, dependencies, and configurations needed to get started.
 
-To get started developing on XION, you will need to have the following prerequisites in mind and ready to use.
 
-* [Golang](https://go.dev/doc/install)
-* [Rust](https://www.rust-lang.org/)
-* [Cargo](https://doc.rust-lang.org/cargo/commands/cargo-install.html)
-* [Docker](https://docs.docker.com/get-docker/)
-* [WASM](https://webassembly.org/)
 
-## Golang
+The following tools will be installed:
 
-Golang was designed to address some of the challenges faced by developers in building scalable, concurrent, and efficient software. It’s a simple, open-source language and has gained popularity in the coding world due to its simplicity, performance, and strong support for concurrency.
+* [**Rust & Cargo**](installation-prerequisites-setup-local-environment.md#rust) – The programming language and package manager used for writing and compiling smart contracts.
+* [**cargo-generate**](installation-prerequisites-setup-local-environment.md#cargo-generate) – A tool for quickly setting up new Rust projects from templates.
+* [**Go**](installation-prerequisites-setup-local-environment.md#go) – Required for interacting with blockchain tooling and dependencies.
+* [**Docker**](installation-prerequisites-setup-local-environment.md#docker) – Used for optimizing Rust smart contracts via the Rust Optimizer.
 
-## Rust
+Each section provides step-by-step installation instructions for macOS, Debian-based Linux, Red Hat-based Linux and Arch Linux.
 
-Rust is a programming language that has gained significant attention and popularity, particularly for systems programming and low-level development. Due to Rust’s memory safety guarantees and performance advantages, it is increasingly being adopted for projects where both safety and efficiency are critical, such as operating systems, game engines, web browsers, and networking software. Its modern design and innovative features make it a powerful tool for a variety of programming tasks.
+Once these dependencies are installed, you will have everything needed to start developing on XION.
 
-### Installing Rust
 
-Provided is a step-by-step instructions for installing Rust on both macOS and Windows systems:
 
-#### _Installing Rust on macOS:_
+## **Prerequisites**
 
-1. Open a terminal window. You can find the Terminal application in the "Utilities" folder within the "Applications" directory.
-2. Copy and paste the following command into the terminal and press Enter to initiate the installation of rustup (the Rust toolchain installer):
+* A Unix-like operating system (Linux, macOS, or Windows Subsystem for Linux). If you're using Windows, refer to this [guide](https://learn.microsoft.com/en-us/windows/wsl/install) for installing Windows Subsystem for Linux (WSL).
+
+
+
+## **Rust**
+
+[Rust](https://www.rust-lang.org/) is the programming language for developing smart contracts on XION. Known for its performance, security, and memory safety, Rust is well-suited for blockchain development. To build, test, and deploy smart contracts, developers need a properly configured Rust toolchain.
+
+The recommended way to install Rust is through [**rustup**](https://rustup.rs/), the official Rust toolchain installer.
+
+{% tabs %}
+{% tab title="macOS" %}
+Install Rust using Homebrew:
+
+`brew install rustup`
+
+`rustup-init`
+
+
+
+Follow the on-screen instructions, then restart your terminal or run:
+
+`source $HOME/.cargo/env`
+{% endtab %}
+
+{% tab title="Debian-based Linux" %}
+Install required dependencies:
+
+`sudo apt update && sudo apt install -y curl build-essential`
+
+
+
+Then install Rust using rustup:
 
 `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
 
-3. Follow the on-screen prompts. You'll be asked to review the installation options and confirm the installation by pressing Enter.
-4. After the installation is complete, the terminal will display a message indicating that Rust has been installed. The rustup tool has also added the Rust binaries to your system's PATH.
-5. Close and reopen the terminal to start using Rust. You can verify the installation by typing the following command:
 
-`rustc --version`
 
-#### _Installing Rust on Windows:_
+Follow the setup instructions and restart your terminal or run:
 
-1. Open a web browser and visit the following URL to download the rustup-init.exe installer:
+`source $HOME/.cargo/env`
+{% endtab %}
 
-[`https://rustup.rs/`](https://rustup.rs/)
+{% tab title="Red Hat-based Linux" %}
+Install required dependencies:
 
-2. Run the downloaded ‘r`ustup-init.exe`’ file. This will open a Command Prompt-like interface.
-3. Follow the on-screen instructions:
+`sudo dnf install -y curl gcc-c++ make`
 
-Press **Enter** to start the installation.
 
-Choose an installation type by pressing the corresponding key (e.g., 1 for the default installation).
 
-The installer will download and install the necessary components. You might be asked to accept license terms during the installation.
+Then install Rust:
 
-4. Once the installation is complete, the installer will display a message indicating that Rust has been installed.
-5. Close and reopen any Command Prompt or PowerShell windows to ensure the changes take effect.
-6. To verify the installation, open a Command Prompt or PowerShell window and type:
+`curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
 
-`rustc --version`
 
-With the instructions provided, a user should guide themselves through the process of installing Rust on both macOS and Windows systems. If the user encounters any issues, you can refer to the official Rust documentation for troubleshooting and more information: [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install)
+
+Follow the setup instructions and restart your terminal or run:
+
+`source $HOME/.cargo/env`
+{% endtab %}
+
+{% tab title="Arch Linux" %}
+Install Rust using Pacman:
+
+`sudo pacman -S rustup`
+
+
+
+Then initialize Rust:
+
+`rustup default stable`
+{% endtab %}
+{% endtabs %}
+
+### **Verifying Installation**
+
+After installation, verify **Rust** is correctly installed:
+
+```
+rustc --version
+```
+
+You should see output similar to the following::
+
+```
+rustc 1.82.0-nightly (c1a6199e9 2024-07-24)
+```
+
+
 
 ## Cargo
 
-Cargo is an essential tool for managing Rust projects, dependencies, and building ones applications. Cargo is the package manager for Rust, and is automatically installed alongside Rust when you use the rustup installation method. Therefore, if the user has followed the instructions provided to install Rust using rustup on macOS or Windows, the user will already have Cargo installed.
+Cargo is Rust's package manager and build system, essential for compiling and managing dependencies in XION smart contract development. When installing Rust using **rustup** which we did earlier, Cargo is automatically included. However, if Cargo is missing or needs to be installed separately, follow the steps below.
 
-_Here's a quick recap of the steps:_
+### **Check if Cargo is Installed**
 
-**macOS (Assuming you've installed Rust using rustup):**
+Run the following command to check if Cargo is already installed:
 
-Open a terminal window.
+```
+cargo --version
+```
 
-To verify that Cargo is installed, you can type the following command:
+If Cargo is installed, you should see an output similar to:
 
-`cargo --version`
+```
+cargo 1.82.0-nightly (5f6b9a922 2024-07-19)
+```
 
-This should display the version of Cargo that is installed.
+If Cargo is missing, follow the installation steps below.
 
-**Windows (Assuming you've installed Rust using rustup):**
+{% tabs %}
+{% tab title="macOS" %}
+If Rust is installed via **rustup**, install Cargo with:
 
-Open a Command Prompt or PowerShell window.
+`rustup component add cargo`
+{% endtab %}
 
-To verify that Cargo is installed, you can type the following command:
+{% tab title="Debian-based Linux" %}
+`sudo apt update && sudo apt install -y cargo`
+{% endtab %}
 
-`cargo --version`
+{% tab title="Red Hat-based Linux" %}
+`sudo dnf install -y cargo`
+{% endtab %}
 
-This should display the version of Cargo that is installed.
+{% tab title="Arch Linux" %}
+`sudo pacman -S cargo`
+{% endtab %}
+{% endtabs %}
+
+
+
+## **Cargo Generate**
+
+**cargo-generate** is a Rust tool that simplifies the creation of new Rust projects from pre-existing templates. It is particularly useful for setting up smart contract projects on XION by automating the scaffolding process.
+
+Execute the following command to install **cargo-generate**:
+
+```
+cargo install cargo-generate
+```
+
+### **Verifying Installation**
+
+After installation, confirm that `cargo-generate` is working correctly:
+
+```
+cargo generate --version
+```
+
+If cargo-generate is installed, you should see an output similar to:
+
+```
+cargo generate-generate 0.17.3
+```
+
+
+
+## **Go**
+
+**Go** is required for certain blockchain development tasks, including working with XION’s tooling and dependencies for example `xiond`. Follow the installation steps below for your operating system:
+
+{% tabs %}
+{% tab title="macOS" %}
+`brew install go`
+{% endtab %}
+
+{% tab title="Debian-based Linux" %}
+`sudo apt update && sudo apt install -y golang`
+{% endtab %}
+
+{% tab title="Red Hat-based Linux" %}
+`sudo dnf install -y golang`
+{% endtab %}
+
+{% tab title="Arch Linux" %}
+`sudo pacman -S go`
+{% endtab %}
+{% endtabs %}
+
+Alternatively, download and install Go manually from the [official website](https://go.dev/doc/install).
+
+### **Verifying Installation**
+
+After installation, verify that Go is correctly installed:
+
+```
+go version
+```
+
+If **go** is installed, you should see an output similar to:
+
+```
+go version go1.22.3 darwin/arm64
+```
+
+To ensure **Go** modules work correctly, set up the Go environment:
+
+```
+echo 'export GOPATH=$HOME/go' >> ~/.bashrc
+echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.bashrc
+source ~/.bashrc
+```
+
+If you are using a different shell, replace `~/.bashrc` with the corresponding configuration file for your shell. For example, if you're using **Zsh**, replace `~/.bashrc` with `~/.zshrc`.
+
+After setting up your environment, restart your terminal to apply the changes.
+
+
 
 ## Docker
 
-Docker is an open-source platform that automates the deployment, scaling, and management of applications inside lightweight, portable containers. Many use docker to package applications along with their dependencies and run them consistently across different environments, such as development, testing, and production.
+Docker is required for optimizing Rust smart contracts using the [**Rust Optimizer**](https://github.com/CosmWasm/optimizer), which ensures that contracts are compiled efficiently for deployment on **XION**. You can install Docker for your operating system [here](https://docs.docker.com/get-docker/).
 
-### Installing Docker
+{% hint style="warning" %}
+For Linux users, it's recommended to run the Docker daemon in [**Rootless Mode**](https://docs.docker.com/engine/security/rootless/)**.**
+{% endhint %}
 
-**For Linux:**
 
-Choose your distro [here](https://docs.docker.com/engine/install/) and follow the instructions.
-
-**For macOS:**
-
-Download and install Docker Desktop for macOS from the official Docker website: [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
-
-**For Windows:**
-
-Download and install Docker Desktop for Windows from the official Docker website: [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
-
-After installation, the user should be able to run the docker command in their terminal to manage Docker containers and images.
-
-## WASM
-
-WebAssembly, commonly known as the abbreviation as WASM, is a binary instruction format designed as a portable compilation target for high-performance web applications. It allows code to be executed efficiently and safely in web browsers, enabling developers to write web applications with near-native performance.
-
-### Local Installations
-
-_You need root access to run docker_. Make sure to follow all the steps with root access to prevent conflicts and confusions on the deployment process.
-
-### Attention
-
-For Linux users, it's recommended to run the Docker daemon in Rootless Mode
-
-If you prefer, you can use Docker Engine instead of Docker Desktop.
 
