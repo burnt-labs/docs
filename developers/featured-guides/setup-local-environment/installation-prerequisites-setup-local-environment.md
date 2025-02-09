@@ -1,6 +1,6 @@
 # Setting up your Local Development Environment for XION
 
-A properly configured local development environment is essential for building and testing applications on XION. This guide covers the necessary tools, dependencies, and configurations needed to get started.
+A properly configured local development environment is essential for building and testing smart contracts on XION. This guide covers the necessary tools, dependencies, and configurations needed to get started.
 
 
 
@@ -10,6 +10,7 @@ The following tools will be installed:
 * [**cargo-generate**](installation-prerequisites-setup-local-environment.md#cargo-generate) – A tool for quickly setting up new Rust projects from templates.
 * [**Go**](installation-prerequisites-setup-local-environment.md#go) – Required for interacting with blockchain tooling and dependencies.
 * [**Docker**](installation-prerequisites-setup-local-environment.md#docker) – Used for optimizing Rust smart contracts via the Rust Optimizer.
+* [**xiond**](installation-prerequisites-setup-local-environment.md#xiond) – The XION blockchain daemon for running a local node, deploying smart contracts, and interacting with the blockchain.
 
 Each section provides step-by-step installation instructions for macOS, Debian-based Linux, Red Hat-based Linux and Arch Linux.
 
