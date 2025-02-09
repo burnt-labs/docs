@@ -239,3 +239,103 @@ For Linux users, it's recommended to run the Docker daemon in [**Rootless Mode**
 
 
 
+## xiond
+
+`xiond` is the core command-line tool for running and interacting with the **XION blockchain**. It serves as the blockchain daemon, enabling developers and node operators to manage network operations, deploy smart contracts, and interact with the XION ecosystem.
+
+To install `xiond`, you can either download a [**pre-built binary**](installation-prerequisites-setup-local-environment.md#use-pre-built-binary) or [**build it from source**](installation-prerequisites-setup-local-environment.md#build-from-source). Ensure that you use the release corresponding to the version of `xiond` being used on the network where you will deploy your contracts.
+
+### **Use Pre-built Binary**
+
+You will need to download the appropriate binary for your system architecture:
+
+{% tabs %}
+{% tab title="Linux (amd64)" %}
+**Download the binary using**
+
+```
+wget https://github.com/burnt-labs/xion/releases/download/v1.0.0/xiond_linux_amd64
+```
+
+
+
+**Verify the Integrity of the Binary**
+
+Generate the SHA256 hash of the downloaded file:
+
+```
+sha256sum xiond_linux_amd64
+```
+{% endtab %}
+
+{% tab title="macOS (arm64)" %}
+Download the binary using:
+
+```
+wget https://github.com/burnt-labs/xion/releases/download/v1.0.0/xiond_linux_arm64
+```
+
+
+
+**Verify the Integrity of the Binary**
+
+Generate the SHA256 hash of the downloaded file:
+
+```
+sha256sum xiond_linux_arm64
+```
+{% endtab %}
+{% endtabs %}
+
+The `sha256sum` command should generate a hash string (e.g., `d41d8cd98f00b204e9800998ecf8427e`).
+
+Download the official checksum file:
+
+```sh
+wget https://github.com/burnt-labs/xion/releases/download/v1.0.0/xiond_v1.0.0_checksums.txt
+```
+
+Compare the two hash strings to ensure they match. This confirms that the downloaded file is authentic and unaltered.
+
+#### **Add Executable Permissions**
+
+Make the binary executable:
+
+```sh
+chmod +x xiond_linux_amd64
+```
+
+#### **Move the Binary to a System Directory**
+
+Move the binary to a directory in your `PATH` (e.g., `/usr/local/bin`) and rename it to `xiond`:
+
+```sh
+sudo mv xiond_linux_amd64 /usr/local/bin/xiond
+```
+
+After this, `xiond` should be available for use.
+
+### **Build from Source**
+
+If downloading the pre-built binary is not an option, you can install `xiond` from source. Ensure that **Go**, **Git**, and **Make** are installed.
+
+**Clone the Repository and Build `xiond`**
+
+```sh
+git clone https://github.com/burnt-labs/xion.git
+cd xion
+git checkout main
+make install
+```
+
+This will install the `xiond` binary to your `GOPATH`.
+
+#### **Verify Installation**
+
+Check that `xiond` is properly installed:
+
+```sh
+xiond version
+```
+
+If successful, `xiond` is now ready for use.
