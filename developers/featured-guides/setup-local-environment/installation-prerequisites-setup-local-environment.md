@@ -320,7 +320,7 @@ After this, `xiond` should be available for use.
 
 If downloading the pre-built binary is not an option, you can install `xiond` from source. Ensure that **Go**, **Git**, and **Make** are installed.
 
-**Clone the Repository and Build `xiond`**
+#### **Clone the Repository and Build `xiond`**
 
 ```sh
 git clone https://github.com/burnt-labs/xion.git
