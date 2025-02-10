@@ -8,7 +8,7 @@
 * [Xion Quick Start](developers/featured-guides/README.md)
   * [Setup Local Environment](developers/featured-guides/setup-local-environment/README.md)
     * [Setting up your Local Development Environment for XION](developers/featured-guides/setup-local-environment/installation-prerequisites-setup-local-environment.md)
-    * [Interact with XION chain: Setup XION Daemon](developers/featured-guides/setup-local-environment/interact-with-xion-chain-setup-xion-daemon.md)
+    * [Interacting with Xion Chain using Xion Daemon](developers/featured-guides/setup-local-environment/interact-with-xion-chain-setup-xion-daemon.md)
   * [Your First Contract](developers/featured-guides/your-first-contract/README.md)
     * [Setup CosmWasm IDE](developers/featured-guides/your-first-contract/setup-cosmwasm-ide.md)
     * [Deploying Your First Smart Contract on XION](developers/featured-guides/your-first-contract/deploy-a-cosmwasm-smart-contract.md)

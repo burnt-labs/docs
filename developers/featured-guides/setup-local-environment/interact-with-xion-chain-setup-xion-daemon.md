@@ -1,220 +1,182 @@
-# Interact with XION chain: Setup XION Daemon
+# Interacting with Xion Chain using Xion Daemon
 
-The XION Daemon binary is the primary interaction point for a DAPP developer to the XION blockchain both locally and on testnet.
+`xiond` is the command-line interface (CLI) daemon for interacting with the **Xion blockchain**. It allows users to manage accounts, send transactions, query blockchain data, and operate validator nodes.&#x20;
 
-## Installation
 
-1. Clone the [Xion](https://github.com/burnt-labs/xion) repository locally.
-2. Run `make install` in the above directory
-3. The \`xiond\` command will be installed into your $GOPATH
 
-{% hint style="warning" %}
-$GOPATH/bin must be on your $PATH for this to work. You can do this by adding the following to your .zshrc or .bashrc file.
+## **Prerequisites**
 
-```bash
-export GOPATH=$(go env GOPATH)
-export PATH=$GOPATH/bin:$PATH
-```
-{% endhint %}
+Before proceeding with this guide, ensure that `xiond` is installed on your system. Follow the installation steps outlined in the [Installation Prerequisites](https://docs.burnt.com/xion/developers/featured-guides/setup-local-environment/installation-prerequisites-setup-local-environment#xiond) guide.
 
-For more information see [here](../../../../nodes-and-validators/run-a-node/build-the-xion-daemon.md).
-
-### Confirm Installation
-
-Enter the following in your terminal
+To verify your installation, run:
 
 ```
-$  xiond 
+xiond
 ```
 
-And you should see the following output
+If installed correctly, you should see the following output:
 
-<pre><code>xion daemon (server)
+```
+xion daemon (server)
 
 Usage:
   xiond [command]
-<strong>
-</strong>Available Commands:
-  completion  Generate the autocompletion script for the specified shell
-  config      Create or query an application CLI configuration file
-  debug       Tool for helping with debugging your application
-  export      Export state to JSON
-  genesis     Application's genesis-related subcommands
-  help        Help about any command
-  init        Initialize private validator, p2p, genesis, and application configuration files
-  keys        Manage your application's keys
-  prune       Prune app history states by keeping the recent heights and deleting old heights
-  query       Querying subcommands
-  rollback    rollback cosmos-sdk and tendermint state by one height
-  rosetta     spin up a rosetta server
-  start       Run the full node
-  status      Query remote node for status
-  tendermint  Tendermint subcommands
-  tx          Transactions subcommands
-  version     Print the application binary version information
+
+Available Commands:
+  comet                 CometBFT subcommands
+  completion            Generate the autocompletion script for the specified shell
+  config                Utilities for managing application configuration
+  debug                 Tool for helping with debugging your application
+  export                Export state to JSON
+  genesis               Application's genesis-related subcommands
+  help                  Help about any command
+  init                  Initialize private validator, p2p, genesis, and application configuration files
+  keys                  Manage your application's keys
+  module-hash-by-height Get module hashes at a given height
+  prune                 Prune app history states by keeping the recent heights and deleting old heights
+  query                 Querying subcommands
+  rollback              rollback Cosmos SDK and CometBFT state by one height
+  rosetta               spin up a rosetta server
+  snapshots             Manage local snapshots
+  start                 Run the full node
+  status                Query remote node for status
+  tx                    Transactions subcommands
+  version               Print the application binary version information
 
 Flags:
   -h, --help                help for xiond
-      --home string         directory for config and data (default "/Users/justin/.xiond")
+      --home string         directory for config and data (default "/Users/adrianthompson/.xiond")
       --log_format string   The logging format (json|plain) (default "plain")
-      --log_level string    The logging level (trace|debug|info|warn|error|fatal|panic) (default "info")
+      --log_level string    The logging level (trace|debug|info|warn|error|fatal|panic|disabled or '*:<level>,<key>:<level>') (default "info")
+      --log_no_color        Disable colored logs
       --trace               print out full stack trace on errors
 
 Use "xiond [command] --help" for more information about a command.
-</code></pre>
+```
+
+This output displays the available commands within `xiond`. Each command may include additional subcommands. To get more details about a specific command, use the `--help` flag.
 
 
 
-By default all commands will assume you are accessing a local xion testnet unless you pass a parameter.
+## Generate an account
 
-## Testing the CLI
+To execute transactions on-chain, you need at least one funded account. This section will guide you through the process of creating and funding an account using `xiond`.
 
-### Connecting to an External node
+### Generate an Account Key Pair
 
-The `--node` flag allows you to provide an external RPC to query from.
+To interact with the XION blockchain, you need a cryptographic key pair, consisting of a **public key** and a **private key**. The public key is used to derive your address, while the private key is required to sign transactions.
 
-#### Example: Query balance of an account on the testnet
+#### **Generate a New Key Pair**
 
-{% code overflow="wrap" %}
+Use the following command to create a new key pair and add it to your local key store:
+
 ```sh
-$ xiond query bank balances xion14yy92ae8eq0q3ezy9nasumt65hwdgryvpkf0a4 --node https://rpc.xion-testnet-1.burnt.com:443
-```
-{% endcode %}
-
-### Creating and viewing Keys
-
-```bash
-$ xiond keys list
+xiond keys add <keyname>
 ```
 
-**Output**
+Replace `<keyname>` with a name of your choice for easy reference.
 
-If this is a fresh installation the output is going to be&#x20;
+#### **Retrieve Public Key**
 
-```
-[]
-```
+If you have already generated a key pair and need to retrieve its public key, use the following command:
 
-**Create a new account**
-
-```
-$ xiond keys add test
+```sh
+xiond keys show <keyname>
 ```
 
-**Output**
+Replace `<keyname>` with the name of your key to display its public key.
+
+
+
+### Fund Your Account
+
+Your account is not fully registered on-chain until it is involved in a transaction. The easiest way to achieve this is by **funding your account**, which allows it to interact with the network.
+
+#### **Request Testnet Tokens**
+
+You can obtain testnet tokens through one of the following methods:
+
+* **Discord Faucet**: Request tokens by using the faucet bot in the **XION Discord**.
+* **Faucet Web Page**: Visit the [XION Faucet](https://faucet.xion.burnt.com/) and follow the instructions to receive testnet tokens.
+
+For more details on accessing testnet tokens, see our [Faucet Page](https://docs.burnt.com/xion/developers/section-overview/xion-testnet-1).
+
+#### **Mainnet Tokens**
+
+If you’re deploying contracts on **XION Mainnet**, you can acquire XION tokens through various **decentralized** and **centralized exchanges**.
+
+
+
+## **Connecting to Different Xion Chain Instances**
+
+By default, `xiond` uses a local network node for executing transactions and queries. However, if you need to connect to a different chain, such as a public testnet or mainnet, you must specify the appropriate **chain ID** and **node URL**.
+
+
+
+### **Finding Chain IDs and Public Nodes**
+
+You can find the **chain IDs** for all Xion chains, along with available public RPC nodes, in the [Public Endpoints and Resources](https://docs.burnt.com/xion/developers/section-overview/public-endpoints-and-resources) section of the documentation.
+
+
+
+### **Executing Transactions**
+
+To interact with a different Xion blockchain for sending transactions, you need to explicitly set:
+
+* The **chain ID** using the `--chain-id` flag
+* The **node URL** using the `--node` flag
+
+#### **Example: Sending tokens to an account**
+
+```sh
+xiond tx bank send <your-wallet> <recipient-address> <amount>uxion \
+  --chain-id <target-chain-id> \
+  --node <node-url> \
+  --from <your-wallet> \
+  --gas-prices 0.025uxion \
+  --gas auto \
+  --gas-adjustment 1.3 \
+  -y
+```
+
+* Replace `<target-chain-id>` with the appropriate chain ID.
+* Replace `<node-url>` with the RPC endpoint of the target chain.
+
+#### Possible Output
 
 ```
-- address: xion1vmzvym7t4kn09lzmj9clxk24yanr08xfr6fghg
-  name: test
-  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AwrVIv+hI5g9PjnkWXPxFSpuA6h2S7hVdntt45SqlJKS"}'
-  type: local
-
-
-**Important** write this mnemonic phrase in a safe place.
-It is the only way to recover your account if you ever forget your password.
-
-reject waste alien movie abstract kangaroo find second phone home pet you regret horse crunch above faint govern gaze hammer fortune midnight can elephant
+gas estimate: 70320
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: ""
+timestamp: ""
+tx: null
+txhash: 20511E66575DCECF23EBFF7D848DA75DA88A474CD17089C5225C1D04C9561A57
 ```
 
-**List Keys**
+### **Executing Queries**
 
-```
-$ xiond keys list
-```
+For queries, you only need to set the `--node` flag, as queries do not require the `--chain-id` parameter.
 
-**Output**
+#### **Example: Querying Account Balance**
 
-```
-- address: xion1vmzvym7t4kn09lzmj9clxk24yanr08xfr6fghg
-  name: test
-  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AwrVIv+hI5g9PjnkWXPxFSpuA6h2S7hVdntt45SqlJKS"}'
-  type: local
+```sh
+xiond query bank balances <wallet-address> --node <node-url>
 ```
 
-The `name` field is an alias that can be used in some other commands.
+#### Possible Output
 
-### Checking an account balance
-
-To get the current balance the in the banking module in a given address.&#x20;
-
-For the below command to not return&#x20;
-
-`Error: post failed: Post "http://localhost:26657": dial tcp [::1]:26657: connect: connection refused`
-
-make sure you either provide a node to connect to or a have local instance of Xion chain running in the background.
-
-**To connect to an external node**
-
-{% code overflow="wrap" %}
 ```
-$ xiond query bank balances xion14yy92ae8eq0q3ezy9nasumt65hwdgryvpkf0a4 --node https://rpc.xion-testnet-1.burnt.com:443
-```
-{% endcode %}
-
-[To query local instance running on `http://localhost:26657`](#user-content-fn-1)[^1]
-
-```bash
-$ xiond query bank balances xion14yy92ae8eq0q3ezy9nasumt65hwdgryvpkf0a4
-```
-
-See instructions on [Setting up Local Environment](installation-prerequisites-setup-local-environment.md#start-a-local-testnet) (Start a Local Testnet) to initiate a local Xion instance
-
-**Output**&#x20;
-
-{% code title="amounts will vary" overflow="wrap" %}
-```bash
 balances:
-- amount: "10000000000000"
+- amount: "1223782"
   denom: uxion
 pagination:
-  next_key: null
-  total: "0"
+  total: "1"
 ```
-{% endcode %}
-
-### Send Xion tokens to another address
-
-To send xion to another address&#x20;
-
-```bash
-$ xiond tx bank send <sender address> <receiver address> <amount>
-```
-
-The sender must be an address in the list of keys shown above and the amount must be have a denomination such like \`100uxion\`.
-
-```
-auth_info:
-  fee:
-    amount: []
-    gas_limit: "200000"
-    granter: ""
-    payer: ""
-  signer_infos: []
-  tip: null
-body:
-  extension_options: []
-  memo: ""
-  messages:
-  - '@type': /cosmos.bank.v1beta1.MsgSend
-    amount:
-    - amount: "100"
-      denom: uxion
-    from_address: xion1e2fuwe3uhq8zd9nkkk876nawrwdulgv460vzg7
-    to_address: xion1z448xjcrwphppyel7gwtxl96e2vjjkur2mrxjr
-  non_critical_extension_options: []
-  timeout_height: "0"
-signatures: []
-confirm transaction before signing and broadcasting [y/N]: 
-```
-
-This command is interactive. Enter `y` to execute and you will see the tx hash output along with a raw logs and various other information.&#x20;
-
-### List WASM Contracts currently deployed
-
-```
-$ xiond query wasm list-codes
-```
-
-If any contracts are deployed they will appear here along with their code id.
-
-[^1]: To run a local instance see [https://docs.burnt.com/xion/develop/get-started-guide/setup/installation-prerequisites-setup-local-environment#start-a-local-testnet](https://docs.burnt.com/xion/develop/get-started-guide/setup/installation-prerequisites-setup-local-environment#start-a-local-testnet)
