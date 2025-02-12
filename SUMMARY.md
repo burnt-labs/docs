@@ -19,7 +19,7 @@
       * [Fee Granting](developers/featured-guides/your-first-dapp/create-a-gas-less-user-experience/fee-granting.md)
     * [Using Xion in the backend: XION TypeScript](developers/featured-guides/your-first-dapp/xion-typescript.md)
 * [Concepts](developers/learn/README.md)
-  * [Overview](developers/learn/overview-of-xion.md)
+  * [XION Overview](developers/learn/overview-of-xion.md)
   * [Generalized Chain Abstraction](developers/learn/generalized-chain-abstraction.md)
   * [Intro to Account Abstraction](developers/learn/intro-to-account-abstraction.md)
   * [XION's Meta Accounts](developers/learn/xions-meta-accounts.md)
