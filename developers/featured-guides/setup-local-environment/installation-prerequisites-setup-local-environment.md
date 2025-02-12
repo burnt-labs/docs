@@ -232,7 +232,7 @@ After setting up your environment, restart your terminal to apply the changes.
 
 ## Docker
 
-Docker is required for optimizing Rust smart contracts using the [**Rust Optimizer**](https://github.com/CosmWasm/optimizer), which ensures that contracts are compiled efficiently for deployment on **XION**. You can install Docker for your operating system [here](https://docs.docker.com/get-docker/).
+Docker is required for optimizing Rust smart contracts using the [**Rust Optimizer**](https://github.com/CosmWasm/optimizer), which ensures that contracts are compiled efficiently for deployment on **XION**. It can also be used to run `xiond`. You can install Docker for your operating system [here](https://docs.docker.com/get-docker/).
 
 {% hint style="warning" %}
 For Linux users, it's recommended to run the Docker daemon in [**Rootless Mode**](https://docs.docker.com/engine/security/rootless/)**.**
@@ -244,7 +244,7 @@ For Linux users, it's recommended to run the Docker daemon in [**Rootless Mode**
 
 `xiond` is the core command-line tool for running and interacting with the **XION blockchain**. It serves as the blockchain daemon, enabling developers and node operators to manage network operations, deploy smart contracts, and interact with the XION ecosystem.
 
-To install `xiond`, you can either download a [**pre-built binary**](installation-prerequisites-setup-local-environment.md#use-pre-built-binary) or [**build it from source**](installation-prerequisites-setup-local-environment.md#build-from-source). Ensure that you use the release corresponding to the version of `xiond` being used on the network where you will deploy your contracts.
+To install `xiond`, you can either download a [**pre-built binary**](installation-prerequisites-setup-local-environment.md#use-pre-built-binary)**,** [**build it from source**](installation-prerequisites-setup-local-environment.md#build-from-source) or utilize a **docker** build. Ensure that you use the release corresponding to the version of `xiond` being used on the network where you will be interacting with.
 
 ### **Use Pre-built Binary**
 
@@ -315,6 +315,42 @@ sudo mv xiond_linux_amd64 /usr/local/bin/xiond
 ```
 
 After this, `xiond` should be available for use.
+
+***
+
+### Run xiond with Docker
+
+Instead of installing `xiond` manually, you can run it using Docker.
+
+#### **Download the Image from Docker Hub**
+
+We publish Docker images to Docker Hub on every commit to the `main` branch. The images are tagged with their respective Git SHA.
+
+```
+docker pull burntnetwork/xion:latest
+```
+
+For the latest available tags, check out the [Docker Hub](https://hub.docker.com/r/burntnetwork/xion) page for this image.
+
+#### **Obtain a Shell in the Docker Container**
+
+Once the image is pulled, you can invoke the `xiond` binary inside a Docker container:
+
+```
+docker run -ti burntnetwork/xion:latest /bin/bash
+```
+
+From within the container, you can interact with `xiond`:
+
+```
+xiond version
+xiond version --long
+xiond --help
+```
+
+Using Docker ensures a clean and isolated environment for running `xiond`, eliminating the need for manual installation and dependency management.
+
+***
 
 ### **Build from Source**
 
