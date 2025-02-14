@@ -67,6 +67,8 @@
   * [Indexers](developers/section-overview/indexers/README.md)
     * [SubQuery](developers/section-overview/indexers/subquery.md)
   * [Developer Tools: Abstract](developers/section-overview/developer-tools-abstract.md)
+* [Learn & Build](developers/learn-and-build/README.md)
+  * [Token Factory](developers/learn-and-build/token-factory.md)
 
 ## Nodes & Validators
 
