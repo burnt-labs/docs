@@ -68,7 +68,8 @@
     * [SubQuery](developers/section-overview/indexers/subquery.md)
   * [Developer Tools: Abstract](developers/section-overview/developer-tools-abstract.md)
 * [Learn & Build](developers/learn-and-build/README.md)
-  * [Token Factory](developers/learn-and-build/token-factory.md)
+  * [Token Factory](developers/learn-and-build/token-factory/README.md)
+    * [Creating, Minting, and Interacting with a Token Factory Token](developers/learn-and-build/token-factory/creating-minting-and-interacting-with-a-token-factory-token.md)
 
 ## Nodes & Validators
 
