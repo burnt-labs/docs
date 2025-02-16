@@ -399,4 +399,4 @@ xiond tx bank send xion1ka5... xion193h... 500factory/xion1ka5.../mytoken --node
 
 
 
-You have now created, minted, transferred, burned, and updated a token using the **XION Token Factory** module. These steps provide full control over your token and allow seamless management within the XION ecosystem.
+You have successfully **created**, **updated**, **minted** and **transferred** a token using the **XION Token Factory module**. With this foundation, you can now integrate your token into your smart contracts and  **dApp frontends** seamlessly.
