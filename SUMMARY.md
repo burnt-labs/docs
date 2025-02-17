@@ -70,6 +70,7 @@
 * [Learn & Build](developers/learn-and-build/README.md)
   * [Token Factory](developers/learn-and-build/token-factory/README.md)
     * [Creating, Minting, and Interacting with a Token Factory Token](developers/learn-and-build/token-factory/creating-minting-and-interacting-with-a-token-factory-token.md)
+    * [Building a React dApp to Interact with Token Factory Tokens](developers/learn-and-build/token-factory/building-a-react-dapp-to-interact-with-token-factory-tokens.md)
 
 ## Nodes & Validators
 
