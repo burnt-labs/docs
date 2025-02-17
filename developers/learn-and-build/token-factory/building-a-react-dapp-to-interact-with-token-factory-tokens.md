@@ -122,9 +122,9 @@ Replace `YOUR_TREASURY_CONTRACT_ADDRESS_HERE` with the actual treasury contract 
 
 
 
-### **Bringing it Together**
+## **Bringing it Together**
 
-#### **Modify `src/app/page.tsx` to Use Components**
+Replace the contents of **`src/app/page.tsx`** with the following code:
 
 ```tsx
 "use client";
@@ -141,7 +141,8 @@ import { Button } from "@burnt-labs/ui";
 import "@burnt-labs/ui/dist/index.css";
 import type { ExecuteResult } from "@cosmjs/cosmwasm-stargate";
 
-const TOKEN_DENOM = "factory/xion1xyz.../mytoken";
+const TOKEN_DENOM = "factory/xion1ka5gdcv4m7kfzxkllapqdflenwe0fv8ftm357r/emp";
+const DENOM_DISPLAY_NAME = "EMP";
 
 type ExecuteResultOrUndefined = ExecuteResult | undefined;
 
@@ -246,7 +247,7 @@ export default function Page(): JSX.Element {
         <>
           <div className="w-full max-w-md p-4 bg-gray-800 rounded-lg shadow-md">
             <h2 className="text-xl font-semibold text-white mb-4">Token Balance</h2>
-            <p className="text-white mb-14">{balance} MYTOKEN</p>
+            <p className="text-white mb-14">{balance} {DENOM_DISPLAY_NAME}</p>
 
             <h2 className="text-xl font-semibold text-white mb-4">Send Tokens</h2>
             <div className="mb-4">
@@ -320,12 +321,184 @@ export default function Page(): JSX.Element {
 }
 ```
 
-Replace TOKEN\_DENOM with the actual token denom.
+Replace **TOKEN\_DENOM** with the actual Token Factory token denomination. Also, replace **DENOM\_DISPLAY\_NAME** with the name of the token you want to display next to the balance.
+
+The sections below will provide a walkthrough of the code above.
+
+### **Token Configuration**
+
+```tsx
+const TOKEN_DENOM = "factory/xion1xyz.../mytoken"; 
+const DENOM_DISPLAY_NAME = "EMP";
+```
+
+* Defines the **Token Factory token’s denomination** that will be queried and transferred.
+* **`DENOM_DISPLAY_NAME`** is used for a **more readable display** instead of the full denom.
+
+### **Fetching Token Balance**
+
+```tsx
+const getTokenBalance = async () => {
+  if (account?.bech32Address) {
+    setLoading(true);
+    try {
+      const response = await queryClient.getBalance(account?.bech32Address, TOKEN_DENOM);
+      console.log("Response: ", response);
+      setBalance(response ? response.amount : "0");
+    } catch (error) {
+      console.error("Error querying contract:", error);
+    } finally {
+      setLoading(false);
+    }
+  }
+};
+```
+
+* Queries the **XION blockchain** for the user’s **Token Factory token balance**.
+* Uses the **Abstraxion Client** (`queryClient.getBalance()`).
+* **Updates the `balance` state** with the retrieved amount.
+
+### **Sending Tokens**
+
+```tsx
+const handleSend = async () => {
+  setLoading(true);
+  try {
+    const result = await client?.sendTokens(
+      account.bech32Address,
+      recipient,
+      [{ denom: TOKEN_DENOM, amount }],
+      1.5
+    );
+
+    if (result.code == 0) {
+      setExResultTransactionHash(result.transactionHash);
+      setExResultHeight(result.height);
+    }
+
+    await getTokenBalance(); // Refresh balance after sending tokens
+    console.log("Transaction successful:", result);
+    alert("Transaction successful!");
+    setRecipient("");
+    setAmount("");
+  } catch (error) {
+    console.error("Error sending tokens:", error);
+    alert("Transaction failed!");
+  } finally {
+    setLoading(false);
+  }
+};
+```
+
+* Uses `sendTokens()` to send tokens from the **logged-in user’s address** to the **recipient**.
+* Uses a **gas adjustment of `1.5`** for reliability.
+* If successful, **stores transaction details** (`transactionHash`, `height`).
+* Calls `getTokenBalance()` to update the UI **after sending tokens**.
+
+### **UI Rendering**
+
+#### **Displaying User’s Address**
+
+```tsx
+<div className="flex flex-col p-2 mb-7 text-center">
+  <p className="text-zinc-500"><span className="font-bold">My Address</span></p>
+  <p className="text-sm">{account?.bech32Address}</p>
+</div>
+```
+
+* Shows the **logged-in user's address** for easy reference.
+
+#### **Displaying Token Balance**
+
+```tsx
+<div className="w-full max-w-md p-4 bg-gray-800 rounded-lg shadow-md">
+  <h2 className="text-xl font-semibold text-white mb-4">Token Balance</h2>
+  <p className="text-white mb-14">{balance} {DENOM_DISPLAY_NAME}</p>
+</div>
+```
+
+* Displays the user’s **current Token Factory balance**.
+
+#### **Token Transfer Form**
+
+```tsx
+<input
+  type="text"
+  placeholder="Recipient Address"
+  className="w-full p-2.5 bg-gray-700 border border-gray-600 text-white rounded-lg"
+  value={recipient}
+  onChange={(e) => setRecipient(e.target.value)}
+/>
+<input
+  type="number"
+  placeholder="Amount"
+  className="w-full p-2.5 bg-gray-700 border border-gray-600 text-white rounded-lg"
+  value={amount}
+  onChange={(e) => setAmount(e.target.value)}
+/>
+<Button fullWidth onClick={handleSend} structure="base" disabled={loading}>
+  {loading ? "Processing..." : "Send Tokens"}
+</Button>
+```
+
+* **Allows the user to enter a recipient address and token amount.**
+* Calls `handleSend()` when **"Send Tokens"** is clicked.
+
+#### **Displaying Transaction Details After Sending Tokens**
+
+```tsx
+{exResultTransactionHash !== null && (
+  <div className="flex flex-col rounded border-2 border-black p-2 dark:border-white mt-7">
+    <p className="text-zinc-500"><span className="font-bold">Transaction Hash:</span></p>
+    <p className="text-sm">{exResultTransactionHash}</p>
+    <p className="text-zinc-500"><span className="font-bold">Block Height:</span></p>
+    <p className="text-sm">{exResultHeight}</p>
+    <Link href={blockExplorerUrl} target="_blank" className="text-blue-500 hover:underline mt-2 inline-block">
+      View in Block Explorer
+    </Link>
+  </div>
+)}
+```
+
+* Displays **transaction details** after sending tokens.
+* Provides a **block explorer link** for verification.
+
+
+
+## A Quick Walkthrough
+
+The following steps outline how to use the dApp.
+
+### Log into the dapp
+
+The first step after accessing the dApp at [**http://localhost:3000/**](http://localhost:3000/) is to log in by clicking the **CONNECT** button.
+
+<figure><img src="../../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+
+### Get Token Balance
+
+After logging in, you will see your **Meta Account** address. You need to send some of your **custom Token Factory tokens** to that address.
+
+Once the tokens have been sent, click the **Get Token Balance** button to retrieve the updated balance.
+
+<figure><img src="../../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+
+### **Sending Tokens**
+
+To send tokens to another address:
+
+1. Enter a valid address in the **Recipient Address** text box.
+2. Enter the amount to send in the **Amount** text box.
+3. Click the **Send Tokens** button.
+
+<figure><img src="../../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+
+After submitting the transaction, you will see the **transaction hash**, the **block height** at which the transaction was executed, and a **URL** to view the transaction details in the block explorer.
+
+<figure><img src="../../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
 
 You now have a functional React dApp that:&#x20;
 
-* **Authenticates users via Meta Accounts**&#x20;
-* **Fetches and displays Token Factory token balance**
-* **Enables users to send tokens**
-
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+* Authenticates users via Meta Accounts
+* Fetches and displays Token Factory token balance
+* Enables users to send tokens to another address
