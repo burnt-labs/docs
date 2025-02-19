@@ -71,6 +71,7 @@
   * [Token Factory](developers/learn-and-build/token-factory/README.md)
     * [Creating, Minting, and Interacting with a Token Factory Token](developers/learn-and-build/token-factory/creating-minting-and-interacting-with-a-token-factory-token.md)
     * [Building a React dApp to Interact with Token Factory Tokens](developers/learn-and-build/token-factory/building-a-react-dapp-to-interact-with-token-factory-tokens.md)
+    * [Integrating a Token Factory Token in a Smart Contract](developers/learn-and-build/token-factory/integrating-a-token-factory-token-in-a-smart-contract.md)
 
 ## Nodes & Validators
 
