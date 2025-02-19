@@ -30,11 +30,11 @@ cd token-factory-contract
 
 
 
-### **Implementing the Contract Logic**
+### **Implementing Core Logic**
 
 #### **Remove some files**
 
-We need to remove the **helpers.rs** and **integration\_test.rs** files. Then update the **lib.rs** file with the following:
+We need to remove the **src/helpers.rs** and **src/integration\_test.rs** files. Then update the **lib.rs** file with the following:
 
 ```rust
 pub mod contract;
@@ -87,7 +87,7 @@ pub struct BalanceResponse {
 }
 ```
 
-#### **Implement Contract Logic**
+#### **Contract Logic**
 
 Modify `src/contract.rs` to implement the **core logic of the contract**:
 
@@ -168,7 +168,7 @@ pub fn query(deps: Deps, _env: Env, msg: QueryMsg) -> StdResult<Binary> {
 fn query_balance(deps: Deps, address: String) -> StdResult<BalanceResponse> {
     let token_denom = TOKEN_DENOM.load(deps.storage)?;
 
-    let balance_response: Coin = deps.querier.query(&QueryRequest::Bank(
+    let balance_response: cosmwasm_std::BalanceResponse = deps.querier.query(&QueryRequest::Bank(
         BankQuery::Balance {
             address,
             denom: token_denom.clone(),
@@ -176,10 +176,9 @@ fn query_balance(deps: Deps, address: String) -> StdResult<BalanceResponse> {
     ))?;
 
     Ok(BalanceResponse {
-        balance: balance_response.amount.to_string(),
+        balance: balance_response.amount.amount.to_string(),
     })
 }
-
 ```
 
 
@@ -285,7 +284,7 @@ Now, instantiate the contract using the `CODE_ID` obtained from the previous ste
 ```
 xiond tx wasm instantiate $CODE_ID "$MSG" \
   --from $WALLET \
-  --label "cw-counter" \
+  --label "token-factory-token" \
   --gas-prices 0.025uxion \
   --gas auto \
   --gas-adjustment 1.3 \
