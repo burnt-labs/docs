@@ -14,7 +14,7 @@
     * [Deploying Your First Smart Contract on XION](developers/featured-guides/your-first-contract/deploy-a-cosmwasm-smart-contract.md)
   * [Your First DApp](developers/featured-guides/your-first-dapp/README.md)
     * [Account Abstraction with Gasless Transactions](developers/featured-guides/your-first-dapp/build-react-dapp-with-account-abstraxion.md)
-    * [Creating a Gas-less UX: Treasury Contracts](developers/featured-guides/your-first-dapp/treasury-contracts.md)
+    * [Enabling Gasless Transactions with Treasury Contracts](developers/featured-guides/your-first-dapp/treasury-contracts.md)
     * [Create a Gas-less User Experience](developers/featured-guides/your-first-dapp/create-a-gas-less-user-experience/README.md)
       * [Fee Granting](developers/featured-guides/your-first-dapp/create-a-gas-less-user-experience/fee-granting.md)
     * [Using Xion in the backend: XION TypeScript](developers/featured-guides/your-first-dapp/xion-typescript.md)
