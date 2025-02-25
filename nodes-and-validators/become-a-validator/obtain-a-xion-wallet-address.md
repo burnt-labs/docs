@@ -24,7 +24,7 @@ When running this command, you will not be prompted to enter your keyring passwo
 
 Please refer to the [Cosmos SDK documentation](https://docs.cosmos.network/v0.46/run-node/keyring.html) for a more in-depth discussion of the different keyring backends.
 
-The output of this command contains the wallet adress, as well as its associated mnemonic.
+The output of this command contains the wallet address, as well as its associated mnemonic.
 
 {% hint style="info" %}
 :warning: **Keep your Mnemonic Safe**
