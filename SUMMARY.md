@@ -17,7 +17,7 @@
     * [Enabling Gasless Transactions with Treasury Contracts](developers/featured-guides/your-first-dapp/treasury-contracts.md)
     * [Create a Gas-less User Experience](developers/featured-guides/your-first-dapp/create-a-gas-less-user-experience/README.md)
       * [Fee Granting](developers/featured-guides/your-first-dapp/create-a-gas-less-user-experience/fee-granting.md)
-    * [Using Xion in the backend: XION TypeScript](developers/featured-guides/your-first-dapp/xion-typescript.md)
+    * [Interact with XION via your Backend Service](developers/featured-guides/your-first-dapp/xion-typescript.md)
 * [Concepts](developers/learn/README.md)
   * [XION Overview](developers/learn/overview-of-xion.md)
   * [Generalized Chain Abstraction](developers/learn/generalized-chain-abstraction.md)
