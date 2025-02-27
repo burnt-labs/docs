@@ -10,7 +10,7 @@
     * [Setting up your Local Development Environment for XION](developers/featured-guides/setup-local-environment/installation-prerequisites-setup-local-environment.md)
     * [Interacting with Xion Chain using Xion Daemon](developers/featured-guides/setup-local-environment/interact-with-xion-chain-setup-xion-daemon.md)
   * [Your First Contract](developers/featured-guides/your-first-contract/README.md)
-    * [Setup CosmWasm IDE](developers/featured-guides/your-first-contract/setup-cosmwasm-ide.md)
+    * [Set Up an Integrated Development Environment (IDE)](developers/featured-guides/your-first-contract/setup-cosmwasm-ide.md)
     * [Deploying Your First Smart Contract on XION](developers/featured-guides/your-first-contract/deploy-a-cosmwasm-smart-contract.md)
   * [Your First DApp](developers/featured-guides/your-first-dapp/README.md)
     * [Account Abstraction with Gasless Transactions](developers/featured-guides/your-first-dapp/build-react-dapp-with-account-abstraxion.md)
