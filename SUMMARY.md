@@ -64,7 +64,7 @@
         * [Math](developers/section-overview/cosmwasm-resources/tutorials/cosmwasm-by-example/math.md)
         * [Instatiating CosmWasm Contract](developers/section-overview/cosmwasm-resources/tutorials/cosmwasm-by-example/instatiating-cosmwasm-contract.md)
         * [Timelocks](developers/section-overview/cosmwasm-resources/tutorials/cosmwasm-by-example/timelocks.md)
-  * [Indexers](developers/section-overview/indexers/README.md)
+  * [Indexers: Optimized Data Retrieval](developers/section-overview/indexers/README.md)
     * [SubQuery](developers/section-overview/indexers/subquery.md)
   * [Developer Tools: Abstract](developers/section-overview/developer-tools-abstract.md)
 * [Learn & Build](developers/learn-and-build/README.md)
