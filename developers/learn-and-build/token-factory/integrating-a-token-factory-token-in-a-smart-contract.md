@@ -208,12 +208,12 @@ Now, upload the contract to the blockchain:
 
 ```
 RES=$(xiond tx wasm store ./artifacts/cw_counter.wasm \
-      --chain-id xion-testnet-1 \
+      --chain-id xion-testnet-2 \
       --gas-adjustment 1.3 \
       --gas-prices 0.1uxion \
       --gas auto \
       -y --output json \
-      --node https://rpc.xion-testnet-1.burnt.com:443 \
+      --node https://rpc.xion-testnet-2.burnt.com:443 \
       --from $WALLET)
 ```
 
@@ -251,7 +251,7 @@ Query the blockchain to get the **Code ID**:
 
 ```
 CODE_ID=$(xiond query tx $TXHASH \
-  --node https://rpc.xion-testnet-1.burnt.com:443 \
+  --node https://rpc.xion-testnet-2.burnt.com:443 \
   --output json | jq -r '.events[-1].attributes[1].value')
 ```
 
@@ -289,8 +289,8 @@ xiond tx wasm instantiate $CODE_ID "$MSG" \
   --gas auto \
   --gas-adjustment 1.3 \
   -y --no-admin \
-  --chain-id xion-testnet-1 \
-  --node https://rpc.xion-testnet-1.burnt.com:443
+  --chain-id xion-testnet-2 \
+  --node https://rpc.xion-testnet-2.burnt.com:443
 ```
 
 Example output:
@@ -321,7 +321,7 @@ Query the blockchain to get the **contract address**:
 
 ```
 CONTRACT=$(xiond query tx $TXHASH \
-  --node https://rpc.xion-testnet-1.burnt.com:443 \
+  --node https://rpc.xion-testnet-2.burnt.com:443 \
   --output json | jq -r '.events[] | select(.type == "instantiate") | .attributes[] | select(.key == "_contract_address") | .value')
 ```
 
@@ -354,7 +354,7 @@ Replace `"add-address-here"` with the actual address you want to check.
 Run the following command to query the contract for the specified address's token balance:
 
 ```sh
-xiond query wasm contract-state smart $CONTRACT "$QUERY" --output json --node https://rpc.xion-testnet-1.burnt.com:443
+xiond query wasm contract-state smart $CONTRACT "$QUERY" --output json --node https://rpc.xion-testnet-2.burnt.com:443
 ```
 
 Where:
@@ -398,8 +398,8 @@ xiond tx wasm execute $CONTRACT "$SEND_TOKEN" \
   --gas-adjustment 1.5 \
   --amount "10factory/xion1ka5gdcv4m7kfzxkllapqdflenwe0fv8ftm357r/emp" \
   -y \
-  --node https://rpc.xion-testnet-1.burnt.com:443 \
-  --chain-id xion-testnet-1
+  --node https://rpc.xion-testnet-2.burnt.com:443 \
+  --chain-id xion-testnet-2
 ```
 
 Where:

@@ -161,7 +161,7 @@ export default function Page(): JSX.Element {
   const [exResultTransactionHash, setExResultTransactionHash] = useState(null);
   const [exResultHeight, setExResultHeight] = useState("");
 
-  const blockExplorerUrl = `https://explorer.burnt.com/xion-testnet-1/tx/${exResultTransactionHash}`;
+  const blockExplorerUrl = `https://www.mintscan.io/xion-testnet/tx/${exResultTransactionHash}`;
 
   // Fetch the token balance
   const getTokenBalance = async () => {

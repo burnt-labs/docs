@@ -309,7 +309,7 @@ export default function Page(): JSX.Element {
   const [executeResult, setExecuteResult] =
     useState<ExecuteResultOrUndefined>(undefined);
 
-  const blockExplorerUrl = `https://explorer.burnt.com/xion-testnet-1/tx/${executeResult?.transactionHash}`;
+  const blockExplorerUrl = `https://www.mintscan.io/xion-testnet/tx/${executeResult?.transactionHash}`;
 
   function getTimestampInSeconds(date: Date | null): number {
     if (!date) return 0;
@@ -453,7 +453,7 @@ export default function Page(): JSX.Element {
   const [executeResult, setExecuteResult] = useState<ExecuteResultOrUndefined>(undefined);
   const [, setShowModal]: [boolean, React.Dispatch<React.SetStateAction<boolean>>] = useModal();
 
-  const blockExplorerUrl = `https://explorer.burnt.com/xion-testnet-1/tx/${executeResult?.transactionHash}`;
+  const blockExplorerUrl = `https://www.mintscan.io/xion-testnet/tx/${executeResult?.transactionHash}`;
 
   // Fetch the count from the smart contract
   const getCount = async () => {

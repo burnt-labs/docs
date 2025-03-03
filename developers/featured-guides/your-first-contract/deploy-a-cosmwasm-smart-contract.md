@@ -115,12 +115,12 @@ Now, upload the contract to the blockchain:
 
 ```
 RES=$(xiond tx wasm store ./artifacts/cw_counter.wasm \
-      --chain-id xion-testnet-1 \
+      --chain-id xion-testnet-2 \
       --gas-adjustment 1.3 \
       --gas-prices 0.1uxion \
       --gas auto \
       -y --output json \
-      --node https://rpc.xion-testnet-1.burnt.com:443 \
+      --node https://rpc.xion-testnet-2.burnt.com:443 \
       --from $WALLET)
 ```
 
@@ -158,7 +158,7 @@ Query the blockchain to get the **Code ID**:
 
 ```
 CODE_ID=$(xiond query tx $TXHASH \
-  --node https://rpc.xion-testnet-1.burnt.com:443 \
+  --node https://rpc.xion-testnet-2.burnt.com:443 \
   --output json | jq -r '.events[-1].attributes[1].value')
 ```
 
@@ -198,8 +198,8 @@ xiond tx wasm instantiate $CODE_ID "$MSG" \
   --gas auto \
   --gas-adjustment 1.3 \
   -y --no-admin \
-  --chain-id xion-testnet-1 \
-  --node https://rpc.xion-testnet-1.burnt.com:443
+  --chain-id xion-testnet-2 \
+  --node https://rpc.xion-testnet-2.burnt.com:443
 ```
 
 Example output:
@@ -228,7 +228,7 @@ Query the blockchain to get the **contract address**:
 
 ```
 CONTRACT=$(xiond query tx $TXHASH \
-  --node https://rpc.xion-testnet-1.burnt.com:443 \
+  --node https://rpc.xion-testnet-2.burnt.com:443 \
   --output json | jq -r '.events[] | select(.type == "instantiate") | .attributes[] | select(.key == "_contract_address") | .value')
 ```
 
@@ -259,7 +259,7 @@ QUERY='{"get_count":{}}'
 Run the following command to send the query request to the contract:
 
 ```sh
-xiond query wasm contract-state smart $CONTRACT "$QUERY" --output json --node https://rpc.xion-testnet-1.burnt.com:443
+xiond query wasm contract-state smart $CONTRACT "$QUERY" --output json --node https://rpc.xion-testnet-2.burnt.com:443
 ```
 
 This command will return the **current count value** stored in the contract.
@@ -287,8 +287,8 @@ xiond tx wasm execute $CONTRACT "$TRY_INCREMENT" \
   --gas auto \
   --gas-adjustment 1.3 \
   -y \
-  --node https://rpc.xion-testnet-1.burnt.com:443 \
-  --chain-id xion-testnet-1
+  --node https://rpc.xion-testnet-2.burnt.com:443 \
+  --chain-id xion-testnet-2
 ```
 
 After executing this transaction, you can run the **get\_count query** again to verify that the count has increased by **+1** from its previous value.
@@ -305,8 +305,8 @@ xiond tx wasm execute $CONTRACT "$RESET" \
   --gas auto \
   --gas-adjustment 1.3 \
   -y \
-  --node https://rpc.xion-testnet-1.burnt.com:443 \
-  --chain-id xion-testnet-1
+  --node https://rpc.xion-testnet-2.burnt.com:443 \
+  --chain-id xion-testnet-2
 ```
 
 Like the increment transaction, the **reset transaction** also modifies the contract’s state and requires gas fees.

@@ -31,7 +31,7 @@ export async function buildClient(
   const [accountData] = await signer.getAccounts();
   const client = await AAClient.connectWithSigner(
     // This can be any RPC endpoint.
-    "https://rpc.xion-testnet-1.burnt.com:443",
+    "https://rpc.xion-testnet-2.burnt.com:443",
     signer
   );
 
