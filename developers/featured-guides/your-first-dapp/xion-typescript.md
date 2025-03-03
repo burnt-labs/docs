@@ -32,8 +32,8 @@ To securely store and access your wallet credentials, we’ll use environment va
 
 ```
 XION_MNEMONIC="your wallet mnemonic phrase here"
-XION_RPC_URL=https://rpc.xion-testnet-1.burnt.com
-XION_CHAIN_ID=xion-testnet-1
+XION_RPC_URL=https://rpc.xion-testnet-2.burnt.com
+XION_CHAIN_ID=xion-testnet-2
 ```
 
 {% hint style="info" %}
@@ -48,8 +48,8 @@ require('dotenv').config();
 
 module.exports = {
   // Network configuration
-  XION_RPC_URL: process.env.XION_RPC_URL || "https://rpc.xion-testnet-1.burnt.com",
-  CHAIN_ID: process.env.XION_CHAIN_ID || "xion-testnet-1",
+  XION_RPC_URL: process.env.XION_RPC_URL || "https://rpc.xion-testnet-2.burnt.com",
+  CHAIN_ID: process.env.XION_CHAIN_ID || "xion-testnet-2",
   
   // Wallet configuration
   MNEMONIC: process.env.XION_MNEMONIC,

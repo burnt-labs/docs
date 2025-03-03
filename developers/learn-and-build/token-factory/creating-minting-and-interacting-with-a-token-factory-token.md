@@ -40,7 +40,7 @@ xiond tx tokenfactory create-denom <your-denom> --from <wallet-name> --chain-id 
 **Example:**
 
 ```sh
-xiond tx tokenfactory create-denom mytoken --from mywallet --chain-id xion-testnet-1 --node https://rpc.xion-testnet-1.burnt.com:443 --gas auto --gas-prices 0.025uxion
+xiond tx tokenfactory create-denom mytoken --from mywallet --chain-id xion-testnet-2 --node https://rpc.xion-testnet-2.burnt.com:443 --gas auto --gas-prices 0.025uxion
 ```
 
 The following is an example of the initial output:
@@ -109,7 +109,7 @@ xiond query bank denom-metadata factory/<creator-address>/<denom> --node <rpc-en
 **Example:**
 
 ```sh
-xiond query bank denom-metadata factory/xion1ka5gdcv4m7kfzxkllapqdflenwe0fv8ftm357r/emp --node https://rpc.xion-testnet-1.burnt.com:443
+xiond query bank denom-metadata factory/xion1ka5gdcv4m7kfzxkllapqdflenwe0fv8ftm357r/emp --node https://rpc.xion-testnet-2.burnt.com:443
 ```
 
 **Example Output:**
@@ -153,7 +153,7 @@ xiond tx tokenfactory modify-metadata <denom> <ticker-symbol> <description> <exp
 **Example:**
 
 ```sh
-xiond tx tokenfactory modify-metadata factory/xion1xyz.../mytoken MYT "My custom token" 6 --from mywallet --chain-id xion-testnet-1 --node tcp://127.0.0.1:26657 --gas auto --gas-adjustment 1.7 --gas-prices 0.025uxion
+xiond tx tokenfactory modify-metadata factory/xion1xyz.../mytoken MYT "My custom token" 6 --from mywallet --chain-id xion-testnet-2 --node tcp://127.0.0.1:26657 --gas auto --gas-adjustment 1.7 --gas-prices 0.025uxion
 ```
 
 This command updates the metadata for the `mytoken` token, setting:
@@ -227,7 +227,7 @@ txhash: 9583BEC1A62884395E466C190B1A5B3DE5EC152D0CE875BCBDE3DD333BB9E0C9
 You can then query the metadata to see the updates:
 
 ```sh
-xiond query bank denom-metadata factory/xion1ka5gdcv4m7kfzxkllapqdflenwe0fv8ftm357r/emp --node https://rpc.xion-testnet-1.burnt.com:443
+xiond query bank denom-metadata factory/xion1ka5gdcv4m7kfzxkllapqdflenwe0fv8ftm357r/emp --node https://rpc.xion-testnet-2.burnt.com:443
 ```
 
 **Possible Output:**
@@ -275,7 +275,7 @@ xiond tx tokenfactory mint <amount><denom> --from <wallet-name> --chain-id <chai
 **Example:**
 
 ```sh
-xiond tx tokenfactory mint 1000000000000factory/xion1xyz.../mytoken --from mywallet --chain-id xion-testnet-1 --node https://rpc.xion-testnet-1.burnt.com:443 --gas auto --gas-adjustment 1.5 --gas-prices 0.025uxion
+xiond tx tokenfactory mint 1000000000000factory/xion1xyz.../mytoken --from mywallet --chain-id xion-testnet-2 --node https://rpc.xion-testnet-2.burnt.com:443 --gas auto --gas-adjustment 1.5 --gas-prices 0.025uxion
 ```
 
 The following is an example of the initial output:
@@ -343,7 +343,7 @@ xiond q bank balances <your-address> --node <node>
 Example:
 
 ```sh
-xiond q bank balances xion1xyz... --node https://rpc.xion-testnet-1.burnt.com:443
+xiond q bank balances xion1xyz... --node https://rpc.xion-testnet-2.burnt.com:443
 ```
 
 The following is an example of the output, with `factory/xion1ka5gdcv4m7kfzxkllapqdflenwe0fv8ftm357r/emp` as the custom token:
@@ -388,7 +388,7 @@ xiond tx bank send <your-address> <recipient-address> <amount><denom> --node <no
 #### **Example: Sending 500 `mytoken` Tokens**
 
 ```sh
-xiond tx bank send xion1ka5... xion193h... 500factory/xion1ka5.../mytoken --node https://rpc.xion-testnet-1.burnt.com:443 --from mywallet --chain-id xion-testnet-1 --gas auto --gas-adjustment 1.5 --gas-prices 0.025uxion
+xiond tx bank send xion1ka5... xion193h... 500factory/xion1ka5.../mytoken --node https://rpc.xion-testnet-2.burnt.com:443 --from mywallet --chain-id xion-testnet-2 --gas auto --gas-adjustment 1.5 --gas-prices 0.025uxion
 ```
 
 **What Happens?**
