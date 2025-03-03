@@ -3,6 +3,17 @@
 * [Welcome to XION](README.md)
 * [Account Upgrade Guide (Testnet)](account-upgrade-guide-testnet.md)
 
+## XION'S Core
+
+* [Concepts](xions-core/learn/README.md)
+  * [XION Overview](xions-core/learn/overview-of-xion.md)
+  * [Generalized Chain Abstraction](xions-core/learn/generalized-chain-abstraction.md)
+  * [Intro to Account Abstraction](xions-core/learn/intro-to-account-abstraction.md)
+  * [XION's Meta Accounts](xions-core/learn/xions-meta-accounts.md)
+  * [Meta Accounts Design](xions-core/learn/meta-accounts-design.md)
+  * [Architecture & Tech Glossary](xions-core/learn/architecture-and-tech-glossary.md)
+  * [Use Cases](xions-core/learn/use-cases.md)
+
 ## developers
 
 * [Xion Quick Start](developers/featured-guides/README.md)
@@ -18,14 +29,6 @@
     * [Create a Gas-less User Experience](developers/featured-guides/your-first-dapp/create-a-gas-less-user-experience/README.md)
       * [Fee Granting](developers/featured-guides/your-first-dapp/create-a-gas-less-user-experience/fee-granting.md)
     * [Interact with XION via your Backend Service](developers/featured-guides/your-first-dapp/xion-typescript.md)
-* [Concepts](developers/learn/README.md)
-  * [XION Overview](developers/learn/overview-of-xion.md)
-  * [Generalized Chain Abstraction](developers/learn/generalized-chain-abstraction.md)
-  * [Intro to Account Abstraction](developers/learn/intro-to-account-abstraction.md)
-  * [XION's Meta Accounts](developers/learn/xions-meta-accounts.md)
-  * [Meta Accounts Design](developers/learn/meta-accounts-design.md)
-  * [Architecture & Tech Glossary](developers/learn/architecture-and-tech-glossary.md)
-  * [Use Cases](developers/learn/use-cases.md)
 * [Reference and Resources](developers/section-overview/README.md)
   * [Requesting XION Testnet Tokens](developers/section-overview/xion-testnet-1.md)
   * [Public Endpoints & Resources](developers/section-overview/public-endpoints-and-resources.md)
