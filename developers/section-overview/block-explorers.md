@@ -4,10 +4,20 @@ Block explorers provide a user-friendly interface to view detailed information a
 
 We maintain a list of recommended block explorers for both **mainnet** and **testnet** in the [Cosmos chain registry](https://github.com/cosmos/chain-registry).
 
-* **Mainnet Explorers**\
-  [XION Mainnet explorer in the chain registry](https://github.com/cosmos/chain-registry/blob/master/xion/chain.json#L226-L257)
-* **Testnet Explorers**\
-  [XION Testnet explorers in the chain registry](https://github.com/cosmos/chain-registry/blob/master/testnets/xiontestnet/chain.json#L184-L202)
+* **Mainnet Explorers**
+  * [https://www.mintscan.io/xion](https://www.mintscan.io/xion)
+  * [https://explorer.burnt.com/xion-mainnet-1](https://explorer.burnt.com/xion-mainnet-1)
+  * [https://staking-explorer.com/explorer/xion](https://staking-explorer.com/explorer/xion)
+  * [https://explorer.nodestake.org/xion](https://explorer.nodestake.org/xion)
+  * [https://xion.explorers.guru](https://xion.explorers.guru)
+* **Testnet 1 Explorers**\
+
+  * [https://explorer.burnt.com/xion-testnet-1](https://explorer.burnt.com/xion-testnet-1)
+  * [https://testnet.itrocket.net/burnt](https://testnet.itrocket.net/burnt)
+  * [https://testnet.xion.explorers.guru](https://testnet.xion.explorers.guru)
+* **Testnet 2 Explorers**
+  * [https://www.mintscan.io/xion-testnet](https://www.mintscan.io/xion-testnet.)
+  * [https://explorer.burnt.com/xion-testnet-2](https://explorer.burnt.com/xion-testnet-2)
 
 ***
 
