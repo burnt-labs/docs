@@ -10,8 +10,7 @@ We maintain a list of recommended block explorers for both **mainnet** and **tes
   * [https://staking-explorer.com/explorer/xion](https://staking-explorer.com/explorer/xion)
   * [https://explorer.nodestake.org/xion](https://explorer.nodestake.org/xion)
   * [https://xion.explorers.guru](https://xion.explorers.guru)
-* **Testnet 1 Explorers**\
-
+* **Testnet 1 Explorers**
   * [https://explorer.burnt.com/xion-testnet-1](https://explorer.burnt.com/xion-testnet-1)
   * [https://testnet.itrocket.net/burnt](https://testnet.itrocket.net/burnt)
   * [https://testnet.xion.explorers.guru](https://testnet.xion.explorers.guru)
