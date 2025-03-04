@@ -26,7 +26,8 @@ We maintain a list of recommended block explorers for both **mainnet** and **tes
 If you operate a block explorer or notice outdated explorer information, please consider opening a Pull Request (PR) in the [Cosmos chain registry](https://github.com/cosmos/chain-registry). You can update or add explorers by modifying the relevant XION files:
 
 * [Mainnet `xion/chain.json`](https://github.com/cosmos/chain-registry/blob/master/xion/chain.json)
-* [Testnet `xiontestnet/chain.json`](https://github.com/cosmos/chain-registry/blob/master/testnets/xiontestnet/chain.json)
+* [Testnet 1 `xiontestnet/chain.json`](https://github.com/cosmos/chain-registry/blob/master/testnets/xiontestnet/chain.json)
+* [Testnet 2 `xiontestnet2/chain.json`](https://github.com/cosmos/chain-registry/blob/master/testnets/xiontestnet2/chain.json)
 
 For more details on how to submit a PR or update existing entries, refer to the [Cosmos chain registry guidelines](https://github.com/cosmos/chain-registry#contributing).
 
