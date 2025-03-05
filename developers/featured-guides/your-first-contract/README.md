@@ -1,6 +1,8 @@
 # Your First Contract
 
-Begin your Xion smart contract journey by learning how to compile, deploy, instantiate, and interact with your first contract.
+Smart contracts are the backbone of decentralized applications (dApps), automating processes and eliminating intermediaries. They function like backend services, securely handling transactions, enforcing business logic, and managing data with transparency.
+
+Kickstart your XION smart contract journey by learning to compile, deploy, instantiate, and interact with your first contract.
 
 
 
