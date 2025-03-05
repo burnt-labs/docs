@@ -6,4 +6,4 @@ Kickstart your XION smart contract journey by learning to compile, deploy, insta
 
 
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Deploying Your First Smart Contract</strong></td><td>Walk through the process of deploying and interacting with a smart contract on the <strong>XION</strong> network.</td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Deploying Your First Smart Contract</strong></td><td>Walk through the process of deploying and interacting with a smart contract on the <strong>XION</strong> network.</td><td><a href="deploy-a-cosmwasm-smart-contract.md">deploy-a-cosmwasm-smart-contract.md</a></td></tr></tbody></table>
