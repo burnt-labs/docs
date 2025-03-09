@@ -8,7 +8,7 @@ Below, we provide a list of popular IBC denoms for each network, along with an e
 
 Here is a list of IBC denoms currently active on XION's **Mainnet**:
 
-<table><thead><tr><th>Denom</th><th>Symbol</th><th width="186">Network</th><th>IBC Channel Info</th></tr></thead><tbody><tr><td>ibc/F082B65C88E4B6D5EF1DB243CDA1D331D002759E938A0F5CD3FFDC5D53B3E349</td><td>USDC</td><td>Noble</td><td><a href="https://github.com/cosmos/chain-registry/blob/master/xion/assetlist.json#L60C11-L68C12">View</a></td></tr></tbody></table>
+<table><thead><tr><th>Denom</th><th>Symbol</th><th width="186">Network</th><th>IBC Channel Info</th></tr></thead><tbody><tr><td>ibc/F082B65C88E4B6D5EF1DB243CDA1D331D002759E938A0F5CD3FFDC5D53B3E349</td><td>UUSDC</td><td>Noble</td><td><a href="https://github.com/cosmos/chain-registry/blob/master/xion/assetlist.json#L60C11-L68C12">View</a></td></tr></tbody></table>
 
 **Note:** This list is subject to change as new IBC denoms are established. You can find the full list of IBC denoms [here](https://api.xion-mainnet-1.burnt.com/cosmos/bank/v1beta1/denoms_metadata). You can also view the [asset list](https://github.com/cosmos/chain-registry/blob/master/xion/assetlist.json) in the chain registry.
 
