@@ -40,7 +40,7 @@ Refer the [repository](https://github.com/AbstractSDK/templates) for latest upda
 >
 > [Read more here](https://orchestrator.abstract.money/)
 
-If you bootstrap the codebase using the Abstract module template mentioned above you should have cw-orchestrator setu up already.&#x20;
+If you bootstrap the codebase using the Abstract module template mentioned above you should have cw-orchestrator setup already.&#x20;
 
 ### Generate Schemas: \``just schema`\`
 
