@@ -78,6 +78,9 @@
     * [Integrating a Token Factory Token in a Smart Contract](developers/learn-and-build/token-factory/integrating-a-token-factory-token-in-a-smart-contract.md)
   * [Websockets](developers/learn-and-build/websockets/README.md)
     * [WebSockets with Xion: Real-Time Communication](developers/learn-and-build/websockets/websockets-with-xion-real-time-communication.md)
+  * [Mobile Development](developers/learn-and-build/mobile-development/README.md)
+    * [Building a React Native Mobile App with Abstraxion (Xion.js)](developers/learn-and-build/mobile-development/building-a-react-native-mobile-app-with-abstraxion-xion.js.md)
+    * [Copy of Building a React Native App with Abstraxion (Xion.js)](developers/learn-and-build/mobile-development/copy-of-building-a-react-native-app-with-abstraxion-xion.js.md)
 
 ## Nodes & Validators
 
