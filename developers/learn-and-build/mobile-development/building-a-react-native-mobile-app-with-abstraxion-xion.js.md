@@ -354,18 +354,18 @@ Here’s a breakdown of the key modifications:
 * **`global.Buffer = Buffer;`**
   * Makes the `Buffer` object globally available, which is commonly used for handling binary data in blockchain transactions.
 
-#### 3. **Introduction of `AbstraxionProvider`**
-
-* Wraps the application inside `<AbstraxionProvider config={treasuryConfig}>`, providing the app with **Abstraxion** functionalities.
-* This allows interaction with **XION treasury**, as seen in the newly added **`treasuryConfig`**.
-
-#### 4. **New `treasuryConfig` Object**
+#### 3. **New `treasuryConfig` Object**
 
 * Contains configuration for interacting with the **XION blockchain**, including:
   * **Treasury address**: `"xion1r0tt64mdld2svywzeaf4pa7ezsg6agkyajk48ea398njywdl28rs3jhvry"`
   * **Gas price**: `"0.001uxion"`
   * **RPC & REST URLs**: Connecting to **XION testnet**
   * **Callback URL**: `"abstraxion-expo-demo://"` for handling deep linking.
+
+#### 4. **Introduction of `AbstraxionProvider`**
+
+* Wraps the application inside `<AbstraxionProvider config={treasuryConfig}>`, providing the app with **Abstraxion** functionalities.
+* This allows interaction with **XION treasury**, as seen in the newly added **`treasuryConfig`**.
 
 
 
