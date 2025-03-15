@@ -409,5 +409,4 @@ npx expo run:ios
 
 For a visual walkthrough of the app, check out this video demo&#x20;
 
-{% file src="../../../.gitbook/assets/422392444-42fcbde7-2ee2-4f08-a1c8-38ea55bf9602 (1).mov" %}
-
+[https://3630978198-files.gitbook.io/\~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FB5Z5ijJgMx0GJO3l1Il9%2Fuploads%2FLyb4GDwwAb4ahVtceQov%2F422392444-42fcbde7-2ee2-4f08-a1c8-38ea55bf9602.mov?alt=media\&token=85dc082f-8fd1-46bf-b654-1e8626571114](https://3630978198-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FB5Z5ijJgMx0GJO3l1Il9%2Fuploads%2FLyb4GDwwAb4ahVtceQov%2F422392444-42fcbde7-2ee2-4f08-a1c8-38ea55bf9602.mov?alt=media\&token=85dc082f-8fd1-46bf-b654-1e8626571114)
