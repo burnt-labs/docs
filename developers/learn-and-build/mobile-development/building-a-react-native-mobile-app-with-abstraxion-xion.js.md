@@ -387,8 +387,6 @@ module.exports = withLibsodiumResolver(config);
 
 ## Run the Project
 
-### Build and Run the App
-
 To build and run the app on your emulator or device, use the following commands:
 
 **For Android:**
