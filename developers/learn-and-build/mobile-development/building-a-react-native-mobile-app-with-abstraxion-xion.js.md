@@ -409,4 +409,4 @@ npx expo run:ios
 
 For a visual walkthrough of the app, check out this video demo&#x20;
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FB5Z5ijJgMx0GJO3l1Il9%2Fuploads%2FDIbKs5TqdpxW8ybpskrf%2F422392444-42fcbde7-2ee2-4f08-a1c8-38ea55bf9602.mov?alt=media&token=2e70cf2a-e6ff-4acc-8e0c-6e48539e435f" %}
+{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FB5Z5ijJgMx0GJO3l1Il9%2Fuploads%2F7t2NOuNYZaDnd1CaUcBt%2FAbstraxtion%20React%20Native%20Demo.mp4?alt=media&token=9a54fb1c-cfc2-467b-bbfd-23e04843f926" %}
