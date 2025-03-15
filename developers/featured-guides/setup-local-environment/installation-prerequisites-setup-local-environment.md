@@ -248,14 +248,14 @@ To install `xiond`, you can either download a [**pre-built binary**](installatio
 
 ### **Use Pre-built Binary**
 
-You will need to download the appropriate binary for your system architecture:
+You will need to download the appropriate binary for your system architecture [https://github.com/burnt-labs/xion/releases/tag/v17.0.0](https://github.com/burnt-labs/xion/releases/tag/v17.0.0):
 
 {% tabs %}
 {% tab title="Linux (amd64)" %}
 **Download the binary using**
 
 ```
-wget https://github.com/burnt-labs/xion/releases/download/v1.0.0/xiond_linux_amd64
+wget https://github.com/burnt-labs/xion/releases/download/v17.0.0/xiond-17.0.0.tar.gz
 ```
 
 
@@ -273,7 +273,7 @@ sha256sum xiond_linux_amd64
 Download the binary using:
 
 ```
-wget https://github.com/burnt-labs/xion/releases/download/v1.0.0/xiond_linux_arm64
+wget https://github.com/burnt-labs/xion/releases/download/v17.0.0/xiond_17.0.0_darwin_arm64.zip
 ```
 
 
@@ -293,7 +293,7 @@ The `sha256sum` command should generate a hash string (e.g., `d41d8cd98f00b204e9
 Download the official checksum file:
 
 ```sh
-wget https://github.com/burnt-labs/xion/releases/download/v1.0.0/xiond_v1.0.0_checksums.txt
+wget https://github.com/burnt-labs/xion/releases/download/v17.0.0/xiond-17.0.0-checksums.txt
 ```
 
 Compare the two hash strings to ensure they match. This confirms that the downloaded file is authentic and unaltered.
