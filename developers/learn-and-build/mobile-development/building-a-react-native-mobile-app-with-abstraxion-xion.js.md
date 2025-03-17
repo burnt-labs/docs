@@ -1,6 +1,6 @@
 # Building a React Native Mobile App with Abstraxion (Xion.js)
 
-Mobile apps are an integral part of modern life, and therefore integrating blockchain technology into mobile applications is a crucial step toward mass adoption. This guide will walk you through creating a React Native app using the [**Abstraxion** authentication system](https://github.com/burnt-labs/xion.js), based on the [**Abstraxion Expo Demo**](https://github.com/burnt-labs/abstraxion-expo-demo). By the end of this guide, you'll have a functional app that leverages **Abstraxion** for blockchain authentication and transaction signing.
+Mobile apps are an integral part of modern life, and therefore integrating blockchain technology into mobile applications is a crucial step toward mass adoption. This guide will walk you through creating a React Native app using [**Expo**](https://expo.dev) and the [**Abstraxion** authentication system](https://github.com/burnt-labs/xion.js), based on the [**Abstraxion Expo Demo**](https://github.com/burnt-labs/abstraxion-expo-demo).
 
 
 
@@ -17,7 +17,7 @@ Before you begin, ensure you have the following installed:
 
 ### Create a New Expo Project
 
-Start by creating a new Expo project using the default template. This template is ideal for multi-screen apps.
+Start by creating a new Expo project using the **default** template. This template is ideal for multi-screen apps.
 
 ```bash
 npx create-expo-app@latest abstraxion-app --template default
@@ -39,7 +39,7 @@ Install the necessary dependencies for **Abstraxion** and other required librari
 npm install @burnt-labs/abstraxion-react-native @react-native-async-storage/async-storage@2.1.2 react-native-get-random-values react-native-libsodium react-native-quick-crypto expo-dev-client
 ```
 
-These libraries enable blockchain authentication, cryptographic operations, and secure storage.
+These libraries enable authentication, cryptographic operations, and secure storage.
 
 
 
@@ -69,7 +69,7 @@ Add the following under the `"ios"` section:
 
 ### Update the Main Tab (`index.tsx`)
 
-Replace the contents of the `index.tsx` file with the following code to integrate Abstraxion authentication and transaction signing:
+Replace the contents of the `app/(tabs)/index.tsx` file with the following code to integrate Abstraxion authentication and transaction signing:
 
 ```typescript
 import { useState } from "react";
@@ -261,7 +261,7 @@ Here are the key changes in the updated file:
 3. **New Authentication Logic**
    * Includes authentication management (`login`, `logout`, `isConnected`, `isConnecting`) using `useAbstraxionAccount()`.
 4. **Transaction Signing & Contract Instantiation**
-   * Adds a function (`handleInstantiate`) to instantiate a smart contract on a blockchain using `MsgInstantiateContract`.
+   * Adds a function (`handleInstantiate`) to instantiate a smart contract using `MsgInstantiateContract`.
 
 
 
@@ -273,7 +273,7 @@ We'll not be using the Explore tab and so let's go ahead and remove it from the 
 
 ### Update the Layout (`_layout.tsx`)
 
-Replace the contents of `app/_layout.tsx` with the following code to set up the Abstraxion provider and theme:
+Replace the contents of `app/_layout.tsx` with the following code to set up the Abstraxion provider:
 
 ```typescript
 import "react-native-reanimated";
@@ -341,31 +341,29 @@ Here’s a breakdown of the key modifications:
 #### 1. **New Imports**
 
 * **`import "react-native-get-random-values";`**
-  * This import ensures that cryptographic random values are properly generated in a React Native environment.
+  * This import ensures that cryptographic random values can be properly generated.
 * **`import { AbstraxionProvider } from "@burnt-labs/abstraxion-react-native";`**
-  * This adds support for the **Abstraxion** library
+  * This adds support for the **Abstraxion** library.
 * **`import { Buffer } from "buffer";` and `import crypto from "react-native-quick-crypto";`**
-  * These provide cryptographic and buffer functionalities, often needed for handling blockchain operations.
+  * Commonly used for handling binary data.
 
 #### 2. **Global Object Modifications**
 
 * **`global.crypto = crypto;`**
   * Assigns `react-native-quick-crypto` as the global crypto library, ensuring cryptographic functions work correctly.
 * **`global.Buffer = Buffer;`**
-  * Makes the `Buffer` object globally available, which is commonly used for handling binary data in blockchain transactions.
+  * Makes the `Buffer` object globally available.
 
 #### 3. **New `treasuryConfig` Object**
 
 * Contains configuration for interacting with the **XION blockchain**, including:
-  * **Treasury address**: `"xion1r0tt64mdld2svywzeaf4pa7ezsg6agkyajk48ea398njywdl28rs3jhvry"`
-  * **Gas price**: `"0.001uxion"`
-  * **RPC & REST URLs**: Connecting to **XION testnet**
+  * **Treasury address**: `"xion1r0tt64mdld2svywzeaf4pa7ezsg6agkyajk48ea398njywdl28rs3jhvry"` that allows for gasless transaction
+  * **RPC & REST URLs**: Connecting to **XION** network
   * **Callback URL**: `"abstraxion-expo-demo://"` for handling deep linking.
 
 #### 4. **Introduction of `AbstraxionProvider`**
 
 * Wraps the application inside `<AbstraxionProvider config={treasuryConfig}>`, providing the app with **Abstraxion** functionalities.
-* This allows interaction with **XION treasury**, as seen in the newly added **`treasuryConfig`**.
 
 
 
@@ -387,7 +385,7 @@ module.exports = withLibsodiumResolver(config);
 
 ## Run the Project
 
-To build and run the app on your emulator or device, use the following commands:
+To build and run the app on your emulator or device, use the following commands for your respective environment:
 
 **For Android:**
 
