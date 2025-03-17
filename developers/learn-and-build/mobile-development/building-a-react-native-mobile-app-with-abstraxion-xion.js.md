@@ -47,11 +47,11 @@ These libraries enable authentication, cryptographic operations, and secure stor
 
 #### Modify `app.json`
 
-Update the `app.json` file to configure your app’s package name and bundle identifier.
+Update the `app.json` file to configure your app’s package name (for Android apps) or bundle identifier (for IOS apps).
 
 **For Android:**
 
-Add the following under the `"android"` section:
+Add the following under the `"android"` section changing the value to your unique identifier:
 
 ```json
 "package": "com.anonymous.abstraxionexpodemo"
@@ -65,7 +65,9 @@ Add the following under the `"ios"` section:
 "bundleIdentifier": "com.anonymous.abstraxionexpodemo"
 ```
 
-
+{% hint style="warning" %}
+**Note:** Ensure that the `package` and `bundleIdentifier` values are unique to your app. These must be distinct and not shared with other apps to successfully submit your application to the Google Play Store or Apple App Store.
+{% endhint %}
 
 ### Update the Main Tab (`index.tsx`)
 
