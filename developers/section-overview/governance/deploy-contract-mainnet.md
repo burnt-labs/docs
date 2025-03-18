@@ -17,13 +17,13 @@ Contract deployment on XION mainnet requires following a governance process. Her
 
 1. **Create a Signaling Proposal**
    - Post your proposal in the [Mainnet Contract Deployments category](https://discourse.xion.burnt.com/c/govpros/mainnet-contract-deployments/6) on the XION forum
-   - Announce your signaling proposal in the "XION Developer Ecosystem" Telegram channel
+   - Announce your signaling proposal in the ["XION Developer Ecosystem" Telegram channel](https://t.me/+5KA8xBuU5wYzZjU0)
    - Wait for community feedback and respond accordingly
 
 2. **Submit Governance Proposal**
    - After a 3-day waiting period from your signaling proposal
    - Go to [staking.burnt.com/governance](https://staking.burnt.com/governance/) to submit the formal governance proposal on-chain
-   - Announce the governance proposal in the "XION Developer Ecosystem" Telegram channel
+   - Announce the governance proposal in the ["XION Developer Ecosystem" Telegram channel](https://t.me/+5KA8xBuU5wYzZjU0)
    - Monitor the proposal's voting period
 
 3. **Submit Pull Request**
