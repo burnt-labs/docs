@@ -18,9 +18,9 @@ Due to the deterministic nature of blockchains, a smart contract on Xion cannot 
 
 <details>
 
-<summary>Can we get the user's email from the Abstraxion SDK?</summary>
+<summary>Can we get the user's email from the Abstraxion Library?</summary>
 
-No, you cannot access the user’s email from the Abstraxion SDK, as the Abstraxion library does not have access to it either. However, you can request the user’s email as part of your new user onboarding process.
+No, you cannot access the user’s email from the Abstraxion library, as the library does not have access to it either. You can however request the user’s email as part of your new user onboarding process.
 
 </details>
 
