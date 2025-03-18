@@ -22,7 +22,7 @@ Contract deployment on XION mainnet requires following a governance process. Her
 
 2. **Submit Governance Proposal**
    - After a 3-day waiting period from your signaling proposal
-   - Submit the formal governance proposal on-chain
+   - Go to [staking.burnt.com/governance](https://staking.burnt.com/governance/) to submit the formal governance proposal on-chain
    - Announce the governance proposal in the "XION Developer Ecosystem" Telegram channel
    - Monitor the proposal's voting period
 
