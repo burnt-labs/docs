@@ -44,6 +44,6 @@ No, you cannot access the user’s email from the Abstraxion library, as the lib
 
 <summary>How can my smart contract communicate with a Web2 service?</summary>
 
-Due to the deterministic nature of blockchains, a smart contract on Xion cannot interact with the web directly. The most common way to enable this is via an Oracle. The Pyth Oracle was available on Testnet-1 and is being worked on for Testnet-2, though it is currently limited to pricing data. Alternatively, you can create a custom Oracle service where a Web2 backend fetches data from an external API and submits transactions to the smart contract to store the data on-chain which can then be accessed by your contracts.
+Due to the deterministic nature of blockchains, a smart contract on Xion cannot interact with the web directly. The most common way to enable this is via an Oracle. The Pyth Oracle should be available on Testnet. Alternatively, you can create a custom Oracle service where a Web2 backend fetches data from an external API and submits transactions to a smart contract to store the data on-chain which can then be accessed by your contracts.
 
 </details>
