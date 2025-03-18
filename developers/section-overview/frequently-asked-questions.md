@@ -28,7 +28,7 @@ No, you cannot access the user’s email from the Abstraxion SDK, as the Abstrax
 
 <summary>Is Testnet permissioned for smart contract deployment?</summary>
 
-No, the testnet is fully permissionless, allowing anyone to deploy and instantiate contracts.
+No, our Testnet is fully permissionless, allowing anyone to deploy and instantiate contracts.
 
 </details>
 
