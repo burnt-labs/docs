@@ -71,6 +71,7 @@
     * [SubQuery](developers/section-overview/indexers/subquery.md)
   * [Developer Tools: Abstract](developers/section-overview/developer-tools-abstract.md)
   * [IBC Denoms on XION Networks](developers/section-overview/ibc-denoms-on-xion-networks.md)
+  * [Frequently Asked Questions](developers/section-overview/frequently-asked-questions.md)
 * [Learn & Build](developers/learn-and-build/README.md)
   * [Token Factory](developers/learn-and-build/token-factory/README.md)
     * [Creating, Minting, and Interacting with a Token Factory Token](developers/learn-and-build/token-factory/creating-minting-and-interacting-with-a-token-factory-token.md)
