@@ -44,7 +44,7 @@ We recommend using our **Token Factory** module for creating tokens. You can fin
 
 <summary>Can we get the user's email from the Abstraxion Library?</summary>
 
-No, you cannot access the user’s email from the Abstraxion library, as the library does not have access to it either. You can however request the user’s email as part of your new user onboarding process.
+No, you cannot access the user’s email from the Abstraxion library, as the library does not have access to the user's email address. You can however request the user’s email as part of your new user onboarding process.
 
 </details>
 
