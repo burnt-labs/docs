@@ -26,6 +26,14 @@ Yes, Mainnet is permissioned, requiring governance approval for contract deploym
 
 <details>
 
+<summary>How do I submit a proposal to deploy a contract on Mainnet?</summary>
+
+This [guide](https://docs.burnt.com/xion/developers/section-overview/governance/deploy-contract-mainnet) provides step-by-step instructions for deploying your contract on Mainnet.
+
+</details>
+
+<details>
+
 <summary>What’s the preferred way to create a token on Xion?</summary>
 
 We recommend using our **Token Factory** module for creating tokens. You can find details on why it’s the preferred method, along with instructions on creating, managing, and using tokens within your dApps, [here](https://docs.burnt.com/xion/developers/learn-and-build/token-factory).
