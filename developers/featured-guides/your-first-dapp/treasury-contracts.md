@@ -63,7 +63,7 @@ By combining **Fee Grants** and **Authz**, **Treasury Contracts** offer **a seam
 
 We have developed a **Developer Portal** to provide resources that developers can leverage within their dApps. The first feature available is the **creation and management of Treasury Contracts**. You can access the Developer Portal using the following links:
 
-* **Testnet**: [https://dev.testnet.burnt.com](https://dev.testnet.burnt.com/)
+* **Testnet**: [https://dev.testnet2.burnt.com](https://dev.testnet2.burnt.com)
 * **Mainnet**: [https://dev.burnt.com](https://dev.burnt.com)
 
 To perform any actions, you must **log in to the portal**. After logging in, you will be automatically redirected to the **Dashboard**, where you can create and manage your deployed Treasury Contracts.
