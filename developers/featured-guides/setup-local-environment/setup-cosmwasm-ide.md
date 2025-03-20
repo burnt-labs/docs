@@ -2,7 +2,7 @@
 description: Integrated Development Environment Setup for XION Smart Contract Development
 ---
 
-# Setup CosmWasm IDE
+# Set Up an Integrated Development Environment (IDE)
 
 A well configured Integrated Development Environment (IDE) can significantly streamline your smart contract development. While there are many options available for Rust development, the following IDEs stand out as top choices:
 
@@ -94,3 +94,9 @@ Follow these installation steps:
 For comprehensive usage details, refer to the [CodeLLDB Manual](https://github.com/vadimcn/vscode-lldb).
 
 <figure><img src="../../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+
+### Cosmy wasmy <a href="#cosmy-wasmy" id="cosmy-wasmy"></a>
+
+[Cosmy Wasmy](https://marketplace.visualstudio.com/items?itemName=spoorthi.cosmy-wasmy) is a VS Code plugin designed to streamline the development and interaction with CosmWasm smart contracts. It comes pre-configured with popular CosmWasm testnets, making chain interactions seamless during testing. With Cosmy Wasmy, you can manage all interactions directly within VS Code, eliminating the need for the CLI.
+
+For details on installation, configuration, and available commands and features, explore [Cosmy Wasmy](https://marketplace.visualstudio.com/items?itemName=spoorthi.cosmy-wasmy).
