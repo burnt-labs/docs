@@ -6,15 +6,11 @@ To better understand Account Abstraction you can visit the[ Introduction to Acco
 
 A fully functional demo of this dApp is also available in the [Xion.js](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app) repository.
 
-
-
 ## Requirements
 
 Before getting started, ensure you have the following installed:
 
 * [**Node.js**](https://nodejs.org/) (LTS version recommended) – Required for running the development environment and installing dependencies.
-
-
 
 ## Setting up the Project
 
@@ -56,7 +52,7 @@ npm run dev
 Once the server is running, open [**http://localhost:3000**](http://localhost:3000) in a web browser. You should see a Next.js welcome page with an animated React logo.
 
 {% hint style="warning" %}
-**NOTE:**&#x20;
+**NOTE:**
 
 A mismatch in package versions can lead to build failures, resulting in an error similar to the following:\
 \
@@ -65,8 +61,6 @@ A mismatch in package versions can lead to build failures, resulting in an error
 \
 To resolve this issue, update your `next.config.js` file located at the root of your project with the configuration provided in this file: [https://gist.githubusercontent.com/probablyangg/4c520e376cdddf6991951e233d1f9bb6/raw/fa0ecaf1b2e52876610be9d36a8aeaaef53f0dd5/next.config.js](https://gist.githubusercontent.com/probablyangg/4c520e376cdddf6991951e233d1f9bb6/raw/fa0ecaf1b2e52876610be9d36a8aeaaef53f0dd5/next.config.js)
 {% endhint %}
-
-
 
 ## Deploying a Contract On-Chain
 
@@ -78,15 +72,13 @@ We need to deploy a smart contract on-chain for our dApp to interact with, so we
 
 Follow the steps in the following [guide](https://docs.burnt.com/xion/developers/featured-guides/your-first-contract/deploy-a-cosmwasm-smart-contract) to **compile, deploy, and instantiate** the contract on-chain. Once deployed, this contract will be referenced in the **Treasury contract** and the **code updates** that follow.
 
-
-
 ## Deploying a Treasury Contract for Gasless Transactions
 
 Before integrating the **Abstraxion SDK** into the application, we first need to deploy a **Treasury Contract**. This contract facilitates **gasless transactions** for your smart contract by handling **fee grants** on behalf of users.
 
 ### Steps to Deploy a Treasury Contract
 
-1. Login to the [XION Developer Portal](https://dev.testnet.burnt.com/).
+1. Login to the [XION Developer Portal](https://dev.testnet2.burnt.com).
 2. Click on **"New Treasury"** to create a new treasury contract.
 3. **Select the appropriate configuration** based on your use case. The following "**Fee Grant**" and "**Grant Config**" images gives a recommended configuration that works for most scenarios:
 
@@ -123,8 +115,6 @@ Once the preview is to your liking click the "**Create**" button to create the T
 {% hint style="info" %}
 Learn more about Treasury Contracts [here](create-a-gas-less-user-experience/).
 {% endhint %}
-
-
 
 ## Integrating the Abstraxion Library
 
@@ -180,8 +170,6 @@ Update "**YOUR\_TREASURY\_CONTRACT\_ADDRESS\_HERE**" with the the Treasury Contr
     * `useAbstraxionSigningClient`
 * **`treasuryConfig`**
   * Set the **Treasury Contract Address** to enable gasless transactions for users.
-
-
 
 ## Adding Hooks to the Homepage
 
@@ -256,8 +244,6 @@ export default function Page(): JSX.Element {
    * `isConnecting`: Connection state status.
 
 Now, click **CONNECT** and try it out!
-
-
 
 <figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -551,8 +537,6 @@ export default function Page(): JSX.Element {
 ```
 {% endcode %}
 
-
-
 {% hint style="info" %}
 Update "**YOUR\_COUNTER\_CONTRACT\_ADDRESS\_HERE**" with the the NFT Contract Address you created above.
 {% endhint %}
@@ -570,8 +554,6 @@ Update "**YOUR\_COUNTER\_CONTRACT\_ADDRESS\_HERE**" with the the NFT Contract Ad
 4. **Displays transaction results**
    * After submitting a transaction, it shows the **Transaction Hash** and **Block Height**.
    * Provides a link to view the transaction in **XION’s Block Explorer**.
-
-
 
 ### Quick Note on Fee Configuration
 
@@ -599,10 +581,6 @@ The **fourth parameter** in the function call represents the **fee configuration
 
 If everything is configured correctly, you should see the transaction results displayed as shown in the previous section.
 
-
-
 <figure><img src="../../../.gitbook/assets/image (23).png" alt=""><figcaption><p>After clicking "Increment" you should see the confirmation above</p></figcaption></figure>
-
-
 
 These core components form the foundation for building and deploying a successful dApp! If you have any questions or need support, feel free to reach out to us on **Discord** or [**GitHub**](https://github.com/burnt-labs/xion.js).
