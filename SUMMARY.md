@@ -84,6 +84,7 @@
   * [Mobile Development](developers/learn-and-build/mobile-development/README.md)
     * [Building a React Native Mobile App with Abstraxion (Xion.js)](developers/learn-and-build/mobile-development/building-a-react-native-mobile-app-with-abstraxion-xion.js.md)
     * [Copy of Building a React Native App with Abstraxion (Xion.js)](developers/learn-and-build/mobile-development/copy-of-building-a-react-native-app-with-abstraxion-xion.js.md)
+  * [Oracles](developers/learn-and-build/oracles.md)
 
 ## Nodes & Validators
 
