@@ -84,7 +84,8 @@
   * [Mobile Development](developers/learn-and-build/mobile-development/README.md)
     * [Building a React Native Mobile App with Abstraxion (Xion.js)](developers/learn-and-build/mobile-development/building-a-react-native-mobile-app-with-abstraxion-xion.js.md)
     * [Copy of Building a React Native App with Abstraxion (Xion.js)](developers/learn-and-build/mobile-development/copy-of-building-a-react-native-app-with-abstraxion-xion.js.md)
-  * [Oracles](developers/learn-and-build/oracles.md)
+  * [Oracles](developers/learn-and-build/oracles/README.md)
+    * [Creating a Smart Contract with Pyth Oracle Integration](developers/learn-and-build/oracles/creating-a-smart-contract-with-pyth-oracle-integration.md)
 
 ## Nodes & Validators
 
