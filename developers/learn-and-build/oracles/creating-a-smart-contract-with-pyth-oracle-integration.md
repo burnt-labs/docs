@@ -37,7 +37,7 @@ For our use case, the key query is **PriceFeed**, as it retrieves the most recen
 
 ### Query Price Feed from Contract
 
-To query the price feed from the Pyth oracle contract in a CosmWasm smart contract, you need to send a `WasmQuery::Smart` request to the Pyth contract with the correct `feed_id`. Below is an example implementation:
+To query a price feed from the Pyth oracle in a your smart contract, you need to send a `WasmQuery::Smart` request to the Pyth contract with the correct `feed_id`. Below is an example:
 
 ```rust
 use cosmwasm_std::{Deps, StdResult, Binary, WasmQuery, QueryRequest, to_binary};
