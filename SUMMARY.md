@@ -29,6 +29,7 @@
     * [Create a Gas-less User Experience](developers/featured-guides/your-first-dapp/create-a-gas-less-user-experience/README.md)
       * [Fee Granting](developers/featured-guides/your-first-dapp/create-a-gas-less-user-experience/fee-granting.md)
     * [Interact with XION via your Backend Service](developers/featured-guides/your-first-dapp/xion-typescript.md)
+* [Building for Mainnet](developers/building-for-mainnet.md)
 * [Learn & Build](developers/learn-and-build/README.md)
   * [Token Factory](developers/learn-and-build/token-factory/README.md)
     * [Creating, Minting, and Interacting with a Token Factory Token](developers/learn-and-build/token-factory/creating-minting-and-interacting-with-a-token-factory-token.md)
