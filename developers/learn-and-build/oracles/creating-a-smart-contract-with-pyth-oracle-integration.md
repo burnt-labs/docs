@@ -91,9 +91,9 @@ Below is JavaScript code to query the price feed from the Pyth contract using `c
 import { CosmWasmClient } from "@cosmjs/cosmwasm-stargate";
 
 // Constants
-const RPC_ENDPOINT = "https://rpc.xion.network"; // Replace with the correct RPC
-const PYTH_CONTRACT = "xion1wptw89weav8tnpgxg4fyhcahgk8yy99lka3w308536ktadkvjwxqe463hl";
-const PRICE_FEED_ID = "0x436ccb0d465f3cb48554bcc8def65ff695341b3ebe0897563d118b9291178d0f";
+const RPC_ENDPOINT = "https://rpc.xion-testnet-2.burnt.com:443"; // Replace with the correct RPC
+const PYTH_CONTRACT = "xion1wptw89weav8tnpgxg4fyhcahgk8yy99lka3w308536ktadkvjwxqe463hl"; // Replace with the correct Pyth contract address
+const PRICE_FEED_ID = "0x436ccb0d465f3cb48554bcc8def65ff695341b3ebe0897563d118b9291178d0f"; // Replace with the correct Feed ID
 
 // Function to fetch price feed
 async function fetchPythPriceFeed() {
