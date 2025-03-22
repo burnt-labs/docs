@@ -16,8 +16,6 @@ The table below lists the available resources for this network.
 
 For additional community-supported RPC, API, and gRPC endpoints, refer to the [**XION Mainnet Chain Registry**](https://github.com/cosmos/chain-registry/blob/master/xion/chain.json). This registry contains the latest publicly available infrastructure contributed by the community, ensuring developers have access to a diverse and up-to-date set of endpoint options.
 
-{% @github-files/github-code-block url="https://github.com/cosmos/chain-registry/blob/master/xion/chain.json" %}
-
 ### Testnet 1
 
 The XION Testnet 1 is designed for experimentation and refining dApps before deploying to Mainnet. It provides a safe environment for developers to test functionality, optimize performance, and resolve issues without affecting real assets.
@@ -28,8 +26,6 @@ The table below lists the available resources for this network.
 
 For additional community-supported RPC, API, and gRPC endpoints, refer to the [**XION Testnet Chain Registry**](https://github.com/cosmos/chain-registry/blob/master/testnets/xiontestnet/chain.json#L128-L183)**.** This registry provides the latest publicly available infrastructure contributed by the community, ensuring developers have access to diverse and up-to-date endpoint options.
 
-{% @github-files/github-code-block url="https://github.com/cosmos/chain-registry/blob/master/testnets/xiontestnet/chain.json" %}
-
 ### Testnet 2
 
 The XION Testnet 2 is designed for experimentation and refining dApps before deploying to Mainnet. It provides a safe environment for developers to test functionality, optimize performance, and resolve issues without affecting real assets.
@@ -39,8 +35,6 @@ The table below lists the available resources for this network.
 <table><thead><tr><th width="238"></th><th></th></tr></thead><tbody><tr><td>RPC Endpoint</td><td><a href="https://rpc.xion-testnet-2.burnt.com">https://rpc.xion-testnet-2.burnt.com:443</a></td></tr><tr><td>Rest Endpoint</td><td><a href="https://api.xion-testnet-2.burnt.com">https://api.xion-testnet-2.burnt.com</a></td></tr><tr><td>gRPC</td><td>grpc.xion-testnet-2.burnt.com:443</td></tr><tr><td>Websocket</td><td>wss://rpc.xion-testnet-2.burnt.com:443/websocket</td></tr><tr><td>Chain ID</td><td>xion-testnet-2</td></tr><tr><td>Block Explorer</td><td><a href="https://www.mintscan.io/xion-testnet">https://www.mintscan.io/xion-testnet</a></td></tr><tr><td>Genesis File</td><td><a href="https://raw.githubusercontent.com/burnt-labs/xion-testnet-2/config/genesis.json">https://raw.githubusercontent.com/burnt-labs/xion-testnet-2/config/genesis.json</a></td></tr><tr><td>Persistent Peers</td><td><a href="https://github.com/cosmos/chain-registry/blob/master/testnets/xiontestnet2/chain.json#L85-L111">https://github.com/cosmos/chain-registry/blob/master/testnets/xiontestnet2/chain.json#L85-L111</a></td></tr><tr><td>Seeds</td><td><a href="https://github.com/cosmos/chain-registry/blob/master/testnets/xiontestnet2/chain.json#L78-L84">https://github.com/cosmos/chain-registry/blob/master/testnets/xiontestnet2/chain.json#L78-L84</a></td></tr></tbody></table>
 
 For additional community-supported RPC, API, and gRPC endpoints, refer to the [**XION Testnet Chain Registry**](https://github.com/cosmos/chain-registry/blob/master/testnets/xiontestnet2/chain.json#L114-L119)**.** This registry provides the latest publicly available infrastructure contributed by the community, ensuring developers have access to diverse and up-to-date endpoint options.
-
-{% @github-files/github-code-block url="https://github.com/cosmos/chain-registry/blob/master/testnets/xiontestnet2/chain.json" %}
 
 ### Localnet
 
