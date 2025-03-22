@@ -4,9 +4,9 @@ Oracles are external data providers that enable smart contracts to interact with
 
 ## Why Are Oracles Required?
 
-Smart contracts operate within a deterministic environment, meaning that if you start from block 1 and execute all transactions to the current block, the result must always be the same. This determinism ensures blockchain security and consensus but also imposes a limitation: smart contracts cannot directly access data from the web or any external source that changes over time. Since web data is dynamic, integrating it directly into a blockchain would break its fundamental requirement for consistency and reproducibility.
+Smart contracts operate within a deterministic environment, meaning that if you start from **block one** and execute all transactions to the **current block,** the result must always be the same. This determinism ensures blockchain security and consensus but also imposes a limitation as smart contracts cannot directly access data from the web or any external source that changes over time. Since web data is dynamic, integrating it directly into a blockchain would break its fundamental requirement for consistency and reproducibility.
 
-To bridge this gap, oracles act as intermediaries that fetch, verify, and relay external (Web2) data into the blockchain (Web3). By doing so, oracles enable smart contracts to securely access real-world information without compromising the deterministic nature of blockchain execution.
+To bridge this gap, oracles act as intermediaries that fetch, verify, and relay external data into the blockchain. By doing so, oracles enable smart contracts to securely access real-world information without compromising the deterministic nature of blockchain execution.
 
 ## Supported Oracles on Xion
 
