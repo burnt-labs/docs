@@ -85,7 +85,7 @@ pub fn query_pyth_price_feed(deps: Deps) -> StdResult<PriceFeedResponse> {
 
 ### Query Price Feed from Frontend
 
-Below is the JavaScript code to query the price feed from the Pyth contract using `cosmjs`:
+Below is JavaScript code to query the price feed from the Pyth contract using `cosmjs`:
 
 ```javascript
 import { CosmWasmClient } from "@cosmjs/cosmwasm-stargate";
