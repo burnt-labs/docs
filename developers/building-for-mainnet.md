@@ -4,7 +4,7 @@ icon: building
 
 # Building for Mainnet
 
-Xion provides developers with a structured path to deploying secure and reliable decentralized applications (dApps). This section outlines the key differences between Testnet and Mainnet, the requirements for deployment, and best practices to ensure your contract is approved and adopted by the community.
+The Xion Foundation aims to offer developers a clear and structured pathway for deploying secure and reliable decentralized applications (dApps). This section outlines the key differences between **Testnet** and **Mainnet**, the requirements for deployment, and best practices to ensure your contract is approved and adopted by the community.
 
 
 
