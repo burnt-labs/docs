@@ -10,7 +10,7 @@ Audited contracts provide verified security, having undergone professional revie
 
 A prime example is the [**cw-plus**](https://github.com/CosmWasm/cw-plus) collection of contracts. While this repository previously housed all [**cw-20**](https://github.com/CosmWasm/cw-tokens) token contracts and various [**NFT**](https://github.com/CosmWasm/cw-nfts) standards, these have since been migrated to dedicated repositories. The cw-plus repository continues to serve as a valuable reference point, directing developers to these essential, community-proven contract implementations.
 
-### **Lower Costs, Faster Development & Smoother Governance**
+### **Lower Costs & Faster Development**
 
 Using pre-audited contracts offers significant advantages across your development lifecycle. First and foremost, it dramatically reduces costs - security audits are expensive, and building on verified code minimizes the amount of new code requiring review. This established foundation also streamlines governance approval for Mainnet deployment, as committees can more readily trust contracts with proven security credentials.
 
