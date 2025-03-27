@@ -135,6 +135,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 const treasuryConfig = {
   treasury: "YOUR_TREASURY_CONTRACT_ADDRESS_HERE",
+  rpcUrl: "https://rpc.xion-testnet-2.burnt.com/",
+  restUrl: "https://api.xion-testnet-2.burnt.com/"
 };
 
 export default function RootLayout({
