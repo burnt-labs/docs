@@ -581,6 +581,10 @@ The **fourth parameter** in the function call represents the **fee configuration
 * **Simplifies fee management** by automatically estimating optimal fees.
 * **Reduces errors** related to underestimating or overestimating gas.
 
+By default, the `gas-adjustment` applied to the `auto` value is typically **1.3**. If transactions are still failing due to low fees, it may indicate that the gas adjustment, acting as a multiplier for the automatically calculated fee, is too low. In such cases, you may need to increase this value for specific transactions.
+
+To update the gas adjustment in the **execute** call, replace `auto` with your desired adjustment value. The transaction will still use automatic gas estimation but will apply the specified gas adjustment instead of the default.
+
 If everything is configured correctly, you should see the transaction results displayed as shown in the previous section.
 
 <figure><img src="../../../.gitbook/assets/image (23).png" alt=""><figcaption><p>After clicking "Increment" you should see the confirmation above</p></figcaption></figure>
