@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # XION Overview
 
 <figure><img src="../../.gitbook/assets/XION Infrastructure Graphic Chain Abstraction 2.png" alt=""><figcaption></figcaption></figure>
