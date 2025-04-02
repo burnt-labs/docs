@@ -49,7 +49,7 @@
   * [Oracles](developers/learn-and-build/oracles/README.md)
     * [Creating a Smart Contract with Pyth Oracle Integration](developers/learn-and-build/oracles/creating-a-smart-contract-with-pyth-oracle-integration.md)
 * [Reference and Resources](developers/section-overview/README.md)
-  * [Requesting XION Testnet Tokens](developers/section-overview/xion-testnet-1.md)
+  * [Requesting XION Testnet Tokens](developers/section-overview/xion-testnet.md)
   * [Public Endpoints & Resources](developers/section-overview/public-endpoints-and-resources.md)
   * [Block Explorers](developers/section-overview/block-explorers.md)
   * [Governance](developers/section-overview/governance/README.md)

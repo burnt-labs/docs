@@ -4,8 +4,6 @@ The **Token Factory module** provides a simple framework for creating and managi
 
 The module is particularly useful for **developers** and **projects** looking to **issue chain-native assets** without the complexity of deploying custom smart contracts. Regardless of the token’s intended use the **Token Factory** streamlines the entire **lifecycle**, ensuring a secure and scalable approach to token management on XION.
 
-
-
 ## **Prerequisites**
 
 Before proceeding, make sure you have the following:
@@ -15,9 +13,7 @@ Before proceeding, make sure you have the following:
 2. **An Active Account:**\
    Set up an account using `xiond` by following the [Generate an account](https://docs.burnt.com/xion/developers/featured-guides/setup-local-environment/interact-with-xion-chain-setup-xion-daemon#generate-an-account) guide. You will use this account to execute transactions.
 3. **A Funded Account:**\
-   You need an account with sufficient **native XION tokens** to cover transaction fees. You can obtain testnet tokens through the [**XION testnet faucet**](../../section-overview/xion-testnet-1.md).
-
-
+   You need an account with sufficient **native XION tokens** to cover transaction fees. You can obtain testnet tokens through the [**XION testnet faucet**](../../section-overview/xion-testnet.md).
 
 ## **Creating a Token**
 
@@ -94,8 +90,6 @@ Upon successful execution, a unique token will be created with a denomination fo
 factory/<creator-address>/mytoken
 ```
 
-
-
 ## **Querying Token Data**
 
 After creating a token, you may want to **verify its metadata** and check its initial state on the blockchain. This can be done using the **denom-metadata query** within the **bank** module, which retrieves essential details about the token, including its base denomination, display name, and symbol.
@@ -131,8 +125,6 @@ metadata:
 * **`display`** – The default way the token is displayed in applications.
 * **`name`** – The registered name of the token.
 * **`symbol`** – The token’s ticker symbol (if set during metadata configuration).
-
-
 
 ## **Updating Token Metadata**
 
@@ -249,8 +241,6 @@ metadata:
   symbol: EMP
 ```
 
-
-
 ## **Minting Tokens**
 
 After successfully creating your token, you will notice that no tokens have actually been minted. To establish or increase the token supply, you must explicitly **mint new tokens**. The **minting process** allows you to generate additional tokens under your control, which can then be used within your dapps, or distributed to other accounts.
@@ -328,8 +318,6 @@ txhash: BDB5A322400076D14C831497407AF1026D6A3DD923EF1E36366C0ED0C3D5ECE1
 
 If your **exponent** was set to **6**, then **`1000000000000`** would mint **1 million `mytoken` tokens** since the exponent determines how many decimal places the token uses.
 
-
-
 ## **Querying Token Balance**
 
 Once you have minted or received tokens, you may want to **check your wallet’s balance** to see the amount of **native XION, custom tokens, and IBC-transferred assets** you hold. The **bank balance query** allows you to retrieve a complete breakdown of all tokens associated with your address.
@@ -359,8 +347,6 @@ balances:
 pagination:
   total: "3"
 ```
-
-
 
 ## **Sending Tokens to Another Address**
 
@@ -397,6 +383,4 @@ xiond tx bank send xion1ka5... xion193h... 500factory/xion1ka5.../mytoken --node
 * The transaction is **broadcasted to the network** via the specified RPC node.
 * If successful, the **recipient’s balance** is updated, and the sender’s balance is **reduced accordingly**.
 
-
-
-You have successfully **created**, **updated**, **minted** and **transferred** a token using the **XION Token Factory module**. With this foundation, you can now integrate your token into your smart contracts and  **dApp frontends** seamlessly.
+You have successfully **created**, **updated**, **minted** and **transferred** a token using the **XION Token Factory module**. With this foundation, you can now integrate your token into your smart contracts and **dApp frontends** seamlessly.
