@@ -55,7 +55,7 @@ You can obtain testnet tokens through one of the following methods:
 * **Discord Faucet**: Request tokens by using the faucet bot in the **XION Discord**.
 * **Faucet Web Page**: Visit the [XION Faucet](https://faucet.xion.burnt.com/) and follow the instructions to receive testnet tokens.
 
-For more details on accessing testnet tokens, see our [Faucet Page](https://docs.burnt.com/xion/developers/section-overview/xion-testnet-1).
+For more details on accessing testnet tokens, see our [Faucet Page](https://docs.burnt.com/xion/developers/section-overview/xion-testnet).
 
 #### **Mainnet Tokens**
 

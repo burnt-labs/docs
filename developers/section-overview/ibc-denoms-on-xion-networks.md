@@ -13,20 +13,9 @@ Here is a list of IBC denoms currently active on XION's **Mainnet**:
 **Note:** This list is subject to change as new IBC denoms are established. You can find the full list of IBC denoms [here](https://api.xion-mainnet-1.burnt.com/cosmos/bank/v1beta1/denoms_metadata). You can also view the [asset list](https://github.com/cosmos/chain-registry/blob/master/xion/assetlist.json) in the chain registry.
 
 
+## Testnet
 
-## Testnet 1
-
-Here is a list of IBC denoms currently active on XION's **Testnet-1**:
-
-<table><thead><tr><th>Denom</th><th>Symbol</th><th width="186">Network</th><th>IBC Channel Info</th></tr></thead><tbody><tr><td>ibc/57097251ED81A232CE3C9D899E7C8096D6D87EF84BA203E12E424AA4C9B57A64</td><td>UUSDC</td><td>Noble</td><td><a href="https://github.com/cosmos/chain-registry/blob/master/testnets/_IBC/nobletestnet-xiontestnet.json">View</a></td></tr><tr><td>ibc/33517D439F5E545A1AAB148FAE43AAE17CF68FFB9BC97AE0048A3E3B64518C58</td><td>UAXL</td><td>Axelar</td><td><a href="https://github.com/cosmos/chain-registry/blob/master/testnets/_IBC/axelartestnet-xiontestnet.json">View</a></td></tr><tr><td>ibc/484532EB74866F3FB8A71F909F7B1B470FE2E66313DA0A1F9EE5B7C5C046D195</td><td>UOSMO</td><td>Osmosis</td><td><a href="https://github.com/cosmos/chain-registry/blob/master/testnets/_IBC/osmosistestnet-xiontestnet.json">View</a></td></tr><tr><td>ibc/05314A48723E06A1B1B666066B6BEC89F3708E8854DF2E5E9193387AA9653036</td><td>INJ</td><td>Injective</td><td><a href="https://github.com/cosmos/chain-registry/blob/master/testnets/_IBC/injectivetestnet-xiontestnet.json">View</a></td></tr></tbody></table>
-
-**Note:** This list is subject to change as new IBC denoms are established. You can find the full list of IBC denoms [here](https://api.xion-testnet-1.burnt.com/cosmos/bank/v1beta1/denoms_metadata). You can also view the [asset list](https://github.com/cosmos/chain-registry/blob/master/testnets/xiontestnet/assetlist.json) in the chain registry.
-
-
-
-## Testnet 2
-
-Here is a list of IBC denoms currently active on XION's **Testnet-2**:
+Here is a list of IBC denoms currently active on XION's **Testnet**:
 
 <table><thead><tr><th>Denom</th><th>Symbol</th><th width="186">Network</th><th>IBC Channel Info</th></tr></thead><tbody><tr><td>ibc/6490A7EAB61059BFC1CDDEB05917DD70BDF3A611654162A1A47DB930D40D8AF4</td><td>UUSDC</td><td>Noble</td><td><a href="https://github.com/cosmos/chain-registry/blob/master/testnets/_IBC/nobletestnet-xiontestnet2.json">View</a></td></tr></tbody></table>
 
