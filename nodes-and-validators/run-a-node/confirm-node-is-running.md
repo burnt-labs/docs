@@ -29,7 +29,7 @@ You should see output like this:
     },
     "id": "f10f5001726e95c62a763f2d020df6b53b19f44a",
     "listen_addr": "65.108.134.47:22356",
-    "network": "xion-testnet-1",
+    "network": "xion-testnet-2",
     "version": "0.37.4",
     "channels": "40202122233038606100",
     "moniker": "e4fed392-45ec-5eed-98f2-ca1ff10a2409",
