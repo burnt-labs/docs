@@ -18,7 +18,7 @@ The minimum recommended specs for running an instance of `xiond` on the Burnt Ne
 
 | Network          | CPU cores         | RAM    | Disk (SSD) | Bandwidth  |
 | ---------------- | ----------------- | ------ | ---------- | ---------- |
-| `xion-testnet-1` | 8 (gen-purpose)   | 32 GB  | 128 GB     | \~120 Mbps |
+| `xion-testnet-2` | 8 (gen-purpose)   | 32 GB  | 128 GB     | \~120 Mbps |
 | `xion-mainnet-1` | 8 (compute-optim) | 32 GB  | 256 GB     | \~120 Mbps |
 
 {% hint style="info" %}

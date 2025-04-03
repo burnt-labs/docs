@@ -10,7 +10,7 @@ With a configured Xion Daemon, we can attempt to join one of the Xion Networks.
 
 | Network          | Genesis JSON                                                        | Addressbook JSON                                                      | Node Snapshot                                                                          |
 | ---------------- | ------------------------------------------------------------------- | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `xion-testnet-1` | [genesis.json](https://files.xion-testnet-1.burnt.com/genesis.json) | [addrbook.json](https://files.xion-testnet-1.burnt.com/addrbook.json) | [latest.tar.lz4](https://files.xion-testnet-1.burnt.com/xion-testnet-1-latest.tar.lz4) |
+| `xion-testnet-2` | [genesis.json](https://raw.githubusercontent.com/burnt-labs/xion-testnet-2/refs/heads/main/config/genesis.json) | [addrbook.json](https://snapshots.polkachu.com/testnet-addrbook/xion/addrbook.json) | [latest.tar.lz4](https://snapshots.polkachu.com/testnet-snapshots/xion/xion_1647937.tar.lz4) |
 | `xion-mainnet-1` | TBD                                                                 | TBD                                                                   | TBD                                                                                    |
 
 * The Genesis JSON file specifies the account balances and parameters at the inception of the network, and anchors the application state to a point in time.
@@ -20,7 +20,7 @@ With a configured Xion Daemon, we can attempt to join one of the Xion Networks.
 
 For detailed information on how to join each network, please refer to its corresponding subsection.
 
-<table data-view="cards"><thead><tr><th></th><th align="center"></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td align="center">xion-testnet-1</td><td></td><td><a href="xion-testnet-1.md">xion-testnet-1.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th align="center"></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td align="center">xion-testnet-2</td><td></td><td><a href="xion-testnet.md">xion-testnet.md</a></td></tr></tbody></table>
 
 ## Start the Xion Daemon
 
