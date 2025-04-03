@@ -111,7 +111,7 @@
   * [Initial Setup](nodes-and-validators/become-a-validator/initial-setup.md)
   * [Obtain a XION Wallet Address](nodes-and-validators/become-a-validator/obtain-a-xion-wallet-address.md)
   * [Obtain Funds](nodes-and-validators/become-a-validator/obtain-funds/README.md)
-    * [xion-testnet-1](nodes-and-validators/become-a-validator/obtain-funds/xion-testnet-1.md)
+    * [Testnet](nodes-and-validators/become-a-validator/obtain-funds/testnet.md)
   * [Create Validator](nodes-and-validators/become-a-validator/create-validator.md)
 * [IBC Relayers](nodes-and-validators/ibc-relayers/README.md)
   * [xion-testnet-1 <=> axelar-lisbon-3](nodes-and-validators/ibc-relayers/xion-testnet-1-less-than-greater-than-axelar-lisbon-3.md)
