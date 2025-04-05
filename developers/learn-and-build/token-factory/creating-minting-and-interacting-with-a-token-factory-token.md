@@ -145,7 +145,7 @@ xiond tx tokenfactory modify-metadata <denom> <ticker-symbol> <description> <exp
 **Example:**
 
 ```sh
-xiond tx tokenfactory modify-metadata factory/xion1xyz.../mytoken MYT "My custom token" 6 --from mywallet --chain-id xion-testnet-2 --node tcp://127.0.0.1:26657 --gas auto --gas-adjustment 1.7 --gas-prices 0.025uxion
+xiond tx tokenfactory modify-metadata factory/xion1xyz.../mytoken MYT "My custom token" 6 --from mywallet --chain-id xion-testnet-2 --node https://rpc.xion-testnet-2.burnt.com:443 --gas auto --gas-adjustment 1.7 --gas-prices 0.025uxion
 ```
 
 This command updates the metadata for the `mytoken` token, setting:
