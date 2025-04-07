@@ -248,14 +248,14 @@ To install `xiond`, you can either download a [**pre-built binary**](installatio
 
 ### **Use Pre-built Binary**
 
-You will need to download the appropriate binary for your system architecture [https://github.com/burnt-labs/xion/releases/tag/v17.0.0](https://github.com/burnt-labs/xion/releases/tag/v17.0.0):
+You will need to download the appropriate binary for your system architecture [https://github.com/burnt-labs/xion/releases/tag/v17.1.0](https://github.com/burnt-labs/xion/releases/tag/v17.1.0):
 
 {% tabs %}
 {% tab title="Linux (amd64)" %}
 **Download the binary using**
 
 ```
-wget https://github.com/burnt-labs/xion/releases/download/v17.0.0/xiond-17.0.0.tar.gz
+wget https://github.com/burnt-labs/xion/releases/download/v17.1.0/xiond-17.1.0.tar.gz
 ```
 
 
@@ -265,7 +265,7 @@ wget https://github.com/burnt-labs/xion/releases/download/v17.0.0/xiond-17.0.0.t
 Generate the SHA256 hash of the downloaded file:
 
 ```
-sha256sum xiond_linux_amd64
+sha256sum xiond-17.1.0.tar.gz
 ```
 {% endtab %}
 
@@ -273,7 +273,7 @@ sha256sum xiond_linux_amd64
 Download the binary using:
 
 ```
-wget https://github.com/burnt-labs/xion/releases/download/v17.0.0/xiond_17.0.0_darwin_arm64.zip
+wget https://github.com/burnt-labs/xion/releases/download/v17.1.0/xiond_17.1.0_darwin_arm64.zip
 ```
 
 
@@ -283,7 +283,7 @@ wget https://github.com/burnt-labs/xion/releases/download/v17.0.0/xiond_17.0.0_d
 Generate the SHA256 hash of the downloaded file:
 
 ```
-sha256sum xiond_linux_arm64
+sha256sum xiond_17.1.0_darwin_arm64.zip
 ```
 {% endtab %}
 {% endtabs %}
@@ -293,7 +293,7 @@ The `sha256sum` command should generate a hash string (e.g., `d41d8cd98f00b204e9
 Download the official checksum file:
 
 ```sh
-wget https://github.com/burnt-labs/xion/releases/download/v17.0.0/xiond-17.0.0-checksums.txt
+wget https://github.com/burnt-labs/xion/releases/download/v17.1.0/xiond-17.1.0-checksums.txt
 ```
 
 Compare the two hash strings to ensure they match. This confirms that the downloaded file is authentic and unaltered.
@@ -303,7 +303,7 @@ Compare the two hash strings to ensure they match. This confirms that the downlo
 Make the binary executable:
 
 ```sh
-chmod +x xiond_linux_amd64
+chmod +x <binary_file_name>
 ```
 
 #### **Move the Binary to a System Directory**
@@ -311,7 +311,7 @@ chmod +x xiond_linux_amd64
 Move the binary to a directory in your `PATH` (e.g., `/usr/local/bin`) and rename it to `xiond`:
 
 ```sh
-sudo mv xiond_linux_amd64 /usr/local/bin/xiond
+sudo mv <binary_file_name> /usr/local/bin/xiond
 ```
 
 After this, `xiond` should be available for use.
