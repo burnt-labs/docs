@@ -86,7 +86,7 @@ pub fn mock_dependencies(
 ### mock\_dependencies is used for mocking storage, api, and querier.
 
 ```
-/// Returns a default enviroment with height, time, chain_id, and contract address.
+/// Returns a default environment with height, time, chain_id, and contract address.
 /// You can submit as is to most contracts, or modify height/time if you want to
 /// test for expiration.
 ///
