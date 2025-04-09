@@ -93,6 +93,7 @@
   * [Developer Tools: Abstract](developers/section-overview/developer-tools-abstract.md)
   * [IBC Denoms on XION Networks](developers/section-overview/ibc-denoms-on-xion-networks.md)
   * [Frequently Asked Questions](developers/section-overview/frequently-asked-questions.md)
+  * [XION Token Contract Addresses on EVM Chains](developers/section-overview/xion-token-contract-addresses-on-evm-chains.md)
 
 ## Nodes & Validators
 
