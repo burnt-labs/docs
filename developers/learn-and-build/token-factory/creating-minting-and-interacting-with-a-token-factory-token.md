@@ -17,6 +17,13 @@ Before proceeding, make sure you have the following:
 
 ## **Creating a Token**
 
+{% hint style="info" %}
+Creating a new Token Factory token requires a **1000 XION fee** (on both **Testnet** and **Mainnet**). This fee protects XION users by:
+
+* **Reducing spam** and malicious token creation.
+* **Encouraging meaningful token projects**, ensuring a higher-quality ecosystem.
+{% endhint %}
+
 To create a new token using the **Token Factory module**, you would execute the following command:
 
 ```sh
