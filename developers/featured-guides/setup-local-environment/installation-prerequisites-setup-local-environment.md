@@ -258,7 +258,7 @@ Install `xiond` using Homebrew:
 `brew install xiond`
 {% endtab %}
 
-{% tab title="Red Hat Linux (RHEL, CentOS, Fedora)" %}
+{% tab title="Red Hat-based Linux" %}
 Install the `.rpm` package directly using `dnf` . For **x86\_64 architecture** it would be:
 
 `sudo dnf install https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_amd64.rpm`
@@ -268,7 +268,7 @@ For **ARM64 architecture**:
 `sudo dnf install https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_arm64.rpm`&#x20;
 {% endtab %}
 
-{% tab title="Debian Linux" %}
+{% tab title="Debian-based Linux" %}
 Download the `.deb` package and install. For **x86\_64 architecture** it would be:
 
 ```
