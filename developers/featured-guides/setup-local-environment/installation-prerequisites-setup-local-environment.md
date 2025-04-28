@@ -246,6 +246,65 @@ For Linux users, it's recommended to run the Docker daemon in [**Rootless Mode**
 
 To install `xiond`, you can either download a [**pre-built binary**](installation-prerequisites-setup-local-environment.md#use-pre-built-binary)**,** [**build it from source**](installation-prerequisites-setup-local-environment.md#build-from-source) or utilize a **docker** build. Ensure that you use the release corresponding to the version of `xiond` being used on the network where you will be interacting with.
 
+### Installers
+
+We recommend installing xiond with one of the following insallers for your respective operating system:
+
+{% tabs %}
+{% tab title="macOS" %}
+Install `xiond` using Homebrew:
+
+`brew tap burnt-labs/xion`\
+`brew install xiond`
+{% endtab %}
+
+{% tab title="Red Hat Linux (RHEL, CentOS, Fedora)" %}
+Install the `.rpm` package directly using `dnf` . For **x86\_64 architecture** it would be:
+
+`sudo dnf install https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_amd64.rpm`
+
+For **ARM64 architecture**:
+
+`sudo dnf install https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_arm64.rpm`&#x20;
+{% endtab %}
+
+{% tab title="Debian Linux" %}
+Download the `.deb` package and install. For **x86\_64 architecture** it would be:
+
+```
+curl -L -o xiond.deb https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_amd64.deb
+sudo dpkg -i xiond.deb
+```
+
+For **ARM64 architecture**:
+
+```
+curl -L -o xiond.deb https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_arm64.deb
+sudo dpkg -i xiond.deb
+```
+{% endtab %}
+
+{% tab title="Alpine Linux" %}
+Install the `.apk` package using `apk`.
+
+**For x86\_64 architecture**:
+
+```
+wget https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_amd64.apk
+sudo apk add --allow-untrusted xiond_18.0.0_linux_amd64.apk
+```
+
+**For ARM64 architecture:**
+
+```
+wget https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_arm64.apk
+sudo apk add --allow-untrusted xiond_18.0.0_linux_arm64.apk
+```
+
+**Note:** `--allow-untrusted` is required because the package is not signed by Alpine's official package repository.
+{% endtab %}
+{% endtabs %}
+
 ### **Use Pre-built Binary**
 
 You will need to download the appropriate binary for your system architecture [https://github.com/burnt-labs/xion/releases/tag/v17.1.0](https://github.com/burnt-labs/xion/releases/tag/v17.1.0):
