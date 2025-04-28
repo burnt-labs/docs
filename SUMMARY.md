@@ -52,6 +52,8 @@
     * [Copy of Building a React Native App with Abstraxion (Xion.js)](developers/learn-and-build/mobile-development/copy-of-building-a-react-native-app-with-abstraxion-xion.js.md)
   * [Oracles](developers/learn-and-build/oracles/README.md)
     * [Creating a Smart Contract with Pyth Oracle Integration](developers/learn-and-build/oracles/creating-a-smart-contract-with-pyth-oracle-integration.md)
+  * [Use Cases](developers/learn-and-build/use-cases/README.md)
+    * [Building a Per-User Data Storage Dapp](developers/learn-and-build/use-cases/building-a-per-user-data-storage-dapp.md)
 * [Reference and Resources](developers/section-overview/README.md)
   * [Requesting XION Testnet Tokens](developers/section-overview/xion-testnet.md)
   * [Public Endpoints & Resources](developers/section-overview/public-endpoints-and-resources.md)

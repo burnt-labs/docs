@@ -6,8 +6,6 @@ This guide walks through creating a React-based decentralized application (dApp)
 * Display the **token balance** for the logged-in user
 * Enable the logged in user to **send tokens to another address**
 
-
-
 ## **Setting Up the Project**
 
 ### **Initialize a New Next.js Project**
@@ -41,8 +39,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the default Next.js page.
 
-
-
 ## Deploying a Treasury Contract for Gasless Transactions
 
 Before integrating the **Abstraxion SDK** into the application, we first need to deploy a **Treasury Contract**. This contract facilitates **gasless transactions** by executing **fee grants** on behalf of users.
@@ -55,7 +51,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 
 #### Fee Grant
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Example of a general <strong>Fee Grant</strong> configuration</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Example of a general <strong>Fee Grant</strong> configuration</p></figcaption></figure>
 
 1. Enter a **"Description"** in the description field. This will reflect the intended purpose of the request.
 2. In the **"Allowance Type"** field, enter `"/cosmwasm.feegrant.v1beta1.BasicAllowance"`.
@@ -64,24 +60,22 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 
 #### **Grant Config**
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>Example of additional <strong>Grant</strong> configuration</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Example of additional <strong>Grant</strong> configuration</p></figcaption></figure>
 
-1. For this example the **"Type URL"**  would be `"`/cosmos.bank.v1beta1.MsgSend`"` as this would allow for the dapp the send tokens on behalf of the user.
+1. For this example the **"Type URL"** would be `"`/cosmos.bank.v1beta1.MsgSend`"` as this would allow for the dapp the send tokens on behalf of the user.
 2. Enter a **"Description"** in the description field. This will reflect the intended purpose of the request. This description will be displayed to users when they click **"Allow"** after connecting their account.
 3. In the **"Authorization Type"** field, select `"`/cosmos.authz.v1beta1.GenericAuthorization`"`.
 4. Then click the "**Save**" button which generates the "**Treasury Instance Preview**"
 
 #### Treasury Instance Preview
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once the preview is to your liking click the "**Create**" button to create the Treasury contract.
 
 {% hint style="info" %}
 Learn more about Treasury Contracts [here](../../featured-guides/your-first-dapp/create-a-gas-less-user-experience/).
 {% endhint %}
-
-
 
 ## **Configuring Abstraxion for Authentication**
 
@@ -119,8 +113,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 ```
 
 Replace `YOUR_TREASURY_CONTRACT_ADDRESS_HERE` with the actual treasury contract address.
-
-
 
 ## **Bringing it Together**
 
@@ -463,8 +455,6 @@ const handleSend = async () => {
 * Displays **transaction details** after sending tokens.
 * Provides a **block explorer link** for verification.
 
-
-
 ## A Quick Walkthrough
 
 The following steps outline how to use the dApp.
@@ -497,7 +487,7 @@ After submitting the transaction, you will see the **transaction hash**, the **b
 
 <figure><img src="../../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
 
-You now have a functional React dApp that:&#x20;
+You now have a functional React dApp that:
 
 * Authenticates users via Meta Accounts
 * Fetches and displays Token Factory token balance
