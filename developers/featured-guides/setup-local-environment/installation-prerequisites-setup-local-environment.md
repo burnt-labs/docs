@@ -244,7 +244,7 @@ For Linux users, it's recommended to run the Docker daemon in [**Rootless Mode**
 
 `xiond` is the core command-line tool for running and interacting with the **XION blockchain**. It serves as the blockchain daemon, enabling developers and node operators to manage network operations, deploy smart contracts, and interact with the XION ecosystem.
 
-To install `xiond`, you can either download a [**pre-built binary**](installation-prerequisites-setup-local-environment.md#use-pre-built-binary)**,** [**build it from source**](installation-prerequisites-setup-local-environment.md#build-from-source) or utilize a **docker** build. Ensure that you use the release corresponding to the version of `xiond` being used on the network where you will be interacting with.
+To install `xiond`, you can either use an [**installer**](installation-prerequisites-setup-local-environment.md#installers), download a [**pre-built binary**](installation-prerequisites-setup-local-environment.md#use-pre-built-binary)**,** [**build it from source**](installation-prerequisites-setup-local-environment.md#build-from-source) or utilize a [**docker**](installation-prerequisites-setup-local-environment.md#run-xiond-with-docker) build. Ensure that you use the release corresponding to the version of `xiond` being used on the network where you will be interacting with.
 
 ### Installers
 
@@ -254,22 +254,32 @@ We recommend installing xiond with one of the following insallers for your respe
 {% tab title="macOS" %}
 Install `xiond` using Homebrew:
 
-`brew tap burnt-labs/xion`\
-`brew install xiond`
+```
+brew tap burnt-labs/xion
+brew install xiond
+```
 {% endtab %}
 
 {% tab title="Red Hat-based Linux" %}
-Install the `.rpm` package directly using `dnf` . For **x86\_64 architecture** it would be:
+Install the `.rpm` package directly using `dnf` .
 
-`sudo dnf install https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_amd64.rpm`
+For **x86\_64 architecture** it would be:
+
+```
+sudo dnf install https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_amd64.rpm
+```
 
 For **ARM64 architecture**:
 
-`sudo dnf install https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_arm64.rpm`&#x20;
+```
+sudo dnf install https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_arm64.rpm
+```
 {% endtab %}
 
 {% tab title="Debian-based Linux" %}
-Download the `.deb` package and install. For **x86\_64 architecture** it would be:
+Download the `.deb` package and install.
+
+For **x86\_64 architecture** it would be:
 
 ```
 curl -L -o xiond.deb https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_amd64.deb
@@ -307,14 +317,22 @@ sudo apk add --allow-untrusted xiond_18.0.0_linux_arm64.apk
 
 ### **Use Pre-built Binary**
 
-You will need to download the appropriate binary for your system architecture [https://github.com/burnt-labs/xion/releases/tag/v17.1.0](https://github.com/burnt-labs/xion/releases/tag/v17.1.0):
+You will need to download the appropriate binary for your system architecture [https://github.com/burnt-labs/xion/releases/tag/v18.0.0](https://github.com/burnt-labs/xion/releases/tag/v18.0.0):
 
 {% tabs %}
-{% tab title="Linux (amd64)" %}
-**Download the binary using**
+{% tab title="Linux" %}
+Download the linux binary.
 
+For **x86\_64 architecture** it would be:
+
+```sh
+wget https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_amd64.tgz
 ```
-wget https://github.com/burnt-labs/xion/releases/download/v17.1.0/xiond-17.1.0.tar.gz
+
+For **ARM64 architecture**:
+
+```sh
+wget https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_arm64.tgz
 ```
 
 
@@ -323,16 +341,24 @@ wget https://github.com/burnt-labs/xion/releases/download/v17.1.0/xiond-17.1.0.t
 
 Generate the SHA256 hash of the downloaded file:
 
-```
-sha256sum xiond-17.1.0.tar.gz
+```sh
+sha256sum <downloaded_file_name>
 ```
 {% endtab %}
 
-{% tab title="macOS (arm64)" %}
-Download the binary using:
+{% tab title="macOS" %}
+Download the binary.
 
+For **x86\_64 architecture** it would be:
+
+```sh
+wget https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_darwin_amd64.tgz
 ```
-wget https://github.com/burnt-labs/xion/releases/download/v17.1.0/xiond_17.1.0_darwin_arm64.zip
+
+For **ARM64 architecture**:
+
+```sh
+wget https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_darwin_arm64.tgz
 ```
 
 
@@ -341,8 +367,8 @@ wget https://github.com/burnt-labs/xion/releases/download/v17.1.0/xiond_17.1.0_d
 
 Generate the SHA256 hash of the downloaded file:
 
-```
-sha256sum xiond_17.1.0_darwin_arm64.zip
+```sh
+sha256sum <name-of-file>
 ```
 {% endtab %}
 {% endtabs %}
@@ -352,10 +378,18 @@ The `sha256sum` command should generate a hash string (e.g., `d41d8cd98f00b204e9
 Download the official checksum file:
 
 ```sh
-wget https://github.com/burnt-labs/xion/releases/download/v17.1.0/xiond-17.1.0-checksums.txt
+wget https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond-18.0.0-checksums.txt
 ```
 
 Compare the two hash strings to ensure they match. This confirms that the downloaded file is authentic and unaltered.
+
+#### Extract the Binary
+
+Extract the `.tgz` file:
+
+```shell
+tar -xvzf <downloaded_file_name>
+```
 
 #### **Add Executable Permissions**
 
@@ -409,11 +443,47 @@ xiond --help
 
 Using Docker ensures a clean and isolated environment for running `xiond`, eliminating the need for manual installation and dependency management.
 
+#### Optional: Persist Keys and Configuration
+
+By default, any keys or configuration you create inside a Docker container will be lost once the container is closed. If you want to **persist account data and configuration** across container sessions, you can mount a local volume.
+
+First create a dedicated directory on your host:
+
+```
+mkdir -p $HOME/.xion_docker
+```
+
+Then run the following command to start the `xiond` container session:
+
+```bash
+docker run -ti \
+  -v $HOME/xiond_data:/root/.xiond \
+  burntnetwork/xion:latest /bin/bash
+```
+
+This mounts your host's `$HOME/xiond_data` directory to the location inside the container where `xiond` stores its data (`/root/.xiond`). Any accounts or configurations created inside the container will now persist even after the container is stopped or removed.
+
+To verify persistence:
+
+1.  Run the container and create a key:
+
+    ```bash
+    xiond keys add myaccount
+    ```
+2.  Exit the container and re-run it with the same volume:
+
+    ```bash
+    docker run -ti -v $HOME/xiond_data:/root/.xiond burntnetwork/xion:latest /bin/bash
+    xiond keys list
+    ```
+
+You should still see `myaccount` listed.
+
 ***
 
 ### **Build from Source**
 
-If downloading the pre-built binary is not an option, you can install `xiond` from source. Ensure that **Go**, **Git**, and **Make** are installed.
+If downloading the pre-built binary or utilizing the installer is not an option, you can install `xiond` from source. Ensure that **Go**, **Git**, and **Make** are installed.
 
 #### **Clone the Repository and Build `xiond`**
 
@@ -428,10 +498,10 @@ This will install the `xiond` binary to your `GOPATH`.
 
 #### **Verify Installation**
 
-Check that `xiond` is properly installed:
+You might need to restart your terminal. Check that `xiond` is properly installed:
 
 ```sh
 xiond version
 ```
 
-If successful, `xiond` is now ready for use.
+If a version number is returned, `xiond` is now ready for use.
