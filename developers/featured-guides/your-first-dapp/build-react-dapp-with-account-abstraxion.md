@@ -98,7 +98,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 1. For the **"Type URL"** field, select `"/cosmwasm.wasm.v1.MsgExecuteContract"`.
 2. Enter a **"Description"** in the respective field. This will reflect the intended purpose of the request. This description will be displayed to users when they click **"Allow"** after connecting their account.
 3. In the **"Authorization Type"** field, select `"/cosmwasm.wasm.v1.ContractExecutionAuthorization"`.
-4. Enter the **contract address** in the **"Contract Address"** field — this should be the NFT smart contract created above.
+4. Enter the **contract address** in the **"Contract Address"** field — this should be the **Counter** smart contract created above.
 5. You **must** select at least one of the following::
    * **"Max Call"** – Limits the number of times a user can execute a transaction under this fee grant.
    * **"Max Funds"** – Specifies the maximum amount of funds allocated for covering transaction fees.
@@ -540,7 +540,7 @@ export default function Page(): JSX.Element {
 {% endcode %}
 
 {% hint style="info" %}
-Update "**YOUR\_COUNTER\_CONTRACT\_ADDRESS\_HERE**" with the the NFT Contract Address you created above.
+Update "**YOUR\_COUNTER\_CONTRACT\_ADDRESS\_HERE**" with the the **Counter** contract address you created above.
 {% endhint %}
 
 #### What does this do?
