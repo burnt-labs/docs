@@ -236,6 +236,25 @@ Each Grant Config will be displayed under the **Permissions** section in the Das
 
 <figure><img src="../../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
 
+### Delete a Grant Configs
+
+If you need to remove a grant configuration from your treasury contract, you can easily do so through the grant config listing interface. The process involves selecting the grant you wish to delete, confirming the action.
+
+To delete an existing grant configurations click the **trash bin** icon on the right of the listed permission.
+
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+**Confirm Deletion**
+
+After clicking the trash bin icon, a popup window will appear with the title **"Remove grant config"**. The body of the popup will display the following message: _"**Are you sure you want to remove the \<type url of config> grant config?**"_
+
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+* **Cancel**: If you change your mind and do not want to delete the grant config, simply click the **Cancel** button to close the popup without making any changes.
+* **Confirm**: If you're sure you want to delete the grant config, click the **Confirm** button.
+
+After successful deletion, the page will reload and display a success message confirming that the grant configuration has been removed.
+
 
 
 ## Client-Side Implementation (React App)
