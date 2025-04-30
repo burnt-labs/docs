@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # xion-testnet-1 <=> axelar-lisbon-3
 
 **Channel information**

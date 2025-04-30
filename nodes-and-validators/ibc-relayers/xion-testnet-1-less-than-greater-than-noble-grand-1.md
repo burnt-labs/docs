@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # xion-testnet-1 <=> noble-grand-1
 
 **Channel Information**

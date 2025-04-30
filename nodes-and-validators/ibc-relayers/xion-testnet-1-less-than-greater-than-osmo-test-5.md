@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # xion-testnet-1 <=> osmo-test-5
 
 **Channel Information // transfer**

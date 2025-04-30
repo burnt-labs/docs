@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # xion-testnet-1 <=> injective-888
 
 **Channel Information**
