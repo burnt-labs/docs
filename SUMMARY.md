@@ -19,7 +19,7 @@
 * [Xion Quick Start](developers/featured-guides/README.md)
   * [Set Up Local Environment](developers/featured-guides/setup-local-environment/README.md)
     * [Setting up your Local Development Environment for XION](developers/featured-guides/setup-local-environment/installation-prerequisites-setup-local-environment/README.md)
-      * [Setting Up XION Developer Environment on Windows (WSL2 + Ubuntu)](developers/featured-guides/setup-local-environment/installation-prerequisites-setup-local-environment/setting-up-xion-developer-environment-on-windows-wsl2-+-ubuntu.md)
+      * [Setting up your XION Developer Environment on Windows (WSL2 + Ubuntu)](developers/featured-guides/setup-local-environment/installation-prerequisites-setup-local-environment/setting-up-your-xion-developer-environment-on-windows-wsl2-+-ubuntu.md)
     * [Set Up an Integrated Development Environment (IDE)](developers/featured-guides/setup-local-environment/setup-cosmwasm-ide.md)
     * [Interacting with Xion Chain using Xion Daemon](developers/featured-guides/setup-local-environment/interact-with-xion-chain-setup-xion-daemon.md)
   * [Your First Contract](developers/featured-guides/your-first-contract/README.md)
