@@ -120,7 +120,7 @@
   * [Obtain Funds](nodes-and-validators/become-a-validator/obtain-funds/README.md)
     * [Testnet](nodes-and-validators/become-a-validator/obtain-funds/testnet.md)
   * [Create Validator](nodes-and-validators/become-a-validator/create-validator.md)
-* [IBC Relayers & Cross-Chain Communication](nodes-and-validators/ibc-relayers/README.md)
+* [IBC Relayers](nodes-and-validators/ibc-relayers/README.md)
   * [xion-testnet-1 <=> axelar-lisbon-3](nodes-and-validators/ibc-relayers/xion-testnet-1-less-than-greater-than-axelar-lisbon-3.md)
   * [xion-testnet-1 <=> injective-888](nodes-and-validators/ibc-relayers/xion-testnet-1-less-than-greater-than-injective-888.md)
   * [xion-testnet-1 <=> noble-grand-1](nodes-and-validators/ibc-relayers/xion-testnet-1-less-than-greater-than-noble-grand-1.md)
