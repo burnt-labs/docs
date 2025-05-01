@@ -180,7 +180,7 @@ Now, upload the contract to the blockchain:
 RES=$(xiond tx wasm store ./artifacts/user_map.wasm \
       --chain-id xion-testnet-2 \
       --gas-adjustment 1.3 \
-      --gas-prices 0.1uxion \
+      --gas-prices 0.001uxion \
       --gas auto \
       -y --output json \
       --node https://rpc.xion-testnet-2.burnt.com:443 \
