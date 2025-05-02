@@ -23,7 +23,7 @@ The `--install` comand performs the following actions:
 * Set WSL2 as the default
 * Downloads and installs the default Ubuntu Linux distribution. You will need to restart your machine during the installation process.
 
-If you would want to install another Linux distribution other than Ubuntu or another version of Ubuntu you would first use the following command to get the available listing available:
+If you want to install a different Linux distribution or another version of Ubuntu, first run the following command to view the list of available distributions:
 
 ```powershell
 wsl --list --online
@@ -36,6 +36,10 @@ wsl --install -d <Distribution Name>
 ```
 
 Replace `<Distribution Name>` with the name of the distribution you would like to install.
+
+{% hint style="info" %}
+This guide assumes that you have Ubuntu installed as your Linux distribution.
+{% endhint %}
 
 Check to make sure WSL2 is set as default:
 
