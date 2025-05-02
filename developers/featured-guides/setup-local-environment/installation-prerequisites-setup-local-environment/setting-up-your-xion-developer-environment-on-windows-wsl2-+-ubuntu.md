@@ -151,7 +151,7 @@ Once compiled, the optimized contract will be available at:
 ./artifacts/cw_counter.wasm
 ```
 
-### Use Visual Studio Code
+### Using Visual Studio Code
 
 To optimize the contract from within **Visual Studio Code**, open your project using the command:
 
