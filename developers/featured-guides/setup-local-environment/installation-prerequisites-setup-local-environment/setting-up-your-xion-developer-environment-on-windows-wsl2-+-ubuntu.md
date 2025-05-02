@@ -1,4 +1,4 @@
-# Setting Up XION Developer Environment on Windows (WSL2 + Ubuntu)
+# Setting up your XION Developer Environment on Windows (WSL2 + Ubuntu)
 
 This guide walks you through setting up a local XION developer environment on a Windows machine using **WSL2** with **Ubuntu**. This is the recommended setup for Windows users who want to work with `xiond`, build and interact with their CosmWasm smart contracts.
 
@@ -119,7 +119,47 @@ _Be sure to add the period at the end of the command to open the current directo
 
 ![VS Code with WSL extensions displayed](https://learn.microsoft.com/en-us/windows/wsl/media/vscode-remote-wsl-extensions.png)
 
-Now within Visual Studo Code you can launch a terminal and interact with&#x20;
+## Optimize Contract: Example
+
+In this example, we’ll walk through the steps to compile a Xion smart contract using the setup described above.
+
+### **Clone the Repository** <a href="#clone-the-repository" id="clone-the-repository"></a>
+
+Start the **Ubuntu** app, and in the terminal, use the following commands to clone the repository and navigate into the project directory:
+
+```sh
+git clone https://github.com/burnt-labs/cw-counter
+cd cw-counter
+```
+
+{% hint style="info" %}
+Make sure Docker is running.
+{% endhint %}
+
+Next, compile and optimize the smart contract using the [CosmWasm Optimizing Compiler](https://github.com/CosmWasm/optimizer). You need to have **Docker** running to execute the command below:
+
+```sh
+docker run --rm -v "$(pwd)":/code \
+  --mount type=volume,source="$(basename "$(pwd)")_cache",target=/target \
+  --mount type=volume,source=registry_cache,target=/usr/local/cargo/registry \
+  cosmwasm/optimizer:0.16.0
+```
+
+Once compiled, the optimized contract will be available at:
+
+```sh
+./artifacts/cw_counter.wasm
+```
+
+### Use Visual Studio Code
+
+To optimize the contract from within **Visual Studio Code**, open your project using the command:
+
+```sh
+code .
+```
+
+This will launch the project in Visual Studio Code. From there, open a terminal within the IDE and run the Docker command above.
 
 
 
