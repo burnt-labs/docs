@@ -74,7 +74,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 Once the preview is to your liking click the "**Create**" button to create the Treasury contract.
 
 {% hint style="info" %}
-Learn more about Treasury Contracts [here](../../featured-guides/your-first-dapp/create-a-gas-less-user-experience/).
+Learn more about Treasury Contracts [here](../../xion-quick-start/your-first-dapp/create-a-gas-less-user-experience/).
 {% endhint %}
 
 ## **Configuring Abstraxion for Authentication**

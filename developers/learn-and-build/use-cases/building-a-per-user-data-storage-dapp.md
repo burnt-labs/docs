@@ -2,8 +2,6 @@
 
 Let's build a simple yet powerful decentralized application (dApp) that allows users to store and retrieve their **JSON** data. For developers coming from **Web2**, this serves as an excellent introduction to **Web3** concepts by providing familiar functionality (user-specific data storage) implemented in a decentralized way.
 
-
-
 ## User Map Contract
 
 The **User Map** contract is a lightweight and beginner friendly smart contract designed to help developers, especially those coming from Web2, understand how to manage per-user data in a decentralized environment. You can find the source code here: [github.com/burnt-labs/contracts/tree/main/contracts/user\_map](https://github.com/burnt-labs/contracts/tree/main/contracts/user_map).
@@ -138,11 +136,9 @@ The following are some use cases for that this contract could cover.
     }
     ```
 
-
-
 ## Deploying User Map Contract On-Chain <a href="#deploying-a-contract-on-chain" id="deploying-a-contract-on-chain"></a>
 
-If you're new to compiling, deploying, and instantiating smart contracts, we recommend following the [guide](../../featured-guides/your-first-contract/deploy-a-cosmwasm-smart-contract.md) to learn the process. Once deployed, the contract address will be referenced in your **Treasury contract configuration** and in the upcoming **code updates**. We'll also walk through the major steps  below.
+If you're new to compiling, deploying, and instantiating smart contracts, we recommend following the [guide](../../xion-quick-start/your-first-contract/deploy-a-cosmwasm-smart-contract.md) to learn the process. Once deployed, the contract address will be referenced in your **Treasury contract configuration** and in the upcoming **code updates**. We'll also walk through the major steps below.
 
 ### **Clone the Repository** <a href="#clone-the-repository" id="clone-the-repository"></a>
 
@@ -287,8 +283,6 @@ Example output:
 xion1v6476wrjmw8fhsh20rl4h6jadeh5sdvlhrt8jyk2szrl3pdj4musyxj6gl
 ```
 
-
-
 ## Deploying a Treasury Contract <a href="#deploying-a-treasury-contract-for-gasless-transactions" id="deploying-a-treasury-contract-for-gasless-transactions"></a>
 
 Before integrating the **Abstraxion SDK** into the application, we first need to deploy a **Treasury Contract**. This contract facilitates **gasless transactions** for your smart contract by handling **fee grants** on behalf of users as well as allowing users to grant authorization(s) to your dapp to execute certain account transactions on their behalf.
@@ -303,7 +297,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 
 <figure><img src="../../../.gitbook/assets/image (45).png" alt=""><figcaption><p>Example of a general <strong>Fee Grant</strong> configuration</p></figcaption></figure>
 
-1. Enter a **"Description"** in the respective field. This will reflect the intended purpose of the request.&#x20;
+1. Enter a **"Description"** in the respective field. This will reflect the intended purpose of the request.
 2. In the **"Allowance Type"** field, enter `"/cosmwasm.feegrant.v1beta1.BasicAllowance"`.
 3. In the **"Spend Limit"** field, enter **`1000uxion`**.
 4. Click the **"Save"** button to apply the configuration.
@@ -333,8 +327,6 @@ Once the preview is to your liking click the "**Create**" button to create the T
 Learn more about Treasury Contracts [here](https://docs.burnt.com/xion/developers/featured-guides/your-first-dapp/create-a-gas-less-user-experience).
 {% endhint %}
 
-
-
 ## Building the Frontend
 
 We've created a frontend which is a [Next.js](https://nextjs.org/) application built to interact with the **User Map** smart contract that can be downloaded at [https://github.com/burnt-labs/xion-user-map-json-store-frontend](https://github.com/burnt-labs/xion-user-map-json-store-frontend). It showcases how users can connect their wallets, submit JSON data to update their record, and query the stored data.
@@ -344,8 +336,6 @@ We've created a frontend which is a [Next.js](https://nextjs.org/) application b
 ### Manual Installation
 
 You will first need to clone to repository using `git clone` [`https://github.com/burnt-labs/xion-user-map-json-store-frontend`](https://github.com/burnt-labs/xion-user-map-json-store-frontend). After doing so you will have to change into the newly created directory and then execute the steps below.
-
-
 
 1. Install dependencies:
 
@@ -374,8 +364,6 @@ NEXT_PUBLIC_REST_URL="https://api.xion-testnet-2.burnt.com"
 ```bash
 npm run dev
 ```
-
-
 
 ### Frontend: Main Page Breakdown
 
