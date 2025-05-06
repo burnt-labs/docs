@@ -18,7 +18,7 @@
 
 * [Xion Quick Start](developers/featured-guides/README.md)
   * [Zero to Dapp in 5 Minutes](developers/featured-guides/zero-to-dapp-in-5-minutes/README.md)
-    * [Launch a User Map dapp on XION in 5 Minutes](developers/featured-guides/zero-to-dapp-in-5-minutes/launch-a-user-map-dapp-on-xion-in-5-minutes.md)
+    * [Launch a User Map Dapp on XION in 5 Minutes](developers/featured-guides/zero-to-dapp-in-5-minutes/launch-a-user-map-dapp-on-xion-in-5-minutes.md)
   * [Set Up Local Environment](developers/featured-guides/setup-local-environment/README.md)
     * [Setting up your Local Development Environment for XION](developers/featured-guides/setup-local-environment/installation-prerequisites-setup-local-environment/README.md)
       * [Setting up your XION Developer Environment on Windows (WSL2 + Ubuntu)](developers/featured-guides/setup-local-environment/installation-prerequisites-setup-local-environment/setting-up-your-xion-developer-environment-on-windows-wsl2-+-ubuntu.md)
