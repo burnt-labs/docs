@@ -11,6 +11,6 @@ To make this experience seamless, we’ve introduced the **Treasury contract**, 
 
 Together with our **OAuth2-style authentication** and **Abstraxion library** for generating secure, temporary session keys, these tools enable frictionless, secure, and user-friendly dapp experiences, **without compromising on decentralization or control**.
 
-The following guides will help you understand how the Treasury contract works and how to set it up and configure it to power your dApp’s transaction flow.
+The following guides will help you understand how the Treasury contract works and how to set it up and configure it to power your dapp’s transaction flow:
 
-<table data-view="cards"><thead><tr><th></th></tr></thead><tbody><tr><td><strong>Enabling Gasless</strong> <a href="https://docs.burnt.com/xion/developers/featured-guides/your-first-dapp/treasury-contracts"><strong>Transactions with Treasury Contracts</strong></a><br>Deploying your Treasury Contract for Delegated Authorization and Gasless Transactions.</td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th></tr></thead><tbody><tr><td><a href="https://docs.burnt.com/xion/developers/featured-guides/your-first-dapp/treasury-contracts"><strong>Enabling Gasless Transactions with Treasury Contracts</strong></a><br>Deploying your Treasury Contract for Delegated Authorization and Gasless Transactions.</td></tr></tbody></table>
