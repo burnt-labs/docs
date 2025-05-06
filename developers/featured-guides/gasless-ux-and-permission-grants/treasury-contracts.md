@@ -259,7 +259,7 @@ After successful deletion, the page will reload and display a success message co
 
 ## Client-Side Implementation (React App)
 
-To integrate gasless transactions and delegated authorizations using a Treasury contract in your dApp, follow this [**full guide**](build-react-dapp-with-account-abstraxion.md).
+To integrate gasless transactions and delegated authorizations using a Treasury contract in your dApp, follow this [**full guide**](../your-first-dapp/build-react-dapp-with-account-abstraxion.md).
 
 You’ll need to configure the `AbstraxionProvider` by setting the Treasury contract in the config:
 
