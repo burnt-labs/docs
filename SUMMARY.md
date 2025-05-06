@@ -17,6 +17,8 @@
 ## developers
 
 * [Xion Quick Start](developers/featured-guides/README.md)
+  * [Zero to Dapp in 5 Minutes](developers/featured-guides/zero-to-dapp-in-5-minutes/README.md)
+    * [Launch a User Map dapp on XION in 5 Minutes](developers/featured-guides/zero-to-dapp-in-5-minutes/launch-a-user-map-dapp-on-xion-in-5-minutes.md)
   * [Set Up Local Environment](developers/featured-guides/setup-local-environment/README.md)
     * [Setting up your Local Development Environment for XION](developers/featured-guides/setup-local-environment/installation-prerequisites-setup-local-environment/README.md)
       * [Setting up your XION Developer Environment on Windows (WSL2 + Ubuntu)](developers/featured-guides/setup-local-environment/installation-prerequisites-setup-local-environment/setting-up-your-xion-developer-environment-on-windows-wsl2-+-ubuntu.md)
@@ -25,7 +27,6 @@
   * [Your First Contract](developers/featured-guides/your-first-contract/README.md)
     * [Deploying Your First Smart Contract on XION](developers/featured-guides/your-first-contract/deploy-a-cosmwasm-smart-contract.md)
   * [Your First DApp](developers/featured-guides/your-first-dapp/README.md)
-    * [Quick Start: Launch a User Map dapp on XION in 5 Minutes](developers/featured-guides/your-first-dapp/quick-start-launch-a-user-map-dapp-on-xion-in-5-minutes.md)
     * [Enabling Gasless Transactions with Treasury Contracts](developers/featured-guides/your-first-dapp/treasury-contracts.md)
     * [Account Abstraction with Gasless Transactions](developers/featured-guides/your-first-dapp/build-react-dapp-with-account-abstraxion.md)
     * [Create a Gas-less User Experience](developers/featured-guides/your-first-dapp/create-a-gas-less-user-experience/README.md)
