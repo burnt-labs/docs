@@ -51,7 +51,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 
 #### Fee Grant
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Example of a general <strong>Fee Grant</strong> configuration</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Example of a general <strong>Fee Grant</strong> configuration</p></figcaption></figure>
 
 1. Enter a **"Description"** in the description field. This will reflect the intended purpose of the request.
 2. In the **"Allowance Type"** field, enter `"/cosmwasm.feegrant.v1beta1.BasicAllowance"`.
@@ -60,7 +60,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 
 #### **Grant Config**
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Example of additional <strong>Grant</strong> configuration</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Example of additional <strong>Grant</strong> configuration</p></figcaption></figure>
 
 1. For this example the **"Type URL"** would be `"`/cosmos.bank.v1beta1.MsgSend`"` as this would allow for the dapp the send tokens on behalf of the user.
 2. Enter a **"Description"** in the description field. This will reflect the intended purpose of the request. This description will be displayed to users when they click **"Allow"** after connecting their account.
@@ -69,7 +69,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 
 #### Treasury Instance Preview
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 Once the preview is to your liking click the "**Create**" button to create the Treasury contract.
 
@@ -463,7 +463,7 @@ The following steps outline how to use the dApp.
 
 The first step after accessing the dApp at [**http://localhost:3000/**](http://localhost:3000/) is to log in by clicking the **CONNECT** button.
 
-<figure><img src="../../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
 ### Get Token Balance
 
@@ -471,7 +471,7 @@ After logging in, you will see your **Meta Account** address. You need to send s
 
 Once the tokens have been sent, click the **Get Token Balance** button to retrieve the updated balance.
 
-<figure><img src="../../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
 
 ### **Sending Tokens**
 
@@ -481,11 +481,11 @@ To send tokens to another address:
 2. Enter the amount to send in the **Amount** text box.
 3. Click the **Send Tokens** button.
 
-<figure><img src="../../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
 
 After submitting the transaction, you will see the **transaction hash**, the **block height** at which the transaction was executed, and a **URL** to view the transaction details in the block explorer.
 
-<figure><img src="../../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
 
 You now have a functional React dApp that:
 

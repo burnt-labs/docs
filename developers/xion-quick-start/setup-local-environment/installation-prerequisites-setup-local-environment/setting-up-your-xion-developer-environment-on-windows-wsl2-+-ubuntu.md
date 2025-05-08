@@ -71,7 +71,7 @@ Click the Windows **start menu** button and in the search field enter "**Ubuntu*
 
 Click the **Ubuntu app** to open the distribution and in the terminal that's loaded you will be asked to create a **User Name** and **Password** for the Linux distribution. This **User Name** and **Password** is specific to each separate Linux distribution that you install and has no bearing on your Windows user name.
 
-<figure><img src="../../../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
 
 ## Update and upgrade packages <a href="#update-and-upgrade-packages" id="update-and-upgrade-packages"></a>
 
