@@ -1,4 +1,4 @@
-# Quick Start: Launch a User Map dapp on XION in 5 Minutes
+# Launch a User Map Dapp on XION in 5 Minutes
 
 Building a dapp on XION typically involves three main components:
 
@@ -46,11 +46,11 @@ To make this much easier, we’ve created a [**one-click frontend solution**](ht
 
 1. Go to [https://usermap-launcher.burnt.com](https://usermap-launcher.burnt.com) and log in using your **Meta Account**
 
-<figure><img src="../../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
 
 2. Click the **Launch User Map & Fund Treasury** button
 
-<figure><img src="../../../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
 
 Behind the scenes, this:
 
@@ -67,7 +67,7 @@ NEXT_PUBLIC_RPC_URL=...
 NEXT_PUBLIC_REST_URL=...
 ```
 
-<figure><img src="../../../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -101,11 +101,11 @@ npm run dev
 
 Visit `http://localhost:3000` in your browser to open the app. You should see the following:
 
-<figure><img src="../../../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
 
 Once logged in, you will be presented with an interface where you can enter a JSON object. When you click "Submit JSON," a transaction will be executed to update the User Map with the provided JSON data. You can also select from the other menu options that allow you to retrieve data from the contract.
 
-<figure><img src="../../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
 
 ***
 

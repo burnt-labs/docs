@@ -79,7 +79,7 @@ Follow these steps to install the extension:
 2. In the **Search** field enter **rust-analyzer**
 3. Click the **install** button to the bottom right of **rust-analyzer**
 
-<figure><img src="../../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
 ### **Installing CodeLLDB**
 
@@ -93,7 +93,7 @@ Follow these installation steps:
 
 For comprehensive usage details, refer to the [CodeLLDB Manual](https://github.com/vadimcn/vscode-lldb).
 
-<figure><img src="../../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
 
 ### Cosmy wasmy <a href="#cosmy-wasmy" id="cosmy-wasmy"></a>
 

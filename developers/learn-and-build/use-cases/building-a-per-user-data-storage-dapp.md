@@ -295,7 +295,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 
 #### **Fee Grant**
 
-<figure><img src="../../../.gitbook/assets/image (45).png" alt=""><figcaption><p>Example of a general <strong>Fee Grant</strong> configuration</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (58).png" alt=""><figcaption><p>Example of a general <strong>Fee Grant</strong> configuration</p></figcaption></figure>
 
 1. Enter a **"Description"** in the respective field. This will reflect the intended purpose of the request.
 2. In the **"Allowance Type"** field, enter `"/cosmwasm.feegrant.v1beta1.BasicAllowance"`.
@@ -304,7 +304,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 
 #### **Grant Config**
 
-<figure><img src="../../../.gitbook/assets/image (46).png" alt=""><figcaption><p>Example of additional <strong>Grant</strong> configuration</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (59).png" alt=""><figcaption><p>Example of additional <strong>Grant</strong> configuration</p></figcaption></figure>
 
 1. For the **"Type URL"** field, select `"/cosmwasm.wasm.v1.MsgExecuteContract"`.
 2. Enter a **"Description"** in the respective field. This will reflect the intended purpose of the request. This description will be displayed to users when they click **"Allow"** after connecting their account.
@@ -319,7 +319,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 
 #### **Treasury Instance Preview**
 
-<figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (60).png" alt=""><figcaption></figcaption></figure>
 
 Once the preview is to your liking click the "**Create**" button to create the Treasury contract.
 

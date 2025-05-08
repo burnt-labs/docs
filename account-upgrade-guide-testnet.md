@@ -1,6 +1,6 @@
 ---
-icon: bullhorn
 hidden: true
+icon: bullhorn
 ---
 
 # Account Upgrade Guide (Testnet)
@@ -14,7 +14,7 @@ What you need to do:
 1. Login to the Dashboard: [https://testnet.dashboard.burnt.com/](https://testnet.dashboard.burnt.com/)
 2.  Click on Upgrade account
 
-    <figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src=".gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 If you have any questions or run into any issues, feel free to ask in our Telegram Developer Group (Join [here](https://t.me/+SC47NRhVz9Q2MDg0) :speech\_balloon:)

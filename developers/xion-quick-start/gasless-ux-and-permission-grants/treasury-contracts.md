@@ -79,7 +79,7 @@ The **Dashboard** displays all your deployed **Treasury Contracts**. Once you cr
 * Contract details are **stored in your browser's local storage**.
 * Switching **browsers or devices will not retain your deployed contract list**.
 
-<figure><img src="../../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
 
 ## Creating a Treasury Contract
 
@@ -88,7 +88,7 @@ To create a new **Treasury Contract**, follow these steps:
 1. Click the **"New treasury"** button located at the **top right corner** of the Dashboard.
 2. A setup screen will appear, prompting you to configure the contract settings.
 
-<figure><img src="../../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
 
 You must complete the required fields for each module:
 
@@ -129,7 +129,7 @@ The **Fee Grant** section allows you to set up a mechanism to cover gas fees for
 
 Once saved, the Fee Grant settings will be applied, which you can see in the "T**reasury Instance Preview**":
 
-<figure><img src="../../../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
 
 ### Grant Configuration
 
@@ -163,7 +163,7 @@ This section allows you to define **transaction permissions (allowances)** that 
 
 Once configured, these settings define how your Treasury Contract interacts with users and enforces controlled transaction execution.
 
-<figure><img src="../../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
 
 Once you've entered all the required information, click the **"Add contract grant"** button.
 
@@ -172,7 +172,7 @@ Once you've entered all the required information, click the **"Add contract gran
 * You can add **multiple Grant Configs**, allowing you to define different permissions for various  interactions.
 * After adding all the necessary grant configurations, click the **"Create"** button to finalize and deploy the Treasury Contract.
 
-<figure><img src="../../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
 
 Once created, the contract will appear on the **Dashboard**.
 
@@ -186,7 +186,7 @@ Once created, the contract will appear on the **Dashboard**.
 
 Once a Treasury contract is created, it will appear in the **Dashboard**. To edit it, simply click on the contract from the list, which will open a management screen.
 
-<figure><img src="../../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
 
 ### Withdraw Funds
 
@@ -196,7 +196,7 @@ To withdraw any funds sent to the Treasury contract:
 2. A withdrawal screen will appear.
 3. Enter the amount to withdraw which transfers funds from the Treasury contract back to the admin account.
 
-<figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
 
 ### Update Params <a href="#radix-r14" id="radix-r14"></a>
 
@@ -205,7 +205,7 @@ To modify the parameters:
 1. Click the **"Update Params"** button.
 2. A configuration screen will load, allowing you to adjust relevant params.
 
-<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
 
 ### Update Fee Config
 
@@ -214,17 +214,17 @@ To edit the fee config:
 1. Click the **"Edit"** button under the **Fee Config** section.
 2. This will open a screen where you can adjust the fee parameters.
 
-<figure><img src="../../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
 
 ### Update and Add Grant Configs
 
 To modify existing grant configurations or add new ones, click the **arrow** next to the listed permission.
 
-<figure><img src="../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
 
 A screen will open where you can edit the configuration:
 
-<figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
 
 If creating a new grant:
 
@@ -234,7 +234,7 @@ If creating a new grant:
 
 Each Grant Config will be displayed under the **Permissions** section in the Dashboard:
 
-<figure><img src="../../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
 
 ### Delete a Grant Configs
 
@@ -292,7 +292,7 @@ export default function RootLayout({
 
 This configuration also determines the redirect URL users see after clicking **Connect** and before clicking **Allow** (as shown in the screenshot below).
 
-<figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
 
 While connecting their accounts, users will see a list of **Allowances** — this message is set during the Treasury contract’s creation by the developer while configuring the grant settings.
 
@@ -301,7 +301,7 @@ Once the user clicks **Allow**, the dApp:
 1. **Creates Grant permissions**
 2. **Deploys a Fee Grant** on behalf of the user.
 
-<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
 Whenever your app executes a transaction using `.execute`, make sure the **granter** in the fee configuration (4th parameter) is set to the Treasury contract’s address:
 
