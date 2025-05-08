@@ -248,70 +248,107 @@ To install `xiond`, you can either use an [**installer**](./#installers), downlo
 
 ### Installers
 
-We recommend installing xiond with one of the following insallers for your respective operating system:
+We recommend installing xiond with one of the following installers for your respective operating system:
 
 {% tabs %}
 {% tab title="macOS" %}
-Install `xiond` using Homebrew:
+Tap the burnt-labs/xion repository
 
-```
+```bash
 brew tap burnt-labs/xion
+```
+
+Install xiond
+
+```bash
 brew install xiond
 ```
-{% endtab %}
 
-{% tab title="Red Hat-based Linux" %}
-Install the `.rpm` package directly using `dnf` .
+Verify Installation
 
-For **x86\_64 architecture** it would be:
-
-```
-sudo dnf install https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_amd64.rpm
-```
-
-For **ARM64 architecture**:
-
-```
-sudo dnf install https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_arm64.rpm
+```bash
+xiond version
 ```
 {% endtab %}
 
 {% tab title="Debian-based Linux" %}
-Download the `.deb` package and install.
+Download the repository key
 
-For **x86\_64 architecture** it would be:
-
-```
-curl -L -o xiond.deb https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_amd64.deb
-sudo dpkg -i xiond.deb
+```bash
+wget -qO - https://packages.burnt.com/apt/gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/burnt-keyring.gpg
 ```
 
-For **ARM64 architecture**:
+Add the burnt repository to your apt sources list, include the signing key
 
+```bash
+echo "deb [signed-by=/usr/share/keyrings/burnt-keyring.gpg] http://packages.burnt.com/apt /" | sudo tee /etc/apt/sources.list.d/burnt.list
 ```
-curl -L -o xiond.deb https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_arm64.deb
-sudo dpkg -i xiond.deb
+
+Update sources, and install xiond
+
+```bash
+sudo apt update
+sudo apt install xiond
+```
+
+Verify Installation
+
+```bash
+xiond version
+```
+{% endtab %}
+
+{% tab title="Red Hat-based Linux" %}
+Import the burnt repository key
+
+```bash
+sudo rpm --import https://packages.burnt.com/yum/gpg.key
+```
+
+Add the burnt repository to your repos list
+
+```bash
+printf "[burnt]\nname=Burnt Repo\nenabled=1\nbaseurl=https://packages.burnt.com/yum/\n" | sudo tee /etc/yum.repos.d/burnt.repo
+```
+
+Install xiond
+
+```bash
+sudo dnf install xiond
+```
+
+Verify Installation
+
+```bash
+xiond version
 ```
 {% endtab %}
 
 {% tab title="Alpine Linux" %}
-Install the `.apk` package using `apk`.
+Download the repository key
 
-**For x86\_64 architecture**:
-
-```
-wget https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_amd64.apk
-sudo apk add --allow-untrusted xiond_18.0.0_linux_amd64.apk
+```bash
+wget -qO - https://alpine.fury.io/burnt/burnt@fury.io-b8abd990.rsa.pub | sudo tee /etc/apk/keys/burnt@fury.io-b8abd990.rsa.pub 
 ```
 
-**For ARM64 architecture:**
+Add the burnt repository to your repository list, include the signing key
 
-```
-wget https://github.com/burnt-labs/xion/releases/download/v18.0.0/xiond_18.0.0_linux_arm64.apk
-sudo apk add --allow-untrusted xiond_18.0.0_linux_arm64.apk
+```bash
+echo "https://alpine.fury.io/burnt" | sudo tee -a /etc/apk/repositories
 ```
 
-**Note:** `--allow-untrusted` is required because the package is not signed by Alpine's official package repository.
+Update sources, and install xiond
+
+```bash
+sudo apk update
+sudo apk add xiond
+```
+
+Verify Installation
+
+```bash
+xiond version
+```
 {% endtab %}
 {% endtabs %}
 
