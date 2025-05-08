@@ -278,7 +278,7 @@ Download the repository key
 wget -qO - https://packages.burnt.com/apt/gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/burnt-keyring.gpg
 ```
 
-Add the burnt repository to your apt sources list, inlude the signing key
+Add the burnt repository to your apt sources list, include the signing key
 
 ```bash
 echo "deb [signed-by=/usr/share/keyrings/burnt-keyring.gpg] http://packages.burnt.com/apt /" | sudo tee /etc/apt/sources.list.d/burnt.list
