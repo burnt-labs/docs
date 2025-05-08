@@ -331,7 +331,7 @@ Download the repository key
 wget -qO - https://alpine.fury.io/burnt/burnt@fury.io-b8abd990.rsa.pub | sudo tee /etc/apk/keys/burnt@fury.io-b8abd990.rsa.pub 
 ```
 
-Add the burnt repository to your repository list, inlude the signing key
+Add the burnt repository to your repository list, include the signing key
 
 ```bash
 echo "https://alpine.fury.io/burnt" | sudo tee /etc/apk/repositories
