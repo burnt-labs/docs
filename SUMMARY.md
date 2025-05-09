@@ -22,7 +22,7 @@
     * [React Native Mobile Dapp on XION in 5 Minutes](developers/xion-quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-on-xion-in-5-minutes.md)
   * [Set Up Local Environment](developers/xion-quick-start/setup-local-environment/README.md)
     * [Setting up your Local Smart Contract Development Environment for XION](developers/xion-quick-start/setup-local-environment/installation-prerequisites-setup-local-environment/README.md)
-      * [Setting up your XION Developer Environment on Windows (WSL2 + Ubuntu)](developers/xion-quick-start/setup-local-environment/installation-prerequisites-setup-local-environment/setting-up-your-xion-developer-environment-on-windows-wsl2-+-ubuntu.md)
+      * [Setting up your XION Smart Contract Development Environment on Windows (WSL2 + Ubuntu)](developers/xion-quick-start/setup-local-environment/installation-prerequisites-setup-local-environment/setting-up-your-xion-smart-contract-development-environment-on-windows-wsl2-+-ubuntu.md)
     * [Set Up an Integrated Development Environment (IDE)](developers/xion-quick-start/setup-local-environment/setup-cosmwasm-ide.md)
     * [Interacting with Xion Chain using Xion Daemon](developers/xion-quick-start/setup-local-environment/interact-with-xion-chain-setup-xion-daemon.md)
   * [Your First Contract](developers/xion-quick-start/your-first-contract/README.md)
