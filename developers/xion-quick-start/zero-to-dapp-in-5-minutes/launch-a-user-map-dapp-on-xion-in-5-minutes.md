@@ -6,7 +6,7 @@ Building a dapp on XION typically involves three main components:
 * **A Treasury contract** – Enables gasless transactions using **Fee Grants**, making onboarding smoother for users. It also handles **Authorization Grants**, which allow your frontend to execute transactions on behalf of the user, enabling a more Web2-like experience through our OAuth2-style **Abstraxion** solution.
 * **A frontend** – This is your dapp’s interface, used to display data and trigger transactions via the smart contract.
 
-As a beginner to XION development, getting a fully functional dapp up and running should be simple and shouldn’t require any complex setup. With this in mind, we’ve created a [**one-click frontend solution**](https://usermap-launcher.burnt.com) for the **User Map** dapp that handles the creation of both the **User Map** and **Treasury** contracts, along with a fully built [**frontend**](https://github.com/burnt-labs/xion-user-map-json-store-frontend) for interacting with the User Map contract.
+As a beginner to XION development, getting a fully functional dapp up and running should be simple and shouldn’t require any complex setup. With this in mind, we’ve created a [**one-click frontend solution**](https://quickstart.dev.testnet.burnt.com) for the **User Map** dapp that handles the creation of both the **User Map** and **Treasury** contracts, along with a fully built [**frontend**](https://github.com/burnt-labs/xion-user-map-json-store-frontend) for interacting with the User Map contract.
 
 {% hint style="info" %}
 You should have your demo dapp up and running in under **5 minutes**. Once you're familiar with the workflow, you can move on to the advanced [**User Map guide**](../../learn-and-build/use-cases/building-a-per-user-data-storage-dapp.md).
@@ -40,11 +40,11 @@ Before you begin, make sure you have the following installed:
 
 **Compiling** and **instantiating** smart contracts can feel like huge tasks, especially for new developers. You typically need to set up your development environment with tools like **Docker** and **xiond**, and go through the full process of compiling, deploying, and instantiating your contracts manually. On top of that, creating and configuring a Treasury contract via the [**Dev Portal**](https://dev.testnet.burnt.com) can be overwhelming if you're just getting started.
 
-To make this much easier, we’ve created a [**one-click frontend solution**](https://usermap-launcher.burnt.com) for this **User Map** dapp that takes care of all the heavy lifting, so you can skip the setup pain and focus on experimenting with a real, working dapp.
+To make this much easier, we’ve created a [**one-click frontend solution**](https://quickstart.dev.testnet.burnt.com) for this **User Map** dapp that takes care of all the heavy lifting, so you can skip the setup pain and focus on experimenting with a real, working dapp.
 
 
 
-1. Go to [https://usermap-launcher.burnt.com](https://usermap-launcher.burnt.com) and log in using your **Meta Account**
+1. Go to [https://quickstart.dev.testnet.burnt.com](https://quickstart.dev.testnet.burnt.com) and log in using your **Meta Account**
 
 <figure><img src="../../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
 
