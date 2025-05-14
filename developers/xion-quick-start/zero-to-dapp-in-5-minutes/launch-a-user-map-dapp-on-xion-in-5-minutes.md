@@ -78,7 +78,7 @@ cd xion-user-map-json-store-frontend
 
 In the **Quick Launch Frontend** click the "**webapp**" template:
 
-<figure><img src="../../../.gitbook/assets/image (76).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
 
 There are two options available for copying the variables into your project:
 
