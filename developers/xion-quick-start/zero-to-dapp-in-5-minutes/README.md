@@ -20,4 +20,4 @@ Within minutes, you’ll go from nothing to a fully live, interactive dapp on XI
 
 The following guides are currently available:
 
-<table data-view="cards"><thead><tr><th></th></tr></thead><tbody><tr><td><a href="launch-a-user-map-dapp-on-xion-in-5-minutes.md"><strong>Launch a User Map Dapp on XION in 5 Minutes</strong></a><br>Go from nothing to a fully live, interactive dapp on XION in 5 minutes.</td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th></tr></thead><tbody><tr><td><a href="launch-a-user-map-dapp-on-xion-in-5-minutes.md"><strong>Launch a User Map Dapp on XION in 5 Minutes</strong></a><br>Go from nothing to a fully live, interactive dapp on XION in 5 minutes.</td></tr><tr><td><a href="react-native-mobile-dapp-on-xion-in-5-minutes.md"><strong>React Native Mobile Dapp on XION in 5 Minutes</strong></a><br>Create a Mobile dapp on XION in 5 minutes.</td></tr></tbody></table>
