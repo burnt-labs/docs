@@ -16,7 +16,7 @@ Reusing these contracts **without modification** may reduce or eliminate the nee
 | Just need a **simple native token**                 | No                                | Yes               |
 | Allows for transferring tokens across chain via IBC | No (Requires cw20-ics20 contract) | Yes               |
 
-If you're just minting a governance or utility token with no special rules, use **Token Factory**. If you need full control and customization, go with CW20 contracts.
+If you're just minting a governance or utility token with no special rules, use **Token Factory**. If you need full control and customization, go with CW20 contracts. See the following [Token Factory guide](../learn-and-build/token-factory/creating-minting-and-interacting-with-a-token-factory-token.md) for more details.
 
 ### Available CW20 Contract Variants
 
