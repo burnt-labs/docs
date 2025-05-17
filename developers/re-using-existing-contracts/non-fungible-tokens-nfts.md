@@ -8,16 +8,17 @@ Reusing these contracts **without modification** may reduce or eliminate the nee
 
 ## Available CW721 Contract Variants
 
-| **cw721-base**             | Yes | No                     | No                   | Basic NFT collections with off-chain metadata         |
-| -------------------------- | --- | ---------------------- | -------------------- | ----------------------------------------------------- |
-| **cw721-updatable**        | Yes | No                     | Yes                  | Dynamic NFTs (e.g., avatars that evolve, gaming NFTs) |
-| **cw721-metadata-onchain** | Yes | Yes                    | No                   | Fully on-chain generative art, digital collectibles   |
-| **cw721-soulbound**        | No  | No                     | No                   | Identity badges, certificates, proof-of-participation |
-| **cw721-expiration**       | Yes | No                     | Yes (via expiration) | Subscription NFTs, time-limited memberships           |
-| **cw721-fixed-price**      | Yes | No (usually off-chain) | Yes (price config)   | Simple marketplaces with fixed price sales            |
-| **cw721-non-transferable** | No  | No                     | No                   | Achievements, diplomas, SBTs (Soulbound Tokens)       |
-| **cw721-receiver-tester**  | Yes | No                     | No                   | Utility contract used for testing receive hooks       |
-| **cw2981-royalties**       | Yes | Yes                    | No                   | Royalty-enabled NFTs for artists and creators         |
+| Contract                   | Transferable | On-Chain Metadata      | Updatable Metadata   | Use Case Examples                                     |
+| -------------------------- | ------------ | ---------------------- | -------------------- | ----------------------------------------------------- |
+| **cw721-base**             | Yes          | No                     | No                   | Basic NFT collections with off-chain metadata         |
+| **cw721-updatable**        | Yes          | No                     | Yes                  | Dynamic NFTs (e.g., avatars that evolve, gaming NFTs) |
+| **cw721-metadata-onchain** | Yes          | Yes                    | No                   | Fully on-chain generative art, digital collectibles   |
+| **cw721-soulbound**        | No           | No                     | No                   | Identity badges, certificates, proof-of-participation |
+| **cw721-expiration**       | Yes          | No                     | Yes (via expiration) | Subscription NFTs, time-limited memberships           |
+| **cw721-fixed-price**      | Yes          | No (usually off-chain) | Yes (price config)   | Simple marketplaces with fixed price sales            |
+| **cw721-non-transferable** | No           | No                     | No                   | Achievements, diplomas, SBTs (Soulbound Tokens)       |
+| **cw721-receiver-tester**  | Yes          | No                     | No                   | Utility contract used for testing receive hooks       |
+| **cw2981-royalties**       | Yes          | Yes                    | No                   | Royalty-enabled NFTs for artists and creators         |
 
 
 

@@ -15,10 +15,11 @@ By deploying a marketplace contract, developers can either create a **permission
 
 ## Contract Comparison
 
-| **cw721-marketplace**                   | Yes                         | No (open to all collections)     | Yes | General-purpose, open NFT marketplaces                   |
-| --------------------------------------- | --------------------------- | -------------------------------- | --- | -------------------------------------------------------- |
-| **cw721-marketplace-permissioned**      | Yes                         | Yes (admin approves collections) | Yes | Curated galleries, permissioned or verified marketplaces |
-| **cw721-marketplace-single-collection** | No (single collection only) | No (open within one collection)  | Yes | Dedicated storefronts for one collection                 |
+| Contract                                | Multi-Collection Support    | Permissioned Access              | Royalties | Ideal For                                                |
+| --------------------------------------- | --------------------------- | -------------------------------- | --------- | -------------------------------------------------------- |
+| **cw721-marketplace**                   | Yes                         | No (open to all collections)     | Yes       | General-purpose, open NFT marketplaces                   |
+| **cw721-marketplace-permissioned**      | Yes                         | Yes (admin approves collections) | Yes       | Curated galleries, permissioned or verified marketplaces |
+| **cw721-marketplace-single-collection** | No (single collection only) | No (open within one collection)  | Yes       | Dedicated storefronts for one collection                 |
 
 
 
