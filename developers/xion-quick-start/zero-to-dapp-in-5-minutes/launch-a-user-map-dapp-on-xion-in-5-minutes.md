@@ -12,7 +12,7 @@ As a beginner to XION development, getting a fully functional dapp up and runnin
 You should have your demo dapp up and running in under **5 minutes**. Once you're familiar with the workflow, you can move on to the advanced [**User Map guide**](../../learn-and-build/use-cases/building-a-per-user-data-storage-dapp.md).
 {% endhint %}
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FB5Z5ijJgMx0GJO3l1Il9%2Fuploads%2FN8CSIwLNjVgM773uqOH3%2F02%20-%20User%20Map%20Demo.mp4?alt=media&token=7fc6be87-f7ae-4384-99cd-8d89aced1170" %}
+{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FB5Z5ijJgMx0GJO3l1Il9%2Fuploads%2FF2QNRPbGGWUnFcno63bw%2F07%20-%20User%20Map%20Demo.mp4?alt=media&token=49ea9c71-aad0-489f-b736-514fa918a720" %}
 
 ## What is the User Map dapp?
 
