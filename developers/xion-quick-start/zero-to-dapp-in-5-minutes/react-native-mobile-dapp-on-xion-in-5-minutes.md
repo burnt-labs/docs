@@ -8,7 +8,7 @@ Building a **Mobile Dapp** on XION typically involves three main components:
 
 As a beginner to XION development, getting a fully functional Dapp up and running should be simple and shouldn’t require any complex setup. With this in mind, we’ve created a [**quick launch frontend solution**](https://quickstart.dev.testnet.burnt.com) that handles the creation of both the **User Map** and **Treasury** contracts with the Treasury contract being fully configured. We've also created a fully functional [**React Native Mobile Dapp**](https://github.com/burnt-labs/abstraxion-expo-demo) for interacting with the **User Map** contract.
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FB5Z5ijJgMx0GJO3l1Il9%2Fuploads%2FAqm7ts8pt04Ep39VbEqT%2F03%20-%20User%20Map%20Mobile%20Dapp.mp4?alt=media&token=91bd828c-3d31-4960-8516-c34d22322d6b" %}
+{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FB5Z5ijJgMx0GJO3l1Il9%2Fuploads%2FZLyzVAyDYHTYwlX8G3LJ%2F06%20-%20Mobile%20Dapp.mp4?alt=media&token=13818280-4cf4-4de7-b129-738cce911063" %}
 
 ## What is the User Map Dapp?
 
