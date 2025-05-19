@@ -138,7 +138,7 @@ The following are some use cases for that this contract could cover.
 
 ## Deploying User Map Contract On-Chain <a href="#deploying-a-contract-on-chain" id="deploying-a-contract-on-chain"></a>
 
-If you're new to compiling, deploying, and instantiating smart contracts, we recommend following the [guide](../../xion-quick-start/your-first-contract/deploy-a-cosmwasm-smart-contract.md) to learn the process. Once deployed, the contract address will be referenced in your **Treasury contract configuration** and in the upcoming **code updates**. We'll also walk through the major steps below.
+If you're new to compiling, deploying, and instantiating smart contracts, we recommend following the [guide](../../getting-started-advanced/your-first-contract/deploy-a-cosmwasm-smart-contract.md) to learn the process. Once deployed, the contract address will be referenced in your **Treasury contract configuration** and in the upcoming **code updates**. We'll also walk through the major steps below.
 
 ### **Clone the Repository** <a href="#clone-the-repository" id="clone-the-repository"></a>
 
