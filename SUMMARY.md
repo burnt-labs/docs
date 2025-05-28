@@ -48,6 +48,7 @@
   * [Membership Management](developers/re-using-existing-contracts/membership-management.md)
   * [Governance](developers/re-using-existing-contracts/governance.md)
   * [Valuts](developers/re-using-existing-contracts/valuts.md)
+  * [SCV Audited Contracts](developers/re-using-existing-contracts/scv-audited-contracts.md)
 * [Web3 for Web2 Developers](developers/web3-for-web2-developers/README.md)
   * [Web2 vs Web3 App Architecture: A Comparison](developers/web3-for-web2-developers/web2-vs-web3-app-architecture-a-comparison.md)
   * [Misconceptions and Misapplied Web2 Patterns](developers/web3-for-web2-developers/misconceptions-and-misapplied-web2-patterns.md)
