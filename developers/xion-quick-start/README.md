@@ -4,6 +4,23 @@ icon: book-open-cover
 
 # Xion Quick Start
 
-The **Quick Start** guides will walk you through the essential steps to begin developing on XION. We've structured these subsections to build on each other, ensuring a smooth and progressive learning experience.
+Kickstart your development on XION with quick, no fuss guides designed to get you up and running in just 5 minutes. These guides are tailored for developers who want to see results fast with no complex setup, no unnecessary overhead.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Setting up your Local Development Environment</strong></td><td>Covers the necessary tools, dependencies, and configurations needed to get started.</td><td></td><td><a href="../getting-started-advanced/setup-local-environment/">setup-local-environment</a></td></tr><tr><td><strong>Deploying Your First Smart Contract</strong></td><td>Walks you through the process of deploying a smart contract on the XION network.</td><td></td><td><a href="../getting-started-advanced/your-first-contract/">your-first-contract</a></td></tr><tr><td><strong>Building your first dApp with Account Abstraction</strong></td><td>Building a basic dApp using the Abstraxion library with a gasless transaction experience.</td><td></td><td><a href="../getting-started-advanced/your-first-dapp/">your-first-dapp</a></td></tr></tbody></table>
+This section is ideal for:
+
+* Hackathon participants
+* Early-stage prototyping
+* Developers exploring XION for the first time
+
+## What You’ll Find Here
+
+Each guide in this section walks you through launching a fully functional XION dapp in minutes, using streamlined templates and built-in tools.
+
+### Zero to dapp in 5 Minutes
+
+A collection of quick start templates to help you launch dapps on XION to give you an ideal of the Abstraction workflow.
+
+* [Overview](https://docs.burnt.com/xion/developers/xion-quick-start/zero-to-dapp-in-5-minutes): Start here for a breakdown of all the available templates and how to use them.
+* [Launch a User Map dapp](https://docs.burnt.com/xion/developers/xion-quick-start/zero-to-dapp-in-5-minutes/launch-a-user-map-dapp-on-xion-in-5-minutes): Launch a web based dapp that lets users store and retrieve data using  user map smart contract.
+* [Build a React Native Mobile dapp](https://docs.burnt.com/xion/developers/xion-quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-on-xion-in-5-minutes): Create a mobile app with Meta Account login and gasless UX using Abstraxion.
+
