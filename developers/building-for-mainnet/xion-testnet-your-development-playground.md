@@ -1,6 +1,6 @@
 # Xion Testnet: Your Development Playground
 
-The **Xion Testnet** is a permissionless environment designed for developers to build, test, and refine their decentralized applications (dApps) before deploying to **Mainnet**. It allows you to safely experiment with smart contracts, receive community feedback, and ensure your dApp is secure and functional.
+The **Xion Testnet** is a permissionless environment designed for developers to build, test, and refine their decentralized applications (apps) before deploying to **Mainnet**. It allows you to safely experiment with smart contracts, receive community feedback, and ensure your app is secure and functional.
 
 
 
@@ -10,7 +10,7 @@ Testnet serves as a critical step in the development process, offering:
 
 * **Permissionless Deployment** – No governance approval is required, allowing developers to freely deploy and test their contracts.
 * **Risk-Free Testing** – Transactions and contract interactions use test tokens, meaning no real assets are at stake.
-* **Community Feedback** – Engaging users early helps refine dApps before Mainnet launch.
+* **Community Feedback** – Engaging users early helps refine apps before Mainnet launch.
 * **Pre-Mainnet Validation** – Identifying and fixing issues beforehand increases the chances of passing Mainnet governance.
 
 

@@ -1,6 +1,6 @@
 # Deploying to Xion Mainnet
 
-Xion **Mainnet** is a **permissioned** environment designed to host secure and community approved decentralized applications (dApps). Unlike **Testnet**, deploying to **Mainnet** requires governance approval to ensure only **trusted, high-quality** contracts are stored on-chain.
+Xion **Mainnet** is a **permissioned** environment designed to host secure and community approved decentralized applications (apps). Unlike **Testnet**, deploying to **Mainnet** requires governance approval to ensure only **trusted, high-quality** contracts are stored on-chain.
 
 This section will guide you through the **Mainnet deployment process**, including governance requirements, security best practices, and contract storage policies.
 

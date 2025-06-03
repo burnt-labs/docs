@@ -20,9 +20,9 @@ You'll start by understanding the fundamental architectural differences between 
 
 ## The XION Architecture
 
-Next, you’ll explore how dapps are built specifically on the XION blockchain, and what makes the platform unique:
+Next, you’ll explore how apps are built specifically on the XION blockchain, and what makes the platform unique:
 
 * You'll get an overview of the full-stack architecture used by most XION-based applications.
-* You'll learn the role of **CosmWasm smart contracts**, which serve as the core logic layer for your dapp.
+* You'll learn the role of **CosmWasm smart contracts**, which serve as the core logic layer for your app.
 * We’ll show you how XION encourages a **frontend-first approach**, enabling developers to use tools like the `abstraxion` library for seamless wallet interaction from the UI.
 

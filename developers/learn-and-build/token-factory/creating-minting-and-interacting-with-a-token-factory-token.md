@@ -135,7 +135,7 @@ metadata:
 
 ## **Updating Token Metadata**
 
-Before minting new tokens, it is important to **configure the token’s metadata** to ensure frontends and dapps can properly **query and display token information** and to set the required decimal precision to be used by the token.
+Before minting new tokens, it is important to **configure the token’s metadata** to ensure frontends and apps can properly **query and display token information** and to set the required decimal precision to be used by the token.
 
 **Updatable Fields:**
 
@@ -250,7 +250,7 @@ metadata:
 
 ## **Minting Tokens**
 
-After successfully creating your token, you will notice that no tokens have actually been minted. To establish or increase the token supply, you must explicitly **mint new tokens**. The **minting process** allows you to generate additional tokens under your control, which can then be used within your dapps, or distributed to other accounts.
+After successfully creating your token, you will notice that no tokens have actually been minted. To establish or increase the token supply, you must explicitly **mint new tokens**. The **minting process** allows you to generate additional tokens under your control, which can then be used within your apps, or distributed to other accounts.
 
 To mint tokens, execute the following command:
 
@@ -390,4 +390,4 @@ xiond tx bank send xion1ka5... xion193h... 500factory/xion1ka5.../mytoken --node
 * The transaction is **broadcasted to the network** via the specified RPC node.
 * If successful, the **recipient’s balance** is updated, and the sender’s balance is **reduced accordingly**.
 
-You have successfully **created**, **updated**, **minted** and **transferred** a token using the **XION Token Factory module**. With this foundation, you can now integrate your token into your smart contracts and **dApp frontends** seamlessly.
+You have successfully **created**, **updated**, **minted** and **transferred** a token using the **XION Token Factory module**. With this foundation, you can now integrate your token into your smart contracts and **app frontends** seamlessly.

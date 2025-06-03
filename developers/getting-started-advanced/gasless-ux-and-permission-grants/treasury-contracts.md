@@ -6,10 +6,10 @@ description: >-
 
 # Enabling Gasless Transactions with Treasury Contracts
 
-Treasury contracts introduce an OAuth-like authentication flow fully on-chain, allowing developers to create intricate allowance systems that enable delegated authorization. This allows an account (the granter — the end user) to grant permission to another account (the grantee — the treasury contract) to execute specific types of transactions on their behalf. These contracts also enable a gasless experience for end users via fee grants. This guide walks you through using the developer portal to deploy your dApp’s first treasury contract.
+Treasury contracts introduce an OAuth-like authentication flow fully on-chain, allowing developers to create intricate allowance systems that enable delegated authorization. This allows an account (the granter — the end user) to grant permission to another account (the grantee — the treasury contract) to execute specific types of transactions on their behalf. These contracts also enable a gasless experience for end users via fee grants. This guide walks you through using the developer portal to deploy your app’s first treasury contract.
 
 {% hint style="info" %}
-Each treasury contract deployment is designed for a single dApp. Think of it like setting up OAuth for your application, where your dApp requests access to data from the XION chain on behalf of the user — without accessing any private information.
+Each treasury contract deployment is designed for a single app. Think of it like setting up OAuth for your application, where your app requests access to data from the XION chain on behalf of the user — without accessing any private information.
 {% endhint %}
 
 
@@ -32,9 +32,9 @@ The **Fee Grant module** allows an account (**granter**) to cover gas fees for a
 
 #### **Key Benefits of Fee Grants**
 
-* **Frictionless onboarding** – Users can interact with the dApp immediately without needing XION tokens.
+* **Frictionless onboarding** – Users can interact with the app immediately without needing XION tokens.
 * **Better user experience** – Reduces complexity and improves adoption for non-crypto-native users.
-* **Controlled sponsorship** – dApps can define limits on gas fee coverage.
+* **Controlled sponsorship** – apps can define limits on gas fee coverage.
 
 
 
@@ -47,13 +47,13 @@ The **Authz module** enables **delegated authorization**, allowing one account (
 * **The user acts as the granter**, granting permission to the **treasury contract (grantee)** to execute transactions on their behalf.
 * **The treasury contract defines allowed actions**, for exmple token transfers.
 * **Users approve the treasury contract** to execute these actions on their behalf.
-* **The dApp allows users to trigger transactions**, which the **treasury contract then executes on their behalf**.
+* **The app allows users to trigger transactions**, which the **treasury contract then executes on their behalf**.
 
 #### **Key Benefits of Authz**
 
 * **Security and control** – Users define exactly which actions the treasury contract can perform.
 * **Automation** – Transactions can be executed without requiring constant user approval.
-* **Efficiency** – Reduces manual signing and streamlines dApp interactions.
+* **Efficiency** – Reduces manual signing and streamlines app interactions.
 
 By combining **Fee Grants** and **Authz**, **Treasury Contracts** offer **a seamless and user-friendly blockchain experience**, eliminating gas fees while maintaining security and control over transaction execution.
 
@@ -61,7 +61,7 @@ By combining **Fee Grants** and **Authz**, **Treasury Contracts** offer **a seam
 
 ## Developer Portal
 
-We have developed a **Developer Portal** to provide resources that developers can leverage within their dApps. The first feature available is the **creation and management of Treasury Contracts**. You can access the Developer Portal using the following links:
+We have developed a **Developer Portal** to provide resources that developers can leverage within their apps. The first feature available is the **creation and management of Treasury Contracts**. You can access the Developer Portal using the following links:
 
 * **Testnet**: [https://dev.testnet2.burnt.com](https://dev.testnet2.burnt.com)
 * **Mainnet**: [https://dev.burnt.com](https://dev.burnt.com)
@@ -101,7 +101,7 @@ In the next sections, we'll go through each module in more detail.
 
 ### Fee Grant
 
-The **Fee Grant** section allows you to set up a mechanism to cover gas fees for user interactions within your dApp. There are three types of fee allowances available:
+The **Fee Grant** section allows you to set up a mechanism to cover gas fees for user interactions within your app. There are three types of fee allowances available:
 
 **1. Basic Allowance (`/cosmos.feegrant.v1beta1.BasicAllowance`)**
 
@@ -133,7 +133,7 @@ Once saved, the Fee Grant settings will be applied, which you can see in the "T*
 
 ### Grant Configuration
 
-This section allows you to define **transaction permissions (allowances)** that users must agree to before your dApp can execute actions on their behalf.
+This section allows you to define **transaction permissions (allowances)** that users must agree to before your app can execute actions on their behalf.
 
 #### **Setting Up Authorization**
 
@@ -141,11 +141,11 @@ This section allows you to define **transaction permissions (allowances)** that 
    * Provide a **clear and concise description** explaining the purpose of the authorization.
    * This description will be shown to users when they click **"Allow"** after connecting their account.
 2. **Select a Type URL**
-   * The **Type URL** determines the kind of transactions your dApp will be authorized to perform.
-   * **Example**: Selecting `"/cosmwasm.wasm.v1.MsgExecuteContract"` allows your dApp to execute transactions on a smart contract on behalf of the user.
+   * The **Type URL** determines the kind of transactions your app will be authorized to perform.
+   * **Example**: Selecting `"/cosmwasm.wasm.v1.MsgExecuteContract"` allows your app to execute transactions on a smart contract on behalf of the user.
      * **Define Contract Execution Authorization**
        * **Select the authorization type** (currently, `"/cosmwasm.wasm.v1.ContractExecutionAuthorization"` is the only option).
-       * **Enter the contract address** that your dApp will interact with on behalf of the user.
+       * **Enter the contract address** that your app will interact with on behalf of the user.
      * **Set Transaction Limits (Optional)**
        * You can impose restrictions on:
          * **Total number of allowed contract calls**.
@@ -259,7 +259,7 @@ After successful deletion, the page will reload and display a success message co
 
 ## Client-Side Implementation (React App)
 
-To integrate gasless transactions and delegated authorizations using a Treasury contract in your dApp, follow this [**full guide**](../your-first-dapp/build-react-dapp-with-account-abstraxion.md).
+To integrate gasless transactions and delegated authorizations using a Treasury contract in your app, follow this [**full guide**](../your-first-dapp/build-react-dapp-with-account-abstraxion.md).
 
 You’ll need to configure the `AbstraxionProvider` by setting the Treasury contract in the config:
 
@@ -296,7 +296,7 @@ This configuration also determines the redirect URL users see after clicking **C
 
 While connecting their accounts, users will see a list of **Allowances** — this message is set during the Treasury contract’s creation by the developer while configuring the grant settings.
 
-Once the user clicks **Allow**, the dApp:
+Once the user clicks **Allow**, the app:
 
 1. **Creates Grant permissions**
 2. **Deploys a Fee Grant** on behalf of the user.

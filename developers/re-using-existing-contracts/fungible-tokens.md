@@ -51,7 +51,7 @@ Wraps a CW20 token to be compatible with **IBC (Interchain Standard 20)**.
 **Ideal for:**
 
 * Interchain assets
-* Dapps that rely on token bridging
+* Apps that rely on token bridging
 
 #### 3. `cw20-bonding`
 
@@ -67,7 +67,7 @@ CW20 token with **bonding curve logic** for dynamic token pricing.
 
 **Ideal for:**
 
-* Fundraising dapps
+* Fundraising apps
 * Creator economy tokens
 * Algorithmic supply control
 

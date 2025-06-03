@@ -30,7 +30,7 @@ XION makes full use of the CosmosSDK modularity. It is this modularity that allo
 
 ## **Tech Stack Glossary Terms**
 
-XION utilizes Comet BFT (previously known as Tendermint), the Cosmos SDK, IBC, and CosmWasm, offering developers a robust and comprehensive toolkit to build their dApps.
+XION utilizes Comet BFT (previously known as Tendermint), the Cosmos SDK, IBC, and CosmWasm, offering developers a robust and comprehensive toolkit to build their apps.
 
 
 

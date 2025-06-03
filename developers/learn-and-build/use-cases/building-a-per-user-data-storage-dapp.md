@@ -1,6 +1,6 @@
-# Building a Per-User Data Storage Dapp
+# Building a Per-User Data Storage App
 
-Let's build a simple yet powerful decentralized application (dApp) that allows users to store and retrieve their **JSON** data. For developers coming from **Web2**, this serves as an excellent introduction to **Web3** concepts by providing familiar functionality (user-specific data storage) implemented in a decentralized way.
+Let's build a simple yet powerful decentralized application (app) that allows users to store and retrieve their **JSON** data. For developers coming from **Web2**, this serves as an excellent introduction to **Web3** concepts by providing familiar functionality (user-specific data storage) implemented in a decentralized way.
 
 ## User Map Contract
 
@@ -285,7 +285,7 @@ xion1v6476wrjmw8fhsh20rl4h6jadeh5sdvlhrt8jyk2szrl3pdj4musyxj6gl
 
 ## Deploying a Treasury Contract <a href="#deploying-a-treasury-contract-for-gasless-transactions" id="deploying-a-treasury-contract-for-gasless-transactions"></a>
 
-Before integrating the **Abstraxion SDK** into the application, we first need to deploy a **Treasury Contract**. This contract facilitates **gasless transactions** for your smart contract by handling **fee grants** on behalf of users as well as allowing users to grant authorization(s) to your dapp to execute certain account transactions on their behalf.
+Before integrating the **Abstraxion SDK** into the application, we first need to deploy a **Treasury Contract**. This contract facilitates **gasless transactions** for your smart contract by handling **fee grants** on behalf of users as well as allowing users to grant authorization(s) to your app to execute certain account transactions on their behalf.
 
 ### Steps to Deploy a Treasury Contract <a href="#steps-to-deploy-a-treasury-contract" id="steps-to-deploy-a-treasury-contract"></a>
 

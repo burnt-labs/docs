@@ -2,7 +2,7 @@
 
 Blockchains are **self contained networks** that cannot directly access external data, such as asset prices or market trends from the web. This limitation makes **oracles** essential as they serve as a bridge between **on-chain** smart contracts and **off-chain** real world information.
 
-The **Pyth Network** is a decentralized oracle that provides **real-time, high frequency price feeds** for assets like cryptocurrencies, stocks, and commodities. This guide will walk you through integrating Pyth's price feed data into your smart contracts and also querying the data from a frontend dapp.
+The **Pyth Network** is a decentralized oracle that provides **real-time, high frequency price feeds** for assets like cryptocurrencies, stocks, and commodities. This guide will walk you through integrating Pyth's price feed data into your smart contracts and also querying the data from a frontend app.
 
 
 

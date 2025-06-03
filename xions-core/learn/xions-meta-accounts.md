@@ -76,7 +76,7 @@ Enables account owners to set any number of custom rules that govern the account
 
 <summary>Audience Versatility</summary>
 
-Enables dApp developers to seamlessly cater to both crypto-native and non crypto-native audiences, vastly expanding their total addressable market.
+Enables app developers to seamlessly cater to both crypto-native and non crypto-native audiences, vastly expanding their total addressable market.
 
 </details>
 

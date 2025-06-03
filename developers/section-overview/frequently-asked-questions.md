@@ -36,7 +36,7 @@ This [guide](https://docs.burnt.com/xion/developers/section-overview/governance/
 
 <summary>What’s the preferred way to create a token on Xion?</summary>
 
-We recommend using our **Token Factory** module for creating tokens. You can find details on why it’s the preferred method, along with instructions on creating, managing, and using tokens within your dApps, [here](https://docs.burnt.com/xion/developers/learn-and-build/token-factory).
+We recommend using our **Token Factory** module for creating tokens. You can find details on why it’s the preferred method, along with instructions on creating, managing, and using tokens within your apps, [here](https://docs.burnt.com/xion/developers/learn-and-build/token-factory).
 
 </details>
 

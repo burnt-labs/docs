@@ -28,4 +28,4 @@ Additionally, these contracts provide production-ready functionality, allowing d
 
 ## Building for Mainnet
 
-We have also put together guides on how to [**Build to get your Dapps on Mainnet**](https://docs.burnt.com/xion/developers/building-for-mainnet). This section outlines the key differences between **Testnet** and **Mainnet**, the requirements for deployment, and best practices to ensure your contracts are approved and adopted by the community. We recommend reading through the contents of this section.
+We have also put together guides on how to [**Build to get your Apps on Mainnet**](https://docs.burnt.com/xion/developers/building-for-mainnet). This section outlines the key differences between **Testnet** and **Mainnet**, the requirements for deployment, and best practices to ensure your contracts are approved and adopted by the community. We recommend reading through the contents of this section.

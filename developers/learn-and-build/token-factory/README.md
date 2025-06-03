@@ -9,7 +9,7 @@ When creating tokens on XION, developers have two main options: [**CW20 smart co
 The CW20 token standard is analogous to Ethereum's ERC20 standard and is widely adopted within the Cosmos ecosystem. Implementing a CW20 token involves several key considerations:
 
 * **Deployment and Maintenance**: Developers must deploy and instantiate a CW20 contract for the token. This process could require ongoing maintenance, including updates and potential redeployments to address issues or implement enhancements.
-* **Integration Effort**: Integrating CW20 tokens into other contracts or dApps necessitates additional development work to ensure compatibility and seamless interaction.
+* **Integration Effort**: Integrating CW20 tokens into other contracts or apps necessitates additional development work to ensure compatibility and seamless interaction.
 * **IBC (Inter-Blockchain Communication) Compatibility**: Enabling IBC transfers for CW20 tokens requires additional contracts, adding complexity to cross-chain interactions.
 
 
@@ -41,7 +41,7 @@ Here's a detailed comparison between the CW20 token standard and the Token Facto
 | **Deployment Complexity**        | Requires writing, deploying, and maintaining a **separate smart contract** for token creation.         | Tokens are created via a simple transaction utilizing the bank module — **no smart contract needed**.                         |
 | **Gas Costs**                    | Every interaction (mint, transfer, burn) requires executing a smart contract, **increasing gas fees**. | Uses **native blockchain functions**, making transactions significantly **cheaper and more efficient**.                       |
 | **Security**                     | Smart contracts can contain **bugs and vulnerabilities**, requiring **audits and ongoing monitoring**. | Tokens are **natively managed** by the blockchain’s bank module, reducing attack vectors and eliminating the need for audits. |
-| **Integration with dApps**       | Developers must **manually integrate** the smart contract logic into their dApp, adding complexity.    | Tokens are **supported** by wallets, explorers, and dApps using the standard bank module.                                     |
+| **Integration with apps**       | Developers must **manually integrate** the smart contract logic into their app, adding complexity.    | Tokens are **supported** by wallets, explorers, and apps using the standard bank module.                                     |
 | **IBC Compatibility**            | Requires an **additional CW20-ICS20 wrapper contract** to enable IBC transfers.                        | Tokens are **natively IBC-compatible**, allowing **seamless cross-chain transfers** without extra contracts.                  |
 | **Upgradeability & Maintenance** | Upgrading requires **deploying a new contract** and migrating balances—**tedious and error-prone**.    | No maintenance required—**tokens don’t need upgrades** as they are managed by the bank module.                                |
 
