@@ -1,12 +1,12 @@
-# Community Engagement: Building Support for Your dApp
+# Community Engagement: Building Support for Your App
 
-Engaging with the Xion community is essential for gathering **user feedback, testing your dApp, and securing governance approval for Mainnet deployment**. Developers who actively communicate with the community have a higher chance of success, both in refining their dApps and getting them voted onto Mainnet.
+Engaging with the Xion community is essential for gathering **user feedback, testing your app, and securing governance approval for Mainnet deployment**. Developers who actively communicate with the community have a higher chance of success, both in refining their apps and getting them voted onto Mainnet.
 
 
 
 ## **Why Community Engagement Matters**
 
-Engaging with your community is one of the most powerful ways to ensure the success of your dApp. Real users provide invaluable feedback during testing, helping identify pain points and opportunities for improvement that internal teams might overlook. Their insights can shape a more intuitive and effective product, increasing the chances of long-term adoption.
+Engaging with your community is one of the most powerful ways to ensure the success of your app. Real users provide invaluable feedback during testing, helping identify pain points and opportunities for improvement that internal teams might overlook. Their insights can shape a more intuitive and effective product, increasing the chances of long-term adoption.
 
 Building trust and awareness within the community is just as critical. A project that actively communicates its vision, progress, and value proposition gains credibility and attracts early supporters. Visibility in forums, social platforms, and developer circles fosters organic growth, turning users into advocates who help spread the word.
 
@@ -24,8 +24,8 @@ Join the [**Xion Discord server**](https://discord.gg/burnt) to discuss your pro
 
 **Use the appropriate channels to:**
 
-* Share what your dApp does and the problems it solves.
-* Provide progress updates on your dApp.
+* Share what your app does and the problems it solves.
+* Provide progress updates on your app.
 * Ask for feedback on features and UX.
 * Troubleshoot development issues with other builders.
 
@@ -35,7 +35,7 @@ The [**Xion Developer Ecosystem Telegram**](https://t.me/+5KA8xBuU5wYzZjU0) chan
 
 **Use Telegram to:**
 
-* Announce your dApp and introduce it to the community.
+* Announce your app and introduce it to the community.
 * Answer user questions and gauge interest.
 * Network with ecosystem members who can support your proposal.
 
@@ -43,13 +43,13 @@ The [**Xion Developer Ecosystem Telegram**](https://t.me/+5KA8xBuU5wYzZjU0) chan
 
 Developers can use [**GitHub Discussions**](https://github.com/orgs/burnt-labs/discussions) to:
 
-* Post information about their dApps.
+* Post information about their apps.
 * Share technical insights and ask for feedback.
 * Engage in governance-related discussions and advocate for Mainnet approval.
 
 #### **Best Practices for GitHub Discussions:**
 
-* Create a post introducing your dApp and its use case.
+* Create a post introducing your app and its use case.
 * Ask for community feedback.
 * Share your roadmap and development updates.
 * Discuss governance proposals before submitting them.

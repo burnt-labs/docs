@@ -67,7 +67,7 @@ For `ios` you would add the following to the `ios` element changing the value to
 
 ### Update Main Tab
 
-This is where a lot of action will happen. If you've worked on any of the dapp tutorials before you will see that this will be similar in that we will be adding a lot of the Abstraxion code here to bring everything together. Replace the `index.tsx` file with the following content:
+This is where a lot of action will happen. If you've worked on any of the app tutorials before you will see that this will be similar in that we will be adding a lot of the Abstraxion code here to bring everything together. Replace the `index.tsx` file with the following content:
 
 ```javascript
 import { useState } from "react";

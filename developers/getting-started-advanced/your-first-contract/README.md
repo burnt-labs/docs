@@ -1,6 +1,6 @@
 # Your First Contract
 
-Smart contracts are the backbone of decentralized applications (dApps), automating processes and eliminating intermediaries. They function like backend services, securely handling transactions, enforcing business logic, and managing data with transparency.
+Smart contracts are the backbone of decentralized applications (apps), automating processes and eliminating intermediaries. They function like backend services, securely handling transactions, enforcing business logic, and managing data with transparency.
 
 Kickstart your XION smart contract journey by learning to compile, deploy, instantiate, and interact with your first contract.
 

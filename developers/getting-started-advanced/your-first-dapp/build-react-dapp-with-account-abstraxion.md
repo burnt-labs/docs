@@ -1,10 +1,10 @@
 # Account Abstraction with Gasless Transactions
 
-In this guide, we will walk through building a basic dApp using the [Abstraxion library](https://www.npmjs.com/package/@burnt-labs/abstraxion), demonstrating how to create an Abstraxion account which can be done via a social account like Google, browser wallets (Keplr, Metamask, OKX etc.), email address, passkey and other authentication options. We will also implement a gasless transaction experience for users by leveraging XION's fee grants through a Treasury contract.
+In this guide, we will walk through building a basic app using the [Abstraxion library](https://www.npmjs.com/package/@burnt-labs/abstraxion), demonstrating how to create an Abstraxion account which can be done via a social account like Google, browser wallets (Keplr, Metamask, OKX etc.), email address, passkey and other authentication options. We will also implement a gasless transaction experience for users by leveraging XION's fee grants through a Treasury contract.
 
 To better understand Account Abstraction you can visit the[ Introduction to Account Abstraction](https://docs.burnt.com/xion/developers/learn/intro-to-account-abstraction) page.
 
-A fully functional demo of this dApp is also available in the [Xion.js](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app) repository.
+A fully functional demo of this app is also available in the [Xion.js](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app) repository.
 
 ## Requirements
 
@@ -64,7 +64,7 @@ To resolve this issue, update your `next.config.js` file located at the root of 
 
 ## Deploying a Contract On-Chain
 
-We need to deploy a smart contract on-chain for our dApp to interact with, so we'll deploy a basic **Counter** contract, which will allow you to:
+We need to deploy a smart contract on-chain for our app to interact with, so we'll deploy a basic **Counter** contract, which will allow you to:
 
 * **Set an initial counter value**
 * **Increment or reset the counter**
@@ -250,12 +250,12 @@ Now, click **CONNECT** and try it out!
 <figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-**Note:** If the treasury contract address is changed within the dApp, users who are already logged in must log out and log back in. This ensures that their account goes through the approval process again, allowing the fee grants to function properly.
+**Note:** If the treasury contract address is changed within the app, users who are already logged in must log out and log back in. This ensures that their account goes through the approval process again, allowing the fee grants to function properly.
 {% endhint %}
 
 ## Querying the Contract
 
-The contract provides a method to query the current `count` value. Let's fetch this value and display it in the dApp.
+The contract provides a method to query the current `count` value. Let's fetch this value and display it in the app.
 
 Replace the contents of `src/app/page.tsx` with the following code:
 
@@ -589,4 +589,4 @@ If everything is configured correctly, you should see the transaction results di
 
 <figure><img src="../../../.gitbook/assets/image (36).png" alt=""><figcaption><p>After clicking "Increment" you should see the confirmation above</p></figcaption></figure>
 
-These core components form the foundation for building and deploying a successful dApp! If you have any questions or need support, feel free to reach out to us on **Discord** or [**GitHub**](https://github.com/burnt-labs/xion.js).
+These core components form the foundation for building and deploying a successful app! If you have any questions or need support, feel free to reach out to us on **Discord** or [**GitHub**](https://github.com/burnt-labs/xion.js).

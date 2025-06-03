@@ -25,7 +25,7 @@ From a high level you can look at Indexers as middleware between the blockchain 
 
 ## Indexing CW721 NFTs: A Practical Example
 
-When developing dApps on XION, direct blockchain queries might suffice initially but as your dApps grow in complexity, the need for efficient data retrieval becomes more apparent. This is particularly true when working with CW721 NFTs.
+When developing apps on XION, direct blockchain queries might suffice initially but as your apps grow in complexity, the need for efficient data retrieval becomes more apparent. This is particularly true when working with CW721 NFTs.
 
 
 

@@ -48,7 +48,7 @@ See the [repo](https://github.com/burnt-labs/contracts)
 
 <summary>UserSessionKey</summary>
 
-The temporary key generated on the DAPP side which is granted ContractExecutionAuthorization by the user's Meta Account on a temporary basis.
+The temporary key generated on the app side which is granted ContractExecutionAuthorization by the user's Meta Account on a temporary basis.
 
 </details>
 
@@ -56,7 +56,7 @@ The temporary key generated on the DAPP side which is granted ContractExecutionA
 
 <summary>FeeGrantTreasury</summary>
 
-A account a dapp may user to sponsor transactions submitted by the UserSessionKey.
+A account a app may user to sponsor transactions submitted by the UserSessionKey.
 
 </details>
 

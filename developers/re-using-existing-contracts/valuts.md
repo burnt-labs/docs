@@ -25,7 +25,7 @@ A formalized specification for building interoperable vaults in CosmWasm. This s
 * Standardized vault API across projects
 * Easy integration with frontends and third-party protocols
 * Extensible logic for withdrawals, deposits, hooks, and ownership
-* Enables interoperability between vaults and external dApps
+* Enables interoperability between vaults and external apps
 
 **Ideal for:**\
 Developers creating custom vault contracts that want to follow a shared interface for tooling, composability, and ease of use.

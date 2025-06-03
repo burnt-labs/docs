@@ -14,13 +14,13 @@ This section is ideal for:
 
 ## What You’ll Find Here
 
-Each guide in this section walks you through launching a fully functional XION dapp in minutes, using streamlined templates and built-in tools.
+Each guide in this section walks you through launching a fully functional XION app in minutes, using streamlined templates and built-in tools.
 
-### Zero to dapp in 5 Minutes
+### Zero to app in 5 Minutes
 
-A collection of quick start templates to help you launch dapps on XION to give you an ideal of the Abstraction workflow.
+A collection of quick start templates to help you launch apps on XION to give you an ideal of the Abstraction workflow.
 
 * [Overview](https://docs.burnt.com/xion/developers/xion-quick-start/zero-to-dapp-in-5-minutes): Start here for a breakdown of all the available templates and how to use them.
-* [Launch a User Map dapp](https://docs.burnt.com/xion/developers/xion-quick-start/zero-to-dapp-in-5-minutes/launch-a-user-map-dapp-on-xion-in-5-minutes): Launch a web based dapp that lets users store and retrieve data using  user map smart contract.
-* [Build a React Native Mobile dapp](https://docs.burnt.com/xion/developers/xion-quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-on-xion-in-5-minutes): Create a mobile app with Meta Account login and gasless UX using Abstraxion.
+* [Launch a User Map app](https://docs.burnt.com/xion/developers/xion-quick-start/zero-to-dapp-in-5-minutes/launch-a-user-map-dapp-on-xion-in-5-minutes): Launch a web based app that lets users store and retrieve data using  user map smart contract.
+* [Build a React Native Mobile app](https://docs.burnt.com/xion/developers/xion-quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-on-xion-in-5-minutes): Create a mobile app with Meta Account login and gasless UX using Abstraxion.
 

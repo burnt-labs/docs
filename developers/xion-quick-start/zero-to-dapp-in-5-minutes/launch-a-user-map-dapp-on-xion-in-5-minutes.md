@@ -1,18 +1,18 @@
-# Launch a User Map Dapp on XION in 5 Minutes
+# Launch a User Map App on XION in 5 Minutes
 
-Building a dapp on XION typically involves three main components:
+Building a app on XION typically involves three main components:
 
-* **A smart contract** – Contains the core business logic of your dapp.
+* **A smart contract** – Contains the core business logic of your app.
 * **A Treasury contract** – Enables gasless transactions using **Fee Grants**, making onboarding smoother for users. It also handles **Authorization Grants**, which allow your frontend to execute transactions on behalf of the user, enabling a more traditional application-like experience through our OAuth2-style **Abstraxion** solution.
-* **A frontend** – This is your dapp’s interface, used to display data and trigger transactions via the smart contract.
+* **A frontend** – This is your app’s interface, used to display data and trigger transactions via the smart contract.
 
-As a beginner to XION development, getting a fully functional dapp up and running should be simple and shouldn’t require any complex setup. With this in mind, we’ve created a [**quick launch frontend solution**](https://quickstart.dev.testnet.burnt.com) for the **User Map** dapp that handles the creation of both the **User Map** and **Treasury** contracts. Outside of this we have built a [**frontend**](https://github.com/burnt-labs/xion-user-map-json-store-frontend) solution for interacting with the User Map contract.
+As a beginner to XION development, getting a fully functional app up and running should be simple and shouldn’t require any complex setup. With this in mind, we’ve created a [**quick launch frontend solution**](https://quickstart.dev.testnet.burnt.com) for the **User Map** app that handles the creation of both the **User Map** and **Treasury** contracts. Outside of this we have built a [**frontend**](https://github.com/burnt-labs/xion-user-map-json-store-frontend) solution for interacting with the User Map contract.
 
 {% hint style="info" %}
-You should have your demo dapp up and running in under **5 minutes**. Once you're familiar with the workflow, you can move on to the advanced [**User Map guide**](../../learn-and-build/use-cases/building-a-per-user-data-storage-dapp.md).
+You should have your demo app up and running in under **5 minutes**. Once you're familiar with the workflow, you can move on to the advanced [**User Map guide**](../../learn-and-build/use-cases/building-a-per-user-data-storage-dapp.md).
 {% endhint %}
 
-## What is the User Map dapp?
+## What is the User Map app?
 
 The **User Map** contract is a lightweight and beginner friendly smart contract designed to help developers, especially those coming from traditional web or application development, understand how to manage per-user data in a decentralized environment.
 
@@ -34,7 +34,7 @@ Before you begin, make sure you have the following installed:
 
 **Compiling** and **instantiating** smart contracts can feel like huge tasks, especially for new developers. You typically need to set up your development environment with tools like [**Docker**](https://docs.burnt.com/xion/developers/xion-quick-start/setup-local-environment/installation-prerequisites-setup-local-environment#docker) and [**xiond**](https://docs.burnt.com/xion/developers/xion-quick-start/setup-local-environment/installation-prerequisites-setup-local-environment#xiond), and go through the full process of compiling, deploying, and instantiating your contracts manually. On top of that, creating and configuring a Treasury contract via the [**Dev Portal**](https://dev.testnet.burnt.com) can be overwhelming if you're just getting started.
 
-To make this much easier, we’ve created a [**quick launch frontend solution**](https://quickstart.dev.testnet.burnt.com) for this **User Map** dapp that takes care of all the heavy lifting, so you can skip the setup pain and focus on experimenting with a real, working dapp.
+To make this much easier, we’ve created a [**quick launch frontend solution**](https://quickstart.dev.testnet.burnt.com) for this **User Map** app that takes care of all the heavy lifting, so you can skip the setup pain and focus on experimenting with a real, working app.
 
 1. Go to [https://quickstart.dev.testnet.burnt.com](https://quickstart.dev.testnet.burnt.com) and log in using your **Meta Account**
 
@@ -63,7 +63,7 @@ NEXT_PUBLIC_REST_URL=...
 
 ## Set Up the Frontend
 
-The frontend allows users to log into your dapp using their Meta Account via multiple authenticators (Email, Social Login, Wallets, Passkeys). Once logged in, users can query contract data and execute transactions to update their User Map record, which is linked to their Meta Account address.
+The frontend allows users to log into your app using their Meta Account via multiple authenticators (Email, Social Login, Wallets, Passkeys). Once logged in, users can query contract data and execute transactions to update their User Map record, which is linked to their Meta Account address.
 
 There are two options available for setting up the frontend:
 
@@ -138,4 +138,4 @@ Once connected, the interface will allow you to:
 
 ***
 
-For a detailed breakdown of the contract’s design, execution messages, and frontend setup see [Full Guide – Building a Per-User Data Storage dApp](https://docs.burnt.com/xion/developers/learn-and-build/use-cases/building-a-per-user-data-storage-dapp).
+For a detailed breakdown of the contract’s design, execution messages, and frontend setup see [Full Guide – Building a Per-User Data Storage app](https://docs.burnt.com/xion/developers/learn-and-build/use-cases/building-a-per-user-data-storage-dapp).
