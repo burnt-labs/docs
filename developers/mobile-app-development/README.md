@@ -7,6 +7,13 @@ icon: mobile
 
 # Mobile App Development
 
+{% hint style="success" %}
+Get a mobile app up and running fast:\
+[**Build a React Native Mobile app on XION in 5 Minutes**](https://docs.burnt.com/xion/developers/xion-quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-on-xion-in-5-minutes)
+
+This guide is designed to give developers instant look at a working app on XION, without needing to write or compile code, set up a local dev environment, or build out a frontend.
+{% endhint %}
+
 XION has developed Dave, the Premier Mobile Development Kit, enabling builders to meet users where they are.&#x20;
 
 Mobile app development on XION refers to the process of creating blockchain-based applications specifically optimized for mobile platforms (iOS and Android), using familiar tools like **React Native** and **Expo**, while leveraging XION’s native features such as:
