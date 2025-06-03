@@ -1,6 +1,6 @@
-# Create Mobile Dapp and Integrate Meta Account Authentication
+# Create Mobile App and Integrate Meta Account Authentication
 
-This guide walks you through how to integrate Meta Account authentication into your mobile dapp using the `@burnt-labs/abstraxion-react-native` package. With Meta Accounts, users can easily sign in using familiar login methods such as email or social accounts, eliminating the need for wallets or seed phrases. This simplifies the onboarding experience and lowers the barrier for mainstream adoption by providing a secure, traditional style authentication flow within a blockchain application.
+This guide walks you through how to integrate Meta Account authentication into your mobile app using the `@burnt-labs/abstraxion-react-native` package. With Meta Accounts, users can easily sign in using familiar login methods such as email or social accounts, eliminating the need for wallets or seed phrases. This simplifies the onboarding experience and lowers the barrier for mainstream adoption by providing a secure, traditional style authentication flow within a blockchain application.
 
 
 
@@ -58,7 +58,7 @@ EXPO_PUBLIC_REST_ENDPOINT="https://api.xion-testnet-2.burnt.com"
 ```
 
 * **EXPO\_PUBLIC\_CONTRACT\_ADDRESS -** The address of the smart contract your app will interact with.
-* **EXPO\_PUBLIC\_TREASURY\_CONTRACT\_ADDRESS -** The treasury contract associated with the above contract. It enables gasless transactions using fee grants and handles authorization permissions, allowing your dApp to execute transactions on behalf of the Meta Account holder—delivering a seamless user experience.
+* **EXPO\_PUBLIC\_TREASURY\_CONTRACT\_ADDRESS -** The treasury contract associated with the above contract. It enables gasless transactions using fee grants and handles authorization permissions, allowing your app to execute transactions on behalf of the Meta Account holder—delivering a seamless user experience.
 * **EXPO\_PUBLIC\_RPC\_ENDPOINT -** The RPC endpoint used to communicate with the XION blockchain.
 * **EXPO\_PUBLIC\_REST\_ENDPOINT -** The REST endpoint for querying chain state via HTTP.
 
@@ -337,7 +337,7 @@ Now that your app is authenticated with Meta Accounts, you're ready to start int
 
 Depending on your goals, here are two paths you can take next:
 
-### Launch a Mobile dapp in 5 Minutes
+### Launch a Mobile app in 5 Minutes
 
 If you're looking to get something up and running **quickly**, follow our streamlined quick-start guide: [**Launch a Mobile dApp in 5 Minutes**](https://docs.burnt.com/xion/developers/xion-quick-start/zero-to-dapp-in-5-minutes/launch-a-user-map-dapp-on-xion-in-5-minutes)**.**
 
@@ -348,11 +348,11 @@ This guide walks you through:
 * Setting up a mobile app using a prebuilt template
 * Authenticating users and saving their data to the blockchain
 
-It’s the fastest way to see the full dapp lifecycle in action.
+It’s the fastest way to see the full app lifecycle in action.
 
 
 
-### Deep Dive: How the Mobile dapp is Built
+### Deep Dive: How the Mobile app is built
 
 If you want to understand **how the mobile app works under the hood**, explore this step-by-step tutorial: [**Building a React Native Mobile App with Abstraxion (Xion.js)**](https://docs.burnt.com/xion/developers/learn-and-build/mobile-development/building-a-react-native-mobile-app-with-abstraxion-xion.js)**.**
 

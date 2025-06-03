@@ -16,13 +16,13 @@
 
 ## developers
 
-* [Xion Quick Start](developers/xion-quick-start/README.md)
+* [XION Quick Start](developers/xion-quick-start/README.md)
   * [Zero to Dapp in 5 Minutes](developers/xion-quick-start/zero-to-dapp-in-5-minutes/README.md)
     * [Launch a User Map Dapp on XION in 5 Minutes](developers/xion-quick-start/zero-to-dapp-in-5-minutes/launch-a-user-map-dapp-on-xion-in-5-minutes.md)
     * [React Native Mobile Dapp on XION in 5 Minutes](developers/xion-quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-on-xion-in-5-minutes.md)
-* [Mobile dapp Development on XION](developers/mobile-dapp-development-on-xion/README.md)
-  * [Set up your XION Mobile Development Environment](developers/mobile-dapp-development-on-xion/set-up-your-xion-mobile-development-environment.md)
-  * [Create Mobile Dapp and Integrate Meta Account Authentication](developers/mobile-dapp-development-on-xion/create-mobile-dapp-and-integrate-meta-account-authentication.md)
+* [Mobile App Development](developers/mobile-app-development/README.md)
+  * [Set up your XION Mobile Development Environment](developers/mobile-app-development/set-up-your-xion-mobile-development-environment.md)
+  * [Create Mobile App and Integrate Meta Account Authentication](developers/mobile-app-development/create-mobile-app-and-integrate-meta-account-authentication.md)
 * [Getting Started (Advanced)](developers/getting-started-advanced/README.md)
   * [Set Up Local Environment](developers/getting-started-advanced/setup-local-environment/README.md)
     * [Setting up your Local Smart Contract Development Environment for XION](developers/getting-started-advanced/setup-local-environment/installation-prerequisites-setup-local-environment/README.md)
