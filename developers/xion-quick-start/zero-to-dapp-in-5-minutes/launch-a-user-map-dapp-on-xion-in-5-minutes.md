@@ -12,8 +12,6 @@ As a beginner to XION development, getting a fully functional dapp up and runnin
 You should have your demo dapp up and running in under **5 minutes**. Once you're familiar with the workflow, you can move on to the advanced [**User Map guide**](../../learn-and-build/use-cases/building-a-per-user-data-storage-dapp.md).
 {% endhint %}
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FB5Z5ijJgMx0GJO3l1Il9%2Fuploads%2FF2QNRPbGGWUnFcno63bw%2F07%20-%20User%20Map%20Demo.mp4?alt=media&token=49ea9c71-aad0-489f-b736-514fa918a720" %}
-
 ## What is the User Map dapp?
 
 The **User Map** contract is a lightweight and beginner friendly smart contract designed to help developers, especially those coming from traditional web or application development, understand how to manage per-user data in a decentralized environment.
@@ -40,7 +38,7 @@ To make this much easier, we’ve created a [**quick launch frontend solution**]
 
 1. Go to [https://quickstart.dev.testnet.burnt.com](https://quickstart.dev.testnet.burnt.com) and log in using your **Meta Account**
 
-<figure><img src="../../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
 
 2. Click the **Launch User Map & Fund Treasury** button
 
@@ -67,41 +65,74 @@ NEXT_PUBLIC_REST_URL=...
 
 The frontend allows users to log into your dapp using their Meta Account via multiple authenticators (Email, Social Login, Wallets, Passkeys). Once logged in, users can query contract data and execute transactions to update their User Map record, which is linked to their Meta Account address.
 
-To run the frontend locally, execute the following commands in your terminal:
+There are two options available for setting up the frontend:
+
+* One being the automated option where you you run a command that downloads the frontend app from github, install all the dependencies and set up are the required environment varaibles with the required values.
+* The other option is a manual installtion where you will need to pull down the code from github, install the necessary packages and set up the environment variables.
+
+
+
+### Automated Installation
+
+In the **Quick Launch Frontend**, select the **"webapp"** template.
+
+<figure><img src="../../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
+
+You’ll see two options for setting up your project. **Option 1: One-liner (Recommended)** provides a bash command that automates the entire setup process:
+
+* Clones the frontend project from the Git repository
+* Installs all required packages
+* Sets up the necessary environment variables
+* Launch a dev server
+
+To use this option, simply copy the provided bash command and run it in your terminal from the directory where you'd like your project to be created.
+
+<figure><img src="../../../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
+
+Once complete, the development server will automatically start, and you can access your app at [http://localhost:3000](http://localhost:3000) in your browser.
+
+
+
+### Manual Installation
+
+To manually set up the project, start by cloning the repository:
 
 ```bash
 git clone https://github.com/burnt-labs/xion-user-map-json-store-frontend
 cd xion-user-map-json-store-frontend
 ```
 
-### Set up Environment Variables
+Next, create a `.env.local` file in the root of your project directory.
 
-In the **Quick Launch Frontend** click the "**webapp**" template:
+#### Set up Environment Variables
+
+In the **Quick Launch Frontend**, select the **"webapp"** template:
 
 <figure><img src="../../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
 
-There are two options available for copying the variables into your project:
-
-* **Option 1: One-liner (Recommended):** Run the bash command provided in your terminal from within your project directory to automatically download and save the environment file into your project with the variables set to the correct values.&#x20;
-
-<figure><img src="../../../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
-
-* **Option 2: Manual Copy & Paste:** Copy and paste the actual variables into your `.env.local` file in the root of your project:
+Under the **"Option 2: Manual Copy & Paste"** section, copy the environment variable values and paste them into your `.env.local` file:
 
 <figure><img src="../../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
 
-Install dependencies and start the local dev server:
+Once the environment is configured, install the dependencies and start the local development server:
 
 ```bash
 npm install
 npm run dev
 ```
 
-Visit `http://localhost:3000` in your browser to open the app. You should see the following:
+You can now access the app at [http://localhost:3000](http://localhost:3000) in your browser.
+
+#### The Frontend Interface
+
+After the app loads in your browser, you’ll see the homepage with a **“Connect”** button. Click this button to log in with your XION Meta Account.
 
 <figure><img src="../../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
 
-Once logged in, you will be presented with an interface where you can enter a JSON object. When you click "Submit JSON," a transaction will be executed to update the User Map with the provided JSON data. You can also select from the other menu options that allow you to retrieve data from the contract.
+Once connected, the interface will allow you to:
+
+* **Submit JSON data**: Enter a JSON object and click **“Submit JSON”** to trigger a transaction that stores the data in your User Map on-chain.
+* **Retrieve data**: Use the available menu options to query and view stored JSON data from the smart contract.
 
 <figure><img src="../../../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
 
