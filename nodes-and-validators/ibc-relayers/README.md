@@ -14,7 +14,7 @@ The following table lists the IBC channels currently available on XION **Mainnet
 
 | Destination Chain | Source Channel | Destination Channel | IBC Channel Info                                                                |
 | ----------------- | -------------- | ------------------- | ------------------------------------------------------------------------------- |
-| axelar            | cchannel-3     | channel-161         | [View](https://assets.xion.burnt.com/chain-registry/_IBC/axelar-xion.json)      |
+| axelar            | channel-3      | channel-161         | [View](https://assets.xion.burnt.com/chain-registry/_IBC/axelar-xion.json)      |
 | elys              | channel-9      | cchannel-8          | [View](https://assets.xion.burnt.com/chain-registry/_IBC/elys-xion.json)        |
 | injective         | channel-4      | channel-387         | [View](https://assets.xion.burnt.com/chain-registry/_IBC/injective-xion.json)   |
 | kyve              | channel-5      | channel-7           | [View](https://assets.xion.burnt.com/chain-registry/_IBC/kyve-xion.json)        |
