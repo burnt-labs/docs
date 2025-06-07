@@ -76,6 +76,7 @@
     * [SubQuery](developers/learn-and-build/indexers/subquery.md)
   * [Use Cases](developers/learn-and-build/use-cases/README.md)
     * [Building a Per-User Data Storage App](developers/learn-and-build/use-cases/building-a-per-user-data-storage-dapp.md)
+    * [Build a TODO App using the Collection-Document Storage Smart Contract](developers/learn-and-build/use-cases/build-a-todo-app-using-the-collection-document-storage-smart-contract.md)
 * [Reference and Resources](developers/section-overview/README.md)
   * [Requesting XION Testnet Tokens](developers/section-overview/xion-testnet.md)
   * [Public Endpoints & Resources](developers/section-overview/public-endpoints-and-resources.md)
