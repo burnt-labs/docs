@@ -147,6 +147,7 @@ Set the contract's initialization message by executing the following in your ter
 
 ```bash
 MSG='{"admin":"xion1..."}'
+CODE_ID=1228
 ```
 
 Execute the following command updating the value for `--from` to your wallet address that will be executing the transaction:
