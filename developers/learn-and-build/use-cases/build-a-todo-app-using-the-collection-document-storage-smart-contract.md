@@ -147,6 +147,7 @@ Set the contract's initialization message by executing the following in your ter
 
 ```bash
 MSG='{"admin":"xion1..."}'
+CODE_ID=1228
 ```
 
 Execute the following command updating the value for `--from` to your wallet address that will be executing the transaction:
@@ -251,6 +252,53 @@ Learn more about Treasury Contracts [here](https://docs.burnt.com/xion/developer
 
 
 
+## Todo App Data Structure
+
+This todo app interacts with the DocuStore smart contract by organizing data into three main collections. Each collection stores structured documents with user-specific data.
+
+### Todos Collection
+
+```rust
+struct Document {
+    owner: String,
+    title: String,
+    content: String,
+    created_at: u64,
+    updated_at: u64,
+    metadata: Option<Metadata>,
+}
+```
+
+Each document in the `todos` collection represents an individual task. It includes basic task details, ownership, timestamps, and optional metadata (e.g., tags, priority, due date).
+
+### Profiles Collection
+
+```rust
+struct Profile {
+    display_name: String,
+    bio: String,
+    avatar: String,
+    social_links: Vec<SocialLink>,
+}
+```
+
+The `profile` collection stores public facing user profile data such as name, bio, and social media links, useful for personalization or social features in the app.
+
+### Settings Collection
+
+```rust
+struct Settings {
+    dark_mode: bool,
+    notifications: bool,
+    language: String,
+    timezone: String,
+}
+```
+
+The `settings` collection holds user preferences for customizing the application experience, including UI theme, notification toggles, and localization options.
+
+
+
 ## Building the Frontend <a href="#building-the-frontend" id="building-the-frontend"></a>
 
 We've created a frontend which is a [Next.js](https://nextjs.org/) application built to interact with the **DocuStore** smart contract that can be downloaded at [https://github.com/burnt-labs/todo-app-frontend](https://github.com/burnt-labs/todo-app-frontend). It showcases how users can connect their wallets, create todo records, update their profile, app settings and query their data.
@@ -259,7 +307,7 @@ We've created a frontend which is a [Next.js](https://nextjs.org/) application b
 
 ### Manual Installation <a href="#manual-installation" id="manual-installation"></a>
 
-You will first need to clone to repository:
+You will first need to clone the repository:
 
 ```bash
 git clone https://github.com/burnt-labs/todo-app-frontend
@@ -270,6 +318,7 @@ After doing so you will have to change into the newly created directory and then
 1. Install dependencies:
 
 ```bash
+cd todo-app-frontend
 npm install
 ```
 
