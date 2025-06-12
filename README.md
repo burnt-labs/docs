@@ -6,11 +6,17 @@ description: The First Blockchain Purpose Built For Consumer Adoption
 
 XION is a blockchain infrastructure built with user experience at the core. The chain integrates complex functionalities such as account management, signature handling, fee abstraction, and interoperability directly at the protocol level. The aim is to simplify blockchain interactions for mainstream users by addressing the technical complexities that currently hinder widespread adoption.
 
-## Developer Quick Start
+## 🚀 Zero to App in 5 Minutes
 
-Get started with XION development by setting up your environment and building your first decentralized application.
+Get your first app running on XION in minutes! Choose your platform and start building immediately.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Setting up your Local Development Environment</strong></td><td>Covers the necessary tools, dependencies, and configurations needed to get started.</td><td></td><td><a href="developers/getting-started-advanced/setup-local-environment/installation-prerequisites-setup-local-environment/">installation-prerequisites-setup-local-environment</a></td></tr><tr><td><strong>Deploying Your First Smart Contract</strong></td><td>Walks you through the process of deploying a smart contract on the XION network.</td><td></td><td><a href="developers/getting-started-advanced/your-first-contract/deploy-a-cosmwasm-smart-contract.md">deploy-a-cosmwasm-smart-contract.md</a></td></tr><tr><td><strong>Building your first app with Account Abstraction</strong></td><td>Building a basic app using the Abstraxion library with  a gasless transaction experience.</td><td></td><td><a href="developers/getting-started-advanced/your-first-dapp/build-react-dapp-with-account-abstraxion.md">build-react-dapp-with-account-abstraxion.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>🌐 Web App Quick Start</strong></td><td>Launch a fully functional User Map dApp with wallet integration in just 5 minutes.</td><td></td><td><a href="developers/xion-quick-start/zero-to-dapp-in-5-minutes/launch-a-user-map-dapp-on-xion-in-5-minutes.md">launch-a-user-map-dapp-on-xion-in-5-minutes.md</a></td></tr><tr><td><strong>📱 Mobile App Quick Start</strong></td><td>Build a React Native mobile dApp with XION integration in 5 minutes.</td><td></td><td><a href="developers/xion-quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-on-xion-in-5-minutes.md">react-native-mobile-dapp-on-xion-in-5-minutes.md</a></td></tr></tbody></table>
+
+## Developer Resources
+
+Ready to dive deeper? Explore comprehensive guides for building on XION.
+
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Setting up Local Environment</strong></td><td>Configure your development environment with all necessary tools and dependencies.</td><td></td><td><a href="developers/getting-started-advanced/setup-local-environment/installation-prerequisites-setup-local-environment/">installation-prerequisites-setup-local-environment</a></td></tr><tr><td><strong>Deploy Smart Contracts</strong></td><td>Learn how to write and deploy CosmWasm smart contracts on XION.</td><td></td><td><a href="developers/getting-started-advanced/your-first-contract/deploy-a-cosmwasm-smart-contract.md">deploy-a-cosmwasm-smart-contract.md</a></td></tr><tr><td><strong>Build with Account Abstraction</strong></td><td>Create apps with gasless transactions using the Abstraxion library.</td><td></td><td><a href="developers/getting-started-advanced/your-first-dapp/build-react-dapp-with-account-abstraxion.md">build-react-dapp-with-account-abstraxion.md</a></td></tr></tbody></table>
 
 ## Learn More About XION
 
