@@ -2,6 +2,10 @@
 
 The Crossmint integration with XION enables a seamless, credit card based NFT checkout experience. This is ideal for onboarding non-crypto native users into platforms where NFT assets are used, such as games, marketplaces, or digital collectibles.
 
+{% hint style="success" %}
+To import a custom NFT contract into the Crossmint platform, your contract must follow the specific requirements outlined [here](https://docs.crossmint.com/minting/advanced/xion-contracts). These guidelines ensure compatibility with Crossmint’s infrastructure.
+{% endhint %}
+
 ## Crossmint Staging Environment
 
 To get started, create a Crossmint staging account so you can test the integration in a sandbox environment.
@@ -50,8 +54,6 @@ Then click "**Save client key**" Your client key will now appear in the client k
 
 
 ### Create Collection
-
-The Crossmint team went ahead and allowed for the creation of a NFT collection within the Console. This NFT collection is based on the "[**CW-721 Metadata Onchain**](https://github.com/public-awesome/cw-nfts/tree/main/contracts/cw721-metadata-onchain)" contract. You are also able to import your custom NFT Contract which should be based on the "[**CW-721 Metadata Onchain**](https://github.com/public-awesome/cw-nfts/tree/main/contracts/cw721-metadata-onchain)".  To create your collection follow these steps:
 
 The Crossmint team has enabled the creation of NFT collections directly within the Console. These collections are based on the [**CW-721 Metadata Onchain**](https://github.com/public-awesome/cw-nfts/tree/main/contracts/cw721-metadata-onchain) contract. You can also import a custom NFT contract, as long as it is built on the [**CW-721 Metadata Onchain**](https://github.com/public-awesome/cw-nfts/tree/main/contracts/cw721-metadata-onchain) standard.
 
