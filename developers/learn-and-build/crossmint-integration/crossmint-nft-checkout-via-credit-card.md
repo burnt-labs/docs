@@ -1,4 +1,4 @@
-# Crossmint Checkout - NFT Collection
+# Crossmint NFT Checkout via Credit Card
 
 The Crossmint integration with XION enables a seamless, credit card based NFT checkout experience. This is ideal for onboarding non-crypto native users into platforms where NFT assets are used, such as games, marketplaces, or digital collectibles.
 
@@ -172,3 +172,18 @@ npm run dev
 ```
 
 You can now access the app at [http://localhost:3000](http://localhost:3000/) in your browser.
+
+## Additional Resources
+
+* **Crossmint API Reference**\
+  Full documentation for all Crossmint API endpoints and capabilities.\
+  [https://docs.crossmint.com/api-reference/introduction](https://docs.crossmint.com/api-reference/introduction)
+* **Quickstart: Add a Pay Button**\
+  A simple guide to help you quickly add Crossmint's checkout button to your frontend.\
+  [https://docs.crossmint.com/payments/pay-button/quickstart](https://docs.crossmint.com/payments/pay-button/quickstart)
+* **Importing a Custom NFT Contract on XION**\
+  Requirements and steps for registering your own CW721-based contract with Crossmint.\
+  [https://docs.crossmint.com/minting/advanced/xion-contracts](https://docs.crossmint.com/minting/advanced/xion-contracts)
+* **Enable Multi-NFT Checkout in a Single Order**\
+  Learn how to allow users to purchase multiple NFTs at once via a single Crossmint transaction.\
+  [https://docs.crossmint.com/payments/advanced/selling-multiple-nfts](https://docs.crossmint.com/payments/advanced/selling-multiple-nfts)
