@@ -13,8 +13,6 @@ Good governance ensures:
 
 ## DAO Contracts
 
-Great question! Since you mentioned not wanting a detailed **table with multiple rows** for each DAO DAO module, but still want a **single-row overview**, here's a **clean one-row table** you can include above or below the description I gave:
-
 | Contract              | Purpose                                                                                                  | Audit                                                                                       | Repo                                                          |
 | --------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | **dao-dao-contracts** | A modular system for building DAOs with support for proposals, voting, staking, delegation, and rewards. | Oak Security ([Files](https://github.com/oak-security/audit-reports/tree/master/DAO%20DAO)) | [dao-dao-contracts](https://github.com/DA0-DA0/dao-contracts) |

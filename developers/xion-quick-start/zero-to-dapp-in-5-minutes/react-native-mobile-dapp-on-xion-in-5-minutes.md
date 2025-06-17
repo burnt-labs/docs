@@ -21,12 +21,18 @@ Think of it like a basic key-value store:
 
 You can find the source code here: [github.com/burnt-labs/contracts/tree/main/contracts/user\_map](https://github.com/burnt-labs/contracts/tree/main/contracts/user_map).
 
+
+
 ## Prerequisites
 
-Before you begin, ensure you have the following installed:
+Before you begin, ensure you have the following installed and configured:
 
-* [**Node.js** (LTS version recommended) and **NPM**](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-* **Android Emulator,** **iOS Simulator** or a physical device for testing
+* [**Node.js** (LTS version recommended) and **npm**](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+* An Android Emulator via [Android Studio](https://docs.expo.dev/get-started/set-up-your-environment?platform=android\&device=physical\&mode=development-build\&buildEnv=local#set-up-an-android-device-with-a-development-build), iOS Simulator via [Xcode](https://docs.expo.dev/get-started/set-up-your-environment?platform=ios\&device=physical\&mode=development-build\&buildEnv=local#set-up-an-ios-device-with-a-development-build), **or** a physical mobile device for testing
+
+The following [guide](https://docs.expo.dev/guides/local-app-development) will help you set up your local development environment for Expo. We also have a guide in the docs on [Set up your XION Mobile Development Environment](../../mobile-app-development/set-up-your-xion-mobile-development-environment.md), which shows how to get your Android emulator and iOS simulator set up.
+
+
 
 ## Create Instance of User Map and Treasury Contracts
 
@@ -76,7 +82,7 @@ In the **Quick Launch Frontend** click the "**Mobile**" template:
 
 There are two options available for copying the variables into your project:
 
-* **Option 1: One-liner (Recommended):** Run the bash command provided in your terminal from within your project directory to automatically download and save the environment file into your project with the variables set to the correct values.&#x20;
+* **Option 1: One-liner (Recommended):** Run the bash command provided in your terminal from within your project directory to automatically download and save the environment file into your project with the variables set to the correct values.
 
 <figure><img src="../../../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
 

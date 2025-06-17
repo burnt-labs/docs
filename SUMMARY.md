@@ -24,6 +24,7 @@
   * [Set up your XION Mobile Development Environment](developers/mobile-app-development/set-up-your-xion-mobile-development-environment.md)
   * [Create Mobile App and Integrate Meta Account Authentication](developers/mobile-app-development/create-mobile-app-and-integrate-meta-account-authentication.md)
   * [Building a React Native Mobile App with Abstraxion (Xion.js)](developers/mobile-app-development/building-a-react-native-mobile-app-with-abstraxion-xion.js.md)
+  * [Build a TODO Mobile App using the DocuStore Contract](developers/mobile-app-development/build-a-todo-mobile-app-using-the-docustore-contract.md)
 * [Getting Started (Advanced)](developers/getting-started-advanced/README.md)
   * [Set Up Local Environment](developers/getting-started-advanced/setup-local-environment/README.md)
     * [Setting up your Local Smart Contract Development Environment for XION](developers/getting-started-advanced/setup-local-environment/installation-prerequisites-setup-local-environment/README.md)

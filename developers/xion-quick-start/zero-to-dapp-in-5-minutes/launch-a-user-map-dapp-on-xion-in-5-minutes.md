@@ -1,6 +1,6 @@
 # Launch a User Map App on XION in 5 Minutes
 
-Building a app on XION typically involves three main components:
+Building an app on XION typically involves three main components:
 
 * **A smart contract** – Contains the core business logic of your app.
 * **A Treasury contract** – Enables gasless transactions using **Fee Grants**, making onboarding smoother for users. It also handles **Authorization Grants**, which allow your frontend to execute transactions on behalf of the user, enabling a more traditional application-like experience through our OAuth2-style **Abstraxion** solution.
@@ -70,8 +70,6 @@ There are two options available for setting up the frontend:
 * One being the automated option where you you run a command that downloads the frontend app from github, install all the dependencies and set up are the required environment varaibles with the required values.
 * The other option is a manual installtion where you will need to pull down the code from github, install the necessary packages and set up the environment variables.
 
-
-
 ### Automated Installation
 
 In the **Quick Launch Frontend**, select the **"webapp"** template.
@@ -90,8 +88,6 @@ To use this option, simply copy the provided bash command and run it in your ter
 <figure><img src="../../../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
 
 Once complete, the development server will automatically start, and you can access your app at [http://localhost:3000](http://localhost:3000) in your browser.
-
-
 
 ### Manual Installation
 
