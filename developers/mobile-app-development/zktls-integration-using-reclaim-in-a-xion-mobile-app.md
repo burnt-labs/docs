@@ -119,7 +119,7 @@ Here is an example function in Javascript to create an instance of the RUM contr
 
 ## Set up Mobile App
 
-We've built a [demo app](https://github.com/burnt-labs/abstraxion-expo-demo/pull/6) to showcase how everything works together. In this example, we retrieve a user's `follower_count` from **X.com** (formerly Twitter) and store that value in their user map on-chain using the smart contract. This app is an extension of the User Map contract so a separate User Map contract instance is used for the original flow of the app but there is a new **zkTLS** page that uses the **RUM** contract instance.
+We've built a [demo app](https://github.com/burnt-labs/abstraxion-expo-demo/pull/6) to showcase how everything works together. In this example, we retrieve a user's `follower_count` from **X.com** (formerly Twitter) and store that value as their acount's user map value within the RUM contract datastore. This app is an extension of the User Map contract. If you are familiar with the original [User Map mobile app](../xion-quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-on-xion-in-5-minutes.md) you will ses that there's a new **zkTLS** page in this app that uses the **RUM** contract instance.
 
 ### Manual Installation <a href="#manual-installation" id="manual-installation"></a>
 
