@@ -12,7 +12,7 @@ The ability to verify real-world facts without compromising user privacy is crit
 
 ## Create a Reclaim Account
 
-**Reclaim** is a decentralized identity protocol that allows users to prove facts about themselves—such as social media stats, financial data, or platform activity—using **zero-knowledge proofs (ZKPs)**. Rather than sharing raw data, Reclaim enables users to generate cryptographic proofs that can be verified on-chain without revealing the underlying information.
+**Reclaim** is a decentralized identity protocol that allows users to prove facts about themselves, such as social media stats, financial data, or platform activity, using **zero-knowledge proofs (ZKPs)**. Rather than sharing raw data, Reclaim enables users to generate cryptographic proofs that can be verified on-chain without revealing the underlying information.
 
 In this guide, we’ll use Reclaim to let users prove their **Twitter follower count** without exposing their full profile or login credentials. This is done through Reclaim’s integration with trusted data providers like Twitter, wrapped in a ZK-proof that can be verified by your frontend or smart contract.
 
