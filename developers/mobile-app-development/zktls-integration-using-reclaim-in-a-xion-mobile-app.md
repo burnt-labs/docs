@@ -6,7 +6,7 @@ The ability to verify real-world facts without compromising user privacy is crit
 
 * **Trustless verification** of real-world data from web2 sources (e.g., social platforms, email providers, SaaS tools)
 * **Privacy-preserving:** users reveal only what's necessary, not the full data
-* **On-chain utility:** proofs can be verified by smart contracts for gating access, assigning badges, or triggering functionality
+* **On-chain utility:** proofs can be verified by smart contracts for gating access or triggering functionality
 
 
 
