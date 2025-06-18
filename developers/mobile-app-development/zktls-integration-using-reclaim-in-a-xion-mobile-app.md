@@ -91,7 +91,7 @@ Here is an example function in Javascript to create an instance of the RUM contr
     try {
       const instantiateMsg = {
         verification_addr: "xion1qf8jtznwf0tykpg7e65gwafwp47rwxl4x2g2kldvv357s6frcjlsh2m24e", // this stays hardcoded to our verification contract
-        claim_key: "add-claim-key", // Change this to whatever claim key you want to use
+        claim_key: "followers_count", // Change this to whatever claim key you want to use
       };
       
       let CODE_ID = 1289;
