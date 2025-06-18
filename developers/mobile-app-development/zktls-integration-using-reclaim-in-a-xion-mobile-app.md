@@ -1,6 +1,6 @@
 # zkTLS Integration using Reclaim in a Xion Mobile App
 
-The ability to verify real-world facts without compromising user privacy is critical. Traditional methods of user verification, centralized APIs, oracles, can introduce trust assumptions, privacy tradeoffs, and central points of failure.
+The ability to verify real-world facts without compromising user privacy is critical. Traditional methods of user verification, centralized APIs, can introduce trust assumptions, privacy tradeoffs, and central points of failure.
 
 **zkTLS** (Zero-Knowledge Transport Layer Security) bridges this gap by allowing clients to generate verifiable proofs of HTTPS interactions, without revealing the full response or needing to trust the server. This has massive implications for Apps:
 
