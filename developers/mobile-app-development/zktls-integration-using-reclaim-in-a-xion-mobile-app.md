@@ -19,8 +19,8 @@ In this guide, we’ll use Reclaim to let users prove their **Twitter follower c
 To get started, you’ll need to:
 
 1. Visit [Reclaim](https://dev.reclaimprotocol.org/explore) and sign in with your Google account.
-2. Save your **Application ID** and **Application Secret**
-3. Create a new application.
+2. Create a new application.
+3. Save your **Application ID** and **Application Secret**
 4. Add the "**Twitter User Profile**" provider to your application. You will need the "**httpProviderId**" later.
 
 
