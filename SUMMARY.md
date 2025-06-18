@@ -26,6 +26,7 @@
 * [Mobile App Development](developers/mobile-app-development/README.md)
   * [Set up your XION Mobile Development Environment](developers/mobile-app-development/set-up-your-xion-mobile-development-environment.md)
   * [Build a TODO Mobile App using the DocuStore Contract](developers/mobile-app-development/build-a-todo-mobile-app-using-the-docustore-contract.md)
+  * [zkTLS Integration using Reclaim in a Xion Mobile App](developers/mobile-app-development/zktls-integration-using-reclaim-in-a-xion-mobile-app.md)
   * [Create Mobile App and Integrate Meta Account Authentication](developers/mobile-app-development/create-mobile-app-and-integrate-meta-account-authentication.md)
   * [Building a React Native Mobile App with Abstraxion (Xion.js)](developers/mobile-app-development/building-a-react-native-mobile-app-with-abstraxion-xion.js.md)
 * [Getting Started (Advanced)](developers/getting-started-advanced/README.md)
