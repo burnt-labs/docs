@@ -27,7 +27,7 @@ To get started, you’ll need to:
 
 ## Reclaim's Verification Contract
 
-Reclaim provides a global zkTLS verification smart contract that validates user proofs. You do not need to deploy your own instance unless you want to customize it. The verification contract address is as follows:&#x20;
+Reclaim provides a zkTLS verification smart contract that validates user proofs. You do not need to deploy your own instance unless you want to customize it. The verification contract address is as follows:&#x20;
 
 * Global Verification Contract Address: `xion1qf8jtznwf0tykpg7e65gwafwp47rwxl4x2g2kldvv357s6frcjlsh2m24e`&#x20;
 
