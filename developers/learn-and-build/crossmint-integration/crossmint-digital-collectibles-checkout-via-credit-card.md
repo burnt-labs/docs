@@ -1,9 +1,11 @@
-# Crossmint NFT Checkout via Credit Card
+# Crossmint Digital Collectibles Checkout via Credit Card
 
 The Crossmint integration with XION enables a seamless, credit card based NFT checkout experience. This is ideal for onboarding non-crypto native users into platforms where NFT assets are used, such as games, marketplaces, or digital collectibles.
 
 {% hint style="success" %}
-To import a custom NFT contract into the Crossmint platform, your contract must follow the specific requirements outlined [here](https://docs.crossmint.com/minting/advanced/xion-contracts). These guidelines ensure compatibility with Crossmint’s infrastructure.
+To import a custom NFT contract into the Crossmint platform, your contract should follow the specific requirements outlined [here](https://docs.crossmint.com/minting/advanced/xion-contracts). These guidelines ensure compatibility with Crossmint’s infrastructure.
+
+There is still a good chance your custom NFT contract might still work if it doesn't directly extend the **CW721 Metadata Onchain** variant, as long as the contract supports the `update_minter_ownership` message with the same parameters and accepts the expected `ExecuteMsg` format as documented [here](https://docs.crossmint.com/minting/advanced/xion-contracts).
 {% endhint %}
 
 ## Crossmint Staging Environment
