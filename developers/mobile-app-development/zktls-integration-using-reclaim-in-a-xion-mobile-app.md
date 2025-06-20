@@ -179,9 +179,11 @@ To build and run the app, ensure your **emulator**, **simulator**, or **physical
 
 {% tabs %}
 {% tab title="For Android" %}
-```sh
+```
 npx expo run:android
 ```
+
+Android builds require additional configuration. See the [Android setup documentation](https://github.com/reclaimprotocol/reclaim-inapp-reactnative-sdk?tab=readme-ov-file#android-setup) for the required code changes to enable proper compilation.
 {% endtab %}
 
 {% tab title="For iOS" %}
