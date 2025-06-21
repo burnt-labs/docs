@@ -62,6 +62,7 @@ Instead of storing arbitrary user data, this contract is purpose-built to:
     signatures: verificationResult.proofs[0].signatures,
   };
 
+  // This would be the execute message to update the RUM contract state
   const executeMsg = {
     update: {
       value: {
@@ -123,26 +124,32 @@ We've built a [demo app](https://github.com/burnt-labs/abstraxion-expo-demo/pull
 
 ### Manual Installation <a href="#manual-installation" id="manual-installation"></a>
 
-1. You will first need to clone the repository:
+1. Go to [https://quickstart.dev.testnet.burnt.com](https://quickstart.dev.testnet.burnt.com/) to create an instance of the **User Map** and respective **Treasury** contracts. You will need the values generated for `EXPO_PUBLIC_USER_MAP_CONTRACT_ADDRESS` and `EXPO_PUBLIC_TREASURY_CONTRACT_ADDRESS` below.
+2. Using **CODE ID** `1289` create an instance of the RUM contract. You can find an example function used to create such an instance above.
+3. In your Treasury contract instance created above add the **RUM contract address** in the list of contracts (separated by commas) under the "**Execute on a smart contract**" permission
+
+<figure><img src="../../.gitbook/assets/image (96).png" alt=""><figcaption></figcaption></figure>
+
+4. Clone the repository:
 
 ```bash
 git clone https://github.com/burnt-labs/abstraxion-expo-demo.git
 ```
 
-2. Because the PR is not yet merged we need to fetch the PR and checkout out the branch to get the zkLTS updates:
+5. Because the **PR** is not yet merged you need to fetch the branch associated with the PR and then checkout out the branch to get the **zkLTS** updates:
 
 ```bash
 git fetch origin pull/6/head:impl-reclaim
 git checkout impl-reclaim
 ```
 
-3. Install dependencies:
+6. Install dependencies:
 
 ```bash
 npm install
 ```
 
-4. Create an **`.env.local`** file and set the following values below below:
+7. Create an **`.env.local`** file and set the following values below below:
 
 ```javascript
 EXPO_PUBLIC_USER_MAP_CONTRACT_ADDRESS="usermap-address"
@@ -173,7 +180,7 @@ EXPO_PUBLIC_RECLAIM_PROVIDER_ID="your-reclaim-provider-id"
 
 
 
-5. Build and launch the application:
+8. Build and launch the application:
 
 To build and run the app, ensure your **emulator**, **simulator**, or **physical device** is running. Then, use one of the following commands based on your target platform to launch the App:
 
