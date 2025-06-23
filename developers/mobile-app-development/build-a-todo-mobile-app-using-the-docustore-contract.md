@@ -83,7 +83,7 @@ npm install
 3. Copy the **`.env.example`** file and name it **`.env.local`** and set the values with the information below:
 
 ```javascript
-EXPO_PUBLIC_TODO_CONTRACT_ADDRESS="xion1svpts9q2ml4ahgc4tuu95w8cqzv988s6mf5mupt5kt56gvdnklks9hzar4"
+EXPO_PUBLIC_DOCUSTORE_CONTRACT_ADDRESS="xion1svpts9q2ml4ahgc4tuu95w8cqzv988s6mf5mupt5kt56gvdnklks9hzar4"
 EXPO_PUBLIC_TREASURY_CONTRACT_ADDRESS="xion1aza0jdzfc7g0u64k8qcvcxfppll0cjeer56k38vpshe3p26q5kzswpywp9"
 EXPO_PUBLIC_RPC_ENDPOINT="https://rpc.xion-testnet-2.burnt.com:443"
 EXPO_PUBLIC_REST_ENDPOINT="https://api.xion-testnet-2.burnt.com"
