@@ -35,7 +35,7 @@ Reclaim provides a zkTLS verification smart contract that validates user proofs.
 
 ## Reclaim User Map (RUM) Contract
 
-The **Reclaim User Map (RUM)** contract is a modified version of the User Map contract, designed to store structured JSON information derived from verified proofs.
+The **Reclaim User Map (RUM)** contract is a modified version of the [User Map contract](https://docs.burnt.com/xion/developers/learn-and-build/use-cases/building-a-per-user-data-storage-dapp#user-map-contract), designed to store structured JSON information derived from verified proofs.
 
 Instead of storing arbitrary user data, this contract is purpose-built to:
 
@@ -80,7 +80,10 @@ You can find the RUM contract here [https://github.com/burnt-labs/contracts/pull
 * **Verification Address**: Which is the address of the verification contract that will be called to verify if the proof is valid.
 * **Claim Key**: This is an element in the proof dataset that will be stored on chain. This comes from picking out the value from the `claimData.context` within the proof. For this guide we will be using the `followers_count` key.
 
-Here is an example function in Javascript to create an instance of the RUM contract where you must update the `claim_key` and `verification_addr` if your not using the provided verification contract instance. We have deployed a version of the RUM contract on Testnet with `CODE_ID` being `1289`.
+Here is an example function in Javascript to create an instance of the RUM contract.  
+We have deployed a version of the RUM contract on Testnet with `CODE_ID` being `1289`.  
+If you are using the [provided verification contract instance](#reclaims-verification-contract), you only need to update the `claim_key` parameter.  
+If you are using your own verification contract, you must update both the `claim_key` and `verification_addr` parameters.
 
 ```javascript
   const instantiateRUMContract = async () => {
@@ -120,7 +123,7 @@ Here is an example function in Javascript to create an instance of the RUM contr
 
 ## Set up Mobile App
 
-We've built a [demo app](https://github.com/burnt-labs/abstraxion-expo-demo/pull/6) to showcase how everything works together. In this example, we retrieve a user's `follower_count` from **X.com** (formerly Twitter) and store that value as their acount's user map value within the RUM contract datastore. This app is an extension of the User Map contract. If you are familiar with the original [User Map mobile app](../xion-quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-on-xion-in-5-minutes.md) you will ses that there's a new **zkTLS** page in this app that uses the **RUM** contract instance.
+We've built a [demo app](https://github.com/burnt-labs/abstraxion-expo-demo/pull/6) to showcase how everything works together. In this example, we retrieve a user's `follower_count` from **X.com** (formerly Twitter) and store that value as their account's user map value within the RUM contract datastore. This app is an extension of the User Map contract. If you are familiar with the original [User Map mobile app](../xion-quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-on-xion-in-5-minutes.md) you will see that there's a new **zkTLS** page in this app that uses the **RUM** contract instance.
 
 ### Manual Installation <a href="#manual-installation" id="manual-installation"></a>
 
@@ -136,7 +139,7 @@ We've built a [demo app](https://github.com/burnt-labs/abstraxion-expo-demo/pull
 git clone https://github.com/burnt-labs/abstraxion-expo-demo.git
 ```
 
-5. Because the **PR** is not yet merged you need to fetch the branch associated with the PR and then checkout out the branch to get the **zkLTS** updates:
+5. Because the **PR** is not yet merged you need to fetch the branch associated with the PR and then checkout the branch to get the **zkTLS** updates:
 
 ```bash
 git fetch origin pull/6/head:impl-reclaim
@@ -149,7 +152,7 @@ git checkout impl-reclaim
 npm install
 ```
 
-7. Create an **`.env.local`** file and set the following values below below:
+7. Create an **`.env.local`** file and set the following values below:
 
 ```javascript
 EXPO_PUBLIC_USER_MAP_CONTRACT_ADDRESS="usermap-address"
@@ -168,12 +171,12 @@ EXPO_PUBLIC_RECLAIM_PROVIDER_ID="your-reclaim-provider-id"
 | Variable                                      | Description                                                                                                                                                                                                                                                                                                                            |
 | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | EXPO\_PUBLIC\_USER\_MAP\_CONTRACT\_ADDRESS    | Address of the User Map smart contract instance.                                                                                                                                                                                                                                                                                       |
-| EXPO\_PUBLIC\_TREASURY\_CONTRACT\_ADDRESS     | <p>Treasury contract instance used for gasless transactions and grantz authorization to execute transactions via the User Map smart contract instance on behalf of users.<br><br>You will also need to add your RUM contract address to the treasury contract permission to allow for executing transactions on the user's behalf.</p> |
+| EXPO\_PUBLIC\_TREASURY\_CONTRACT\_ADDRESS     | <p>Treasury contract instance used for gasless transactions and grants authorization to execute transactions via the User Map smart contract instance on behalf of users.<br><br>You will also need to add your RUM contract address to the treasury contract permission to allow for executing transactions on the user's behalf.</p> |
 | EXPO\_PUBLIC\_RPC\_ENDPOINT                   | RPC endpoint for Xion (default: `https://rpc.xion-testnet-2.burnt.com:443`)                                                                                                                                                                                                                                                            |
 | EXPO\_PUBLIC\_REST\_ENDPOINT                  | REST endpoint for Xion (default: `https://api.xion-testnet-2.burnt.com`)                                                                                                                                                                                                                                                               |
 | EXPO\_PUBLIC\_CODE\_ID                        | The Code ID of the deployed RUM contract.                                                                                                                                                                                                                                                                                              |
 | EXPO\_PUBLIC\_VERIFICATION\_CONTRACT\_ADDRESS | Global verification contract address that allows for verifying proofs.                                                                                                                                                                                                                                                                 |
-| EXPO\_PUBLIC\_RUM\_CONTRACT\_ADDRESS          | Your RUM contract instance where the user's follower count will be added to their user map record with their logged in wallet address being the                                                                                                                                                                                        |
+| EXPO\_PUBLIC\_RUM\_CONTRACT\_ADDRESS          | Your RUM contract instance where the user's follower count will be added to their user map record with their logged in wallet address being the key                                                                                                                                                                                       |
 | EXPO\_PUBLIC\_RECLAIM\_APP\_ID                | App ID for the Application created within the Reclaim platform.                                                                                                                                                                                                                                                                        |
 | EXPO\_PUBLIC\_RECLAIM\_APP\_SECRET            | App Secret for the Application created within the Reclaim platform.                                                                                                                                                                                                                                                                    |
 | EXPO\_PUBLIC\_RECLAIM\_PROVIDER\_ID           | Provider ID of the provider added to the Application within the Reclaim platform. This would be found in the **httpProviderId field** in **Twitter User Profile** provider.                                                                                                                                                            |
