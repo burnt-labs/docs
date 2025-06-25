@@ -8,18 +8,22 @@ The ability to verify real-world facts without compromising user privacy is crit
 * **Privacy-preserving:** users reveal only what's necessary, not the full data
 * **On-chain utility:** proofs can be verified by smart contracts for gating access or triggering functionality
 
+
+
 ## Create a Reclaim Account
 
 **Reclaim** is a decentralized identity protocol that allows users to prove facts about themselves, such as social media stats, financial data, or platform activity, using **zero-knowledge proofs (ZKPs)**. Rather than sharing raw data, Reclaim enables users to generate cryptographic proofs that can be verified on-chain without revealing the underlying information.
 
-In this guide, we’ll use Reclaim to let users prove their **Twitter follower count** without exposing their full profile or login credentials. This is done through Reclaim’s integration with trusted data providers like Twitter, wrapped in a ZK-proof that can be verified by your frontend or smart contract.
+In this guide, we’ll use Reclaim to let users prove their **Twitter follower count** without exposing their full profile or login credentials. This is done through Reclaim’s integration with trusted data providers like Twitter (Now X.com), wrapped in a ZK-proof that can be verified by your frontend or smart contract.
 
 To get started, you’ll need to:
 
-1. Visit [Reclaim](https://dev.reclaimprotocol.org/explore) and sign in with your Google account.
+1. Visit [Reclaim](https://dev.reclaimprotocol.org/explore) and sign in.
 2. Create a new application.
-3. Save your **Application ID** and **Application Secret**
+3. Save your **Application ID** and **Application Secret**.
 4. Add the "**Twitter User Profile**" provider to your application. You will need the "**httpProviderId**" later.
+
+
 
 ## Reclaim's Verification Contract
 
@@ -27,15 +31,17 @@ Reclaim provides a zkTLS verification smart contract that validates user proofs.
 
 * Verification Contract Address: `xion1qf8jtznwf0tykpg7e65gwafwp47rwxl4x2g2kldvv357s6frcjlsh2m24e`
 
+
+
 ## Reclaim User Map (RUM) Contract
 
-The **Reclaim User Map (RUM)** contract is a modified version of the [User Map contract](https://docs.burnt.com/xion/developers/learn-and-build/use-cases/building-a-per-user-data-storage-dapp#user-map-contract), designed to store structured JSON information derived from verified proofs.
+The **Reclaim User Map (RUM)** contract is a modified version of the [User Map contract](https://docs.burnt.com/xion/developers/learn-and-build/use-cases/building-a-per-user-data-storage-dapp#user-map-contract), designed to store per-user data ion JSON format.
 
 Instead of storing arbitrary user data, this contract is purpose-built to:
 
 * Accept verified proof data from Reclaim (e.g., Twitter follower count)
-* Associate it with the user's address on-chain
-* Enable your application to query and verify the stored proof later
+* Map the data to the user's address
+* Enable your application to query and verify the stored proof
 
 #### Example Document Schema
 
@@ -115,7 +121,7 @@ If you are using your own verification contract, you must update both the `claim
 
 ## Set up Mobile App
 
-We've built a [demo app](https://github.com/burnt-labs/abstraxion-expo-demo/pull/6) to showcase how everything works together. In this example, we retrieve a user's `follower_count` from **X.com** (formerly Twitter) and store that value as their account's user map value within the RUM contract datastore. This app is an extension of the User Map contract. If you are familiar with the original [User Map mobile app](../xion-quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-on-xion-in-5-minutes.md) you will see that there's a new **zkTLS** page in this app that uses the **RUM** contract instance.
+We've built a [demo app](https://github.com/burnt-labs/abstraxion-expo-demo/pull/6) to showcase how everything works together. In this example, we retrieve a user's `followers_count` from **X.com** (formerly Twitter) and store that value as their account's user map value within the RUM contract datastore. This app is an extension of the User Map contract. If you are familiar with the original [User Map mobile app](../xion-quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-on-xion-in-5-minutes.md) you will see that there's a new **zkTLS** page in this app that uses the **RUM** contract instance.
 
 ### Manual Installation <a href="#manual-installation" id="manual-installation"></a>
 
