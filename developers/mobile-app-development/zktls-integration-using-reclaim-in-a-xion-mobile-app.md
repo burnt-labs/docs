@@ -8,8 +8,6 @@ The ability to verify real-world facts without compromising user privacy is crit
 * **Privacy-preserving:** users reveal only what's necessary, not the full data
 * **On-chain utility:** proofs can be verified by smart contracts for gating access or triggering functionality
 
-
-
 ## Create a Reclaim Account
 
 **Reclaim** is a decentralized identity protocol that allows users to prove facts about themselves, such as social media stats, financial data, or platform activity, using **zero-knowledge proofs (ZKPs)**. Rather than sharing raw data, Reclaim enables users to generate cryptographic proofs that can be verified on-chain without revealing the underlying information.
@@ -23,15 +21,11 @@ To get started, you’ll need to:
 3. Save your **Application ID** and **Application Secret**
 4. Add the "**Twitter User Profile**" provider to your application. You will need the "**httpProviderId**" later.
 
-
-
 ## Reclaim's Verification Contract
 
-Reclaim provides a zkTLS verification smart contract that validates user proofs. You do not need to deploy your own instance unless you want to customize it. The verification contract address is as follows:&#x20;
+Reclaim provides a zkTLS verification smart contract that validates user proofs. You do not need to deploy your own instance unless you want to customize it. The verification contract address is as follows:
 
-* Verification Contract Address: `xion1qf8jtznwf0tykpg7e65gwafwp47rwxl4x2g2kldvv357s6frcjlsh2m24e`&#x20;
-
-
+* Verification Contract Address: `xion1qf8jtznwf0tykpg7e65gwafwp47rwxl4x2g2kldvv357s6frcjlsh2m24e`
 
 ## Reclaim User Map (RUM) Contract
 
@@ -80,9 +74,9 @@ You can find the RUM contract here [https://github.com/burnt-labs/contracts/pull
 * **Verification Address**: Which is the address of the verification contract that will be called to verify if the proof is valid.
 * **Claim Key**: This is an element in the proof dataset that will be stored on chain. This comes from picking out the value from the `claimData.context` within the proof. For this guide we will be using the `followers_count` key.
 
-Here is an example function in Javascript to create an instance of the RUM contract.  
-We have deployed a version of the RUM contract on Testnet with `CODE_ID` being `1289`.  
-If you are using the [provided verification contract instance](#reclaims-verification-contract), you only need to update the `claim_key` parameter.  
+Here is an example function in Javascript to create an instance of the RUM contract.\
+We have deployed a version of the RUM contract on Testnet with `CODE_ID` being `1289`.\
+If you are using the [provided verification contract instance](zktls-integration-using-reclaim-in-a-xion-mobile-app.md#reclaims-verification-contract), you only need to update the `claim_key` parameter.\
 If you are using your own verification contract, you must update both the `claim_key` and `verification_addr` parameters.
 
 ```javascript
@@ -119,8 +113,6 @@ If you are using your own verification contract, you must update both the `claim
   };
 ```
 
-
-
 ## Set up Mobile App
 
 We've built a [demo app](https://github.com/burnt-labs/abstraxion-expo-demo/pull/6) to showcase how everything works together. In this example, we retrieve a user's `follower_count` from **X.com** (formerly Twitter) and store that value as their account's user map value within the RUM contract datastore. This app is an extension of the User Map contract. If you are familiar with the original [User Map mobile app](../xion-quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-on-xion-in-5-minutes.md) you will see that there's a new **zkTLS** page in this app that uses the **RUM** contract instance.
@@ -129,7 +121,9 @@ We've built a [demo app](https://github.com/burnt-labs/abstraxion-expo-demo/pull
 
 1. Go to [https://quickstart.dev.testnet.burnt.com](https://quickstart.dev.testnet.burnt.com/) to create an instance of the **User Map** and respective **Treasury** contracts. You will need the values generated for `EXPO_PUBLIC_USER_MAP_CONTRACT_ADDRESS` and `EXPO_PUBLIC_TREASURY_CONTRACT_ADDRESS` below.
 2. Using **CODE ID** `1289` create an instance of the RUM contract. You can find an example function used to create such an instance above.
-3. In your Treasury contract instance created above add the **RUM contract address** in the list of contracts (separated by commas) under the "**Execute on a smart contract**" permission
+3. In your Treasury contract instance (accessible at:\
+   `https://dev.testnet.burnt.com/treasury/<your-treasury-contract-address>`),\
+   go to **“Execute on a smart contract”** under permissions, and add your RUM contract address to the list of allowed contracts separated by commas.
 
 <figure><img src="../../.gitbook/assets/image (96).png" alt=""><figcaption></figcaption></figure>
 
@@ -176,12 +170,10 @@ EXPO_PUBLIC_RECLAIM_PROVIDER_ID="your-reclaim-provider-id"
 | EXPO\_PUBLIC\_REST\_ENDPOINT                  | REST endpoint for Xion (default: `https://api.xion-testnet-2.burnt.com`)                                                                                                                                                                                                                                                               |
 | EXPO\_PUBLIC\_CODE\_ID                        | The Code ID of the deployed RUM contract.                                                                                                                                                                                                                                                                                              |
 | EXPO\_PUBLIC\_VERIFICATION\_CONTRACT\_ADDRESS | Global verification contract address that allows for verifying proofs.                                                                                                                                                                                                                                                                 |
-| EXPO\_PUBLIC\_RUM\_CONTRACT\_ADDRESS          | Your RUM contract instance where the user's follower count will be added to their user map record with their logged in wallet address being the key                                                                                                                                                                                       |
+| EXPO\_PUBLIC\_RUM\_CONTRACT\_ADDRESS          | Your RUM contract instance where the user's follower count will be added to their user map record with their logged in wallet address being the key                                                                                                                                                                                    |
 | EXPO\_PUBLIC\_RECLAIM\_APP\_ID                | App ID for the Application created within the Reclaim platform.                                                                                                                                                                                                                                                                        |
 | EXPO\_PUBLIC\_RECLAIM\_APP\_SECRET            | App Secret for the Application created within the Reclaim platform.                                                                                                                                                                                                                                                                    |
 | EXPO\_PUBLIC\_RECLAIM\_PROVIDER\_ID           | Provider ID of the provider added to the Application within the Reclaim platform. This would be found in the **httpProviderId field** in **Twitter User Profile** provider.                                                                                                                                                            |
-
-
 
 8. Build and launch the application:
 
