@@ -63,7 +63,7 @@ choco install -y microsoft-openjdk17
 ### **Set Up Android Emulator**
 
 * Open **Android Studio > Device Manager**
-* Create a new virtual device (recommended: Pixel 5 with Android 13 or newer)
+* Create a new virtual device (recommended: Pixel 9 with API 35+)
 
 
 
