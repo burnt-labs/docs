@@ -2,6 +2,8 @@
 
 To build a mobile app on **XION** with **React Native** and **Expo**, your development environment must support either **Android** or **iOS**. This guide walks you through the steps to initialize a **React Native** mobile app with **Expo** and configure it to work with XION using the `@burnt-labs/abstraxion-react-native` package and have it running on either **Android** or **iOS**.
 
+The following is also a very useful [guide](https://docs.expo.dev/guides/local-app-development) that will help you set up your local development environment for **Expo**.
+
 
 
 ## Android Setup
