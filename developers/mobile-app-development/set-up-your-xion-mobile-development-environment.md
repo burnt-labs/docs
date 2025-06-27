@@ -55,7 +55,7 @@ choco install -y microsoft-openjdk17
   * **Android SDK**
   * **Android SDK Platform-Tools**
   * **Android Virtual Device (AVD) Manager**
-* Go to **Settings** > **Languages & Frameworks** > **Android SDK**. From the SDK Platforms tab, select the latest Android version (API level).
+* Go to **Tools** > **SDK Manager** menu item and within that window go to **Settings** > **Languages & Frameworks** > **Android SDK**. From the SDK Platforms tab, select the latest Android version (API level).
 * Click on the **SDK Tools** tab and make sure you have at least one version of the Android SDK Build-Tools and Android Emulator installed.
 
 
