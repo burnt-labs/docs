@@ -36,7 +36,7 @@ You can get [OpenJDK](http://openjdk.java.net/) either through your system’s p
 {% tab title="Windows" %}
 #### Requirements
 
-Before proceeding, ensure you have a package manager like **Chocolatey** set up on your system.
+Before proceeding, ensure you have a package manager like [**Chocolatey**](https://chocolatey.org/install) set up on your system.
 
 #### Install Required Tools
 
