@@ -182,26 +182,20 @@ npx expo run:ios
 
 <figure><img src="../../.gitbook/assets/image (101).png" alt=""><figcaption></figcaption></figure>
 
-3. In your terminal clone the repository:
+3. In your terminal clone the repository and change into the newly created project directory:
 
 ```bash
 git clone https://github.com/burnt-labs/abstraxion-reclaim-demo.git
+cd abstraxion-reclaim-demo
 ```
 
-4. Because the **PR** is not yet merged you need to fetch the branch associated with the PR and then checkout the branch to get the **zkTLS** updates:
-
-```bash
-git fetch origin pull/1/head:impl-reclaim
-git checkout impl-reclaim
-```
-
-5. Install dependencies:
+4. Install dependencies:
 
 ```bash
 npm install
 ```
 
-6. Create an **`.env.local`** file in root of the project folder and add the environment values from the quickstart portal in "**Step 2**" above:
+5. Create an **`.env.local`** file in root of the project folder and add the environment values from the quickstart portal in "**Step 2**" above:
 
 ```javascript
 EXPO_PUBLIC_TREASURY_CONTRACT_ADDRESS="treasury-contract-address"
@@ -225,7 +219,7 @@ EXPO_PUBLIC_RUM_CONTRACT_ADDRESS="your-rum-contract-address"
 | EXPO\_PUBLIC\_RECLAIM\_APP\_SECRET        | App Secret for the Application created within the Reclaim platform.                                                                                                                                                                                                                                                                    |
 | EXPO\_PUBLIC\_RECLAIM\_PROVIDER\_ID       | Provider ID of the provider added to the Application within the Reclaim platform. This would be found in the **httpProviderId field** in **Twitter User Profile** provider.                                                                                                                                                            |
 
-7. Build and launch the application:
+6. Build and launch the application:
 
 To build and run the app, ensure your **emulator**, **simulator**, or **physical device** is running. Then, use one of the following commands based on your target platform to launch the App:
 
