@@ -134,27 +134,29 @@ If you are using your own verification contract, you must update both the `claim
 
 We've built a [demo app](https://github.com/burnt-labs/abstraxion-reclaim-demo) to showcase how everything works together. In this example, we retrieve a user's `followers_count` from **X.com** (formerly Twitter) and store that value in their account's user map value within the RUM contract datastore.
 
-### Automated Installation <a href="#manual-installation" id="manual-installation"></a>
+### Deploy Required Contracts
 
-1. Go to [https://quickstart.dev.testnet.burnt.com](https://quickstart.dev.testnet.burnt.com/) to create an instance of the **RUM** and respective **Treasury** contracts. After logging in, click the "**RUM (Reclaim User Map)**" contract type and then the "**Launch RUM & Fund Treasury**" button.
+Go to [https://quickstart.dev.testnet.burnt.com](https://quickstart.dev.testnet.burnt.com/), log in with your wallet, and select the **RUM (Reclaim User Map)** contract type. Then click **Launch RUM & Fund Treasury** to deploy both contracts.
 
 <figure><img src="../../.gitbook/assets/image (98).png" alt=""><figcaption></figcaption></figure>
 
-2. For the automated installer, click the "**One-liner (Recommended)**" tab under "**Step 3**" and copy the bash command and execute it in your terminal.
+### Automated Installation <a href="#manual-installation" id="manual-installation"></a>
+
+1. For the automated installer, click the "**One-liner (Recommended)**" tab under "**Step 3**" and copy the bash command and execute it in your terminal.
 
 <figure><img src="../../.gitbook/assets/image (99).png" alt=""><figcaption></figcaption></figure>
 
-3. Follow the prompts in the terminal:
+2. Follow the prompts in the terminal:
 
 <figure><img src="../../.gitbook/assets/image (100).png" alt=""><figcaption></figcaption></figure>
 
-4. Once you've followed all the prompts, the installer will install all the dependencies. You will then need to change in to the app directory:
+3. Once you've followed all the prompts, the installer will install all the dependencies. You will then need to change in to the app directory:
 
 ```
 cd xion-rum-quickstart
 ```
 
-5. Build and launch the application:
+4. Build and launch the application:
 
 To build and run the app, ensure your **emulator**, **simulator**, or **physical device** is running. Then, use one of the following commands based on your target platform to launch the App:
 
@@ -174,28 +176,24 @@ npx expo run:ios
 
 ### Manual Installation <a href="#manual-installation" id="manual-installation"></a>
 
-1. Go to [https://quickstart.dev.testnet.burnt.com](https://quickstart.dev.testnet.burnt.com/) to create an instance of the **RUM** and respective **Treasury** contracts. After logging in, click the "**RUM (Reclaim User Map)**" contract type and then the "**Launch RUM & Fund Treasury**" button.
-
-<figure><img src="../../.gitbook/assets/image (98).png" alt=""><figcaption></figcaption></figure>
-
-2. Click the "**Manual Setup**" tab under "**Step 3**" and copy the values for use later.
+1. Click the "**Manual Setup**" tab under "**Step 3**" and copy the values for use later.
 
 <figure><img src="../../.gitbook/assets/image (101).png" alt=""><figcaption></figcaption></figure>
 
-3. In your terminal clone the repository and change into the newly created project directory:
+2. In your terminal clone the repository and change into the newly created project directory:
 
 ```bash
 git clone https://github.com/burnt-labs/abstraxion-reclaim-demo.git
 cd abstraxion-reclaim-demo
 ```
 
-4. Install dependencies:
+3. Install dependencies:
 
 ```bash
 npm install
 ```
 
-5. Create an **`.env.local`** file in root of the project folder and add the environment values from the quickstart portal in "**Step 2**" above:
+4. Create an **`.env.local`** file in root of the project folder and add the environment values from the quickstart portal in "**Step 2**" above:
 
 ```javascript
 EXPO_PUBLIC_TREASURY_CONTRACT_ADDRESS="treasury-contract-address"
@@ -219,7 +217,7 @@ EXPO_PUBLIC_RUM_CONTRACT_ADDRESS="your-rum-contract-address"
 | EXPO\_PUBLIC\_RECLAIM\_APP\_SECRET        | App Secret for the Application created within the Reclaim platform.                                                                                                                                                                                                                                                                    |
 | EXPO\_PUBLIC\_RECLAIM\_PROVIDER\_ID       | Provider ID of the provider added to the Application within the Reclaim platform. This would be found in the **httpProviderId field** in **Twitter User Profile** provider.                                                                                                                                                            |
 
-6. Build and launch the application:
+5. Build and launch the application:
 
 To build and run the app, ensure your **emulator**, **simulator**, or **physical device** is running. Then, use one of the following commands based on your target platform to launch the App:
 
