@@ -47,36 +47,6 @@ const handleLogin = async () => {
 };
 ```
 
-### Authentication Flow Diagram
-
-```mermaid
-sequenceDiagram
-    participant User
-    participant App as Your App
-    participant Abstraxion as Abstraxion Auth
-    participant XION as XION Network
-
-    User->>App: Clicks Login Button
-    App->>App: setIsLoggingIn(true)
-    App->>App: Show Custom Loading UI
-    App->>Abstraxion: await login()
-    Note over App,Abstraxion: Redirect to Abstraxion
-    
-    User->>Abstraxion: Authenticates (Social/Email)
-    Abstraxion->>XION: Creates/Retrieves Account
-    XION-->>Abstraxion: Account Details
-    Abstraxion->>App: Redirect with ?granted=true
-    
-    Note over App: useEffect detects granted=true
-    App->>App: Auto-login triggered
-    App->>Abstraxion: Complete authentication
-    Abstraxion-->>App: Account data
-    App->>App: setIsLoggingIn(false)
-    App->>User: Show connected state
-```
-
-The UI-less authentication flow allows you to maintain full control over the user experience while Abstraxion handles the secure authentication process in the background.
-
 ## Implementation Example
 
 Here's a complete example showing how to implement UI-less authentication:
