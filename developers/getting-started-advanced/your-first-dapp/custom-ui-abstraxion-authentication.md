@@ -1,4 +1,4 @@
-# UI-less Abstraxion Authentication
+# Custom UI Abstraxion Authentication
 
 This guide explains how to implement Abstraxion authentication without using the built-in modal UI, giving you complete control over the user experience during the authentication flow.
 
@@ -49,7 +49,7 @@ const handleLogin = async () => {
 
 ## Implementation Example
 
-Here's a complete example showing how to implement UI-less authentication:
+Here's a complete example showing how to implement custom UI authentication:
 
 ```typescript
 "use client";
