@@ -41,6 +41,7 @@
     * [Enabling Gasless Transactions with Treasury Contracts](developers/getting-started-advanced/gasless-ux-and-permission-grants/treasury-contracts.md)
   * [App Development](developers/getting-started-advanced/your-first-dapp/README.md)
     * [Account Abstraction with Gasless Transactions](developers/getting-started-advanced/your-first-dapp/build-react-dapp-with-account-abstraxion.md)
+    * [Custom UI Abstraxion Authentication](developers/getting-started-advanced/your-first-dapp/custom-ui-abstraxion-authentication.md)
     * [Interact with XION via your Backend Service](developers/getting-started-advanced/your-first-dapp/xion-typescript.md)
     * [Create a Gas-less User Experience](developers/getting-started-advanced/your-first-dapp/create-a-gas-less-user-experience/README.md)
       * [Fee Granting](developers/getting-started-advanced/your-first-dapp/create-a-gas-less-user-experience/fee-granting.md)
