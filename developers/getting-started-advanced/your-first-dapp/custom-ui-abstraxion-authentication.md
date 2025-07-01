@@ -1,6 +1,6 @@
 # Custom UI Abstraxion Authentication
 
-This guide explains how to implement Abstraxion authentication without using the built-in modal UI, giving you complete control over the user experience during the authentication flow.
+This guide explains how to implement Abstraxion authentication without using the legacy modal UI, giving you complete control over the user experience during the authentication flow.
 
 ## Overview
 
@@ -12,9 +12,9 @@ Starting with version `@burnt-labs/abstraxion@2.0.0-alpha.49` and later, you can
 
 ## Key Changes
 
-### 1. No Modal UI Import Required
+### 1. No Legacy Modal UI Import Required
 
-The Abstraxion CSS import is no longer needed when using UI-less authentication:
+The Abstraxion CSS import is no longer needed when using custom UI authentication:
 
 ```diff
 - import "@burnt-labs/abstraxion/dist/index.css";
@@ -22,7 +22,7 @@ The Abstraxion CSS import is no longer needed when using UI-less authentication:
 
 ### 2. Direct Login Method
 
-The `useAbstraxionAccount` hook now provides a `login` method that handles authentication without showing a modal:
+The `useAbstraxionAccount` hook now provides a `login` method that handles authentication without showing the legacy modal:
 
 ```typescript
 const { data: account, login, logout, isConnecting } = useAbstraxionAccount();
@@ -129,7 +129,7 @@ export default function Page(): JSX.Element {
 }
 ```
 
-## Important Changes from Modal-based Authentication
+## Important Changes from Legacy Modal Authentication
 
 ### 1. Remove Abstraxion Component
 
@@ -139,7 +139,7 @@ The `<Abstraxion />` component is no longer needed:
 - import { Abstraxion, useModal } from "@burnt-labs/abstraxion";
 + import { useAbstraxionAccount } from "@burnt-labs/abstraxion";
 
-// Remove modal state management
+// Remove legacy modal state management
 - const [, setShowModal] = useModal();
 
 // Remove Abstraxion component
@@ -190,11 +190,11 @@ The built-in Loading component has been simplified to show only a spinner, allow
 
 ## Migration Guide
 
-To migrate from modal-based to UI-less authentication:
+To migrate from legacy modal to custom UI authentication:
 
 1. **Remove CSS import**: Delete the Abstraxion CSS import
-2. **Remove modal components**: Remove `Abstraxion` component and `useModal` hook
-3. **Use login method**: Replace modal trigger with the `login()` method
+2. **Remove legacy modal components**: Remove `Abstraxion` component and `useModal` hook
+3. **Use login method**: Replace legacy modal trigger with the `login()` method
 4. **Add custom loading UI**: Implement your own loading state
 5. **Handle redirects**: The redirect handling is automatic with the new implementation
 
@@ -202,7 +202,7 @@ To migrate from modal-based to UI-less authentication:
 
 - **Better UX control**: Full control over the authentication flow UI
 - **Consistent branding**: Loading states match your app's design
-- **Cleaner code**: No need to manage modal state
+- **Cleaner code**: No need to manage legacy modal state
 - **Improved performance**: Less CSS to load
 
 ## Demo
