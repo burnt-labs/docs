@@ -10,6 +10,10 @@ Starting with version `@burnt-labs/abstraxion@2.0.0-alpha.49` and later, you can
 - Create a seamless authentication experience that matches your app's design
 - Handle the redirect flow programmatically
 
+### Comparison: Modal vs UI-less Authentication
+
+<figure><img src="../../../.gitbook/assets/abstraxion-modal-vs-uiless.png" alt=""><figcaption><p>Left: Traditional modal-based authentication. Right: New UI-less authentication with custom loading state</p></figcaption></figure>
+
 ## Key Changes
 
 ### 1. No Modal UI Import Required
@@ -47,9 +51,20 @@ const handleLogin = async () => {
 };
 ```
 
+### Authentication Flow Diagram
+
+<figure><img src="../../../.gitbook/assets/ui-less-auth-flow-diagram.png" alt=""><figcaption><p>UI-less authentication flow: 1) User clicks login 2) Redirect to Abstraxion 3) User authenticates 4) Redirect back with granted=true 5) Auto-login completes</p></figcaption></figure>
+
 ## Implementation Example
 
 Here's a complete example showing how to implement UI-less authentication:
+
+{% hint style="info" %}
+**Screenshots needed:**
+1. Screenshot of the custom loading UI state (showing "You are being redirected..." message)
+2. Screenshot of the initial connect button state
+3. Screenshot of the connected state showing "VIEW ACCOUNT" button
+{% endhint %}
 
 ```typescript
 "use client";
@@ -128,6 +143,14 @@ export default function Page(): JSX.Element {
   );
 }
 ```
+
+### Visual Examples
+
+<figure><img src="../../../.gitbook/assets/ui-less-auth-loading.png" alt=""><figcaption><p>Custom loading UI during authentication redirect</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/ui-less-auth-connect.png" alt=""><figcaption><p>Initial state with CONNECT button</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/ui-less-auth-connected.png" alt=""><figcaption><p>Connected state showing VIEW ACCOUNT button</p></figcaption></figure>
 
 ## Important Changes from Modal-based Authentication
 
