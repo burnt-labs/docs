@@ -2,6 +2,8 @@
 
 To build a mobile app on **XION** with **React Native** and **Expo**, your development environment must support either **Android** or **iOS**. This guide walks you through the steps to initialize a **React Native** mobile app with **Expo** and configure it to work with XION using the `@burnt-labs/abstraxion-react-native` package and have it running on either **Android** or **iOS**.
 
+The following is also a very useful [guide](https://docs.expo.dev/guides/local-app-development) that will help you set up your local development environment for **Expo**.
+
 
 
 ## Android Setup
@@ -34,7 +36,7 @@ You can get [OpenJDK](http://openjdk.java.net/) either through your system’s p
 {% tab title="Windows" %}
 #### Requirements
 
-Before proceeding, ensure you have a package manager like **Chocolatey** set up on your system.
+Before proceeding, ensure you have a package manager like [**Chocolatey**](https://chocolatey.org/install) set up on your system.
 
 #### Install Required Tools
 
@@ -53,7 +55,7 @@ choco install -y microsoft-openjdk17
   * **Android SDK**
   * **Android SDK Platform-Tools**
   * **Android Virtual Device (AVD) Manager**
-* Go to **Settings** > **Languages & Frameworks** > **Android SDK**. From the SDK Platforms tab, select the latest Android version (API level).
+* Go to **Tools** > **SDK Manager** menu item and within that window go to **Settings** > **Languages & Frameworks** > **Android SDK**. From the SDK Platforms tab, select the latest Android version (API level).
 * Click on the **SDK Tools** tab and make sure you have at least one version of the Android SDK Build-Tools and Android Emulator installed.
 
 
@@ -61,7 +63,7 @@ choco install -y microsoft-openjdk17
 ### **Set Up Android Emulator**
 
 * Open **Android Studio > Device Manager**
-* Create a new virtual device (recommended: Pixel 5 with Android 13 or newer)
+* Create a new virtual device (recommended: Pixel 9 with API 35+)
 
 
 

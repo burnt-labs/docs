@@ -1,6 +1,6 @@
 # Building a React Native Mobile App with Abstraxion (Xion.js)
 
-Mobile apps are an integral part of modern life, and therefore integrating XION into mobile applications is a crucial step toward mass adoption. This guide will walk you through creating a React Native app using [**Expo**](https://expo.dev) and the [**Abstraxion** authentication system](https://github.com/burnt-labs/xion.js), based on the [**Abstraxion Expo Demo**](https://github.com/burnt-labs/abstraxion-expo-demo/tree/feat/impl-abstraxion-react-native).
+Mobile apps are an integral part of modern life, and therefore integrating XION into mobile applications is a crucial step toward mass adoption. This guide will walk you through creating a React Native app using [**Expo**](https://expo.dev) and the [**Abstraxion** authentication system](https://github.com/burnt-labs/xion.js), based on the [**Abstraxion Expo Demo**](https://github.com/burnt-labs/abstraxion-expo-demo).
 
 
 

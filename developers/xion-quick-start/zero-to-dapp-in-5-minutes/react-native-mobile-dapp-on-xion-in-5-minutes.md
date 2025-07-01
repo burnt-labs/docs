@@ -8,7 +8,7 @@ Building a **Mobile App** on XION typically involves three main components:
 
 As a beginner to XION development, getting a fully functional App up and running should be simple and shouldn’t require any complex setup. With this in mind, we’ve created a [**quick launch frontend solution**](https://quickstart.dev.testnet.burnt.com) that handles the creation of both the **User Map** and **Treasury** contracts with the Treasury contract being fully configured. We've also created a fully functional [**React Native Mobile App**](https://github.com/burnt-labs/abstraxion-expo-demo) for interacting with the **User Map** contract.
 
-{% embed url="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FB5Z5ijJgMx0GJO3l1Il9%2Fuploads%2FZLyzVAyDYHTYwlX8G3LJ%2F06%20-%20Mobile%20Dapp.mp4?alt=media&token=13818280-4cf4-4de7-b129-738cce911063" %}
+
 
 ## What is the User Map App?
 
@@ -21,12 +21,18 @@ Think of it like a basic key-value store:
 
 You can find the source code here: [github.com/burnt-labs/contracts/tree/main/contracts/user\_map](https://github.com/burnt-labs/contracts/tree/main/contracts/user_map).
 
+
+
 ## Prerequisites
 
-Before you begin, ensure you have the following installed:
+Before you begin, ensure you have the following installed and configured:
 
-* [**Node.js** (LTS version recommended) and **NPM**](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-* **Android Emulator,** **iOS Simulator** or a physical device for testing
+* [**Node.js** (LTS version recommended) and **npm**](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+* An Android Emulator via [Android Studio](https://docs.expo.dev/get-started/set-up-your-environment?platform=android\&device=physical\&mode=development-build\&buildEnv=local#set-up-an-android-device-with-a-development-build), iOS Simulator via [Xcode](https://docs.expo.dev/get-started/set-up-your-environment?platform=ios\&device=physical\&mode=development-build\&buildEnv=local#set-up-an-ios-device-with-a-development-build), **or** a physical mobile device for testing
+
+The following [guide](https://docs.expo.dev/guides/local-app-development) will help you set up your local development environment for Expo. We also have a guide in the docs on [Set up your XION Mobile Development Environment](../../mobile-app-development/set-up-your-xion-mobile-development-environment.md), which shows how to get your Android emulator and iOS simulator set up.
+
+
 
 ## Create Instance of User Map and Treasury Contracts
 
@@ -76,7 +82,7 @@ In the **Quick Launch Frontend** click the "**Mobile**" template:
 
 There are two options available for copying the variables into your project:
 
-* **Option 1: One-liner (Recommended):** Run the bash command provided in your terminal from within your project directory to automatically download and save the environment file into your project with the variables set to the correct values.&#x20;
+* **Option 1: One-liner (Recommended):** Run the bash command provided in your terminal from within your project directory to automatically download and save the environment file into your project with the variables set to the correct values.
 
 <figure><img src="../../../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
 

@@ -258,40 +258,42 @@ This todo app interacts with the DocuStore smart contract by organizing data int
 
 ### Todos Collection
 
-```rust
-struct Document {
-    owner: String,
-    title: String,
-    content: String,
-    created_at: u64,
-    updated_at: u64,
-    metadata: Option<Metadata>,
+```javascript
+interface Todo {
+  id: string;
+  text: string;
+  completed: boolean;
+  createdAt: number;
 }
 ```
 
-Each document in the `todos` collection represents an individual task. It includes basic task details, ownership, timestamps, and optional metadata (e.g., tags, priority, due date).
+Each document in the `todos` collection represents an individual task. It includes basic task details, and timestamps.
 
 ### Profiles Collection
 
-```rust
-struct Profile {
-    display_name: String,
-    bio: String,
-    avatar: String,
-    social_links: Vec<SocialLink>,
+```javascript
+interface Profile {
+  displayName: string;
+  bio: string;
+  avatar: string;
+  socialLinks: {
+    twitter?: string;
+    github?: string;
+    website?: string;
+  };
 }
 ```
 
-The `profile` collection stores public facing user profile data such as name, bio, and social media links, useful for personalization or social features in the app.
+The `profile` collection stores public facing user profile data such as name, bio, and social media links.
 
 ### Settings Collection
 
-```rust
-struct Settings {
-    dark_mode: bool,
-    notifications: bool,
-    language: String,
-    timezone: String,
+```javascript
+interface Settings {
+  darkMode: boolean;
+  notifications: boolean;
+  language: string;
+  timezone: string;
 }
 ```
 
@@ -302,8 +304,6 @@ The `settings` collection holds user preferences for customizing the application
 ## Building the Frontend <a href="#building-the-frontend" id="building-the-frontend"></a>
 
 We've created a frontend which is a [Next.js](https://nextjs.org/) application built to interact with the **DocuStore** smart contract that can be downloaded at [https://github.com/burnt-labs/todo-app-frontend](https://github.com/burnt-labs/todo-app-frontend). It showcases how users can connect their wallets, create todo records, update their profile, app settings and query their data.
-
-<figure><img src="../../../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
 
 ### Manual Installation <a href="#manual-installation" id="manual-installation"></a>
 
@@ -331,12 +331,12 @@ NEXT_PUBLIC_RPC_URL="https://rpc.xion-testnet-2.burnt.com:443"
 NEXT_PUBLIC_REST_URL="https://api.xion-testnet-2.burnt.com"
 ```
 
-| Variable                        | Description                                                                 |
-| ------------------------------- | --------------------------------------------------------------------------- |
-| NEXT\_PUBLIC\_TREASURY\_ADDRESS | Treasury address used for gasless transactions and grantz authorization     |
-| NEXT\_PUBLIC\_CONTRACT\_ADDRESS | Address of your deployed User Map smart contract                            |
-| NEXT\_PUBLIC\_RPC\_URL          | RPC endpoint for Xion (default: `https://rpc.xion-testnet-2.burnt.com:443`) |
-| NEXT\_PUBLIC\_REST\_URL         | REST endpoint for Xion (default: `https://api.xion-testnet-2.burnt.com`)    |
+| Variable                        | Description                                                                                                                                                             |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| NEXT\_PUBLIC\_TREASURY\_ADDRESS | Treasury contract instance used for gasless transactions and grantz authorization to execute transactions via the DocuStore smart contract instance on behalf of users. |
+| NEXT\_PUBLIC\_CONTRACT\_ADDRESS | Address of the DocuStore smart contract instance.                                                                                                                       |
+| NEXT\_PUBLIC\_RPC\_URL          | RPC endpoint for Xion (default: `https://rpc.xion-testnet-2.burnt.com:443`)                                                                                             |
+| NEXT\_PUBLIC\_REST\_URL         | REST endpoint for Xion (default: `https://api.xion-testnet-2.burnt.com`)                                                                                                |
 
 
 
@@ -347,3 +347,5 @@ npm run dev
 ```
 
 You can now access the app at [http://localhost:3000](http://localhost:3000/) in your browser.
+
+<figure><img src="../../../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
