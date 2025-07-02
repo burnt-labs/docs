@@ -205,7 +205,3 @@ If this doesn't resolve it:
 If you continue to encounter issues:
 
 * Run the command with `--verbose` or `--stacktrace` to get detailed logs.
-* Refer to: [https://docs.gradle.org](https://docs.gradle.org)
-* Or open an issue on the relevant GitHub repo, such as:
-  * [react-native-libsodium](https://github.com/serenity-kit/react-native-libsodium/issues)
-
