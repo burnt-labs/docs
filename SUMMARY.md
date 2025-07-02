@@ -29,6 +29,7 @@
   * [zkTLS Integration using Reclaim in a Xion Mobile App](developers/mobile-app-development/zktls-integration-using-reclaim-in-a-xion-mobile-app.md)
   * [Create Mobile App and Integrate Meta Account Authentication](developers/mobile-app-development/create-mobile-app-and-integrate-meta-account-authentication.md)
   * [Building a React Native Mobile App with Abstraxion (Xion.js)](developers/mobile-app-development/building-a-react-native-mobile-app-with-abstraxion-xion.js.md)
+  * [Mobile Development – Common Errors & Fixes](developers/mobile-app-development/mobile-development-common-errors-and-fixes.md)
 * [Getting Started (Advanced)](developers/getting-started-advanced/README.md)
   * [Set Up Local Environment](developers/getting-started-advanced/setup-local-environment/README.md)
     * [Setting up your Local Smart Contract Development Environment for XION](developers/getting-started-advanced/setup-local-environment/installation-prerequisites-setup-local-environment/README.md)
