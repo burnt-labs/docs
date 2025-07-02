@@ -105,9 +105,3 @@ To install an iOS Simulator, open **Xcode** > **Settings**... > **Components**, 
 
 
 For more detailed guidance on configuring your development environment, refer to the official Expo setup guide: [https://docs.expo.dev/get-started/set-up-your-environment/](https://docs.expo.dev/get-started/set-up-your-environment/).
-
-
-
-## Next Steps
-
-Now that your project is set up, the next guide will walk you through **authenticating users with Meta Accounts** using Abstraxion.
