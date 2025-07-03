@@ -4,11 +4,11 @@ This guide explains how to implement Abstraxion authentication without using the
 
 ## Overview
 
-Starting with version `@burnt-labs/abstraxion@2.0.0-alpha.49` and later, you can implement a custom UI for the Abstraxion authentication process. This allows you to:
+Starting with version `@burnt-labs/abstraxion@1.0.0-alpha.64` and later, you can implement a custom UI for the Abstraxion authentication process. This allows you to:
 
-- Display your own loading states and branding during authentication
-- Create a seamless authentication experience that matches your app's design
-- Handle the redirect flow programmatically
+* Display your own loading states and branding during authentication
+* Create a seamless authentication experience that matches your app's design
+* Handle the redirect flow programmatically
 
 ## Key Changes
 
@@ -200,10 +200,10 @@ To migrate from legacy modal to custom UI authentication:
 
 ## Benefits
 
-- **Better UX control**: Full control over the authentication flow UI
-- **Consistent branding**: Loading states match your app's design
-- **Cleaner code**: No need to manage legacy modal state
-- **Improved performance**: Less CSS to load
+* **Better UX control**: Full control over the authentication flow UI
+* **Consistent branding**: Loading states match your app's design
+* **Cleaner code**: No need to manage legacy modal state
+* **Improved performance**: Less CSS to load
 
 ## Demo
 
