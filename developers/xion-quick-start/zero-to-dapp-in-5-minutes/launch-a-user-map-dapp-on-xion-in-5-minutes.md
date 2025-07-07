@@ -38,11 +38,11 @@ To make this much easier, we’ve created a [**quick launch frontend solution**]
 
 1. Go to [https://quickstart.dev.testnet.burnt.com](https://quickstart.dev.testnet.burnt.com) and log in using your **Meta Account**
 
-<figure><img src="../../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (102).png" alt=""><figcaption></figcaption></figure>
 
-2. Click the **Launch User Map & Fund Treasury** button
+2. Select "**User Map**" from **Step 1** and click the **Launch User Map & Fund Treasury** button under **Step 2**.
 
-<figure><img src="../../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (106).png" alt=""><figcaption></figcaption></figure>
 
 Behind the scenes, this:
 
@@ -59,8 +59,6 @@ NEXT_PUBLIC_RPC_URL=...
 NEXT_PUBLIC_REST_URL=...
 ```
 
-<figure><img src="../../../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
-
 ## Set Up the Frontend
 
 The frontend allows users to log into your app using their Meta Account via multiple authenticators (Email, Social Login, Wallets, Passkeys). Once logged in, users can query contract data and execute transactions to update their User Map record, which is linked to their Meta Account address.
@@ -72,9 +70,9 @@ There are two options available for setting up the frontend:
 
 ### Automated Installation
 
-In the **Quick Launch Frontend**, select the **"webapp"** template.
+In the **Quick Launch Frontend**, select the **"webapp"** template under **Step 3**.
 
-<figure><img src="../../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (107).png" alt=""><figcaption></figcaption></figure>
 
 You’ll see two options for setting up your project. **Option 1: One-liner (Recommended)** provides a bash command that automates the entire setup process:
 
@@ -85,7 +83,7 @@ You’ll see two options for setting up your project. **Option 1: One-liner (Rec
 
 To use this option, simply copy the provided bash command and run it in your terminal from the directory where you'd like your project to be created.
 
-<figure><img src="../../../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (111).png" alt=""><figcaption></figcaption></figure>
 
 Once complete, the development server will automatically start, and you can access your app at [http://localhost:3000](http://localhost:3000) in your browser.
 
@@ -104,11 +102,11 @@ Next, create a `.env.local` file in the root of your project directory.
 
 In the **Quick Launch Frontend**, select the **"webapp"** template:
 
-<figure><img src="../../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (108).png" alt=""><figcaption></figcaption></figure>
 
-Under the **"Option 2: Manual Copy & Paste"** section, copy the environment variable values and paste them into your `.env.local` file:
+Under the **"Manual Setup"** section, copy the environment variable values and paste them into your `.env.local` file:
 
-<figure><img src="../../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (109).png" alt=""><figcaption></figcaption></figure>
 
 Once the environment is configured, install the dependencies and start the local development server:
 
