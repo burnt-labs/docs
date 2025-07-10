@@ -56,7 +56,7 @@ At this stage, Reclaim will use AI to suggest variables that can be extracted fr
 
 The next step involves standardizing the request URL. This helps Reclaim generalize the proof logic across different users by identifying and marking user-specific parts of the URL (e.g., user IDs or query strings). In the case of Kaggle, the URL does not contain any such identifiers, so you can simply click **Next** if there’s nothing to modify.
 
-***
+
 
 ## Finalizing Provider Details
 
