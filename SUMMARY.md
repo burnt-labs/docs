@@ -70,6 +70,8 @@
     * [Smart Contract Audits: Process, Costs & Support](developers/building-for-mainnet/deploying-to-xion-mainnet/smart-contract-audits-process-costs-and-support.md)
     * [Governance Process to Deploying Smart Contracts to Mainnet](developers/building-for-mainnet/deploying-to-xion-mainnet/governance-process-to-deploying-smart-contracts-to-mainnet.md)
 * [Learn & Build](developers/learn-and-build/README.md)
+  * [Fee Payments](developers/learn-and-build/fee-payments/README.md)
+    * [Using USDC for Gas Fees](developers/learn-and-build/fee-payments/using-usdc-for-gas-fees.md)
   * [Token Factory](developers/learn-and-build/token-factory/README.md)
     * [Creating, Minting, and Interacting with a Token Factory Token](developers/learn-and-build/token-factory/creating-minting-and-interacting-with-a-token-factory-token.md)
     * [Building a React dApp to Interact with Token Factory Tokens](developers/learn-and-build/token-factory/building-a-react-dapp-to-interact-with-token-factory-tokens.md)
