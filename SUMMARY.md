@@ -87,6 +87,8 @@
     * [Build a TODO App using the Collection-Document Storage Smart Contract](developers/learn-and-build/use-cases/build-a-todo-app-using-the-collection-document-storage-smart-contract.md)
   * [Crossmint Integration](developers/learn-and-build/crossmint-integration/README.md)
     * [Crossmint Digital Collectibles Checkout via Credit Card](developers/learn-and-build/crossmint-integration/crossmint-digital-collectibles-checkout-via-credit-card.md)
+  * [Zero Knowledge on XION](developers/learn-and-build/zero-knowledge-on-xion/README.md)
+    * [Verifying API Data with Zero Knowledge (zkFetch)](developers/learn-and-build/zero-knowledge-on-xion/verifying-api-data-with-zero-knowledge-zkfetch.md)
 * [Reference and Resources](developers/section-overview/README.md)
   * [Requesting XION Testnet Tokens](developers/section-overview/xion-testnet.md)
   * [Public Endpoints & Resources](developers/section-overview/public-endpoints-and-resources.md)

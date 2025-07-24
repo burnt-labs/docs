@@ -12,13 +12,9 @@ Treasury contracts introduce an OAuth-like authentication flow fully on-chain, a
 Each treasury contract deployment is designed for a single app. Think of it like setting up OAuth for your application, where your app requests access to data from the XION chain on behalf of the user — without accessing any private information.
 {% endhint %}
 
-
-
 ## **Understanding Fee Grants and Authorizations**
 
 Treasury contracts leverage two key modules to provide their core functionality: **Fee Grants** and **Authz (Authorization)**. These modules enable **gasless transactions** and **delegated authorization**, enhancing the user experience.
-
-
 
 ### **Fee Grants**
 
@@ -35,8 +31,6 @@ The **Fee Grant module** allows an account (**granter**) to cover gas fees for a
 * **Frictionless onboarding** – Users can interact with the app immediately without needing XION tokens.
 * **Better user experience** – Reduces complexity and improves adoption for non-crypto-native users.
 * **Controlled sponsorship** – apps can define limits on gas fee coverage.
-
-
 
 ### **Authorizations (Authz)**
 
@@ -57,8 +51,6 @@ The **Authz module** enables **delegated authorization**, allowing one account (
 
 By combining **Fee Grants** and **Authz**, **Treasury Contracts** offer **a seamless and user-friendly blockchain experience**, eliminating gas fees while maintaining security and control over transaction execution.
 
-
-
 ## Developer Portal
 
 We have developed a **Developer Portal** to provide resources that developers can leverage within their apps. The first feature available is the **creation and management of Treasury Contracts**. You can access the Developer Portal using the following links:
@@ -67,8 +59,6 @@ We have developed a **Developer Portal** to provide resources that developers ca
 * **Mainnet**: [https://dev.burnt.com](https://dev.burnt.com)
 
 To perform any actions, you must **log in to the portal**. After logging in, you will be automatically redirected to the **Dashboard**, where you can create and manage your deployed Treasury Contracts.
-
-
 
 ### The Dashboard
 
@@ -96,8 +86,6 @@ You must complete the required fields for each module:
 * **Grant Config:** At least **one authorization grant** must be set up to define transaction permissions.
 
 In the next sections, we'll go through each module in more detail.
-
-
 
 ### Fee Grant
 
@@ -169,7 +157,7 @@ Once you've entered all the required information, click the **"Add contract gran
 
 **Important Notes:**
 
-* You can add **multiple Grant Configs**, allowing you to define different permissions for various  interactions.
+* You can add **multiple Grant Configs**, allowing you to define different permissions for various interactions.
 * After adding all the necessary grant configurations, click the **"Create"** button to finalize and deploy the Treasury Contract.
 
 <figure><img src="../../../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
@@ -179,8 +167,6 @@ Once created, the contract will appear on the **Dashboard**.
 {% hint style="success" %}
 **Fund the Treasury Contract**: Transfer **XION tokens** to the contract to ensure it can cover gas fees for fee grants.
 {% endhint %}
-
-
 
 ## Editing a Treasury Contract
 
@@ -242,20 +228,18 @@ If you need to remove a grant configuration from your treasury contract, you can
 
 To delete an existing grant configurations click the **trash bin** icon on the right of the listed permission.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 **Confirm Deletion**
 
 After clicking the trash bin icon, a popup window will appear with the title **"Remove grant config"**. The body of the popup will display the following message: _"**Are you sure you want to remove the \<type url of config> grant config?**"_
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **Cancel**: If you change your mind and do not want to delete the grant config, simply click the **Cancel** button to close the popup without making any changes.
 * **Confirm**: If you're sure you want to delete the grant config, click the **Confirm** button.
 
 After successful deletion, the page will reload and display a success message confirming that the grant configuration has been removed.
-
-
 
 ## Client-Side Implementation (React App)
 
