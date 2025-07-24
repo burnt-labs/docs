@@ -48,7 +48,7 @@ Get started with our guide on [zkTLS Integration using Reclaim in a Xion Mobile 
 
 With zkFetch, you’re not limited to static web data. You can verify API-authenticated information using the Reclaim App and connect it to your XION dApp—creating rich, dynamic verification flows.
 
-Get started with our guide:
+Get started with our guide on [Verifying API Data with Zero Knowledge (zkFetch)](verifying-api-data-with-zero-knowledge-zkfetch.md).
 
 
 
