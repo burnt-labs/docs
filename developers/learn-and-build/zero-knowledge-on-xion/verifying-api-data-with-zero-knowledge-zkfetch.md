@@ -14,7 +14,7 @@ This makes it perfect for:
 
 
 
-This guide will help you to build a web app that allows users to generate **zero-knowledge proofs** (ZKPs) about data fetched from a web API using **zkFetch**. We'll use the [zkFetch Starter Client](https://gitlab.reclaimprotocol.org/starterpacks/reclaim-zkfetch-client) as the base project, and modify it to work with a public API like [ESPN](https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard).
+This guide will help you to build a web app that allows users to generate **zero-knowledge proofs** (ZKPs) about data fetched from a web API using **zkFetch**.
 
 
 
@@ -48,8 +48,8 @@ Let's run the starter application as it was designed using the Coingecko API.
 #### 2. Clone the Starter Pack
 
 ```bash
-git clone https://gitlab.reclaimprotocol.org/starterpacks/reclaim-zkfetch-client.git
-cd reclaim-zkfetch-client
+git clone https://github.com/burnt-labs/zkfetch-client.git
+cd zkfetch-client
 npm install
 ```
 
