@@ -1,4 +1,4 @@
-# Integrate Crossmint in your Mobile Apps for Digital Asset Purchases via Credit Card
+# Integrate Credit Card Payments for Digital Assets in Your Mobile App Using Crossmint
 
 This guide demonstrates how to enable credit card purchases for Digital Assets on the XION blockchain using Crossmint's payment infrastructure. We'll use a React Native mobile app as our primary example, showing real-world implementation patterns and solutions to common challenges.
 
@@ -208,6 +208,8 @@ npx expo run:ios
 ```
 {% endtab %}
 {% endtabs %}
+
+When testing the Checkout and credit card payments on staging you’ll need to use test card numbers. You can find the list of test credit card numbers here [https://docs.crossmint.com/payments/advanced/testing-tips#test-credit-card-numbers](https://docs.crossmint.com/payments/advanced/testing-tips#test-credit-card-numbers).
 
 You should see the following when not logged in:
 
