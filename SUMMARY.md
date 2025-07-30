@@ -128,7 +128,7 @@
         * [State Modeling](developers/section-overview/cosmwasm-resources/tutorials/key-value-storage/state-modeling.md)
       * [Cosmwasm By Example](developers/section-overview/cosmwasm-resources/tutorials/cosmwasm-by-example/README.md)
         * [Math](developers/section-overview/cosmwasm-resources/tutorials/cosmwasm-by-example/math.md)
-        * [Instatiating CosmWasm Contract](developers/section-overview/cosmwasm-resources/tutorials/cosmwasm-by-example/instatiating-cosmwasm-contract.md)
+        * [Instantiating CosmWasm Contract](developers/section-overview/cosmwasm-resources/tutorials/cosmwasm-by-example/instatiating-cosmwasm-contract.md)
         * [Timelocks](developers/section-overview/cosmwasm-resources/tutorials/cosmwasm-by-example/timelocks.md)
   * [Developer Tools: Abstract](developers/section-overview/developer-tools-abstract.md)
   * [IBC Denoms on XION Networks](developers/section-overview/ibc-denoms-on-xion-networks.md)
