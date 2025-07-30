@@ -31,6 +31,7 @@
   * [Building a React Native Mobile App with Abstraxion (Xion.js)](developers/mobile-app-development/building-a-react-native-mobile-app-with-abstraxion-xion.js.md)
   * [Mobile Development – Common Errors & Fixes](developers/mobile-app-development/mobile-development-common-errors-and-fixes.md)
   * [How to Create a Custom Reclaim zkTLS Provider](developers/mobile-app-development/how-to-create-a-custom-reclaim-zktls-provider.md)
+  * [Integrate Crossmint in your Mobile Apps for Digital Asset Purchases via Credit Card](developers/mobile-app-development/integrate-crossmint-in-your-mobile-apps-for-digital-asset-purchases-via-credit-card.md)
 * [Getting Started (Advanced)](developers/getting-started-advanced/README.md)
   * [Set Up Local Environment](developers/getting-started-advanced/setup-local-environment/README.md)
     * [Setting up your Local Smart Contract Development Environment for XION](developers/getting-started-advanced/setup-local-environment/installation-prerequisites-setup-local-environment/README.md)
