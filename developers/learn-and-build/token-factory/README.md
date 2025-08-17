@@ -16,7 +16,7 @@ The CW20 token standard is analogous to Ethereum's ERC20 standard and is widely 
 
 ## **Token Factory Module**
 
-The Token Factory module is a built-in feature of the Xion ecosystem, providing a more streamlined approach to token creation and management. Key features includ:
+The Token Factory module is a built-in feature of the Xion ecosystem, providing a more streamlined approach to token creation and management. Key features include:
 
 * **Permissionless Token Creation**: Any account can create a new native token, similar to the Xion native token managed by the bank module. Tokens are uniquely identified using the format `factory/{creator address}/{subdenom}`, preventing name collisions.
 * **Administrative Control**: The original creator of a token is granted "admin" privileges, allowing them to:
