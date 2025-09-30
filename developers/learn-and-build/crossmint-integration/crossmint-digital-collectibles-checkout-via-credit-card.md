@@ -177,6 +177,8 @@ npm run dev
 
 You can now access the app at [http://localhost:3000](http://localhost:3000/) in your browser.
 
+When testing the Checkout and credit card payments on staging you’ll need to use test card numbers. You can find the list of test credit card numbers here [https://docs.crossmint.com/payments/advanced/testing-tips#test-credit-card-numbers](https://docs.crossmint.com/payments/advanced/testing-tips#test-credit-card-numbers).
+
 ## Additional Resources
 
 * **Crossmint API Reference**\

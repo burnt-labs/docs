@@ -1,6 +1,6 @@
 # Fungible Tokens
 
-The CW20 standard defines a fungible token interface for smart contracts in the CosmWasm ecosystem, similar to Ethereum’s ERC-20. On XION, you can deploy your own CW20 contracts or use the built-in [Token Factory module](https://docs.burnt.com/xion/developers/token-management/xion-token-factory) to create native tokens without writing custom logic.
+The CW20 standard defines a fungible token interface for smart contracts in the CosmWasm ecosystem, similar to Ethereum’s ERC-20. On XION, you can deploy your own CW20 contracts or use the built-in [Token Factory module](../learn-and-build/token-factory/) to create native tokens without writing custom logic.
 
 This guide explains when and how to deploy CW20 token contracts using production-ready implementations from the [cw-plus](https://github.com/CosmWasm/cw-plus) and [cw-tokens](https://github.com/CosmWasm/cw-tokens) repositories.
 
@@ -82,7 +82,7 @@ Implements atomic swaps between native and CW20 tokens in a trust-minimized way.
 
 **Ideal for:**\
 Cross-party token swaps without intermediaries, simple DEX-like functionality\
-📦 Repo: [`cw20-atomic-swap`](https://github.com/CosmWasm/cw-tokens/tree/main/contracts/cw20-atomic-swap)&#x20;
+📦 Repo: [`cw20-atomic-swap`](https://github.com/CosmWasm/cw-tokens/tree/main/contracts/cw20-atomic-swap)
 
 #### 5. **cw20-staking**
 
@@ -92,11 +92,11 @@ Provides staking derivatives by staking native tokens and issuing CW20 represent
 * Stakes native tokens on behalf of the user
 * Issues CW20 tokens as liquid staking derivatives
 * Integrates with the staking module for rewards
-* Based on `cw20-base`&#x20;
+* Based on `cw20-base`
 
 **Ideal for:**\
 Liquid staking solutions, DeFi integrations, enabling composability of staked assets\
-📦 Repo: [`cw20-staking`](https://github.com/CosmWasm/cw-tokens/tree/main/contracts/cw20-staking)&#x20;
+📦 Repo: [`cw20-staking`](https://github.com/CosmWasm/cw-tokens/tree/main/contracts/cw20-staking)
 
 #### 6. **cw20-escrow**
 
@@ -109,7 +109,7 @@ A simple escrow contract compatible with both native and CW20 tokens.\
 
 **Ideal for:**\
 Trust-minimized payments, freelance work, over-the-counter trades\
-📦 Repo: [`cw20-escrow`](https://github.com/CosmWasm/cw-tokens/tree/main/contracts/cw20-escrow)&#x20;
+📦 Repo: [`cw20-escrow`](https://github.com/CosmWasm/cw-tokens/tree/main/contracts/cw20-escrow)
 
 #### 7. **cw20-merkle-airdrop**
 
@@ -123,4 +123,3 @@ Efficient CW20 token airdrop mechanism using Merkle proofs.\
 **Ideal for:**\
 Token launches, community rewards, incentivized campaigns\
 📦 Repo: [`cw20-merkle-airdrop`](https://github.com/CosmWasm/cw-tokens/tree/main/contracts/cw20-merkle-airdrop)
-

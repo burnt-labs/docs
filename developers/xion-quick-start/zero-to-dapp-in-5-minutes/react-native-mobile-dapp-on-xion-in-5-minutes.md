@@ -42,11 +42,11 @@ To make this much easier, we’ve created a [**quick launch frontend solution**]
 
 1. Go to [https://quickstart.dev.testnet.burnt.com](https://quickstart.dev.testnet.burnt.com) and log in using your **Meta Account**
 
-<figure><img src="../../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (103).png" alt=""><figcaption></figcaption></figure>
 
 2. Click the **Launch User Map & Fund Treasury** button
 
-<figure><img src="../../../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (104).png" alt=""><figcaption></figcaption></figure>
 
 Behind the scenes, this:
 
@@ -78,17 +78,17 @@ cd abstraxion-expo-demo
 
 In the **Quick Launch Frontend** click the "**Mobile**" template:
 
-<figure><img src="../../../.gitbook/assets/image (76).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (105).png" alt=""><figcaption></figcaption></figure>
 
 There are two options available for copying the variables into your project:
 
 * **Option 1: One-liner (Recommended):** Run the bash command provided in your terminal from within your project directory to automatically download and save the environment file into your project with the variables set to the correct values.
 
-<figure><img src="../../../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (113).png" alt=""><figcaption></figcaption></figure>
 
-* **Option 2: Manual Copy & Paste:** Copy and paste the actual variables into your `.env.local` file in the root of your project:
+* **Manual Setup:** Copy and paste the actual variables into your `.env.local` file in the root of your project:
 
-<figure><img src="../../../.gitbook/assets/image (77).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (112).png" alt=""><figcaption></figcaption></figure>
 
 Install the dependencies by executing the following:
 

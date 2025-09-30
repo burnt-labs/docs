@@ -10,6 +10,17 @@ The ability to verify real-world facts without compromising user privacy is crit
 
 
 
+## Prerequisites
+
+Before you begin, ensure you have the following installed and configured:
+
+* [**Node.js** (LTS version recommended) and **npm**](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+* An Android Emulator via [Android Studio](https://docs.expo.dev/get-started/set-up-your-environment?platform=android\&device=physical\&mode=development-build\&buildEnv=local#set-up-an-android-device-with-a-development-build), iOS Simulator via [Xcode](https://docs.expo.dev/get-started/set-up-your-environment?platform=ios\&device=physical\&mode=development-build\&buildEnv=local#set-up-an-ios-device-with-a-development-build), **or** a physical mobile device for testing
+
+The following [guide](https://docs.expo.dev/guides/local-app-development) will help you set up your local development environment for Expo. We also have a guide to help [Set up your XION Mobile Development Environment](set-up-your-xion-mobile-development-environment.md), which shows how to get your Android emulator and iOS simulator set up.
+
+
+
 ## Create a Reclaim Account
 
 **Reclaim** is a decentralized identity protocol that allows users to prove facts about themselves, such as social media stats, financial data, or platform activity, using **zero-knowledge proofs (ZKPs)**. Rather than sharing raw data, Reclaim enables users to generate cryptographic proofs that can be verified on-chain without revealing the underlying information.
@@ -80,9 +91,7 @@ You can find the RUM contract here [https://github.com/burnt-labs/contracts/pull
 * **Verification Address**: Which is the address of the verification contract that will be called to verify if the proof is valid.
 * **Claim Key**: This is an element in the proof dataset that will be stored on chain. This comes from picking out the value from the `claimData.context` within the proof. For this guide we will be using the `followers_count` key.
 
-Here is an example function in Javascript to create an instance of the RUM contract.\
-We have deployed a version of the RUM contract on Testnet with `CODE_ID` being `1289`.\
-If you are using the [provided verification contract instance](zktls-integration-using-reclaim-in-a-xion-mobile-app.md#reclaims-verification-contract), you only need to update the `claim_key` parameter.\
+We have deployed a version of the RUM contract on Testnet with `CODE_ID` being `1289`. If you are using the [provided verification contract instance](zktls-integration-using-reclaim-in-a-xion-mobile-app.md#reclaims-verification-contract), you only need to update the `claim_key` parameter.\
 If you are using your own verification contract, you must update both the `claim_key` and `verification_addr` parameters.
 
 ```javascript
@@ -119,69 +128,35 @@ If you are using your own verification contract, you must update both the `claim
   };
 ```
 
+
+
 ## Set up Mobile App
 
-We've built a [demo app](https://github.com/burnt-labs/abstraxion-expo-demo/pull/6) to showcase how everything works together. In this example, we retrieve a user's `followers_count` from **X.com** (formerly Twitter) and store that value as their account's user map value within the RUM contract datastore. This app is an extension of the User Map contract. If you are familiar with the original [User Map mobile app](../xion-quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-on-xion-in-5-minutes.md) you will see that there's a new **zkTLS** page in this app that uses the **RUM** contract instance.
+We've built a [demo app](https://github.com/burnt-labs/abstraxion-reclaim-demo) to showcase how everything works together. In this example, we retrieve a user's `followers_count` from **X.com** (formerly Twitter) and store that value in their account's user map value within the RUM contract datastore.
 
-### Manual Installation <a href="#manual-installation" id="manual-installation"></a>
+### Deploy Required Contracts
 
-1. Go to [https://quickstart.dev.testnet.burnt.com](https://quickstart.dev.testnet.burnt.com/) to create an instance of the **User Map** and respective **Treasury** contracts. You will need the values generated for `EXPO_PUBLIC_USER_MAP_CONTRACT_ADDRESS` and `EXPO_PUBLIC_TREASURY_CONTRACT_ADDRESS` below.
-2. Using **CODE ID** `1289` create an instance of the RUM contract. You can find an example function used to create such an instance above.
-3. In your Treasury contract instance (accessible at:\
-   `https://dev.testnet.burnt.com/treasury/<your-treasury-contract-address>`),\
-   go to **“Execute on a smart contract”** under permissions, and add your RUM contract address to the list of allowed contracts separated by commas.
+Go to [https://quickstart.dev.testnet.burnt.com](https://quickstart.dev.testnet.burnt.com/), log in with your wallet, and select the **RUM (Reclaim User Map)** contract type. Then click **Launch RUM & Fund Treasury** to deploy both contracts.
 
-<figure><img src="../../.gitbook/assets/image (96).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (98).png" alt=""><figcaption></figcaption></figure>
 
-4. Clone the repository:
+### Automated Installation <a href="#manual-installation" id="manual-installation"></a>
 
-```bash
-git clone https://github.com/burnt-labs/abstraxion-expo-demo.git
+1. For the automated installer, click the "**One-liner (Recommended)**" tab under "**Step 3**" and copy the bash command and execute it in your terminal.
+
+<figure><img src="../../.gitbook/assets/image (99).png" alt=""><figcaption></figcaption></figure>
+
+2. Follow the prompts in the terminal:
+
+<figure><img src="../../.gitbook/assets/image (100).png" alt=""><figcaption></figcaption></figure>
+
+3. Once you've followed all the prompts, the installer will install all the dependencies. You will then need to change in to the app directory:
+
+```
+cd xion-rum-quickstart
 ```
 
-5. Because the **PR** is not yet merged you need to fetch the branch associated with the PR and then checkout the branch to get the **zkTLS** updates:
-
-```bash
-git fetch origin pull/6/head:impl-reclaim
-git checkout impl-reclaim
-```
-
-6. Install dependencies:
-
-```bash
-npm install
-```
-
-7. Create an **`.env.local`** file and set the following values below:
-
-```javascript
-EXPO_PUBLIC_USER_MAP_CONTRACT_ADDRESS="usermap-address"
-EXPO_PUBLIC_TREASURY_CONTRACT_ADDRESS="treasury-contract-address"
-EXPO_PUBLIC_RPC_ENDPOINT="https://rpc.xion-testnet-2.burnt.com:443"
-EXPO_PUBLIC_REST_ENDPOINT="https://api.xion-testnet-2.burnt.com"
-
-EXPO_PUBLIC_CODE_ID=1289
-EXPO_PUBLIC_VERIFICATION_CONTRACT_ADDRESS=xion1qf8jtznwf0tykpg7e65gwafwp47rwxl4x2g2kldvv357s6frcjlsh2m24e
-EXPO_PUBLIC_RUM_CONTRACT_ADDRESS="your-rum-contract-address"
-EXPO_PUBLIC_RECLAIM_APP_ID="your-reclaim-app-id"
-EXPO_PUBLIC_RECLAIM_APP_SECRET="your-reclaim-secret"
-EXPO_PUBLIC_RECLAIM_PROVIDER_ID="your-reclaim-provider-id"
-```
-
-| Variable                                      | Description                                                                                                                                                                                                                                                                                                                            |
-| --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| EXPO\_PUBLIC\_USER\_MAP\_CONTRACT\_ADDRESS    | Address of the User Map smart contract instance.                                                                                                                                                                                                                                                                                       |
-| EXPO\_PUBLIC\_TREASURY\_CONTRACT\_ADDRESS     | <p>Treasury contract instance used for gasless transactions and grants authorization to execute transactions via the User Map smart contract instance on behalf of users.<br><br>You will also need to add your RUM contract address to the treasury contract permission to allow for executing transactions on the user's behalf.</p> |
-| EXPO\_PUBLIC\_RPC\_ENDPOINT                   | RPC endpoint for Xion (default: `https://rpc.xion-testnet-2.burnt.com:443`)                                                                                                                                                                                                                                                            |
-| EXPO\_PUBLIC\_REST\_ENDPOINT                  | REST endpoint for Xion (default: `https://api.xion-testnet-2.burnt.com`)                                                                                                                                                                                                                                                               |
-| EXPO\_PUBLIC\_CODE\_ID                        | The Code ID of the deployed RUM contract.                                                                                                                                                                                                                                                                                              |
-| EXPO\_PUBLIC\_VERIFICATION\_CONTRACT\_ADDRESS | Global verification contract address that allows for verifying proofs.                                                                                                                                                                                                                                                                 |
-| EXPO\_PUBLIC\_RUM\_CONTRACT\_ADDRESS          | Your RUM contract instance where the user's follower count will be added to their user map record with their logged in wallet address being the key                                                                                                                                                                                    |
-| EXPO\_PUBLIC\_RECLAIM\_APP\_ID                | App ID for the Application created within the Reclaim platform.                                                                                                                                                                                                                                                                        |
-| EXPO\_PUBLIC\_RECLAIM\_APP\_SECRET            | App Secret for the Application created within the Reclaim platform.                                                                                                                                                                                                                                                                    |
-| EXPO\_PUBLIC\_RECLAIM\_PROVIDER\_ID           | Provider ID of the provider added to the Application within the Reclaim platform. This would be found in the **httpProviderId field** in **Twitter User Profile** provider.                                                                                                                                                            |
-
-8. Build and launch the application:
+4. Build and launch the application:
 
 To build and run the app, ensure your **emulator**, **simulator**, or **physical device** is running. Then, use one of the following commands based on your target platform to launch the App:
 
@@ -190,8 +165,67 @@ To build and run the app, ensure your **emulator**, **simulator**, or **physical
 ```
 npx expo run:android
 ```
+{% endtab %}
 
-Android builds require additional configuration. See the [Android setup documentation](https://github.com/reclaimprotocol/reclaim-inapp-reactnative-sdk?tab=readme-ov-file#android-setup) for the required code changes to enable proper compilation.
+{% tab title="For iOS" %}
+```
+npx expo run:ios
+```
+{% endtab %}
+{% endtabs %}
+
+### Manual Installation <a href="#manual-installation" id="manual-installation"></a>
+
+1. Click the "**Manual Setup**" tab under "**Step 3**" and copy the values for use later.
+
+<figure><img src="../../.gitbook/assets/image (101).png" alt=""><figcaption></figcaption></figure>
+
+2. In your terminal clone the repository and change into the newly created project directory:
+
+```bash
+git clone https://github.com/burnt-labs/abstraxion-reclaim-demo.git
+cd abstraxion-reclaim-demo
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Create an **`.env.local`** file in root of the project folder and add the environment values from the quickstart portal in "**Step 2**" above:
+
+```javascript
+EXPO_PUBLIC_TREASURY_CONTRACT_ADDRESS="treasury-contract-address"
+EXPO_PUBLIC_RPC_ENDPOINT="https://rpc.xion-testnet-2.burnt.com:443"
+EXPO_PUBLIC_REST_ENDPOINT="https://api.xion-testnet-2.burnt.com"
+
+EXPO_PUBLIC_RECLAIM_APP_ID="your-reclaim-app-id"
+EXPO_PUBLIC_RECLAIM_APP_SECRET="your-reclaim-secret"
+EXPO_PUBLIC_RECLAIM_PROVIDER_ID="your-reclaim-provider-id"
+
+EXPO_PUBLIC_RUM_CONTRACT_ADDRESS="your-rum-contract-address"
+```
+
+| Variable                                  | Description                                                                                                                                                                                                                                                                                                                            |
+| ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| EXPO\_PUBLIC\_TREASURY\_CONTRACT\_ADDRESS | <p>Treasury contract instance used for gasless transactions and grants authorization to execute transactions via the User Map smart contract instance on behalf of users.<br><br>You will also need to add your RUM contract address to the treasury contract permission to allow for executing transactions on the user's behalf.</p> |
+| EXPO\_PUBLIC\_RPC\_ENDPOINT               | RPC endpoint for Xion (default: `https://rpc.xion-testnet-2.burnt.com:443`)                                                                                                                                                                                                                                                            |
+| EXPO\_PUBLIC\_REST\_ENDPOINT              | REST endpoint for Xion (default: `https://api.xion-testnet-2.burnt.com`)                                                                                                                                                                                                                                                               |
+| EXPO\_PUBLIC\_RUM\_CONTRACT\_ADDRESS      | Your RUM contract instance where the user's follower count will be added to their user map record with their logged in wallet address being the key                                                                                                                                                                                    |
+| EXPO\_PUBLIC\_RECLAIM\_APP\_ID            | App ID for the Application created within the Reclaim platform.                                                                                                                                                                                                                                                                        |
+| EXPO\_PUBLIC\_RECLAIM\_APP\_SECRET        | App Secret for the Application created within the Reclaim platform.                                                                                                                                                                                                                                                                    |
+| EXPO\_PUBLIC\_RECLAIM\_PROVIDER\_ID       | Provider ID of the provider added to the Application within the Reclaim platform. This would be found in the **httpProviderId field** in **Twitter User Profile** provider.                                                                                                                                                            |
+
+5. Build and launch the application:
+
+To build and run the app, ensure your **emulator**, **simulator**, or **physical device** is running. Then, use one of the following commands based on your target platform to launch the App:
+
+{% tabs %}
+{% tab title="For Android" %}
+```
+npx expo run:android
+```
 {% endtab %}
 
 {% tab title="For iOS" %}
