@@ -1,6 +1,6 @@
 # Web2 vs Web3 App Architecture: A Comparison
 
-As a developer transitioning from Web2 to Web3, one of the most important things to understand is  how the application architecture changes.
+As a developer transitioning from Web2 to Web3, one of the most important things to understand is how the application architecture changes.
 
 In Web2, applications are typically built using centralized infrastructure. Backend servers handle business logic, authentication, and data storage, while the frontend communicates with these servers through calling files that exist on the server(s). Developers have full control over the infrastructure and data, and security is managed through centralized access controls.
 
@@ -8,7 +8,7 @@ In contrast, Web3 applications follow a decentralized architecture. Business log
 
 Additionally, in Web3 **every interaction with the blockchain incurs a transaction fee**, known as **gas**. This fee is required to execute smart contract logic, store data, or trigger on-chain changes, adding an economic layer to app interactions that developers must account for.
 
-The table below outlines how the core components of a Web2 app compare to those in a Web3 dapp built on XION:
+The table below outlines how the core components of a Web2 app compare to those in a Web3 app built on XION:
 
 | Component           | Web2 Architecture             | Web3 Architecture (on XION)                          |
 | ------------------- | ----------------------------- | ---------------------------------------------------- |
@@ -21,7 +21,7 @@ The table below outlines how the core components of a Web2 app compare to those 
 | API Layer           | REST, GraphQL                 | RPC, gRPC, API services via blockchain nodes         |
 | User Identity       | Centralized user records      | Wallet addresses + signatures                        |
 | Data Privacy        | Server-side protected data    | Public, on-chain state                               |
-| Cost of Interaction | Free to users or subscription | User or dapp pays gas per blockchain tx              |
+| Cost of Interaction | Free to users or subscription | User or app pays gas per blockchain tx              |
 
 
 
@@ -40,17 +40,17 @@ Shifting from **Web2** to **Web3** development, especially on XION, requires a n
 
 * **The blockchain becomes your backend**: Your application logic is deployed as smart contracts on the XION network, not hosted on private servers.
 * **Data is public by default**: All state is stored on-chain and is accessible to anyone, ensuring transparency and auditability.
-* **Users are in control**: There are no centralized accounts, users manage their own wallets and sign transactions to interact with your dapp.
-* **Logic is deterministic and immutable**: Smart contracts stores the business logic of your dapp and run exactly as written. Changes require deliberate migrations/upgrades.
-* **Each interaction has a cost**: All meaningful changes to blockchain state require **gas**, paid either by the user or the dapp.
+* **Users are in control**: There are no centralized accounts, users manage their own wallets and sign transactions to interact with your app.
+* **Logic is deterministic and immutable**: Smart contracts stores the business logic of your app and run exactly as written. Changes require deliberate migrations/upgrades.
+* **Each interaction has a cost**: All meaningful changes to blockchain state require **gas**, paid either by the user or the app.
 
 
 
 ***
 
-As you transition to building on XION, your focus shifts away from traditional backend services and toward designing smart contracts that define the core logic of your application. You no longer need to manage user accounts or credentials, wallets handle authentication, authorization and identity natively. The frontend takes on a more central role, often interacting directly with smart contracts to trigger application logic. Every interaction with the blockchain incurs a gas fee and results in an immutable state change once confirmed. Because of this, testing, versioning, and managing contract migrations become essential skills for maintaining and evolving your dapp over time.
+As you transition to building on XION, your focus shifts away from traditional backend services and toward designing smart contracts that define the core logic of your application. You no longer need to manage user accounts or credentials, wallets handle authentication, authorization and identity natively. The frontend takes on a more central role, often interacting directly with smart contracts to trigger application logic. Every interaction with the blockchain incurs a gas fee and results in an immutable state change once confirmed. Because of this, testing, versioning, and managing contract migrations become essential skills for maintaining and evolving your app over time.
 
 Transitioning from Web2 to Web3 development requires more than new tools, it requires a new **mental model**. Instead of thinking in terms of centralized logic, storage, and identity, think in terms of **decentralized contracts**, **public state**, and **user-owned keys**.
 
-By leaving behind these Web2 patterns and embracing Web3-native architecture, you’ll build dapps on XION that are secure, trustless, and truly user-centric.
+By leaving behind these Web2 patterns and embracing Web3-native architecture, you’ll build apps on XION that are secure, trustless, and truly user-centric.
 

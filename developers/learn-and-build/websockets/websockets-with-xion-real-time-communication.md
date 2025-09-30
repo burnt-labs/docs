@@ -2,7 +2,7 @@
 
 WebSockets are a powerful tool for enabling real-time, bidirectional communication between a client and a server. Within the Xion ecosystem by integrating WebSockets, you can:
 
-* Enable real-time updates for decentralized apps (dApps).
+* Enable real-time updates for decentralized apps (apps).
 * Stream blockchain events (e.g., transactions, smart contract triggers) to clients.
 * Build interactive and responsive user experiences.
 * Reduce latency compared to traditional polling methods.

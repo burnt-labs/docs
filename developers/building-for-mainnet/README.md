@@ -4,7 +4,7 @@ icon: building
 
 # Building for Mainnet
 
-The Xion Foundation aims to offer developers a clear and structured pathway for deploying secure and reliable decentralized applications (dApps). This section outlines the key differences between **Testnet** and **Mainnet**, the requirements for deployment, and best practices to ensure your contracts are approved and adopted by the community.
+The Xion Foundation aims to offer developers a clear and structured pathway for deploying secure and reliable decentralized applications (apps). This section outlines the key differences between **Testnet** and **Mainnet**, the requirements for deployment, and best practices to ensure your contracts are approved and adopted by the community.
 
 
 
@@ -13,10 +13,10 @@ The Xion Foundation aims to offer developers a clear and structured pathway for 
 The **Xion Testnet** is a **permissionless** environment where developers can deploy and refine their contracts without restrictions. We encourage teams to:
 
 * **Test and iterate** their contracts before considering Mainnet deployment.
-* **Engage with the community** for feedback, allowing real users to test their dApps and identify potential improvements.
+* **Engage with the community** for feedback, allowing real users to test their apps and identify potential improvements.
 * **Ensure stability and security** by rigorously testing different scenarios and edge cases.
 
-By leveraging Testnet, developers can refine their dApps to the highest standards before moving to Mainnet.
+By leveraging Testnet, developers can refine their apps to the highest standards before moving to Mainnet.
 
 
 
@@ -24,7 +24,7 @@ By leveraging Testnet, developers can refine their dApps to the highest standard
 
 Unlike **Testnet**, the **Xion Mainnet is permissioned**, meaning contracts cannot be deployed freely. Instead, contracts must go through a [**governance proposal process**](../section-overview/governance/deploy-contract-mainnet.md), where the Xion community reviews and votes on whether a contract should be stored on-chain.
 
-To protect users and maintain the security of the network, **audited contracts** have the highest chance of being considered for approval. This ensures that **Mainnet** hosts only **secure and reliable** dApps.
+To protect users and maintain the security of the network, **audited contracts** have the highest chance of being considered for approval. This ensures that **Mainnet** hosts only **secure and reliable** apps.
 
 ### **Governance & Audit Requirements**
 

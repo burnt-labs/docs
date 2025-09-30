@@ -1,6 +1,0 @@
-# Set Up Local Environment
-
-Setting up your local environment is the first step towards developing powerful decentralized applications on Xion. We've created a series of detailed guides to walk you through the process, ensuring a smooth and efficient setup.
-
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Setting up your Local Development Environment</strong> </td><td>Covers the necessary tools, dependencies, and configurations needed to get started.</td><td><a href="installation-prerequisites-setup-local-environment.md">installation-prerequisites-setup-local-environment.md</a></td></tr><tr><td><strong>Set Up an Integrated Development Environment</strong></td><td>Configure your Integrated Development Environment to significantly streamline your smart contract development.</td><td><a href="setup-cosmwasm-ide.md">setup-cosmwasm-ide.md</a></td></tr><tr><td><strong>Interacting with Xion Chain using Xion Daemon</strong></td><td>Using the <code>xiond</code> command-line interface to interact with the Xion blockchain.</td><td><a href="interact-with-xion-chain-setup-xion-daemon.md">interact-with-xion-chain-setup-xion-daemon.md</a></td></tr></tbody></table>
-
