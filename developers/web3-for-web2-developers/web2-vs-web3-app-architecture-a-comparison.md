@@ -1,6 +1,6 @@
 # Web2 vs Web3 App Architecture: A Comparison
 
-As a developer transitioning from Web2 to Web3, one of the most important things to understand is  how the application architecture changes.
+As a developer transitioning from Web2 to Web3, one of the most important things to understand is how the application architecture changes.
 
 In Web2, applications are typically built using centralized infrastructure. Backend servers handle business logic, authentication, and data storage, while the frontend communicates with these servers through calling files that exist on the server(s). Developers have full control over the infrastructure and data, and security is managed through centralized access controls.
 
