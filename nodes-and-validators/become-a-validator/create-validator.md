@@ -31,7 +31,7 @@ $ xiond tx staking create-validator \
     --security-contact "email@copypaste.com" \
     --website "www.copypaste.com" \
     --details "I copy-pasted this command." \
-    --chain-id "xion-testnet-1" \
+    --chain-id "xion-testnet-2" \
     --commission-rate "0.05" \
     --commission-max-rate "0.25" \
     --commission-max-change-rate "0.1" \

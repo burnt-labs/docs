@@ -125,7 +125,7 @@ prometheus-retention-time = 0
 # Example:
 # [["chain_id", "cosmoshub-1"]]
 global-labels = [
-    ["chain_id", "xion-testnet-1"]
+    ["chain_id", "xion-testnet-2"]
 ]
 
 ###############################################################################
@@ -190,7 +190,7 @@ enable-fee-suggestion = false
 # GasToSuggest defines gas limit when calculating the fee
 gas-to-suggest = 200000
 
-# DenomToSuggest defines the defult denom for fee suggestion.
+# DenomToSuggest defines the default denom for fee suggestion.
 # Price must be in minimum-gas-prices.
 denom-to-suggest = "uxion"
 

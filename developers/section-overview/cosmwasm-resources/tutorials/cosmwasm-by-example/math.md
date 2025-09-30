@@ -150,7 +150,7 @@ pub fn instantiate(
     deps: DepsMut,
     
     /* env gives access to global variables which represent environment information.
-    For exaample:
+    For example:
     - Block Time/Height
     - contract address
     - Transaction Info */
@@ -178,7 +178,7 @@ pub fn instantiate(
     
     set_contract_version(deps.storage, CONTRACT_NAME, CONTRACT_VERSION).unwrap();
     
-    // Save the stete in deps.storage which creates a storage for contract data on the blockchain.
+    // Save the state in deps.storage which creates a storage for contract data on the blockchain.
     RESULT.save(deps.storage, &operation_response).unwrap();
     Ok(Response::new().add_attribute("method", "instantiate"))
 }

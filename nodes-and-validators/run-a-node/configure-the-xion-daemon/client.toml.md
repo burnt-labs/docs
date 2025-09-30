@@ -23,7 +23,7 @@ You definitely want to change that.
 ###############################################################################
 
 # The network chain ID
-chain-id = "xion-testnet-1"
+chain-id = "xion-testnet-2"
 # The keyring's backend, where the keys are stored (os|file|kwallet|pass|test|memory)
 keyring-backend = "test"
 # CLI output format (text|json)

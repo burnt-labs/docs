@@ -66,11 +66,11 @@ If you intend to use xiond as your preferred client, we recommend you to set up 
 ```bash
 # bash
 export NODE="--node $RPC"
-export TXFLAG="${NODE} --chain-id xion-testnet-1 --gas-prices 0.25uxion --gas auto --gas-adjustment 1.4"
+export TXFLAG="${NODE} --chain-id xion-testnet-2 --gas-prices 0.25uxion --gas auto --gas-adjustment 1.4"
 
 # zsh
 export NODE=(--node $RPC)
-export TXFLAG=($NODE --chain-id xion-testnet-1 --gas-prices 0.25uxion --gas auto --gas-adjustment 1.4)
+export TXFLAG=($NODE --chain-id xion-testnet-2 --gas-prices 0.25uxion --gas auto --gas-adjustment 1.4)
 ```
 
 {% hint style="info" %}

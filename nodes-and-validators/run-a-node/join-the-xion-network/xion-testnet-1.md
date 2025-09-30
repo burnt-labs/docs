@@ -1,35 +1,21 @@
 ---
-description: Details to join the xion-testnet-1 network.
+description: Details to join the xion-testnet-2 network.
 ---
 
-# xion-testnet-1
-
-## Upgrade Path
-
-
-
-| Git Tag  | Docker Tag    | Git SHA                                    | Block Height | Requires Halt |
-| -------- | ------------- | ------------------------------------------ | ------------ | ------------- |
-| `v0.1.0` | `sha-2722f0f` | `2722f0fb1234db97e9bf9b98f744675eb8fb1b26` | `0`          | `false`       |
-| `v0.3.2` | `sha-455cfa5` | `455cfa5b78e79e1c50867f6d61a99b0e9df6b9b1` | `1929544`    | `true`        |
-| `v0.3.3` | `sha-79f0d91` | `79f0d91dfcd4c5916fa30ea246eed1677daf4e44` | `2147030`    | `true`        |
-| `v0.3.4` | `sha-74754c7` | `74754c7c206a7d0f27a23ac9431a4d09dbacff4c` | `3278095`    | `false`       |
-| `v0.3.7` | `sha-f13a74c` | `f13a74c7cf5a562d6902263e53c5ee4f0a9dfefe` | `6887750`    | `true`        |
-| `v0.3.8` | `sha-34c82a9` | `34c82a927b7ae7b67e8b76a1a66fe1b36f807f82` | `7130100`    | `true`        |
+# xion-testnet-2
 
 ## Hosts and Endpoints
-
-The different Hosts and Endpoints of `xion-testnet-1` are:
-
+The different Hosts and Endpoints of `xion-testnet-2` are:
 *   **Seeds**
-
-    * `eb029462c82b46d842a47122d860617bff627fdf@xion-testnet-1.burnt.com:11656`
-
-
+    * `20e1000e88125698264454a884812746c2eb4807@testnet-seeds.lavenderfive.com:22356`
+    * `ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:22356`
+    * `69e1aa5800ffa82615986eac5f99b77c2b8f1ccb@burnt-testnet-seed.itrocket.net:55656`
 * **Peers**
-  * `6bb70718db6af0a473c9d76e82d9ade33618b20d@xion-testnet-1.burnt.com:32656`
-  * `0f2ccb6d7e8f233c03f91dee690f5ff714319fba@xion-testnet-1.burnt.com:33656`
-  * `f684e3873191d62a74e5431202581d99fe3439b7@xion-testnet-1.burnt.com:34656`
+  * `0f1c8ed0d4c4a52ecb8fb6c6b2c6f7d1856326d5@65.21.10.115:22356`
+  * `5166bcee9d5db28dfede2a936f2a60e07778fa89@65.109.113.219:22356`
+  * `7108f0b946f7a4b5b88f01bd29edbaf87d4dbfb4@65.109.89.19:22356`
+  * `73b62ebfb71023900d8debb6e6dc7f1379c34686@65.109.58.86:22356`
+  * `85e868567ca46f8d94b1fba87b2fa5b42a271439@141.94.240.117:22356`
 
 ## Download the Genesis JSON file
 
@@ -40,7 +26,7 @@ We provide a sample snippet which will download the `genesis.json` to the correc
 set -euxo pipefail
 
 BASEDIR="/home/xiond/.xiond"
-GENESIS_JSON="https://files.xion-testnet-1.burnt.com/genesis.json"
+GENESIS_JSON="https://raw.githubusercontent.com/burnt-labs/xion-testnet-2/refs/heads/main/config/genesis.json"
 
 curl ${GENESIS_JSON} -o ${BASEDIR}/config/genesis.json -s
 ```
@@ -53,23 +39,9 @@ We provide a sample snippet which will edit the `config.toml` with our Seed node
 #!/usr/bin/env bash
 set -euxo pipefail
 
-SEED_NODE="7900d5f177228def24170f9631db76afab20278e@seed.xion-testnet-1.burnt.com:11656"
+SEED_NODE="20e1000e88125698264454a884812746c2eb4807@testnet-seeds.lavenderfive.com:22356,ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:22356"
 
 sed -i.bak -E "s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"$SEED_NODE\"|" ${BASEDIR}/config/config.toml
-```
-
-## Download the Address Book JSON file
-
-You may also want to download a fresh `addrbook.json` to help with peer discovery. This addrbook is sourced from the Seed node's public peers, and is updated periodically.
-
-```
-#!/usr/bin/env bash
-set -euxo pipefail
-
-BASEDIR="/home/xiond/.xiond"
-ADDRBOOK_JSON="https://files.xion-testnet-1.burnt.com/addrbook.json"
-
-curl ${ADDRBOOK_JSON} -o ${BASEDIR}/config/addrbook.json -s
 ```
 
 ## Synchronize the chain
@@ -93,7 +65,7 @@ We provide a sample snippet, with which to download our latest public snapshot.
 set -euxo pipefail
 
 BASEDIR="/home/xiond/.xiond"
-TAR_LZ4="https://files.xion-testnet-1.burnt.com/xion-testnet-1-latest.tar.lz4"
+TAR_LZ4="https://snapshots.polkachu.com/testnet-snapshots/xion/xion_1647937.tar.lz4"
 
 curl -o - -L ${TAR_LZ4} | lz4 -c -d - | tar -x -v -C ${BASEDIR}
 
@@ -109,7 +81,7 @@ We provide a sample snippet, with which to edit the `config.toml` for State Sync
 #!/bin/bash
 set -euxo pipefail
 
-SNAP_RPC="https://rpc.xion-testnet-1.burnt.com:443"
+SNAP_RPC="https://rpc.xion-testnet-2.burnt.com:443"
 
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 1000)); \
