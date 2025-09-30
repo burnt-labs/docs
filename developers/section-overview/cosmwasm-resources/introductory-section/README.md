@@ -21,9 +21,9 @@ You might have observed that the development of smart contracts is not covered i
 
 [Deployment and Interaction](deployment-and-interaction/): This section demonstrates the deployment of a contract to the testnet, instantiation, and the execution of smart contract functions.
 
-[Next Steps](broken-reference): The concluding part of this tutorial, Next Steps, summarizes the Getting Started section and directs you towards further learning resources.
-
-\
+[Next Steps](next-steps.md): The concluding part of this tutorial, Next Steps, summarizes the Getting Started section and directs you towards further learning resources.
 
 
-\
+
+
+
