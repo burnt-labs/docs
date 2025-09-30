@@ -1,6 +1,6 @@
-# Recommended Architecture for Dapps on XION
+# Recommended Architecture for Apps on XION
 
-Building dapps on XION opens the door to a decentralized and user-friendly development model, but to fully take advantage of it, you need to rethink how your app is structured. This guide outlines a **recommended architecture** for developing scalable, secure, and gasless dapps on XION using smart contracts, modern frontend tools, and built-in wallet functionality.
+Building apps on XION opens the door to a decentralized and user-friendly development model, but to fully take advantage of it, you need to rethink how your app is structured. This guide outlines a **recommended architecture** for developing scalable, secure, and gasless apps on XION using smart contracts, modern frontend tools, and built-in wallet functionality.
 
 
 
@@ -8,7 +8,7 @@ Building dapps on XION opens the door to a decentralized and user-friendly devel
 
 <figure><img src="../../.gitbook/assets/Recommended-Architecture-for-Dapps-on-XION-flow-chart (3).png" alt=""><figcaption></figcaption></figure>
 
-At a high level, a typical XION dapp consists of the following components:
+At a high level, a typical XION app consists of the following components:
 
 * **Frontend**: A browser-based or mobile user interface that connects directly to the blockchain.
 * **Wallet Layer**: Wallets are generated and managed on the frontend using the `abstraxion` library.
@@ -22,12 +22,12 @@ At a high level, a typical XION dapp consists of the following components:
 
 ### **Frontend (React/Vue + xion.js)**
 
-* Built using modern JavaScript frameworks like **React** or **Vue**, the frontend serves as the primary interface for users to interact with your dapp.
+* Built using modern JavaScript frameworks like **React** or **Vue**, the frontend serves as the primary interface for users to interact with your app.
 * Wallet creation, login, and transaction signing are handled via **`abstraxion`**, a sub-package of `xion.js`, which eliminates the need for external wallets or browser extensions.
-* User onboarding is seamless, you can programmatically set up a **fee grant** via XION **Treasury Contracts**, allowing your dapp to cover the gas costs for users.
+* User onboarding is seamless, you can programmatically set up a **fee grant** via XION **Treasury Contracts**, allowing your app to cover the gas costs for users.
 * XION’s treasury contracts go even further by enabling a **Web2-style authorization model**. Users can approve a Grantz (similar to OAuth2 scopes), authorizing your frontend to send signed transactions on their behalf, no wallet popups required.
 * The frontend communicates **directly with deployed smart contracts and the XION blockchain** via RPC, gRPC, REST APIs, or WebSockets using `xion.js`.
-* Since your frontend is entirely static, it can be deployed to platforms like **Vercel**, **Netlify**, or any CDN. The full dapp loads in the user's browser, there's no need for server-side rendering or backend infrastructure.
+* Since your frontend is entirely static, it can be deployed to platforms like **Vercel**, **Netlify**, or any CDN. The full app loads in the user's browser, there's no need for server-side rendering or backend infrastructure.
 
 
 
@@ -41,7 +41,7 @@ At a high level, a typical XION dapp consists of the following components:
   * Handling voting, staking, or other custom logic
 
 {% hint style="info" %}
-Smart contracts are deterministic, upgradeable (via migrations), and auditable, forming the trusted core of your dapp.
+Smart contracts are deterministic, upgradeable (via migrations), and auditable, forming the trusted core of your app.
 {% endhint %}
 
 ### **Optional Indexer (SubQuery, Numia indexer)**

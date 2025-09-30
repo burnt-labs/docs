@@ -14,7 +14,7 @@ A prime example is the [**cw-plus**](https://github.com/CosmWasm/cw-plus) collec
 
 Using pre-audited contracts offers significant advantages across your development lifecycle. First and foremost, it dramatically reduces costs - security audits are expensive, and building on verified code minimizes the amount of new code requiring review. This established foundation also streamlines governance approval for Mainnet deployment, as committees can more readily trust contracts with proven security credentials.
 
-Beyond cost savings, these battle-tested solutions accelerate development by providing ready-made functionality out of the box. Instead of reinventing core components, your team can focus their energy on creating unique, value-added features that differentiate your dApp. The cw-plus contracts exemplify this efficiency, offering standardized implementations that have been optimized through extensive real-world use.
+Beyond cost savings, these battle-tested solutions accelerate development by providing ready-made functionality out of the box. Instead of reinventing core components, your team can focus their energy on creating unique, value-added features that differentiate your app. The cw-plus contracts exemplify this efficiency, offering standardized implementations that have been optimized through extensive real-world use.
 
 
 

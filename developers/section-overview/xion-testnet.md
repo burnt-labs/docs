@@ -14,7 +14,7 @@ You can request Xion testnet tokens directly from the official [Xion faucet](htt
 
 Please note that only **one request** can be made every **24 hours**.
 
-<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
 
 ## Discord Faucet
 

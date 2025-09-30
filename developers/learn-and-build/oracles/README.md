@@ -1,6 +1,6 @@
 # Oracles
 
-Oracles are external data providers that enable smart contracts to interact with real-world data. In the Xion ecosystem, oracles play a crucial role in providing off-chain information such as asset prices, weather data, or sports scores, allowing developers to build dynamic and responsive decentralized applications (dApps).
+Oracles are external data providers that enable smart contracts to interact with real-world data. In the Xion ecosystem, oracles play a crucial role in providing off-chain information such as asset prices, weather data, or sports scores, allowing developers to build dynamic and responsive decentralized applications (apps).
 
 ## Why Are Oracles Required?
 

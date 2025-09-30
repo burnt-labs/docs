@@ -1,6 +1,6 @@
 # Public Endpoints & Resources
 
-This page provides an overview of publicly accessible endpoints and resources available for interacting with the **XION** network. These endpoints allow developers to query blockchain data, submit transactions, and integrate dApps with the XION ecosystem.
+This page provides an overview of publicly accessible endpoints and resources available for interacting with the **XION** network. These endpoints allow developers to query blockchain data, submit transactions, and integrate apps with the XION ecosystem.
 
 While the XION Foundation maintains official endpoints for all networks, the broader XION community also provides alternative resources for each network. To ensure transparency and accessibility, these community-supported resources are cataloged in the [**Cosmos Chain Registry**](https://github.com/cosmos/chain-registry), a central repository where anyone can contribute by submitting pull requests (PRs) to add or update endpoints.
 
@@ -8,7 +8,7 @@ For the most up-to-date and reliable network resources, it is always recommended
 
 ### Mainnet
 
-The XION Mainnet is the live production network where fully deployed dApps interact with real users and assets. It is designed for stability, security, and high-performance execution of smart contracts. Developers should ensure their dApps are thoroughly tested on the testnet before deploying to the mainnet to minimize risks.
+The XION Mainnet is the live production network where fully deployed apps interact with real users and assets. It is designed for stability, security, and high-performance execution of smart contracts. Developers should ensure their apps are thoroughly tested on the testnet before deploying to the mainnet to minimize risks.
 
 The table below lists the available resources for this network.
 
@@ -18,7 +18,7 @@ For additional community-supported RPC, API, and gRPC endpoints, refer to the [*
 
 ### Testnet
 
-The XION Testnet is designed for experimentation and refining dApps before deploying to Mainnet. It provides a safe environment for developers to test functionality, optimize performance, and resolve issues without affecting real assets.
+The XION Testnet is designed for experimentation and refining apps before deploying to Mainnet. It provides a safe environment for developers to test functionality, optimize performance, and resolve issues without affecting real assets.
 
 The table below lists the available resources for this network.
 
