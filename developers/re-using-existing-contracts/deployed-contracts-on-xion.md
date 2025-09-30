@@ -1,6 +1,6 @@
 # Deployed Contracts on XION
 
-XION provides a growing library of contracts that are already deployed and available on both **Mainnet** and **Testnet**. This makes it easy for developers to instantiate existing contracts instead of deploying new ones. Many of these contracts are pre-audited or have been around so lang that they are considered battle tested.
+XION provides a growing library of contracts that are already deployed and available on both **Mainnet** and **Testnet**. This makes it easy for developers to instantiate existing contracts instead of deploying new ones. Many of these contracts are pre-audited or have been around so long that they are considered battle tested.
 
 
 
