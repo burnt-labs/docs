@@ -1,5 +1,6 @@
 ---
 description: Learn more about the CosmWasm smart contract platform
+hidden: true
 ---
 
 # CosmWasm Resources

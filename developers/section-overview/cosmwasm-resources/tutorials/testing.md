@@ -98,7 +98,7 @@ pub fn mock_env() -> Env {
       height: 12_345,
       time: 1_571_797_419,
       time_nanos: 879305533,
-      chain_id: "xion-testnet-1".to_string(),
+      chain_id: "xion-testnet-2".to_string(),
     },
     contract: ContractInfo {
       address: HumanAddr::from(MOCK_CONTRACT_ADDR),

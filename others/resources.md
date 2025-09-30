@@ -8,9 +8,11 @@ description: Additional resources and relevant links
 
 **Blog**: [https://xion.burnt.com/blog](https://xion.burnt.com/blog)
 
-**Twitter**: [https://twitter.com/burnt\_xion](https://twitter.com/burnt\_xion)
+**Twitter**: [https://twitter.com/burnt\_xion](https://twitter.com/burnt_xion)
 
 **Discord**: [https://discord.gg/burnt](https://discord.gg/burnt)
+
+**Developer Ecosystem (Telegram)**: [https://t.me/+5KA8xBuU5wYzZjU0](https://t.me/+5KA8xBuU5wYzZjU0)
 
 **Guild**: [https://guild.xyz/burnt](https://guild.xyz/burnt)
 

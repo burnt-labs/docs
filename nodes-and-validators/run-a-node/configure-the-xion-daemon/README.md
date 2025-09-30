@@ -22,7 +22,7 @@ The [Cosmos SDK documentation](https://docs.cosmos.network/v0.47) is a good plac
 
 ```
 $ xiond init my-awesome-moniker \
-    --chain-id xion-testnet-1 \
+    --chain-id xion-testnet-2 \
     --home /tmp/node
 ```
 
