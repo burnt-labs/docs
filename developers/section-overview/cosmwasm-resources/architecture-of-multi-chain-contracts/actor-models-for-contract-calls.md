@@ -27,7 +27,7 @@ From this basic design, a few other useful aspects can be derived:
 
 > Info:
 >
-> The contract can direcctly access other contracts' state through a technique called raw querying. Raw queries are used for achieving better performance in query execution and raw queries are also used if the performance of the API query model is not so good.
+> The contract can directly access other contracts' state through a technique called raw querying. Raw queries are used for achieving better performance in query execution and raw queries are also used if the performance of the API query model is not so good.
 
 
 
@@ -39,7 +39,7 @@ By enforcing private internal state, a given contract can guarantee all valid tr
 
 As mentioned above, serialized execution prevents all concurrent executions of a contract's code. By enforcing serialized execution, the contract will write all changes to storage before exiting and have a proper view when the next message is processed.&#x20;
 
-REENTRACY ATTACK
+REENTRANCY ATTACK
 
 The way that CosmWasm is built, resembles having an automatic mutex over the entire contract code. This prevents reentrancy attacks, which are the most common attack vectors for smart contracts built on Ethereum. An example of a reentrancy attack that is prevented by design in CosmWasm is the following: Contract A calls into Contract B, which calls back into Contract A. There may be local changes in memory in Contract A from the first call (eg. deduct a balance), that are not yet persisted, so the second call can use the outdated state a second time (eg. authorize sending a balance twice).
 

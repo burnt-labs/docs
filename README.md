@@ -4,7 +4,7 @@ description: The First Blockchain Purpose Built For Consumer Adoption
 
 # Welcome to XION
 
-XION is a blockchain infrastructure built with user experience at the core. The chain integrates complex functionalities such as account management, signature handling, fee abstraction, and interoperability directly at the protocol level. The aim is to simplify blockchain interactions for mainstream users by addressing the technical complexities that currently hinder widespread adoption.
+[XION](https://xion.burnt.com/) is a blockchain infrastructure built with user experience at the core. The chain integrates complex functionalities such as account management, signature handling, fee abstraction, and interoperability directly at the protocol level. The aim is to simplify blockchain interactions for mainstream users by addressing the technical complexities that currently hinder widespread adoption.
 
 ## Zero to App in 5 Minutes
 
