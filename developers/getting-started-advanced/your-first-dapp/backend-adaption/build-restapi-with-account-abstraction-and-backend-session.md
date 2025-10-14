@@ -1,6 +1,6 @@
 # Account Abstraction for RESTful API with Backend Session
 
-In this guide, we will walk through building a RESTful API app with session management using the [Abstraxion Backend library](https://www.npmjs.com/package/@burnt-labs/abstraxion-backend), demonstrating how to create a web2 user experience without any web3 interactive behavior in frontend. It also includes the Abstraxion account and gasless transaction experience for users, but all the blockchain related implementation will be handled in the backend.
+In this guide, we will walk through building a RESTful API app with session management using the [Abstraxion Core library](https://www.npmjs.com/package/@burnt-labs/abstraxion-core), demonstrating how to create a web2 user experience without any web3 interactive behavior in frontend. It also includes the Abstraxion account and gasless transaction experience for users, but all the blockchain related implementation will be handled in the backend.
 
 To better understand Account Abstraction you can visit the[Introduction to Account Abstraction](https://docs.burnt.com/xion/developers/learn/intro-to-account-abstraction) page.
 
@@ -31,7 +31,7 @@ Install the required dependencies for the backend session management:
 
 ```bash
 # Core dependencies
-pnpm add @burnt-labs/abstraxion-backend @burnt-labs/abstraxion-core @burnt-labs/constants
+pnpm add @burnt-labs/abstraxion-core @burnt-labs/constants
 pnpm add @prisma/client prisma zod
 pnpm add next-auth @auth/prisma-adapter bcryptjs
 
@@ -48,13 +48,14 @@ src/
 ├── app/
 │   ├── api/
 │   │   ├── auth/              # Authentication endpoints
-│   │   ├── callback/          # OAuth callback handlers
+│   │   ├── callback/          # Authorization callback handlers
 │   │   └── wallet/            # Wallet management endpoints
 │   ├── globals.css
 │   ├── layout.tsx
 │   └── page.tsx
 ├── lib/
 │   ├── xion/
+│   │   ├── backend/               # AbstraxionBackend library(You can copy this folder from the xion.js repository)
 │   │   ├── abstraxion-backend.ts  # AbstraxionBackend configuration
 │   │   └── database.ts            # Database adapter
 │   ├── auth.ts                # NextAuth configuration
@@ -210,11 +211,19 @@ npx prisma generate
 npx prisma db push
 ```
 
+## AbstraxionBackend Library Implementation
+
+We have implemented a version of the AbstraxionBackend library that you can use in your project.
+
+You can directly copy the `backend` folder from the xion.js repository [(Folder Here)](https://github.com/burnt-labs/xion.js/tree/main/apps/backend-session/src/lib/xion/backend). In future, we may move this library to a separate package.
+
+In the following sections, we will use `@/lib/xion/backend` to refer to the AbstraxionBackend library.
+
 ## AbstraxionBackend Integration
 
 ### 1. Database Adapter
 
-Create the database adapter that implements the `BaseDatabaseAdapter` interface:
+Create the database adapter that implements the `BaseDatabaseAdapter` interface from the AbstraxionBackend library:
 
 ```typescript
 // src/lib/xion/database.ts
@@ -222,11 +231,9 @@ import { PrismaClient, type Prisma } from "@prisma/client";
 import type {
   SessionKeyInfo,
   Permissions,
-} from "@burnt-labs/abstraxion-backend";
-import {
   BaseDatabaseAdapter,
   SessionState,
-} from "@burnt-labs/abstraxion-backend";
+} from "@/lib/xion/backend";
 
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined;
@@ -417,7 +424,7 @@ Create the main configuration file:
 
 ```typescript
 // src/lib/xion/abstraxion-backend.ts
-import { AbstraxionBackend } from "@burnt-labs/abstraxion-backend";
+import { AbstraxionBackend } from "@/lib/xion/backend";
 import { PrismaDatabaseAdapter, prisma } from "./database";
 
 const globalForAbstraxion = globalThis as unknown as {
