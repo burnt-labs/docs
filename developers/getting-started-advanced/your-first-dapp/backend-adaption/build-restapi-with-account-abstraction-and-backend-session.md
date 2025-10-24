@@ -866,6 +866,8 @@ export const POST = createApiWrapper(
 );
 ```
 
+> Note: For this example, we are using the `MsgSend` message to send XION tokens. So please make sure in your treasury permission, you have granted the `Send Token` permission. Learn more about [how to grant permissions](../../../getting-started-advanced/gasless-ux-and-permission-grants/treasury-contracts.md).
+
 ## Testing Your API
 
 ### Basic API Testing
