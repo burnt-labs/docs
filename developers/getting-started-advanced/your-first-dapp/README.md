@@ -6,4 +6,24 @@ XION enhances this by enabling **meta accounts** with **gasless transactions**, 
 
 
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Enabling Gasless Transactions</strong></td><td>Deploying your treasury contract for delegated authorization and gasless transactions.</td></tr><tr><td><strong>Account Abstraction with Gasless Transactions</strong></td><td>Walk through building a basic app using the Abstraxion library.</td></tr><tr><td><strong>Interact with XION via a Backend Service</strong></td><td>Learn how to interact with the XION blockchain from a backend environment using <strong>CosmJS</strong>.</td></tr></tbody></table>
+<table data-view="cards">
+  <thead><tr><th></th><th></th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Account Abstraction with Gasless Transactions</strong></td>
+      <td>Walk through building a basic app using the Abstraxion library.</td>
+    </tr>
+    <tr>
+      <td><strong>Custom UI Abstraxion Authentication</strong></td>
+      <td>Learn how to implement a custom UI for the Abstraxion authentication process.</td>
+    </tr>
+    <tr>
+      <td><strong>Backend adaption with Web2 experience</strong></td>
+      <td>Learn how to adapt your existing backend to work with XION without any web3 interactive behavior in frontend.</td>
+    </tr>
+    <tr>
+      <td><strong>Interact with XION via a Backend Service</strong></td>
+      <td>Learn how to interact with the XION blockchain from a backend environment using <strong>CosmJS</strong>.</td>
+    </tr>
+  </tbody>
+</table>
