@@ -74,8 +74,7 @@ Create a `.env.local` file in your project root:
 DATABASE_URL="file:./dev.db"
 
 # XION Configuration
-XION_RPC_URL="https://rpc.xion-testnet-2.burnt.com/"
-XION_REST_URL="https://api.xion-testnet-2.burnt.com/"
+XION_NETWORK="testnet"
 XION_REDIRECT_URL="http://localhost:3000/api/callback/grant_session"
 XION_TREASURY="xion1..." # Your treasury address
 
@@ -437,8 +436,8 @@ export function getAbstraxionBackend(): AbstraxionBackend {
   }
 
   // Ensure all environment variables are set
-  if (!process.env.XION_RPC_URL) {
-    throw new Error("XION_RPC_URL is not set");
+  if (!process.env.XION_NETWORK) {
+    process.env.XION_NETWORK = "testnet";
   }
   if (!process.env.XION_REDIRECT_URL) {
     throw new Error("XION_REDIRECT_URL is not set");
@@ -453,7 +452,7 @@ export function getAbstraxionBackend(): AbstraxionBackend {
   const databaseAdapter = new PrismaDatabaseAdapter(prisma);
 
   const config = {
-    rpcUrl: process.env.XION_RPC_URL,
+    network: process.env.XION_NETWORK as "testnet" | "mainnet",
     redirectUrl: process.env.XION_REDIRECT_URL,
     treasury: process.env.XION_TREASURY,
     encryptionKey: process.env.ENCRYPTION_KEY,
@@ -912,8 +911,7 @@ Create production environment variables:
 DATABASE_URL="postgresql://user:password@host:port/database"
 
 # XION Configuration
-XION_RPC_URL="https://rpc.xion-mainnet.burnt.com/"
-XION_REST_URL="https://api.xion-mainnet.burnt.com/"
+XION_NETWORK="mainnet"
 XION_REDIRECT_URL="https://yourdomain.com/api/callback/grant_session"
 XION_TREASURY="xion1..."
 
@@ -989,7 +987,7 @@ All API responses follow this format:
    * Use the provided script to generate keys
 
 3. **XION Network Issues**
-   * Verify `XION_RPC_URL` and `XION_REST_URL` are correct
+   * Verify `XION_NETWORK` is correct
    * Check network connectivity
    * Ensure treasury address is valid
 
