@@ -135,8 +135,7 @@ let address = match resolver_read(deps.storage).may_load(key)? {
 If utilizing None to signify an error state, the conventional recommendation is to raise an error rather than dealing with the None value.
 
 \
-\
+<br>
 
-
 \
-\
+<br>

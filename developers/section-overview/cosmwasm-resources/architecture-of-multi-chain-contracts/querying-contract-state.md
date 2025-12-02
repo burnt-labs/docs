@@ -34,4 +34,4 @@ As such, we provide the **Querier** with read-only access to the state snapshot 
 
 Keep in mind that all queries are performed as part of a transaction, which already has a strongly enforced gas limit. All storage reads and data processing performed as part of a query are deducted from the same gas meter as the rest of the transaction and thus limit processing time.
 
-\
+<br>

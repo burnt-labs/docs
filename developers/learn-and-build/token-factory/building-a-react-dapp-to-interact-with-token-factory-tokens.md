@@ -1,4 +1,4 @@
-# Building a React App to Interact with Token Factory Tokens
+# Building a React dApp to Interact with Token Factory Tokens
 
 This guide walks through creating a React-based decentralized application (app) that interacts with a token created using the XION Token Factory. This app will:
 
@@ -51,7 +51,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 
 #### Fee Grant
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Example of a general <strong>Fee Grant</strong> configuration</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Example of a general <strong>Fee Grant</strong> configuration</p></figcaption></figure>
 
 1. Enter a **"Description"** in the description field. This will reflect the intended purpose of the request.
 2. In the **"Allowance Type"** field, enter `"/cosmwasm.feegrant.v1beta1.BasicAllowance"`.
@@ -60,7 +60,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 
 #### **Grant Config**
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Example of additional <strong>Grant</strong> configuration</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Example of additional <strong>Grant</strong> configuration</p></figcaption></figure>
 
 1. For this example the **"Type URL"** would be `"`/cosmos.bank.v1beta1.MsgSend`"` as this would allow for the app the send tokens on behalf of the user.
 2. Enter a **"Description"** in the description field. This will reflect the intended purpose of the request. This description will be displayed to users when they click **"Allow"** after connecting their account.
@@ -69,7 +69,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 
 #### Treasury Instance Preview
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once the preview is to your liking click the "**Create**" button to create the Treasury contract.
 

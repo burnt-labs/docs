@@ -29,7 +29,7 @@ To get started, you’ll need to:
 3. Save your **Application ID** and **Application Secret**.
 4. On the application details screen enable "**zkFetch**"
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -67,7 +67,7 @@ npm start
 
 The app runs locally at `http://localhost:3000`
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

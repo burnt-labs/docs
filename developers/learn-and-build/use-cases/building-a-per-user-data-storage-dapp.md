@@ -331,7 +331,7 @@ Learn more about Treasury Contracts [here](https://docs.burnt.com/xion/developer
 
 We've created a frontend which is a [Next.js](https://nextjs.org/) application built to interact with the **User Map** smart contract that can be downloaded at [https://github.com/burnt-labs/xion-user-map-json-store-frontend](https://github.com/burnt-labs/xion-user-map-json-store-frontend). It showcases how users can connect their wallets, submit JSON data to update their record, and query the stored data.
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Manual Installation
 

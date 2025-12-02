@@ -26,4 +26,4 @@ The intricacies of storage and state modeling. Learn how to efficiently store an
 This section provides a deep dive into CosmWasm through practical examples. You'll explore mathematical concepts, the process of instantiating a CosmWasm contract, timelocks, crowdfunding mechanisms, response handling, and more.
 
 \
-\
+<br>
