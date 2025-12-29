@@ -19,4 +19,4 @@ The second type of account, smart contract accounts (SCAs), are governed by code
 
 ### Account Abstraction (AA)
 
-As a solution to EOA drawbacks mentioned above, account abstraction has been proposed as a way to enable SCAs to initiate transactions. Rather than having transaction authentication determined by a predefined set of rules at the state machine level, account abstraction delegates this task to SCAs. SCAs can then implement customized authentication logic as needed, such as accommodating key rotation, performing autonomous tasks, integrating multiple-factor authentication, and much more.\
+As a solution to EOA drawbacks mentioned above, account abstraction has been proposed as a way to enable SCAs to initiate transactions. Rather than having transaction authentication determined by a predefined set of rules at the state machine level, account abstraction delegates this task to SCAs. SCAs can then implement customized authentication logic as needed, such as accommodating key rotation, performing autonomous tasks, integrating multiple-factor authentication, and much more.<br>

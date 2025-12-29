@@ -10,8 +10,7 @@ This storage system is organized within a tree structure, specifically following
 
 To understand the workings of this key-value storage approach, let's delve into its mechanics:
 
-\
-
+<br>
 
 <figure><img src="../../../../../.gitbook/assets/AVL-tree-.png" alt=""><figcaption><p><a href="https://github.com/cosmos/iavl">cosmos/iavl </a>tree model</p></figcaption></figure>
 
@@ -62,4 +61,4 @@ We have two fundamental operations at play: Retrieving Individual Values and Ite
 
 There are just two core functionalities in operation: fetching a single value or navigating through a collection of keys. While data structures often require intricate relationships, we work within the confines of this constrained key-value storage, where these two fundamental operations are paramount.
 
-This is accomplished through the construction of indexes.\
+This is accomplished through the construction of indexes.<br>

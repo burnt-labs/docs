@@ -246,4 +246,4 @@ pub fn contract_ping_pong_mock() -> Box<dyn Contract<Empty>> {
 
 In the process of defining your custom mocked contracts, you enjoy a considerable degree of flexibility. You can conveniently skip the inclusion of dependencies, environmental variables, and information variables that go unused, simply by using an underscore (\_). Furthermore, you hold the power to furnish any desired responses for specific ExecuteMsg or Query requests. The real challenge lies in effectively mocking these diverse services.
 
-\
+<br>

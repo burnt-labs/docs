@@ -112,6 +112,6 @@ xiond query wasm contract-state smart $CONTRACT "$NAME_QUERY" $NODE --output jso
 # {"data":{"address":"xion1lwcrr9ktsmn2f7fej6gywxcm8uvxlzz5ch40hm"}}
 ```
 
-## &#x20;
+## <br>
 
-\
+<br>

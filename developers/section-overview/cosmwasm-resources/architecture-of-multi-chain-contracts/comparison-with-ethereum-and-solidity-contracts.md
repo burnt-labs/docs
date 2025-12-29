@@ -77,10 +77,8 @@ To develop resilient smart contract functionalities, it's essential to draw insi
 * **Floating Points and Precision**: Both Solidity and CosmWasm avoid floating-point operations due to potential non-determinism in rounding, which can vary depending on the CPU. In CosmWasm, you can seamlessly import Rust packages and select a suitable one for internal use. For instance, you can utilize "rust\_decimal," a pure Rust Decimal implementation suitable for precise financial calculations, or employ fixed-point decimal math, supporting up to 128-bit numbers, accommodating a wide range of use cases.
 * **Tx.Origin Authentication**: CosmWasm refrains from exposing tx.origin, relying solely on the contract or the user directly calling the contract through params.message.signer. This design ensures that only one value needs to be compared, eliminating the possibility of relying on incorrect authentication methods.
 
-\
+<br>
 
+<br>
 
-\
-
-
-\
+<br>

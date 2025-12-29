@@ -18,4 +18,4 @@ Protobuf is a well-known and widely-supported binary format that provides a stri
 
 Cap'n Proto is a super-lean encoding format with zero-copy reads and no parsing needed. This has been suggested for use in CosmWasm as an optional addition. It may be considered an opt-in format for contracts desiring such efficiency or strict schema, or possibly just used for encoding internal data structures (Params).
 
-\
+<br>

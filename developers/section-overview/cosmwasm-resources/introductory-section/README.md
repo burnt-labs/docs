@@ -1,4 +1,4 @@
-# Introductory Section&#x20;
+# Introductory Section
 
 The introductory section provides an overview of the core principles behind CosmWasm Smart Contracts. While a basic familiarity with Rust could be beneficial, the material is designed to cater to individuals of all proficiency levels, irrespective of their prior experience. Our goal is to offer clear and accessible guidance, allowing newcomers to gain practical insights through a comprehensive, step-by-step tutorial that delves into the following subjects:
 
@@ -21,9 +21,8 @@ You might have observed that the development of smart contracts is not covered i
 
 [Deployment and Interaction](deployment-and-interaction/): This section demonstrates the deployment of a contract to the testnet, instantiation, and the execution of smart contract functions.
 
-[Next Steps](broken-reference): The concluding part of this tutorial, Next Steps, summarizes the Getting Started section and directs you towards further learning resources.
+[Next Steps](/broken/pages/BNCM8Cp6N7L23FSUHiRj): The concluding part of this tutorial, Next Steps, summarizes the Getting Started section and directs you towards further learning resources.
 
-\
+<br>
 
-
-\
+<br>

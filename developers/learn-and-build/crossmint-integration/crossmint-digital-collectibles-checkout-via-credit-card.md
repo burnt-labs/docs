@@ -30,8 +30,7 @@ To get started, create a Crossmint staging account so you can test the integrati
 
 From the sidebar, click "**Integrate**", then click "**API Keys**".
 
-![](<../../../.gitbook/assets/image (95).png>)\
-
+![](<../../../.gitbook/assets/image (95).png>)<br>
 
 #### Server Key
 
