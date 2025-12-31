@@ -20,8 +20,8 @@ XION enhances this by enabling **meta accounts** with **gasless transactions**, 
       <td>Learn how to interact with the XION blockchain from a backend environment using <strong>CosmJS</strong>.</td>
     </tr>
     <tr>
-      <td><strong>Backend adaption with Web2 experience</strong></td>
-      <td>Learn how to adapt your existing backend to work with XION without any web3 interactive behavior in frontend.</td>
+      <td><strong>Build Application with a Web2 experience</strong></td>
+      <td>Learn how to build an application with a Web2 experience using XION OAuth2 Fully-Managed API or XION Integration in backend.</td>
     </tr>
   </tbody>
 </table>
@@ -40,5 +40,5 @@ Xion provides a variety of ways to integrate with Web2, allowing you to choose t
 |----------|---------------|--------------|--------------------------------------------------------------|---------------|
 | Direct Blockchain Interaction | No | Yes | No | [Interact with XION via your Backend Service](./xion-backend-using-cosmjs.md) |
 | General Web3 Experience | Yes | No | Yes | [Account Abstraction with Gasless Transactions](../build-react-dapp-with-account-abstraxion.md) |
+| Web2 Experience with XION OAuth2 Fully-Managed API | Yes | Yes | Yes | [Building an Xion OAuth2 Application](./build-oauth2-app-with-xion-auth.md) |
 | Web2 Experience with XION Integration in backend | Yes | Yes | Yes | [Account Abstraction for RESTful API with Backend Session](./build-restapi-with-account-abstraction-and-backend-session.md) |
-| Pure Web2 Experience with XION OAuth2 Fully-Managed API | Yes | Yes | Yes | Coming soon |
