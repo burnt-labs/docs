@@ -37,22 +37,18 @@ When configuring your Treasury contract, there are two **critical requirements**
 
 The **`redirect_uri`** parameter configured in your Treasury contract **MUST exactly match** the redirect URI used in your OAuth2 application. This redirect URI is where users will be redirected after successful authentication.
 
-<figure><img src="../../../.gitbook/assets/OAuth2-0.png" alt=""><figcaption><p>Treasury contract configuration showing redirect URI and OAuth2 toggle</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Treasury contract configuration showing redirect URI</p></figcaption></figure>
 
 **Example:**
 
 - If your OAuth2 app uses `http://localhost:3000/callback` as the redirect URI
 - Your Treasury contract's redirect URI must also be set to `http://localhost:3000/callback`
 
-{% hint style="warning" %}
-**Redirect URI Mismatch**: If the Treasury's `redirect_uri` doesn't match your OAuth2 app's redirect URI, users will encounter redirect URI mismatch warnings during authentication, and the OAuth2 flow will fail.
-{% endhint %}
-
 #### 2. OAuth2 App Toggle
 
 You **MUST enable the "IS OAUTH2 APP" toggle** in the Treasury contract's Update Params section. This setting indicates that the Treasury contract is being used for OAuth2 authentication.
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Update Params dialog showing the IS OAUTH2 APP toggle</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/OAuth2-0.png" alt=""><figcaption><p>Update Params dialog showing the IS OAUTH2 APP toggle</p></figcaption></figure>
 
 **To enable the OAuth2 toggle:**
 
@@ -71,8 +67,8 @@ The permissions (grant configs) you define in your Treasury contract determine w
 
 For example:
 
-- If your Treasury only has permission for `MsgSend` (token transfers), you can only send tokens via OAuth2
-- If your Treasury has permission for `MsgExecuteContract`, you can execute smart contract calls via OAuth2
+- If your Treasury only has permission for `MsgSend` (token transfers), you can only send tokens via OAuth2 Protected API
+- If your Treasury has permission for `MsgExecuteContract`, you can execute smart contract calls via OAuth2 Protected API
 - You can configure multiple permissions to allow different transaction types
 
 For more information on configuring Treasury permissions, see the [Treasury Contracts Documentation](../gasless-ux-and-permission-grants/treasury-contracts.md#permissions).
@@ -108,9 +104,9 @@ To access the portal, click **"Connect with XION"** and authenticate using your 
 
    <figure><img src="../../../.gitbook/assets/OAuth2-3.png" alt=""><figcaption><p>OAuth2 Client creation form</p></figcaption></figure>
 
-   **Required Fields:**
+   **Fields:**
    - **Treasury Address**: Select a Treasury contract from your existing deployments or enter a new Treasury address. The redirect URI from this Treasury will be used as your OAuth2 redirect URI.
-   - **Client Name** (optional): A descriptive name for your application
+   - **Client Name** (optional): A descriptive name for your application. If not provided, the name of this client will be untitled.
    - **Client URI** (optional): Your application's homepage URL
 
    **Default Configuration:**
@@ -259,7 +255,7 @@ window.location.href = authUrl.toString()
 - `response_type`: Always `"code"` for Authorization Code flow
 - `code_challenge`: (Public Clients) Base64url-encoded SHA256 hash of code_verifier
 - `code_challenge_method`: (Public Clients) Always `"S256"` for SHA256
-- `scope`: OAuth2 scopes (e.g., `"xion:transactions:submit"`)
+- `scope`: XION's OAuth2 Protected API scopes (e.g., `"xion:transactions:submit"`)
 - `state`: Random string for CSRF protection
 
 #### Step 3: Callback - Handle Authorization Code
@@ -306,9 +302,9 @@ async function exchangeCodeForToken(code: string): Promise<TokenInfo> {
   const response = await fetch(serverInfo.token_endpoint, {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Type': 'application/json',
     },
-    body: new URLSearchParams({
+    body: JSON.stringify({
       grant_type: 'authorization_code',
       code: code,
       redirect_uri: redirectUri,
@@ -330,7 +326,7 @@ async function exchangeCodeForToken(code: string): Promise<TokenInfo> {
 }
 ```
 
-**For Confidential Clients:**
+**For Confidential Clients(Use POST body, without PKCE):**
 
 ```typescript
 async function exchangeCodeForToken(code: string): Promise<TokenInfo> {
@@ -339,12 +335,12 @@ async function exchangeCodeForToken(code: string): Promise<TokenInfo> {
   const response = await fetch(serverInfo.token_endpoint, {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Type': 'application/json',
     },
-    body: new URLSearchParams({
+    body: JSON.stringify({
       grant_type: 'authorization_code',
       code: code,
-      redirect_uri: redirectUri,
+      redirect_uri: redirectUri, // Must match the redirect_uri used in the authorization request
       client_id: clientId,
       client_secret: clientSecret, // Stored securely on server
     }),
@@ -370,11 +366,15 @@ async function exchangeCodeForToken(code: string): Promise<TokenInfo> {
 - `redirect_uri`: Must match the redirect_uri used in the authorization request
 - `client_id`: Your OAuth2 client ID
 - `client_secret`: (Confidential Clients only) Your client secret
-- `code_verifier`: (Public Clients with PKCE) The original code verifier
+- `code_verifier`: (Public Clients with PKCE) The original code verifier. Should be used in the token exchange request for Public Clients with PKCE.
 
 ### 4.2 Frontend Public Client Example
 
 This example demonstrates a complete frontend OAuth2 integration using a Public Client with PKCE.
+
+Example repository: [xion-oauth2-app-demo/examples/frontend+public_client](https://github.com/burnt-labs/xion-oauth2-app-demo/tree/main/examples/frontend+public_client)
+
+Following are some of major OAuth2 utility functions for the frontend Public Client example.
 
 **Complete OAuth2 Utility Functions:**
 
@@ -564,7 +564,7 @@ export function clearTokenInfo(): void {
 }
 ```
 
-**Callback Component Example:**
+**Callback Component Example(Frontend Public Client):**
 
 ```typescript
 // components/Callback.tsx
@@ -633,6 +633,10 @@ export function Callback() {
 ### 4.3 Backend Confidential Client Example
 
 This example demonstrates a complete backend OAuth2 integration using a Confidential Client with server-side token exchange.
+
+Example repository: [xion-oauth2-app-demo/examples/backend+confidential_client](https://github.com/burnt-labs/xion-oauth2-app-demo/tree/main/examples/backend+confidential_client)
+
+Following are some of major OAuth2 utility functions for the backend Confidential Client example.
 
 **OAuth2 Configuration (Server-side):**
 
@@ -1049,7 +1053,17 @@ To submit transactions via the OAuth2 API, you need to construct transaction mes
 ### Installing Xion Types
 
 ```bash
+# npm
 npm install @burnt-labs/xion-types
+
+# pnpm
+pnpm install @burnt-labs/xion-types
+
+# yarn
+yarn add @burnt-labs/xion-types
+
+# bun
+bun add @burnt-labs/xion-types
 ```
 
 ### Understanding Transaction Messages
@@ -1150,6 +1164,8 @@ const response = await transactionApi.sendTransaction([message])
 
 #### Instantiating Contracts (MsgInstantiateContract)
 
+Reference: [xion-types MsgInstantiateContract Guide](https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/cosmwasm-v1-transaction-messages.ts#L177-L203)
+
 ```typescript
 import { EncodeObject } from '@cosmjs/proto-signing'
 import { MsgInstantiateContract } from '@burnt-labs/xion-types/types/cosmwasm/wasm/v1/tx'
@@ -1173,18 +1189,19 @@ export function createInstantiateContractMessage(
 }
 
 // Usage example: Instantiate a CW20 token contract
+const sender = 'xion1...'
 const cw20InitMsg = {
   name: 'My Token',
   symbol: 'MTK',
   decimals: 6,
   initial_balances: [
-    { address: 'xion1...', amount: '1000000' },
+    { address: sender, amount: '1000000' },
   ],
-  mint: { minter: 'xion1...' },
+  mint: { minter: sender },
 }
 
 const message = createInstantiateContractMessage(
-  'xion1...',           // sender address
+  sender,           // sender address
   510,                  // code ID
   cw20InitMsg,          // initialization message
   'My Token Contract',  // label
@@ -1251,7 +1268,17 @@ CosmJS is the standard library for interacting with Cosmos SDK-based blockchains
 ### Installation
 
 ```bash
+# npm
 npm install @cosmjs/stargate
+
+# pnpm
+pnpm install @cosmjs/stargate
+
+# yarn
+yarn add @cosmjs/stargate
+
+# bun
+bun add @cosmjs/stargate
 ```
 
 ### Example: Querying Account Balance
@@ -1260,7 +1287,8 @@ npm install @cosmjs/stargate
 import { StargateClient } from '@cosmjs/stargate'
 
 async function getBalance(address: string, denom: string = 'uxion') {
-  const client = await StargateClient.connect('https://rpc.xion-testnet-2.burnt.com')
+  const rpcUrl = process.env.XION_RPC_URL || 'https://rpc.xion-testnet-2.burnt.com:443'
+  const client = await StargateClient.connect(rpcUrl)
   const balance = await client.getBalance(address, denom)
   return balance.amount
 }
@@ -1272,7 +1300,8 @@ async function getBalance(address: string, denom: string = 'uxion') {
 import { StargateClient } from '@cosmjs/stargate'
 
 async function queryContract(contractAddress: string, queryMsg: any) {
-  const client = await StargateClient.connect('https://rpc.xion-testnet-2.burnt.com')
+  const rpcUrl = process.env.XION_RPC_URL || 'https://rpc.xion-testnet-2.burnt.com:443'
+  const client = await StargateClient.connect(rpcUrl)
   return await client.queryContractSmart(contractAddress, queryMsg)
 }
 ```
