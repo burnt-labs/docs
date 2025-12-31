@@ -1,17 +1,17 @@
-# Building an OAuth2 Application with Xion Auth
+# Building an Xion OAuth2 Application
 
-This guide provides a comprehensive walkthrough for integrating OAuth2 authentication into your application using Xion Auth. By following this guide, you'll enable secure and efficient user authentication, leveraging the OAuth2 protocol to provide a Web2-style experience with blockchain capabilities.
+This guide provides a comprehensive walkthrough for integrating Xion into your application by OAuth2 authentication. By following this guide, you'll enable secure and efficient user authentication, leveraging the OAuth2 protocol to provide a Web2-style experience with blockchain capabilities.
 
 A fully functional demo of OAuth2 integration is available in the [Xion OAuth2 App Demo](https://github.com/burnt-labs/xion-oauth2-app-demo) repository.
 
-## Step 1: Understanding OAuth2 and Its Benefits
+## Part 1: Understanding OAuth2 and Its Benefits
 
 OAuth 2.0 is an industry-standard protocol for authorization, designed to provide specific authorization flows for web applications, desktop applications, mobile phones, and living room devices. The specification and its extensions are being developed within the IETF OAuth Working Group. For more information about OAuth 2.0, visit [oauth.net/2/](https://oauth.net/2/).
 
 **Benefits of OAuth2 Integration with Xion:**
 
-- **Web2 User Experience**: Users can authenticate using familiar Web2 methods (social logins, email, passkeys) without needing to manage blockchain wallets or private keys
 - **No Wallet Management**: Eliminates the complexity of wallet installation, seed phrase management, and transaction signing for end users
+- **Web2 User Experience**: Users can authenticate using familiar Web2 methods (social logins, email, passkeys) without needing to manage blockchain wallets or private keys
 - **Secure Token-Based Authentication**: Uses industry-standard OAuth2 tokens for secure API access without exposing user credentials
 - **Gasless Transactions**: Leverages Treasury contracts to enable gasless transactions, removing the need for users to hold native tokens
 - **Delegated Authorization**: Allows applications to execute transactions on behalf of users with explicit permissions
@@ -23,7 +23,7 @@ Xion OAuth2 currently supports the **Authorization Code flow** with **PKCE (Proo
 **OAuth2 Flow Support**: Xion OAuth2 currently only supports the Authorization Code flow. Refresh token functionality is not yet available, so applications should handle token expiration by re-initiating the authorization flow when needed.
 {% endhint %}
 
-## Step 2: Prerequisites - Treasury Contract Setup
+## Part 2: Prerequisites - Treasury Contract Setup
 
 Before integrating OAuth2 with Xion Auth, you must first deploy and configure a **Treasury Contract**. The Treasury contract manages gasless transactions and permission grants, which are essential for the OAuth2 flow.
 
@@ -77,7 +77,7 @@ For example:
 
 For more information on configuring Treasury permissions, see the [Treasury Contracts Documentation](../gasless-ux-and-permission-grants/treasury-contracts.md#permissions).
 
-## Step 3: Creating OAuth2 Clients
+## Part 3: Creating OAuth2 Clients
 
 Once your Treasury contract is configured, you can create OAuth2 clients in the **XION OAuth2 Portal**. The portal allows you to manage OAuth2 clients that will authenticate users and access protected APIs.
 
@@ -168,7 +168,7 @@ To access the portal, click **"Connect with XION"** and authenticate using your 
 
 **Security**: The `client_secret` is stored securely on the server and never exposed to the client.
 
-## Step 4: OAuth2 Integration Examples
+## Part 4: OAuth2 Integration Examples
 
 This section provides practical examples for integrating OAuth2 into your application. We'll cover the standard OAuth2 flow and provide complete examples for both frontend (Public Client) and backend (Confidential Client) implementations.
 
@@ -824,7 +824,7 @@ export default async function handler(
 
 4. **Error Handling**: Implement proper error handling for all OAuth2 flow steps and provide user-friendly error messages.
 
-## Step 5: OAuth2 Protected APIs
+## Part 5: OAuth2 Protected APIs
 
 Once you have an access token, you can use it to access protected OAuth2 APIs. These APIs allow you to interact with the XION blockchain on behalf of authenticated users.
 
@@ -1042,7 +1042,7 @@ export const transactionApi = {
 }
 ```
 
-## Step 6: Building Transactions
+## Part 6: Building Transactions
 
 To submit transactions via the OAuth2 API, you need to construct transaction messages using protobuf-based types from the `@burnt-labs/xion-types` package. These messages are then encoded and sent to the transaction API endpoint.
 
@@ -1240,7 +1240,7 @@ For more transaction message construction examples, see:
 - [xion-types TypeScript Guide](https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/GUIDE.md)
 - [OAuth2 App Demo - Transactions](https://github.com/burnt-labs/xion-oauth2-app-demo/blob/main/examples/frontend%2Bpublic_client/src/utils/transactions.ts)
 
-## Step 7: Querying Blockchain Data
+## Part 7: Querying Blockchain Data
 
 While the OAuth2 API provides endpoints for submitting transactions and querying transaction status, for general blockchain data queries (account balances, contract state, block information, etc.), you should use `@cosmjs/stargate` directly.
 
