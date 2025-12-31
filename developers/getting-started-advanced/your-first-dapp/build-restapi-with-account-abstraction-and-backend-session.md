@@ -6,7 +6,7 @@ To better understand Account Abstraction you can visit the[Introduction to Accou
 
 A fully functional demo of this app is also available in the [Xion.js](https://github.com/burnt-labs/xion.js/tree/main/apps/backend-session) repository.
 
-### Requirements
+## Requirements
 
 Before getting started, ensure you have the following installed:
 
@@ -14,9 +14,9 @@ Before getting started, ensure you have the following installed:
 * [**pnpm**](https://pnpm.io/) – Package manager for efficient dependency management.
 * [**Git**](https://git-scm.com/) – Version control system.
 
-### Project Setup
+## Project Setup
 
-#### 1. Initialize the Project
+### 1. Initialize the Project
 
 Create a new Next.js project with TypeScript:
 
@@ -25,7 +25,7 @@ npx create-next-app@latest backend-session-app --typescript --tailwind --eslint 
 cd backend-session-app
 ```
 
-#### 2. Install Dependencies
+### 2. Install Dependencies
 
 Install the required dependencies for the backend session management:
 
@@ -39,11 +39,11 @@ pnpm add next-auth @auth/prisma-adapter bcryptjs
 pnpm add -D @types/bcryptjs @types/node tsx jest @testing-library/jest-dom
 ```
 
-#### 3. Project Structure
+### 3. Project Structure
 
 You can adjust your project structure like this:
 
-```
+```text
 src/
 ├── app/
 │   ├── api/
@@ -63,9 +63,9 @@ src/
 └── __tests__/                 # Test files
 ```
 
-### Environment Configuration
+## Environment Configuration
 
-#### 1. Environment Variables
+### 1. Environment Variables
 
 Create a `.env.local` file in your project root:
 
@@ -90,7 +90,7 @@ SESSION_KEY_EXPIRY_MS=864000000 # 10 days
 REFRESH_THRESHOLD_MS=3600000    # 1 hour
 ```
 
-#### 2. Generate Encryption Key
+### 2. Generate Encryption Key
 
 Create a script to generate a secure encryption key:
 
@@ -109,9 +109,9 @@ Run the script:
 npx tsx scripts/generate-key.ts
 ```
 
-### Database Setup
+## Database Setup
 
-#### 1. Prisma Configuration
+### 1. Prisma Configuration
 
 Create a `prisma/schema.prisma` file:
 
@@ -200,7 +200,7 @@ model SessionKey {
 
 ```
 
-#### 2. Initialize Database
+### 2. Initialize Database
 
 ```bash
 # Generate Prisma client
@@ -210,7 +210,7 @@ npx prisma generate
 npx prisma db push
 ```
 
-### AbstraxionBackend Library Implementation
+## AbstraxionBackend Library Implementation
 
 We have implemented a version of the AbstraxionBackend library that you can use in your project.
 
@@ -218,9 +218,9 @@ You can directly copy the `backend` folder from the xion.js repository [(Folder 
 
 In the following sections, we will use `@/lib/xion/backend` to refer to the AbstraxionBackend library.
 
-### AbstraxionBackend Integration
+## AbstraxionBackend Integration
 
-#### 1. Database Adapter
+### 1. Database Adapter
 
 Create the database adapter that implements the `BaseDatabaseAdapter` interface from the AbstraxionBackend library:
 
@@ -417,7 +417,7 @@ export class PrismaDatabaseAdapter extends BaseDatabaseAdapter {
 }
 ```
 
-#### 2. AbstraxionBackend Configuration
+### 2. AbstraxionBackend Configuration
 
 Create the main configuration file:
 
@@ -468,9 +468,9 @@ export function getAbstraxionBackend(): AbstraxionBackend {
 }
 ```
 
-### Authentication Configuration
+## Authentication Configuration
 
-#### NextAuth Setup
+### NextAuth Setup
 
 Set up NextAuth for user authentication:
 
@@ -866,9 +866,9 @@ export const POST = createApiWrapper(
 
 > Note: For this example, we are using the `MsgSend` message to send XION tokens. So please make sure in your treasury permission, you have granted the `Send Token` permission. Learn more about how to grant permissions.
 
-### Testing Your API
+## Testing Your API
 
-#### Basic API Testing
+### Basic API Testing
 
 You can test your API endpoints using curl or any HTTP client:
 
@@ -899,9 +899,9 @@ curl -X POST http://localhost:3000/api/wallet/transaction/send \
   }'
 ```
 
-### Deployment
+## Deployment
 
-#### Production Environment Variables
+### Production Environment Variables
 
 Create production environment variables:
 
@@ -923,7 +923,7 @@ SESSION_KEY_EXPIRY_MS=864000000
 REFRESH_THRESHOLD_MS=3600000
 ```
 
-#### Build and Deploy
+### Build and Deploy
 
 ```bash
 # Build the application
