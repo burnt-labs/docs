@@ -6,7 +6,7 @@ To better understand Account Abstraction you can visit the[Introduction to Accou
 
 A fully functional demo of this app is also available in the [Xion.js](https://github.com/burnt-labs/xion.js/tree/main/apps/backend-session) repository.
 
-## Requirements
+### Requirements
 
 Before getting started, ensure you have the following installed:
 
@@ -14,9 +14,9 @@ Before getting started, ensure you have the following installed:
 * [**pnpm**](https://pnpm.io/) – Package manager for efficient dependency management.
 * [**Git**](https://git-scm.com/) – Version control system.
 
-## Project Setup
+### Project Setup
 
-### 1. Initialize the Project
+#### 1. Initialize the Project
 
 Create a new Next.js project with TypeScript:
 
@@ -25,7 +25,7 @@ npx create-next-app@latest backend-session-app --typescript --tailwind --eslint 
 cd backend-session-app
 ```
 
-### 2. Install Dependencies
+#### 2. Install Dependencies
 
 Install the required dependencies for the backend session management:
 
@@ -39,11 +39,11 @@ pnpm add next-auth @auth/prisma-adapter bcryptjs
 pnpm add -D @types/bcryptjs @types/node tsx jest @testing-library/jest-dom
 ```
 
-### 3. Project Structure
+#### 3. Project Structure
 
 You can adjust your project structure like this:
 
-```text
+```
 src/
 ├── app/
 │   ├── api/
@@ -63,9 +63,9 @@ src/
 └── __tests__/                 # Test files
 ```
 
-## Environment Configuration
+### Environment Configuration
 
-### 1. Environment Variables
+#### 1. Environment Variables
 
 Create a `.env.local` file in your project root:
 
@@ -90,7 +90,7 @@ SESSION_KEY_EXPIRY_MS=864000000 # 10 days
 REFRESH_THRESHOLD_MS=3600000    # 1 hour
 ```
 
-### 2. Generate Encryption Key
+#### 2. Generate Encryption Key
 
 Create a script to generate a secure encryption key:
 
@@ -109,9 +109,9 @@ Run the script:
 npx tsx scripts/generate-key.ts
 ```
 
-## Database Setup
+### Database Setup
 
-### 1. Prisma Configuration
+#### 1. Prisma Configuration
 
 Create a `prisma/schema.prisma` file:
 
@@ -200,7 +200,7 @@ model SessionKey {
 
 ```
 
-### 2. Initialize Database
+#### 2. Initialize Database
 
 ```bash
 # Generate Prisma client
@@ -210,7 +210,7 @@ npx prisma generate
 npx prisma db push
 ```
 
-## AbstraxionBackend Library Implementation
+### AbstraxionBackend Library Implementation
 
 We have implemented a version of the AbstraxionBackend library that you can use in your project.
 
@@ -218,9 +218,9 @@ You can directly copy the `backend` folder from the xion.js repository [(Folder 
 
 In the following sections, we will use `@/lib/xion/backend` to refer to the AbstraxionBackend library.
 
-## AbstraxionBackend Integration
+### AbstraxionBackend Integration
 
-### 1. Database Adapter
+#### 1. Database Adapter
 
 Create the database adapter that implements the `BaseDatabaseAdapter` interface from the AbstraxionBackend library:
 
@@ -417,7 +417,7 @@ export class PrismaDatabaseAdapter extends BaseDatabaseAdapter {
 }
 ```
 
-### 2. AbstraxionBackend Configuration
+#### 2. AbstraxionBackend Configuration
 
 Create the main configuration file:
 
@@ -468,9 +468,9 @@ export function getAbstraxionBackend(): AbstraxionBackend {
 }
 ```
 
-## Authentication Configuration
+### Authentication Configuration
 
-### NextAuth Setup
+#### NextAuth Setup
 
 Set up NextAuth for user authentication:
 
@@ -585,21 +585,20 @@ export function validateLogin(data: unknown) {
 }
 ```
 
-## Request Validation
+### Request Validation
 
 The demo uses Zod for request validation. For detailed validation schemas and implementation, refer to the [validation.ts](https://github.com/burnt-labs/xion.js/blob/main/apps/backend-session/src/lib/validation.ts) file in the demo repository.
 
-## RESTful API Endpoints
+### RESTful API Endpoints
 
-### API Utilities
+#### API Utilities
 
 Before implementing the API endpoints, it's important to understand the utility functions used throughout the implementation:
 
 * **`createApiWrapper`** - A wrapper function that encapsulates Next.js API routes with common functionality including request validation, rate limiting, error handling, and response formatting. For detailed implementation, refer to the [api-wrapper.ts](https://github.com/burnt-labs/xion.js/blob/main/apps/backend-session/src/lib/api-wrapper.ts) file in the demo repository.
-
 * **`requireAuth`** - A NextAuth.js middleware function that handles user authentication and session validation for API routes. It ensures that only authenticated users can access protected endpoints. For detailed implementation, refer to the [auth-middleware.ts](https://github.com/burnt-labs/xion.js/blob/main/apps/backend-session/src/lib/auth-middleware.ts) file in the demo repository.
 
-### 1. Wallet Connection Endpoint
+#### 1. Wallet Connection Endpoint
 
 Create the wallet connection API:
 
@@ -642,7 +641,7 @@ export const POST = createApiWrapper(
 );
 ```
 
-### 2. Wallet Status Endpoint
+#### 2. Wallet Status Endpoint
 
 Create the wallet status check API:
 
@@ -675,7 +674,7 @@ export const GET = createApiWrapper(
 );
 ```
 
-### 3. Wallet Disconnect Endpoint
+#### 3. Wallet Disconnect Endpoint
 
 Create the wallet disconnect API:
 
@@ -717,7 +716,7 @@ export const DELETE = createApiWrapper(
 );
 ```
 
-### 4. XION MetaAccount Authentication Callback Handler
+#### 4. XION MetaAccount Authentication Callback Handler
 
 Create the OAuth callback handler:
 
@@ -765,7 +764,7 @@ export const GET = createApiWrapper(
 );
 ```
 
-### 5. Transaction Endpoint
+#### 5. Transaction Endpoint
 
 Create a transaction sending endpoint:
 
@@ -865,11 +864,11 @@ export const POST = createApiWrapper(
 );
 ```
 
-> Note: For this example, we are using the `MsgSend` message to send XION tokens. So please make sure in your treasury permission, you have granted the `Send Token` permission. Learn more about [how to grant permissions](../../../getting-started-advanced/gasless-ux-and-permission-grants/treasury-contracts.md).
+> Note: For this example, we are using the `MsgSend` message to send XION tokens. So please make sure in your treasury permission, you have granted the `Send Token` permission. Learn more about how to grant permissions.
 
-## Testing Your API
+### Testing Your API
 
-### Basic API Testing
+#### Basic API Testing
 
 You can test your API endpoints using curl or any HTTP client:
 
@@ -900,9 +899,9 @@ curl -X POST http://localhost:3000/api/wallet/transaction/send \
   }'
 ```
 
-## Deployment
+### Deployment
 
-### Production Environment Variables
+#### Production Environment Variables
 
 Create production environment variables:
 
@@ -924,7 +923,7 @@ SESSION_KEY_EXPIRY_MS=864000000
 REFRESH_THRESHOLD_MS=3600000
 ```
 
-### Build and Deploy
+#### Build and Deploy
 
 ```bash
 # Build the application
@@ -934,19 +933,19 @@ pnpm build
 pnpm start
 ```
 
-## API Documentation
+### API Documentation
 
-### Endpoints Summary
+#### Endpoints Summary
 
-| Method | Endpoint | Description | Authentication |
-|--------|----------|-------------|----------------|
-| `POST` | `/api/wallet/connect` | Initiate wallet connection | Required |
-| `GET` | `/api/wallet/status` | Check wallet status | Required |
-| `DELETE` | `/api/wallet/disconnect` | Disconnect wallet | Required |
-| `POST` | `/api/wallet/transaction/send` | Send transaction | Required |
-| `GET` | `/api/callback/grant_session` | OAuth callback handler | None |
+| Method   | Endpoint                       | Description                | Authentication |
+| -------- | ------------------------------ | -------------------------- | -------------- |
+| `POST`   | `/api/wallet/connect`          | Initiate wallet connection | Required       |
+| `GET`    | `/api/wallet/status`           | Check wallet status        | Required       |
+| `DELETE` | `/api/wallet/disconnect`       | Disconnect wallet          | Required       |
+| `POST`   | `/api/wallet/transaction/send` | Send transaction           | Required       |
+| `GET`    | `/api/callback/grant_session`  | OAuth callback handler     | None           |
 
-### Response Format
+#### Response Format
 
 All API responses follow this format:
 
@@ -958,44 +957,41 @@ All API responses follow this format:
 }
 ```
 
-## Security Considerations
+### Security Considerations
 
-### Encryption
+#### Encryption
 
 * All sensitive data (private keys) is encrypted using AES-256-CBC
 * Encryption keys are generated securely and stored in environment variables
 * Each encryption operation uses a unique IV for security
 
-### Session Management
+#### Session Management
 
 * Automatic key rotation before expiry
 * Configurable refresh threshold
 * Background monitoring service for expired sessions
 
-## Troubleshooting
+### Troubleshooting
 
-### Common Issues
+#### Common Issues
 
 1. **Database Connection Errors**
    * Ensure `DATABASE_URL` is correctly set
    * Check database server is running
    * Verify database permissions
-
 2. **Encryption Key Issues**
    * Ensure `ENCRYPTION_KEY` is base64 encoded
    * Key must be exactly 32 bytes (256 bits)
    * Use the provided script to generate keys
-
 3. **XION Network Issues**
    * Verify `XION_NETWORK` is correct
    * Check network connectivity
    * Ensure treasury address is valid
-
 4. **Session Key Problems**
    * Check `SESSION_KEY_EXPIRY_MS` configuration
    * Verify `REFRESH_THRESHOLD_MS` settings
 
-## Next Steps
+### Next Steps
 
 Now that you have a fully functional RESTful API with account abstraction and backend session management, you can:
 

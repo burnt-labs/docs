@@ -1,21 +1,27 @@
-# Building an Xion OAuth2 Application
+---
+description: >-
+  This guide provides a comprehensive walkthrough for integrating Xion into your
+  application by OAuth2 authentication.
+---
+
+# Build an Xion OAuth2 Application
 
 This guide provides a comprehensive walkthrough for integrating Xion into your application by OAuth2 authentication. By following this guide, you'll enable secure and efficient user authentication, leveraging the OAuth2 protocol to provide a Web2-style experience with blockchain capabilities.
 
 A fully functional demo of OAuth2 integration is available in the [Xion OAuth2 App Demo](https://github.com/burnt-labs/xion-oauth2-app-demo) repository.
 
-## Part 1: Understanding OAuth2 and Its Benefits
+### Part 1: Understanding OAuth2 and Its Benefits
 
 OAuth 2.0 is an industry-standard protocol for authorization, designed to provide specific authorization flows for web applications, desktop applications, mobile phones, and living room devices. The specification and its extensions are being developed within the IETF OAuth Working Group. For more information about OAuth 2.0, visit [oauth.net/2/](https://oauth.net/2/).
 
 **Benefits of OAuth2 Integration with Xion:**
 
-- **No Wallet Management**: Eliminates the complexity of wallet installation, seed phrase management, and transaction signing for end users
-- **Web2 User Experience**: Users can authenticate using familiar Web2 methods (social logins, email, passkeys) without needing to manage blockchain wallets or private keys
-- **Secure Token-Based Authentication**: Uses industry-standard OAuth2 tokens for secure API access without exposing user credentials
-- **Gasless Transactions**: Leverages Treasury contracts to enable gasless transactions, removing the need for users to hold native tokens
-- **Delegated Authorization**: Allows applications to execute transactions on behalf of users with explicit permissions
-- **Scalability**: Facilitates integration with multiple services and platforms, promoting interoperability
+* **No Wallet Management**: Eliminates the complexity of wallet installation, seed phrase management, and transaction signing for end users
+* **Web2 User Experience**: Users can authenticate using familiar Web2 methods (social logins, email, passkeys) without needing to manage blockchain wallets or private keys
+* **Secure Token-Based Authentication**: Uses industry-standard OAuth2 tokens for secure API access without exposing user credentials
+* **Gasless Transactions**: Leverages Treasury contracts to enable gasless transactions, removing the need for users to hold native tokens
+* **Delegated Authorization**: Allows applications to execute transactions on behalf of users with explicit permissions
+* **Scalability**: Facilitates integration with multiple services and platforms, promoting interoperability
 
 Xion OAuth2 currently supports the **Authorization Code flow** with **PKCE (Proof Key for Code Exchange)** for enhanced security. This flow is recommended for both public and confidential clients.
 
@@ -23,17 +29,17 @@ Xion OAuth2 currently supports the **Authorization Code flow** with **PKCE (Proo
 **OAuth2 Flow Support**: Xion OAuth2 currently only supports the Authorization Code flow. Refresh token functionality is not yet available, so applications should handle token expiration by re-initiating the authorization flow when needed.
 {% endhint %}
 
-## Part 2: Prerequisites - Treasury Contract Setup
+### Part 2: Prerequisites - Treasury Contract Setup
 
 Before integrating OAuth2 with Xion Auth, you must first deploy and configure a **Treasury Contract**. The Treasury contract manages gasless transactions and permission grants, which are essential for the OAuth2 flow.
 
-For detailed instructions on deploying a Treasury contract, refer to the [Treasury Contracts Documentation](../gasless-ux-and-permission-grants/treasury-contracts.md).
+For detailed instructions on deploying a Treasury contract, refer to the Treasury Contracts Documentation.
 
-### Critical Treasury Configuration Requirements
+#### Critical Treasury Configuration Requirements
 
 When configuring your Treasury contract, there are two **critical requirements** for OAuth2 integration:
 
-#### 1. Redirect URI Configuration
+**1. Redirect URI Configuration**
 
 The **`redirect_uri`** parameter configured in your Treasury contract **MUST exactly match** the redirect URI used in your OAuth2 application. This redirect URI is where users will be redirected after successful authentication.
 
@@ -41,14 +47,14 @@ The **`redirect_uri`** parameter configured in your Treasury contract **MUST exa
 
 **Example:**
 
-- If your OAuth2 app uses `http://localhost:3000/callback` as the redirect URI
-- Your Treasury contract's redirect URI must also be set to `http://localhost:3000/callback`
+* If your OAuth2 app uses `http://localhost:3000/callback` as the redirect URI
+* Your Treasury contract's redirect URI must also be set to `http://localhost:3000/callback`
 
-#### 2. OAuth2 App Toggle
+**2. OAuth2 App Toggle**
 
 You **MUST enable the "IS OAUTH2 APP" toggle** in the Treasury contract's Update Params section. This setting indicates that the Treasury contract is being used for OAuth2 authentication.
 
-<figure><img src="../../../.gitbook/assets/OAuth2-0.png" alt=""><figcaption><p>Update Params dialog showing the IS OAUTH2 APP toggle</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/OAuth2-0.png" alt="" width="375"><figcaption><p>Update Params dialog showing the IS OAUTH2 APP toggle</p></figcaption></figure>
 
 **To enable the OAuth2 toggle:**
 
@@ -61,114 +67,114 @@ You **MUST enable the "IS OAUTH2 APP" toggle** in the Treasury contract's Update
 **OAuth2 Toggle Required**: Without enabling the "IS OAUTH2 APP" toggle, users will see redirect URI mismatch warnings when attempting to authenticate, even if the redirect URIs match correctly.
 {% endhint %}
 
-### Treasury Permissions and OAuth2 Transactions
+#### Treasury Permissions and OAuth2 Transactions
 
 The permissions (grant configs) you define in your Treasury contract determine which types of transactions can be executed through the OAuth2 API. **Only message types that are explicitly authorized in your Treasury contract's permissions can be used in OAuth2 transaction requests.**
 
 For example:
 
-- If your Treasury only has permission for `MsgSend` (token transfers), you can only send tokens via OAuth2 Protected API
-- If your Treasury has permission for `MsgExecuteContract`, you can execute smart contract calls via OAuth2 Protected API
-- You can configure multiple permissions to allow different transaction types
+* If your Treasury only has permission for `MsgSend` (token transfers), you can only send tokens via OAuth2 Protected API
+* If your Treasury has permission for `MsgExecuteContract`, you can execute smart contract calls via OAuth2 Protected API
+* You can configure multiple permissions to allow different transaction types
 
-For more information on configuring Treasury permissions, see the [Treasury Contracts Documentation](../gasless-ux-and-permission-grants/treasury-contracts.md#permissions).
+For more information on configuring Treasury permissions, see the Treasury Contracts Documentation.
 
-## Part 3: Creating OAuth2 Clients
+### Part 3: Creating OAuth2 Clients
 
 Once your Treasury contract is configured, you can create OAuth2 clients in the **XION OAuth2 Portal**. The portal allows you to manage OAuth2 clients that will authenticate users and access protected APIs.
 
-### Accessing the OAuth2 Portal
+#### Accessing the OAuth2 Portal
 
-- **Testnet**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/)
-- **Mainnet**: (Available when mainnet is launched)
+* **Testnet**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/)
+* **Mainnet**: (Available when mainnet is launched)
 
-<figure><img src="../../../.gitbook/assets/OAuth2-1.png" alt=""><figcaption><p>OAuth2 Portal login screen</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/OAuth2-1.png" alt="" width="375"><figcaption><p>OAuth2 Portal login screen</p></figcaption></figure>
 
 To access the portal, click **"Connect with XION"** and authenticate using your Xion account. After authentication, you'll be redirected to the OAuth2 Clients Dashboard.
 
-### Creating a New OAuth2 Client
+#### Creating a New OAuth2 Client
 
-1. **Navigate to the Dashboard**
+1.  **Navigate to the Dashboard**
 
-   After logging in, you'll see the OAuth2 Clients Dashboard showing all your created clients.
+    After logging in, you'll see the OAuth2 Clients Dashboard showing all your created clients.
 
-   <figure><img src="../../../.gitbook/assets/OAuth2-2.png" alt=""><figcaption><p>OAuth2 Clients Dashboard with Create Client button</p></figcaption></figure>
 
-2. **Click "Create Client"**
 
-   Click the **"Create Client"** button located in the top right corner of the dashboard.
+    <figure><img src="../../../.gitbook/assets/OAuth2-2.png" alt=""><figcaption><p>OAuth2 Clients Dashboard with Create Client button</p></figcaption></figure>
+2.  **Click "Create Client"**
 
-3. **Configure Client Settings**
+    Click the **"Create Client"** button located in the top right corner of the dashboard.
+3.  **Configure Client Settings**
 
-   The client creation form will appear. You must complete the following fields:
+    The client creation form will appear.&#x20;
 
-   <figure><img src="../../../.gitbook/assets/OAuth2-3.png" alt=""><figcaption><p>OAuth2 Client creation form</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/OAuth2-3.png" alt="" width="375"><figcaption><p>OAuth2 Client creation form</p></figcaption></figure>
 
-   **Fields:**
-   - **Treasury Address**: Select a Treasury contract from your existing deployments or enter a new Treasury address. The redirect URI from this Treasury will be used as your OAuth2 redirect URI.
-   - **Client Name** (optional): A descriptive name for your application. If not provided, the name of this client will be untitled.
-   - **Client URI** (optional): Your application's homepage URL
+    **You need to complete the following fields:**
 
-   **Default Configuration:**
-   - By default, clients are created as **Public Clients with PKCE** enabled, which is suitable for frontend applications.
+    * **Treasury Address**: Select a Treasury contract from your existing deployments or enter a new Treasury address. The redirect URI from this Treasury will be used as your OAuth2 redirect URI.
+    * **Client Name** (optional): A descriptive name for your application. If not provided, the name of this client will be untitled.
+    * **Client URI** (optional): Your application's homepage URL
 
-4. **Advanced Options - Confidential Client**
+    **Default Configuration:**
 
-   If you're building a backend application and need a **Confidential Client**, click to expand the **"Advanced Options"** section.
+    * By default, clients are created as **Public Clients with PKCE** enabled, which is suitable for frontend applications.
+4.  **Advanced Options - Confidential Client**
 
-   <figure><img src="../../../.gitbook/assets/OAuth2-4.png" alt=""><figcaption><p>Advanced Options showing Confidential Client selection</p></figcaption></figure>
+    If you're building a backend application and need a **Confidential Client**, click to expand the **"Advanced Options"** section.
 
-   In the Advanced Options:
-   - **Token Endpoint Auth Method**: Select **"Client Secret Post (Confidential Client)"** to create a confidential client
-   - You can also configure optional fields like Policy URI, Terms of Service URI, and JWKS URI
+    <figure><img src="../../../.gitbook/assets/OAuth2-4.png" alt="" width="375"><figcaption><p>Advanced Options showing Confidential Client selection</p></figcaption></figure>
 
-5. **Create the Client**
+    In the Advanced Options:
 
-   Click the **"Create Client"** button to create your OAuth2 client.
+    * **Token Endpoint Auth Method**: Select **"Client Secret Post (Confidential Client)"** to create a confidential client
+      * You can also configure optional fields like Policy URI, Terms of Service URI, and JWKS URI
+5.  **Create the Client**
 
-6. **Save Client Credentials**
+    Click the **"Create Client"** button to create your OAuth2 client.
+6.  **Save Client Credentials**
 
-   If you created a **Confidential Client**, a dialog will appear showing your **Client ID** and **Client Secret**.
+    If you created a **Confidential Client**, a dialog will appear showing your **Client ID** and **Client Secret**.
 
-   <figure><img src="../../../.gitbook/assets/OAuth2-5.png" alt=""><figcaption><p>Client Secret display dialog - save this immediately</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/OAuth2-5.png" alt="" width="375"><figcaption><p>Client Secret display dialog - save this immediately</p></figcaption></figure>
 
-   {% hint style="warning" %}
-   **Important: Save Your Client Secret**: For Confidential Clients, the Client Secret is displayed **only once** during client creation. You must copy and save it securely immediately. If you lose the Client Secret, you'll need to create a new client.
-   {% endhint %}
+{% hint style="warning" %}
+**Important: Save Your Client Secret**: For Confidential Clients, the Client Secret is displayed **only once** during client creation. You must copy and save it securely immediately. If you lose the Client Secret, you'll need to create a new client.
+{% endhint %}
 
-### Understanding Client Types
+#### Understanding Client Types
 
-#### Public Client
+**Type 1: Public Client**
 
 **Use Case**: Frontend applications (React, Vue, Angular, etc.) running in the browser
 
 **Characteristics:**
 
-- No `client_secret` required
-- **Must use PKCE** (Proof Key for Code Exchange) for security
-- Token exchange happens in the browser
-- Suitable for Single Page Applications (SPAs) and mobile apps
+* No `client_secret` required
+* **Must use PKCE** (Proof Key for Code Exchange) for security
+* Token exchange happens in the browser
+* Suitable for Single Page Applications (SPAs) and mobile apps
 
 **Security**: PKCE provides security equivalent to using a client secret, making it safe for public clients.
 
-#### Confidential Client
+**Type 2: Confidential Client**
 
 **Use Case**: Backend applications (Node.js, Python, etc.) with server-side token exchange
 
 **Characteristics:**
 
-- Requires `client_secret` for authentication
-- Token exchange happens on the server
-- More secure for backend applications
-- Can optionally use PKCE in addition to client_secret
+* Requires `client_secret` for authentication
+* Token exchange happens on the server
+* More secure for backend applications
+* Can optionally use PKCE in addition to client\_secret
 
 **Security**: The `client_secret` is stored securely on the server and never exposed to the client.
 
-## Part 4: OAuth2 Integration Examples
+### Part 4: OAuth2 Integration Examples
 
 This section provides practical examples for integrating OAuth2 into your application. We'll cover the standard OAuth2 flow and provide complete examples for both frontend (Public Client) and backend (Confidential Client) implementations.
 
-### 4.1 Standard OAuth2 Flow
+#### 4.1 Standard OAuth2 Flow
 
 The OAuth2 Authorization Code flow with PKCE follows these standard steps:
 
@@ -178,7 +184,7 @@ The OAuth2 Authorization Code flow with PKCE follows these standard steps:
 4. **Token Exchange**: Exchange authorization code for access token
 5. **API Access**: Use access token for protected API calls
 
-#### Step 1: Discovery - Get OAuth2 Server Information
+**Step 1: Discovery - Get OAuth2 Server Information**
 
 Before starting the OAuth2 flow, you need to discover the OAuth2 server's endpoints. This is done by fetching the `.well-known/oauth-authorization-server` endpoint:
 
@@ -197,12 +203,12 @@ async function getOAuthServerInfo(): Promise<OAuthServerInfo> {
 
 The response includes:
 
-- `issuer`: The OAuth2 server identifier
-- `authorization_endpoint`: URL for the authorization endpoint
-- `token_endpoint`: URL for the token exchange endpoint
-- `scopes_supported`: Available OAuth2 scopes
+* `issuer`: The OAuth2 server identifier
+* `authorization_endpoint`: URL for the authorization endpoint
+* `token_endpoint`: URL for the token exchange endpoint
+* `scopes_supported`: Available OAuth2 scopes
 
-#### Step 2: Authorization - Build Authorization URL
+**Step 2: Authorization - Build Authorization URL**
 
 Build the authorization URL with standard OAuth2 parameters:
 
@@ -250,15 +256,15 @@ window.location.href = authUrl.toString()
 
 **OAuth2 Authorization Parameters:**
 
-- `client_id`: Your OAuth2 client ID
-- `redirect_uri`: Must match the redirect URI configured in your Treasury contract
-- `response_type`: Always `"code"` for Authorization Code flow
-- `code_challenge`: (Public Clients) Base64url-encoded SHA256 hash of code_verifier
-- `code_challenge_method`: (Public Clients) Always `"S256"` for SHA256
-- `scope`: XION's OAuth2 Protected API scopes (e.g., `"xion:transactions:submit"`)
-- `state`: Random string for CSRF protection
+* `client_id`: Your OAuth2 client ID
+* `redirect_uri`: Must match the redirect URI configured in your Treasury contract
+* `response_type`: Always `"code"` for Authorization Code flow
+* `code_challenge`: (Public Clients) Base64url-encoded SHA256 hash of code\_verifier
+* `code_challenge_method`: (Public Clients) Always `"S256"` for SHA256
+* `scope`: XION's OAuth2 Protected API scopes (e.g., `"xion:transactions:submit"`)
+* `state`: Random string for CSRF protection
 
-#### Step 3: Callback - Handle Authorization Code
+**Step 3: Callback - Handle Authorization Code**
 
 After the user authorizes your application, they'll be redirected back to your `redirect_uri` with an authorization code:
 
@@ -288,7 +294,7 @@ if (state !== storedState) {
 }
 ```
 
-#### Step 4: Token Exchange - Exchange Code for Access Token
+**Step 4: Token Exchange - Exchange Code for Access Token**
 
 Exchange the authorization code for an access token:
 
@@ -361,18 +367,18 @@ async function exchangeCodeForToken(code: string): Promise<TokenInfo> {
 
 **OAuth2 Token Request Parameters:**
 
-- `grant_type`: Always `"authorization_code"` for this flow
-- `code`: The authorization code received from the callback
-- `redirect_uri`: Must match the redirect_uri used in the authorization request
-- `client_id`: Your OAuth2 client ID
-- `client_secret`: (Confidential Clients only) Your client secret
-- `code_verifier`: (Public Clients with PKCE) The original code verifier. Should be used in the token exchange request for Public Clients with PKCE.
+* `grant_type`: Always `"authorization_code"` for this flow
+* `code`: The authorization code received from the callback
+* `redirect_uri`: Must match the redirect\_uri used in the authorization request
+* `client_id`: Your OAuth2 client ID
+* `client_secret`: (Confidential Clients only) Your client secret
+* `code_verifier`: (Public Clients with PKCE) The original code verifier. Should be used in the token exchange request for Public Clients with PKCE.
 
-### 4.2 Frontend Public Client Example
+#### 4.2 Frontend Public Client Example
 
 This example demonstrates a complete frontend OAuth2 integration using a Public Client with PKCE.
 
-Example repository: [xion-oauth2-app-demo/examples/frontend+public_client](https://github.com/burnt-labs/xion-oauth2-app-demo/tree/main/examples/frontend+public_client)
+Example repository: [xion-oauth2-app-demo/examples/frontend+public\_client](https://github.com/burnt-labs/xion-oauth2-app-demo/tree/main/examples/frontend+public_client)
 
 Following are some of major OAuth2 utility functions for the frontend Public Client example.
 
@@ -623,18 +629,15 @@ export function Callback() {
 **Key Points for Frontend Implementation:**
 
 1. **PKCE is Required**: Public clients must use PKCE for security. The code verifier is generated client-side and never sent to the server until token exchange.
-
 2. **State Parameter**: Always use a state parameter for CSRF protection. Store it in sessionStorage and verify it in the callback.
-
 3. **Token Storage**: Store access tokens securely. Use localStorage for persistence, but be aware of XSS risks. Consider using httpOnly cookies for production applications.
-
 4. **Token Expiration**: Check token expiration before making API calls and re-authenticate when tokens expire.
 
-### 4.3 Backend Confidential Client Example
+#### 4.3 Backend Confidential Client Example
 
 This example demonstrates a complete backend OAuth2 integration using a Confidential Client with server-side token exchange.
 
-Example repository: [xion-oauth2-app-demo/examples/backend+confidential_client](https://github.com/burnt-labs/xion-oauth2-app-demo/tree/main/examples/backend+confidential_client)
+Example repository: [xion-oauth2-app-demo/examples/backend+confidential\_client](https://github.com/burnt-labs/xion-oauth2-app-demo/tree/main/examples/backend+confidential_client)
 
 Following are some of major OAuth2 utility functions for the backend Confidential Client example.
 
@@ -821,27 +824,24 @@ export default async function handler(
 **Key Points for Backend Implementation:**
 
 1. **Client Secret Security**: Never expose the `client_secret` to the client. Store it securely in environment variables and only use it server-side.
-
 2. **State Verification**: Always verify the state parameter to prevent CSRF attacks. Store it in httpOnly cookies.
-
 3. **Token Storage**: Store access tokens securely on the server. Use httpOnly cookies or server-side sessions.
-
 4. **Error Handling**: Implement proper error handling for all OAuth2 flow steps and provide user-friendly error messages.
 
-## Part 5: OAuth2 Protected APIs
+### Part 5: OAuth2 Protected APIs
 
 Once you have an access token, you can use it to access protected OAuth2 APIs. These APIs allow you to interact with the XION blockchain on behalf of authenticated users.
 
-### API Base URL
+#### API Base URL
 
-- **Testnet**: `https://oauth2.testnet.burnt.com/`
-- **Mainnet**: (Available when mainnet is launched)
+* **Testnet**: `https://oauth2.testnet.burnt.com/`
+* **Mainnet**: (Available when mainnet is launched)
 
-### API Documentation
+#### API Documentation
 
 For complete API documentation with interactive examples, visit the [OAuth2 Protected API Documentation](https://oauth2.testnet.burnt.com/protected-api-docs).
 
-### Authentication
+#### Authentication
 
 All protected API endpoints require authentication using a Bearer token in the `Authorization` header:
 
@@ -852,9 +852,9 @@ headers: {
 }
 ```
 
-### Available Endpoints
+#### Available Endpoints
 
-#### 1. Get Current User Information
+**1. Get Current User Information**
 
 **Endpoint**: `GET /api/v1/me`
 
@@ -881,7 +881,7 @@ const userInfo = await response.json()
 }
 ```
 
-#### 2. Submit Transaction
+**2. Submit Transaction**
 
 **Endpoint**: `POST /api/v1/transaction`
 
@@ -915,9 +915,9 @@ const result = await response.json()
 }
 ```
 
-**Transaction Messages**: The `messages` array contains protobuf-encoded transaction messages. Each message must have a `typeUrl` and `value` field. See [Step 6: Building Transactions](#step-6-building-transactions) for details on constructing messages.
+**Transaction Messages**: The `messages` array contains protobuf-encoded transaction messages. Each message must have a `typeUrl` and `value` field. See Step 6: Building Transactions for details on constructing messages.
 
-#### 3. Query Transaction Status
+**3. Query Transaction Status**
 
 **Endpoint**: `GET /api/v1/transaction/{txHash}/status`
 
@@ -948,7 +948,7 @@ const status = await response.json()
 }
 ```
 
-#### 4. Simulate Transaction
+**4. Simulate Transaction**
 
 **Endpoint**: `POST /api/v1/transaction/simulate`
 
@@ -983,7 +983,7 @@ const simulation = await response.json()
 }
 ```
 
-### Complete API Client Example
+#### Complete API Client Example
 
 Here's a complete example of an API client with automatic token injection:
 
@@ -1046,11 +1046,11 @@ export const transactionApi = {
 }
 ```
 
-## Part 6: Building Transactions
+### Part 6: Building Transactions
 
 To submit transactions via the OAuth2 API, you need to construct transaction messages using protobuf-based types from the `@burnt-labs/xion-types` package. These messages are then encoded and sent to the transaction API endpoint.
 
-### Installing Xion Types
+#### Installing Xion Types
 
 ```bash
 # npm
@@ -1066,30 +1066,30 @@ yarn add @burnt-labs/xion-types
 bun add @burnt-labs/xion-types
 ```
 
-### Understanding Transaction Messages
+#### Understanding Transaction Messages
 
 Transaction messages in Xion use protobuf encoding. Each message has:
 
-- **`typeUrl`**: The protobuf message type URL (e.g., `"/cosmos.bank.v1beta1.MsgSend"`)
-- **`value`**: The protobuf-encoded message value
+* **`typeUrl`**: The protobuf message type URL (e.g., `"/cosmos.bank.v1beta1.MsgSend"`)
+* **`value`**: The protobuf-encoded message value
 
 The OAuth2 Transaction API accepts an array of these messages in the `messages` field.
 
-### Critical Relationship: Treasury Permissions
+#### Critical Relationship: Treasury Permissions
 
 **Important**: Only message types that are explicitly authorized in your Treasury contract's permissions can be used in OAuth2 transaction requests.
 
 For example:
 
-- If your Treasury only has permission for `MsgSend`, you can only send tokens via OAuth2
-- If your Treasury has permission for `MsgExecuteContract`, you can execute smart contract calls
-- You can configure multiple permissions to allow different transaction types
+* If your Treasury only has permission for `MsgSend`, you can only send tokens via OAuth2
+* If your Treasury has permission for `MsgExecuteContract`, you can execute smart contract calls
+* You can configure multiple permissions to allow different transaction types
 
-Before constructing transaction messages, ensure the corresponding permissions are configured in your Treasury contract. See the [Treasury Contracts Documentation](../gasless-ux-and-permission-grants/treasury-contracts.md#permissions) for details on configuring permissions.
+Before constructing transaction messages, ensure the corresponding permissions are configured in your Treasury contract. See the Treasury Contracts Documentation for details on configuring permissions.
 
-### Message Construction Examples
+#### Message Construction Examples
 
-#### Sending Tokens (MsgSend)
+**Sending Tokens (MsgSend)**
 
 Reference: [xion-types MsgSend Guide](https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/GUIDE.md#msgsend-transfer-tokens)
 
@@ -1126,7 +1126,7 @@ const message = createSendTokensMessage(
 const response = await transactionApi.sendTransaction([message])
 ```
 
-#### Executing Smart Contracts (MsgExecuteContract)
+**Executing Smart Contracts (MsgExecuteContract)**
 
 Reference: [xion-types MsgExecuteContract Guide](https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/GUIDE.md#msgexecutecontract-call-a-smart-contract)
 
@@ -1162,7 +1162,7 @@ const message = createExecuteContractMessage(
 const response = await transactionApi.sendTransaction([message])
 ```
 
-#### Instantiating Contracts (MsgInstantiateContract)
+**Instantiating Contracts (MsgInstantiateContract)**
 
 Reference: [xion-types MsgInstantiateContract Guide](https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/cosmwasm-v1-transaction-messages.ts#L177-L203)
 
@@ -1211,7 +1211,7 @@ const message = createInstantiateContractMessage(
 const response = await transactionApi.sendTransaction([message])
 ```
 
-### Complete Transaction Example
+#### Complete Transaction Example
 
 Here's a complete example combining message construction and API usage:
 
@@ -1249,23 +1249,23 @@ async function sendTokens(toAddress: string, amount: number) {
 }
 ```
 
-### More Examples
+#### More Examples
 
 For more transaction message construction examples, see:
 
-- [xion-types TypeScript Examples](https://github.com/burnt-labs/xion-types/tree/main/examples/typescript)
-- [xion-types TypeScript Guide](https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/GUIDE.md)
-- [OAuth2 App Demo - Transactions](https://github.com/burnt-labs/xion-oauth2-app-demo/blob/main/examples/frontend%2Bpublic_client/src/utils/transactions.ts)
+* [xion-types TypeScript Examples](https://github.com/burnt-labs/xion-types/tree/main/examples/typescript)
+* [xion-types TypeScript Guide](https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/GUIDE.md)
+* [OAuth2 App Demo - Transactions](https://github.com/burnt-labs/xion-oauth2-app-demo/blob/main/examples/frontend%2Bpublic_client/src/utils/transactions.ts)
 
-## Part 7: Querying Blockchain Data
+### Part 7: Querying Blockchain Data
 
 While the OAuth2 API provides endpoints for submitting transactions and querying transaction status, for general blockchain data queries (account balances, contract state, block information, etc.), you should use `@cosmjs/stargate` directly.
 
-### Using CosmJS for Queries
+#### Using CosmJS for Queries
 
-CosmJS is the standard library for interacting with Cosmos SDK-based blockchains, including Xion. For detailed instructions on using CosmJS with Xion, refer to the [Interact with XION via your Backend Service](./xion-backend-using-cosmjs.md) guide, specifically the ["Querying the Blockchain"](./xion-backend-using-cosmjs.md#querying-the-blockchain) section.
+CosmJS is the standard library for interacting with Cosmos SDK-based blockchains, including Xion. For detailed instructions on using CosmJS with Xion, refer to the Interact with XION via your Backend Service guide, specifically the "Querying the Blockchain" section.
 
-### Installation
+#### Installation
 
 ```bash
 # npm
@@ -1281,7 +1281,7 @@ yarn add @cosmjs/stargate
 bun add @cosmjs/stargate
 ```
 
-### Example: Querying Account Balance
+#### Example: Querying Account Balance
 
 ```typescript
 import { StargateClient } from '@cosmjs/stargate'
@@ -1294,7 +1294,7 @@ async function getBalance(address: string, denom: string = 'uxion') {
 }
 ```
 
-### Example: Querying Contract State
+#### Example: Querying Contract State
 
 ```typescript
 import { StargateClient } from '@cosmjs/stargate'
@@ -1306,31 +1306,31 @@ async function queryContract(contractAddress: string, queryMsg: any) {
 }
 ```
 
-### Why Use CosmJS for Queries?
+#### Why Use CosmJS for Queries?
 
-- **Comprehensive Query Support**: CosmJS provides access to all Cosmos SDK query endpoints
-- **No Authentication Required**: Queries don't require OAuth2 tokens
-- **Standard Library**: Well-documented and widely used in the Cosmos ecosystem
-- **Direct RPC Access**: Connects directly to Xion RPC nodes
+* **Comprehensive Query Support**: CosmJS provides access to all Cosmos SDK query endpoints
+* **No Authentication Required**: Queries don't require OAuth2 tokens
+* **Standard Library**: Well-documented and widely used in the Cosmos ecosystem
+* **Direct RPC Access**: Connects directly to Xion RPC nodes
 
 {% hint style="info" %}
 **Future OAuth2 Query Endpoints**: The OAuth2 API may add query endpoints in future iterations based on product requirements. However, CosmJS already covers most use cases for querying blockchain data.
 {% endhint %}
 
-### RPC Endpoints
+#### RPC Endpoints
 
-For a list of available RPC endpoints for each network, see the [Public Endpoints and Resources](../../section-overview/public-endpoints-and-resources.md) documentation.
+For a list of available RPC endpoints for each network, see the Public Endpoints and Resources documentation.
 
-## Additional Resources
+### Additional Resources
 
-- **OAuth2 API Endpoint**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/)
-- **OAuth2 Portal**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/) (for managing OAuth2 clients)
-- **OAuth2 Protected API Documentation**: [https://oauth2.testnet.burnt.com/protected-api-docs](https://oauth2.testnet.burnt.com/protected-api-docs)
-- **OAuth2 App Examples**: [https://github.com/burnt-labs/xion-oauth2-app-demo](https://github.com/burnt-labs/xion-oauth2-app-demo)
-- **Xion Types Repository**: [https://github.com/burnt-labs/xion-types](https://github.com/burnt-labs/xion-types)
-- **Xion Types TypeScript Guide**: [https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/GUIDE.md](https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/GUIDE.md)
-- **Treasury Contracts Documentation**: [Enabling Gasless Transactions with Treasury Contracts](../gasless-ux-and-permission-grants/treasury-contracts.md)
-- **Xion Developer Portal**: [https://dev.testnet.burnt.com/](https://dev.testnet.burnt.com/) (for managing Treasury contracts)
+* **OAuth2 API Endpoint**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/)
+* **OAuth2 Portal**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/) (for managing OAuth2 clients)
+* **OAuth2 Protected API Documentation**: [https://oauth2.testnet.burnt.com/protected-api-docs](https://oauth2.testnet.burnt.com/protected-api-docs)
+* **OAuth2 App Examples**: [https://github.com/burnt-labs/xion-oauth2-app-demo](https://github.com/burnt-labs/xion-oauth2-app-demo)
+* **Xion Types Repository**: [https://github.com/burnt-labs/xion-types](https://github.com/burnt-labs/xion-types)
+* **Xion Types TypeScript Guide**: [https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/GUIDE.md](https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/GUIDE.md)
+* **Treasury Contracts Documentation**: Enabling Gasless Transactions with Treasury Contracts
+* **Xion Developer Portal**: [https://dev.testnet.burnt.com/](https://dev.testnet.burnt.com/) (for managing Treasury contracts)
 
 {% hint style="success" %}
 If you have any questions or encounter issues, feel free to ask in our [**Telegram Developer Group**](https://t.me/+SC47NRhVz9Q2MDg0) or on [**Discord**](https://discord.com/invite/burnt) in our [**Dev Chat channel**](https://discord.com/channels/823953904512401469/1308977704586186762).

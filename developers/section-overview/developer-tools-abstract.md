@@ -36,11 +36,11 @@ Refer the [repository](https://github.com/AbstractSDK/templates) for latest upda
 
 ### Test contracts: CW-Orchestrator
 
-> cw-orchestrator is an advanced testing and deployment tool for CosmWasm smart-contracts. It’s designed to make it easy to test and deploy contracts in a variety of environments including cw-multi-test, local, testnet, and mainnet.&#x20;
+> cw-orchestrator is an advanced testing and deployment tool for CosmWasm smart-contracts. It’s designed to make it easy to test and deploy contracts in a variety of environments including cw-multi-test, local, testnet, and mainnet.
 >
 > [Read more here](https://orchestrator.abstract.money/)
 
-If you bootstrap the codebase using the Abstract module template mentioned above you should have cw-orchestrator setup already.&#x20;
+If you bootstrap the codebase using the Abstract module template mentioned above you should have cw-orchestrator setup already.
 
 ### Generate Schemas: \``just schema`\`
 
@@ -50,17 +50,13 @@ See `/justfile` in project root for all commands
 
 ## Client
 
-Abstract's JS SDK works well with both Xion's meta-accounts and EOAs.&#x20;
+Abstract's JS SDK works well with both Xion's meta-accounts and EOAs.
 
-Abstract provides templates to build and debug using regular EOAs on the Xion chain. However in production environment we highly recommend using meta-accounts to be able to leverage the true power of the chain and UX :)&#x20;
+Abstract provides templates to build and debug using regular EOAs on the Xion chain. However in production environment we highly recommend using meta-accounts to be able to leverage the true power of the chain and UX :)
 
 #### Documentation:
 
-{% embed url="https://js.abstract.money/" %}
-Abstract's Javascript / Typescript SDK Documentation
-{% endembed %}
-
-
+\{% embed url="https://js.abstract.money/" %\} Abstract's Javascript / Typescript SDK Documentation \{% endembed %\}
 
 The [app templates repo](https://github.com/AbstractSDK/templates) includes a frontend folder scaffolded with React, next.js, and graz as the Cosmos wallet connector.
 
@@ -91,8 +87,3 @@ An example frontend of a betting app deployed on XION can be found here: [https:
 2. Publish your contract onchain with `just publish`
    1. This will create a new Abstract Account, claim the namespace (configured in your app), and publish the contracts on-chain to the [contract registry](https://believathon.console.abstract.money/modules).
 3. Publish your schemas with `just publish-schemas <namespace> <name> <version>` . This will give your contract auto-generated UIs in the Console.
-
-
-
-
-

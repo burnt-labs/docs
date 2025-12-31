@@ -2,9 +2,7 @@
 
 Learn how to interact with the XION blockchain from a backend environment using **CosmJS**. This guide covers setting up your environment, connecting to the XION network, querying blockchain data, and executing transactions.
 
-
-
-## Setting Up Your Environment
+### Setting Up Your Environment
 
 First, create a new project and install the necessary dependencies:
 
@@ -24,9 +22,7 @@ npm install --save-dev typescript ts-node @types/node
 npx tsc --init
 ```
 
-
-
-## Managing Credentials Securely
+### Managing Credentials Securely
 
 To securely store and access your wallet credentials, we’ll use environment variables. This approach helps keep sensitive information safe and prevents it from being hardcoded in your project. Start by creating a `.env` file in the root directory of your project and add the following:
 
@@ -37,7 +33,7 @@ XION_CHAIN_ID=xion-testnet-2
 ```
 
 {% hint style="info" %}
-See [public-endpoints-and-resources.md](../../section-overview/public-endpoints-and-resources.md "mention")for list of RPC endpoints for each network.
+See public-endpoints-and-resources.mdfor list of RPC endpoints for each network.
 {% endhint %}
 
 Create a file named `config.js` to load these environment variables:
@@ -77,9 +73,7 @@ node_modules/
 .env
 ```
 
-
-
-## Connecting to XION Network
+### Connecting to XION Network
 
 Now, set up a connection to the XION blockchain for querying data and submitting transactions. Create a file named `xion-connect.js` (or `xion-connect.ts` for TypeScript).
 
@@ -126,9 +120,7 @@ module.exports = {
 };
 ```
 
-
-
-## Querying the Blockchain
+### Querying the Blockchain
 
 Next, retrieve data from the XION blockchain using read-only operations that do not alter the blockchain state. Create a file named `xion-queries.js`:
 
@@ -215,9 +207,7 @@ module.exports = {
 };
 ```
 
-
-
-## Working with Wallets
+### Working with Wallets
 
 We'll now work with XION blockchain wallets, including deriving addresses from mnemonics. Create a file named `xion-wallets.js`:
 
@@ -280,9 +270,7 @@ module.exports = {
 };
 ```
 
-
-
-## Executing Transactions
+### Executing Transactions
 
 This section covers operations that modify blockchain state. Create a file named `xion-transactions.js`:
 
@@ -407,9 +395,7 @@ module.exports = {
 };
 ```
 
-
-
-## Usage Examples
+### Usage Examples
 
 Create a file named `examples.js` which will hold practical examples of how to use the functions created above:
 
@@ -499,7 +485,7 @@ To run the examples:
 node examples.js
 ```
 
-## Best Practices for Backend Implementation
+### Best Practices for Backend Implementation
 
 When implementing these functions in a production backend environment:
 
@@ -540,9 +526,9 @@ When implementing these functions in a production backend environment:
     }
     ```
 
-### Common Queries and Transactions Examples
+#### Common Queries and Transactions Examples
 
-#### Token Transfers
+**Token Transfers**
 
 ```javascript
 // Transfer tokens
@@ -555,7 +541,7 @@ const transferResult = await sendTokens(
 console.log(`Transfer hash: ${transferResult.transactionHash}`);
 ```
 
-#### Account Queries
+**Account Queries**
 
 ```javascript
 // Get multiple token balances
@@ -572,7 +558,7 @@ const balances = await getTokenBalances("burnt_address", ["uxion", "uatom"]);
 console.log(balances);
 ```
 
-#### Smart Contract Interactions
+**Smart Contract Interactions**
 
 ```javascript
 // Query a token contract balance
@@ -599,7 +585,7 @@ async function transferTokens(mnemonic, contractAddress, recipient, amount) {
 }
 ```
 
-#### Getting Transaction History
+**Getting Transaction History**
 
 ```javascript
 const { getQueryClient } = require("./xion-connect");
