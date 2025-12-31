@@ -33,7 +33,7 @@ Xion OAuth2 currently supports the **Authorization Code flow** with **PKCE (Proo
 
 Before integrating OAuth2 with Xion Auth, you must first deploy and configure a **Treasury Contract**. The Treasury contract manages gasless transactions and permission grants, which are essential for the OAuth2 flow.
 
-For detailed instructions on deploying a Treasury contract, refer to the Treasury Contracts Documentation.
+For detailed instructions on deploying a Treasury contract, refer to the [Treasury Contracts Documentation](../gasless-ux-and-permission-grants/treasury-contracts.md).
 
 ### 2.1. Critical Treasury Configuration Requirements
 
@@ -94,19 +94,17 @@ To access the portal, click **"Connect with XION"** and authenticate using your 
 
 ### 3.2. Creating a New OAuth2 Client
 
-1. **Navigate to the Dashboard**
+1.  **Navigate to the Dashboard**
 
-   After logging in, you'll see the OAuth2 Clients Dashboard showing all your created clients.
+    After logging in, you'll see the OAuth2 Clients Dashboard showing all your created clients.
 
-   <figure><img src="../../../.gitbook/assets/OAuth2-2.png" alt=""><figcaption><p>OAuth2 Clients Dashboard with Create Client button</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/OAuth2-2.png" alt=""><figcaption><p>OAuth2 Clients Dashboard with Create Client button</p></figcaption></figure>
+2.  **Click "Create Client"**
 
-2. **Click "Create Client"**
+    Click the **"Create Client"** button located in the top right corner of the dashboard.
+3.  **Configure Client Settings**
 
-   Click the **"Create Client"** button located in the top right corner of the dashboard.
-
-3. **Configure Client Settings**
-
-    The client creation form will appear.&#x20;
+    The client creation form will appear.
 
     <figure><img src="../../../.gitbook/assets/OAuth2-3.png" alt="" width="375"><figcaption><p>OAuth2 Client creation form</p></figcaption></figure>
 
@@ -116,28 +114,25 @@ To access the portal, click **"Connect with XION"** and authenticate using your 
     * **Client Name** (optional): A descriptive name for your application. If not provided, the name of this client will be untitled.
     * **Client URI** (optional): Your application's homepage URL
 
-   **Default Configuration:**
+    **Default Configuration:**
 
-   * By default, clients are created as **Public Clients with PKCE** enabled, which is suitable for frontend applications.
+    * By default, clients are created as **Public Clients with PKCE** enabled, which is suitable for frontend applications.
+4.  **Advanced Options - Confidential Client**
 
-4. **Advanced Options - Confidential Client**
-
-   If you're building a backend application and need a **Confidential Client**, click to expand the **"Advanced Options"** section.
+    If you're building a backend application and need a **Confidential Client**, click to expand the **"Advanced Options"** section.
 
     <figure><img src="../../../.gitbook/assets/OAuth2-4.png" alt="" width="375"><figcaption><p>Advanced Options showing Confidential Client selection</p></figcaption></figure>
 
-   In the Advanced Options:
+    In the Advanced Options:
 
-   * **Token Endpoint Auth Method**: Select **"Client Secret Post (Confidential Client)"** to create a confidential client
-   * You can also configure optional fields like Policy URI, Terms of Service URI, and JWKS URI
+    * **Token Endpoint Auth Method**: Select **"Client Secret Post (Confidential Client)"** to create a confidential client
+    * You can also configure optional fields like Policy URI, Terms of Service URI, and JWKS URI
+5.  **Create the Client**
 
-5. **Create the Client**
+    Click the **"Create Client"** button to create your OAuth2 client.
+6.  **Save Client Credentials**
 
-   Click the **"Create Client"** button to create your OAuth2 client.
-
-6. **Save Client Credentials**
-
-   If you created a **Confidential Client**, a dialog will appear showing your **Client ID** and **Client Secret**.
+    If you created a **Confidential Client**, a dialog will appear showing your **Client ID** and **Client Secret**.
 
 <figure><img src="../../../.gitbook/assets/OAuth2-5.png" alt="" width="375"><figcaption><p>Client Secret display dialog - save this immediately</p></figcaption></figure>
 
@@ -186,6 +181,13 @@ The OAuth2 Authorization Code flow with PKCE follows these standard steps:
 3. **Callback**: Handle authorization code
 4. **Token Exchange**: Exchange authorization code for access token
 5. **API Access**: Use access token for protected API calls
+
+#### Step 0: Endpoints
+
+First of all, the OAuth2 API endpoints are same as the OAuth2 portal:
+
+* **Testnet**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/)
+* **Mainnet**: (Available when mainnet is launched)
 
 #### Step 1: Discovery - Get OAuth2 Server Information
 
