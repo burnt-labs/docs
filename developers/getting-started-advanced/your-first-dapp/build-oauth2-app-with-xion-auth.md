@@ -77,7 +77,7 @@ For example:
 * If your Treasury has permission for `MsgExecuteContract`, you can execute smart contract calls via OAuth2 Protected API
 * You can configure multiple permissions to allow different transaction types
 
-For more information on configuring Treasury permissions, see the Treasury Contracts Documentation.
+For more information on configuring Treasury permissions, see the [Treasury Contracts Documentation](../gasless-ux-and-permission-grants/treasury-contracts.md).
 
 ## 3. Creating OAuth2 Clients
 
@@ -1092,7 +1092,7 @@ For example:
 * If your Treasury has permission for `MsgExecuteContract`, you can execute smart contract calls
 * You can configure multiple permissions to allow different transaction types
 
-Before constructing transaction messages, ensure the corresponding permissions are configured in your Treasury contract. See the Treasury Contracts Documentation for details on configuring permissions.
+Before constructing transaction messages, ensure the corresponding permissions are configured in your Treasury contract. See the [Treasury Contracts Documentation](../gasless-ux-and-permission-grants/treasury-contracts.md) for details on configuring permissions.
 
 ### Message Construction Examples
 
@@ -1326,7 +1326,7 @@ async function queryContract(contractAddress: string, queryMsg: any) {
 
 ### RPC Endpoints
 
-For a list of available RPC endpoints for each network, see the Public Endpoints and Resources documentation.
+For a list of available RPC endpoints for each network, see the [Public Endpoints and Resources](../../section-overview/public-endpoints-and-resources.md) documentation.
 
 ## Additional Resources
 
@@ -1336,7 +1336,7 @@ For a list of available RPC endpoints for each network, see the Public Endpoints
 * **OAuth2 App Examples**: [https://github.com/burnt-labs/xion-oauth2-app-demo](https://github.com/burnt-labs/xion-oauth2-app-demo)
 * **Xion Types Repository**: [https://github.com/burnt-labs/xion-types](https://github.com/burnt-labs/xion-types)
 * **Xion Types TypeScript Guide**: [https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/GUIDE.md](https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/GUIDE.md)
-* **Treasury Contracts Documentation**: Enabling Gasless Transactions with Treasury Contracts
+* **Treasury Contracts Documentation**: [Enabling Gasless Transactions with Treasury Contracts](../gasless-ux-and-permission-grants/treasury-contracts.md)
 * **Xion Developer Portal**: [https://dev.testnet.burnt.com/](https://dev.testnet.burnt.com/) (for managing Treasury contracts)
 
 {% hint style="success" %}
