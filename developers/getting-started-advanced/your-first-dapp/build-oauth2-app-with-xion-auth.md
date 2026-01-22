@@ -86,7 +86,7 @@ Once your Treasury contract is configured, you can create OAuth2 clients in the 
 ### 3.1. Accessing the OAuth2 Portal
 
 * **Testnet**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/)
-* **Mainnet**: (Available when mainnet is launched)
+* **Mainnet**: (Available Soon)
 
 <figure><img src="../../../.gitbook/assets/OAuth2-1.png" alt="" width="375"><figcaption><p>OAuth2 Portal login screen</p></figcaption></figure>
 
@@ -187,7 +187,7 @@ The OAuth2 Authorization Code flow with PKCE follows these standard steps:
 First of all, the OAuth2 API endpoints are same as the OAuth2 portal:
 
 * **Testnet**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/)
-* **Mainnet**: (Available when mainnet is launched)
+* **Mainnet**: (Available Soon)
 
 #### Step 1: Discovery - Get OAuth2 Server Information
 
@@ -840,7 +840,7 @@ Once you have an access token, you can use it to access protected OAuth2 APIs. T
 ### API Base URL
 
 * **Testnet**: `https://oauth2.testnet.burnt.com/`
-* **Mainnet**: (Available when mainnet is launched)
+* **Mainnet**: (Available Soon)
 
 #### API Documentation
 
