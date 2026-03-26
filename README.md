@@ -1,28 +1,25 @@
 ---
-description: The First Blockchain Purpose Built For Consumer Adoption
+description: The Trust Layer for the Internet
 ---
 
 # Welcome to XION
 
-[XION](https://xion.burnt.com/) is a blockchain infrastructure built with user experience at the core. The chain integrates complex functionalities such as account management, signature handling, fee abstraction, and interoperability directly at the protocol level. The aim is to simplify blockchain interactions for mainstream users by addressing the technical complexities that currently hinder widespread adoption.
+[XION](https://xion.burnt.com/) is the only L1 that rebuilds trust between people, brands, and platforms through verification, turning verified data into programmable value. Built with zero-knowledge verification infrastructure atop a complete abstraction layer, XION makes Web3 both useful and usable for everyone.
 
-## Zero to App in 5 Minutes
+* **Verification** makes crypto useful. XION's Truth Engine (ZK Module, DKIM Module, App Attestations) lets applications prove any data on the internet privately using zero-knowledge proofs. Build fraud-proof advertising, portable reputation systems, private credential verification, and user-owned data monetization.
+* **Abstraction** makes crypto usable. Protocol-level abstractions across accounts, signatures, gas, payments, and devices remove every barrier to mainstream adoption. Your users log in with email, pay with credit cards, and never encounter blockchain complexity.
 
-Get your first app running on XION in minutes! Choose your platform and start building immediately.
+## About XION
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Web App Quick Start</strong></td><td>Launch a fully functional User Map App with wallet integration in just 5 minutes.</td><td></td><td><a href="developers/xion-quick-start/zero-to-dapp-in-5-minutes/launch-a-user-map-dapp-on-xion-in-5-minutes.md">launch-a-user-map-dapp-on-xion-in-5-minutes.md</a></td></tr><tr><td><strong>Mobile App Quick Start</strong></td><td>Build a React Native mobile App with XION integration in 5 minutes.</td><td></td><td><a href="developers/xion-quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-on-xion-in-5-minutes.md">react-native-mobile-dapp-on-xion-in-5-minutes.md</a></td></tr></tbody></table>
+Explore XION and its core concepts.
+
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Overview</strong></td><td>An overview of XION and a look at its Tech Stack.</td><td><a href="xions-core/concepts/overview.md">overview.md</a></td></tr><tr><td><strong>Verification Infrastructure</strong></td><td>Learn more about XION's Truth Engine.</td><td><a href="xions-core/concepts/verification-infrastructure/">verification-infrastructure</a></td></tr><tr><td><strong>Generalized Abstraction</strong></td><td>Learn more about XION’s Generalized Abstraction layer.</td><td><a href="xions-core/concepts/generalized-abstraction.md">generalized-abstraction.md</a></td></tr></tbody></table>
 
 ## Developer Resources
 
 Ready to dive deeper? Explore comprehensive guides for building on XION.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Setting up Local Environment</strong></td><td>Configure your development environment with all necessary tools and dependencies.</td><td></td><td><a href="developers/getting-started-advanced/setup-local-environment/installation-prerequisites-setup-local-environment/">installation-prerequisites-setup-local-environment</a></td></tr><tr><td><strong>Deploy Smart Contracts</strong></td><td>Learn how to write and deploy CosmWasm smart contracts on XION.</td><td></td><td><a href="developers/getting-started-advanced/your-first-contract/deploy-a-cosmwasm-smart-contract.md">deploy-a-cosmwasm-smart-contract.md</a></td></tr><tr><td><strong>Build with Account Abstraction</strong></td><td>Create apps with gasless transactions using the Abstraxion library.</td><td></td><td><a href="developers/getting-started-advanced/your-first-dapp/build-react-dapp-with-account-abstraxion.md">build-react-dapp-with-account-abstraxion.md</a></td></tr></tbody></table>
-
-## Learn More About XION
-
-Explore XION and its core concepts.
-
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Overview</strong></td><td>An overview of XION and a look at its Generalized Abstraction layer.</td><td></td><td><a href="xions-core/learn/overview-of-xion.md">overview-of-xion.md</a></td></tr><tr><td><strong>Generalized Abstraction</strong></td><td>Learn more about XION’s Generalized Abstraction.</td><td></td><td><a href="xions-core/learn/generalized-chain-abstraction.md">generalized-chain-abstraction.md</a></td></tr><tr><td><strong>Intro to Account Abstraction</strong></td><td>Learn how XION's Account Abstraction enhances the Web3 experience.</td><td></td><td><a href="xions-core/learn/intro-to-account-abstraction.md">intro-to-account-abstraction.md</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Accounts</strong></td><td>Meta Accounts, authentication, gasless transactions, and building web, backend, or mobile apps on XION.</td><td><a href="developers/accounts/">accounts</a></td></tr><tr><td><strong>Computation</strong></td><td>Business logic and automations: quick-start apps, local development, contract library, and integrations (tokens, oracles, indexers).</td><td><a href="developers/computation/">computation</a></td></tr><tr><td><strong>Verification</strong></td><td>Verify real-world data and identity without revealing it — zkTLS (internet), ZK email, and app attestations.</td><td><a href="developers/verification/">verification</a></td></tr><tr><td><strong>Payments</strong></td><td>On-ramps, stablecoins, and payment flows—e.g. Crossmint for credit-card and digital-asset payments.</td><td><a href="developers/payments/">payments</a></td></tr></tbody></table>
 
 ## Help & Support
 
@@ -35,3 +32,11 @@ Connect with the community and access the support you need.
 Raised over $36M from industry leading investors including Animoca Brands, Circle Ventures, Multicoin, Valor, Hashkey, Spartan, Mechanism, Figment, Stateless Ventures, Coinlist Seed, Injective, Alliance DAO, Sandeep Nailwal (Polygon), and more.
 
 <figure><img src=".gitbook/assets/Burnt Investor Logos (1) (2).png" alt=""><figcaption></figcaption></figure>
+
+## Ecosystem Traction
+
+* 150+ global brands including Uber, Amazon, BMW, LEGO, and Travelex
+* 68M+ verified interactions processed through XION infrastructure
+* 5M+ unique users across ecosystem applications
+* $35M+ ARR from ecosystem revenue-sharing agreements
+* Institutional infrastructure partners: Ledger, Anchorage Digital, Fireblocks
