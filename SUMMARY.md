@@ -16,6 +16,7 @@
   * [Meta Accounts Design](xions-core/concepts/meta-accounts-design.md)
   * [Architecture & Tech Glossary](xions-core/concepts/architecture-and-tech-glossary.md)
   * [Use Cases](xions-core/concepts/use-cases.md)
+* [For AI Agents](xions-core/ai-agents.md)
 
 ## developers
 
@@ -35,6 +36,9 @@
   * [Backend App Development](developers/accounts/backend-app/README.md)
     * [Interact with XION via your Backend Service](developers/accounts/backend-app/xion-backend-using-cosmjs.md)
     * [Account Abstraction for RESTful API with Backend Session](developers/accounts/backend-app/build-restapi-with-account-abstraction-and-backend-session.md)
+* [Tools](developers/tools/README.md)
+  * [Interacting with Xion Chain using Xion Daemon](developers/tools/xiond-cli.md)
+  * [Xion Agent Toolkit](developers/tools/xion-toolkit.md)
 * [Computation](developers/computation/README.md)
   * [Quick Start](developers/computation/xion-quick-start/README.md)
     * [Zero to App in 5 Minutes](developers/computation/xion-quick-start/zero-to-dapp-in-5-minutes/README.md)
@@ -46,7 +50,6 @@
       * [Setting up your Local Smart Contract Development Environment for XION](developers/computation/local-development/setting-up-env/installation-prerequisites-setup-local-environment.md)
       * [Setting up your XION Smart Contract Development Environment on Windows (WSL2 + Ubuntu)](developers/computation/local-development/setting-up-env/setting-up-your-xion-smart-contract-development-environment-on-windows-wsl2-+-ubuntu.md)
       * [Set Up an Integrated Development Environment (IDE)](developers/computation/local-development/setting-up-env/setup-cosmwasm-ide.md)
-    * [Interacting with Xion Chain using Xion Daemon](developers/computation/local-development/interact-with-xion-chain-setup-xion-daemon.md)
     * [Deploying Your First Smart Contract on XION](developers/computation/local-development/deploy-a-cosmwasm-smart-contract.md)
   * [Re-using Existing Contracts](developers/computation/re-using-existing-contracts/README.md)
     * [Deployed Contracts on XION](developers/computation/re-using-existing-contracts/deployed-contracts-on-xion.md)

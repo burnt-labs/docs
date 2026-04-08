@@ -57,3 +57,10 @@ Integrate XION with your backend services using RESTful APIs or CosmJS.
 
 * [Interact with XION via your Backend Service ](backend-app/xion-backend-using-cosmjs.md)- Learn how to interact with the XION blockchain from a backend environment using CosmJS
 * [Account Abstraction for RESTful API with Backend Session](backend-app/build-restapi-with-account-abstraction-and-backend-session.md) - Build an application with a Web2 experience using XION Integration in backend
+
+#### AI Agent and CLI Path
+
+Use this path if your team works from terminal-first workflows or coding agents:
+
+* [AI Agent Quick Start](../../xions-core/ai-agents.md) - One-step copy instruction to let AI agents install and use Xion Agent Toolkit skills
+* [Xion Agent Toolkit Tutorial](../tools/xion-toolkit.md) - Guided setup for auth, Treasury management, and OAuth2 client management

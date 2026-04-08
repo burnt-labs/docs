@@ -4,3 +4,4 @@ redirects:
   develop/get-started-guide: developers/learn/overview-of-xion.md
   developers/learn/overview-of-xion: xions-core/learn/README.md
   developers/getting-started-advanced/your-first-dapp/xion-typescript: developers/getting-started-advanced/your-first-dapp/xion-backend-using-cosmjs.md
+  developers/computation/local-development/interact-with-xion-chain-setup-xion-daemon: developers/tools/xiond-cli.md
