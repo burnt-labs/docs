@@ -25,7 +25,7 @@ Get started quickly with pre-built app templates:
 Learn how to set up your development environment and deploy your first contract:
 
 * [setting-up-env](local-development/setting-up-env/ "mention")
-* [interact-with-xion-chain-setup-xion-daemon.md](local-development/interact-with-xion-chain-setup-xion-daemon.md "mention")
+* [xiond-cli.md](../tools/xiond-cli.md "mention")
 * [deploy-a-cosmwasm-smart-contract.md](local-development/deploy-a-cosmwasm-smart-contract.md "mention")
 
 ### Contract Library
