@@ -23,7 +23,7 @@ This setup is designed for AI-assisted development on XION with Meta Accounts, T
 
 ## What this gives you
 
-- **MetaAccount auth** via OAuth2 (no private key management)
+- **Meta Account auth** via OAuth2 (no private key management)
 - **Treasury management** for gasless operations and delegated permissions
 - **OAuth2 client management** for app registration and lifecycle
 - **Agent-friendly workflows** through skills like `xion-dev`, `xion-oauth2`, `xion-treasury`, and `xion-oauth2-client`
