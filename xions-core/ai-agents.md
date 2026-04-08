@@ -7,6 +7,10 @@ icon: robot
 
 Want to let an AI agent operate on XION with a gasless workflow?
 
+{% hint style="warning" %}
+**Beta:** Xion Agent Toolkit is in **beta**. **Mainnet is not supported** yet—use **XION testnet** only.
+{% endhint %}
+
 Copy the instruction below into your AI coding assistant:
 
 ```text

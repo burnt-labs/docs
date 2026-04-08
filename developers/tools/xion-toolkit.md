@@ -9,6 +9,10 @@ Xion Agent Toolkit is a CLI-first toolkit for building on XION with Meta Account
 
 This guide is for developers who are new to XION but already comfortable with CLI tools and AI coding agents.
 
+{% hint style="warning" %}
+**Beta:** Xion Agent Toolkit is in **beta**. **Mainnet is not supported** yet—use **XION testnet** for all development and testing.
+{% endhint %}
+
 {% hint style="info" %}
 This page focuses on practical onboarding and high-signal workflows. For complete command coverage, use the official repository references linked throughout this guide.
 {% endhint %}
@@ -156,9 +160,8 @@ flowchart TD
 
 ## Common how-to tasks
 
-- **Switch network**
+- **Switch network** (during beta, **testnet** only)
   - `xion-toolkit config set-network testnet`
-  - `xion-toolkit config set-network mainnet`
 - **Use machine-readable output**
   - `xion-toolkit --output json <command>`
 - **Disable prompts for automation**
