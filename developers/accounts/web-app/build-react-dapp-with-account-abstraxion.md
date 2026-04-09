@@ -100,16 +100,16 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 
 #### Fee Grant
 
-Example of a general **Fee Grant** configuration
+<figure><img src="../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Example of a general <strong>Fee Grant</strong> configuration</p></figcaption></figure>
 
 1. Enter a **"Description"** in the respective field. This will reflect the intended purpose of the request. This description will be displayed to users when they click **"Allow"** after connecting their account.
 2. In the **"Allowance Type"** field, enter `"/cosmwasm.feegrant.v1beta1.BasicAllowance"`.
-3. In the **"Spend Limit"** field, enter `**1000uxion`**.
+3. In the **"Spend Limit"** field, enter **`1000uxion`**.
 4. Click the **"Save"** button to apply the configuration.
 
 #### **Grant Config**
 
-Example of additional **Grant** configuration
+<figure><img src="../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption><p>Example of additional <strong>Grant</strong> configuration</p></figcaption></figure>
 
 1. For the **"Type URL"** field, select `"/cosmwasm.wasm.v1.MsgExecuteContract"`.
 2. Enter a **"Description"** in the respective field. This will reflect the intended purpose of the request. This description will be displayed to users when they click **"Allow"** after connecting their account.
@@ -123,6 +123,8 @@ Example of additional **Grant** configuration
 7. Then click the "**Save**" button which generates the "**Treasury Instance Preview**"
 
 #### Treasury Instance Preview
+
+<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once the preview is to your liking click the "**Create**" button to create the Treasury contract.
 
@@ -241,6 +243,8 @@ export default function Page(): JSX.Element {
 For **hook-only / custom UI** (no modal), see [Custom UI and Abstraxion loading states](custom-ui-abstraxion-authentication.md).
 
 Now, click **CONNECT** and try it out.
+
+<figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **Note:** If the treasury contract address is changed within the app, users who are already logged in must log out and log back in. This ensures that their account goes through the approval process again, allowing the fee grants to function properly.
@@ -394,11 +398,13 @@ export default function Page(): JSX.Element {
 Update "**YOURCOUNTERCONTRACTADDRESSHERE**" with the the Counter Contract Address you created above.
 {% endhint %}
 
+<figure><img src="../../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
+
 ## Submitting Transactions
 
 Querying the blockchain is useful, but to fully interact with it, we need a way to modify the chain state. This section will implement transaction submission using the **Abstraxion SDK**.
 
-Replace the contents of `**src/app/page.tsx`** with the following code:
+Replace the contents of `src/app/page.tsx` with the following code:
 
 {% code title="src/app/page.tsx" %}
 
@@ -585,6 +591,6 @@ To update the gas adjustment in the **execute** call, replace `auto` with your d
 
 If everything is configured correctly, you should see the transaction results displayed as shown in the previous section.
 
-After clicking "Increment" you should see the confirmation above
+<figure><img src="../../../.gitbook/assets/image (36).png" alt=""><figcaption><p>After clicking "Increment" you should see the confirmation above</p></figcaption></figure>
 
 These core components form the foundation for building and deploying a successful app! If you have any questions or need support, feel free to reach out to us on **Discord** or **[GitHub](https://github.com/burnt-labs/xion.js)**.
