@@ -1,18 +1,33 @@
 ---
-## icon: browser
+description: Web app integration with Abstraxion — guides, authentication modes, and xion.js demo references
+icon: browser
+# Machine-readable metadata (agents / tooling); not rendered as page body on GitBook
+doc_type: hub
+primary_auth_mode: auto
+sdk_packages:
+  - "@burnt-labs/abstraxion"
+  - "@burnt-labs/abstraxion-core"
+demo_app_routes:
+  - /
+  - /loading-states
+  - /abstraxion-ui
+  - /signer-mode
+  - /direct-signing-demo
+  - /popup-demo
+  - /embedded-inline
+  - /embedded-dynamic
+demo_repo: https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app
+required_env_vars_dashboard_auth:
+  - NEXT_PUBLIC_CHAIN_ID
+  - NEXT_PUBLIC_RPC_URL
+  - NEXT_PUBLIC_REST_URL
+  - NEXT_PUBLIC_GAS_PRICE
+  - NEXT_PUBLIC_TREASURY_ADDRESS
+  - NEXT_PUBLIC_AUTH_APP_URL
+required_env_when: "auto, popup, or explicit redirect"
 ---
 
 # Web App Development
-
-{% hint style="info" %}
-**Document metadata (for humans and agents)**\
-`doc_type`: hub\
-`primary_auth_mode`: auto\
-`sdk_packages`: `@burnt-labs/abstraxion`, `@burnt-labs/abstraxion-core`\
-`demo_app_routes`: `/`, `/loading-states`, `/abstraxion-ui`, `/signer-mode`, `/direct-signing-demo`, `/popup-demo`, `/embedded-inline`, `/embedded-dynamic`\
-`demo_repo`: [github.com/burnt-labs/xion.js — `apps/demo-app`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app)\
-`required_env_vars` (typical dashboard flows): `NEXT_PUBLIC_CHAIN_ID`, `NEXT_PUBLIC_RPC_URL`, `NEXT_PUBLIC_REST_URL`, `NEXT_PUBLIC_GAS_PRICE`, `NEXT_PUBLIC_TREASURY_ADDRESS`, `NEXT_PUBLIC_AUTH_APP_URL` (when using `auto` / `popup` / explicit `redirect`)
-{% endhint %}
 
 XION **Meta Accounts** and **gasless** flows are integrated into web apps through **`@burnt-labs/abstraxion`** (React provider and hooks). Lower-level signing and account types are shared with **`@burnt-labs/abstraxion-core`**.
 

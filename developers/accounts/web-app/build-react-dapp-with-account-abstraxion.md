@@ -1,3 +1,23 @@
+---
+description: End-to-end Next.js tutorial — Treasury, Counter contract, auto auth, Abstraxion hooks
+doc_type: tutorial
+primary_auth_mode: auto
+sdk_packages:
+  - "@burnt-labs/abstraxion"
+  - "@burnt-labs/abstraxion-core"
+demo_app_routes:
+  - /
+  - /abstraxion-ui
+demo_app_routes_note: / is monorepo demo hub; /abstraxion-ui matches this tutorial's Abstraxion modal UI
+required_env_vars:
+  - NEXT_PUBLIC_CHAIN_ID
+  - NEXT_PUBLIC_RPC_URL
+  - NEXT_PUBLIC_REST_URL
+  - NEXT_PUBLIC_GAS_PRICE
+  - NEXT_PUBLIC_TREASURY_ADDRESS
+  - NEXT_PUBLIC_AUTH_APP_URL
+---
+
 # Account Abstraction with Gasless Transactions
 
 In this guide, we will walk through building a basic app using the [Abstraxion library](https://www.npmjs.com/package/@burnt-labs/abstraxion), demonstrating how to create an Abstraxion account which can be done via a social account like Google, browser wallets (Keplr, Metamask, OKX etc.), email address, passkey and other authentication options. We will also implement a gasless transaction experience for users by leveraging XION's fee grants through a Treasury contract.
@@ -9,15 +29,6 @@ To better understand Account Abstraction you can visit the [Introduction to Acco
 A fully functional demo of this app is also available in the [Xion.js](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app) repository.
 
 For **authentication modes** (`auto`, `signer`, `embedded`, etc.), see the section hub: [Web App Development](README.md).
-
-{% hint style="info" %}
-**Document metadata (for humans and agents)**\
-`doc_type`: tutorial\
-`primary_auth_mode`: auto\
-`sdk_packages`: `@burnt-labs/abstraxion`, `@burnt-labs/abstraxion-core`\
-`demo_app_routes`: `/` (monorepo demo hub), `/abstraxion-ui` (closest match to this tutorial’s `Abstraxion` UI)\
-`required_env_vars`: `NEXT_PUBLIC_CHAIN_ID`, `NEXT_PUBLIC_RPC_URL`, `NEXT_PUBLIC_REST_URL`, `NEXT_PUBLIC_GAS_PRICE`, `NEXT_PUBLIC_TREASURY_ADDRESS`, `NEXT_PUBLIC_AUTH_APP_URL`
-{% endhint %}
 
 ## Requirements
 

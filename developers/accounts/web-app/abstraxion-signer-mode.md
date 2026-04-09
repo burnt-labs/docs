@@ -1,17 +1,36 @@
+---
+description: Abstraxion authentication.type signer — getSignerConfig, AA API, env vars, Turnkey registration pattern
+doc_type: reference
+primary_auth_mode: signer
+sdk_packages:
+  - "@burnt-labs/abstraxion"
+  - "@burnt-labs/abstraxion-core"
+demo_app_routes:
+  - /signer-mode
+  - /direct-signing-demo
+required_env_vars:
+  - NEXT_PUBLIC_CHAIN_ID
+  - NEXT_PUBLIC_RPC_URL
+  - NEXT_PUBLIC_REST_URL
+  - NEXT_PUBLIC_GAS_PRICE
+  - NEXT_PUBLIC_AA_API_URL
+  - NEXT_PUBLIC_CODE_ID
+  - NEXT_PUBLIC_CHECKSUM
+optional_env_vars:
+  - NEXT_PUBLIC_ADDRESS_PREFIX
+  - NEXT_PUBLIC_TREASURY_ADDRESS
+  - NEXT_PUBLIC_FEE_GRANTER_ADDRESS
+  - NEXT_PUBLIC_INDEXER_URL
+  - NEXT_PUBLIC_INDEXER_TOKEN
+  - NEXT_PUBLIC_TREASURY_INDEXER_URL
+indexer_subquery: set NEXT_PUBLIC_INDEXER_TYPE=subquery when using Subquery (see demo layout)
+---
+
 # Abstraxion signer mode
 
 **Signer mode** (`authentication.type: "signer"`) runs Meta Account flows **without** redirecting the user to the full-page XION dashboard. You supply a **`getSignerConfig`** function that resolves whatever wallet or custody stack you integrate (Turnkey, MetaMask, etc.); Abstraxion uses **`@burnt-labs/abstraxion-core`** under the hood for signing and account operations.
 
 Reference implementation: [demo app `signer-mode`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/signer-mode) and, for MetaMask + direct signing comparisons, [`direct-signing-demo`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/direct-signing-demo).
-
-{% hint style="info" %}
-**Document metadata (for humans and agents)**\
-`doc_type`: reference\
-`primary_auth_mode`: signer\
-`sdk_packages`: `@burnt-labs/abstraxion`, `@burnt-labs/abstraxion-core`\
-`demo_app_routes`: `/signer-mode`, `/direct-signing-demo`\
-`required_env_vars`: `NEXT_PUBLIC_CHAIN_ID`, `NEXT_PUBLIC_RPC_URL`, `NEXT_PUBLIC_REST_URL`, `NEXT_PUBLIC_GAS_PRICE`, `NEXT_PUBLIC_AA_API_URL`, `NEXT_PUBLIC_CODE_ID`, `NEXT_PUBLIC_CHECKSUM`, optional `NEXT_PUBLIC_ADDRESS_PREFIX`, `NEXT_PUBLIC_TREASURY_ADDRESS`, `NEXT_PUBLIC_FEE_GRANTER_ADDRESS`, optional indexer: `NEXT_PUBLIC_INDEXER_URL`, `NEXT_PUBLIC_INDEXER_TOKEN` or `NEXT_PUBLIC_INDEXER_TYPE=subquery`, optional `NEXT_PUBLIC_TREASURY_INDEXER_URL`
-{% endhint %}
 
 ## When to use signer mode
 
