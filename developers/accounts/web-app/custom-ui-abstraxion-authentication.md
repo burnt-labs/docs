@@ -12,16 +12,13 @@ vars:
 
 # Custom UI and Abstraxion loading states
 
-Build **hook-first** authentication: your own buttons, copy, and spinners while Abstraxion drives the **Meta Account** flow. This pattern matches the demo route **`/loading-states`** in [xion.js `apps/demo-app`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/loading-states).
+This guide is about **your own buttons, copy, and loading states**—using **`useAbstraxionAccount`** (and optionally **`useAbstraxionSigningClient`**) instead of the pre-built **`<Abstraxion />`** modal from the [Account abstraction tutorial](build-react-dapp-with-account-abstraxion.md). It does **not** walk through choosing or comparing **`authentication.type`**; that belongs in the section hub.
 
-## Choose an authentication mode first
+**Live reference:** [xion.js `apps/demo-app` — `/loading-states`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/loading-states).
 
-Hook-level flags are **independent of whether you render a modal**: they reflect session and navigation state. Pick **`authentication.type`** on `AbstraxionProvider` before polishing UI—see [Web App Development](README.md) (**`auto`** is the default recommendation).
+**Prerequisite:** You have already wrapped the app with **`AbstraxionProvider`** and set **`authentication`** (for dashboard Meta Account login, **`auto`** is the usual default). See [Web App Development](README.md) for the mode glossary, env vars, and when to use **`signer`** or **embedded**—those topics are not repeated here. The **`login()`**, **`?granted=true`**, and flag patterns below apply to **dashboard-style** flows (`auto` / `popup` / `redirect`); for **`type: "signer"`**, start from [Abstraxion signer mode](abstraxion-signer-mode.md).
 
-- **`auto` / `popup`:** Auth often completes in a **popup**; the parent page stays mounted.
-- **`redirect` (including omitting `authentication`):** After the auth app returns, the user may land with **`?granted=true`** on your URL; you may call `login()` once to finalize session restoration (see below).
-
-**Signer** and **embedded** modes use different controllers; this guide focuses on **dashboard-style** flows. For **`type: "signer"`**, see [Abstraxion signer mode](abstraxion-signer-mode.md).
+Hook-level flags are **independent of whether you render a modal**: they describe session and navigation state from the SDK, not a specific widget.
 
 ## `useAbstraxionAccount` flags
 
@@ -54,7 +51,7 @@ You do **not** need `@burnt-labs/abstraxion/dist/index.css` for hook-only UIs (y
 
 ## Optional: finishing login after redirect
 
-If your flow uses **full-page redirect** (mobile leg of **`auto`**, or explicit **`redirect`**), the app may reload with **`?granted=true`**. You can finalize the session by calling `login()` when that query param is present (the demo illustrates this pattern). With **popup**-based **`auto`**, this path is less prominent because the opener never unloads.
+With **`auto`** on desktop, auth often runs in a **popup** and the parent page stays mounted. With **full-page redirect** (typical mobile leg of **`auto`**, or explicit **`redirect`**), the user may return to your URL with **`?granted=true`**. Call **`login()`** once to finalize session restoration (the demo illustrates this). Popup-heavy flows hit this path less often.
 
 ```typescript
 useEffect(() => {
