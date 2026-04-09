@@ -8,7 +8,7 @@ Build **hook-first** authentication: your own buttons, copy, and spinners while 
 `primary_auth_mode`: auto (recommended; flags apply across `auto` / `popup` / `redirect`)\
 `sdk_packages`: `@burnt-labs/abstraxion`, `@burnt-labs/abstraxion-core`\
 `demo_app_routes`: `/loading-states`\
-`required_env_vars`: same as hub — `NEXT_PUBLIC_CHAIN_ID`, `NEXT_PUBLIC_RPC_URL`, `NEXT_PUBLIC_REST_URL`, `NEXT_PUBLIC_GAS_PRICE`, `NEXT_PUBLIC_TREASURY_ADDRESS`, `NEXT_PUBLIC_AUTH_APP_URL` when using dashboard auth (`auto` / `popup` / `redirect`)
+`required_env_vars` (dashboard auth: `auto` / `popup` / `redirect`): `NEXT_PUBLIC_CHAIN_ID`, `NEXT_PUBLIC_RPC_URL`, `NEXT_PUBLIC_REST_URL`, `NEXT_PUBLIC_GAS_PRICE`, `NEXT_PUBLIC_TREASURY_ADDRESS`, `NEXT_PUBLIC_AUTH_APP_URL`
 {% endhint %}
 
 ## Choose an authentication mode first

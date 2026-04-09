@@ -2,6 +2,8 @@
 
 In this guide, we will walk through building a basic app using the [Abstraxion library](https://www.npmjs.com/package/@burnt-labs/abstraxion), demonstrating how to create an Abstraxion account which can be done via a social account like Google, browser wallets (Keplr, Metamask, OKX etc.), email address, passkey and other authentication options. We will also implement a gasless transaction experience for users by leveraging XION's fee grants through a Treasury contract.
 
+The **`AbstraxionProvider`** examples below use **`authentication.type: "auto"`** (recommended for new apps). For other modes and terminology, see the section hub [Web App Development](README.md).
+
 To better understand Account Abstraction you can visit the [Introduction to Account Abstraction](https://docs.burnt.com/xion/developers/learn/intro-to-account-abstraction) page.
 
 A fully functional demo of this app is also available in the [Xion.js](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app) repository.
@@ -47,7 +49,7 @@ cd nextjs-xion-abstraxion-example
 Add the **Abstraxion** package to the project:
 
 ```bash
-npm i @burnt-labs/abstraxion
+npm i @burnt-labs/abstraxion @burnt-labs/ui
 ```
 
 `@burnt-labs/abstraxion` depends on **`@burnt-labs/abstraxion-core`** for signing and session primitives. You normally do not install `abstraxion-core` separately; keep both on compatible versions when upgrading.
@@ -248,7 +250,7 @@ The contract provides a method to query the current `count` value. Let's fetch t
 
 Replace the contents of `src/app/page.tsx` with the following code:
 
-```javascript
+```typescript
 "use client";
 import Link from "next/link";
 import { useState } from "react";
