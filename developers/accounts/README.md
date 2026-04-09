@@ -37,8 +37,8 @@ Build React applications with account abstraction and gasless transactions.
 
 * [Web App Development — integration hub](web-app/README.md) - Authentication modes (`auto`, `signer`, `embedded`), env vars, and links to the xion.js demo app
 * [Account Abstraction with Gasless Transactions](web-app/build-react-dapp-with-account-abstraxion.md) - Build a React dApp using the Abstraxion library with gasless transactions
-* [Custom UI and Abstraxion loading states](web-app/custom-ui-abstraxion-authentication.md) - Hook-first UX, loading flags, and session lifecycle
 * [Abstraxion signer mode](web-app/abstraxion-signer-mode.md) - `type: "signer"`, `getSignerConfig`, and wallet-led integrations
+* [Custom UI and Abstraxion loading states](web-app/custom-ui-abstraxion-authentication.md) - Hook-first UX, loading flags, and session lifecycle
 
 #### Mobile App Development
 

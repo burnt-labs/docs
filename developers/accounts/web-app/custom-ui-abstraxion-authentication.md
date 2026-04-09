@@ -1,21 +1,13 @@
 ---
 description: Hook-first Abstraxion auth — loading flags, login(), session lifecycle (demo /loading-states)
-doc_type: guide
-primary_auth_mode: auto
-primary_auth_note: recommended default; hook flags apply across auto, popup, and redirect
-sdk_packages:
-  - "@burnt-labs/abstraxion"
-  - "@burnt-labs/abstraxion-core"
-demo_app_routes:
-  - /loading-states
-required_env_vars:
-  - NEXT_PUBLIC_CHAIN_ID
-  - NEXT_PUBLIC_RPC_URL
-  - NEXT_PUBLIC_REST_URL
-  - NEXT_PUBLIC_GAS_PRICE
-  - NEXT_PUBLIC_TREASURY_ADDRESS
-  - NEXT_PUBLIC_AUTH_APP_URL
-required_env_when: "dashboard auth (auto, popup, or redirect)"
+vars:
+  doc_type: guide
+  primary_auth_mode: auto
+  primary_auth_note: "recommended default; hook flags apply across auto, popup, and redirect"
+  sdk_packages: "@burnt-labs/abstraxion, @burnt-labs/abstraxion-core"
+  demo_app_routes: "/loading-states"
+  required_env_vars: "NEXT_PUBLIC_CHAIN_ID, NEXT_PUBLIC_RPC_URL, NEXT_PUBLIC_REST_URL, NEXT_PUBLIC_GAS_PRICE, NEXT_PUBLIC_TREASURY_ADDRESS, NEXT_PUBLIC_AUTH_APP_URL"
+  required_env_when: "dashboard auth (auto, popup, or redirect)"
 ---
 
 # Custom UI and Abstraxion loading states
