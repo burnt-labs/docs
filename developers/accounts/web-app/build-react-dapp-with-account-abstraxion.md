@@ -2,19 +2,30 @@
 
 In this guide, we will walk through building a basic app using the [Abstraxion library](https://www.npmjs.com/package/@burnt-labs/abstraxion), demonstrating how to create an Abstraxion account which can be done via a social account like Google, browser wallets (Keplr, Metamask, OKX etc.), email address, passkey and other authentication options. We will also implement a gasless transaction experience for users by leveraging XION's fee grants through a Treasury contract.
 
-To better understand Account Abstraction you can visit the[ Introduction to Account Abstraction](https://docs.burnt.com/xion/developers/learn/intro-to-account-abstraction) page.
+To better understand Account Abstraction you can visit the [Introduction to Account Abstraction](https://docs.burnt.com/xion/developers/learn/intro-to-account-abstraction) page.
 
 A fully functional demo of this app is also available in the [Xion.js](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app) repository.
+
+For **authentication modes** (`auto`, `signer`, `embedded`, etc.), see the section hub: [Web App Development](README.md).
+
+{% hint style="info" %}
+**Document metadata (for humans and agents)**\
+`doc_type`: tutorial\
+`primary_auth_mode`: auto\
+`sdk_packages`: `@burnt-labs/abstraxion`, `@burnt-labs/abstraxion-core`\
+`demo_app_routes`: `/` (monorepo demo hub), `/abstraxion-ui` (closest match to this tutorial’s `Abstraxion` UI)\
+`required_env_vars`: `NEXT_PUBLIC_CHAIN_ID`, `NEXT_PUBLIC_RPC_URL`, `NEXT_PUBLIC_REST_URL`, `NEXT_PUBLIC_GAS_PRICE`, `NEXT_PUBLIC_TREASURY_ADDRESS`, `NEXT_PUBLIC_AUTH_APP_URL`
+{% endhint %}
 
 ## Requirements
 
 Before getting started, ensure you have the following installed:
 
-* [**Node.js**](https://nodejs.org/) (LTS version recommended) – Required for running the development environment and installing dependencies.
+- **[Node.js](https://nodejs.org/)** (LTS version recommended) – Required for running the development environment and installing dependencies.
 
 ## Setting up the Project
 
-In this example, we will use [**Next.js**](https://nextjs.org) to scaffold the project and set up a development environment with TypeScript, ESLint and Tailwind CSS.
+In this example, we will use **[Next.js](https://nextjs.org)** to scaffold the project and set up a development environment with TypeScript, ESLint and Tailwind CSS.
 
 ### Step 1: Create a New Next.js Project
 
@@ -39,6 +50,8 @@ Add the **Abstraxion** package to the project:
 npm i @burnt-labs/abstraxion
 ```
 
+`@burnt-labs/abstraxion` depends on **`@burnt-labs/abstraxion-core`** for signing and session primitives. You normally do not install `abstraxion-core` separately; keep both on compatible versions when upgrading.
+
 ### Step 4: Start the Development Server
 
 Run the following command to start the development server:
@@ -49,16 +62,15 @@ npm run dev
 
 ### Step 5: Open the Project in a Browser
 
-Once the server is running, open [**http://localhost:3000**](http://localhost:3000) in a web browser. You should see a Next.js welcome page with an animated React logo.
+Once the server is running, open **[http://localhost:3000](http://localhost:3000)** in a web browser. You should see a Next.js welcome page with an animated React logo.
 
 {% hint style="warning" %}
 **NOTE:**
 
-A mismatch in package versions can lead to build failures, resulting in an error similar to the following:\
-\
+A mismatch in package versions can lead to build failures, resulting in an error similar to the following:  
+
 `Module build failed: UnhandledSchemeError: Reading from "node:url" is not handled by plugins (Unhandled scheme).`
 
-\
 To resolve this issue, update your `next.config.js` file located at the root of your project with the configuration provided in this file: [https://gist.githubusercontent.com/probablyangg/4c520e376cdddf6991951e233d1f9bb6/raw/fa0ecaf1b2e52876610be9d36a8aeaaef53f0dd5/next.config.js](https://gist.githubusercontent.com/probablyangg/4c520e376cdddf6991951e233d1f9bb6/raw/fa0ecaf1b2e52876610be9d36a8aeaaef53f0dd5/next.config.js)
 {% endhint %}
 
@@ -66,9 +78,9 @@ To resolve this issue, update your `next.config.js` file located at the root of 
 
 We need to deploy a smart contract on-chain for our app to interact with, so we'll deploy a basic **Counter** contract, which will allow you to:
 
-* **Set an initial counter value**
-* **Increment or reset the counter**
-* **Query the current counter value**
+- **Set an initial counter value**
+- **Increment or reset the counter**
+- **Query the current counter value**
 
 Follow the steps in the following [guide](../../computation/local-development/deploy-a-cosmwasm-smart-contract.md) to **compile, deploy, and instantiate** the contract on-chain. Once deployed, this contract will be referenced in the **Treasury contract** and the **code updates** that follow.
 
@@ -84,31 +96,29 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 
 #### Fee Grant
 
-<figure><img src="../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Example of a general <strong>Fee Grant</strong> configuration</p></figcaption></figure>
+Example of a general **Fee Grant** configuration
 
 1. Enter a **"Description"** in the respective field. This will reflect the intended purpose of the request. This description will be displayed to users when they click **"Allow"** after connecting their account.
 2. In the **"Allowance Type"** field, enter `"/cosmwasm.feegrant.v1beta1.BasicAllowance"`.
-3. In the **"Spend Limit"** field, enter **`1000uxion`**.
+3. In the **"Spend Limit"** field, enter `**1000uxion`**.
 4. Click the **"Save"** button to apply the configuration.
 
 #### **Grant Config**
 
-<figure><img src="../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption><p>Example of additional <strong>Grant</strong> configuration</p></figcaption></figure>
+Example of additional **Grant** configuration
 
 1. For the **"Type URL"** field, select `"/cosmwasm.wasm.v1.MsgExecuteContract"`.
 2. Enter a **"Description"** in the respective field. This will reflect the intended purpose of the request. This description will be displayed to users when they click **"Allow"** after connecting their account.
 3. In the **"Authorization Type"** field, select `"/cosmwasm.wasm.v1.ContractExecutionAuthorization"`.
 4. Enter the **contract address** in the **"Contract Address"** field — this should be the **Counter** smart contract created above.
 5. You **must** select at least one of the following::
-   * **"Max Call"** – Limits the number of times a user can execute a transaction under this fee grant.
-   * **"Max Funds"** – Specifies the maximum amount of funds allocated for covering transaction fees.
-   * **"Both"** – Allows you to set both options.
+  - **"Max Call"** – Limits the number of times a user can execute a transaction under this fee grant.
+  - **"Max Funds"** – Specifies the maximum amount of funds allocated for covering transaction fees.
+  - **"Both"** – Allows you to set both options.
 6. Click the **"Add Contract Grant"** button to apply the configuration.
 7. Then click the "**Save**" button which generates the "**Treasury Instance Preview**"
 
 #### Treasury Instance Preview
-
-<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once the preview is to your liking click the "**Create**" button to create the Treasury contract.
 
@@ -118,136 +128,115 @@ Learn more about Treasury Contracts [here](../../../others/archived/create-a-gas
 
 ## Integrating the Abstraxion Library
 
-To set up the **Abstraxion Library**, replace the contents of **`src/app/layout.tsx`** with the following code:
+To set up the **Abstraxion Library**, replace the contents of `src/app/layout.tsx` with the following code.
 
 {% code title="src/app/layout.tsx" %}
+
 ```typescript
 "use client";
-import { Inter } from 'next/font/google'
-import './globals.css'
-import {AbstraxionProvider} from "@burnt-labs/abstraxion";
-
-import "@burnt-labs/abstraxion/dist/index.css";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { AbstraxionProvider } from "@burnt-labs/abstraxion";
 import "@burnt-labs/ui/dist/index.css";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
-
-const treasuryConfig = {
-  treasury: "YOUR_TREASURY_CONTRACT_ADDRESS_HERE",
-  rpcUrl: "https://rpc.xion-testnet-2.burnt.com/",
-  restUrl: "https://api.xion-testnet-2.burnt.com/"
+const abstraxionConfig = {
+  chainId: process.env.NEXT_PUBLIC_CHAIN_ID!,
+  treasury: process.env.NEXT_PUBLIC_TREASURY_ADDRESS,
+  rpcUrl: process.env.NEXT_PUBLIC_RPC_URL!,
+  restUrl: process.env.NEXT_PUBLIC_REST_URL!,
+  gasPrice: process.env.NEXT_PUBLIC_GAS_PRICE!,
+  authentication: {
+    type: "auto" as const,
+    authAppUrl: process.env.NEXT_PUBLIC_AUTH_APP_URL,
+  },
 };
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AbstraxionProvider
-          config={treasuryConfig}>
+        <AbstraxionProvider config={abstraxionConfig}>
           {children}
         </AbstraxionProvider>
       </body>
     </html>
-  )
+  );
 }
-
 ```
+
 {% endcode %}
 
 {% hint style="warning" %}
-Update "**YOUR\_TREASURY\_CONTRACT\_ADDRESS\_HERE**" with the the Treasury Contract Address you created above to enable gasless transactions for users.
+Set **`NEXT_PUBLIC_*` environment variables** in `.env.local` (or your host): chain id, RPC, REST, gas price (e.g. `0.025uxion`), treasury address, and **`NEXT_PUBLIC_AUTH_APP_URL`** for the XION auth app. Mismatched or missing values will break login or transactions.
 {% endhint %}
 
-* **`"use client";`**
-  * This directive is required to ensure that the file is treated as a **client component** in Next.js.
-  * Omitting this will result in an error.
-* **`AbstraxionProvider`**
-  * This component wraps the application and provides context for **Abstraxion hooks**, such as:
-    * `useAbstraxionAccount`
-    * `useAbstraxionSigningClient`
-* **`treasuryConfig`**
-  * Set the **Treasury Contract Address** to enable gasless transactions for users.
+- **`"use client"`** — Required so the layout runs as a **client component** (Abstraxion uses browser APIs).
+- **`AbstraxionProvider`** — Wraps the app and supplies **Abstraxion hooks** (`useAbstraxionAccount`, `useAbstraxionSigningClient`, etc.).
+- **`authentication.type: "auto"`** — **Recommended default**: desktop users get a **popup** auth window; mobile / PWA typically falls back to **full-page redirect**. At runtime the SDK normalizes `auto` to `popup` or `redirect` internally.
+
+### Optional: backward-compatible default (`redirect`)
+
+If you **omit** the entire `authentication` field, the SDK defaults to the legacy **dashboard redirect** flow (same as `type: "redirect"`). That remains supported for older apps, but **new projects should set `auto` explicitly** so behavior matches current product guidance. See [Web App Development](README.md).
+
+### Next.js: runtime `process.env` in layouts
+
+If you read **non-`NEXT_PUBLIC_`** secrets in a layout, you may need `export const dynamic = "force-dynamic"` so the layout is not statically optimized away—see the [demo app layouts](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app) for the same pattern.
 
 ## Adding Hooks to the Homepage
 
-Replace the contents of **`src/app/page.tsx`** with the following code:
+Replace the contents of `src/app/page.tsx` with the following code to show **CONNECT** and open the pre-built **`Abstraxion`** modal from `@burnt-labs/abstraxion`:
 
-<pre class="language-typescript" data-title="src/app/page.tsx"><code class="lang-typescript"><strong>"use client";
-</strong>import {
+```typescript
+"use client";
+import {
   Abstraxion,
   useAbstraxionAccount,
-  useModal
+  useModal,
 } from "@burnt-labs/abstraxion";
 import { Button } from "@burnt-labs/ui";
-import { useEffect } from "react";
+import "@burnt-labs/ui/dist/index.css";
 
 export default function Page(): JSX.Element {
-  // Abstraxion hooks
-  const { data: { bech32Address }, isConnected, isConnecting } = useAbstraxionAccount();
-
-  // General state hooks
-  const [, setShow] = useModal();
-
-  // watch isConnected and isConnecting
-  // only added for testing
-  useEffect(() => {
-    console.log({ isConnected, isConnecting });
-  }, [isConnected, isConnecting])
+  const { data: account } = useAbstraxionAccount();
+  const [, setShowModal] = useModal();
 
   return (
-      &#x3C;main className="m-auto flex min-h-screen max-w-xs flex-col items-center justify-center gap-4 p-4">
-        &#x3C;h1 className="text-2xl font-bold tracking-tighter text-black dark:text-white">
-          Abstraxion
-        &#x3C;/h1>
-        &#x3C;Button
-            fullWidth
-            onClick={() => { setShow(true) }}
-            structure="base"
-        >
-          {bech32Address ? (
-              &#x3C;div className="flex items-center justify-center">VIEW ACCOUNT&#x3C;/div>
-          ) : (
-              "CONNECT"
-          )}
-        &#x3C;/Button>
-        {
-          bech32Address &#x26;&#x26;
-            &#x3C;div className="border-2 border-primary rounded-md p-4 flex flex-row gap-4">
-              &#x3C;div className="flex flex-row gap-6">
-                &#x3C;div>
-                  address
-                &#x3C;/div>
-                &#x3C;div>
-                  {bech32Address}
-                &#x3C;/div>
-              &#x3C;/div>
-            &#x3C;/div>
-        }
-        &#x3C;Abstraxion onClose={() => setShow(false)} />
-      &#x3C;/main>
+    <main className="m-auto flex min-h-screen max-w-xs flex-col items-center justify-center gap-4 p-4">
+      <h1 className="text-2xl font-bold tracking-tighter text-white">
+        ABSTRAXION
+      </h1>
+      <Button
+        fullWidth
+        onClick={() => setShowModal(true)}
+        structure="base"
+      >
+        {account?.bech32Address ? (
+          <div className="flex items-center justify-center">VIEW ACCOUNT</div>
+        ) : (
+          "CONNECT"
+        )}
+      </Button>
+      <Abstraxion onClose={() => setShowModal(false)} />
+    </main>
   );
 }
-</code></pre>
+```
 
 #### What does this do?
 
-1. **Displays a "CONNECT" button**
-   * Clicking the button initiates a **Meta Account** login.
-   * If the user is connected, it shows **"VIEW ACCOUNT"** instead.
-2. **Shows the user's blockchain address** when connected.
-3. **Handles connection state** with `useAbstraxionAccount()`:
-   * `bech32Address`: The user's address.
-   * `isConnected`: Whether the user is connected.
-   * `isConnecting`: Connection state status.
+1. **CONNECT** opens the bundled Abstraxion modal so the user can complete Meta Account login (works with **`auto`** auth in the provider).
+2. **`useAbstraxionAccount`** exposes connection state; `account?.bech32Address` is the user’s address when connected.
+3. **`useModal`** toggles visibility of the **`<Abstraxion />`** UI component.
 
-Now, click **CONNECT** and try it out!
+For **hook-only / custom UI** (no modal), see [Custom UI and Abstraxion loading states](custom-ui-abstraxion-authentication.md).
 
-<figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+Now, click **CONNECT** and try it out.
 
 {% hint style="info" %}
 **Note:** If the treasury contract address is changed within the app, users who are already logged in must log out and log back in. This ensures that their account goes through the approval process again, allowing the fee grants to function properly.
@@ -343,7 +332,7 @@ export default function Page(): JSX.Element {
         }}
         structure="base"
       >
-        {account.bech32Address ? (
+        {account?.bech32Address ? (
           <div className="flex items-center justify-center">VIEW ACCOUNT</div>
         ) : (
           "CONNECT"
@@ -398,18 +387,17 @@ export default function Page(): JSX.Element {
 ```
 
 {% hint style="info" %}
-Update "**YOUR\_COUNTER\_CONTRACT\_ADDRESS\_HERE**" with the the Counter Contract Address you created above.
+Update "**YOURCOUNTERCONTRACTADDRESSHERE**" with the the Counter Contract Address you created above.
 {% endhint %}
-
-<figure><img src="../../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
 
 ## Submitting Transactions
 
 Querying the blockchain is useful, but to fully interact with it, we need a way to modify the chain state. This section will implement transaction submission using the **Abstraxion SDK**.
 
-Replace the contents of **`src/app/page.tsx`** with the following code:
+Replace the contents of `**src/app/page.tsx`** with the following code:
 
 {% code title="src/app/page.tsx" %}
+
 ```typescript
 "use client";
 import Link from "next/link";
@@ -459,11 +447,12 @@ export default function Page(): JSX.Element {
 
   // Increment the count in the smart contract
   const increment = async () => {
+    if (!client || !account?.bech32Address) return;
     setLoading(true);
     const msg = { increment: {} };
 
     try {
-      const res = await client?.execute(account.bech32Address, contractAddress, msg, "auto");
+      const res = await client.execute(account.bech32Address, contractAddress, msg, "auto");
       setExecuteResult(res);
       console.log("Transaction successful:", res);
       await getCount(); // Refresh count after successful increment
@@ -537,56 +526,61 @@ export default function Page(): JSX.Element {
   );
 }
 ```
+
 {% endcode %}
 
 {% hint style="info" %}
-Update "**YOUR\_COUNTER\_CONTRACT\_ADDRESS\_HERE**" with the the **Counter** contract address you created above.
+Update "**YOURCOUNTERCONTRACTADDRESSHERE**" with the the **Counter** contract address you created above.
 {% endhint %}
 
 #### What does this do?
 
 1. **Implements transaction submission**
-   * The **"INCREMENT"** button sends a transaction using **Abstraxion Signing Client**.
+  - The **"INCREMENT"** button sends a transaction using **Abstraxion Signing Client**.
 2. **Manages user connection state**
-   * Uses `useAbstraxionAccount()` to check if the user is connected.
-   * If the user isn’t connected, the **"CONNECT"** button appears instead.
+  - Uses `useAbstraxionAccount()` to check if the user is connected.
+  - If the user isn’t connected, the **"CONNECT"** button appears instead.
 3. **Handles transaction execution**
-   * Defines a `increment()` function to interact with a **CosmWasm smart contract**.
-   * Sends an **ExecuteContract** transaction using `client.execute()`.
+  - Defines a `increment()` function to interact with a **CosmWasm smart contract**.
+  - Sends an **ExecuteContract** transaction using `client.execute()`.
 4. **Displays transaction results**
-   * After submitting a transaction, it shows the **Transaction Hash** and **Block Height**.
-   * Provides a link to view the transaction in **XION’s Block Explorer**.
+  - After submitting a transaction, it shows the **Transaction Hash** and **Block Height**.
+  - Provides a link to view the transaction in **XION’s Block Explorer**.
 
 ### Quick Note on Fee Configuration
 
 In the `increment` function, the `.execute()` method is called as follows:
 
 {% code lineNumbers="true" %}
+
 ```typescript
 const res = await client?.execute(
   account.bech32Address,
-  seatContractAddress,
+  contractAddress,
   msg,
   "auto",
   "", // memo
   [],
 );
 ```
+
 {% endcode %}
 
 The **fourth parameter** in the function call represents the **fee configuration**. Instead of manually specifying the gas and fee amount, we use `"auto"`, allowing the **SDK to automatically handle fee estimation**:
 
 #### Why Use `"auto"`?
 
-* **Simplifies fee management** by automatically estimating optimal fees.
-* **Reduces errors** related to underestimating or overestimating gas.
+- **Simplifies fee management** by automatically estimating optimal fees.
+- **Reduces errors** related to underestimating or overestimating gas.
 
 By default, the `gas-adjustment` applied to the `auto` value is typically **1.3**. If transactions are still failing due to low fees, it may indicate that the gas adjustment, acting as a multiplier for the automatically calculated fee, is too low. In such cases, you may need to increase this value for specific transactions.
 
 To update the gas adjustment in the **execute** call, replace `auto` with your desired adjustment value. The transaction will still use automatic gas estimation but will apply the specified gas adjustment instead of the default.
 
+**Session key vs direct signing:** This tutorial uses the default **`useAbstraxionSigningClient()`** path (gasless / session-style signing with Treasury). For **user-pays-gas** flows, `useAbstraxionSigningClient({ requireAuth: true })`, and **explicit fee simulation** (`simulate`, `calculateFee`) instead of `"auto"`, see the demo route **`/direct-signing-demo`** in [xion.js `apps/demo-app`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/direct-signing-demo).
+
 If everything is configured correctly, you should see the transaction results displayed as shown in the previous section.
 
-<figure><img src="../../../.gitbook/assets/image (36).png" alt=""><figcaption><p>After clicking "Increment" you should see the confirmation above</p></figcaption></figure>
+After clicking "Increment" you should see the confirmation above
 
-These core components form the foundation for building and deploying a successful app! If you have any questions or need support, feel free to reach out to us on **Discord** or [**GitHub**](https://github.com/burnt-labs/xion.js).
+These core components form the foundation for building and deploying a successful app! If you have any questions or need support, feel free to reach out to us on **Discord** or **[GitHub](https://github.com/burnt-labs/xion.js)**.
