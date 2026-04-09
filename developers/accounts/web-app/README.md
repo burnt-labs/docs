@@ -22,8 +22,8 @@ Pick a document by what you are building. For **how to choose** `authentication.
 | Guide | Description |
 | ----- | ----------- |
 | [Account abstraction with gasless transactions](build-react-dapp-with-account-abstraxion.md) | End-to-end Next.js app: Treasury, Counter contract, **`auto`** auth, hooks, and transactions. |
-| [Custom UI and Abstraxion loading states](custom-ui-abstraxion-authentication.md) | Hook-first UX: `login`, granular flags, session lifecycle (works across `auto` / `popup` / `redirect`). |
 | [Abstraxion signer mode](abstraxion-signer-mode.md) | **`type: "signer"`**: external wallets, `getSignerConfig`, registration callbacks, indexers. |
+| [Custom UI and Abstraxion loading states](custom-ui-abstraxion-authentication.md) | Hook-first UX: `login`, granular flags, session lifecycle (works across `auto` / `popup` / `redirect`). |
 
 **Reference implementation:** [xion.js `apps/demo-app`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app) (Next.js App Router; each route isolates one pattern).
 
