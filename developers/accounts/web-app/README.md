@@ -19,11 +19,7 @@ XION **Meta Accounts** and **gasless** flows are integrated into web apps throug
 
 Pick a document by what you are building. For **how to choose** `authentication.type` (`auto`, `signer`, `embedded`, …), see [Authentication and integration details](#authentication-and-integration-details) below.
 
-| Guide | Description |
-| ----- | ----------- |
-| [Account abstraction with gasless transactions](build-react-dapp-with-account-abstraxion.md) | End-to-end Next.js app: Treasury, Counter contract, **`auto`** auth, hooks, and transactions. |
-| [Abstraxion signer mode](abstraxion-signer-mode.md) | **`type: "signer"`**: external wallets, `getSignerConfig`, registration callbacks, indexers. |
-| [Custom UI and Abstraxion loading states](custom-ui-abstraxion-authentication.md) | Hook-first UX: `login`, granular flags, session lifecycle (works across `auto` / `popup` / `redirect`). |
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Account abstraction with gasless transactions</strong></td><td>End-to-end Next.js app: Treasury, Counter contract, <strong>auto</strong> auth, hooks, and transactions.</td><td><a href="build-react-dapp-with-account-abstraxion.md">build-react-dapp-with-account-abstraxion</a></td></tr><tr><td><strong>Abstraxion signer mode</strong></td><td><strong>type: "signer"</strong>: external wallets, <code>getSignerConfig</code>, registration callbacks, indexers.</td><td><a href="abstraxion-signer-mode.md">abstraxion-signer-mode</a></td></tr><tr><td><strong>Custom UI and Abstraxion loading states</strong></td><td>Hook-first UX: <code>login</code>, granular flags, session lifecycle (works across <code>auto</code> / <code>popup</code> / <code>redirect</code>).</td><td><a href="custom-ui-abstraxion-authentication.md">custom-ui-abstraxion-authentication</a></td></tr></tbody></table>
 
 **Reference implementation:** [xion.js `apps/demo-app`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app) (Next.js App Router; each route isolates one pattern).
 
