@@ -16,9 +16,25 @@
 
 XION **Meta Accounts** and **gasless** flows are integrated into web apps through **`@burnt-labs/abstraxion`** (React provider and hooks). Lower-level signing and account types are shared with **`@burnt-labs/abstraxion-core`**.
 
-**Start here:** pick an **authentication mode** (`authentication.type` on `AbstraxionProvider`), then follow the guides in the table below.
+## Guides in this section
 
-## Recommended default: `auto`
+Pick a document by what you are building. For **how to choose** `authentication.type` (`auto`, `signer`, `embedded`, …), see [Authentication and integration details](#authentication-and-integration-details) below.
+
+| Guide | Description |
+| ----- | ----------- |
+| [Account abstraction with gasless transactions](build-react-dapp-with-account-abstraxion.md) | End-to-end Next.js app: Treasury, Counter contract, **`auto`** auth, hooks, and transactions. |
+| [Custom UI and Abstraxion loading states](custom-ui-abstraxion-authentication.md) | Hook-first UX: `login`, granular flags, session lifecycle (works across `auto` / `popup` / `redirect`). |
+| [Abstraxion signer mode](abstraxion-signer-mode.md) | **`type: "signer"`**: external wallets, `getSignerConfig`, registration callbacks, indexers. |
+
+**Reference implementation:** [xion.js `apps/demo-app`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app) (Next.js App Router; each route isolates one pattern).
+
+---
+
+## Authentication and integration details
+
+Use this section when you need **mode names**, **defaults**, **env vars**, or **signing** behavior. The guides above walk through concrete projects; this part is the compact map.
+
+### Recommended default: `auto`
 
 For most new apps, set:
 
@@ -33,7 +49,7 @@ authentication: {
 
 **Backward compatibility:** If you omit `authentication` entirely, the SDK defaults to **`redirect`** for the dashboard flow. That remains supported, but **new integrations should set `auto` explicitly** so intent is clear and desktop users get popups where appropriate.
 
-## Glossary (`AuthenticationConfig.type`)
+### Glossary (`AuthenticationConfig.type`)
 
 These labels match the TypeScript union on `AbstraxionProvider` config (`@burnt-labs/abstraxion`).
 
@@ -45,7 +61,7 @@ These labels match the TypeScript union on `AbstraxionProvider` config (`@burnt-
 | **`signer`** | No dashboard redirect: you supply a **`getSignerConfig`** (MetaMask, Turnkey, etc.) and AA API / contract metadata. See [Abstraxion signer mode](abstraxion-signer-mode.md). |
 | **`embedded`** | Dashboard UI runs inside an **iframe** you host (`iframeUrl`). Use **`AbstraxionEmbed`** and `authentication.type: "embedded"`. See demo routes `/embedded-inline` and `/embedded-dynamic`. |
 
-## When to use which mode
+### When to use which mode
 
 | Scenario | Prefer | Example in demo app | Key env / config |
 | -------- | ------ | ------------------- | ---------------- |
@@ -56,23 +72,13 @@ These labels match the TypeScript union on `AbstraxionProvider` config (`@burnt-
 | Session-key vs user-pays-gas signing (`useAbstraxionSigningClient` vs `{ requireAuth: true }`) | See demo (auth is **`signer`** in that route) | [`/direct-signing-demo`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/direct-signing-demo) | Same env family as signer mode; compare hooks and fee simulation in source |
 | Inline or “button + modal” embedded dashboard | **`embedded`** | [`/embedded-inline`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/embedded-inline), [`/embedded-dynamic`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/embedded-dynamic) | `NEXT_PUBLIC_IFRAME_URL` (demo) |
 
-## Signing model (brief)
+### Signing model (brief)
 
 - **Default gasless path:** `useAbstraxionSigningClient()` — session-style signing (Treasury / grantee flow) as in the main tutorials.
 - **Direct / user-pays-gas:** `useAbstraxionSigningClient({ requireAuth: true })` — see the **direct-signing** demo for fee simulation vs `"auto"`.
 
 Details stay in the tutorial and the demo source so this hub stays stable for navigation.
 
-## Next.js note
+### Next.js note
 
 Some demo layouts use `export const dynamic = "force-dynamic"` when **server layouts read `process.env` at runtime** (e.g. signer or embedded). If your provider reads secrets or non-`NEXT_PUBLIC_*` values in a layout, apply the same pattern.
-
-## Guides in this section
-
-| Guide | Description |
-| ----- | ----------- |
-| [Account abstraction with gasless transactions](build-react-dapp-with-account-abstraxion.md) | End-to-end Next.js app: Treasury, Counter contract, **`auto`** auth, hooks, and transactions. |
-| [Custom UI and Abstraxion loading states](custom-ui-abstraxion-authentication.md) | Hook-first UX: `login`, granular flags, session lifecycle (works across `auto` / `popup` / `redirect`). |
-| [Abstraxion signer mode](abstraxion-signer-mode.md) | **`type: "signer"`**: external wallets, `getSignerConfig`, registration callbacks, indexers. |
-
-Public reference implementation: **[xion.js `apps/demo-app`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app)** (Next.js App Router; each route isolates one pattern).
