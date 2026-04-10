@@ -5,8 +5,8 @@ vars:
   primary_auth_mode: signer
   sdk_packages: "@burnt-labs/abstraxion, @burnt-labs/abstraxion-core"
   demo_app_routes: "/signer-mode, /direct-signing-demo"
-  required_env_vars: "NEXT_PUBLIC_CHAIN_ID, NEXT_PUBLIC_AA_API_URL, NEXT_PUBLIC_CODE_ID, NEXT_PUBLIC_CHECKSUM"
-  optional_env_vars: "Appendix — RPC/REST/gas, treasury, indexer, Turnkey, etc."
+  required_env_vars: "NEXT_PUBLIC_CHAIN_ID + network preset block (AA API + smart-account wasm) from demo-app .env.example"
+  optional_env_vars: "Appendix — RPC/REST/gas overrides, treasury, indexer, Turnkey, etc."
 ---
 
 # Abstraxion signer mode
@@ -21,31 +21,30 @@ This is the **only custom logic** you must write: an async function that returns
 
 In **`demo-app`**, see **[`useTurnkeyViem.ts`](https://github.com/burnt-labs/xion.js/blob/main/apps/demo-app/src/hooks/useTurnkeyViem.ts)** (or **`useTurnkeyRawAPI.ts`**), wired through **[`useTurnkeyForAbstraxion`](https://github.com/burnt-labs/xion.js/blob/main/apps/demo-app/src/hooks/useTurnkeyForAbstraxion.ts)** and passed from **[`signer-mode/layout.tsx`](https://github.com/burnt-labs/xion.js/blob/main/apps/demo-app/src/app/signer-mode/layout.tsx)** into **`AbstraxionProvider`**. Replace that hook with your wallet (MetaMask, Privy, …); keep the same **`authentication`** shape.
 
-**2. Required fields on `AbstraxionProvider` `config`**
+**2. Fields on `AbstraxionProvider` `config` (what is “default” vs custom)**
 
-Besides **`chainId`** at the top level, under **`authentication`** you must set:
+Top level you always pass **`chainId`**. **`normalizeAbstraxionConfig`** already fills **`rpcUrl`**, **`restUrl`**, **`gasPrice`**, and **`feeGranter`** from **`@burnt-labs/constants`** when you omit them for a **known XION `chainId`**—same pattern as other Abstraxion modes.
 
-| Field | Purpose |
-| ----- | ------- |
-| **`type`** | `"signer"` |
-| **`getSignerConfig`** | Your async factory (step1). |
-| **`aaApiUrl`** | Base URL of the Account Abstraction API for your network. |
-| **`smartAccountContract`** | **`{ codeId, checksum, addressPrefix? }`** for the smart-account wasm used with that AA API. **`codeId`** and **`checksum`** must match what the AA API expects. |
+Under **`authentication`** with **`type: "signer"`**:
 
-**3. Environment variables you must set**
+| Field | You implement? | Default / preset |
+| ----- | -------------- | ---------------- |
+| **`getSignerConfig`** | **Yes** — this is your wallet/custody integration. | — |
+| **`aaApiUrl`** | No — for **public XION networks** use the **canonical AA API URL** paired with that **`chainId`**. | Published in **[`apps/demo-app/.env.example`](https://github.com/burnt-labs/xion.js/blob/main/apps/demo-app/.env.example)** (`NEXT_PUBLIC_AA_API_URL` block). Override only if you point at a **non-standard** AA deployment. |
+| **`smartAccountContract`** | No — for **public XION networks** use the **canonical wasm `codeId` / `checksum`** (and optional **`addressPrefix`**, commonly **`xion`**) shipped for that network + AA API. | Same file: **`NEXT_PUBLIC_CODE_ID`**, **`NEXT_PUBLIC_CHECKSUM`**, **`NEXT_PUBLIC_ADDRESS_PREFIX`**. **`codeId` / `checksum` must match what that AA API expects** (see comments in `.env.example`). |
 
-The demo reads these into **`layout.tsx`**; **without them, signer mode will not work** (the layout even logs in the browser if **`CODE_ID`** / **`CHECKSUM`** are missing).
+So **`aaApiUrl`** and **`smartAccountContract`** are **not** open-ended choices: they are **network defaults** you copy from the template for your **`chainId`**, not values you invent—unless you run custom infrastructure.
 
-| Variable | Maps to |
-| -------- | ------- |
-| `NEXT_PUBLIC_CHAIN_ID` | `config.chainId` |
-| `NEXT_PUBLIC_AA_API_URL` | `authentication.aaApiUrl` |
-| `NEXT_PUBLIC_CODE_ID` | `smartAccountContract.codeId` |
-| `NEXT_PUBLIC_CHECKSUM` | `smartAccountContract.checksum` |
+The TypeScript **`SignerAuthentication`** type still expects **`aaApiUrl`** and **`smartAccountContract`** on the object you pass in; fill them from that preset block (or your override).
 
-Copy values from **[`apps/demo-app/.env.example`](https://github.com/burnt-labs/xion.js/blob/main/apps/demo-app/.env.example)** for testnet, or use the same variables your AA API / ops team documents for your environment.
+**3. Environment variables (minimal mental model)**
 
-**That is enough to understand the integration.** Everything else (RPC overrides, treasury, indexers, Turnkey org id, …) is optional for tuning or for matching the full demo—see the [appendix](#appendix-optional-provider-fields-and-environment-variables) below.
+1. Set **`NEXT_PUBLIC_CHAIN_ID`** to your target public network (e.g. testnet value from `.env.example`).
+2. Copy the **Account Abstraction API** + **Smart account contract** lines from **`.env.example`** for that network into your env. Those strings **are** the defaults for `aaApiUrl` and `smartAccountContract`; the demo’s **`layout.tsx`** maps them into `AbstraxionProvider` config.
+
+If **`CODE_ID`** / **`CHECKSUM`** are missing in the browser, the demo **logs an error**—the preset block should always include them for real use.
+
+**That is enough to understand the integration.** RPC overrides, treasury, indexers, Turnkey org id, and the exact env→field mapping for **`layout.tsx`** are in the [appendix](#appendix-optional-provider-fields-and-environment-variables).
 
 ## When to use signer mode
 
@@ -80,6 +79,18 @@ See **`/direct-signing-demo`** in **`demo-app`** for side-by-side examples.
 
 Use this when you need **gasless treasury grants**, **faster indexers**, or to **match `signer-mode/layout.tsx` line-for-line**. The canonical list with comments is **[`apps/demo-app/.env.example`](https://github.com/burnt-labs/xion.js/blob/main/apps/demo-app/.env.example)**.
 
+### Network preset env → `signer-mode/layout.tsx` (AA + wasm defaults)
+
+These are the **defaults for public chains**—not “extra” knobs. The demo reads:
+
+| Variable | Maps to |
+| -------- | ------- |
+| `NEXT_PUBLIC_CHAIN_ID` | `config.chainId` |
+| `NEXT_PUBLIC_AA_API_URL` | `authentication.aaApiUrl` |
+| `NEXT_PUBLIC_CODE_ID` | `smartAccountContract.codeId` |
+| `NEXT_PUBLIC_CHECKSUM` | `smartAccountContract.checksum` |
+| `NEXT_PUBLIC_ADDRESS_PREFIX` | `smartAccountContract.addressPrefix` (demo falls back to **`xion`** if unset) |
+
 ### Optional fields on `config`
 
 **Under `authentication`**
@@ -92,7 +103,6 @@ Use this when you need **gasless treasury grants**, **faster indexers**, or to *
 - **`rpcUrl`**, **`restUrl`**, **`gasPrice`** — **`NEXT_PUBLIC_RPC_URL`**, **`NEXT_PUBLIC_REST_URL`**, **`NEXT_PUBLIC_GAS_PRICE`**. Often set in `.env.example`; for known XION **`chainId`** values the SDK can fill RPC/REST/gas when omitted.
 - **`treasury`** — **`NEXT_PUBLIC_TREASURY_ADDRESS`** (gasless grant UX).
 - **`feeGranter`** — **`NEXT_PUBLIC_FEE_GRANTER_ADDRESS`**.
-- **`smartAccountContract.addressPrefix`** — **`NEXT_PUBLIC_ADDRESS_PREFIX`**; the demo defaults to **`xion`** if unset.
 
 **Framework note (Next.js App Router)**
 
