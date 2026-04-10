@@ -26,19 +26,13 @@ Reference implementation: [demo app `signer-mode`](https://github.com/burnt-labs
 
 ## Provider configuration shape
 
-### Top-level config (defaults like every other mode)
+Signer authentication adds these fields on `AbstraxionProvider` **`config.authentication`** (alongside **`type: "signer"`**):
 
-`normalizeAbstraxionConfig` fills **`rpcUrl`**, **`restUrl`**, **`gasPrice`**, and **`feeGranter`** from **`chainId`** when you omit them (via `@burnt-labs/constants`). **`chainId`** remains required. Signer mode benefits from the same defaults as dashboard auth; override only for custom RPC/REST or gas settings.
-
-### `authentication` when `type: "signer"`
-
-| Field | Required? | Role |
-| ----- | --------- | ---- |
-| **`getSignerConfig`** | Yes | **Main integration point** — `() => Promise<SignerConfig>`; called when the user connects; must resolve after your wallet / vendor session is ready. |
-| **`aaApiUrl`** | Yes (TypeScript) | AA API base URL for account creation. Demos use **`NEXT_PUBLIC_AA_API_URL`**. Not inferred from `chainId` alone. |
-| **`smartAccountContract`** | Yes | `{ codeId, checksum, addressPrefix? }` for wasm smart-account creation when no account exists. Set from env in demos (**`NEXT_PUBLIC_CODE_ID`**, **`NEXT_PUBLIC_CHECKSUM`**); not auto-filled from chain. |
-| **`indexer`** | Optional | Numia or Subquery-style config for faster account discovery. **Omit** to fall back to RPC-based discovery (slower but valid). |
-| **`treasuryIndexer`** | Optional | `{ url }` for treasury grant metadata. **Omit** to use the **chain-default DaoDao indexer URL** inside the SDK (see `createGrantConfigFromConfig` / `getDaoDaoIndexerUrl` in xion.js). |
+- **`getSignerConfig`** — `() => Promise<SignerConfig>`; **primary integration point** — return the active signer once your wallet or custody layer is ready.
+- **`aaApiUrl`** — Account Abstraction API base URL for your environment.
+- **`smartAccountContract`** — `{ codeId, checksum, addressPrefix? }` so new smart accounts can be created when none exist.
+- **`indexer`** (optional) — Numia or Subquery-style indexer for faster account discovery.
+- **`treasuryIndexer`** (optional) — DaoDao-style treasury indexer URL for grant configuration lookups.
 
 Top-level **`treasury`** and **`feeGranter`** on `config` still apply for gasless paths, same as other modes.
 
@@ -57,8 +51,6 @@ Top-level **`treasury`** and **`feeGranter`** on `config` still apply for gasles
 | `NEXT_PUBLIC_INDEXER_TOKEN` | Numia auth token when using Numia |
 | `NEXT_PUBLIC_INDEXER_TYPE=subquery` | Switch indexer flavor; may require `codeId` in config |
 | `NEXT_PUBLIC_TREASURY_INDEXER_URL` | Optional treasury indexer |
-
-Layouts that read **`process.env` at runtime** in the App Router may need `export const dynamic = "force-dynamic"` (see demo **`signer-mode/layout.tsx`**).
 
 ## Cross-library registration (Turnkey demo)
 

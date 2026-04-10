@@ -1,12 +1,12 @@
 ---
-description: End-to-end Next.js tutorial — Treasury, Counter contract, auto auth, Abstraxion hooks
+description: End-to-end React (Vite) tutorial — Treasury, Counter contract, auto auth, Abstraxion hooks
 vars:
   doc_type: tutorial
   primary_auth_mode: auto
   sdk_packages: "@burnt-labs/abstraxion, @burnt-labs/abstraxion-core"
   demo_app_routes: "/, /loading-states"
   demo_app_routes_note: "/ is monorepo demo hub; /loading-states shows hook-first auth without legacy modal"
-  required_env_vars: "NEXT_PUBLIC_CHAIN_ID, NEXT_PUBLIC_RPC_URL, NEXT_PUBLIC_REST_URL, NEXT_PUBLIC_GAS_PRICE, NEXT_PUBLIC_TREASURY_ADDRESS, NEXT_PUBLIC_AUTH_APP_URL"
+  required_env_vars: "VITE_CHAIN_ID, VITE_RPC_URL, VITE_REST_URL, VITE_GAS_PRICE, VITE_TREASURY_ADDRESS, VITE_AUTH_APP_URL"
 ---
 
 # Account Abstraction with Gasless Transactions
@@ -17,7 +17,7 @@ The **`AbstraxionProvider`** examples below use **`authentication.type: "auto"`*
 
 To better understand Account Abstraction you can visit the [Introduction to Account Abstraction](https://docs.burnt.com/xion/developers/learn/intro-to-account-abstraction) page.
 
-A fully functional demo of this app is also available in the [Xion.js](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app) repository.
+The [xion.js `demo-app`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app) is a **Next.js** reference; **this tutorial uses Vite + React** so you can follow the same patterns without a framework lock-in.
 
 For **authentication modes** (`auto`, `signer`, `embedded`, etc.), see the section hub: [Web App Development](README.md).
 
@@ -27,28 +27,28 @@ Before getting started, ensure you have the following installed:
 
 - **[Node.js](https://nodejs.org/)** (LTS version recommended) – Required for running the development environment and installing dependencies.
 
-## Setting up the Project
+## Setting up the project
 
-Most crypto frontends are **client-only**; **plain React** (Vite, CRA, etc.) works well with Abstraxion. This tutorial uses **[Next.js](https://nextjs.org) App Router** because the official [demo app](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app) does—if you use another bundler, map `src/app/layout.tsx` and `src/app/page.tsx` to your entry and root component.
+This guide targets **React with [Vite](https://vitejs.dev/)** and **TypeScript**. Abstraxion is framework-agnostic; if you prefer **Next.js**, use the same provider config and component code in a client layout/page—see [xion.js `demo-app`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app).
 
-### Step 1: Create a New Next.js Project
-
-Run the following command in your terminal to generate a Next.js project with the required settings:
+### Step 1: Create a Vite + React + TypeScript app
 
 ```bash
-npx create-next-app@14.0.0 nextjs-xion-abstraxion-example \
-  --use-npm --ts --eslint --tailwind --app --src-dir --import-alias "@/*"
+npm create vite@latest xion-abstraxion-example -- --template react-ts
+cd xion-abstraxion-example
+npm install
 ```
 
-### Step 2: Navigate to the Project Directory
+### Step 2: Add Tailwind CSS (optional but matches the snippets below)
 
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
 ```
-cd nextjs-xion-abstraxion-example
-```
 
-### Step 3: Install the Abstraxion Package
+Point Tailwind at your sources (see [Tailwind v3 + Vite](https://v3.tailwindcss.com/docs/guides/vite)): set `content` in `tailwind.config.js` to `["./index.html", "./src/**/*.{js,ts,jsx,tsx}"]`, add the `@tailwind` directives to `src/index.css`, and ensure **`src/main.tsx`** imports **`./index.css`**.
 
-Add the **Abstraxion** package to the project:
+### Step 3: Install Abstraxion
 
 ```bash
 npm i @burnt-labs/abstraxion
@@ -56,27 +56,15 @@ npm i @burnt-labs/abstraxion
 
 `@burnt-labs/abstraxion` depends on **`@burnt-labs/abstraxion-core`** for signing and session primitives. You normally do not install `abstraxion-core` separately; keep both on compatible versions when upgrading.
 
-### Step 4: Start the Development Server
+### Step 4: Start the dev server
 
-Run the following command to start the development server:
-
-```
+```bash
 npm run dev
 ```
 
-### Step 5: Open the Project in a Browser
+### Step 5: Open the app
 
-Once the server is running, open **[http://localhost:3000](http://localhost:3000)** in a web browser. You should see a Next.js welcome page with an animated React logo.
-
-{% hint style="warning" %}
-**NOTE:**
-
-A mismatch in package versions can lead to build failures, resulting in an error similar to the following:  
-
-`Module build failed: UnhandledSchemeError: Reading from "node:url" is not handled by plugins (Unhandled scheme).`
-
-To resolve this issue, update your `next.config.js` file located at the root of your project with the configuration provided in this file: [https://gist.githubusercontent.com/probablyangg/4c520e376cdddf6991951e233d1f9bb6/raw/fa0ecaf1b2e52876610be9d36a8aeaaef53f0dd5/next.config.js](https://gist.githubusercontent.com/probablyangg/4c520e376cdddf6991951e233d1f9bb6/raw/fa0ecaf1b2e52876610be9d36a8aeaaef53f0dd5/next.config.js)
-{% endhint %}
+Open the URL Vite prints (usually **[http://localhost:5173](http://localhost:5173)**). You should see the default Vite + React welcome screen until you replace **`src/App.tsx`** in the sections below.
 
 ## Deploying a Contract On-Chain
 
@@ -132,77 +120,66 @@ Once the preview is to your liking click the "**Create**" button to create the T
 Learn more about Treasury Contracts [here](../../../others/archived/create-a-gas-less-user-experience/).
 {% endhint %}
 
-## Integrating the Abstraxion Library
+## Integrating the Abstraxion library
 
-To set up the **Abstraxion Library**, replace the contents of `src/app/layout.tsx` with the following code.
+Wrap your app with **`AbstraxionProvider`**. With Vite, the usual place is **`src/main.tsx`** (the React root).
 
-{% code title="src/app/layout.tsx" %}
+{% code title="src/main.tsx" %}
 
 ```typescript
-"use client";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App";
 import { AbstraxionProvider } from "@burnt-labs/abstraxion";
 
-const inter = Inter({ subsets: ["latin"] });
-
 const abstraxionConfig = {
-  chainId: process.env.NEXT_PUBLIC_CHAIN_ID!,
-  treasury: process.env.NEXT_PUBLIC_TREASURY_ADDRESS,
-  rpcUrl: process.env.NEXT_PUBLIC_RPC_URL!,
-  restUrl: process.env.NEXT_PUBLIC_REST_URL!,
-  gasPrice: process.env.NEXT_PUBLIC_GAS_PRICE!,
+  chainId: import.meta.env.VITE_CHAIN_ID!,
+  treasury: import.meta.env.VITE_TREASURY_ADDRESS,
+  rpcUrl: import.meta.env.VITE_RPC_URL!,
+  restUrl: import.meta.env.VITE_REST_URL!,
+  gasPrice: import.meta.env.VITE_GAS_PRICE!,
   authentication: {
     type: "auto" as const,
-    authAppUrl: process.env.NEXT_PUBLIC_AUTH_APP_URL,
+    authAppUrl: import.meta.env.VITE_AUTH_APP_URL,
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <AbstraxionProvider config={abstraxionConfig}>
-          {children}
-        </AbstraxionProvider>
-      </body>
-    </html>
-  );
-}
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <AbstraxionProvider config={abstraxionConfig}>
+      <App />
+    </AbstraxionProvider>
+  </StrictMode>,
+);
 ```
 
 {% endcode %}
 
 {% hint style="warning" %}
-Set **`NEXT_PUBLIC_*` environment variables** in `.env.local` (or your host): chain id, RPC, REST, gas price (e.g. `0.025uxion`), treasury address, and **`NEXT_PUBLIC_AUTH_APP_URL`** for the XION auth app. Mismatched or missing values will break login or transactions.
+Create a **`.env`** file in the project root (Vite only exposes variables prefixed with **`VITE_`**). Set **`VITE_CHAIN_ID`**, **`VITE_RPC_URL`**, **`VITE_REST_URL`**, **`VITE_GAS_PRICE`** (e.g. `0.025uxion`), **`VITE_TREASURY_ADDRESS`**, and **`VITE_AUTH_APP_URL`** for the XION auth app. Restart the dev server after changing env files. Wrong or missing values will break login or transactions.
 {% endhint %}
 
-- **`"use client"`** — Required so the layout runs as a **client component** (Abstraxion uses browser APIs).
-- **`AbstraxionProvider`** — Wraps the app and supplies **Abstraxion hooks** (`useAbstraxionAccount`, `useAbstraxionSigningClient`, etc.).
+- **`AbstraxionProvider`** — Supplies **Abstraxion hooks** (`useAbstraxionAccount`, `useAbstraxionSigningClient`, etc.) to everything under this root.
 - **`authentication.type: "auto"`** — **Recommended default**: desktop users get a **popup** auth window; mobile / PWA typically falls back to **full-page redirect**. At runtime the SDK normalizes `auto` to `popup` or `redirect` internally.
 
 ### Optional: backward-compatible default (`redirect`)
 
 If you **omit** the entire `authentication` field, the SDK defaults to the legacy **dashboard redirect** flow (same as `type: "redirect"`). That remains supported for older apps, but **new projects should set `auto` explicitly** so behavior matches current product guidance. See [Web App Development](README.md).
 
-### Next.js: runtime `process.env` in layouts
+### Optional: Next.js instead of Vite
 
-If you read **non-`NEXT_PUBLIC_`** secrets in a layout, you may need `export const dynamic = "force-dynamic"` so the layout is not statically optimized away—see the [demo app layouts](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app) for the same pattern.
+Use the same **`abstraxionConfig`** shape in a **client** root layout, reading **`process.env.NEXT_PUBLIC_*`** instead of **`import.meta.env.VITE_*`**. The official [demo app](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app) is Next-based; if you hit bundler errors such as `UnhandledSchemeError` for `node:url`, apply the [Next.js config workaround](https://gist.githubusercontent.com/probablyangg/4c520e376cdddf6991951e233d1f9bb6/raw/fa0ecaf1b2e52876610be9d36a8aeaaef53f0dd5/next.config.js) from the earlier version of this guide.
 
-## Adding hooks to the homepage
+## Adding hooks to the main screen
 
-Replace the contents of `src/app/page.tsx` with the following code. It uses **`login()`** from **`useAbstraxionAccount`** and plain **`<button>`** elements—**not** the legacy **`<Abstraxion />`** modal (that path is deprecated for new apps).
+Replace the contents of **`src/App.tsx`** with the following code. It uses **`login()`** from **`useAbstraxionAccount`** and **native `<button type="button">` elements**—**not** the legacy **`<Abstraxion />`** modal (deprecated for new apps).
 
 ```typescript
-"use client";
 import { useEffect } from "react";
 import { useAbstraxionAccount } from "@burnt-labs/abstraxion";
 
-export default function Page(): JSX.Element {
+export default function App(): JSX.Element {
   const { data: account, login, logout, isLoading } = useAbstraxionAccount();
 
   useEffect(() => {
@@ -261,22 +238,22 @@ Now, click **CONNECT** and try it out.
 
 The contract provides a method to query the current `count` value. Let's fetch this value and display it in the app.
 
-Replace the contents of `src/app/page.tsx` with the following code:
+Replace the contents of **`src/App.tsx`** with the following code:
 
 ```typescript
-"use client";
 import { useState, useEffect } from "react";
 import {
   useAbstraxionAccount,
   useAbstraxionSigningClient,
   useAbstraxionClient,
 } from "@burnt-labs/abstraxion";
+
 const contractAddress = "YOUR_COUNTER_CONTRACT_ADDRESS_HERE";
 
 const btnClass =
   "w-full rounded-md border border-zinc-600 bg-zinc-900 px-4 py-2 text-white disabled:opacity-50";
 
-export default function Page(): JSX.Element {
+export default function App(): JSX.Element {
   const { data: account, login, isLoading: isAuthBusy } =
     useAbstraxionAccount();
   const { client, logout } = useAbstraxionSigningClient();
@@ -343,7 +320,7 @@ export default function Page(): JSX.Element {
         </>
       ) : null}
       {count ? (
-        <div className="flex flex-row gap-4 rounded-md border-2 border-primary p-4">
+        <div className="flex flex-row gap-4 rounded-md border-2 border-blue-500 p-4">
           <div className="flex flex-row gap-6">
             <div>Count:</div>
             <div>{count}</div>
@@ -365,13 +342,11 @@ Update **`YOUR_COUNTER_CONTRACT_ADDRESS_HERE`** with the Counter contract addres
 
 Querying the blockchain is useful, but to fully interact with it, we need a way to modify the chain state. This section will implement transaction submission using the **Abstraxion SDK**.
 
-Replace the contents of `src/app/page.tsx` with the following code:
+Replace the contents of **`src/App.tsx`** with the following code.
 
-{% code title="src/app/page.tsx" %}
+{% code title="src/App.tsx" %}
 
 ```typescript
-"use client";
-import Link from "next/link";
 import { useState, useEffect } from "react";
 import {
   useAbstraxionAccount,
@@ -387,7 +362,7 @@ type ExecuteResultOrUndefined = ExecuteResult | undefined;
 const btnClass =
   "w-full rounded-md border border-zinc-600 bg-zinc-900 px-4 py-2 text-white disabled:opacity-50";
 
-export default function Page(): JSX.Element {
+export default function App(): JSX.Element {
   const { data: account, login, isLoading: isAuthBusy } =
     useAbstraxionAccount();
   const { client, logout } = useAbstraxionSigningClient();
@@ -491,7 +466,7 @@ export default function Page(): JSX.Element {
         </>
       ) : null}
       {count !== null ? (
-        <div className="flex flex-row gap-4 rounded-md border-2 border-primary p-4">
+        <div className="flex flex-row gap-4 rounded-md border-2 border-blue-500 p-4">
           <div className="flex flex-row gap-6">
             <div>Count:</div>
             <div>{count}</div>
@@ -513,13 +488,14 @@ export default function Page(): JSX.Element {
             <p className="text-sm">{executeResult.height}</p>
           </div>
           <div className="mt-2">
-            <Link
+            <a
               className="text-black underline visited:text-purple-600 dark:text-white"
               href={blockExplorerUrl}
               target="_blank"
+              rel="noopener noreferrer"
             >
               View in Block Explorer
-            </Link>
+            </a>
           </div>
         </div>
       ) : null}

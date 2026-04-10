@@ -65,7 +65,6 @@ useEffect(() => {
 ## Example: minimal custom UI
 
 ```typescript
-"use client";
 import { useAbstraxionAccount, useAbstraxionSigningClient } from "@burnt-labs/abstraxion";
 
 const btnClass =
@@ -117,8 +116,8 @@ export default function Page(): JSX.Element {
 
 ## Migrating from the legacy modal pattern
 
-1. Remove **`<Abstraxion />`** and **`useModal`** if you no longer need the bundled modal.
-2. Prefer **`login()`** (and **`logout()`**) for explicit control.
+1. Remove **`<Abstraxion />`** if you still mount the old bundled modal.
+2. Prefer **`login()`** (and **`logout()`**) with **native `<button>`** (or your design system) instead of Burnt UI primitives.
 3. Replace a single “connecting” boolean with the **granular flags** above to avoid UI flicker and double-submits.
 
 ## Related
