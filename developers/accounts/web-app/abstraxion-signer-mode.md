@@ -5,8 +5,8 @@ vars:
   primary_auth_mode: signer
   sdk_packages: "@burnt-labs/abstraxion, @burnt-labs/abstraxion-core"
   demo_app_routes: "/signer-mode, /direct-signing-demo"
-  required_env_vars: "See appendix — chainId + presets from demo-app .env.example"
-  optional_env_vars: "Appendix — overrides, treasury, indexer, Turnkey, etc."
+  required_env_vars: "chainId (+ getSignerConfig in app code); AA/wasm default with network id"
+  optional_env_vars: "Appendix — env overrides, treasury, indexer, Turnkey, etc."
 ---
 
 # Abstraxion signer mode
@@ -66,21 +66,23 @@ Match **`signer-mode/layout.tsx`** or extend it. Full commented env: **[`apps/de
 | --------- | ----- | ----- |
 | Yes | **`type`** | Must be **`"signer"`**. |
 | Yes | **`getSignerConfig`** | Your async factory → **`SignerConfig`**. |
-| Yes | **`aaApiUrl`** | AA API base URL; for public XION chains use the value paired with your **`chainId`** in `.env.example`. |
-| Yes | **`smartAccountContract`** | **`{ codeId, checksum, addressPrefix? }`**. **`codeId` / `checksum`** must match the AA API; **`addressPrefix`** optional (demo defaults **`xion`**). Use `.env.example` presets for standard networks. |
+| No | **`aaApiUrl`** | **Defaults with `chainId`** for supported XION networks (same idea as RPC/REST). Only set in config to **override** or when your bundler supplies it via env (see **demo** `layout.tsx`). |
+| No | **`smartAccountContract`** | **`{ codeId, checksum, addressPrefix? }`** — **defaults with `chainId`** for standard networks. Override for custom AA / wasm; **`codeId` / `checksum`** must stay consistent with the AA API you use. |
 | No | **`indexer`** | Set when using **`NEXT_PUBLIC_INDEXER_URL`** (+ type/token per `.env.example`); else RPC discovery. |
 | No | **`treasuryIndexer`** | **`{ url }`** when **`NEXT_PUBLIC_TREASURY_INDEXER_URL`** is set. |
 
+If your **`SignerAuthentication`** type still lists **`aaApiUrl`** / **`smartAccountContract`**, populate them from the **same `chainId` preset** (not new values you invent)—equivalent to copying the block for that network from **[`.env.example`](https://github.com/burnt-labs/xion.js/blob/main/apps/demo-app/.env.example)** into config.
+
 ### Top-level `config` & environment variables
 
-**`chainId`** is required. **`normalizeAbstraxionConfig`** fills **`rpcUrl`**, **`restUrl`**, **`gasPrice`**, and **`feeGranter`** from **`@burnt-labs/constants`** when omitted for a known XION **`chainId`**.
+**`chainId`** is required. **`normalizeAbstraxionConfig`** fills **`rpcUrl`**, **`restUrl`**, **`gasPrice`**, and **`feeGranter`** from **`@burnt-labs/constants`** when omitted for a known XION **`chainId`**. **`aaApiUrl`** and **`smartAccountContract`** follow the same pattern: **preset for the network id**—you do **not** need to treat them as extra required knobs unless you override or use a **custom** AA deployment.
 
 | Required? | Variable | Maps to |
 | --------- | -------- | ------- |
-| Yes | `NEXT_PUBLIC_CHAIN_ID` | `config.chainId` |
-| Yes | `NEXT_PUBLIC_AA_API_URL` | `authentication.aaApiUrl` |
-| Yes | `NEXT_PUBLIC_CODE_ID` | `authentication.smartAccountContract.codeId` |
-| Yes | `NEXT_PUBLIC_CHECKSUM` | `authentication.smartAccountContract.checksum` |
+| Yes | `NEXT_PUBLIC_CHAIN_ID` | `config.chainId` — picks network defaults (RPC/REST/gas/fee granter, and the AA / wasm preset for that id). |
+| No | `NEXT_PUBLIC_AA_API_URL` | `authentication.aaApiUrl` — **override**; demo reads from env. |
+| No | `NEXT_PUBLIC_CODE_ID` | `authentication.smartAccountContract.codeId` — **override**; demo reads from env. |
+| No | `NEXT_PUBLIC_CHECKSUM` | `authentication.smartAccountContract.checksum` — **override**; demo reads from env. |
 | No | `NEXT_PUBLIC_ADDRESS_PREFIX` | `authentication.smartAccountContract.addressPrefix` (demo → **`xion`** if unset) |
 | No | `NEXT_PUBLIC_RPC_URL` | `config.rpcUrl` |
 | No | `NEXT_PUBLIC_REST_URL` | `config.restUrl` |
@@ -92,4 +94,4 @@ Match **`signer-mode/layout.tsx`** or extend it. Full commented env: **[`apps/de
 | No | `NEXT_PUBLIC_TURNKEY_ORG_ID` | Turnkey **`providers.tsx`** only |
 | No | `NEXT_PUBLIC_TURNKEY_API_BASE_URL` | Turnkey **`providers.tsx`** only |
 
-**Next.js:** demo layout uses **`export const dynamic = "force-dynamic"`** for runtime **`process.env`**. Missing **`CODE_ID`** / **`CHECKSUM`** in the browser: demo **logs an error**.
+**Next.js:** demo layout uses **`export const dynamic = "force-dynamic"`** for runtime **`process.env`**. The **demo** `layout.tsx` still **reads** AA / wasm from env; if those vars are empty there, it **logs a warning**—your own app can rely on **chainId-only defaults** instead and omit those env vars when your code supplies the preset.
