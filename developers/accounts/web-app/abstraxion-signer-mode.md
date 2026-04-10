@@ -6,20 +6,46 @@ vars:
   sdk_packages: "@burnt-labs/abstraxion, @burnt-labs/abstraxion-core"
   demo_app_routes: "/signer-mode, /direct-signing-demo"
   required_env_vars: "NEXT_PUBLIC_CHAIN_ID, NEXT_PUBLIC_AA_API_URL, NEXT_PUBLIC_CODE_ID, NEXT_PUBLIC_CHECKSUM"
-  optional_env_vars: "See demo-app .env.example (RPC/REST/gas, treasury, indexer, Turnkey org)"
+  optional_env_vars: "Appendix — RPC/REST/gas, treasury, indexer, Turnkey, etc."
 ---
 
 # Abstraxion signer mode
 
 **Signer mode** (`authentication.type: "signer"`) runs Meta Account flows **without** redirecting the user to the full-page XION dashboard.
 
-## What you actually implement
+## The essentials: `getSignerConfig` and required wiring
 
-The **only app-specific piece** is **`getSignerConfig`**: an async function that returns a **`SignerConfig`** when your wallet or custody layer is ready. Everything else is **wiring** the same `AbstraxionProvider` fields the demo uses (mostly from env).
+**1. Implement `getSignerConfig`**
 
-In **`demo-app`**, that function is built in **[`useTurnkeyViem.ts`](https://github.com/burnt-labs/xion.js/blob/main/apps/demo-app/src/hooks/useTurnkeyViem.ts)** (or **`useTurnkeyRawAPI.ts`** for the raw Turnkey API path), selected via **[`useTurnkeyForAbstraxion`](https://github.com/burnt-labs/xion.js/blob/main/apps/demo-app/src/hooks/useTurnkeyForAbstraxion.ts)**. **[`signer-mode/layout.tsx`](https://github.com/burnt-labs/xion.js/blob/main/apps/demo-app/src/app/signer-mode/layout.tsx)** does **`const { getSignerConfig } = useTurnkeyForAbstraxion(...)`** and passes **`getSignerConfig`** into **`authentication`**. Swap Turnkey for MetaMask, Privy, etc. by replacing **that hook/module**—keep the layout’s env-backed config shape.
+This is the **only custom logic** you must write: an async function that returns a **`SignerConfig`** when your wallet or custody layer is ready. The SDK calls it when the user connects.
 
-Reference routes: [`/signer-mode`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/signer-mode) (Turnkey + session signing) and [`/direct-signing-demo`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/direct-signing-demo) (wallet-led signing comparisons).
+In **`demo-app`**, see **[`useTurnkeyViem.ts`](https://github.com/burnt-labs/xion.js/blob/main/apps/demo-app/src/hooks/useTurnkeyViem.ts)** (or **`useTurnkeyRawAPI.ts`**), wired through **[`useTurnkeyForAbstraxion`](https://github.com/burnt-labs/xion.js/blob/main/apps/demo-app/src/hooks/useTurnkeyForAbstraxion.ts)** and passed from **[`signer-mode/layout.tsx`](https://github.com/burnt-labs/xion.js/blob/main/apps/demo-app/src/app/signer-mode/layout.tsx)** into **`AbstraxionProvider`**. Replace that hook with your wallet (MetaMask, Privy, …); keep the same **`authentication`** shape.
+
+**2. Required fields on `AbstraxionProvider` `config`**
+
+Besides **`chainId`** at the top level, under **`authentication`** you must set:
+
+| Field | Purpose |
+| ----- | ------- |
+| **`type`** | `"signer"` |
+| **`getSignerConfig`** | Your async factory (step1). |
+| **`aaApiUrl`** | Base URL of the Account Abstraction API for your network. |
+| **`smartAccountContract`** | **`{ codeId, checksum, addressPrefix? }`** for the smart-account wasm used with that AA API. **`codeId`** and **`checksum`** must match what the AA API expects. |
+
+**3. Environment variables you must set**
+
+The demo reads these into **`layout.tsx`**; **without them, signer mode will not work** (the layout even logs in the browser if **`CODE_ID`** / **`CHECKSUM`** are missing).
+
+| Variable | Maps to |
+| -------- | ------- |
+| `NEXT_PUBLIC_CHAIN_ID` | `config.chainId` |
+| `NEXT_PUBLIC_AA_API_URL` | `authentication.aaApiUrl` |
+| `NEXT_PUBLIC_CODE_ID` | `smartAccountContract.codeId` |
+| `NEXT_PUBLIC_CHECKSUM` | `smartAccountContract.checksum` |
+
+Copy values from **[`apps/demo-app/.env.example`](https://github.com/burnt-labs/xion.js/blob/main/apps/demo-app/.env.example)** for testnet, or use the same variables your AA API / ops team documents for your environment.
+
+**That is enough to understand the integration.** Everything else (RPC overrides, treasury, indexers, Turnkey org id, …) is optional for tuning or for matching the full demo—see the [appendix](#appendix-optional-provider-fields-and-environment-variables) below.
 
 ## When to use signer mode
 
@@ -29,66 +55,62 @@ Reference routes: [`/signer-mode`](https://github.com/burnt-labs/xion.js/tree/ma
 | You must avoid a full navigation away from your SPA. | Popup or embedded dashboard UX is acceptable. |
 | You are prototyping **wallet-led** abstract accounts (e.g. MetaMask in **`direct-signing-demo`**). | You want the fastest path with minimal AA API / contract metadata. |
 
-## Provider configuration (matches `signer-mode/layout.tsx`)
+Reference routes: [`/signer-mode`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/signer-mode) (Turnkey + gasless session signing) and [`/direct-signing-demo`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/direct-signing-demo) (wallet-led / `requireAuth` comparisons).
 
-`AbstraxionProvider` **`config`** should include:
+## Turnkey demo: registration pattern (short)
 
-**`authentication` (type `"signer"`)**
+The **`signer-mode`** route pairs Turnkey UI with Abstraxion via **`registerAbstraxionLogin`**, **`registerAbstraxionLogout`**, **`registerCreateWallet`**, and **`registerWalletsGetter`** in **`providers.tsx`**. Same idea for other vendors: a small context + refs, and **`getSignerConfig`** reads the live signer. Details stay in the demo source; optional env for Turnkey is in the [appendix](#appendix-optional-provider-fields-and-environment-variables).
 
-- **`getSignerConfig`** — your implementation (see above).
-- **`aaApiUrl`** — AA API base URL (`NEXT_PUBLIC_AA_API_URL` in the demo).
-- **`smartAccountContract`** — `{ codeId, checksum, addressPrefix? }` from env (demo: `NEXT_PUBLIC_CODE_ID`, `NEXT_PUBLIC_CHECKSUM`, optional `NEXT_PUBLIC_ADDRESS_PREFIX`).
-- **`indexer`** — optional; built in the demo only when `NEXT_PUBLIC_INDEXER_URL` is set (Numia vs Subquery via `NEXT_PUBLIC_INDEXER_TYPE` / token—same logic as layout).
-- **`treasuryIndexer`** — optional; demo passes `{ url }` when `NEXT_PUBLIC_TREASURY_INDEXER_URL` is set.
+## Signing: session key vs direct
 
-**Top-level (same as other modes)**
+- **`useAbstraxionSigningClient()`** — default gasless / session-style path (typical dApp).
+- **`useAbstraxionSigningClient({ requireAuth: true })`** — user-pays-gas style; often with explicit fee simulation instead of `"auto"` on `execute`.
 
-- **`chainId`**, **`rpcUrl`**, **`restUrl`**, **`gasPrice`** — demo reads the `NEXT_PUBLIC_*` chain vars (optional overrides; SDK can fill known networks from `chainId` when omitted).
-- **`treasury`**, **`feeGranter`** — gasless / grant flows (`NEXT_PUBLIC_TREASURY_ADDRESS`, `NEXT_PUBLIC_FEE_GRANTER_ADDRESS` in `.env.example`).
-
-Next.js **App Router**: the demo layout uses **`export const dynamic = "force-dynamic"`** because env is read at runtime.
-
-## Environment variables
-
-Do **not** treat the following as a second source of truth—copy **[`apps/demo-app/.env.example`](https://github.com/burnt-labs/xion.js/blob/main/apps/demo-app/.env.example)** and edit values there. It already groups **chain**, **AA API**, **smart account wasm** (`CODE_ID` / `CHECKSUM` must match the AA API), **treasury**, **optional indexer**, **optional treasury indexer**, and **Turnkey** vars for this route.
-
-**Tight list (what `signer-mode/layout.tsx` actually consumes):**
-
-| Variable | Notes |
-| -------- | ----- |
-| `NEXT_PUBLIC_CHAIN_ID` | Passed to `config.chainId`. |
-| `NEXT_PUBLIC_AA_API_URL` | Passed to `authentication.aaApiUrl`. |
-| `NEXT_PUBLIC_CODE_ID` / `NEXT_PUBLIC_CHECKSUM` | `smartAccountContract`; layout logs if missing in the browser. |
-| `NEXT_PUBLIC_RPC_URL`, `NEXT_PUBLIC_REST_URL`, `NEXT_PUBLIC_GAS_PRICE` | Optional overrides on `config` (same as rest of demo-app). |
-| `NEXT_PUBLIC_TREASURY_ADDRESS`, `NEXT_PUBLIC_FEE_GRANTER_ADDRESS` | Top-level `treasury` / `feeGranter`. |
-| `NEXT_PUBLIC_ADDRESS_PREFIX` | Smart-account prefix; demo defaults to `xion` if unset. |
-| `NEXT_PUBLIC_INDEXER_URL` | If unset, **`indexer`** is omitted (RPC path). If set, see `.env.example` for Numia vs Subquery (`NEXT_PUBLIC_INDEXER_TYPE`, `NEXT_PUBLIC_INDEXER_TOKEN`). |
-| `NEXT_PUBLIC_TREASURY_INDEXER_URL` | If set, passed as `treasuryIndexer.url`. |
-
-**Turnkey embed only** (`signer-mode/providers.tsx`, not Abstraxion itself): **`NEXT_PUBLIC_TURNKEY_ORG_ID`**, and **`NEXT_PUBLIC_TURNKEY_API_BASE_URL`** as in `.env.example`.
-
-We no longer enumerate every indexer variant in a long table—follow the commented blocks in **`.env.example`** so your config stays aligned with the demo.
-
-## Cross-library registration (Turnkey demo)
-
-The Turnkey demo wires external UI into Abstraxion using **registrations** (see **`providers.tsx`**):
-
-- **`registerAbstraxionLogin`** / **`registerAbstraxionLogout`** — connect Turnkey session start/end to Abstraxion’s login/logout.
-- **`registerCreateWallet`** / **`registerWalletsGetter`** — expose wallet creation and enumeration to the SDK.
-
-Use the same **pattern** for other vendors: one React context that holds refs, and **`getSignerConfig`** reads the active signer from that context.
-
-## Signing: session key vs direct (`direct-signing-demo`)
-
-Signer mode addresses **authentication**. **How** messages are signed (gasless session path vs user-pays-gas) is controlled by hooks:
-
-- Default: **`useAbstraxionSigningClient()`** — session-style / Treasury-aligned signing for typical gasless dApps.
-- **`useAbstraxionSigningClient({ requireAuth: true })`** — user-visible approval path; often paired with **explicit fee simulation** instead of `"auto"` on `execute`.
-
-Study **`/direct-signing-demo`** in the monorepo for MetaMask registration, `requireAuth`, and fee handling side by side.
+See **`/direct-signing-demo`** in **`demo-app`** for side-by-side examples.
 
 ## Related
 
 - [Web App Development — modes hub](README.md)
 - [Custom UI and loading states](custom-ui-abstraxion-authentication.md)
 - [Account abstraction tutorial](build-react-dapp-with-account-abstraxion.md)
+
+---
+
+## Appendix: Optional provider fields and environment variables
+
+Use this when you need **gasless treasury grants**, **faster indexers**, or to **match `signer-mode/layout.tsx` line-for-line**. The canonical list with comments is **[`apps/demo-app/.env.example`](https://github.com/burnt-labs/xion.js/blob/main/apps/demo-app/.env.example)**.
+
+### Optional fields on `config`
+
+**Under `authentication`**
+
+- **`indexer`** — Only if you set **`NEXT_PUBLIC_INDEXER_URL`**. The demo builds a Numia or Subquery object from **`NEXT_PUBLIC_INDEXER_TYPE`** and **`NEXT_PUBLIC_INDEXER_TOKEN`** (see `.env.example` commented blocks). If the URL is unset, the SDK falls back to RPC-based discovery.
+- **`treasuryIndexer`** — **`{ url }`** when **`NEXT_PUBLIC_TREASURY_INDEXER_URL`** is set; otherwise omitted in the demo.
+
+**Top-level `config`**
+
+- **`rpcUrl`**, **`restUrl`**, **`gasPrice`** — **`NEXT_PUBLIC_RPC_URL`**, **`NEXT_PUBLIC_REST_URL`**, **`NEXT_PUBLIC_GAS_PRICE`**. Often set in `.env.example`; for known XION **`chainId`** values the SDK can fill RPC/REST/gas when omitted.
+- **`treasury`** — **`NEXT_PUBLIC_TREASURY_ADDRESS`** (gasless grant UX).
+- **`feeGranter`** — **`NEXT_PUBLIC_FEE_GRANTER_ADDRESS`**.
+- **`smartAccountContract.addressPrefix`** — **`NEXT_PUBLIC_ADDRESS_PREFIX`**; the demo defaults to **`xion`** if unset.
+
+**Framework note (Next.js App Router)**
+
+- The demo **`signer-mode/layout.tsx`** uses **`export const dynamic = "force-dynamic"`** so runtime **`process.env`** is respected.
+
+### Optional and demo-only environment variables
+
+| Variable | Role |
+| -------- | ---- |
+| `NEXT_PUBLIC_RPC_URL` | Tendermint RPC override. |
+| `NEXT_PUBLIC_REST_URL` | REST endpoint override. |
+| `NEXT_PUBLIC_GAS_PRICE` | e.g. `0.001uxion`. |
+| `NEXT_PUBLIC_TREASURY_ADDRESS` | Treasury contract for gasless flows. |
+| `NEXT_PUBLIC_FEE_GRANTER_ADDRESS` | Fee granter for grant creation. |
+| `NEXT_PUBLIC_ADDRESS_PREFIX` | Bech32 prefix for smart accounts (default `xion` in demo). |
+| `NEXT_PUBLIC_INDEXER_URL` | Enables **`indexer`** when set. |
+| `NEXT_PUBLIC_INDEXER_TYPE` | `subquery` vs Numia-style (see `.env.example`). |
+| `NEXT_PUBLIC_INDEXER_TOKEN` | Numia auth token when using Numia. |
+| `NEXT_PUBLIC_TREASURY_INDEXER_URL` | DaoDao-style treasury indexer URL. |
+| `NEXT_PUBLIC_TURNKEY_ORG_ID` | Required for **Turnkey** in **`providers.tsx`**, not for Abstraxion itself. |
+| `NEXT_PUBLIC_TURNKEY_API_BASE_URL` | Turnkey API base (see `.env.example`). |
