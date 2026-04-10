@@ -62,7 +62,7 @@ These labels match the TypeScript union on `AbstraxionProvider` config (`@burnt-
 | -------- | ------ | ------------------- | ---------------- |
 | Standard Meta Account login (most dApps) | **`auto`** | [`/popup-demo`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/popup-demo) | `NEXT_PUBLIC_AUTH_APP_URL` |
 | You build all connection UI with hooks | **`auto`** (or `popup` / `redirect` if you pin one) | [`/loading-states`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/loading-states) | Same as above + treasury / chain |
-| You want the pre-built modal from Burnt UI | **`auto`** or `redirect` + `@burnt-labs/ui` | [`/abstraxion-ui`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/abstraxion-ui) | `@burnt-labs/ui` package; `Abstraxion` component |
+| Legacy reference: pre-built modal + Burnt UI (not recommended for new apps) | **`auto`** or `redirect` | [`/abstraxion-ui`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/abstraxion-ui) | `@burnt-labs/ui`; prefer **`login()`** + your own UI ([tutorial](build-react-dapp-with-account-abstraxion.md), [`/loading-states`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/loading-states)) |
 | Wallet-led or programmatic signer (no dashboard) | **`signer`** | [`/signer-mode`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/signer-mode) | `NEXT_PUBLIC_AA_API_URL`, `NEXT_PUBLIC_CODE_ID`, `NEXT_PUBLIC_CHECKSUM`, optional indexer URLs |
 | Session-key vs user-pays-gas signing (`useAbstraxionSigningClient` vs `{ requireAuth: true }`) | See demo (auth is **`signer`** in that route) | [`/direct-signing-demo`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/direct-signing-demo) | Same env family as signer mode; compare hooks and fee simulation in source |
 | Inline or “button + modal” embedded dashboard | **`embedded`** | [`/embedded-inline`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/embedded-inline), [`/embedded-dynamic`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/embedded-dynamic) | `NEXT_PUBLIC_IFRAME_URL` (demo) |
@@ -75,5 +75,7 @@ These labels match the TypeScript union on `AbstraxionProvider` config (`@burnt-
 Details stay in the tutorial and the demo source so this hub stays stable for navigation.
 
 ### Next.js note
+
+Guides and **`demo-app`** use **Next.js App Router** for consistency; **vanilla React** (Vite, etc.) is equally supported—map `src/app/*` to your root layout and pages. Long term, examples may move toward framework-agnostic snippets; until then, treat Next as the **reference layout**, not a hard requirement.
 
 Some demo layouts use `export const dynamic = "force-dynamic"` when **server layouts read `process.env` at runtime** (e.g. signer or embedded). If your provider reads secrets or non-`NEXT_PUBLIC_*` values in a layout, apply the same pattern.

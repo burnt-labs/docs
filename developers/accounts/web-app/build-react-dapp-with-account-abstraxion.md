@@ -4,8 +4,8 @@ vars:
   doc_type: tutorial
   primary_auth_mode: auto
   sdk_packages: "@burnt-labs/abstraxion, @burnt-labs/abstraxion-core"
-  demo_app_routes: "/, /abstraxion-ui"
-  demo_app_routes_note: "/ is monorepo demo hub; /abstraxion-ui matches this tutorial's Abstraxion modal UI"
+  demo_app_routes: "/, /loading-states"
+  demo_app_routes_note: "/ is monorepo demo hub; /loading-states shows hook-first auth without legacy modal"
   required_env_vars: "NEXT_PUBLIC_CHAIN_ID, NEXT_PUBLIC_RPC_URL, NEXT_PUBLIC_REST_URL, NEXT_PUBLIC_GAS_PRICE, NEXT_PUBLIC_TREASURY_ADDRESS, NEXT_PUBLIC_AUTH_APP_URL"
 ---
 
@@ -29,7 +29,7 @@ Before getting started, ensure you have the following installed:
 
 ## Setting up the Project
 
-In this example, we will use **[Next.js](https://nextjs.org)** to scaffold the project and set up a development environment with TypeScript, ESLint and Tailwind CSS.
+Most crypto frontends are **client-only**; **plain React** (Vite, CRA, etc.) works well with Abstraxion. This tutorial uses **[Next.js](https://nextjs.org) App Router** because the official [demo app](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app) does—if you use another bundler, map `src/app/layout.tsx` and `src/app/page.tsx` to your entry and root component.
 
 ### Step 1: Create a New Next.js Project
 
@@ -51,7 +51,7 @@ cd nextjs-xion-abstraxion-example
 Add the **Abstraxion** package to the project:
 
 ```bash
-npm i @burnt-labs/abstraxion @burnt-labs/ui
+npm i @burnt-labs/abstraxion
 ```
 
 `@burnt-labs/abstraxion` depends on **`@burnt-labs/abstraxion-core`** for signing and session primitives. You normally do not install `abstraxion-core` separately; keep both on compatible versions when upgrading.
@@ -143,7 +143,6 @@ To set up the **Abstraxion Library**, replace the contents of `src/app/layout.ts
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { AbstraxionProvider } from "@burnt-labs/abstraxion";
-import "@burnt-labs/ui/dist/index.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -194,41 +193,49 @@ If you **omit** the entire `authentication` field, the SDK defaults to the legac
 
 If you read **non-`NEXT_PUBLIC_`** secrets in a layout, you may need `export const dynamic = "force-dynamic"` so the layout is not statically optimized away—see the [demo app layouts](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app) for the same pattern.
 
-## Adding Hooks to the Homepage
+## Adding hooks to the homepage
 
-Replace the contents of `src/app/page.tsx` with the following code to show **CONNECT** and open the pre-built **`Abstraxion`** modal from `@burnt-labs/abstraxion`:
+Replace the contents of `src/app/page.tsx` with the following code. It uses **`login()`** from **`useAbstraxionAccount`** and plain **`<button>`** elements—**not** the legacy **`<Abstraxion />`** modal (that path is deprecated for new apps).
 
 ```typescript
 "use client";
-import {
-  Abstraxion,
-  useAbstraxionAccount,
-  useModal,
-} from "@burnt-labs/abstraxion";
-import { Button } from "@burnt-labs/ui";
-import "@burnt-labs/ui/dist/index.css";
+import { useEffect } from "react";
+import { useAbstraxionAccount } from "@burnt-labs/abstraxion";
 
 export default function Page(): JSX.Element {
-  const { data: account } = useAbstraxionAccount();
-  const [, setShowModal] = useModal();
+  const { data: account, login, logout, isLoading } = useAbstraxionAccount();
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("granted") === "true") void login();
+  }, [login]);
 
   return (
     <main className="m-auto flex min-h-screen max-w-xs flex-col items-center justify-center gap-4 p-4">
       <h1 className="text-2xl font-bold tracking-tighter text-white">
         ABSTRAXION
       </h1>
-      <Button
-        fullWidth
-        onClick={() => setShowModal(true)}
-        structure="base"
-      >
-        {account?.bech32Address ? (
-          <div className="flex items-center justify-center">VIEW ACCOUNT</div>
-        ) : (
-          "CONNECT"
-        )}
-      </Button>
-      <Abstraxion onClose={() => setShowModal(false)} />
+      {account?.bech32Address ? (
+        <>
+          <p className="truncate text-xs text-zinc-400">{account.bech32Address}</p>
+          <button
+            type="button"
+            className="w-full rounded-md border border-zinc-600 bg-zinc-900 px-4 py-2 text-white"
+            onClick={() => logout()}
+          >
+            LOGOUT
+          </button>
+        </>
+      ) : (
+        <button
+          type="button"
+          className="w-full rounded-md border border-zinc-600 bg-zinc-900 px-4 py-2 text-white disabled:opacity-50"
+          disabled={isLoading}
+          onClick={() => void login()}
+        >
+          {isLoading ? "CONNECTING…" : "CONNECT"}
+        </button>
+      )}
     </main>
   );
 }
@@ -236,11 +243,11 @@ export default function Page(): JSX.Element {
 
 #### What does this do?
 
-1. **CONNECT** opens the bundled Abstraxion modal so the user can complete Meta Account login (works with **`auto`** auth in the provider).
-2. **`useAbstraxionAccount`** exposes connection state; `account?.bech32Address` is the user’s address when connected.
-3. **`useModal`** toggles visibility of the **`<Abstraxion />`** UI component.
+1. **`login()`** starts Meta Account authentication (popup or redirect, depending on your **`auto`** / **`redirect`** config).
+2. **`useAbstraxionAccount`** exposes `account`, **`isLoading`**, and **`logout`**.
+3. After a **full-page redirect** return, **`?granted=true`** triggers **`login()`** once to finish restoring the session.
 
-For **hook-only / custom UI** (no modal), see [Custom UI and Abstraxion loading states](custom-ui-abstraxion-authentication.md).
+For **granular loading flags** (`isInitializing`, `isReturningFromAuth`, …), see [Custom UI and Abstraxion loading states](custom-ui-abstraxion-authentication.md).
 
 Now, click **CONNECT** and try it out.
 
@@ -258,136 +265,90 @@ Replace the contents of `src/app/page.tsx` with the following code:
 
 ```typescript
 "use client";
-import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
-  Abstraxion,
   useAbstraxionAccount,
   useAbstraxionSigningClient,
   useAbstraxionClient,
-  useModal,
 } from "@burnt-labs/abstraxion";
-import { Button } from "@burnt-labs/ui";
-import "@burnt-labs/ui/dist/index.css";
-import type { ExecuteResult } from "@cosmjs/cosmwasm-stargate";
+const contractAddress = "YOUR_COUNTER_CONTRACT_ADDRESS_HERE";
 
-const contractAddress =
-  "YOUR_COUNTER_CONTRACT_ADDRESS_HERE";
-
-type ExecuteResultOrUndefined = ExecuteResult | undefined;
+const btnClass =
+  "w-full rounded-md border border-zinc-600 bg-zinc-900 px-4 py-2 text-white disabled:opacity-50";
 
 export default function Page(): JSX.Element {
-  // Abstraxion hooks
-  const { data: account } = useAbstraxionAccount();
-  const { client, signArb, logout } = useAbstraxionSigningClient();
+  const { data: account, login, isLoading: isAuthBusy } =
+    useAbstraxionAccount();
+  const { client, logout } = useAbstraxionSigningClient();
   const { client: queryClient } = useAbstraxionClient();
 
-  // Count
   const [count, setCount] = useState<string | null>(null);
-
-  // General state hooks
-  const [, setShowModal]: [
-    boolean,
-    React.Dispatch<React.SetStateAction<boolean>>,
-  ] = useModal();
   const [loading, setLoading] = useState(false);
-  const [executeResult, setExecuteResult] =
-    useState<ExecuteResultOrUndefined>(undefined);
 
-  const blockExplorerUrl = `https://www.mintscan.io/xion-testnet/tx/${executeResult?.transactionHash}`;
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("granted") === "true") void login();
+  }, [login]);
 
-  function getTimestampInSeconds(date: Date | null): number {
-    if (!date) return 0;
-    const d = new Date(date);
-    return Math.floor(d.getTime() / 1000);
-  }
-  
   const getCount = async () => {
     setLoading(true);
-    //setError(null);
-
     try {
-      // Query the contract
       const response = await queryClient.queryContractSmart(contractAddress, {
-        get_count: { },
+        get_count: {},
       });
-      
       setCount(response.count);
-
       console.log("Get Count:", response);
     } catch (error) {
-        console.error('Error querying contract:', error);
-        //setError('Failed to query the contract. Please try again.');
+      console.error("Error querying contract:", error);
     } finally {
       setLoading(false);
     }
   };
-
-  const now = new Date();
-  now.setSeconds(now.getSeconds() + 15);
-  const oneYearFromNow = new Date();
-  oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
 
   return (
     <main className="m-auto flex min-h-screen max-w-xs flex-col items-center justify-center gap-4 p-4">
       <h1 className="text-2xl font-bold tracking-tighter text-white">
         ABSTRAXION
       </h1>
-      <Button
-        fullWidth
-        onClick={() => {
-          setShowModal(true);
-        }}
-        structure="base"
-      >
-        {account?.bech32Address ? (
-          <div className="flex items-center justify-center">VIEW ACCOUNT</div>
-        ) : (
-          "CONNECT"
-        )}
-      </Button>
+      {!account?.bech32Address ? (
+        <button
+          type="button"
+          className={btnClass}
+          disabled={isAuthBusy}
+          onClick={() => void login()}
+        >
+          {isAuthBusy ? "CONNECTING…" : "CONNECT"}
+        </button>
+      ) : null}
       {client ? (
         <>
-          <Button
+          <button
+            type="button"
+            className={btnClass}
             disabled={loading}
-            fullWidth
-            onClick={() => {
-              void getCount();
-            }}
-            structure="base"
+            onClick={() => void getCount()}
           >
             {loading ? "LOADING..." : "Get Count"}
-          </Button>
+          </button>
           {logout ? (
-            <Button
+            <button
+              type="button"
+              className={btnClass}
               disabled={loading}
-              fullWidth
-              onClick={() => {
-                logout();
-              }}
-              structure="base"
+              onClick={() => logout()}
             >
               LOGOUT
-            </Button>
+            </button>
           ) : null}
         </>
       ) : null}
-      <Abstraxion
-        onClose={() => {
-          setShowModal(false);
-        }}
-      />
       {count ? (
-        <div className="border-2 border-primary rounded-md p-4 flex flex-row gap-4">
-              <div className="flex flex-row gap-6">
-                <div>
-                  Count:
-                </div>
-                <div>
-                  {count}
-                </div>
-              </div>
-            </div>
+        <div className="flex flex-row gap-4 rounded-md border-2 border-primary p-4">
+          <div className="flex flex-row gap-6">
+            <div>Count:</div>
+            <div>{count}</div>
+          </div>
+        </div>
       ) : null}
     </main>
   );
@@ -395,7 +356,7 @@ export default function Page(): JSX.Element {
 ```
 
 {% hint style="info" %}
-Update "**YOURCOUNTERCONTRACTADDRESSHERE**" with the the Counter Contract Address you created above.
+Update **`YOUR_COUNTER_CONTRACT_ADDRESS_HERE`** with the Counter contract address you created above.
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
@@ -413,39 +374,41 @@ Replace the contents of `src/app/page.tsx` with the following code:
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import {
-  Abstraxion,
   useAbstraxionAccount,
   useAbstraxionSigningClient,
   useAbstraxionClient,
-  useModal,
 } from "@burnt-labs/abstraxion";
-import { Button } from "@burnt-labs/ui";
-import "@burnt-labs/ui/dist/index.css";
 import type { ExecuteResult } from "@cosmjs/cosmwasm-stargate";
 
 const contractAddress = "YOUR_COUNTER_CONTRACT_ADDRESS_HERE";
 
 type ExecuteResultOrUndefined = ExecuteResult | undefined;
 
+const btnClass =
+  "w-full rounded-md border border-zinc-600 bg-zinc-900 px-4 py-2 text-white disabled:opacity-50";
+
 export default function Page(): JSX.Element {
-  // Abstraxion hooks
-  const { data: account } = useAbstraxionAccount();
-  const { client, signArb, logout } = useAbstraxionSigningClient();
+  const { data: account, login, isLoading: isAuthBusy } =
+    useAbstraxionAccount();
+  const { client, logout } = useAbstraxionSigningClient();
   const { client: queryClient } = useAbstraxionClient();
 
-  // State variables
   const [count, setCount] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const [executeResult, setExecuteResult] = useState<ExecuteResultOrUndefined>(undefined);
-  const [, setShowModal]: [boolean, React.Dispatch<React.SetStateAction<boolean>>] = useModal();
+  const [executeResult, setExecuteResult] =
+    useState<ExecuteResultOrUndefined>(undefined);
 
-  const blockExplorerUrl = `https://www.mintscan.io/xion-testnet/tx/${executeResult?.transactionHash}`;
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("granted") === "true") void login();
+  }, [login]);
 
-  // Fetch the count from the smart contract
   const getCount = async () => {
     setLoading(true);
     try {
-      const response = await queryClient.queryContractSmart(contractAddress, { get_count: {} });
+      const response = await queryClient.queryContractSmart(contractAddress, {
+        get_count: {},
+      });
       setCount(response.count);
       console.log("Get Count:", response);
     } catch (error) {
@@ -455,17 +418,20 @@ export default function Page(): JSX.Element {
     }
   };
 
-  // Increment the count in the smart contract
   const increment = async () => {
     if (!client || !account?.bech32Address) return;
     setLoading(true);
     const msg = { increment: {} };
-
     try {
-      const res = await client.execute(account.bech32Address, contractAddress, msg, "auto");
+      const res = await client.execute(
+        account.bech32Address,
+        contractAddress,
+        msg,
+        "auto",
+      );
       setExecuteResult(res);
       console.log("Transaction successful:", res);
-      await getCount(); // Refresh count after successful increment
+      await getCount();
     } catch (error) {
       console.error("Error executing transaction:", error);
     } finally {
@@ -473,65 +439,90 @@ export default function Page(): JSX.Element {
     }
   };
 
-  // Fetch count on page load
   useEffect(() => {
-    if (queryClient) {
-      getCount();
-    }
+    if (queryClient) void getCount();
   }, [queryClient]);
+
+  const blockExplorerUrl = `https://www.mintscan.io/xion-testnet/tx/${executeResult?.transactionHash}`;
 
   return (
     <main className="m-auto flex min-h-screen max-w-xs flex-col items-center justify-center gap-4 p-4">
-      <h1 className="text-2xl font-bold tracking-tighter text-white">ABSTRAXION</h1>
-
-      <Button fullWidth onClick={() => setShowModal(true)} structure="base">
-        {account?.bech32Address ? <div className="flex items-center justify-center">VIEW ACCOUNT</div> : "CONNECT"}
-      </Button>
-
-      {client && (
+      <h1 className="text-2xl font-bold tracking-tighter text-white">
+        ABSTRAXION
+      </h1>
+      {!account?.bech32Address ? (
+        <button
+          type="button"
+          className={btnClass}
+          disabled={isAuthBusy}
+          onClick={() => void login()}
+        >
+          {isAuthBusy ? "CONNECTING…" : "CONNECT"}
+        </button>
+      ) : null}
+      {client ? (
         <>
-          <Button disabled={loading} fullWidth onClick={getCount} structure="base">
+          <button
+            type="button"
+            className={btnClass}
+            disabled={loading}
+            onClick={() => void getCount()}
+          >
             {loading ? "LOADING..." : "Get Count"}
-          </Button>
-          <Button disabled={loading} fullWidth onClick={increment} structure="base">
+          </button>
+          <button
+            type="button"
+            className={btnClass}
+            disabled={loading}
+            onClick={() => void increment()}
+          >
             {loading ? "LOADING..." : "INCREMENT"}
-          </Button>
-          {logout && (
-            <Button disabled={loading} fullWidth onClick={logout} structure="base">
+          </button>
+          {logout ? (
+            <button
+              type="button"
+              className={btnClass}
+              disabled={loading}
+              onClick={() => logout()}
+            >
               LOGOUT
-            </Button>
-          )}
+            </button>
+          ) : null}
         </>
-      )}
-
-      <Abstraxion onClose={() => setShowModal(false)} />
-
-      {count !== null && (
-        <div className="border-2 border-primary rounded-md p-4 flex flex-row gap-4">
+      ) : null}
+      {count !== null ? (
+        <div className="flex flex-row gap-4 rounded-md border-2 border-primary p-4">
           <div className="flex flex-row gap-6">
             <div>Count:</div>
             <div>{count}</div>
           </div>
         </div>
-      )}
-
-      {executeResult && (
+      ) : null}
+      {executeResult ? (
         <div className="flex flex-col rounded border-2 border-black p-2 dark:border-white">
           <div className="mt-2">
-            <p className="text-zinc-500"><span className="font-bold">Transaction Hash</span></p>
+            <p className="text-zinc-500">
+              <span className="font-bold">Transaction Hash</span>
+            </p>
             <p className="text-sm">{executeResult.transactionHash}</p>
           </div>
           <div className="mt-2">
-            <p className=" text-zinc-500"><span className="font-bold">Block Height:</span></p>
+            <p className="text-zinc-500">
+              <span className="font-bold">Block Height:</span>
+            </p>
             <p className="text-sm">{executeResult.height}</p>
           </div>
           <div className="mt-2">
-            <Link className="text-black underline visited:text-purple-600 dark:text-white" href={blockExplorerUrl} target="_blank">
+            <Link
+              className="text-black underline visited:text-purple-600 dark:text-white"
+              href={blockExplorerUrl}
+              target="_blank"
+            >
               View in Block Explorer
             </Link>
           </div>
         </div>
-      )}
+      ) : null}
     </main>
   );
 }
@@ -540,22 +531,15 @@ export default function Page(): JSX.Element {
 {% endcode %}
 
 {% hint style="info" %}
-Update "**YOURCOUNTERCONTRACTADDRESSHERE**" with the the **Counter** contract address you created above.
+Update **`YOUR_COUNTER_CONTRACT_ADDRESS_HERE`** with the Counter contract address you created above.
 {% endhint %}
 
 #### What does this do?
 
-1. **Implements transaction submission**
-  - The **"INCREMENT"** button sends a transaction using **Abstraxion Signing Client**.
-2. **Manages user connection state**
-  - Uses `useAbstraxionAccount()` to check if the user is connected.
-  - If the user isn’t connected, the **"CONNECT"** button appears instead.
-3. **Handles transaction execution**
-  - Defines a `increment()` function to interact with a **CosmWasm smart contract**.
-  - Sends an **ExecuteContract** transaction using `client.execute()`.
-4. **Displays transaction results**
-  - After submitting a transaction, it shows the **Transaction Hash** and **Block Height**.
-  - Provides a link to view the transaction in **XION’s Block Explorer**.
+1. **Implements transaction submission** — **INCREMENT** sends an **ExecuteContract** message through **`useAbstraxionSigningClient()`** (default gasless / session path).
+2. **Manages connection with hooks** — **`login()`** / **`?granted=true`** (same as earlier steps); no **`<Abstraxion />`** modal or **`@burnt-labs/ui`**.
+3. **Queries on load** — When **`queryClient`** is ready, **`getCount()`** runs once so the counter is visible after refresh.
+4. **Shows results** — After execute, displays **transaction hash**, **block height**, and a **Mintscan** link.
 
 ### Quick Note on Fee Configuration
 

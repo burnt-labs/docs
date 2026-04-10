@@ -12,7 +12,7 @@ vars:
 
 # Abstraxion signer mode
 
-**Signer mode** (`authentication.type: "signer"`) runs Meta Account flows **without** redirecting the user to the full-page XION dashboard. You supply a **`getSignerConfig`** function that resolves whatever wallet or custody stack you integrate (Turnkey, MetaMask, etc.); Abstraxion uses **`@burnt-labs/abstraxion-core`** under the hood for signing and account operations.
+**Signer mode** (`authentication.type: "signer"`) runs Meta Account flows **without** redirecting the user to the full-page XION dashboard. The integration surface you own is primarily **`getSignerConfig`** — an async factory that returns a **`SignerConfig`** once your wallet or custody stack is ready. Abstraxion uses **`@burnt-labs/abstraxion-core`** under the hood for signing and account operations.
 
 Reference implementation: [demo app `signer-mode`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/signer-mode) and, for MetaMask + direct signing comparisons, [`direct-signing-demo`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/direct-signing-demo).
 
@@ -26,14 +26,19 @@ Reference implementation: [demo app `signer-mode`](https://github.com/burnt-labs
 
 ## Provider configuration shape
 
-Signer authentication requires extra fields on `AbstraxionProvider` **`config.authentication`**:
+### Top-level config (defaults like every other mode)
 
-- **`type: "signer"`**
-- **`aaApiUrl`** — Account Abstraction API base URL for your environment.
-- **`getSignerConfig`** — `() => Promise<SignerConfig>`; must return a valid signer configuration once your wallet / custody layer is ready.
-- **`smartAccountContract`** — `{ codeId, checksum, addressPrefix? }` so new smart accounts can be created when none exist.
-- **`indexer`** (optional) — Numia or Subquery-style indexer for faster account discovery; omit to fall back to RPC.
-- **`treasuryIndexer`** (optional) — DaoDao-style treasury indexer URL for grant configuration lookups.
+`normalizeAbstraxionConfig` fills **`rpcUrl`**, **`restUrl`**, **`gasPrice`**, and **`feeGranter`** from **`chainId`** when you omit them (via `@burnt-labs/constants`). **`chainId`** remains required. Signer mode benefits from the same defaults as dashboard auth; override only for custom RPC/REST or gas settings.
+
+### `authentication` when `type: "signer"`
+
+| Field | Required? | Role |
+| ----- | --------- | ---- |
+| **`getSignerConfig`** | Yes | **Main integration point** — `() => Promise<SignerConfig>`; called when the user connects; must resolve after your wallet / vendor session is ready. |
+| **`aaApiUrl`** | Yes (TypeScript) | AA API base URL for account creation. Demos use **`NEXT_PUBLIC_AA_API_URL`**. Not inferred from `chainId` alone. |
+| **`smartAccountContract`** | Yes | `{ codeId, checksum, addressPrefix? }` for wasm smart-account creation when no account exists. Set from env in demos (**`NEXT_PUBLIC_CODE_ID`**, **`NEXT_PUBLIC_CHECKSUM`**); not auto-filled from chain. |
+| **`indexer`** | Optional | Numia or Subquery-style config for faster account discovery. **Omit** to fall back to RPC-based discovery (slower but valid). |
+| **`treasuryIndexer`** | Optional | `{ url }` for treasury grant metadata. **Omit** to use the **chain-default DaoDao indexer URL** inside the SDK (see `createGrantConfigFromConfig` / `getDaoDaoIndexerUrl` in xion.js). |
 
 Top-level **`treasury`** and **`feeGranter`** on `config` still apply for gasless paths, same as other modes.
 

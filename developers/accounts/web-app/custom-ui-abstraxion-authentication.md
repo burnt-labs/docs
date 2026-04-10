@@ -12,7 +12,7 @@ vars:
 
 # Custom UI and Abstraxion loading states
 
-This guide is about **your own buttons, copy, and loading states**—using **`useAbstraxionAccount`** (and optionally **`useAbstraxionSigningClient`**) instead of the pre-built **`<Abstraxion />`** modal from the [Account abstraction tutorial](build-react-dapp-with-account-abstraxion.md). It does **not** walk through choosing or comparing **`authentication.type`**; that belongs in the section hub.
+This guide is about **your own buttons, copy, and loading states**—using **`useAbstraxionAccount`** (and optionally **`useAbstraxionSigningClient`**) with **`login()`**, not the legacy **`<Abstraxion />`** modal / **`@burnt-labs/ui`** bundle. It goes deeper on **granular loading flags** and **redirect return** handling than the [Account abstraction tutorial](build-react-dapp-with-account-abstraxion.md) (which already uses the same hook-first connect pattern). It does **not** walk through choosing or comparing **`authentication.type`**; that belongs in the section hub.
 
 **Live reference:** [xion.js `apps/demo-app` — `/loading-states`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/loading-states).
 
@@ -47,7 +47,7 @@ const { data: account, login, logout, isConnecting, isLoading } =
   useAbstraxionAccount();
 ```
 
-You do **not** need `@burnt-labs/abstraxion/dist/index.css` for hook-only UIs (you still typically import **`@burnt-labs/ui`** styles if you use Burnt UI components).
+You do **not** need `@burnt-labs/abstraxion/dist/index.css` for hook-only UIs built with your own components.
 
 ## Optional: finishing login after redirect
 
@@ -67,8 +67,9 @@ useEffect(() => {
 ```typescript
 "use client";
 import { useAbstraxionAccount, useAbstraxionSigningClient } from "@burnt-labs/abstraxion";
-import { Button } from "@burnt-labs/ui";
-import "@burnt-labs/ui/dist/index.css";
+
+const btnClass =
+  "w-full rounded-md border border-zinc-600 bg-zinc-900 px-4 py-2 text-white disabled:opacity-50";
 
 export default function Page(): JSX.Element {
   const {
@@ -95,21 +96,19 @@ export default function Page(): JSX.Element {
         <>
           <p className="truncate text-xs text-neutral-400">{account.bech32Address}</p>
           {client ? <p className="text-xs text-green-400">Signing client ready</p> : null}
-          <Button fullWidth structure="outlined" onClick={() => logout()}>
+          <button type="button" className={btnClass} onClick={() => logout()}>
             LOGOUT
-          </Button>
+          </button>
         </>
       ) : (
-        <Button
-          fullWidth
-          structure="base"
+        <button
+          type="button"
+          className={btnClass}
           disabled={isLoading}
-          onClick={() => {
-            void login();
-          }}
+          onClick={() => void login()}
         >
           CONNECT
-        </Button>
+        </button>
       )}
     </main>
   );
@@ -125,5 +124,5 @@ export default function Page(): JSX.Element {
 ## Related
 
 - [Web App Development — modes hub](README.md)
-- [Account abstraction tutorial (pre-built modal)](build-react-dapp-with-account-abstraxion.md)
+- [Account abstraction with gasless transactions (hook-first tutorial)](build-react-dapp-with-account-abstraxion.md)
 - [Abstraxion signer mode](abstraxion-signer-mode.md)
