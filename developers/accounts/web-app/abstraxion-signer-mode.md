@@ -37,10 +37,6 @@ Everything else on **`authentication`** and env mapping is in the [appendix](#ap
 
 Concrete **demo routes** for signer auth + signing paths are in [Signing: session key vs direct](#signing-session-key-vs-direct) below.
 
-## Turnkey demo: registration pattern (short)
-
-The **`signer-mode`** route pairs Turnkey UI with Abstraxion via **`registerAbstraxionLogin`**, **`registerAbstraxionLogout`**, **`registerCreateWallet`**, and **`registerWalletsGetter`** in **`providers.tsx`**. Same idea for other vendors: a small context + refs, and **`getSignerConfig`** reads the live signer. Details stay in the demo source; Turnkey env is in the [appendix](#appendix-signer-configuration-reference).
-
 ## Signing: session key vs direct
 
 **Signer mode** only changes **how the user authenticates** (`getSignerConfig`). **How transactions are signed** is a separate choice: default **session / grantee** signing vs **direct** signing from the meta-account.
@@ -52,6 +48,14 @@ Call **`useAbstraxionSigningClient()`** with no options (or only options that do
 - After connect, the SDK uses a **session-style** signing client (**`GranteeSignerClient`**) aligned with **Treasury / fee grants**: gas is covered for allowed messages when grants are configured.
 - Typical **gasless dApp** flow: user approves grants once (when applicable), then submits through the session client.
 - Fees on **`execute`**: you often use **`"auto"`** for gas estimation like the main [Account abstraction tutorial](build-react-dapp-with-account-abstraxion.md).
+
+### Turnkey registration (`/signer-mode` only)
+
+The **[`/signer-mode`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/signer-mode)** example pairs Turnkey UI with Abstraxion using **`registerAbstraxionLogin`**, **`registerAbstraxionLogout`**, **`registerCreateWallet`**, and **`registerWalletsGetter`** in **`providers.tsx`**. That pattern answers “**how does custody UI hand off to `getSignerConfig`?**”—it is **not** part of the **direct vs session** choice; it belongs with the **session-path / gasless** story above.
+
+**[`/direct-signing-demo`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/direct-signing-demo)** uses a **different** wallet registration flow (e.g. MetaMask) to **compare signing hooks**—do not look there for Turnkey registrations.
+
+Same vendor pattern for non-Turnkey stacks: a small React context + refs, and **`getSignerConfig`** reads the live signer. Turnkey-specific env: [appendix](#appendix-signer-configuration-reference).
 
 ### Direct signing path (`requireAuth`)
 
