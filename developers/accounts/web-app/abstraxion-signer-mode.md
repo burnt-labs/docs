@@ -69,7 +69,7 @@ Call **`useAbstraxionSigningClient({ requireAuth: true })`**.
 
 | Example | Route | What it highlights |
 | ------- | ----- | ------------------ |
-| **Session / gasless with signer auth** | **[`/signer-mode`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/signer-mode)** | **`type: "signer"`** + Turnkey **`getSignerConfig`**, registrations, **`useAbstraxionSigningClient()`** (default) for Treasury-style gasless flows. **Start here** if your product matches “external custody + gasless”. |
+| **Session / gasless with signer auth** | **[`/signer-mode`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/signer-mode)** | **`type: "signer"`**, Turnkey **`getSignerConfig`** + [registration pattern](#turnkey-registration-signer-mode-only) above, **`useAbstraxionSigningClient()`** (default) for Treasury-style gasless. **Start here** for “external custody + gasless”. |
 | **Direct vs session side by side** | **[`/direct-signing-demo`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/direct-signing-demo)** | Same **`signer`** auth; compares **default** signing client vs **`{ requireAuth: true }`**, **MetaMask**-style registration, **fee simulation** vs **`"auto"`**, and related UI. **Start here** if you need **direct signing** or to **diff** the two paths in one place. |
 
 Run **`demo-app`** locally and open those routes after reading the page components and hooks—they are the **authoritative** examples next to this page.
@@ -92,8 +92,8 @@ Match **`signer-mode/layout.tsx`** or extend it. Full commented env: **[`apps/de
 | --------- | ----- | ----- |
 | Yes | **`type`** | Must be **`"signer"`**. |
 | Yes | **`getSignerConfig`** | Your async factory → **`SignerConfig`**. |
-| No | **`aaApiUrl`** | **Defaults with `chainId`** for supported XION networks (same idea as RPC/REST). Only set in config to **override** or when your bundler supplies it via env (see **demo** `layout.tsx`). |
-| No | **`smartAccountContract`** | **`{ codeId, checksum, addressPrefix? }`** — **defaults with `chainId`** for standard networks. Override for custom AA / wasm; **`codeId` / `checksum`** must stay consistent with the AA API you use. |
+| No | **`aaApiUrl`** | Use the **preset URL** for your **`chainId`** from `.env.example` (or override). **Demo** `layout.tsx` reads **`NEXT_PUBLIC_AA_API_URL`**. |
+| No | **`smartAccountContract`** | Use the **preset wasm** for that network + AA API from `.env.example` (or override). **`codeId` / `checksum`** must match the AA API you use. |
 | No | **`indexer`** | Set when using **`NEXT_PUBLIC_INDEXER_URL`** (+ type/token per `.env.example`); else RPC discovery. |
 | No | **`treasuryIndexer`** | **`{ url }`** when **`NEXT_PUBLIC_TREASURY_INDEXER_URL`** is set. |
 
@@ -101,11 +101,13 @@ If your **`SignerAuthentication`** type still lists **`aaApiUrl`** / **`smartAcc
 
 ### Top-level `config` & environment variables
 
-**`chainId`** is required. **`normalizeAbstraxionConfig`** fills **`rpcUrl`**, **`restUrl`**, **`gasPrice`**, and **`feeGranter`** from **`@burnt-labs/constants`** when omitted for a known XION **`chainId`**. **`aaApiUrl`** and **`smartAccountContract`** follow the same pattern: **preset for the network id**—you do **not** need to treat them as extra required knobs unless you override or use a **custom** AA deployment.
+**`chainId`** is required. **`normalizeAbstraxionConfig`** fills **`rpcUrl`**, **`restUrl`**, **`gasPrice`**, and **`feeGranter`** from **`@burnt-labs/constants`** when omitted for a known XION **`chainId`**.
+
+**`aaApiUrl`** and **`smartAccountContract`** are **not** filled by that same helper in the public SDK today—treat them as **documented presets per network** (same values as the **`chainId` block** in **[`apps/demo-app/.env.example`](https://github.com/burnt-labs/xion.js/blob/main/apps/demo-app/.env.example)**): copy or merge them in app config. You override only for **custom** AA / wasm.
 
 | Required? | Variable | Maps to |
 | --------- | -------- | ------- |
-| Yes | `NEXT_PUBLIC_CHAIN_ID` | `config.chainId` — picks network defaults (RPC/REST/gas/fee granter, and the AA / wasm preset for that id). |
+| Yes | `NEXT_PUBLIC_CHAIN_ID` | `config.chainId` — required network id; enables RPC/REST/gas/fee-granter **defaults** via **`normalizeAbstraxionConfig`** when those env vars are unset. |
 | No | `NEXT_PUBLIC_AA_API_URL` | `authentication.aaApiUrl` — **override**; demo reads from env. |
 | No | `NEXT_PUBLIC_CODE_ID` | `authentication.smartAccountContract.codeId` — **override**; demo reads from env. |
 | No | `NEXT_PUBLIC_CHECKSUM` | `authentication.smartAccountContract.checksum` — **override**; demo reads from env. |
@@ -120,4 +122,4 @@ If your **`SignerAuthentication`** type still lists **`aaApiUrl`** / **`smartAcc
 | No | `NEXT_PUBLIC_TURNKEY_ORG_ID` | Turnkey **`providers.tsx`** only |
 | No | `NEXT_PUBLIC_TURNKEY_API_BASE_URL` | Turnkey **`providers.tsx`** only |
 
-**Next.js:** demo layout uses **`export const dynamic = "force-dynamic"`** for runtime **`process.env`**. The **demo** `layout.tsx` still **reads** AA / wasm from env; if those vars are empty there, it **logs a warning**—your own app can rely on **chainId-only defaults** instead and omit those env vars when your code supplies the preset.
+**Next.js:** demo layout uses **`export const dynamic = "force-dynamic"`** for runtime **`process.env`**. The **demo** `layout.tsx` reads AA / wasm from env; if **`CODE_ID`** / **`CHECKSUM`** are missing in the browser, it **logs an error**. Your app can instead **hardcode or merge** the `.env.example` preset for your **`chainId`** and omit those env vars.
