@@ -86,8 +86,8 @@ Match **`signer-mode/layout.tsx`** or extend it. Full commented env: **[`apps/de
 | --------- | ----- | ----- |
 | Yes | **`type`** | Must be **`"signer"`**. |
 | Yes | **`getSignerConfig`** | Your async factory → **`SignerConfig`**. |
-| No | **`aaApiUrl`** | Use the **preset URL** for your **`chainId`** from `.env.example` (or override). **Demo** `layout.tsx` reads **`NEXT_PUBLIC_AA_API_URL`**. |
-| No | **`smartAccountContract`** | Use the **preset wasm** for that network + AA API from `.env.example` (or override). **`codeId` / `checksum`** must match the AA API you use. |
+| Preset/override | **`aaApiUrl`** | Must still be provided by your app at runtime, typically from the **preset URL** for your **`chainId`** from `.env.example` (or via override). **Demo** `layout.tsx` reads **`NEXT_PUBLIC_AA_API_URL`**. |
+| Preset/override | **`smartAccountContract`** | Must still be provided by your app at runtime, typically from the **preset wasm** for that network + AA API from `.env.example` (or via override). **`codeId` / `checksum`** must match the AA API you use. |
 | No | **`indexer`** | Set when using **`NEXT_PUBLIC_INDEXER_URL`** (+ type/token per `.env.example`); else RPC discovery. |
 | No | **`treasuryIndexer`** | **`{ url }`** when **`NEXT_PUBLIC_TREASURY_INDEXER_URL`** is set. |
 
