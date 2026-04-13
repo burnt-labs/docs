@@ -35,7 +35,7 @@ Everything else on **`authentication`** and env mapping is in the [appendix](#ap
 | You must avoid a full navigation away from your SPA. | Popup or embedded dashboard UX is acceptable. |
 | You are prototyping **wallet-led** abstract accounts (e.g. MetaMask in **`direct-signing-demo`**). | You want the fastest path with minimal AA API / contract metadata. |
 
-Reference routes: [`/signer-mode`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/signer-mode) (Turnkey + gasless session signing) and [`/direct-signing-demo`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/direct-signing-demo) (wallet-led / `requireAuth` comparisons).
+Concrete **demo routes** for signer auth + signing paths are in [Signing: session key vs direct](#signing-session-key-vs-direct) below.
 
 ## Turnkey demo: registration pattern (short)
 
@@ -43,10 +43,32 @@ The **`signer-mode`** route pairs Turnkey UI with Abstraxion via **`registerAbst
 
 ## Signing: session key vs direct
 
-- **`useAbstraxionSigningClient()`** — default gasless / session-style path (typical dApp).
-- **`useAbstraxionSigningClient({ requireAuth: true })`** — user-pays-gas style; often with explicit fee simulation instead of `"auto"` on `execute`.
+**Signer mode** only changes **how the user authenticates** (`getSignerConfig`). **How transactions are signed** is a separate choice: default **session / grantee** signing vs **direct** signing from the meta-account.
 
-See **`/direct-signing-demo`** in **`demo-app`** for side-by-side examples.
+### Session key path (default hook)
+
+Call **`useAbstraxionSigningClient()`** with no options (or only options that do not set **`requireAuth: true`**).
+
+- After connect, the SDK uses a **session-style** signing client (**`GranteeSignerClient`**) aligned with **Treasury / fee grants**: gas is covered for allowed messages when grants are configured.
+- Typical **gasless dApp** flow: user approves grants once (when applicable), then submits through the session client.
+- Fees on **`execute`**: you often use **`"auto"`** for gas estimation like the main [Account abstraction tutorial](build-react-dapp-with-account-abstraxion.md).
+
+### Direct signing path (`requireAuth`)
+
+Call **`useAbstraxionSigningClient({ requireAuth: true })`**.
+
+- Each (or many) operations go through the **user’s authenticator** on the meta-account (**`AAClient`** path in signer mode), not the delegated session shortcut.
+- **Gas** is usually **paid by the user** (or you model fees explicitly); **`"auto"`** on **`execute`** is less appropriate than **simulate + `calculateFee`** (or your own fee model)—see the demo for the split.
+- Use when you need **per-transaction user approval**, **no session grants**, or to compare behavior next to the session path.
+
+### Which demo to read
+
+| Example | Route | What it highlights |
+| ------- | ----- | ------------------ |
+| **Session / gasless with signer auth** | **[`/signer-mode`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/signer-mode)** | **`type: "signer"`** + Turnkey **`getSignerConfig`**, registrations, **`useAbstraxionSigningClient()`** (default) for Treasury-style gasless flows. **Start here** if your product matches “external custody + gasless”. |
+| **Direct vs session side by side** | **[`/direct-signing-demo`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/direct-signing-demo)** | Same **`signer`** auth; compares **default** signing client vs **`{ requireAuth: true }`**, **MetaMask**-style registration, **fee simulation** vs **`"auto"`**, and related UI. **Start here** if you need **direct signing** or to **diff** the two paths in one place. |
+
+Run **`demo-app`** locally and open those routes after reading the page components and hooks—they are the **authoritative** examples next to this page.
 
 ## Related
 
