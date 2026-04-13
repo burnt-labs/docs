@@ -63,8 +63,8 @@ Call **`useAbstraxionSigningClient({ requireAuth: true })`**.
 
 | Example | Route | What it highlights |
 | ------- | ----- | ------------------ |
-| **Session / gasless with signer auth** | **[`/signer-mode`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/signer-mode)** | **`type: "signer"`**, Turnkey **`getSignerConfig`** + **`providers.tsx`** registrations (Turnkey callout under **Session signing** in this section), default **`useAbstraxionSigningClient()`** for Treasury-style gasless. **Start here** for “external custody + gasless”. |
-| **Direct vs session side by side** | **[`/direct-signing-demo`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/direct-signing-demo)** | Same **`signer`** auth; compares **default** signing client vs **`{ requireAuth: true }`**, **MetaMask**-style registration, **fee simulation** vs **`"auto"`**, and related UI. **Start here** if you need **direct signing** or to **diff** the two paths in one place. |
+| **Session / gasless with signer auth** | **[`/signer-mode`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/signer-mode)** | **`signer`** + Turnkey → **`getSignerConfig`**; default **`useAbstraxionSigningClient()`**; gasless / Treasury. |
+| **Direct vs session side by side** | **[`/direct-signing-demo`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/direct-signing-demo)** | Same **`signer`** auth; **default vs `requireAuth: true`**; MetaMask-style wallet; **simulate / fees** vs **`"auto"`**. |
 
 Run **`demo-app`** locally and open those routes after reading the page components and hooks—they are the **authoritative** examples next to this page.
 
