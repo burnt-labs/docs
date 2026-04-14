@@ -13,6 +13,13 @@ vars:
 
 **Signer mode** (`authentication.type: "signer"`) runs Meta Account flows **without** redirecting the user to the full-page XION dashboard.
 
+## Outcomes to read alongside this page
+
+- **Gasless session signing** — default **`useAbstraxionSigningClient()`** with Treasury / grants when you configure them; the [session signing](#session-signing-default-useabstraxionsigningclient) section and [`/signer-mode`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/signer-mode) demo are the practical reference.
+- **Per-transaction approval and user-paid gas models** — signer authentication plus **`useAbstraxionSigningClient({ requireAuth: true })`**; see [`/direct-signing-demo`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/direct-signing-demo) and [Signing: session key vs direct](#signing-session-key-vs-direct).
+
+For **architecture-level combinations** (recommended **`auto`** / dashboard flows vs **signer + session** vs **signer + `requireAuth`**, plus passkey-first narratives), read [Abstraxion modes and opportunities](abstraxion-modes-opportunities.md). The rest of this document is **wiring** and **appendix reference**.
+
 ## The essentials: `getSignerConfig`
 
 **What you implement**
@@ -70,6 +77,7 @@ Run **`demo-app`** locally and open those routes after reading the page componen
 
 ## Related
 
+- [Abstraxion modes and opportunities](abstraxion-modes-opportunities.md)
 - [Web App Development — modes hub](README.md)
 - [Custom UI and loading states](custom-ui-abstraxion-authentication.md)
 - [Account abstraction tutorial](build-react-dapp-with-account-abstraxion.md)
