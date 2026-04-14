@@ -26,6 +26,7 @@
     * [Enabling Gasless Transactions with Treasury](developers/accounts/getting-started/treasury-contracts.md)
   * [Web App Development](developers/accounts/web-app/README.md)
     * [Account Abstraction with Gasless Transactions](developers/accounts/web-app/build-react-dapp-with-account-abstraxion.md)
+    * [Abstraxion modes and opportunities](developers/accounts/web-app/abstraxion-modes-opportunities.md)
     * [Abstraxion signer mode](developers/accounts/web-app/abstraxion-signer-mode.md)
     * [Custom UI and Abstraxion loading states](developers/accounts/web-app/custom-ui-abstraxion-authentication.md)
   * [Mobile App Development](developers/accounts/mobile-app/README.md)
