@@ -28,11 +28,26 @@ Usage:
   xiond [command]
 ```
 
-This output confirms that `xiond` is available. Use `xiond [command] --help` for command-specific details.
+This output confirms that `xiond` is available.
+
+Typical command groups include:
+
+- `keys` - manage local keys
+- `query` - read chain state
+- `tx` - broadcast transactions
+- `status` - inspect node status
+- `start` - run a local node process
+
+Use `xiond [command] --help` for command-specific details.
 
 ## Generate an account
 
 To execute transactions on-chain, you need at least one funded account.
+
+Key pairs include:
+
+- A **public key / address** used to receive funds.
+- A **private key** used to sign transactions.
 
 ### Generate a new key pair
 
@@ -59,11 +74,20 @@ For additional options, see:
 
 - [Requesting XION Testnet Tokens](../references/xion-testnet.md)
 
+For **mainnet** usage, fund your wallet from supported exchanges before broadcasting transactions.
+
 ## Connect to different XION networks
 
 For chain IDs and public RPC nodes, see:
 
 - [Public Endpoints & Resources](../references/public-endpoints-and-resources.md)
+
+When sending transactions to a non-local network, set both:
+
+- `--chain-id` for the target chain
+- `--node` for the RPC endpoint
+
+For queries, only `--node` is required.
 
 ### Example: Send tokens
 
@@ -78,10 +102,29 @@ xiond tx bank send <your-wallet> <recipient-address> <amount>uxion \
   -y
 ```
 
+Expected successful output includes:
+
+```text
+code: 0
+txhash: <transaction-hash>
+```
+
+If `code` is non-zero, inspect `raw_log` for the failure reason.
+
 ### Example: Query balances
 
 ```sh
 xiond query bank balances <wallet-address> --node <node-url>
+```
+
+Typical query output:
+
+```text
+balances:
+- amount: "1223782"
+  denom: uxion
+pagination:
+  total: "1"
 ```
 
 ## Next steps
