@@ -17,7 +17,7 @@ Together, these layers create Web3 infrastructure that solves real-world trust p
 
 * [**XION Overview**](overview.md) -- What XION is, why it exists, and how it works at a high level.
 * [**Verification Infrastructure**](verification-infrastructure/) -- How XION's zero-knowledge verification stack proves anything on the internet, privately.
-  * ZK Module (zkTLS) -- Verify data from any website using zero-knowledge Transport Layer Security.
+  * zkTLS -- Verify claims from any website on the open internet using zero-knowledge TLS proofs.
   * DKIM Module (zkEmail) -- Verify email contents cryptographically without exposing inbox data.
   * App Attestations -- Verify mobile application data with cryptographic proofs.
 * [**Generalized Abstraction**](generalized-abstraction.md) -- How XION removes all blockchain complexity at the protocol level.
