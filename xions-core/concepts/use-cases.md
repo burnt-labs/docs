@@ -8,7 +8,7 @@ The following use cases demonstrate what becomes possible when zero-knowledge ve
 
 **Fraud-Proof Advertising**
 
-The advertising industry wastes $80B+ annually on bot traffic. Applications built on XION can use the ZK Module to verify that ad viewers are real humans with verified platform accounts, eliminating fake engagement entirely. Combined with abstraction, users verify themselves once and never interact with blockchain mechanics.
+The advertising industry wastes $80B+ annually on bot traffic. Applications built on XION can use zkTLS to verify that ad viewers are real humans with verified platform accounts, eliminating fake engagement entirely. Combined with abstraction, users verify themselves once and never interact with blockchain mechanics.
 
 _Technical approach:_ Users generate zkTLS proofs from authenticated accounts (social media, email, banking). Your application's smart contract queries these attestations before counting engagement or distributing rewards. Treasury contracts cover all gas, so the user experience is identical to any standard app.
 
@@ -16,7 +16,7 @@ _Technical approach:_ Users generate zkTLS proofs from authenticated accounts (s
 
 Users accumulate reputation across dozens of platforms but own none of it. Applications on XION can let users prove their Uber rating to Lyft, their Delta status to United, or their Amazon purchase history to a competing retailer, all without the source platform's cooperation or knowledge.
 
-_Technical approach:_ Users generate proofs from the ZK Module (website data), DKIM Module (loyalty emails), or App Attestations (mobile app data). Attestations are bound to their Meta Account, creating a portable, verified reputation profile that any application can query with user permission.
+_Technical approach:_ Users generate proofs from zkTLS (web data), zkEmail (loyalty emails), or App Attestations (mobile app data). Attestations are bound to their Meta Account, creating a portable, verified reputation profile that any application can query with user permission.
 
 **Private Data Monetization**
 
@@ -28,7 +28,7 @@ _Technical approach:_ Users generate attestations that prove specific attributes
 
 Proving credentials today requires uploading sensitive documents. Applications on XION let users prove age, income, accreditation, employment, or any other attribute with a ZK proof instead.
 
-_Technical approach:_ Combine DKIM Module (employment verification email from HR), ZK Module (banking website showing balance range), and App Attestations (government ID app) to create composite verified identities. Smart contracts enforce minimum proof requirements before granting access.
+_Technical approach:_ Combine DKIM Module (employment verification email from HR), zkTLS (banking website data), and App Attestations (government ID app) to create composite verified identities. Smart contracts enforce minimum proof requirements before granting access.
 
 #### For Enterprise and B2B
 
@@ -42,13 +42,13 @@ _Technical approach:_ Enterprise integration via API. Brand defines required att
 
 Zero-knowledge proofs can automate Know Your Customer and Know Your Business workflows. Users prove identity attributes (citizenship, accreditation, sanctions-list absence) without uploading documents that create liability.
 
-_Technical approach:_ Combine DKIM proofs (government emails, banking communications) with ZK Module proofs (government website data) to verify compliance requirements. Smart contracts automatically grant or deny access based on verified attestation sets.
+_Technical approach:_ Combine DKIM proofs (government emails, banking communications) with zkTLS proofs (government website data) to verify compliance requirements. Smart contracts automatically grant or deny access based on verified attestation sets.
 
 **Insurance Underwriting**
 
 Insurers can verify risk factors (driving record, health metrics, employment stability) instantly and privately, reducing underwriting from weeks to seconds.
 
-_Technical approach:_ Users generate proofs from relevant sources: ZK Module for DMV records, App Attestations for fitness data, DKIM Module for employment verification. Insurance application's smart contract evaluates proofs against underwriting criteria and issues instant quotes.
+_Technical approach:_ Users generate proofs from relevant sources: zkTLS for government/DMV website data, App Attestations for fitness data, DKIM Module for employment verification. Insurance application's smart contract evaluates proofs against underwriting criteria and issues instant quotes.
 
 #### For DeFi and Financial Applications
 
@@ -56,7 +56,7 @@ _Technical approach:_ Users generate proofs from relevant sources: ZK Module for
 
 DeFi lending today requires overcollateralization because borrowers cannot prove creditworthiness. With verification, lending applications can assess real-world financial data privately.
 
-_Technical approach:_ Borrowers generate DKIM proofs of income (payroll emails), ZK Module proofs of bank balances, and App Attestation proofs of financial app history. Lending contracts evaluate these attestations to calculate risk and set loan terms, enabling lower collateral requirements.
+_Technical approach:_ Borrowers generate DKIM proofs of income (payroll emails), zkTLS proofs of bank data, and App Attestation proofs of financial app history. Lending contracts evaluate these attestations to calculate risk and set loan terms, enabling lower collateral requirements.
 
 **Verified DAO Governance**
 

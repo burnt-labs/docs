@@ -19,7 +19,7 @@ XION's modular Meta Accounts introduce a highly adaptable and secure account cre
 
 #### How Meta Accounts Interact with Verification
 
-Meta Accounts serve as the identity anchor for XION's verification infrastructure. When a user generates a zero-knowledge proof (via ZK Module, DKIM Module, or App Attestation), the resulting attestation is bound to their Meta Account. This creates a persistent, verified identity layer:
+Meta Accounts serve as the identity anchor for XION's verification infrastructure. When a user generates a zero-knowledge proof (via zkTLS, zkEmail, or App Attestations), the resulting attestation is bound to their Meta Account. This creates a persistent, verified identity layer:
 
 * Attestations accumulate over time, building a rich verified profile
 * Applications can query multiple attestations for a single Meta Account

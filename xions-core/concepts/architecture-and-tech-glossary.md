@@ -8,8 +8,8 @@ description: Key Terms and Concepts
 
 | Term                           | Definition                                                                                                                                                           |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Truth Engine**               | XION's collective verification infrastructure comprising the ZK Module, DKIM Module, and App Attestations. Enables private verification of any data on the internet. |
-| **ZK Module (zkTLS)**          | Verification module that creates zero-knowledge proofs over TLS-encrypted web sessions. Proves data from any website without revealing the data itself.              |
+| **Truth Engine**               | XION's verification infrastructure comprising zkTLS (web data), zkEmail (authenticated email), and App Attestations (mobile apps). Enables private, cryptographic verification of real-world data from the internet. |
+| **zkTLS**                      | Zero-knowledge verification for web data. Creates proofs over TLS-encrypted sessions from any website, enabling claims about ratings, balances, loyalty status, and more without exposing raw data.              |
 | **DKIM Module (zkEmail)**      | Verification module that creates zero-knowledge proofs over email contents using DKIM signatures. Proves email-based claims without exposing the email.              |
 | **App Attestation**            | Verification module that creates cryptographic proofs of mobile application data. Proves in-app state without exposing app credentials or full data.                 |
 | **Attestation**                | An on-chain record of a verified claim. Created when a zero-knowledge proof is successfully verified by the protocol. Queryable by smart contracts.                  |

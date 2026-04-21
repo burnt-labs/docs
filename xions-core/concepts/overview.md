@@ -28,7 +28,7 @@ XION's architecture has two primary layers:
 
 The Truth Engine is XION's verification infrastructure. It applies zero-knowledge proofs to three data sources:
 
-* **ZK Module (zkTLS):** Verifies data from any website by creating cryptographic proofs of TLS-encrypted web sessions. Prove your Uber rating, bank balance range, or social media following without exposing the underlying data.
+* **zkTLS:** Verifies real-world data from any website using zero-knowledge proofs over TLS sessions. Prove your Uber rating, bank balance range, loyalty tier, or social metrics without exposing the underlying information.
 * **DKIM Module (zkEmail):** Verifies email contents using DKIM signatures that email providers already attach. Prove purchase receipts, account notifications, or employment verification emails without revealing the full email.
 * **App Attestations:** Verifies mobile application data through cryptographic attestation of in-app state. Prove fitness achievements, delivery history, or streaming habits from mobile apps.
 
@@ -51,7 +51,7 @@ XION is built on the Cosmos SDK with CometBFT consensus and CosmWasm smart contr
 
 ### Key Differentiators
 
-* **Only L1 with integrated verification infrastructure.** zkTLS, zkEmail, and App Attestations are built into the protocol, not bolted on as third-party services.
+* **Only L1 with integrated verification infrastructure.** zkTLS (web data), zkEmail (authenticated email), and App Attestations (mobile apps) are built directly into the protocol.
 * **Only L1 with protocol-level abstraction.** Account, gas, signature, payment, and device abstraction are part of the chain itself, not application-layer workarounds.
 * **Real-world traction.** 150+ global brands (Uber, Amazon, BMW, LEGO, Travelex), 68M+ verified interactions, 5M+ users, $35M+ ARR from ecosystem applications.
 * **Revenue model, not speculation.** Revenue from enterprise verification services, application revenue sharing, marketplace fees, and stablecoin activity flows back to the protocol through buybacks.

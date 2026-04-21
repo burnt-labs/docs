@@ -20,7 +20,7 @@ This creates an entirely new class of applications that were previously impossib
 
 #### How It Works (High Level)
 
-The verification flow follows a consistent pattern across all three modules:
+The verification flow follows a consistent pattern across all three pillars of the Truth Engine:
 
 1. **User generates proof.** The user's device creates a zero-knowledge proof from a data source (website, email, or mobile app). This happens client-side; the raw data never leaves the user's device.
 2. **Proof is submitted on-chain.** The ZK proof is submitted to XION where it is verified by the protocol. If valid, the verified claim is recorded on-chain as an attestation.
@@ -29,19 +29,19 @@ The verification flow follows a consistent pattern across all three modules:
 
 #### The Three Verification Modules
 
-XION's Truth Engine provides three modules, each targeting a different data source. Together, they cover virtually all data on the internet.
+XION's Truth Engine provides three complementary verification technologies. Together, they allow applications to verify virtually any data on the internet privately.
 
 | Module                    | Data Source | What It Verifies                                | Example                                                           |
 | ------------------------- | ----------- | ----------------------------------------------- | ----------------------------------------------------------------- |
-| **ZK Module** (zkTLS)     | Any website | Data displayed in TLS-encrypted web sessions    | Uber rating, bank balance range, social media metrics             |
+| **zkTLS**     | Any website | Data displayed in TLS-encrypted web sessions    | Uber rating, bank balance range, social media metrics             |
 | **DKIM Module** (zkEmail) | Email inbox | Email contents authenticated by DKIM signatures | Purchase receipts, account confirmations, employment verification |
 | **App Attestations**      | Mobile apps | In-app data and state                           | Fitness achievements, delivery history, streaming habits          |
 
-Each module is detailed in its own section below.
+See the dedicated pages for [zkTLS](./zktls.md), [zkEmail (DKIM)](./dkim-module-zkemail.md), and App Attestations.
 
 #### Developer Integration Pattern
 
-All three modules follow the same integration pattern in your application:
+All three verification technologies follow the same high-level integration pattern:
 
 ```
 // Pseudocode: Generic verification flow
@@ -65,12 +65,12 @@ const attestation = await submitProofOnChain(proof);
 // execute logic based on the result
 ```
 
-Specific integration guides, SDKs, and contract examples for each module are available in the [Developer](/broken/pages/bFL2eEMYjRSn0lbLFgv4) section.
+Specific integration guides, SDKs, example contracts, and client libraries for each technology are available in the [Developer Documentation](../developers/).
 
 #### Composability
 
 Verification proofs are composable. A single user can generate multiple proofs from different sources and combine them into a rich, verified profile:
 
-* Prove Uber rating (ZK Module) + Prove income range (DKIM Module) + Prove fitness activity (App Attestation) = Verified, multi-dimensional user profile with zero sensitive data exposed.
+* Prove Uber rating (zkTLS) + Prove income range (zkEmail) + Prove fitness activity (App Attestation) = Verified, multi-dimensional user profile with zero sensitive data exposed.
 
 Applications can require any combination of proofs before granting access or triggering logic. This composability is what enables complex use cases like privacy-preserving underwriting, multi-factor reputation systems, and cross-platform loyalty.
