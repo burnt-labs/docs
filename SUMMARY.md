@@ -7,7 +7,7 @@
 * [Concepts](xions-core/concepts/README.md)
   * [Overview](xions-core/concepts/overview.md)
   * [Verification Infrastructure](xions-core/concepts/verification-infrastructure/README.md)
-    * [ZK Module (zkTLS)](xions-core/concepts/verification-infrastructure/zk-module-zktls.md)
+    * [zkTLS](xions-core/concepts/verification-infrastructure/zktls.md)
     * [DKIM Module (zkEmail)](xions-core/concepts/verification-infrastructure/dkim-module-zkemail.md)
     * [App Attestations](xions-core/concepts/verification-infrastructure/app-attestations.md)
   * [Generalized Abstraction](xions-core/concepts/generalized-abstraction.md)
