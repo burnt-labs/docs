@@ -15,6 +15,15 @@ Before verifying zero-knowledge proofs on XION, you must publish the correspondi
 - Associated with a specific proving system
 - Required for on-chain proof verification
 
+### Who Should Use This Guide
+
+**This guide is for developers who need to:**
+
+- Use **custom ZK circuits** (Circom, Gnark, Noir) for specialized verification logic
+- Publish verification keys for any ZK proving system supported by XION
+
+> **Note**: Most verification integrations (zkTLS, zkEmail, App Attestations) use pre-configured vkeys managed by the protocol. This guide is primarily for **advanced use cases** requiring custom circuits. If you're integrating standard verification features, start with the [Internet Verification (zkTLS)](internet-verification/), [Email Verification (zkEmail)](email-verification.md), or [Mobile Verification (App Attestations)](app-attestations.md) guides instead.
+
 ## Supported Proving Systems
 
 | Proving System    | CLI Value   | Format | Curve | Use Case                  |
@@ -341,6 +350,20 @@ xiond tx zk update-vkey \
   --gas-adjustment 1.5
 ```
 
+### Remove a VKey
+
+Only the original uploader can remove a vkey:
+
+```bash
+xiond tx zk remove-vkey old_circuit \
+  --from $ACCOUNT \
+  --chain-id $CHAIN_ID \
+  --node $RPC_URL \
+  --gas auto \
+  --gas-prices 0.001uxion \
+  --gas-adjustment 1.5
+```
+
 ---
 
 ## Reference
@@ -349,7 +372,7 @@ xiond tx zk update-vkey \
 
 | Parameter               | Maximum    |
 | ----------------------- | ---------- |
-| VKey Size               | 1 MiB      |
+| VKey Size               | 256 KiB    |
 | Groth16 Proof Size      | 4 KiB      |
 | Groth16 Public Inputs   | 30 KiB     |
 | Gnark Proof Size        | 4 KiB      |
@@ -394,6 +417,7 @@ xiond query zk params --node $RPC_URL
 | Error                        | Cause                                             | Solution                                                            |
 | ---------------------------- | ------------------------------------------------- | ------------------------------------------------------------------- |
 | `vkey already exists`        | A vkey with this name is already registered       | Use a different name or `update-vkey` to modify existing            |
+| `verification key not found` | No vkey with the specified name or ID exists      | Check if the vkey exists with `xiond query zk has-vkey <name>`      |
 | `invalid vkey bytes`         | File format doesn't match the specified system    | Ensure JSON for `groth16`, binary for `gnark` and `ultrahonk`       |
 | `vkey size exceeds limit`    | VKey is larger than the maximum allowed size      | Check limits with `xiond query zk params`                           |
 | `unauthorized`               | Only the original uploader can update/remove      | Use the same account that uploaded the vkey                         |
@@ -405,10 +429,14 @@ xiond query zk params --node $RPC_URL
 # Transaction commands help
 xiond tx zk --help
 xiond tx zk add-vkey --help
+xiond tx zk update-vkey --help
+xiond tx zk remove-vkey --help
 
 # Query commands help
 xiond query zk --help
+xiond query zk verify-proof --help
 xiond query zk verify-gnark --help
+xiond query zk verify-ultrahonk --help
 ```
 
 ## Next Steps

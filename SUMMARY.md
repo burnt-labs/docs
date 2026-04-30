@@ -80,6 +80,7 @@
     * [Build a TODO App using the Collection-Document Storage Smart Contract](developers/computation/use-cases/build-a-todo-app-using-the-collection-document-storage-smart-contract.md)
     * [Build a TODO Mobile App using the DocuStore Contract](developers/computation/use-cases/build-a-todo-mobile-app-using-the-docustore-contract.md)
 * [Verification](developers/verification/README.md)
+  * [Publishing ZK Verification Keys](developers/verification/publishing-zk-verification-keys.md)
   * [Internet Verification (zkTLS)](developers/verification/internet-verification/README.md)
     * [zkTLS Integration using Reclaim in a Xion Mobile App](developers/verification/internet-verification/zktls-integration-using-reclaim-in-a-xion-mobile-app.md)
     * [zkTLS Integration using Opacity in a Xion Mobile App](developers/verification/internet-verification/zktls-integration-using-opacity-in-a-xion-mobile-app.md)
