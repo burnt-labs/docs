@@ -22,7 +22,7 @@ Before verifying zero-knowledge proofs on XION, you must publish the correspondi
 - Use **custom ZK circuits** (Circom, Gnark, Noir) for specialized verification logic
 - Publish verification keys for any ZK proving system supported by XION
 
-> **Note**: Most verification integrations (zkTLS, zkEmail, App Attestations) use pre-configured vkeys managed by the protocol. This guide is primarily for **advanced use cases** requiring custom circuits. If you're integrating standard verification features, start with the [Internet Verification (zkTLS)](internet-verification/), [Email Verification (zkEmail)](email-verification.md), or [Mobile Verification (App Attestations)](app-attestations.md) guides instead.
+> **Note**: Most verification integrations use pre-configured vkeys managed by the protocol. This guide is primarily for **advanced use cases** requiring custom circuits. If you're integrating standard verification features, start with the [Internet Verification (zkTLS)](internet-verification/) guides instead.
 
 ## Supported Proving Systems
 
