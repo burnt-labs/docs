@@ -1,8 +1,10 @@
+---
+icon: cloud
+---
+
 # Internet Verification (zkTLS)
 
 XION supports advanced **Zero Knowledge (ZK)** tools to enable developers to build privacy-preserving, verifiable applications that interact with real-world data, securely and credibly. Whether you're building identity-based apps, verification layers, or attestation protocols, the ZK stack on XION gives you the tools to prove anything online without compromising privacy.
-
-
 
 ## Why Zero Knowledge?
 
@@ -11,8 +13,6 @@ Zero Knowledge Proofs allow users to prove a fact is true, without revealing any
 * Verifying user attributes (like age, membership, or ownership) without sharing personal data.
 * Connecting on-chain logic to real-world, off-chain data sources like APIs and platforms.
 * Building privacy-first apps that still maintain trust and transparency.
-
-
 
 ## zkTLS: Verifying Web2 Data with Zero Knowledge
 
@@ -31,8 +31,6 @@ XION integrates zkTLS via the [Reclaim Protocol](https://reclaimprotocol.org), a
 
 Get started with our guide on [zkTLS Integration using Reclaim in a Xion Mobile App](zktls-integration-using-reclaim-in-a-xion-mobile-app.md).
 
-
-
 ## zkFetch: Prove Anything Behind an API
 
 **zkFetch** extends the power of zkTLS by letting you fetch and prove arbitrary data from authenticated APIs, both public and private. It gives developers an interface to generate verifiable claims from any web service that requires login or access tokens.
@@ -49,8 +47,6 @@ Get started with our guide on [zkTLS Integration using Reclaim in a Xion Mobile 
 With zkFetch, you’re not limited to static web data. You can verify API-authenticated information using the Reclaim App and connect it to your XION dApp—creating rich, dynamic verification flows.
 
 Get started with our guide on [Verifying API Data with Zero Knowledge (zkFetch)](verifying-api-data-with-zero-knowledge-zkfetch.md).
-
-
 
 ## Reclaim Protocol: Your Gateway to zk Identity
 
