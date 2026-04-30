@@ -65,13 +65,14 @@ xiond tx zk add-vkey [name] [vkey-file] [description] [proof-system] [flags]
 
 **Parameters:**
 
-| Parameter      | Description                                          |
-| -------------- | ---------------------------------------------------- |
-| `name`         | Unique identifier for your vkey (max 128 characters) |
-| `vkey-file`    | Path to your verification key file                   |
-| `description`  | Description of the circuit (max 1024 characters)     |
-| `proof-system` | One of: `groth16`, `gnark`, or `ultrahonk`           |
+| Parameter      | Description                                     |
+| -------------- | ----------------------------------------------- |
+| `name`         | Unique identifier for your vkey (max 128 bytes) |
+| `vkey-file`    | Path to your verification key file              |
+| `description`  | Description of the circuit (max 1024 bytes)     |
+| `proof-system` | One of: `groth16`, `gnark`, or `ultrahonk`      |
 
+These size limits are enforced on-chain in bytes, not characters. For non-ASCII text, multi-byte UTF-8 characters count toward the byte limit according to their encoded size.
 **Common Flags:**
 
 | Flag               | Description                                 |
