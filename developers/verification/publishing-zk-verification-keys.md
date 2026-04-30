@@ -396,7 +396,7 @@ Default values:
 - **Chunk size:** 20 bytes
 - **Chunk gas:** 10,000 gas per chunk
 
-For a typical vkey (~10KB), expect approximately 500,000–600,000 gas.
+For a typical vkey (~10KB), expect approximately 5,000,000–5,100,000 gas, depending on `base_gas`.
 
 ### Query Module Parameters
 
