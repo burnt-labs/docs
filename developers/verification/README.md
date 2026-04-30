@@ -6,6 +6,14 @@ icon: badge-check
 
 This section covers how to integrate XION's verification infrastructure (the Truth Engine) into your application. Whether you are building a consumer app that needs to verify user identity, an advertising platform that needs to confirm real humans, or a DeFi protocol that needs to assess creditworthiness, these guides walk you through the full integration.
 
+### ZK Infrastructure
+
+#### [Publishing ZK Verification Keys](publishing-zk-verification-keys.md)
+
+Publish and manage verification keys (vkeys) for custom ZK circuits on XION. This is **infrastructure-level** guidance for advanced use cases requiring custom ZK proving systems (Groth16, Gnark, UltraHonk).
+
+> **Note**: Most applications use pre-configured vkeys for standard verification features (zkTLS, zkEmail, App Attestations). This guide is for developers building custom ZK circuits.
+
 ### Explore the verification modules
 
 #### [Internet Verification (ZK Module, zkTLS)](internet-verification/)
