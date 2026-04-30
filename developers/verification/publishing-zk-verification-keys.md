@@ -208,28 +208,6 @@ xiond tx zk add-vkey \
   --gas-adjustment 1.5
 ```
 
-### Generating Proofs
-
-```go
-// Create witness
-assignment := MyCircuit{X: 3, Y: 27}
-witness, _ := frontend.NewWitness(&assignment, ecc.BN254.ScalarField())
-publicWitness, _ := witness.Public()
-
-// Generate proof
-proof, _ := groth16.Prove(ccs, pk, witness)
-
-// Export proof
-proofFile, _ := os.Create("proof.bin")
-defer proofFile.Close()
-proof.WriteTo(proofFile)
-
-// Export public inputs
-pubFile, _ := os.Create("public_input.bin")
-defer pubFile.Close()
-publicWitness.WriteTo(pubFile)
-```
-
 ### Verifying Proofs
 
 ```bash
