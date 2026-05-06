@@ -110,6 +110,7 @@
     * [Web2 vs Web3 App Architecture: A Comparison](developers/references/for-web2-developers/web2-vs-web3-app-architecture-a-comparison.md)
     * [Misconceptions and Misapplied Web2 Patterns](developers/references/for-web2-developers/misconceptions-and-misapplied-web2-patterns.md)
     * [Recommended Architecture for Apps on XION](developers/references/for-web2-developers/recommended-architecture-for-dapps-on-xion.md)
+  * [Mob: a multi-platform signing client library for XION](developers/references/mob-a-multi-platform-signing-client-library-for-xion.md)
 
 ## Nodes & Validators
 
