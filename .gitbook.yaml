@@ -5,4 +5,5 @@ redirects:
   developers/learn/overview-of-xion: xions-core/learn/README.md
   developers/getting-started-advanced/your-first-dapp/xion-typescript: developers/getting-started-advanced/your-first-dapp/xion-backend-using-cosmjs.md
   developers/computation/local-development/interact-with-xion-chain-setup-xion-daemon: developers/tools/xiond-cli.md
+  developers/references/mob-a-multi-platform-signing-client-library-for-xion: developers/tools/mob-a-multi-platform-signing-client-library-for-xion.md
   xions-core/concepts/verification-infrastructure/zk-module-zktls: xions-core/concepts/verification-infrastructure/zktls.md
