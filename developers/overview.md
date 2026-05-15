@@ -184,13 +184,16 @@ Now that you understand the big picture, here's how to start building:
 4. **Add Payments**: Enable credit card and crypto payments
    * [Credit / Debit Card Integration](payments/credit-debit-cards/)
 
-### AI Agents and CLI Tools
+### Tools & SDKs
 
-If you prefer terminal workflows or AI-assisted development, start here:
+Libraries and CLIs for app and automation workflows:
 
+* [Tools & SDKs overview](tools/)
+* [xion.js](https://github.com/burnt-labs/xion.js) — Web App and Mobile App guides under [Accounts](accounts/)
+* [Mob signing library](tools/mob-a-multi-platform-signing-client-library-for-xion.md)
 * [AI Agent Quick Start](../xions-core/ai-agents.md)
-* [Xion Agent Toolkit Tutorial](tools/xion-toolkit.md)
-* [xiond CLI Guide](tools/xiond-cli.md)
+* [Xion Agent Toolkit](tools/xion-toolkit.md)
+* [xiond CLI](tools/xiond-cli.md)
 
 ### Key Concepts for Web2 Developers
 

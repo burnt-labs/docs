@@ -1,3 +1,8 @@
+---
+description: Multi-platform signing client library for XION (Rust + UniFFI)
+icon: cubes
+---
+
 # Mob: a multi-platform signing client library for XION
 
 
