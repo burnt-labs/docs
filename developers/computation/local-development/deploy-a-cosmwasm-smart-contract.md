@@ -65,6 +65,18 @@ If you’re deploying contracts on **XION Mainnet**, you can acquire XION tokens
 
 ## **Compile and Optimize the Contract**
 
+{% hint style="warning" %}
+WASM built with the **latest stable Rust** may fail to **store** on XION because bulk memory is not supported. If upload fails after a Rust upgrade, create `rust-toolchain.toml` at the contract project root and pin **1.86** (latest stable known to avoid bulk memory for `wasm32-unknown-unknown` as of May 2026; re-test when upgrading Rust or when XION enables bulk memory):
+
+```toml
+[toolchain]
+channel = "1.86"
+targets = ["wasm32-unknown-unknown"]
+```
+
+Then rebuild and re-run the optimizer below before `xiond tx wasm store`.
+{% endhint %}
+
 To demonstrate the deployment process, we’ll use a simple [**Counter**](https://github.com/burnt-labs/cw-counter) smart contract. This contract provides an example of state management on the XION blockchain. It allows you to:
 
 * Set an initial counter value
