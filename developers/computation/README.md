@@ -6,6 +6,20 @@ icon: user-robot
 
 The Computation Layer covers smart contracts (automations), business logic, and workflows on XION.
 
+### Contract development notes
+
+WASM binaries built with the **latest stable Rust** may fail to upload to XION (`xiond tx wasm store`) because the chain does not support WebAssembly **bulk memory** instructions that newer Rust toolchains can emit.
+
+If you run into store or validation errors after upgrading Rust, pin the toolchain in your **contract project root** with a `rust-toolchain.toml` file:
+
+```toml
+[toolchain]
+channel = "1.86"
+targets = ["wasm32-unknown-unknown"]
+```
+
+Rebuild the contract (and re-run the [CosmWasm optimizer](local-development/deploy-a-cosmwasm-smart-contract.md) if you use Docker) before uploading again. See also the [local environment setup](local-development/setting-up-env/installation-prerequisites-setup-local-environment.md#rust) guide.
+
 ### Overview
 
 Smart contracts on XION are built using CosmWasm and enable:

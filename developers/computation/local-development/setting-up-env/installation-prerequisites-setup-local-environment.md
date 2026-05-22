@@ -90,6 +90,20 @@ You should see output similar to the following::
 rustc 1.82.0-nightly (c1a6199e9 2024-07-24)
 ```
 
+### Pin the Rust toolchain for XION
+
+{% hint style="warning" %}
+WASM built with the **latest stable Rust** may fail to upload to XION because the chain does not support WebAssembly **bulk memory**. If `xiond tx wasm store` or validation fails after a Rust upgrade, add `rust-toolchain.toml` in your **contract project root** (not only in your global Rust install):
+{% endhint %}
+
+```toml
+[toolchain]
+channel = "1.86"
+targets = ["wasm32-unknown-unknown"]
+```
+
+Commit this file with your contract repo so CI and teammates use the same toolchain, then rebuild before deploying.
+
 ## Cargo
 
 Cargo is Rust's package manager and build system, essential for compiling and managing dependencies in XION smart contract development. When installing Rust using **rustup** which we did earlier, Cargo is automatically included. However, if Cargo is missing or needs to be installed separately, follow the steps below.
