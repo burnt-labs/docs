@@ -10,7 +10,7 @@ Xion Agent Toolkit is a CLI-first toolkit for building on XION with Meta Account
 This guide is for developers who are new to XION but already comfortable with CLI tools and AI coding agents.
 
 {% hint style="warning" %}
-**Beta:** Xion Agent Toolkit is in **beta**. **Mainnet is not supported** yet—use **XION testnet** for all development and testing.
+**Beta:** Xion Agent Toolkit is in **beta**. It supports **testnet** (default) and **mainnet**. Use testnet for development and the faucet; switch to mainnet when you are ready for production (see [Networks](#networks) below).
 {% endhint %}
 
 {% hint style="info" %}
@@ -65,6 +65,31 @@ For full installation detail:
 
 - [README](https://github.com/burnt-labs/xion-agent-toolkit/blob/main/README.md)
 - [INSTALL-FOR-AGENTS.md](https://raw.githubusercontent.com/burnt-labs/xion-agent-toolkit/main/INSTALL-FOR-AGENTS.md)
+
+## Networks
+
+Xion Agent Toolkit targets **testnet** by default and also supports **mainnet**. Pick the network that matches your Treasury and OAuth2 setup.
+
+| Network | CLI flag / config | Notes |
+| ------- | ----------------- | ----- |
+| **Testnet** | Default, or `--network testnet`, or `xion-toolkit config set-network testnet` | Use for development; faucet and test tokens are available |
+| **Mainnet** | `--network mainnet`, or `xion-toolkit config set-network mainnet` | Production Meta Accounts, Treasuries, and OAuth2 clients |
+
+Examples:
+
+```bash
+# One-off mainnet command
+xion-toolkit --network mainnet status
+
+# Persist default network
+xion-toolkit config set-network mainnet
+```
+
+For full CLI flags and configuration, see the [Xion Agent Toolkit repository](https://github.com/burnt-labs/xion-agent-toolkit) and [Configuration](https://github.com/burnt-labs/xion-agent-toolkit/blob/main/docs/configuration.md) docs.
+
+{% hint style="info" %}
+**OAuth2 client portal by network:** Manage OAuth2 clients in the [testnet portal](https://oauth2.testnet.burnt.com/) or [mainnet portal](https://oauth2.burnt.com/). See [OAuth2 App Development](../accounts/oauth2-app.md).
+{% endhint %}
 
 ## Authentication (refresh-first pattern)
 
@@ -160,8 +185,10 @@ flowchart TD
 
 ## Common how-to tasks
 
-- **Switch network** (during beta, **testnet** only)
+- **Switch network** (`testnet` or `mainnet`)
   - `xion-toolkit config set-network testnet`
+  - `xion-toolkit config set-network mainnet`
+  - Or pass `--network mainnet` (or `testnet`) on any command
 - **Use machine-readable output**
   - `xion-toolkit --output json <command>`
 - **Disable prompts for automation**
