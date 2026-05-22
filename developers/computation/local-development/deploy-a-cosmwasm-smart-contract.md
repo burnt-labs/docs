@@ -66,7 +66,7 @@ If you’re deploying contracts on **XION Mainnet**, you can acquire XION tokens
 ## **Compile and Optimize the Contract**
 
 {% hint style="warning" %}
-WASM built with the **latest stable Rust** may fail to **store** on XION because bulk memory is not supported. If upload fails after a Rust upgrade, add `rust-toolchain.toml` in the contract project root:
+WASM built with the **latest stable Rust** may fail to **store** on XION because bulk memory is not supported. If upload fails after a Rust upgrade, create `rust-toolchain.toml` at the contract project root and pin **1.86** (latest stable known to avoid bulk memory for `wasm32-unknown-unknown` as of May 2026; re-test when upgrading Rust or when XION enables bulk memory):
 
 ```toml
 [toolchain]

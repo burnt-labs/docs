@@ -84,16 +84,18 @@ After installation, verify **Rust** is correctly installed:
 rustc --version
 ```
 
-You should see output similar to the following::
+You should see output similar to the following (your exact version may differ):
 
 ```
-rustc 1.82.0-nightly (c1a6199e9 2024-07-24)
+rustc 1.86.0
 ```
+
+Your global Rust install does not need to match **1.86** exactly, but each **contract repo** should pin **1.86** for WASM builds that upload to XION (see below).
 
 ### Pin the Rust toolchain for XION
 
 {% hint style="warning" %}
-WASM built with the **latest stable Rust** may fail to upload to XION because the chain does not support WebAssembly **bulk memory**. If `xiond tx wasm store` or validation fails after a Rust upgrade, add `rust-toolchain.toml` in your **contract project root** (not only in your global Rust install):
+WASM built with the **latest stable Rust** may fail to upload to XION because the chain does not support WebAssembly **bulk memory**. If `xiond tx wasm store` or validation fails after a Rust upgrade, create `rust-toolchain.toml` at your **contract project root** (not only in your global Rust install):
 {% endhint %}
 
 ```toml
@@ -101,6 +103,8 @@ WASM built with the **latest stable Rust** may fail to upload to XION because th
 channel = "1.86"
 targets = ["wasm32-unknown-unknown"]
 ```
+
+**Why 1.86?** Rust **1.87+** may enable bulk memory for `wasm32-unknown-unknown`, which XION rejects today. **1.86** is the latest stable release known to produce upload-compatible WASM for XION at the time of writing (May 2026). Re-test uploads and update this pin when you upgrade Rust or when XION adds bulk memory support.
 
 Commit this file with your contract repo so CI and teammates use the same toolchain, then rebuild before deploying.
 
@@ -116,10 +120,10 @@ Run the following command to check if Cargo is already installed:
 cargo --version
 ```
 
-If Cargo is installed, you should see an output similar to:
+If Cargo is installed, you should see an output similar to (your exact version may differ):
 
 ```
-cargo 1.82.0-nightly (5f6b9a922 2024-07-19)
+cargo 1.86.0
 ```
 
 If Cargo is missing, follow the installation steps below.
