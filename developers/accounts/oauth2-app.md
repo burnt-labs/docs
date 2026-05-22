@@ -59,7 +59,7 @@ You **MUST enable the "IS OAUTH2 APP" toggle** in the Treasury contract's Update
 
 **To enable the OAuth2 toggle:**
 
-1. Navigate to your Treasury contract in the [Xion Developer Portal](https://dev.testnet.burnt.com/) (testnet) or [mainnet Developer Portal](https://dev.burnt.com/)—use the portal that matches your target network
+1. Navigate to your Treasury contract in the [Xion Developer Portal (testnet)](https://dev.testnet.burnt.com/) or [Xion Developer Portal (mainnet)](https://dev.burnt.com/). Use the portal that matches your target network.
 2. Click the **"Update Params"** button
 3. Enable the **"IS OAUTH2 APP"** toggle switch
 4. Save the changes
@@ -189,12 +189,12 @@ The OAuth2 Authorization Code flow with PKCE follows these standard steps:
 
 #### Step 0: Endpoints
 
-First of all, the OAuth2 API endpoints are same as the OAuth2 portal:
+First of all, the OAuth2 API endpoints are the same as the OAuth2 portal:
 
 * **Testnet**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/)
 * **Mainnet**: [https://oauth2.burnt.com/](https://oauth2.burnt.com/)
 
-Set `VITE_XION_OAUTH2_SERVER_URL` (frontend) or `XION_OAUTH2_SERVER_URL` (backend) to the base URL for your target network. The examples below use testnet defaults.
+Set `VITE_XION_OAUTH2_SERVER_URL` (frontend) or `XION_OAUTH2_SERVER_URL` (backend) to the base URL for your target network **without a trailing slash** (for example, `https://oauth2.testnet.burnt.com`). The examples below use testnet defaults and resolve discovery paths with `new URL()` to avoid double slashes.
 
 #### Step 1: Discovery - Get OAuth2 Server Information
 
@@ -202,9 +202,9 @@ Before starting the OAuth2 flow, you need to discover the OAuth2 server's endpoi
 
 ```typescript
 async function getOAuthServerInfo(): Promise<OAuthServerInfo> {
-  const serverUrl = 'https://oauth2.testnet.burnt.com/'
+  const serverUrl = 'https://oauth2.testnet.burnt.com'
   const response = await fetch(
-    `${serverUrl}/.well-known/oauth-authorization-server`
+    new URL('.well-known/oauth-authorization-server', serverUrl).toString()
   )
   if (!response.ok) {
     throw new Error('Failed to fetch OAuth server info')
@@ -442,7 +442,7 @@ const STORAGE_KEY_CODE_VERIFIER = 'xion_oauth_code_verifier'
 const STORAGE_KEY_STATE = 'xion_oauth_state'
 
 export function getOAuthServerUrl(): string {
-  return import.meta.env.VITE_XION_OAUTH2_SERVER_URL || 'https://oauth2.testnet.burnt.com/'
+  return import.meta.env.VITE_XION_OAUTH2_SERVER_URL || 'https://oauth2.testnet.burnt.com'
 }
 
 export function getClientId(): string {
@@ -456,7 +456,7 @@ export function getRedirectUri(): string {
 export async function getOAuthServerInfo(): Promise<OAuthServerInfo> {
   const serverUrl = getOAuthServerUrl()
   const response = await fetch(
-    `${serverUrl}/.well-known/oauth-authorization-server`
+    new URL('.well-known/oauth-authorization-server', serverUrl).toString()
   )
   if (!response.ok) {
     throw new Error('Failed to fetch OAuth server info')
@@ -736,7 +736,7 @@ Following are some of major OAuth2 utility functions for the backend Confidentia
 ```typescript
 // lib/oauth-config.ts
 export function getOAuthServerUrl(): string {
-  return process.env.XION_OAUTH2_SERVER_URL || 'https://oauth2.testnet.burnt.com/'
+  return process.env.XION_OAUTH2_SERVER_URL || 'https://oauth2.testnet.burnt.com'
 }
 
 export function getClientId(): string {
@@ -763,7 +763,7 @@ export function getRedirectUri(req?: NextApiRequest): string {
 export async function getOAuthServerInfo(): Promise<OAuthServerInfo> {
   const serverUrl = getOAuthServerUrl()
   const response = await fetch(
-    `${serverUrl}/.well-known/oauth-authorization-server`
+    new URL('.well-known/oauth-authorization-server', serverUrl).toString()
   )
   if (!response.ok) {
     throw new Error('Failed to fetch OAuth server info')
