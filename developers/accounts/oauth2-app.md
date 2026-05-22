@@ -59,7 +59,7 @@ You **MUST enable the "IS OAUTH2 APP" toggle** in the Treasury contract's Update
 
 **To enable the OAuth2 toggle:**
 
-1. Navigate to your Treasury contract in the [Xion Developer Portal](https://dev.testnet.burnt.com/)
+1. Navigate to your Treasury contract in the [Xion Developer Portal](https://dev.testnet.burnt.com/) (testnet) or [mainnet Developer Portal](https://dev.burnt.com/)—use the portal that matches your target network
 2. Click the **"Update Params"** button
 3. Enable the **"IS OAUTH2 APP"** toggle switch
 4. Save the changes
@@ -87,11 +87,15 @@ Once your Treasury contract is configured, you can create OAuth2 clients in the 
 ### 3.1. Accessing the OAuth2 Portal
 
 * **Testnet**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/)
-* **Mainnet**: (Available Soon)
+* **Mainnet**: [https://oauth2.burnt.com/](https://oauth2.burnt.com/)
 
 <figure><img src="../../.gitbook/assets/OAuth2-1.png" alt="" width="375"><figcaption><p>OAuth2 Portal login screen</p></figcaption></figure>
 
 To access the portal, click **"Connect with XION"** and authenticate using your Xion account. After authentication, you'll be redirected to the OAuth2 Clients Dashboard.
+
+{% hint style="info" %}
+Use the **testnet** portal while developing and the **mainnet** portal for production OAuth2 clients. Your app must use the OAuth2 server URL, discovery endpoints, and protected API base URL for the same network as your Treasury contract.
+{% endhint %}
 
 ### 3.2. Creating a New OAuth2 Client
 
@@ -188,7 +192,9 @@ The OAuth2 Authorization Code flow with PKCE follows these standard steps:
 First of all, the OAuth2 API endpoints are same as the OAuth2 portal:
 
 * **Testnet**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/)
-* **Mainnet**: (Available Soon)
+* **Mainnet**: [https://oauth2.burnt.com/](https://oauth2.burnt.com/)
+
+Set `VITE_XION_OAUTH2_SERVER_URL` (frontend) or `XION_OAUTH2_SERVER_URL` (backend) to the base URL for your target network. The examples below use testnet defaults.
 
 #### Step 1: Discovery - Get OAuth2 Server Information
 
@@ -919,11 +925,14 @@ Once you have an access token, you can use it to access protected OAuth2 APIs. T
 ### API Base URL
 
 * **Testnet**: `https://oauth2.testnet.burnt.com/`
-* **Mainnet**: (Available Soon)
+* **Mainnet**: `https://oauth2.burnt.com/`
 
 #### API Documentation
 
-For complete API documentation with interactive examples, visit the [OAuth2 Protected API Documentation](https://oauth2.testnet.burnt.com/protected-api-docs).
+For complete API documentation with interactive examples:
+
+* **Testnet**: [OAuth2 Protected API Documentation](https://oauth2.testnet.burnt.com/protected-api-docs)
+* **Mainnet**: [OAuth2 Protected API Documentation](https://oauth2.burnt.com/protected-api-docs)
 
 #### Authentication
 
@@ -1451,14 +1460,19 @@ For a list of available RPC endpoints for each network, see the [Public Endpoint
 
 ## Additional Resources
 
-* **OAuth2 API Endpoint**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/)
-* **OAuth2 Portal**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/) (for managing OAuth2 clients)
-* **OAuth2 Protected API Documentation**: [https://oauth2.testnet.burnt.com/protected-api-docs](https://oauth2.testnet.burnt.com/protected-api-docs)
+* **OAuth2 API (testnet)**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/)
+* **OAuth2 API (mainnet)**: [https://oauth2.burnt.com/](https://oauth2.burnt.com/)
+* **OAuth2 Portal (testnet)**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/) (client management)
+* **OAuth2 Portal (mainnet)**: [https://oauth2.burnt.com/](https://oauth2.burnt.com/) (client management)
+* **OAuth2 Protected API docs (testnet)**: [https://oauth2.testnet.burnt.com/protected-api-docs](https://oauth2.testnet.burnt.com/protected-api-docs)
+* **OAuth2 Protected API docs (mainnet)**: [https://oauth2.burnt.com/protected-api-docs](https://oauth2.burnt.com/protected-api-docs)
 * **OAuth2 App Examples**: [https://github.com/burnt-labs/xion-oauth2-app-demo](https://github.com/burnt-labs/xion-oauth2-app-demo)
 * **Xion Types Repository**: [https://github.com/burnt-labs/xion-types](https://github.com/burnt-labs/xion-types)
 * **Xion Types TypeScript Guide**: [https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/GUIDE.md](https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/GUIDE.md)
 * **Treasury Contracts Documentation**: [Enabling Gasless Transactions with Treasury Contracts](getting-started/treasury-contracts.md)
-* **Xion Developer Portal**: [https://dev.testnet.burnt.com/](https://dev.testnet.burnt.com/) (for managing Treasury contracts)
+* **Xion Developer Portal (testnet)**: [https://dev.testnet.burnt.com/](https://dev.testnet.burnt.com/) (Treasury contracts)
+* **Xion Developer Portal (mainnet)**: [https://dev.burnt.com/](https://dev.burnt.com/) (Treasury contracts)
+* [Xion Agent Toolkit](../tools/xion-toolkit.md) — CLI for testnet/mainnet (`--network mainnet`) including OAuth2 client management
 
 {% hint style="success" %}
 If you have any questions or encounter issues, feel free to ask in our [**Telegram Developer Group**](https://t.me/+SC47NRhVz9Q2MDg0) or on [**Discord**](https://discord.com/invite/burnt) in our [**Dev Chat channel**](https://discord.com/channels/823953904512401469/1308977704586186762).
