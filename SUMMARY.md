@@ -21,7 +21,6 @@
   * [Burnt Verified](about-verona/surfaces/burnt-verified.md)
   * [Ask & Ask MCP](about-verona/surfaces/ask-and-mcp.md)
   * [Data Backpack](about-verona/surfaces/data-backpack.md)
-* [Token & Revenue (Phase 1)](about-verona/token-and-revenue.md)
 * [For AI Agents](about-verona/ai-agents.md)
 
 ## Build on Verona

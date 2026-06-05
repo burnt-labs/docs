@@ -29,4 +29,3 @@ Do not describe unannounced token products or partner programs as live. Follow l
 
 * [Verification guides](../../developers/verification/README.md)
 * [Meta Accounts](../concepts/meta-accounts.md)
-* [Token & Revenue (Phase 1)](../token-and-revenue.md)
