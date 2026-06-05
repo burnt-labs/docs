@@ -32,7 +32,7 @@ XION replaces traditional crypto wallets with Meta Accounts: protocol-level smar
 * Multi-device access without transferring keys
 * Account recovery through configurable methods
 
-_Detailed in: Intro to Account Abstraction and XION's Meta Accounts sections._
+_Detailed in: [Intro to Account Abstraction](intro-to-account-abstraction.md) and [Meta Accounts](meta-accounts.md)._
 
 **2. Signature Abstraction**
 

@@ -1,8 +1,8 @@
 # Meta Accounts Design
 
-## **Overview**
+## Overview
 
-XION’s modular _meta accounts_ introduce a highly adaptable and secure account creation & management framework.
+Meta Accounts on the **XION** network use a modular smart-contract account framework—the technical foundation for user identity, verified attestations, and agent-scoped access in **Verona** applications.
 
 Built at the protocol-level, _meta accounts_ have a host of benefits over traditional crypto wallets and enable novel Web3 application use-cases. See [generalized-abstraction.md](generalized-abstraction.md "mention") for more information around use cases and features.
 

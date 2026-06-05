@@ -29,7 +29,7 @@ The verification flow follows a consistent pattern across all three pillars of t
 
 #### The Three Verification Modules
 
-XION's Truth Engine provides three complementary verification technologies. Together, they allow applications to verify virtually any data on the internet privately.
+The Truth Engine provides three complementary verification technologies. Together, they allow applications to verify virtually any data on the internet privately.
 
 | Module                    | Data Source | What It Verifies                                | Example                                                           |
 | ------------------------- | ----------- | ----------------------------------------------- | ----------------------------------------------------------------- |
