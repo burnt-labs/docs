@@ -1,7 +1,7 @@
 root: ./
 
 redirects:
-  develop/get-started-guide: developers/learn/overview-of-xion.md
+  develop/get-started-guide: about-verona/concepts/overview.md
   developers/learn/overview-of-xion: about-verona/concepts/overview.md
   developers/getting-started-advanced/your-first-dapp/xion-typescript: developers/accounts/backend-app/backend-using-cosmjs.md
   developers/computation/local-development/interact-with-xion-chain-setup-xion-daemon: developers/tools/daemon-cli.md

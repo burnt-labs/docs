@@ -10,11 +10,11 @@ This section is ideal for:
 
 * Hackathon participants
 * Early-stage prototyping
-* Developers exploring XION for the first time
+* Developers exploring Verona for the first time
 
 ## What You’ll Find Here
 
-Each guide in this section walks you through launching a fully functional XION app in minutes, using streamlined templates and built-in tools.
+Each guide in this section walks you through launching a fully functional Verona app in minutes, using streamlined templates and built-in tools.
 
 You will build:
 

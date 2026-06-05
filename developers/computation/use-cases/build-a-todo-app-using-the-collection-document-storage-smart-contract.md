@@ -244,7 +244,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 
 <figure><img src="../../../.gitbook/assets/image (84).png" alt=""><figcaption></figcaption></figure>
 
-You will need to enter a `Redirect URL` along with an `ICON URL`. After those fields are set click the "**Create**" button to finally create the treasury contract instance. You will be taken to the dahsboard where you will see the newly created Treasury Contract instance. You can click on an instance to get the treasury contract address which will be required for setting up the frontend.
+You will need to enter a `Redirect URL` along with an `ICON URL`. After those fields are set click the "**Create**" button to finally create the treasury contract instance. You will be taken to the dashboard where you will see the newly created Treasury Contract instance. You can click on an instance to get the treasury contract address which will be required for setting up the frontend.
 
 {% hint style="info" %}
 Learn more about Treasury Contracts [here](../../accounts/getting-started/treasury-contracts.md).
