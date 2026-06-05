@@ -67,7 +67,7 @@ These primitives work together to create consumer and agentic applications:
 * Zero-knowledge proofs protect user privacy
 * Verify social media stats, email ownership, financial data
 * Integrations with Reclaim (zkTLS) and Opacity
-* Coming soon: ZK Email and App Attestations
+* Standard modules include zkTLS, zkEmail, and App Attestations, with implementation guides expanding as surfaces mature
 
 **When to use:** Build apps that require verified identity, social proof, or reputation systems. Perfect for rewards programs, gated content, or trust-based marketplaces.
 
@@ -201,16 +201,16 @@ Libraries and CLIs for app and automation workflows:
 
 If you're coming from Web2, here are some concepts that map to what you already know:
 
-| XION Term             | Web2 Equivalent                   | What It Means                                                        |
+| Network Term          | Web2 Equivalent                   | What It Means                                                        |
 | --------------------- | --------------------------------- | -------------------------------------------------------------------- |
 | **Meta Account**      | User Account                      | A user identity that can own assets and authorize actions            |
 | **Treasury Contract** | App Permissions & Billing Config  | Manages what your app can do on behalf of users and who pays for gas |
 | **Fee Grant**         | Computing Points                  | Your app pays transaction fees so users don't have to                |
 | **Authz Grant**       | Delegated Permissions             | Users grant your app permission to perform specific actions          |
 | **Smart Contract**    | Backend API / Serverless Function | Trustless code that runs on the blockchain                           |
-| **Abstraxion**        | XION's Auth & Transaction SDK     | The JavaScript SDK for integrating XION into your app                |
+| **Abstraxion**        | Auth & Transaction SDK            | The JavaScript SDK for integrating Meta Accounts into your app       |
 
-### Why Build on Verona / XION?
+### Why Build on Verona?
 
 The network is designed for developers building consumer and verification-heavy applications—not only DeFi protocols. Here's what makes it different:
 

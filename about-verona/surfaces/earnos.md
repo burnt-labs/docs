@@ -5,7 +5,7 @@ icon: coins
 
 # EarnOS
 
-EarnOS is Verona’s surface for **user-owned data and verified participation**. It connects verified actions on and off chain to rewards and revenue-sharing models that users control.
+EarnOS is Verona’s surface for **user-owned data and verified participation**. It connects verified actions on and off chain to reward and attribution models built around user consent.
 
 ## For developers
 
@@ -22,7 +22,7 @@ Typical integration patterns:
 3. Settle or record outcomes on the Verona network (`xion-testnet-2` for development)
 
 {% hint style="warning" %}
-Do not describe unannounced token products or partner programs as live. Follow legal and marketing review before publishing yield, interest, or revenue figures in your own apps or docs.
+Do not describe unannounced token products or partner programs as live. Follow legal and marketing review before publishing reward, revenue, or token figures in your own apps or docs.
 {% endhint %}
 
 ## Related docs

@@ -6,9 +6,9 @@
 
 #### For Consumer Applications
 
-**Fraud-Proof Advertising**
+**Fraud-Resistant Advertising**
 
-The advertising industry wastes $80B+ annually on bot traffic. Applications built on Verona can use zkTLS to verify that ad viewers are real humans with verified platform accounts, eliminating fake engagement entirely. Combined with abstraction, users verify themselves once and never interact with network mechanics.
+Advertising and engagement systems struggle with bot traffic and unverifiable audience claims. Applications built on Verona can use zkTLS and related verification modules to check that a user meets specific criteria without collecting raw account data. Combined with abstraction, users can verify themselves once and avoid network mechanics.
 
 _Technical approach:_ Users generate zkTLS proofs from authenticated accounts (social media, email, banking). Your application's smart contract queries these attestations before counting engagement or distributing rewards. Treasury contracts cover all gas, so the user experience is identical to any standard app.
 
@@ -18,11 +18,11 @@ Users accumulate reputation across dozens of platforms but own none of it. Appli
 
 _Technical approach:_ Users generate proofs from zkTLS (web data), zkEmail (loyalty emails), or App Attestations (mobile app data). Attestations are bound to their Meta Account, creating a portable, verified reputation profile that any application can query with user permission.
 
-**Private Data Monetization**
+**User-Consented Data Sharing**
 
-Users' data generates billions for platforms while users receive nothing. Applications on Verona can let users monetize their data (browsing habits, purchase patterns, preferences) while maintaining full privacy through selective disclosure.
+Users often have little control over how platforms reuse their data. Applications on Verona can let users selectively disclose verified attributes, such as purchase categories or account status, while keeping underlying records private.
 
-_Technical approach:_ Users generate attestations that prove specific attributes (e.g., "frequent online shopper" or "premium streaming subscriber") without revealing exact data. Brands query these attestations and compensate users for verified insights. All payments, attestation queries, and data exchange happen on-chain with full abstraction.
+_Technical approach:_ Users generate attestations that prove specific attributes (e.g., "frequent online shopper" or "premium streaming subscriber") without revealing exact data. Applications can request these attestations with user consent and map them to rewards, access, or campaign logic. Avoid presenting pay-for-data or revenue-sharing flows as live unless they have been explicitly approved.
 
 **Cross-Platform Identity Verification**
 
@@ -46,9 +46,9 @@ _Technical approach:_ Combine DKIM proofs (government emails, banking communicat
 
 **Insurance Underwriting**
 
-Insurers can verify risk factors (driving record, health metrics, employment stability) instantly and privately, reducing underwriting from weeks to seconds.
+Insurance applications can verify risk factors (driving record, health metrics, employment stability) more privately and with less manual review.
 
-_Technical approach:_ Users generate proofs from relevant sources: zkTLS for government/DMV website data, App Attestations for fitness data, DKIM Module for employment verification. Insurance application's smart contract evaluates proofs against underwriting criteria and issues instant quotes.
+_Technical approach:_ Users generate proofs from relevant sources: zkTLS for government/DMV website data, App Attestations for fitness data, DKIM Module for employment verification. Insurance applications can evaluate proofs against underwriting criteria and use the result in quote or eligibility workflows.
 
 #### For DeFi and Financial Applications
 
@@ -90,6 +90,6 @@ _Technical approach:_ Users generate proofs via zkTLS, zkEmail, or App Attestati
 
 **EarnOS-Style Verified Participation**
 
-Reward and revenue-sharing flows can require cryptographic proof of eligibility before settlement on chain.
+Reward and participation flows can require cryptographic proof of eligibility before settlement on chain.
 
 _Technical approach:_ Combine verification modules with Treasury-sponsored transactions so users never manage gas. See [EarnOS](../surfaces/earnos.md) and [Build on Verona — Verification](../../developers/verification/README.md).

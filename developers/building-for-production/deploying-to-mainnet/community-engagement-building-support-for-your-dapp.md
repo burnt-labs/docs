@@ -56,7 +56,7 @@ Developers can use [**GitHub Discussions**](https://github.com/orgs/burnt-labs/d
 
 ### **Create a Signaling Proposal**
 
-When you are finally ready to get your contract(s) deployed on Mainnet, you need to first create a signaling proposal on the XION discourse platform to announce this to the Community.
+When you are finally ready to get your contract(s) deployed on Mainnet, you need to first create a signaling proposal on the Verona forum to announce this to the Community.
 
 * Post your proposal in the [Mainnet Contract Deployments category](https://discourse.xion.burnt.com/c/govpros/mainnet-contract-deployments/6) on the Verona forum
 * Announce your signaling proposal in the ["XION Developer Ecosystem" Telegram channel](https://t.me/+5KA8xBuU5wYzZjU0) and on Discord
