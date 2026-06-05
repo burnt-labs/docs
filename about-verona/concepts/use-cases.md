@@ -8,25 +8,25 @@
 
 **Fraud-Proof Advertising**
 
-The advertising industry wastes $80B+ annually on bot traffic. Applications built on XION can use zkTLS to verify that ad viewers are real humans with verified platform accounts, eliminating fake engagement entirely. Combined with abstraction, users verify themselves once and never interact with blockchain mechanics.
+The advertising industry wastes $80B+ annually on bot traffic. Applications built on Verona can use zkTLS to verify that ad viewers are real humans with verified platform accounts, eliminating fake engagement entirely. Combined with abstraction, users verify themselves once and never interact with network mechanics.
 
 _Technical approach:_ Users generate zkTLS proofs from authenticated accounts (social media, email, banking). Your application's smart contract queries these attestations before counting engagement or distributing rewards. Treasury contracts cover all gas, so the user experience is identical to any standard app.
 
 **Portable Reputation and Loyalty**
 
-Users accumulate reputation across dozens of platforms but own none of it. Applications on XION can let users prove their Uber rating to Lyft, their Delta status to United, or their Amazon purchase history to a competing retailer, all without the source platform's cooperation or knowledge.
+Users accumulate reputation across dozens of platforms but own none of it. Applications on Verona can let users prove their Uber rating to Lyft, their Delta status to United, or their Amazon purchase history to a competing retailer, all without the source platform's cooperation or knowledge.
 
 _Technical approach:_ Users generate proofs from zkTLS (web data), zkEmail (loyalty emails), or App Attestations (mobile app data). Attestations are bound to their Meta Account, creating a portable, verified reputation profile that any application can query with user permission.
 
 **Private Data Monetization**
 
-Users' data generates billions for platforms while users receive nothing. Applications on XION can let users monetize their data (browsing habits, purchase patterns, preferences) while maintaining full privacy through selective disclosure.
+Users' data generates billions for platforms while users receive nothing. Applications on Verona can let users monetize their data (browsing habits, purchase patterns, preferences) while maintaining full privacy through selective disclosure.
 
 _Technical approach:_ Users generate attestations that prove specific attributes (e.g., "frequent online shopper" or "premium streaming subscriber") without revealing exact data. Brands query these attestations and compensate users for verified insights. All payments, attestation queries, and data exchange happen on-chain with full abstraction.
 
 **Cross-Platform Identity Verification**
 
-Proving credentials today requires uploading sensitive documents. Applications on XION let users prove age, income, accreditation, employment, or any other attribute with a ZK proof instead.
+Proving credentials today requires uploading sensitive documents. Applications on Verona let users prove age, income, accreditation, employment, or any other attribute with a ZK proof instead.
 
 _Technical approach:_ Combine DKIM Module (employment verification email from HR), zkTLS (banking website data), and App Attestations (government ID app) to create composite verified identities. Smart contracts enforce minimum proof requirements before granting access.
 
@@ -70,7 +70,7 @@ _Technical approach:_ DAO members generate proofs of relevant credentials. Gover
 
 Gaming applications can let players prove achievements, rankings, and history from other games or platforms, creating portable gaming reputation.
 
-_Technical approach:_ App Attestations verify in-game achievements and rankings. Players carry verified reputation across games built on XION, unlocking rewards and status based on proven skill rather than starting from zero.
+_Technical approach:_ App Attestations verify in-game achievements and rankings. Players carry verified reputation across games built on Verona, unlocking rewards and status based on proven skill rather than starting from zero.
 
 **Fair Play Verification**
 

@@ -29,15 +29,8 @@ Guides for developers building apps, agents, and integrations on the network.
 
 <table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Discord Developer Support</strong></td><td>Chat with developers on Discord.</td><td></td><td><a href="https://discord.gg/burnt">https://discord.gg/burnt</a></td></tr><tr><td><strong>Telegram Developer Support</strong></td><td>Chat with developers on Telegram.</td><td></td><td><a href="https://t.me/+5KA8xBuU5wYzZjU0">https://t.me/+5KA8xBuU5wYzZjU0</a></td></tr><tr><td><strong>Found an issue in the docs?</strong></td><td>Report it, or submit a pull request on the page where you found it.</td><td></td><td><a href="https://github.com/burnt-labs/docs/issues/new">https://github.com/burnt-labs/docs/issues/new</a></td></tr></tbody></table>
 
-## Investors
+## Why Verona
 
-Raised over $36M from industry leading investors including Animoca Brands, Circle Ventures, Multicoin, Valor, Hashkey, Spartan, Mechanism, Figment, Stateless Ventures, Coinlist Seed, Injective, Alliance DAO, Sandeep Nailwal (Polygon), and more.
+AI agents need verified information they can act on without becoming custodians of sensitive data. Verona makes verified facts portable, private, and reusable across authorized applications and agents.
 
-<figure><img src=".gitbook/assets/Burnt Investor Logos (1) (2).png" alt=""><figcaption></figcaption></figure>
-
-## Ecosystem Traction
-
-* 150+ global brands including Uber, Amazon, BMW, LEGO, and Travelex
-* 68M+ verified interactions processed through the network
-* 5M+ unique users across ecosystem applications
-* Institutional infrastructure partners: Ledger, Anchorage Digital, Fireblocks
+Production verification products and ecosystem applications demonstrate the core loop: verify once, let the user control reuse, and expose proofs instead of raw records.

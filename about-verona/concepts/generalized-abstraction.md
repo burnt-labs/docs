@@ -17,13 +17,13 @@ Every blockchain interaction today involves friction points that prevent mainstr
 * Users must use specific devices or browser extensions
 * Users must navigate bridging and cross-chain complexity
 
-Application-layer solutions can mitigate some of these issues, but they add dependencies, increase attack surface, and create inconsistent experiences across different apps. XION solves this at the protocol level, meaning every application built on XION automatically inherits full abstraction without additional development effort.
+Application-layer solutions can mitigate some of these issues, but they add dependencies, increase attack surface, and create inconsistent experiences across different apps. Verona's underlying network solves this at the protocol level, meaning every application built on Verona automatically inherits full abstraction without additional development effort.
 
 #### The Six Abstraction Layers
 
 **1. Account Abstraction (Meta Accounts)**
 
-XION replaces traditional crypto wallets with Meta Accounts: protocol-level smart contract accounts that support modular authentication methods.
+Meta Accounts replace traditional crypto wallets with protocol-level smart contract accounts that support modular authentication methods.
 
 * Users log in with email, FaceID, passkeys, or social login
 * No seed phrases, no private key management, no wallet downloads
@@ -45,7 +45,7 @@ XION supports all major cryptographic signature schemes natively at the protocol
 
 **3. Gas Abstraction**
 
-XION's parameterized fee layer removes gas fees from the user experience entirely.
+The parameterized fee layer removes gas fees from the user experience entirely.
 
 * **Fee grants:** Applications sponsor transaction fees for their users via Treasury contracts
 * **Multi-token fees:** Fees can be paid in any token (USDC, XION, or custom tokens), with automatic conversion
@@ -56,7 +56,7 @@ _For developers: Treasury contracts are the primary mechanism for sponsoring gas
 
 **4. Payment Abstraction**
 
-XION enables familiar payment experiences within blockchain applications.
+The network enables familiar payment experiences within Verona applications.
 
 * Credit card and Apple Pay integration at the protocol level
 * Prices displayed in fiat currency (USD, EUR, local currencies)
@@ -86,7 +86,7 @@ For more details: [xion.burnt.com/whitepaper.pdf](https://xion.burnt.com/whitepa
 
 #### What This Means for Developers
 
-When you build on XION, you do not need to:
+When you build on Verona, you do not need to:
 
 * Implement wallet connection flows
 * Build gas estimation or fee management

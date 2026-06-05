@@ -5,7 +5,7 @@ icon: message-bot
 
 # Ask & Ask MCP
 
-Ask is Verona’s **query and agent interface** over authorized, verified context. **Ask MCP** exposes the same capabilities to AI agents through the [Model Context Protocol](https://modelcontextprotocol.io/)—so assistants can request facts the user has consented to share, grounded in proofs rather than hallucination.
+Ask is Verona’s direction for a **query and agent interface** over authorized, verified context. **Ask MCP** is the developer-facing path for exposing the same engine to AI agents through the [Model Context Protocol](https://modelcontextprotocol.io/)—so assistants can request facts the user has consented to share, grounded in proofs rather than hallucination.
 
 ## Mental model
 
@@ -13,7 +13,7 @@ Ask is Verona’s **query and agent interface** over authorized, verified contex
 User consent → Verified facts (Truth Engine / Backpack) → Ask / MCP → Agent action
 ```
 
-Agents should not scrape or guess. They should call rails that return **only** data the user authorized, with verification metadata attached.
+The intended pattern is that agents do not scrape or guess. They request scoped verified facts through rails that return **only** data the user authorized, with verification metadata attached.
 
 ## For developers
 
@@ -23,7 +23,7 @@ Agents should not scrape or guess. They should call rails that return **only** d
 * Use [Verona Agent Toolkit](../../developers/tools/verona-toolkit.md) for Meta Account auth, Treasury, and gasless agent workflows
 * See [For AI Agents](../ai-agents.md) for one-line agent setup
 
-**Coming in docs**
+**Coming in docs as the surface stabilizes**
 
 * Ask API reference and MCP server configuration
 * Scopes, consent, and audit patterns for production agents

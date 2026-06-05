@@ -4,7 +4,7 @@
 
 In a world where trust is fragmented across countless platforms, zkTLS gives users and applications the power to verify real-world data from any website — **without ever exposing the underlying information**.
 
-zkTLS is a core component of XION's **Truth Engine**, the verification infrastructure that makes blockchain actually useful. It enables cryptographic proofs over TLS-encrypted web sessions, allowing users to prove specific claims (e.g., "my Uber rating is above 4.5" or "I have an active premium subscription") while keeping everything else completely private.
+zkTLS is a core component of Verona's **Truth Engine**, the verification infrastructure that turns internet data into reusable, provable facts. It enables cryptographic proofs over TLS-encrypted web sessions, allowing users to prove specific claims (e.g., "my Uber rating is above 4.5" or "I have an active premium subscription") while keeping everything else completely private.
 
 This isn't about sharing screenshots, logging into third-party services, or trusting centralized oracles. It's about mathematical truth that smart contracts can rely on directly.
 
@@ -38,7 +38,7 @@ The flow is designed to be seamless from the user's perspective:
 
 4. **Programmable Action**: Any smart contract or application can read this attestation to trigger logic: unlock rewards, adjust pricing, grant access, personalize experiences, or combine it with other proofs.
 
-The entire process happens with Web2-like simplicity thanks to XION's abstraction layer — users never see gas fees, private keys, or complex blockchain interactions.
+The entire process happens with Web2-like simplicity thanks to Verona's abstraction layer — users never see gas fees, private keys, or complex network interactions.
 
 #### What Can Be Verified with zkTLS
 

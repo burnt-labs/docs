@@ -46,5 +46,5 @@ description: Key Terms and Concepts
 | Term               | Definition                                                                                                                                             |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **$XION**          | The native token of the XION network. Used for staking, governance, transaction fees, and as the settlement layer for ecosystem activity.              |
-| **Revenue Share**  | Agreements between XION and ecosystem applications where application revenue flows back to the protocol. Currently 6+ agreements generating $35M+ ARR. |
+| **Revenue Share**  | Agreements where application or verification revenue can flow back to the protocol. Specific figures should only be published after marketing and legal approval. |
 | **Buyback & Burn** | The mechanism by which ecosystem revenue is used to purchase and permanently remove $XION tokens from circulation, creating deflationary pressure.     |

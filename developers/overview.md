@@ -10,20 +10,20 @@ Welcome to **Build on Verona**. If you're coming from Web2 development, this pag
 
 ### What you build on
 
-The XION network is a blockchain platform designed for consumer and verification-heavy applications. Unlike traditional blockchains that require users to manage wallets, seed phrases, and gas fees, XION provides a familiar Web2 experience while unlocking the power of Web3.
+Verona gives developers access to verified facts that users own and authorize. The XION network provides the underlying account, verification, computation, and payment primitives that make those facts usable in applications and agent workflows.
 
-Think of XION as a complete backend infrastructure that gives you:
+Think of the stack as infrastructure for applications that need:
 
 * **User authentication** (like Auth0 or Firebase)
-* **Identity verification** (like Plaid or ID verification APIs)
+* **Reusable verification** (like Plaid or ID verification APIs, but user-owned and reusable)
 * **Payment processing** (like Stripe or Square)
 * **Serverless compute** (like AWS Lambda or Cloud Functions)
 
-All running on a decentralized blockchain, giving you trustless execution, programmable money, and global accessibility.
+All running on verifiable infrastructure, with technical identifiers and CLI flows still using XION names.
 
-### The Four Pillars of XION
+### Core builder primitives
 
-XION is built on four core pillars that work together to create a complete platform for consumer applications:
+These primitives work together to create consumer and agentic applications:
 
 | Pillar           | Web2 Analogy                 | What It Does                                                                                                                                       |
 | ---------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -34,20 +34,20 @@ XION is built on four core pillars that work together to create a complete platf
 
 #### Accounts: Web2-Style Authentication
 
-**What it is:** XION Accounts (also called Meta Accounts) let your users sign up with email or Google — just like any normal app. Behind the scenes, each user gets a programmable account that can own assets, authorize transactions, and interact with smart contracts.
+**What it is:** Meta Accounts let your users sign up with email, Google, passkeys, or other familiar methods. Behind the scenes, each user gets a programmable account that can own assets, authorize transactions, and interact with smart contracts.
 
 **Key benefits:**
 
 * No wallets, no seed phrases, no gas fees for users
 * Multiple authentication methods (email, Google, Apple, passkeys)
-* OAuth2 integration for seamless "Sign in with XION"
+* OAuth2 integration for familiar account connection flows
 * Gasless transactions through Treasury Contracts
 
-**When to use:** Every XION app starts here. Accounts are the foundation for user identity and authorization.
+**When to use:** Every Verona app starts here. Accounts are the foundation for user identity, authorization, and consent.
 
 #### Computation: Trustless Backend Logic
 
-**What it is:** Smart contracts on XION run like serverless functions — they execute trustlessly, manage state, and can integrate with external data sources via oracles.
+**What it is:** Smart contracts on the XION network run like serverless functions — they execute trustlessly, manage state, and can integrate with external data sources via oracles.
 
 **Key benefits:**
 
@@ -73,7 +73,7 @@ XION is built on four core pillars that work together to create a complete platf
 
 #### Payments: Accept Money, Any Way Users Want to Pay
 
-**What it is:** XION's payment layer handles all forms of payment — credit cards, stablecoins, cross-chain transfers. Users pay in their preferred method (often dollars via credit card), and you receive funds on-chain.
+**What it is:** The payment layer handles credit cards, stablecoins, and cross-network transfers. Users pay in their preferred method, and your application receives funds through the configured settlement flow.
 
 **Key benefits:**
 
@@ -86,7 +86,7 @@ XION is built on four core pillars that work together to create a complete platf
 
 ### How These Pieces Fit Together
 
-The real power of XION comes from combining these pillars. Here are real-world examples of how they compose:
+The real power comes from combining these primitives. Here are examples of how they compose:
 
 #### Example 1: EarnOS-Style Rewards App (All 4 Pillars)
 
@@ -128,12 +128,12 @@ Build a Netflix-style platform with on-chain access control:
 
 **Why this works:** The smart contract acts as your subscription management system, running trustlessly without a central server. Users pay with credit cards, and you get on-chain payments.
 
-#### Example 3: Adding XION to an Existing Web App (Accounts + Payments)
+#### Example 3: Adding Verona to an Existing Web App (Accounts + Payments)
 
-You don't need to rebuild everything. Add XION features incrementally:
+You don't need to rebuild everything. Add Verona features incrementally:
 
 ```
-1. ACCOUNTS → Add "Connect with XION" alongside existing auth
+1. ACCOUNTS → Add a Verona / XION account connection alongside existing auth
               (via OAuth2 — works like "Connect with Google")
 2. PAYMENTS → Enable crypto payments alongside Stripe,
               users pay with credit card via Crossmint
@@ -141,10 +141,10 @@ You don't need to rebuild everything. Add XION features incrementally:
 
 **The flow:**
 
-* Keep your existing authentication, add XION as a ew connectable service(Accounts)
+* Keep your existing authentication, add Verona as a new connectable service (Accounts)
 * Keep Stripe, add Crossmint for crypto payments (Payments)
 
-**Why this works:** XION integrates with your existing stack. You can adopt it gradually, starting with payments or authentication, then adding more features over time.
+**Why this works:** Verona integrates with your existing stack. You can adopt it gradually, starting with payments or authentication, then adding verification and agent-ready context over time.
 
 #### Example 4: Verified Creator Marketplace (Accounts + Verification + Payments + Computation)
 

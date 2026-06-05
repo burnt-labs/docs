@@ -4,7 +4,7 @@
 
 Verona is the **intelligence layer for AI**. It turns user-owned, cryptographically verified facts into reusable context that authorized agents and applications can act on—without exposing raw private data.
 
-The network behind Verona is **XION**: a Layer 1 built on Cosmos SDK with CometBFT and CosmWasm. It combines zero-knowledge verification (the **Truth Engine**) with **Generalized Abstraction** so verification is both powerful and accessible to mainstream users.
+The network behind Verona is implemented on **XION** infrastructure, with Cosmos SDK, CometBFT, and CosmWasm under the hood. It combines zero-knowledge verification (the **Truth Engine**) with **Generalized Abstraction** so verification is both powerful and accessible to mainstream users.
 
 **Making AI Intelligent** captures the goal: agents need grounded facts, not unverified scrapes. Verona supplies verification rails, portable user context (Data Backpack direction), and product surfaces (EarnOS, Burnt Verified, Ask & MCP) on top of the same developer stack Meta Account and CosmWasm builders use today.
 
@@ -38,7 +38,7 @@ The Truth Engine is verification infrastructure built into the protocol. It appl
 
 **Abstraction Layer**
 
-Generalized Abstraction embeds critical blockchain functionality in the protocol:
+Generalized Abstraction embeds critical network functionality in the protocol:
 
 * **Account Abstraction:** Meta Accounts replace traditional wallets. Users authenticate via email, FaceID, passkeys, or social login.
 * **Signature Abstraction:** Supports multiple cryptographic curves. Applications request familiar actions ("confirm purchase"), not raw transaction signatures.
@@ -51,13 +51,13 @@ Generalized Abstraction embeds critical blockchain functionality in the protocol
 
 **Consensus & Execution**
 
-The network runs on Cosmos SDK with CometBFT consensus and CosmWasm smart contract execution. It uses Proof of Stake with inflation calculated against staked tokens. IBC (Inter-Blockchain Communication) provides native cross-chain interoperability. Chain IDs, CLI commands, and explorers continue to use **XION** naming (e.g. `xion-testnet-1`, `xiond`).
+The network runs on Cosmos SDK with CometBFT consensus and CosmWasm smart contract execution. It uses Proof of Stake with inflation calculated against staked tokens. IBC (Inter-Blockchain Communication) provides native interoperability. Network identifiers, CLI commands, and explorers continue to use **XION** naming (e.g. `xion-testnet-1`, `xiond`).
 
 ### Key Differentiators
 
 * **Integrated verification infrastructure.** zkTLS, zkEmail, and app attestations are protocol-level modules—not bolt-on services.
-* **Protocol-level abstraction.** Account, gas, signature, payment, and device abstraction are part of the chain, not app-layer patches.
-* **Real-world traction.** 150+ global brands, 68M+ verified interactions, 5M+ users across ecosystem applications.
+* **Protocol-level abstraction.** Account, gas, signature, payment, and device abstraction are part of the network, not app-layer patches.
+* **Real-world traction.** Production verification products and ecosystem applications already demonstrate Verona's verification-and-reuse model.
 * **Intelligence-layer surfaces.** EarnOS, Burnt Verified, Ask & MCP, and Data Backpack package verification for users and agents.
 
 See [Surfaces](../surfaces/README.md) and [Rebrand: XION → Verona](../rebrand-from-xion.md) for the product narrative.
