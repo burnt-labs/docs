@@ -51,7 +51,7 @@ Generalized Abstraction embeds critical network functionality in the protocol:
 
 **Consensus & Execution**
 
-The network runs on Cosmos SDK with CometBFT consensus and CosmWasm smart contract execution. It uses Proof of Stake with inflation calculated against staked tokens. IBC (Inter-Blockchain Communication) provides native interoperability. Network identifiers, CLI commands, and explorers continue to use **XION** naming (e.g. `xion-testnet-1`, `xiond`).
+The network runs on Cosmos SDK with CometBFT consensus and CosmWasm smart contract execution. It uses Proof of Stake with inflation calculated against staked tokens. IBC (Inter-Blockchain Communication) provides native interoperability. Network identifiers, CLI commands, and explorers continue to use **XION** naming (e.g. `xion-testnet-2`, `xiond`).
 
 ### Key Differentiators
 

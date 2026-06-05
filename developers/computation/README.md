@@ -4,7 +4,7 @@ icon: user-robot
 
 # Computation
 
-The Computation layer covers CosmWasm smart contracts, business logic, and workflows on the **XION** network (`xiond`, `xion-testnet-1`).
+The Computation layer covers CosmWasm smart contracts, business logic, and workflows on the **XION** network (`xiond`, `xion-testnet-2`).
 
 ### Contract development notes
 

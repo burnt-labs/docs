@@ -1,6 +1,6 @@
 # Testnet: Your Development Playground
 
-The **XION testnet** (`xion-testnet-1`) is a permissionless environment for building, testing, and refining applications before deploying to **Mainnet**.
+The **XION testnet** (`xion-testnet-2`) is a permissionless environment for building, testing, and refining applications before deploying to **Mainnet**.
 
 
 

@@ -20,7 +20,7 @@ Verona is the next chapter of the same network you may know as **XION**. The reb
 
 Developers should assume continuity for:
 
-* **Chain IDs and network names** — e.g. `xion-testnet-1`, IBC paths, and relayer docs
+* **Chain IDs and network names** — e.g. `xion-testnet-2`, IBC paths, and relayer docs
 * **CLI and daemon** — `xiond` remains the node and transaction CLI
 * **Meta Accounts, Abstraxion, CosmWasm** — same primitives, updated doc paths where renamed
 * **Contract addresses and existing deployments** — no migration is implied by this documentation rebrand
@@ -43,5 +43,5 @@ The technical stack you build on today is the foundation for that intelligence l
 
 * [What is Verona?](concepts/overview.md) — architecture and developer implications
 * [Surfaces](surfaces/README.md) — Phase 1 product entry points
-* [Build on Verona](../../developers/overview.md) — accounts, verification, computation guides
-* [For AI Agents](../ai-agents.md) — Verona Agent Toolkit quick start
+* [Build on Verona](../developers/overview.md) — accounts, verification, computation guides
+* [For AI Agents](ai-agents.md) — Verona Agent Toolkit quick start

@@ -35,6 +35,7 @@ redirects:
   nodes-and-validators/run-a-node/download-the-xion-daemon: nodes-and-validators/run-a-node/download-the-daemon.md
   nodes-and-validators/run-a-node/configure-the-xion-daemon: nodes-and-validators/run-a-node/configure-the-daemon/README.md
   nodes-and-validators/run-a-node/join-the-xion-network: nodes-and-validators/run-a-node/join-the-network/README.md
+  nodes-and-validators/run-a-node/join-the-network/xion-testnet-1: nodes-and-validators/run-a-node/join-the-network/xion-testnet-2.md
   nodes-and-validators/become-a-validator/obtain-a-xion-wallet-address: nodes-and-validators/become-a-validator/obtain-a-wallet-address.md
   xions-core/concepts/README: about-verona/concepts/overview.md
   xions-core/concepts/generalized-abstraction: about-verona/concepts/generalized-abstraction.md

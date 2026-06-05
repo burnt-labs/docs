@@ -6,7 +6,7 @@ icon: lightbulb
 
 Welcome to **Build on Verona**. If you're coming from Web2 development, this page explains the network, primitives, and how to ship consumer and agentic applications.
 
-**Verona** is the intelligence-layer brand; the underlying network and CLI use **XION** naming (`xion-testnet-1`, `xiond`, on-chain addresses). See [What is Verona?](../about-verona/concepts/overview.md) and [Rebrand: XION → Verona](../about-verona/rebrand-from-xion.md).
+**Verona** is the intelligence-layer brand; the underlying network and CLI use **XION** naming (`xion-testnet-2`, `xiond`, on-chain addresses). See [What is Verona?](../about-verona/concepts/overview.md) and [Rebrand: XION → Verona](../about-verona/rebrand-from-xion.md).
 
 ### What you build on
 

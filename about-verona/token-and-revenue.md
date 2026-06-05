@@ -31,9 +31,9 @@ Month 1 docs cover:
 
 What you can build against today:
 
-* Standard network tokens and IBC denoms — [IBC Denoms](../../developers/references/ibc-denoms.md), [Testnet Tokens](../../developers/references/testnet-tokens.md)
-* Gas abstraction and Treasury — [Getting Started with Meta Accounts](../../developers/accounts/getting-started/README.md)
-* Verification-backed products — [Verification](../../developers/verification/README.md) and [Surfaces](surfaces/README.md)
+* Standard network tokens and IBC denoms — [IBC Denoms](../developers/references/ibc-denoms.md), [Testnet Tokens](../developers/references/testnet-tokens.md)
+* Gas abstraction and Treasury — [Getting Started with Meta Accounts](../developers/accounts/getting-started/README.md)
+* Verification-backed products — [Verification](../developers/verification/README.md) and [Surfaces](surfaces/README.md)
 
 Phase 2 topics (migration, expanded token utility, additional surfaces) stay out of Month 1 docs until locked.
 

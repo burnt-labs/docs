@@ -23,7 +23,7 @@ Until dedicated Backpack APIs are documented, compose the same building blocks:
 2. **Persist policy** — CosmWasm contracts or app backends with explicit user consent
 3. **Authorize access** — Meta Accounts, OAuth2, and session scoping ([Accounts](../../developers/accounts/README.md))
 
-On-chain identifiers and deployments continue to use **XION** naming (`xion-testnet-1`, `xiond`, etc.).
+On-chain identifiers and deployments continue to use **XION** naming (`xion-testnet-2`, `xiond`, etc.).
 
 ## Related docs
 

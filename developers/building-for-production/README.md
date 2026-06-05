@@ -4,7 +4,7 @@ icon: building
 
 # Building for Production
 
-Deploy applications to **XION Mainnet** after testing on `xion-testnet-1`. Product narrative uses **Verona**; chain and governance processes use **XION** naming throughout this section.
+Deploy applications to **XION Mainnet** after testing on `xion-testnet-2`. Product narrative uses **Verona**; chain and governance processes use **XION** naming throughout this section.
 
 This section outlines the key differences between **Testnet** and **Mainnet**, the requirements for deployment, and best practices to ensure your contracts are approved and adopted by the community.
 

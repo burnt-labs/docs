@@ -131,7 +131,7 @@
     * [client.toml](nodes-and-validators/run-a-node/configure-the-daemon/client.toml.md)
     * [config.toml](nodes-and-validators/run-a-node/configure-the-daemon/config.toml.md)
   * [Join the Network](nodes-and-validators/run-a-node/join-the-network/README.md)
-    * [xion-testnet-1](nodes-and-validators/run-a-node/join-the-network/xion-testnet-1.md)
+    * [xion-testnet-2](nodes-and-validators/run-a-node/join-the-network/xion-testnet-2.md)
   * [Confirm node is running](nodes-and-validators/run-a-node/confirm-node-is-running.md)
 * [Become a Validator](nodes-and-validators/become-a-validator/README.md)
   * [Initial Setup](nodes-and-validators/become-a-validator/initial-setup.md)

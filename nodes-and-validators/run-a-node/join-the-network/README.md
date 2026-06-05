@@ -20,7 +20,7 @@ With a configured Xion Daemon, we can attempt to join one of the Xion Networks.
 
 For detailed information on how to join each network, please refer to its corresponding subsection.
 
-<table data-view="cards"><thead><tr><th></th><th align="center"></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td align="center">xion-testnet-1</td><td></td><td><a href="xion-testnet-1.md">xion-testnet-1.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th align="center"></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td align="center">xion-testnet-2</td><td></td><td><a href="xion-testnet-2.md">xion-testnet-2.md</a></td></tr></tbody></table>
 
 ## Start the Xion Daemon
 

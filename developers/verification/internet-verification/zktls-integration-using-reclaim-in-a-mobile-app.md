@@ -46,7 +46,7 @@ Reclaim provides a zkTLS verification smart contract that validates user proofs.
 
 ## Reclaim User Map (RUM) Contract
 
-The **Reclaim User Map (RUM)** contract is a modified version of the [User Map contract](../../computation/use-cases/building-a-per-user-data-storage-dapp.md#user-map-contract), designed to store per-user data ion JSON format.
+The **Reclaim User Map (RUM)** contract is a modified version of the [User Map contract](../../computation/use-cases/building-a-per-user-data-storage-dapp.md#user-map-contract), designed to store per-user data in JSON format.
 
 Instead of storing arbitrary user data, this contract is purpose-built to:
 
