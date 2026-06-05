@@ -9,7 +9,7 @@ hidden: true
 
 **Blog**: [https://xion.burnt.com/blog](https://xion.burnt.com/blog)
 
-**Twitter**: [https://twitter.com/burntxion](https://twitter.com/burnt_xion)
+**Twitter**: [https://twitter.com/burnt_xion](https://twitter.com/burnt_xion)
 
 **Discord**: [https://discord.gg/burnt](https://discord.gg/burnt)
 
