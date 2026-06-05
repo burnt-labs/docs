@@ -2,14 +2,14 @@
 description: How to build the xiond binary
 ---
 
-# Build the Xion Daemon
+# Build the Verona daemon
 
 If you want to build the `xiond` binary yourself, this section will show you how.
 
 {% hint style="info" %}
 :warning: **Development environment**
 
-The Xion Daemon is written using [the Go programming language](https://go.dev/).
+The Verona daemon is written using [the Go programming language](https://go.dev/).
 
 This guide assumes you have a pre-existing installation on your workstation.
 
@@ -27,7 +27,7 @@ A specific symptom of this would be an `AppHash` mismatch.
 
 ## Fetch the Source Code
 
-* Use `git` to retrieve the [Xion](https://github.com/burnt-labs/xion) repository, whose default branch contains the latest and greatest code.
+* Use `git` to retrieve the [Verona](https://github.com/burnt-labs/xion) repository, whose default branch contains the latest and greatest code.
 
 ```
 $ git clone https://github.com/burnt-labs/xion.git

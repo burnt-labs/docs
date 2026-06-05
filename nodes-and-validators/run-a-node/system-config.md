@@ -31,7 +31,7 @@ It is recommended that you monitor your system so you can prevent it from runnin
 
 ## Commonly used ports
 
-The Xion daemon uses the following TCP ports. Please adapt their settings to match your needs.
+The Verona daemon uses the following TCP ports. Please adapt their settings to match your needs.
 
 In most cases,  node operators only need to open the following port:
 

@@ -1,6 +1,6 @@
 # Building a React dApp to Interact with Token Factory Tokens
 
-This guide walks through creating a React-based decentralized application (app) that interacts with a token created using the XION Token Factory. This app will:
+This guide walks through creating a React-based decentralized application (app) that interacts with a token created using the Verona Token Factory. This app will:
 
 * Authenticate users with a **Meta Account** that would have received a token created via the Token Factory. See the following [guide](creating-minting-and-interacting-with-a-token-factory-token.md) on how to create your token.
 * Display the **token balance** for the logged-in user

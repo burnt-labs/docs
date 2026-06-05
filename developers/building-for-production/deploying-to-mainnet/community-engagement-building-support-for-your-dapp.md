@@ -1,6 +1,6 @@
 # Community Engagement: Building Support for Your App
 
-Engaging with the Xion community is essential for gathering **user feedback, testing your app, and securing governance approval for Mainnet deployment**. Developers who actively communicate with the community have a higher chance of success, both in refining their apps and getting them voted onto Mainnet.
+Engaging with the Verona community is essential for gathering **user feedback, testing your app, and securing governance approval for Mainnet deployment**. Developers who actively communicate with the community have a higher chance of success, both in refining their apps and getting them voted onto Mainnet.
 
 
 
@@ -16,11 +16,11 @@ Finally, collaboration with other developers accelerates innovation. By working 
 
 
 
-## **Where to Engage with the Xion Community**
+## **Where to Engage with the Verona Community**
 
-### **Xion Developer Discord (Real-Time Chat & Support)**
+### **Verona Developer Discord (Real-Time Chat & Support)**
 
-Join the [**Xion Discord server**](https://discord.gg/burnt) to discuss your project, ask technical questions, and get real-time feedback from developers and general community members.
+Join the [**Verona Discord server**](https://discord.gg/burnt) to discuss your project, ask technical questions, and get real-time feedback from developers and general community members.
 
 **Use the appropriate channels to:**
 
@@ -29,9 +29,9 @@ Join the [**Xion Discord server**](https://discord.gg/burnt) to discuss your pro
 * Ask for feedback on features and UX.
 * Troubleshoot development issues with other builders.
 
-### **Xion Ecosystem Telegram Group (General Community Chat)**
+### **Verona Ecosystem Telegram Group (General Community Chat)**
 
-The [**Xion Developer Ecosystem Telegram**](https://t.me/+5KA8xBuU5wYzZjU0) channel is the main space for discussions about the Verona network on telegram. This is a great place to engage with **validators, developers, and users** who are interested in new projects launching on Verona.
+The [**Verona Developer Ecosystem Telegram**](https://t.me/+5KA8xBuU5wYzZjU0) channel is the main space for discussions about the Verona network on telegram. This is a great place to engage with **validators, developers, and users** who are interested in new projects launching on Verona.
 
 **Use Telegram to:**
 
@@ -59,6 +59,6 @@ Developers can use [**GitHub Discussions**](https://github.com/orgs/burnt-labs/d
 When you are finally ready to get your contract(s) deployed on Mainnet, you need to first create a signaling proposal on the Verona forum to announce this to the Community.
 
 * Post your proposal in the [Mainnet Contract Deployments category](https://discourse.xion.burnt.com/c/govpros/mainnet-contract-deployments/6) on the Verona forum
-* Announce your signaling proposal in the ["XION Developer Ecosystem" Telegram channel](https://t.me/+5KA8xBuU5wYzZjU0) and on Discord
+* Announce your signaling proposal in the ["Verona Developer Ecosystem" Telegram channel](https://t.me/+5KA8xBuU5wYzZjU0) and on Discord
 * Wait for community feedback and respond accordingly
 

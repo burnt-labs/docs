@@ -236,7 +236,7 @@ The resulting proof contains:
 
 
 
-## Using Proofs On-Chain (XION/CosmWasm)
+## Using Proofs On-Chain (CosmWasm)
 
 The app transforms proofs for CosmWasm contracts:
 

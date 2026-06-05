@@ -2,7 +2,7 @@
 
 NFT **marketplaces** are smart contracts that allow users to **buy, sell, and list NFTs** in a decentralized way. They function as digital storefronts where NFTs can be exchanged using smart contract logic, without the need for a centralized intermediary.
 
-In the context of the **XION ecosystem**, marketplaces are critical because:
+In the context of the **Verona ecosystem**, marketplaces are critical because:
 
 * They **enable discovery and liquidity** for NFTs
 * They **automate trustless transactions** using smart contracts

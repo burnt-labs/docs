@@ -356,8 +356,8 @@ NEXT_PUBLIC_REST_URL="https://api.xion-testnet-2.burnt.com"
 | ------------------------------- | --------------------------------------------------------------------------- |
 | NEXT\_PUBLIC\_TREASURY\_ADDRESS | Treasury address used for gasless transactions and grantz authorization     |
 | NEXT\_PUBLIC\_CONTRACT\_ADDRESS | Address of your deployed User Map smart contract                            |
-| NEXT\_PUBLIC\_RPC\_URL          | RPC endpoint for Xion (default: `https://rpc.xion-testnet-2.burnt.com:443`) |
-| NEXT\_PUBLIC\_REST\_URL         | REST endpoint for Xion (default: `https://api.xion-testnet-2.burnt.com`)    |
+| NEXT\_PUBLIC\_RPC\_URL          | RPC endpoint for Verona (default: `https://rpc.xion-testnet-2.burnt.com:443`) |
+| NEXT\_PUBLIC\_REST\_URL         | REST endpoint for Verona (default: `https://api.xion-testnet-2.burnt.com`)    |
 
 3. Build and start the application:
 
@@ -367,7 +367,7 @@ npm run dev
 
 ### Frontend: Main Page Breakdown
 
-The `src/app/page.tsx` file is the **core** of the frontend. It connects the wallet, submits JSON data to the User Map smart contract, and queries stored data, all using **Xion’s Abstraxion** toolkit.
+The `src/app/page.tsx` file is the **core** of the frontend. It connects the wallet, submits JSON data to the User Map smart contract, and queries stored data, all using **Verona’s Abstraxion** toolkit.
 
 #### **Environment Setup**
 

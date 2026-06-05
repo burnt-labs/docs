@@ -1,5 +1,5 @@
 ---
-description: Integrated Development Environment Setup for XION Smart Contract Development
+description: Integrated Development Environment Setup for Verona Network Smart Contract Development
 ---
 
 # Set Up an Integrated Development Environment (IDE)

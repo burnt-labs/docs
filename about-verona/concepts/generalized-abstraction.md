@@ -4,7 +4,7 @@
 
 > **Note:** This section was previously titled "Generalized Chain Abstraction." The abstraction layer is broader than cross-chain interoperability. It encompasses every functional barrier that prevents mainstream adoption: accounts, signatures, gas, payments, devices, and interoperability. The term "Generalized Abstraction" reflects this full scope.
 
-**Verona** is the intelligence-layer narrative for the **Verona** network. Generalized Abstraction is embedded directly in that network's protocol—unlike application-layer solutions that add complexity on top of existing chains. Every application built on the network automatically inherits full abstraction without additional development effort.
+**Verona** is the intelligence-layer brand for this network. Generalized Abstraction is embedded directly in that network's protocol—unlike application-layer solutions that add complexity on top of existing chains. Every application built on the network automatically inherits full abstraction without additional development effort.
 
 #### Why Protocol-Level Abstraction Matters
 
@@ -48,9 +48,9 @@ The Verona network supports all major cryptographic signature schemes natively a
 The parameterized fee layer removes gas fees from the user experience entirely.
 
 * **Fee grants:** Applications sponsor transaction fees for their users via Treasury contracts
-* **Multi-token fees:** Fees can be paid in any token (USDC, XION, or custom tokens), with automatic conversion
+* **Multi-token fees:** Fees can be paid in any token (USDC, $VER, or custom tokens), with automatic conversion
 * **Predictable pricing:** Applications can build transaction costs into product pricing rather than exposing variable gas fees
-* **No native token requirement:** Users never need to acquire $XION to use applications
+* **No native token requirement:** Users never need to acquire $VER (Previously $XION) to use applications
 
 _For developers: Treasury contracts are the primary mechanism for sponsoring gas. See the Developer > Getting Started section for Treasury contract setup and configuration._
 

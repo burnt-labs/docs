@@ -1,6 +1,6 @@
-# WebSockets with Xion: Real-Time Communication
+# WebSockets with Verona: Real-Time Communication
 
-WebSockets are a powerful tool for enabling real-time, bidirectional communication between a client and a server. Within the Xion ecosystem by integrating WebSockets, you can:
+WebSockets are a powerful tool for enabling real-time, bidirectional communication between a client and a server. Within the Verona ecosystem by integrating WebSockets, you can:
 
 * Enable real-time updates for decentralized apps (apps).
 * Stream blockchain events (e.g., transactions, smart contract triggers) to clients.
@@ -49,7 +49,7 @@ Below, we’ll cover the simplest way to set up WebSockets in your JavaScript pr
 
 ### **Establishing a WebSocket Connection**
 
-You can find websocket endpoints for any of the available Verona networks on the [Public Endpoints & Resources](../../../references/public-endpoints-and-resources.md) page. Here’s how to connect to a Xion node using a WebSocket endpoint (add to your index.js file):
+You can find websocket endpoints for any of the available Verona networks on the [Public Endpoints & Resources](../../../references/public-endpoints-and-resources.md) page. Here’s how to connect to a Verona node using a WebSocket endpoint (add to your index.js file):
 
 ```javascript
 const WebSocket = require('ws');
@@ -159,7 +159,7 @@ const queryForBalanceUpdate = () => {
 
 This function:
 
-1. Establishes a WebSocket connection to the XION testnet RPC endpoint
+1. Establishes a WebSocket connection to the Verona testnet RPC endpoint
 2. Creates a subscription request
 3. Uses a unique ID (via UUID) for each request
 4. Sets up a query filter that watches for transactions where our address appears as a recipient

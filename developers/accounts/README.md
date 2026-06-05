@@ -50,14 +50,14 @@ Create mobile applications with React Native and Meta Account authentication.
 
 #### OAuth2 App Development
 
-* [Build an Xion OAuth2 Application](oauth2-app.md) - Build an application with a Web2 experience using XION OAuth2 Fully-Managed API
+* [Build a Verona OAuth2 Application](oauth2-app.md) - Build an application with a Web2 experience using Verona OAuth2 Fully-Managed API
 
 #### Backend App Development
 
-Integrate XION with your backend services using RESTful APIs or CosmJS.
+Integrate Verona with your backend services using RESTful APIs or CosmJS.
 
-* [Interact with XION via your Backend Service ](backend-app/backend-using-cosmjs.md)- Learn how to interact with the Verona network from a backend environment using CosmJS
-* [Account Abstraction for RESTful API with Backend Session](backend-app/build-restapi-with-account-abstraction-and-backend-session.md) - Build an application with a Web2 experience using XION Integration in backend
+* [Interact with Verona via your Backend Service ](backend-app/backend-using-cosmjs.md)- Learn how to interact with the Verona network from a backend environment using CosmJS
+* [Account Abstraction for RESTful API with Backend Session](backend-app/build-restapi-with-account-abstraction-and-backend-session.md) - Build an application with a Web2 experience using Verona Integration in backend
 
 #### AI Agent and CLI Path
 

@@ -1,4 +1,4 @@
-# zkTLS Integration using Opacity in a Xion Mobile App
+# zkTLS Integration using Opacity in a Verona Mobile App
 
 The ability to verify real-world facts without compromising user privacy is critical. Traditional methods of user verification can introduce trust assumptions, privacy tradeoffs, and central points of failure.
 
@@ -17,7 +17,7 @@ Before you begin, ensure you have the following installed and configured:
 * [**Node.js** (LTS version recommended) and **npm**](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 * An Android Emulator via [Android Studio](https://docs.expo.dev/get-started/set-up-your-environment?platform=android\&device=physical\&mode=development-build\&buildEnv=local#set-up-an-android-device-with-a-development-build), iOS Simulator via [Xcode](https://docs.expo.dev/get-started/set-up-your-environment?platform=ios\&device=physical\&mode=development-build\&buildEnv=local#set-up-an-ios-device-with-a-development-build), **or** a physical mobile device for testing
 
-The following [guide](https://docs.expo.dev/guides/local-app-development) will help you set up your local development environment for Expo. We also have a guide to help [Set up your XION Mobile Development Environment](../../accounts/mobile-app/set-up-mobile-development-environment.md), which shows how to get your Android emulator and iOS simulator set up.
+The following [guide](https://docs.expo.dev/guides/local-app-development) will help you set up your local development environment for Expo. We also have a guide to help [Set up your Verona Mobile Development Environment](../../accounts/mobile-app/set-up-mobile-development-environment.md), which shows how to get your Android emulator and iOS simulator set up.
 
 
 
@@ -39,7 +39,7 @@ To get started, you’ll need to:
 
 ## Opacity's Verification Contract
 
-Opacity provides a verifier contract deployed on XION testnet that validates zkTLS proof signatures on-chain. This ensures the GitHub data hasn't been tampered with.
+Opacity provides a verifier contract deployed on Verona testnet that validates zkTLS proof signatures on-chain. This ensures the GitHub data hasn't been tampered with.
 
 **Contract Address (Testnet):**
 
@@ -151,8 +151,8 @@ EXPO_PUBLIC_OPACITY_VERIFIER_CONTRACT="opacity-verifier-contract"
 | Variable                                   | Description                                                                                                                                                                                                                                                                                                                            |
 | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | EXPO\_PUBLIC\_TREASURY\_CONTRACT\_ADDRESS  | <p>Treasury contract instance used for gasless transactions and grants authorization to execute transactions via the User Map smart contract instance on behalf of users.<br><br>You will also need to add your RUM contract address to the treasury contract permission to allow for executing transactions on the user's behalf.</p> |
-| EXPO\_PUBLIC\_RPC\_ENDPOINT                | RPC endpoint for Xion (default: `https://rpc.xion-testnet-2.burnt.com:443`)                                                                                                                                                                                                                                                            |
-| EXPO\_PUBLIC\_REST\_ENDPOINT               | REST endpoint for Xion (default: `https://api.xion-testnet-2.burnt.com`)                                                                                                                                                                                                                                                               |
+| EXPO\_PUBLIC\_RPC\_ENDPOINT                | RPC endpoint for Verona (default: `https://rpc.xion-testnet-2.burnt.com:443`)                                                                                                                                                                                                                                                            |
+| EXPO\_PUBLIC\_REST\_ENDPOINT               | REST endpoint for Verona (default: `https://api.xion-testnet-2.burnt.com`)                                                                                                                                                                                                                                                               |
 | EXPO\_PUBLIC\_USER\_MAP\_CONTRACT\_ADDRESS | Your User Map contract instance where the user's follower count will be added to their user map record with their logged in wallet address being the key                                                                                                                                                                               |
 | EXPO\_PUBLIC\_OPACITY\_API\_KEY            | API key for interacting with the Opacity platform.                                                                                                                                                                                                                                                                                     |
 | EXPO\_PUBLIC\_OPACITY\_VERIFIER\_CONTRACT  | Validates that the zkTLS proofs were legitimately signed by authorized notary nodes and haven't been tampered with.                                                                                                                                                                                                                    |

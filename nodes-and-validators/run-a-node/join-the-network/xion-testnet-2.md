@@ -46,7 +46,7 @@ sed -i.bak -E "s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"$SEED_NODE\"|" ${BASED
 
 ## Synchronize the chain
 
-Now that we've configured our Xion Daemon to discover other nodes in the Verona network, we can attempt to synchronize the chain.
+Now that we've configured our Verona daemon to discover other nodes in the Verona network, we can attempt to synchronize the chain.
 
 While it's definitely possible to synchronize the chain from Genesis, we recommend you only do so if you want to run an Archive node, and perform processing on each of the blocks as they come in.
 

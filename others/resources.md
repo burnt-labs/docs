@@ -5,18 +5,10 @@ hidden: true
 
 # Resources
 
-**Website**: [https://xion.burnt.com](https://xion.burnt.com)
-
-**Blog**: [https://xion.burnt.com/blog](https://xion.burnt.com/blog)
-
-**Twitter**: [https://twitter.com/burnt_xion](https://twitter.com/burnt_xion)
+**Website**: [https://burnt.com](https://burnt.com)
 
 **Discord**: [https://discord.gg/burnt](https://discord.gg/burnt)
 
 **Developer Ecosystem (Telegram)**: [https://t.me/+5KA8xBuU5wYzZjU0](https://t.me/+5KA8xBuU5wYzZjU0)
 
 **Guild**: [https://guild.xyz/burnt](https://guild.xyz/burnt)
-
-**XION Brand Kit**: [https://drive.google.com/drive/folders/1QJdAVN3vCD7Cu28h6SaKvDeY8PY7xA0w?usp=sharing](https://drive.google.com/drive/folders/1QJdAVN3vCD7Cu28h6SaKvDeY8PY7xA0w?usp=sharing)
-
-**Whitepaper:** [xion.burnt.com/whitepaper.pdf](https://xion.burnt.com/whitepaper.pdf)

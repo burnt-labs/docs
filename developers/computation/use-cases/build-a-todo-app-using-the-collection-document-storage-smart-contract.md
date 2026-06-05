@@ -141,9 +141,9 @@ There's no need to deploy your own version of the DocuStore contract on-chain as
 
 > The **Code ID** for the latest deplosyment is **1,228**
 
-Each contract instance requires a **unique initialization message** based on its expected parameters. In the case of the **DocuStore** contract, an **admin** parameter which stores a Xion address is required.
+Each contract instance requires a **unique initialization message** based on its expected parameters. In the case of the **DocuStore** contract, an **admin** parameter which stores a Verona address is required.
 
-Set the contract's initialization message by executing the following in your terminal, swapping the address to a Xion address you own and would like to be the admin of the contract:
+Set the contract's initialization message by executing the following in your terminal, swapping the address to a Verona address you own and would like to be the admin of the contract:
 
 ```bash
 MSG='{"admin":"xion1..."}'
@@ -222,7 +222,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 
 1. Enter a **"Description"** in the respective field. This will reflect the intended purpose of the request.
 2. For the **"Allowance Type"** select "**Basic Allowance**".
-3. In the **"Spend Limit"** field, enter **`0.1`** and select `XION` as the token.
+3. In the **"Spend Limit"** field, enter **`0.1`** and select `$VER` as the token.
 4. Click the **"Save"** button to apply the configuration.
 
 #### **Permission**
@@ -335,8 +335,8 @@ NEXT_PUBLIC_REST_URL="https://api.xion-testnet-2.burnt.com"
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | NEXT\_PUBLIC\_TREASURY\_ADDRESS | Treasury contract instance used for gasless transactions and grantz authorization to execute transactions via the DocuStore smart contract instance on behalf of users. |
 | NEXT\_PUBLIC\_CONTRACT\_ADDRESS | Address of the DocuStore smart contract instance.                                                                                                                       |
-| NEXT\_PUBLIC\_RPC\_URL          | RPC endpoint for Xion (default: `https://rpc.xion-testnet-2.burnt.com:443`)                                                                                             |
-| NEXT\_PUBLIC\_REST\_URL         | REST endpoint for Xion (default: `https://api.xion-testnet-2.burnt.com`)                                                                                                |
+| NEXT\_PUBLIC\_RPC\_URL          | RPC endpoint for Verona (default: `https://rpc.xion-testnet-2.burnt.com:443`)                                                                                             |
+| NEXT\_PUBLIC\_REST\_URL         | REST endpoint for Verona (default: `https://api.xion-testnet-2.burnt.com`)                                                                                                |
 
 
 

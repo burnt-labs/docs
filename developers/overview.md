@@ -6,7 +6,7 @@ icon: lightbulb
 
 Welcome to **Build on Verona**. If you're coming from Web2 development, this page explains the network, primitives, and how to ship consumer and agentic applications.
 
-**Verona** is the intelligence-layer brand; the underlying network and CLI use **XION** naming (`xion-testnet-2`, `xiond`, on-chain addresses). See [What is Verona?](../about-verona/concepts/overview.md) and [Rebrand: XION → Verona](../about-verona/rebrand-from-xion.md).
+**Verona** is the intelligence-layer brand; the underlying network and CLI use **XION** on-chain naming (`xion-testnet-2`, `xiond`, on-chain addresses). See [What is Verona?](../about-verona/concepts/overview.md) and [Rebrand: XION → Verona](../about-verona/rebrand-from-xion.md).
 
 ### What you build on
 
@@ -19,7 +19,7 @@ Think of the stack as infrastructure for applications that need:
 * **Payment processing** (like Stripe or Square)
 * **Serverless compute** (like AWS Lambda or Cloud Functions)
 
-All running on verifiable infrastructure, with technical identifiers and CLI flows still using XION names.
+All running on verifiable infrastructure, with technical identifiers and CLI flows still using `xiond` and on-chain identifiers.
 
 ### Core builder primitives
 
@@ -133,7 +133,7 @@ Build a Netflix-style platform with on-chain access control:
 You don't need to rebuild everything. Add Verona features incrementally:
 
 ```
-1. ACCOUNTS → Add a Verona / XION account connection alongside existing auth
+1. ACCOUNTS → Add a Verona account connection alongside existing auth
               (via OAuth2 — works like "Connect with Google")
 2. PAYMENTS → Enable crypto payments alongside Stripe,
               users pay with credit card via Crossmint

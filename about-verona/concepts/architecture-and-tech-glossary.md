@@ -38,13 +38,13 @@ description: Key Terms and Concepts
 | **CometBFT**             | The Byzantine Fault Tolerant consensus engine underlying the Verona network (formerly Tendermint).                                                                               |
 | **Cosmos SDK**           | The framework on which the Verona network is built. Provides modular blockchain application development.                                                                         |
 | **IBC**                  | Inter-Blockchain Communication protocol. Enables native cross-chain messaging and asset transfers between the Verona network and other Cosmos ecosystem chains.                  |
-| **Proof of Stake (PoS)** | The Verona network's consensus mechanism. Validators stake $XION tokens to participate in block production and earn rewards. Inflation is calculated only against staked tokens. |
+| **Proof of Stake (PoS)** | The Verona network's consensus mechanism. Validators stake $VER tokens (Previously $XION) to participate in block production and earn rewards. Inflation is calculated only against staked tokens. |
 |                          |                                                                                                                                                                    |
 
 ### Economic Terms
 
 | Term               | Definition                                                                                                                                             |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **$XION**          | The native token of the Verona network. Used for staking, governance, transaction fees, and as the settlement layer for ecosystem activity.              |
+| **$VER**           | The native token of the Verona network (Previously $XION). Used for staking, governance, transaction fees, and as the settlement layer for ecosystem activity. |
 | **Revenue Share**  | Agreements where application or verification revenue can flow back to the protocol. Specific figures should only be published after marketing and legal approval. |
-| **Buyback & Burn** | The mechanism by which ecosystem revenue is used to purchase and permanently remove $XION tokens from circulation, creating deflationary pressure.     |
+| **Buyback & Burn** | The mechanism by which ecosystem revenue is used to purchase and permanently remove $VER tokens from circulation, creating deflationary pressure.     |

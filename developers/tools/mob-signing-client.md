@@ -1,9 +1,9 @@
 ---
-description: Multi-platform signing client library for XION (Rust + UniFFI)
+description: Multi-platform signing client library for Verona (Rust + UniFFI)
 icon: cubes
 ---
 
-# Mob: a multi-platform signing client library for XION
+# Mob: a multi-platform signing client library for Verona
 
 
 
@@ -15,14 +15,14 @@ It's the native equivalent of [xion.js](https://github.com/burnt-labs/xion.js) w
 
 ### Why we built it
 
-For most of XION's history, building against the chain meant utilizing [xion.js](https://github.com/burnt-labs/xion.js). That's fine if you're shipping a web app or a React Native app. It's a problem if you're not.
+For most of Verona's history, building against the chain meant utilizing [xion.js](https://github.com/burnt-labs/xion.js). That's fine if you're shipping a web app or a React Native app. It's a problem if you're not.
 
 * A **Python data team** wanting to script a treasury or batch payouts had to either shell out to `xiond` or hand-roll protobuf signing.
 * A **Ruby backend** doing payment reconciliation against on-chain state had no SDK at all.
-* A **Go or Rust service** had to import `cosmrs` and re-implement XION's account-abstraction wrappers from scratch.
+* A **Go or Rust service** had to import `cosmrs` and re-implement Verona's account-abstraction wrappers from scratch.
 * A **native Android or iOS team** had to drag in React Native + a JavaScript bundle + a web-view OAuth dance to get session keys and gasless UX.
 
-Every team was solving the same problem, sign a XION transaction, talk to an RPC, optionally wrap the call in `MsgExec` for authz, in their own way, in their own language, with their own bugs.
+Every team was solving the same problem, sign a Verona transaction, talk to an RPC, optionally wrap the call in `MsgExec` for authz, in their own way, in their own language, with their own bugs.
 
 **Mob** is one implementation of that problem, in Rust, with idiomatic bindings to whatever language you're already writing.
 

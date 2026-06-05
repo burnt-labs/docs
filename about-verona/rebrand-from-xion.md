@@ -14,6 +14,7 @@ Verona is the next chapter of the same network you may know as **XION**. The reb
 | **Positioning** | Trust Layer for the Internet | Intelligence layer for AI |
 | **Primary user story** | Verify data, abstract blockchain UX | User-owned verified facts reusable by authorized agents |
 | **Documentation brand** | XION throughout | Verona in narrative; XION where chain precision is required |
+| **Native token symbol** | $XION | $VER (on-chain denom `uxion` unchanged) |
 | **Product surfaces** | Infrastructure-first | EarnOS, Burnt Verified, Ask & Ask MCP, Data Backpack |
 
 ## What did not change

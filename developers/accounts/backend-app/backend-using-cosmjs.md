@@ -1,4 +1,4 @@
-# Interact with XION via your Backend Service
+# Interact with Verona via your Backend Service
 
 Learn how to interact with the Verona network from a backend environment using **CosmJS**. This guide covers setting up your environment, connecting to the Verona network, querying blockchain data, and executing transactions.
 
@@ -102,7 +102,7 @@ async function getQueryClient() {
 async function getSigningClient(mnemonic = config.MNEMONIC) {
   // Create wallet from mnemonic
   const wallet = await DirectSecp256k1HdWallet.fromMnemonic(mnemonic, {
-    prefix: "xion" // XION address prefix
+    prefix: "xion" // Verona address prefix
   });
   
   // Create and return a signing client
@@ -223,7 +223,7 @@ const config = require('./config');
  */
 async function getMyAddress() {
   const wallet = await DirectSecp256k1HdWallet.fromMnemonic(config.MNEMONIC, {
-    prefix: "xion" // XION address prefix
+    prefix: "xion" // Verona address prefix
   });
   
   const [firstAccount] = await wallet.getAccounts();
@@ -237,7 +237,7 @@ async function getMyAddress() {
  */
 async function generateWallet() {
   const wallet = await DirectSecp256k1HdWallet.generate(24, {
-    prefix: "xion" // XION address prefix
+    prefix: "xion" // Verona address prefix
   });
   
   const [firstAccount] = await wallet.getAccounts();
@@ -256,7 +256,7 @@ async function generateWallet() {
  */
 async function getAddressFromMnemonic(mnemonic) {
   const wallet = await DirectSecp256k1HdWallet.fromMnemonic(mnemonic, {
-    prefix: "xion" // XION address prefix
+    prefix: "xion" // Verona address prefix
   });
   
   const [firstAccount] = await wallet.getAccounts();
@@ -299,7 +299,7 @@ async function sendTokens(recipientAddress, amount, denom = "uxion", memo = "") 
     recipientAddress,
     [{ denom, amount }],
     "auto", // fee calculation
-    memo || "Transfer via XION backend"
+    memo || "Transfer via Verona backend"
   );
   
   return {
@@ -326,7 +326,7 @@ async function executeContract(contractAddress, msg, funds = []) {
     contractAddress,
     msg,
     "auto",
-    "Execute contract via XION backend",
+    "Execute contract via Verona backend",
     funds
   );
   
@@ -535,7 +535,7 @@ When implementing these functions in a production backend environment:
 const transferResult = await sendTokens(
   "your wallet mnemonic",
   "recipient_burnt_address",
-  "1000000", // 1 XION (1,000,000 uxion)
+  "1000000", // 1 $VER (Previously $XION) (1,000,000 uxion)
   "uxion"
 );
 console.log(`Transfer hash: ${transferResult.transactionHash}`);

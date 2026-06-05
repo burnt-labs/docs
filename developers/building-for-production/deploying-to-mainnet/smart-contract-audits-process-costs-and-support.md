@@ -1,6 +1,6 @@
 # Smart Contract Audits: Process, Costs & Support
 
-Security is a top priority on Xion **Mainnet**, and **auditing your smart contract is a recommended step** before submitting it for governance approval. This ensures that only **secure, reliable, and battle-tested** contracts are deployed on-chain, protecting users and the ecosystem.
+Security is a top priority on Verona **Mainnet**, and **auditing your smart contract is a recommended step** before submitting it for governance approval. This ensures that only **secure, reliable, and battle-tested** contracts are deployed on-chain, protecting users and the ecosystem.
 
 
 
@@ -8,7 +8,7 @@ Security is a top priority on Xion **Mainnet**, and **auditing your smart contra
 
 Audits are essential in smart contract development to enhance security, credibility, and compliance. They help identify and mitigate vulnerabilities that could be exploited by attackers, ensuring the contract is robust and secure.
 
-The community is also more likely to approve audited contracts, increasing their chances of adoption in the XION ecosystem. Additionally, well-audited contracts build trust among users and developers, encouraging wider adoption. Finally, audits help ensure that the contract adheres to security standards and best practices, reducing risks and improving overall reliability.
+The community is also more likely to approve audited contracts, increasing their chances of adoption in the Verona ecosystem. Additionally, well-audited contracts build trust among users and developers, encouraging wider adoption. Finally, audits help ensure that the contract adheres to security standards and best practices, reducing risks and improving overall reliability.
 
 
 
@@ -24,8 +24,8 @@ The audit process typically follows these key stages to ensure security and reli
 
 ### **Code Review & Community Feedback**
 
-* Share your contract with the **Xion developer community** for informal peer review.
-* Deploy and test on **Xion Testnet** to refine performance and security.
+* Share your contract with the **Verona developer community** for informal peer review.
+* Deploy and test on **Verona Testnet** to refine performance and security.
 * Get feedback from experienced developers before seeking a professional audit.
 
 ### **Professional Audit**
@@ -77,23 +77,23 @@ Before choosing a firm, consider:
 
 
 
-## **How the Xion Foundation Can Help**
+## **How the Verona Foundation Can Help**
 
-Building secure, scalable, and innovative projects on Xion shouldn’t be a solo journey. The **Xion Foundation** is committed to empowering developers at every stage by providing **resources, funding, and expert support** to streamline development and ensure best in class security.
+Building secure, scalable, and innovative projects on Verona shouldn’t be a solo journey. The **Verona Foundation** is committed to empowering developers at every stage by providing **resources, funding, and expert support** to streamline development and ensure best in class security.
 
 Here’s how we help turn your vision into a **secure, production ready reality**:
 
 ### **Connecting Developers with Auditors**
 
-We help match teams with **reputable auditors** who specialize in CosmWasm and Xion.
+We help match teams with **reputable auditors** who specialize in CosmWasm and Verona.
 
 ### **Covering Partial Audit Costs**
 
-For projects that align with Xion’s ecosystem goals, **grants** or **funding assistance** may be available to subsidize audit costs.
+For projects that align with Verona’s ecosystem goals, **grants** or **funding assistance** may be available to subsidize audit costs.
 
 ### **Pre-Audited Contracts Repository**
 
-We maintain a [**list of already audited contracts**](https://github.com/burnt-labs/contracts) deployed on XION so developers can use secured code instead of writing everything from scratch.
+We maintain a [**list of already audited contracts**](https://github.com/burnt-labs/contracts) deployed on Verona so developers can use secured code instead of writing everything from scratch.
 
 ### **Technical Guidance & Review**
 

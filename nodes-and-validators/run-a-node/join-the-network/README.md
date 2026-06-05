@@ -4,7 +4,7 @@ description: How to join the network with a configured daemon
 
 # Join the Verona network
 
-With a configured Xion Daemon, we can attempt to join one of the Verona networks.
+With a configured Verona daemon, we can attempt to join one of the Verona networks.
 
 ## Select a Network
 
@@ -22,7 +22,7 @@ For detailed information on how to join each network, please refer to its corres
 
 <table data-view="cards"><thead><tr><th></th><th align="center"></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td align="center">xion-testnet-2</td><td></td><td><a href="xion-testnet-2.md">xion-testnet-2.md</a></td></tr></tbody></table>
 
-## Start the Xion Daemon
+## Start the Verona daemon
 
 Finally, with all the configurations in place, we can start synchronizing our node:
 

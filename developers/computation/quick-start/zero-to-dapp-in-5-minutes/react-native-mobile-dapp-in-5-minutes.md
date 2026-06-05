@@ -1,12 +1,12 @@
 # React Native Mobile App on Verona in 5 Minutes
 
-Building a **Mobile App** on XION typically involves three main components:
+Building a **Mobile App** on Verona typically involves three main components:
 
 * **Smart contract** – Contains the core business logic of your App.
 * **Treasury contract** – Enables gasless transactions using **Fee Grants**, making onboarding smoother for users. It also handles **Authorization Grants**, which allow your frontend to execute transactions on behalf of the user, enabling a more traditional application experience through our OAuth2-style **Abstraxion** solution.
 * **Mobile Frontend** – This is your App’s interface, used to display data and trigger transactions via the smart contract.
 
-As a beginner to XION development, getting a fully functional App up and running should be simple and shouldn’t require any complex setup. With this in mind, we’ve created a [**quick launch frontend solution**](https://quickstart.dev.testnet.burnt.com) that handles the creation of both the **User Map** and **Treasury** contracts with the Treasury contract being fully configured. We've also created a fully functional [**React Native Mobile App**](https://github.com/burnt-labs/abstraxion-expo-demo) for interacting with the **User Map** contract.
+As a beginner to Verona development, getting a fully functional App up and running should be simple and shouldn’t require any complex setup. With this in mind, we’ve created a [**quick launch frontend solution**](https://quickstart.dev.testnet.burnt.com) that handles the creation of both the **User Map** and **Treasury** contracts with the Treasury contract being fully configured. We've also created a fully functional [**React Native Mobile App**](https://github.com/burnt-labs/abstraxion-expo-demo) for interacting with the **User Map** contract.
 
 
 
@@ -30,7 +30,7 @@ Before you begin, ensure you have the following installed and configured:
 * [**Node.js** (LTS version recommended) and **npm**](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 * An Android Emulator via [Android Studio](https://docs.expo.dev/get-started/set-up-your-environment?platform=android\&device=physical\&mode=development-build\&buildEnv=local#set-up-an-android-device-with-a-development-build), iOS Simulator via [Xcode](https://docs.expo.dev/get-started/set-up-your-environment?platform=ios\&device=physical\&mode=development-build\&buildEnv=local#set-up-an-ios-device-with-a-development-build), **or** a physical mobile device for testing
 
-The following [guide](https://docs.expo.dev/guides/local-app-development) will help you set up your local development environment for Expo. We also have a guide in the docs on [Set up your XION Mobile Development Environment](../../../accounts/mobile-app/set-up-mobile-development-environment.md), which shows how to get your Android emulator and iOS simulator set up.
+The following [guide](https://docs.expo.dev/guides/local-app-development) will help you set up your local development environment for Expo. We also have a guide in the docs on [Set up your Verona Mobile Development Environment](../../../accounts/mobile-app/set-up-mobile-development-environment.md), which shows how to get your Android emulator and iOS simulator set up.
 
 
 

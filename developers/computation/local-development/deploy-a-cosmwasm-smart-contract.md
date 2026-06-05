@@ -1,4 +1,4 @@
-# Deploying Your First Smart Contract on XION
+# Deploying Your First Smart Contract on Verona
 
 This guide will walk you through the process of deploying a smart contract on the **Verona** network. The deployment process involves **compiling** an **optimized** version of your contract code, **uploading** this optimized code to the blockchain, and then creating an **instance** of the contract. Once instantiated, the contract will have its own **unique address** and **data store**, allowing you to interact with it through transactions and queries.
 
@@ -9,7 +9,7 @@ This guide will walk you through the process of deploying a smart contract on th
 Before deploying your smart contract on-chain, ensure you have completed the following setup steps:
 
 * **Set up your local environment**: Follow the [installation and setup guide](setting-up-env/installation-prerequisites-setup-local-environment.md) to configure your development environment.
-* **Install the XION daemon**: Set up the XION CLI by following the [installation instructions](../../tools/daemon-cli.md) to interact with the blockchain.
+* **Install the Verona daemon (`xiond`)**: Set up the `xiond` CLI by following the [installation instructions](../../tools/daemon-cli.md) to interact with the blockchain.
 * Make sure you have [Docker](https://www.docker.com/get-started) installed and running, as it is required to compile your contract.
 
 
@@ -52,21 +52,21 @@ Your account is not fully registered on-chain until it is involved in a transact
 
 You can obtain testnet tokens through one of the following methods:
 
-* **Discord Faucet**: Request tokens by using the faucet bot in the **XION Discord**.
+* **Discord Faucet**: Request tokens by using the faucet bot in the **Verona Discord**.
 * **Faucet Web Page**: Visit the [Verona Faucet](https://faucet.xion.burnt.com/) and follow the instructions to receive testnet tokens.
 
 For more details on accessing testnet tokens, see our [Faucet Page](../../references/testnet-tokens.md).
 
 #### **Mainnet Tokens**
 
-If you’re deploying contracts on **XION Mainnet**, you can acquire XION tokens through various **decentralized** and **centralized exchanges**.
+If you’re deploying contracts on **Verona Mainnet**, you can acquire $VER tokens through various **decentralized** and **centralized exchanges**.
 
 
 
 ## **Compile and Optimize the Contract**
 
 {% hint style="warning" %}
-WASM built with the **latest stable Rust** may fail to **store** on XION because bulk memory is not supported. If upload fails after a Rust upgrade, create `rust-toolchain.toml` at the contract project root and pin **1.86** (latest stable known to avoid bulk memory for `wasm32-unknown-unknown` as of May 2026; re-test when upgrading Rust or when XION enables bulk memory):
+WASM built with the **latest stable Rust** may fail to **store** on Verona because bulk memory is not supported. If upload fails after a Rust upgrade, create `rust-toolchain.toml` at the contract project root and pin **1.86** (latest stable known to avoid bulk memory for `wasm32-unknown-unknown` as of May 2026; re-test when upgrading Rust or when Verona enables bulk memory):
 
 ```toml
 [toolchain]

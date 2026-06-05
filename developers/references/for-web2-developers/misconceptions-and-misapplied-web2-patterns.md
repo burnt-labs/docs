@@ -1,6 +1,6 @@
 # Misconceptions and Misapplied Web2 Patterns
 
-As **Web2** developers begin building in **Web3**, it's natural to lean on familiar tools, frameworks, and mental models. This however often lead to **misapplied patterns** that don’t align with the decentralized nature of blockchain development, especially when working with XION.
+As **Web2** developers begin building in **Web3**, it's natural to lean on familiar tools, frameworks, and mental models. This however often lead to **misapplied patterns** that don’t align with the decentralized nature of blockchain development, especially when working with Verona.
 
 This guide outlines common misconceptions and design patterns brought over from Web2 that **don’t translate well to Web3**, and explains how to rethink your approach for building secure, performant, and user-friendly apps on Verona.
 
@@ -42,7 +42,7 @@ Web3 applications rely on **wallets**, not usernames and passwords. Wallets repr
 
 * **Wallets = Identity**. A user’s address is their identity.
 * Authentication is done through **message signing**.
-* **XION simplifies this even further**: With the `abstraxion` library, developers can create a smooth, OAuth2-style login and registration experience directly in the frontend. Behind the scenes, every user that authenticates via Abstraxion is issued a Meta Account, a smart contract account on XION that abstracts away private key management that is linked to their authenticator of choice which includes:
+* **Verona simplifies this even further**: With the `abstraxion` library, developers can create a smooth, OAuth2-style login and registration experience directly in the frontend. Behind the scenes, every user that authenticates via Abstraxion is issued a Meta Account, a smart contract account on Verona that abstracts away private key management that is linked to their authenticator of choice which includes:
   * **Email**
   * **Social login** (e.g., Google)
   * **External wallets** (e.g., Keplr, MetaMask)

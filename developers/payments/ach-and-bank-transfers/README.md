@@ -1,8 +1,8 @@
 # ACH & Bank Transfers
 
-ACH and bank transfer integrations let XION apps move users between traditional bank accounts and on-chain stablecoins. These flows are useful for fintech apps, wallets, marketplaces, payroll tools, savings products, and consumer apps that need a familiar bank-based funding or cash-out experience.
+ACH and bank transfer integrations let Verona apps move users between traditional bank accounts and on-chain stablecoins. These flows are useful for fintech apps, wallets, marketplaces, payroll tools, savings products, and consumer apps that need a familiar bank-based funding or cash-out experience.
 
-With XION, developers can combine bank transfer providers with Meta Accounts and Abstraxion to create a smoother onboarding flow for users who may not already hold crypto. Users can connect with familiar authentication methods, link a bank account, fund their wallet, and cash out stablecoins without needing to understand the underlying blockchain mechanics.
+With Verona, developers can combine bank transfer providers with Meta Accounts and Abstraxion to create a smoother onboarding flow for users who may not already hold crypto. Users can connect with familiar authentication methods, link a bank account, fund their wallet, and cash out stablecoins without needing to understand the underlying blockchain mechanics.
 
 ### What You Can Build
 

@@ -2,7 +2,7 @@
 
 **Multisigs** short for _multi-signature contracts_ are smart contracts that require **multiple parties to approve an action** before it can be executed. Instead of relying on a single private key, control is distributed among a group, increasing **security**, **transparency**, and **collaborative governance**.
 
-In the **XION** ecosystem and broader **CosmWasm** world, multisigs are commonly used for:
+In the **Verona** ecosystem and broader **CosmWasm** world, multisigs are commonly used for:
 
 * **Decentralized treasury management**
 * **Protocol upgrades or governance decisions**

@@ -38,7 +38,7 @@ See the [repo](https://github.com/burnt-labs/xion.js)
 
 <summary>Meta Account</summary>
 
-This contract along with a custom XION module represent the core of the meta account functionality.
+This contract along with a custom module represent the core of the meta account functionality.
 
 See the [repo](https://github.com/burnt-labs/contracts)
 
@@ -73,7 +73,7 @@ sequenceDiagram
     participant DAPP
     participant AbstraxionLibrary as Abstraxion Library
     participant AccountManagementDashboard as Account Management Dashboard
-    participant XionChain as Xion Chain
+    participant VeronaInfra as Verona Network
     User->>DAPP: Load Dapp
     User->>DAPP: Clicks 'Mint NFT'
     DAPP->>AbstraxionLibrary: connect()
@@ -90,16 +90,16 @@ sequenceDiagram
         AccountManagementDashboard->>User: Show authz permission dialog
     end
     User->>AccountManagementDashboard: Accept permissions
-    AccountManagementDashboard->>XionChain: Submit transaction with authz grants
+    AccountManagementDashboard->>VeronaInfra: Submit transaction with authz grants
     alt transaction successful
-        XionChain->>DAPP: Notify transaction success
+        VeronaInfra->>DAPP: Notify transaction success
         DAPP->>User: Return user to dapp
     else transaction failed
-        XionChain->>AccountManagementDashboard: Notify transaction failure
+        VeronaInfra->>AccountManagementDashboard: Notify transaction failure
         AccountManagementDashboard->>User: Show error modal
     end
     User->>DAPP: Clicks 'Mint NFT'
     DAPP->>AbstraxionLibrary: Locally sourced transaction
     AbstraxionLibrary->>AbstraxionLibrary: Autosigned using Dapp UserSessionKey  
-    AbstraxionLibrary->>XionChain: Submitted 
+    AbstraxionLibrary->>VeronaInfra: Submitted 
 ```

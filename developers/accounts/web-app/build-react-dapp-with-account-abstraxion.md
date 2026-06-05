@@ -11,7 +11,7 @@ vars:
 
 # Account Abstraction with Gasless Transactions
 
-In this guide, we will walk through building a basic app using the [Abstraxion library](https://www.npmjs.com/package/@burnt-labs/abstraxion), demonstrating how to create an Abstraxion account which can be done via a social account like Google, browser wallets (Keplr, Metamask, OKX etc.), email address, passkey and other authentication options. We will also implement a gasless transaction experience for users by leveraging XION's fee grants through a Treasury contract.
+In this guide, we will walk through building a basic app using the [Abstraxion library](https://www.npmjs.com/package/@burnt-labs/abstraxion), demonstrating how to create an Abstraxion account which can be done via a social account like Google, browser wallets (Keplr, Metamask, OKX etc.), email address, passkey and other authentication options. We will also implement a gasless transaction experience for users by leveraging Verona's fee grants through a Treasury contract.
 
 The **`AbstraxionProvider`** examples below use **`authentication.type: "auto"`** (recommended for new apps). For other modes and terminology, see the section hub [Web App Development](README.md).
 
@@ -157,7 +157,7 @@ createRoot(document.getElementById("root")!).render(
 {% endcode %}
 
 {% hint style="warning" %}
-Create a **`.env`** file in the project root (Vite only exposes variables prefixed with **`VITE_`**). Set **`VITE_CHAIN_ID`**, **`VITE_RPC_URL`**, **`VITE_REST_URL`**, **`VITE_GAS_PRICE`** (e.g. `0.025uxion`), **`VITE_TREASURY_ADDRESS`**, and **`VITE_AUTH_APP_URL`** for the XION auth app. Restart the dev server after changing env files. Wrong or missing values will break login or transactions.
+Create a **`.env`** file in the project root (Vite only exposes variables prefixed with **`VITE_`**). Set **`VITE_CHAIN_ID`**, **`VITE_RPC_URL`**, **`VITE_REST_URL`**, **`VITE_GAS_PRICE`** (e.g. `0.025uxion`), **`VITE_TREASURY_ADDRESS`**, and **`VITE_AUTH_APP_URL`** for the Verona auth app. Restart the dev server after changing env files. Wrong or missing values will break login or transactions.
 {% endhint %}
 
 - **`AbstraxionProvider`** — Supplies **Abstraxion hooks** (`useAbstraxionAccount`, `useAbstraxionSigningClient`, etc.) to everything under this root.

@@ -1,4 +1,4 @@
-# Setting up Environment for XION
+# Setting up Environment for Verona Network
 
 Guides according to different environments:
 

@@ -8,17 +8,17 @@ The module is particularly useful for **developers** and **projects** looking to
 
 Before proceeding, make sure you have the following:
 
-1. **XION Daemon (`xiond`) Installed:**\
+1. **Verona Daemon (`xiond`) Installed:**\
    Ensure that `xiond` is installed on your system. If not, follow the [Setting up your Local Development Environment](../../local-development/setting-up-env/installation-prerequisites-setup-local-environment.md#xiond) guide to set it up.
 2. **An Active Account:**\
    Set up an account using `xiond` by following the [Generate an account](../../../tools/daemon-cli.md#generate-an-account) guide. You will use this account to execute transactions.
 3. **A Funded Account:**\
-   You need an account with sufficient **native XION tokens** to cover transaction fees. You can obtain testnet tokens through the [**XION testnet faucet**](../../../references/testnet-tokens.md).
+   You need an account with sufficient **native $VER tokens (Previously $XION)** to cover transaction fees. You can obtain testnet tokens through the [**Verona testnet faucet**](../../../references/testnet-tokens.md).
 
 ## **Creating a Token**
 
 {% hint style="info" %}
-Creating a new Token Factory token requires a **1000 XION fee** (on both **Testnet** and **Mainnet**). This fee protects XION users by:
+Creating a new Token Factory token requires a **1000 $VER fee (Previously $XION)** (on both **Testnet** and **Mainnet**). This fee protects Verona users by:
 
 * **Reducing spam** and malicious token creation.
 * **Encouraging meaningful token projects**, ensuring a higher-quality ecosystem.
@@ -38,7 +38,7 @@ xiond tx tokenfactory create-denom <your-denom> --from <wallet-name> --chain-id 
 * `<node>` – The ID or address of the blockchain node you are connecting to.
 * `--gas auto` – Automatically estimates the gas required for the transaction.
 * `<gas-adjustment>` – Adjusts the estimated gas amount by **30%** to account for possible variations in actual consumption.
-* `<gas-prices>` – The fee rate for gas in **uxion** (the smallest unit of XION).
+* `<gas-prices>` – The fee rate for gas in **uxion** (the smallest unit of Verona).
 
 **Example:**
 
@@ -139,7 +139,7 @@ Before minting new tokens, it is important to **configure the token’s metadata
 
 **Updatable Fields:**
 
-* **`ticker-symbol`** – The short symbol representing the token (e.g., `XION`).
+* **`ticker-symbol`** – The short symbol representing the token (e.g., `$VER`).
 * **`description`** – A brief description of the token.
 * **`exponent`** – The decimal precision used for display purposes.
 
@@ -267,7 +267,7 @@ xiond tx tokenfactory mint <amount><denom> --from <wallet-name> --chain-id <chai
 * `<node>` – The ID or address of the blockchain node you are connecting to.
 * `--gas auto` – Automatically estimates the gas required for the transaction.
 * `<gas-adjustment>` – Adjusts the estimated gas amount by **30%** to account for possible variations in actual consumption.
-* `<gas-prices>` – The fee rate for gas in **uxion** (the smallest unit of XION).
+* `<gas-prices>` – The fee rate for gas in **uxion** (the smallest unit of Verona).
 
 **Example:**
 
@@ -327,7 +327,7 @@ If your **exponent** was set to **6**, then **`1000000000000`** would mint **1 m
 
 ## **Querying Token Balance**
 
-Once you have minted or received tokens, you may want to **check your wallet’s balance** to see the amount of **native XION, custom tokens, and IBC-transferred assets** you hold. The **bank balance query** allows you to retrieve a complete breakdown of all tokens associated with your address.
+Once you have minted or received tokens, you may want to **check your wallet’s balance** to see the amount of **native Verona, custom tokens, and IBC-transferred assets** you hold. The **bank balance query** allows you to retrieve a complete breakdown of all tokens associated with your address.
 
 To check the token balances for an account execute:
 
@@ -390,4 +390,4 @@ xiond tx bank send xion1ka5... xion193h... 500factory/xion1ka5.../mytoken --node
 * The transaction is **broadcasted to the network** via the specified RPC node.
 * If successful, the **recipient’s balance** is updated, and the sender’s balance is **reduced accordingly**.
 
-You have successfully **created**, **updated**, **minted** and **transferred** a token using the **XION Token Factory module**. With this foundation, you can now integrate your token into your smart contracts and **app frontends** seamlessly.
+You have successfully **created**, **updated**, **minted** and **transferred** a token using the **Verona Token Factory module**. With this foundation, you can now integrate your token into your smart contracts and **app frontends** seamlessly.

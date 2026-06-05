@@ -11,13 +11,11 @@ description: Making AI Intelligent — the intelligence layer for AI
 * **Truth Engine** makes intelligence grounded. Zero-knowledge verification (zkTLS, zkEmail, app attestations) lets applications prove data from the internet, email, and mobile apps without revealing underlying secrets. Build fraud-resistant workflows, portable reputation, and user-controlled data sharing.
 * **Generalized Abstraction** makes the network usable. Protocol-level abstractions for accounts, signatures, gas, payments, and devices remove friction for mainstream apps. Users log in with familiar credentials; developers ship Web2-quality UX on verifiable infrastructure.
 
-The underlying network continues to operate as **XION** on chain—chain IDs, CLI (`xiond`), and contract addresses keep XION naming. This documentation uses **Verona** for product narrative and **XION** where on-chain precision matters.
-
 ## About Verona
 
-Understand what Verona is, how it relates to XION, and the product surfaces shipping in Phase 1.
+Learn what Verona is, how verification and abstraction fit together, and the product surfaces you can build on.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>What is Verona?</strong></td><td>Overview of the intelligence layer, Truth Engine, and abstraction stack.</td><td><a href="about-verona/concepts/overview.md">overview.md</a></td></tr><tr><td><strong>Rebrand: XION → Verona</strong></td><td>Why the narrative evolved and what stays the same on chain.</td><td><a href="about-verona/rebrand-from-xion.md">rebrand-from-xion.md</a></td></tr><tr><td><strong>Truth Engine</strong></td><td>zkTLS, zkEmail, and app attestations—verification without exposure.</td><td><a href="about-verona/concepts/verification-infrastructure/">verification-infrastructure</a></td></tr><tr><td><strong>Surfaces</strong></td><td>EarnOS, Burnt Verified, Ask & MCP, and Data Backpack.</td><td><a href="about-verona/surfaces/">surfaces</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>What is Verona?</strong></td><td>Overview of the intelligence layer, Truth Engine, and abstraction stack.</td><td><a href="about-verona/concepts/overview.md">overview.md</a></td></tr><tr><td><strong>Truth Engine</strong></td><td>zkTLS, zkEmail, and app attestations—verification without exposure.</td><td><a href="about-verona/concepts/verification-infrastructure/">verification-infrastructure</a></td></tr><tr><td><strong>Surfaces</strong></td><td>EarnOS, Burnt Verified, Ask & MCP, and Data Backpack.</td><td><a href="about-verona/surfaces/">surfaces</a></td></tr></tbody></table>
 
 ## Build on Verona
 
@@ -33,4 +31,4 @@ Guides for developers building apps, agents, and integrations on the network.
 
 AI agents need verified information they can act on without becoming custodians of sensitive data. Verona makes verified facts portable, private, and reusable across authorized applications and agents.
 
-Production verification products and ecosystem applications demonstrate the core loop: verify once, let the user control reuse, and expose proofs instead of raw records.
+Verify once, let the user control reuse, and expose proofs instead of raw records.

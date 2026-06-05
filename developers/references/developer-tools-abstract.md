@@ -6,7 +6,7 @@ Abstract is an application development platform specially built for applications
 Abstract Money Documentation
 {% endembed %}
 
-In this page we will be introducing the tools provided by Abstracted that can help you speedrun through development on Xion
+In this page we will be introducing the tools provided by Abstracted that can help you speedrun through development on Verona
 
 {% hint style="success" %}
 If you’re a brand new dev, Abstract infrastructure may be overwhelming to start with, so we recommend just checking out the [CosmWasm documentation](https://docs.cosmwasm.com/core) and starting with the basic [CosmWasm template](https://github.com/AbstractSDK/cw-template).
@@ -50,9 +50,9 @@ See `/justfile` in project root for all commands
 
 ## Client
 
-Abstract's JS SDK works well with both Xion's meta-accounts and EOAs.
+Abstract's JS SDK works well with both Verona's meta-accounts and EOAs.
 
-Abstract provides templates to build and debug using regular EOAs on the Xion chain. However in production environment we highly recommend using meta-accounts to be able to leverage the true power of the chain and UX :)
+Abstract provides templates to build and debug using regular EOAs on the Verona network. However in production environment we highly recommend using meta-accounts to be able to leverage the true power of the chain and UX :)
 
 #### Documentation:
 
@@ -62,12 +62,12 @@ The [app templates repo](https://github.com/AbstractSDK/templates) includes a fr
 
 #### Example Frontend
 
-An example frontend of a betting app deployed on XION can be found here: [https://github.com/AbstractSDK/abstract.js/tree/believathon/examples/wagemos-xion-nextjs](https://github.com/AbstractSDK/abstract.js/tree/believathon/examples/wagemos-xion-nextjs)
+An example frontend of a betting app deployed on Verona can be found here: [https://github.com/AbstractSDK/abstract.js/tree/believathon/examples/wagemos-xion-nextjs](https://github.com/AbstractSDK/abstract.js/tree/believathon/examples/wagemos-xion-nextjs)
 
 **Notes:**
 
 * This example has a “dev mode” which uses EOAs as the executor using `grazProvider`. This should be used when developing the application else you will run into permissions errors.
-* The example also demonstrates a “user mode” using the XION modal. We recommend having separate `AbstractProvider`s for developer and user routes.
+* The example also demonstrates a “user mode” using the Verona modal. We recommend having separate `AbstractProvider`s for developer and user routes.
 
 ## Client <> Contract
 
@@ -82,8 +82,8 @@ An example frontend of a betting app deployed on XION can be found here: [https:
 
 1. Get ready to publish
    1. Add a seed phrase in the `TEST_MNEMONIC` in `.env`
-      1. This can be from Keplr or another Cosmos Wallet. Add XION [here](https://explorer.burnt.com/wallet/suggest) or by connecting to the [Abstract Console](https://believathon.console.abstract.money/).
-   2. Ensure that you have funds in the address. On testnet, new XION Meta accounts all have 1 XION so sign-in [to the XION dashboard](https://testnet.dashboard.burnt.com) and send funds to this address.
+      1. This can be from Keplr or another Cosmos Wallet. Add Verona [here](https://explorer.burnt.com/wallet/suggest) or by connecting to the [Abstract Console](https://believathon.console.abstract.money/).
+   2. Ensure that you have funds in the address. On testnet, new Verona Meta accounts all have 1 Verona so sign-in [to the Verona dashboard](https://testnet.dashboard.burnt.com) and send funds to this address.
 2. Publish your contract onchain with `just publish`
    1. This will create a new Abstract Account, claim the namespace (configured in your app), and publish the contracts on-chain to the [contract registry](https://believathon.console.abstract.money/modules).
 3. Publish your schemas with `just publish-schemas <namespace> <name> <version>` . This will give your contract auto-generated UIs in the Console.

@@ -2,7 +2,7 @@
 description: How to initialize and configure the xiond binary
 ---
 
-# Configure the Xion Daemon
+# Configure the Verona daemon
 
 As an application-specific blockchain using the Cosmos SDK, we benefit from its extensive configuration options.
 
@@ -16,7 +16,7 @@ You are highly encouraged to tweak the Cosmos SDK configuration values to accomm
 The [Cosmos SDK documentation](https://docs.cosmos.network/v0.47) is a good place to start exploring the different options.
 {% endhint %}
 
-## Initialize the Xion Daemon
+## Initialize the Verona daemon
 
 * As is the case for most Cosmos-based chains, the daemon is initialized like so:
 

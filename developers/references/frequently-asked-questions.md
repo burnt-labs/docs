@@ -1,6 +1,6 @@
 ---
 description: >-
-  Covers common questions about Xion, including its ecosystem, development,
+  Covers common questions about Verona, including its ecosystem, development,
   security, governance, and user interactions.
 ---
 
@@ -34,7 +34,7 @@ This [guide](../building-for-production/deploying-to-mainnet/README.md) provides
 
 <details>
 
-<summary>What’s the preferred way to create a token on Xion?</summary>
+<summary>What’s the preferred way to create a token on Verona?</summary>
 
 We recommend using our **Token Factory** module for creating tokens. You can find details on why it’s the preferred method, along with instructions on creating, managing, and using tokens within your apps, [here](../computation/integrations/token-factory/README.md).
 
@@ -52,6 +52,6 @@ No, you cannot access the user’s email from the Abstraxion library, as the lib
 
 <summary>How can my smart contract communicate with a Web2 service?</summary>
 
-Due to the deterministic nature of blockchains, a smart contract on Xion cannot interact with the web directly. The most common way to enable this is via an Oracle. The Pyth Oracle should be available on Testnet. Alternatively, you can create a custom Oracle service where a Web2 backend fetches data from an external API and submits transactions to a smart contract to store the data on-chain which can then be accessed by your contracts.
+Due to the deterministic nature of blockchains, a smart contract on Verona cannot interact with the web directly. The most common way to enable this is via an Oracle. The Pyth Oracle should be available on Testnet. Alternatively, you can create a custom Oracle service where a Web2 backend fetches data from an external API and submits transactions to a smart contract to store the data on-chain which can then be accessed by your contracts.
 
 </details>

@@ -1,12 +1,12 @@
-# Requesting XION Testnet Tokens
+# Requesting $VER Testnet Tokens
 
-**XION** testnet tokens are required for paying transaction fees on the **Xion Testnet**. They have **no real-world monetary value** and exist purely for testing purposes. Below are the steps to acquire these tokens from the official Xion testnet faucet.
+**$VER** testnet tokens (Previously $XION) are required for paying transaction fees on the **Verona Testnet**. They have **no real-world monetary value** and exist purely for testing purposes. Below are the steps to acquire these tokens from the official Verona testnet faucet.
 
 
 
 ## Faucet Website
 
-You can request Xion testnet tokens directly from the official [Xion faucet](https://faucet.xion.burnt.com). Once on the site:
+You can request Verona testnet tokens directly from the official [Verona faucet](https://faucet.xion.burnt.com). Once on the site:
 
 1. Select your desired testnet from the dropdown menu in the top-right corner.
 2. Enter your wallet address in the text box.

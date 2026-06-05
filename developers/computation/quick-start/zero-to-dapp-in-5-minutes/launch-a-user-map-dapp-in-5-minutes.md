@@ -6,7 +6,7 @@ Building an app on Verona typically involves three main components:
 * **A Treasury contract** – Enables gasless transactions using **Fee Grants**, making onboarding smoother for users. It also handles **Authorization Grants**, which allow your frontend to execute transactions on behalf of the user, enabling a more traditional application-like experience through our OAuth2-style **Abstraxion** solution.
 * **A frontend** – This is your app’s interface, used to display data and trigger transactions via the smart contract.
 
-As a beginner to XION development, getting a fully functional app up and running should be simple and shouldn’t require any complex setup. With this in mind, we’ve created a [**quick launch frontend solution**](https://quickstart.dev.testnet.burnt.com) for the **User Map** app that handles the creation of both the **User Map** and **Treasury** contracts. Outside of this we have built a [**frontend**](https://github.com/burnt-labs/xion-user-map-json-store-frontend) solution for interacting with the User Map contract.
+As a beginner to Verona development, getting a fully functional app up and running should be simple and shouldn’t require any complex setup. With this in mind, we’ve created a [**quick launch frontend solution**](https://quickstart.dev.testnet.burnt.com) for the **User Map** app that handles the creation of both the **User Map** and **Treasury** contracts. Outside of this we have built a [**frontend**](https://github.com/burnt-labs/xion-user-map-json-store-frontend) solution for interacting with the User Map contract.
 
 {% hint style="info" %}
 You should have your demo app up and running in under **5 minutes**. Once you're familiar with the workflow, you can move on to the advanced [**User Map guide**](../../use-cases/building-a-per-user-data-storage-dapp.md).
@@ -119,7 +119,7 @@ You can now access the app at [http://localhost:3000](http://localhost:3000) in 
 
 #### The Frontend Interface
 
-After the app loads in your browser, you’ll see the homepage with a **“Connect”** button. Click this button to log in with your XION Meta Account.
+After the app loads in your browser, you’ll see the homepage with a **“Connect”** button. Click this button to log in with your Verona Meta Account.
 
 <figure><img src="../../../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
 

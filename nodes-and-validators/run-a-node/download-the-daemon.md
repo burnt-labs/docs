@@ -2,7 +2,7 @@
 description: How to download pre-built versions of the xiond binary
 ---
 
-# Download the Xion Daemon
+# Download the Verona daemon
 
 We provide pre-built versions of the `xiond` binary.&#x20;
 

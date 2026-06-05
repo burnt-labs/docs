@@ -4,7 +4,7 @@ icon: building
 
 # Building for Production
 
-Deploy applications to **XION Mainnet** after testing on `xion-testnet-2`. Product narrative uses **Verona**; chain and governance processes use **XION** naming throughout this section.
+Deploy applications to **Verona Mainnet** after testing on `xion-testnet-2`. Product narrative uses **Verona**; chain and governance processes use **Verona** naming throughout this section.
 
 This section outlines the key differences between **Testnet** and **Mainnet**, the requirements for deployment, and best practices to ensure your contracts are approved and adopted by the community.
 
@@ -12,7 +12,7 @@ On the Verona network, **Production** means deploying your app to **Mainnet**—
 
 ## **Testnet: A Space for Development & Refinement**
 
-The **Xion Testnet** is a **permissionless** environment where developers can deploy and refine their contracts without restrictions. We encourage teams to:
+The **Verona Testnet** is a **permissionless** environment where developers can deploy and refine their contracts without restrictions. We encourage teams to:
 
 * **Test and iterate** their contracts before considering Mainnet deployment.
 * **Engage with the community** for feedback, allowing real users to test their apps and identify potential improvements.
@@ -22,7 +22,7 @@ By leveraging Testnet, developers can refine their apps to the highest standards
 
 ## **Mainnet: A Secure & Permissioned Environment**
 
-Unlike **Testnet**, the **Xion Mainnet is permissioned**, meaning contracts cannot be deployed freely. Instead, contracts must go through a [**governance proposal process**](deploying-to-mainnet/smart-contract-audits-process-costs-and-support.md), where the Xion community reviews and votes on whether a contract should be stored on-chain.
+Unlike **Testnet**, the **Verona Mainnet is permissioned**, meaning contracts cannot be deployed freely. Instead, contracts must go through a [**governance proposal process**](deploying-to-mainnet/smart-contract-audits-process-costs-and-support.md), where the Verona community reviews and votes on whether a contract should be stored on-chain.
 
 To protect users and maintain the security of the network, **audited contracts** have the highest chance of being considered for approval. This ensures that **Mainnet** hosts only **secure and reliable** apps.
 

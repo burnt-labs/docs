@@ -1,5 +1,5 @@
 ---
-description: Use xiond CLI to query and transact on XION
+description: Use xiond CLI to query and transact on Verona
 icon: terminal
 ---
 
@@ -11,7 +11,7 @@ icon: terminal
 
 Before proceeding, ensure that `xiond` is installed on your system. Follow the setup in:
 
-- [Setting up your Local Smart Contract Development Environment for XION](../computation/local-development/setting-up-env/installation-prerequisites-setup-local-environment.md)
+- [Setting up your Local Smart Contract Development Environment for Verona Network](../computation/local-development/setting-up-env/installation-prerequisites-setup-local-environment.md)
 
 To verify installation, run:
 
@@ -106,7 +106,7 @@ You can request testnet tokens with:
 
 For additional options, see:
 
-- [Requesting XION Testnet Tokens](../references/testnet-tokens.md)
+- [Requesting $VER Testnet Tokens](../references/testnet-tokens.md)
 
 For **mainnet** usage, fund your wallet from supported exchanges before broadcasting transactions.
 
@@ -198,5 +198,5 @@ xiond query tx <txhash> --node <node-url>
 
 ## Next steps
 
-- [Deploying Your First Smart Contract on XION](../computation/local-development/deploy-a-cosmwasm-smart-contract.md)
+- [Deploying Your First Smart Contract on Verona](../computation/local-development/deploy-a-cosmwasm-smart-contract.md)
 - [Verona Agent Toolkit Tutorial](./verona-toolkit.md)

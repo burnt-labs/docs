@@ -2,7 +2,7 @@
 
 **Proxy contracts** act on behalf of one or more users, allowing controlled execution of transactions or actions under specific conditions. Instead of a user calling contracts directly, they can delegate that responsibility to a proxy, which then executes the desired operations, either automatically or with certain restrictions.
 
-In the **CosmWasm** and **XION** ecosystem, proxy contracts are commonly used for:
+In the **CosmWasm** and **Verona** ecosystem, proxy contracts are commonly used for:
 
 * **Delegating transaction execution**
 * **Granting limited permissions to third parties or apps**

@@ -15,7 +15,7 @@ Before getting started, ensure you have the following installed:
 
 ## What Are Meta Accounts?
 
-Meta Accounts are smart contract accounts created and managed by XION’s Abstraxion system. They abstract away traditional blockchain complexity and provide:
+Meta Accounts are smart contract accounts created and managed by Verona’s Abstraxion system. They abstract away traditional blockchain complexity and provide:
 
 * **An oAuth2 style login mechanism** (no wallet required) that allows for login via email, social accounts, passkeys and crypto wallets
 * **Instant execution of pre-approved smart contract calls**
@@ -197,7 +197,7 @@ function AppContent() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Xion Abstraxion Demo</Text>
+      <Text style={styles.title}>Verona Abstraxion Demo</Text>
       
       {account ? (
         <View style={styles.userInfo}>
@@ -220,7 +220,7 @@ function AppContent() {
           disabled={isConnecting}
         >
           <Text style={styles.buttonText}>
-            {isConnecting ? 'Connecting...' : 'Login with Xion'}
+            {isConnecting ? 'Connecting...' : 'Login with Verona'}
           </Text>
         </TouchableOpacity>
       )}
@@ -288,7 +288,7 @@ Here's what has been added:
 
 **Login Functionality**
 
-* A **“Login with Xion”** button appears when the user is not logged in.
+* A **“Login with Verona”** button appears when the user is not logged in.
 * Utilizes the `useAbstraxionSigningClient` hook to handle authentication.
 * Displays a loading state while connecting.
 
@@ -324,8 +324,8 @@ Here's what has been added:
 {% endtab %}
 {% endtabs %}
 
-1. Click the **“Login with Xion”** button.
-2. Complete the Xion Abstraxion authentication flow.
+1. Click the **“Login with Verona”** button.
+2. Complete the Verona Abstraxion authentication flow.
 3. Upon success, your address should appear along with a **“Logout”** button.
 4. Click **“Logout”** to disconnect the session.
 

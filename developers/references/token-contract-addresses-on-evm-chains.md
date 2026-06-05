@@ -1,8 +1,8 @@
-# XION Token Contract Addresses on EVM Chains
+# $VER(Previously $XION) Token Contract Addresses on EVM Chains
 
-Below are the official contract addresses for the XION Token across supported EVM-compatible networks. Always verify addresses through official explorer links before interacting with the token.
+Below are the official contract addresses for the $VER token (Previously $XION) across supported EVM-compatible networks. Always verify addresses through official explorer links before interacting with the token.
 
-| Chain     | Chain ID | XION Token Address                           | Explorer Link                                                                                                      |
+| Chain     | Chain ID | $VER(Previously $XION) Token Address         | Explorer Link                                                                                                      |
 | --------- | -------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | Ethereum  | 1        | `0x24D7ad9402717F429A81925fe7643B78918EdA8B` | [View on Etherscan](https://etherscan.io/address/0x24D7ad9402717F429A81925fe7643B78918EdA8B)                       |
 | Optimism  | 10       | `0xe4c3461a20f50daD7B9E88ca0222A255C4126fC0` | [View on Optimistic Etherscan](https://optimistic.etherscan.io/address/0xe4c3461a20f50daD7B9E88ca0222A255C4126fC0) |

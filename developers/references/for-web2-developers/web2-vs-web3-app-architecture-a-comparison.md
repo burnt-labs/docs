@@ -8,9 +8,9 @@ In contrast, Web3 applications follow a decentralized architecture. Business log
 
 Additionally, in Web3 **every interaction with the blockchain incurs a transaction fee**, known as **gas**. This fee is required to execute smart contract logic, store data, or trigger on-chain changes, adding an economic layer to app interactions that developers must account for.
 
-The table below outlines how the core components of a Web2 app compare to those in a Web3 app built on XION:
+The table below outlines how the core components of a Web2 app compare to those in a Web3 app built on Verona:
 
-| Component           | Web2 Architecture             | Web3 Architecture (on XION)                          |
+| Component           | Web2 Architecture             | Web3 Architecture (on Verona)                          |
 | ------------------- | ----------------------------- | ---------------------------------------------------- |
 | Backend Logic       | Laravel, Express.js, Django   | CosmWasm Smart Contracts                             |
 | Database            | MySQL, PostgreSQL, MongoDB    | On-chain Contract State                              |
@@ -36,7 +36,7 @@ Shifting from **Web2** to **Web3** development, especially on Verona, requires a
 * **Trust is enforced by infrastructure**: Firewalls, authentication systems, and permission models are used to establish and maintain security.
 * **Users expect free or subscription-based access**: Most Web2 applications are free to use (ad-supported) or follow a subscription-based model where users pay for premium features or services. Users generally aren’t charged per interaction.
 
-### Web3 (on XION)
+### Web3 (on Verona)
 
 * **The blockchain becomes your backend**: Your application logic is deployed as smart contracts on the Verona network, not hosted on private servers.
 * **Data is public by default**: All state is stored on-chain and is accessible to anyone, ensuring transparency and auditability.

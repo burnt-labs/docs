@@ -92,8 +92,8 @@ NEXT_PUBLIC_REST_URL="https://api.xion-testnet-2.burnt.com"
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | NEXT\_PUBLIC\_TREASURY\_ADDRESS | Treasury contract instance used for gasless transactions and grantz authorization to execute transactions via the DocuStore smart contract instance on behalf of users. |
 | NEXT\_PUBLIC\_CONTRACT\_ADDRESS | Address of the DocuStore smart contract instance.                                                                                                                       |
-| NEXT\_PUBLIC\_RPC\_URL          | RPC endpoint for Xion (default: `https://rpc.xion-testnet-2.burnt.com:443`)                                                                                             |
-| NEXT\_PUBLIC\_REST\_URL         | REST endpoint for Xion (default: `https://api.xion-testnet-2.burnt.com`)                                                                                                |
+| NEXT\_PUBLIC\_RPC\_URL          | RPC endpoint for Verona (default: `https://rpc.xion-testnet-2.burnt.com:443`)                                                                                             |
+| NEXT\_PUBLIC\_REST\_URL         | REST endpoint for Verona (default: `https://api.xion-testnet-2.burnt.com`)                                                                                                |
 
 
 

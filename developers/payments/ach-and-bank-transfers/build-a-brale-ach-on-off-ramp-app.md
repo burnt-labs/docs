@@ -1,8 +1,8 @@
-# Build a Brale ACH On/Off-Ramp App on XION
+# Build a Brale ACH On/Off-Ramp App on Verona
 
-The **Brale** ACH Ramp Demo shows how to add bank-based on-ramp and off-ramp flows to a XION application. Users connect with their XION Meta Account, link a bank account through **Brale** and **Plaid**, buy stablecoins with ACH, and cash out stablecoins back to a bank account.
+The **Brale** ACH Ramp Demo shows how to add bank-based on-ramp and off-ramp flows to a Verona application. Users connect with their Verona Meta Account, link a bank account through **Brale** and **Plaid**, buy stablecoins with ACH, and cash out stablecoins back to a bank account.
 
-This guide walks through running the demo locally and explains the pieces you can copy into another XION app.
+This guide walks through running the demo locally and explains the pieces you can copy into another Verona app.
 
 The demo app source is available at: https://github.com/burnt-labs/brale-ach-demo
 
@@ -17,7 +17,7 @@ The app has three main parts:
 The on-ramp and off-ramp flows are intentionally separate:
 
 * On-ramp: bank USD to wallet SBC. The user does not need to sign an on-chain transaction.
-* Off-ramp: wallet SBC to bank USD. The user sends SBC to Brale's custodial XION address before Brale initiates the ACH credit.
+* Off-ramp: wallet SBC to bank USD. The user sends SBC to Brale's custodial Verona address before Brale initiates the ACH credit.
 
 ### Prerequisites
 
@@ -26,12 +26,12 @@ Before you begin, make sure you have:
 * Node.js 26 or newer
 * pnpm
 * Git
-* A XION testnet wallet with `uxion` for gas
+* A Verona testnet wallet with `uxion` for gas
 * Brale API credentials
 * A Brale account ID
 * ngrok or another public tunnel for local webhook testing
 
-You will also need access to Brale's XION testnet transfer type, which is configured in this demo as `xion_testnet`.
+You will also need access to Brale's Verona testnet transfer type, which is configured in this demo as `xion_testnet`.
 
 ### Clone the Demo App
 
@@ -76,9 +76,9 @@ SQLITE_PATH=./data/brale-demo.sqlite
 
 The app creates the SQLite database and applies `sql/schema.sql` automatically on startup.
 
-### Configure XION Testnet
+### Configure Verona Testnet
 
-The demo defaults to XION testnet:
+The demo defaults to Verona testnet:
 
 ```bash
 NEXT_PUBLIC_XION_CHAIN_ID=xion-testnet-2
@@ -156,9 +156,9 @@ pnpm dev --hostname 127.0.0.1 --port 3001
 
 When the app opens:
 
-1. Connect your XION wallet.
+1. Connect your Verona wallet.
 2. Approve the login proof transaction.
-3. The backend verifies the transaction memo through XION REST.
+3. The backend verifies the transaction memo through Verona REST.
 4. The app creates a signed HTTP-only session cookie for the connected wallet.
 
 The login proof is a small 1 `uxion` self-transfer with a nonce memo. The server checks the sender, memo, and transaction hash before creating the session.
@@ -191,7 +191,7 @@ The app saves that bank `address_id` as `brale_users.plaid_bank_address_id`.
 
 ### Start an ACH On-Ramp
 
-ACH on-ramp moves USD from the user's linked bank account to SBC on their XION wallet.
+ACH on-ramp moves USD from the user's linked bank account to SBC on their Verona wallet.
 
 In the demo:
 
@@ -205,7 +205,7 @@ In the demo:
     }
     ```
 3. The backend verifies the user session, saved KYC, and linked bank.
-4. The backend registers the user's XION wallet as a Brale external address if needed.
+4. The backend registers the user's Verona wallet as a Brale external address if needed.
 5. The backend creates a local `brale_transfers` row.
 6. The local transfer UUID is used as Brale's `Idempotency-Key`.
 7.  The backend creates a Brale transfer:
@@ -230,7 +230,7 @@ The user does not need to sign an on-chain transaction for on-ramp because the s
 
 ### Start an ACH Off-Ramp
 
-ACH off-ramp moves SBC from the user's XION wallet to USD in the linked bank account.
+ACH off-ramp moves SBC from the user's Verona wallet to USD in the linked bank account.
 
 In the demo:
 
@@ -330,7 +330,7 @@ The **Recent transfers** table shows:
 
 Pending transfers automatically refresh while the app is open.
 
-### Copying the Flow into Another XION App
+### Copying the Flow into Another Verona App
 
 To add this flow to another Next.js app, copy the same boundaries rather than the whole UI:
 

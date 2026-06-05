@@ -30,7 +30,7 @@ A modular and extensible contract suite for building DAOs with customizable gove
 * Delegation modules to allow vote delegation among members
 * Distribution modules for payouts and airdrops
 * External utility contracts for enhanced DAO functionality (e.g., wrappers, integrations)
-* Designed for use across chains like XION, Juno, Neutron, and others
+* Designed for use across chains like Verona, Juno, Neutron, and others
 
 **Ideal for:**\
 Launching composable DAOs with fine-grained control over governance logic, voting mechanisms, and member incentives, from small groups to full-fledged protocol DAOs.
