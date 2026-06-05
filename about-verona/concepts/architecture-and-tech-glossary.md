@@ -8,7 +8,7 @@ description: Key Terms and Concepts
 
 | Term      | Definition                                                                                                                                                                      |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Verona** | The intelligence-layer brand for the XION network. Narrative and product surfaces (EarnOS, Burnt Verified, Ask & MCP, Data Backpack); on-chain identifiers remain **XION**. |
+| **Verona** | The intelligence-layer brand and documentation name for the network. Narrative and product surfaces (EarnOS, Burnt Verified, Ask & MCP, Data Backpack); on-chain identifiers remain **XION**. |
 | **Truth Engine** | Verification infrastructure comprising zkTLS (web data), zkEmail (authenticated email), and App Attestations (mobile apps). Enables private, cryptographic verification of real-world data. |
 | **zkTLS**                      | Zero-knowledge verification for web data. Creates proofs over TLS-encrypted sessions from any website, enabling claims about ratings, balances, loyalty status, and more without exposing raw data.              |
 | **DKIM Module (zkEmail)**      | Verification module that creates zero-knowledge proofs over email contents using DKIM signatures. Proves email-based claims without exposing the email.              |
@@ -22,29 +22,29 @@ description: Key Terms and Concepts
 
 | Term                        | Definition                                                                                                                                                                                      |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Generalized Abstraction** | XION's protocol-level abstraction of accounts, signatures, gas, payments, devices, and interoperability. Makes blockchain invisible to end users.                                               |
+| **Generalized Abstraction** | The Verona network's protocol-level abstraction of accounts, signatures, gas, payments, devices, and interoperability. Makes blockchain invisible to end users.                                               |
 | **Meta Account**            | A CosmWasm smart contract that serves as a user's on-chain account. Supports modular authentication, programmable permissions, and account recovery. Replaces traditional wallets.              |
 | **Authenticator**           | A module within a Meta Account that validates a specific authentication method (email JWT, WebAuthn/passkeys, cryptographic keys, etc.). Multiple authenticators can be registered per account. |
 | **Session Key**             | A temporary, permission-scoped keypair that allows an application to execute specific operations on behalf of a user without requiring approval for each transaction.                           |
-| **Treasury Contract**       | A smart contract deployed by an application developer that sponsors gas fees for users. The primary mechanism for gas abstraction on XION.                                                      |
-| **Parameterized Fee Layer** | XION's gas abstraction system that allows fees to be paid in any token, sponsored by applications, or built into product pricing.                                                               |
-| **Abstraxion SDK**          | XION's developer SDK that wraps all abstraction layers (account, gas, signature, payment, device) into a simple integration for web and mobile applications.                                    |
+| **Treasury Contract**       | A smart contract deployed by an application developer that sponsors gas fees for users. The primary mechanism for gas abstraction on the Verona network.                                                      |
+| **Parameterized Fee Layer** | The Verona network's gas abstraction system that allows fees to be paid in any token, sponsored by applications, or built into product pricing.                                                               |
+| **Abstraxion SDK**          | The Verona network's developer SDK that wraps all abstraction layers (account, gas, signature, payment, device) into a simple integration for web and mobile applications.                                    |
 
 ### Infrastructure Terms
 
 | Term                     | Definition                                                                                                                                                         |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **CosmWasm**             | The smart contract execution environment used by XION. Contracts are written in Rust and compiled to WebAssembly (Wasm).                                           |
-| **CometBFT**             | The Byzantine Fault Tolerant consensus engine underlying XION (formerly Tendermint).                                                                               |
-| **Cosmos SDK**           | The framework on which XION is built. Provides modular blockchain application development.                                                                         |
-| **IBC**                  | Inter-Blockchain Communication protocol. Enables native cross-chain messaging and asset transfers between XION and other Cosmos ecosystem chains.                  |
-| **Proof of Stake (PoS)** | XION's consensus mechanism. Validators stake $XION tokens to participate in block production and earn rewards. Inflation is calculated only against staked tokens. |
+| **CosmWasm**             | The smart contract execution environment used by the Verona network. Contracts are written in Rust and compiled to WebAssembly (Wasm).                                           |
+| **CometBFT**             | The Byzantine Fault Tolerant consensus engine underlying the Verona network (formerly Tendermint).                                                                               |
+| **Cosmos SDK**           | The framework on which the Verona network is built. Provides modular blockchain application development.                                                                         |
+| **IBC**                  | Inter-Blockchain Communication protocol. Enables native cross-chain messaging and asset transfers between the Verona network and other Cosmos ecosystem chains.                  |
+| **Proof of Stake (PoS)** | The Verona network's consensus mechanism. Validators stake $XION tokens to participate in block production and earn rewards. Inflation is calculated only against staked tokens. |
 |                          |                                                                                                                                                                    |
 
 ### Economic Terms
 
 | Term               | Definition                                                                                                                                             |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **$XION**          | The native token of the XION network. Used for staking, governance, transaction fees, and as the settlement layer for ecosystem activity.              |
+| **$XION**          | The native token of the Verona network. Used for staking, governance, transaction fees, and as the settlement layer for ecosystem activity.              |
 | **Revenue Share**  | Agreements where application or verification revenue can flow back to the protocol. Specific figures should only be published after marketing and legal approval. |
 | **Buyback & Burn** | The mechanism by which ecosystem revenue is used to purchase and permanently remove $XION tokens from circulation, creating deflationary pressure.     |

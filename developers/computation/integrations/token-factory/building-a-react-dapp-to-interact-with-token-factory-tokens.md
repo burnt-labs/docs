@@ -346,7 +346,7 @@ const getTokenBalance = async () => {
 };
 ```
 
-* Queries the **XION blockchain** for the user’s **Token Factory token balance**.
+* Queries the **Verona network** for the user’s **Token Factory token balance**.
 * Uses the **Abstraxion Client** (`queryClient.getBalance()`).
 * **Updates the `balance` state** with the retrieved amount.
 

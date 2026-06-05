@@ -983,7 +983,7 @@ All API responses follow this format:
    * Ensure `ENCRYPTION_KEY` is base64 encoded
    * Key must be exactly 32 bytes (256 bits)
    * Use the provided script to generate keys
-3. **XION Network Issues**
+3. **Verona network Issues**
    * Verify `XION_NETWORK` is correct
    * Check network connectivity
    * Ensure treasury address is valid

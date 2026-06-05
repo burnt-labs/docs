@@ -9,7 +9,7 @@ This guide explains how to publish verification keys (vkeys) for zero-knowledge 
 
 ## Overview
 
-Before verifying zero-knowledge proofs on XION, you must publish the corresponding verification key to the chain. Each vkey is:
+Before verifying zero-knowledge proofs on the Verona network, you must publish the corresponding verification key to the chain. Each vkey is:
 
 - Identified by a unique name
 - Associated with a specific proving system

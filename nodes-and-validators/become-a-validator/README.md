@@ -1,6 +1,6 @@
 # Become a Validator
 
-Validators secure the **XION** network. On-chain naming (`xiond`, bech32 `xion1…`) is unchanged under the Verona rebrand.
+Validators secure the **Verona** network. On-chain naming (`xiond`, bech32 `xion1…`) is unchanged under the Verona rebrand.
 
 ## Section Content
 

@@ -34,7 +34,7 @@ The flow is designed to be seamless from the user's perspective:
 
 2. **Client-Side Proof Generation**: Using the user's authenticated browser session or secure connection to the target website, a zero-knowledge proof is generated **entirely on the user's device**. The raw website data, cookies, or session details never leave the device.
 
-3. **On-Chain Verification**: The compact proof is submitted to XION. The protocol verifies it cryptographically and mints an on-chain **attestation** — a permanent, queryable record bound to the user's Meta Account.
+3. **On-Chain Verification**: The compact proof is submitted on chain. The protocol verifies it cryptographically and mints an on-chain **attestation** — a permanent, queryable record bound to the user's Meta Account.
 
 4. **Programmable Action**: Any smart contract or application can read this attestation to trigger logic: unlock rewards, adjust pricing, grant access, personalize experiences, or combine it with other proofs.
 
@@ -83,7 +83,7 @@ This creates a new standard of privacy-preserving verification that respects use
 
 #### zkTLS in the Truth Engine
 
-zkTLS doesn't work in isolation. It forms one pillar of XION's comprehensive verification system:
+zkTLS doesn't work in isolation. It forms one pillar of Verona's comprehensive verification system:
 - **zkTLS** for web and platform data
 - **zkEmail (DKIM)** for authenticated email content
 - **App Attestations** for mobile application state

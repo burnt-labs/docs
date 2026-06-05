@@ -1,6 +1,6 @@
 # Setting up your Local Smart Contract Development Environment for XION
 
-A properly configured local development environment is essential for building and testing smart contracts on XION. This guide covers the necessary tools, dependencies, and configurations needed to get started.
+A properly configured local development environment is essential for building and testing smart contracts on the Verona network. This guide covers the necessary tools, dependencies, and configurations needed to get started.
 
 The following tools will be installed:
 
@@ -8,11 +8,11 @@ The following tools will be installed:
 * [**cargo-generate**](installation-prerequisites-setup-local-environment.md#cargo-generate) – A tool for quickly setting up new Rust projects from templates.
 * [**Go**](installation-prerequisites-setup-local-environment.md#go) – Required for interacting with blockchain tooling and dependencies.
 * [**Docker**](installation-prerequisites-setup-local-environment.md#docker) – Used for optimizing Rust smart contracts via the Rust Optimizer.
-* [**xiond**](installation-prerequisites-setup-local-environment.md#xiond) – The XION blockchain daemon for running a local node, deploying smart contracts, and interacting with the blockchain.
+* [**xiond**](installation-prerequisites-setup-local-environment.md#xiond) – The Verona network daemon for running a local node, deploying smart contracts, and interacting with the blockchain.
 
 Each section provides step-by-step installation instructions for macOS, Debian-based Linux, Red Hat-based Linux and Arch Linux.
 
-Once these dependencies are installed, you will have everything needed to start developing on XION.
+Once these dependencies are installed, you will have everything needed to start developing on Verona.
 
 ## **Prerequisites**
 
@@ -20,7 +20,7 @@ Once these dependencies are installed, you will have everything needed to start 
 
 ## **Rust**
 
-[Rust](https://www.rust-lang.org/) is the programming language for developing smart contracts on XION. Known for its performance, security, and memory safety, Rust is well-suited for blockchain development. To build, test, and deploy smart contracts, developers need a properly configured Rust toolchain.
+[Rust](https://www.rust-lang.org/) is the programming language for developing smart contracts on the Verona network. Known for its performance, security, and memory safety, Rust is well-suited for blockchain development. To build, test, and deploy smart contracts, developers need a properly configured Rust toolchain.
 
 The recommended way to install Rust is through [**rustup**](https://rustup.rs/), the official Rust toolchain installer.
 
@@ -232,7 +232,7 @@ For Linux users, it's recommended to run the Docker daemon in [**Rootless Mode**
 
 ## xiond
 
-`xiond` is the core command-line tool for running and interacting with the **XION blockchain**. It serves as the blockchain daemon, enabling developers and node operators to manage network operations, deploy smart contracts, and interact with the XION ecosystem.
+`xiond` is the core command-line tool for running and interacting with the **Verona network**. It serves as the blockchain daemon, enabling developers and node operators to manage network operations, deploy smart contracts, and interact with the Verona ecosystem.
 
 To install `xiond`, you can either use an [**installer**](installation-prerequisites-setup-local-environment.md#installers), download a [**pre-built binary**](installation-prerequisites-setup-local-environment.md#use-pre-built-binary)**,** [**build it from source**](installation-prerequisites-setup-local-environment.md#build-from-source) or utilize a [**docker**](installation-prerequisites-setup-local-environment.md#run-xiond-with-docker) build. Ensure that you use the release corresponding to the version of `xiond` being used on the network where you will be interacting with.
 

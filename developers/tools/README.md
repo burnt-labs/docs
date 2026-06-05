@@ -4,7 +4,7 @@ icon: wrench
 
 # Tools & SDKs
 
-Libraries and CLIs for building on XION—whether you ship a web or mobile app, automate from the terminal, or integrate native signing in Python, Kotlin, Swift, or Rust.
+Libraries and CLIs for building on Verona—whether you ship a web or mobile app, automate from the terminal, or integrate native signing in Python, Kotlin, Swift, or Rust.
 
 ## xion.js
 

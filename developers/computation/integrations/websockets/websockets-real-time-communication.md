@@ -49,7 +49,7 @@ Below, we’ll cover the simplest way to set up WebSockets in your JavaScript pr
 
 ### **Establishing a WebSocket Connection**
 
-You can find websocket endpoints for any of the available XION networks on the [Public Endpoints & Resources](../../../references/public-endpoints-and-resources.md) page. Here’s how to connect to a Xion node using a WebSocket endpoint (add to your index.js file):
+You can find websocket endpoints for any of the available Verona networks on the [Public Endpoints & Resources](../../../references/public-endpoints-and-resources.md) page. Here’s how to connect to a Xion node using a WebSocket endpoint (add to your index.js file):
 
 ```javascript
 const WebSocket = require('ws');

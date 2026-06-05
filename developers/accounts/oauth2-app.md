@@ -920,7 +920,7 @@ export default async function handler(
 
 ## 5. OAuth2 Protected APIs
 
-Once you have an access token, you can use it to access protected OAuth2 APIs. These APIs allow you to interact with the XION blockchain on behalf of authenticated users.
+Once you have an access token, you can use it to access protected OAuth2 APIs. These APIs allow you to interact with the Verona network on behalf of authenticated users.
 
 ### API Base URL
 

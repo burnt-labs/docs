@@ -18,10 +18,10 @@ You'll start by understanding the fundamental architectural differences between 
 
 * **Verification without data access.** Your app can confirm a user's real-world credentials (income, reputation, identity) without ever accessing the sensitive data. This is impossible in Web2 without trusted third parties.
 * **Trustless automation.** Smart contracts execute automatically when conditions are met. No server downtime, no manual intervention, no single point of failure.
-* **User data ownership.** Users own their accounts and data. They can take their verified reputation to any app on XION. This creates a network effect that benefits all applications in the ecosystem.
+* **User data ownership.** Users own their accounts and data. They can take their verified reputation to any app on the Verona network. This creates a network effect that benefits all applications in the ecosystem.
 
 ### In This Section
 
 * [Web2 vs Web3 App Architecture: A Comparison](web2-vs-web3-app-architecture-a-comparison.md)
 * [Misconceptions and Misapplied Web2 Patterns](misconceptions-and-misapplied-web2-patterns.md)
-* [Recommended Architecture for Apps on XION](recommended-architecture-for-dapps.md)
+* [Recommended Architecture for Apps on Verona](recommended-architecture-for-dapps.md)

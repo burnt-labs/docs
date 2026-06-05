@@ -358,9 +358,9 @@ Here’s a breakdown of the key modifications:
 
 #### 3. **New `treasuryConfig` Object**
 
-* Contains configuration for interacting with the **XION blockchain**, including:
+* Contains configuration for interacting with the **Verona network**, including:
   * **Treasury address**: `"xion1r0tt64mdld2svywzeaf4pa7ezsg6agkyajk48ea398njywdl28rs3jhvry"` that allows for gasless transaction. You would update this contract with your own treasity address when building your own custom app.
-  * **RPC & REST URLs**: Connecting to **XION** network
+  * **RPC & REST URLs**: Connecting to **Verona** network
   * **Callback URL**: `"abstraxion-expo-demo://"` for handling deep linking.
 
 #### 4. **Introduction of `AbstraxionProvider`**

@@ -59,7 +59,7 @@ EXPO_PUBLIC_REST_ENDPOINT="https://api.xion-testnet-2.burnt.com"
 
 * **EXPO\_PUBLIC\_CONTRACT\_ADDRESS -** The address of the smart contract your app will interact with.
 * **EXPO\_PUBLIC\_TREASURY\_CONTRACT\_ADDRESS -** The treasury contract associated with the above contract. It enables gasless transactions using fee grants and handles authorization permissions, allowing your app to execute transactions on behalf of the Meta Account holder—delivering a seamless user experience.
-* **EXPO\_PUBLIC\_RPC\_ENDPOINT -** The RPC endpoint used to communicate with the XION blockchain.
+* **EXPO\_PUBLIC\_RPC\_ENDPOINT -** The RPC endpoint used to communicate with the Verona network.
 * **EXPO\_PUBLIC\_REST\_ENDPOINT -** The REST endpoint for querying chain state via HTTP.
 
 You can access these values in your code using `process.env.`. For example:

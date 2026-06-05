@@ -6,7 +6,7 @@ The Inter-Blockchain Communication (IBC) protocol enables XION to interoperate w
 
 ## Established IBC Connections <a href="#established-ibc-connections" id="established-ibc-connections"></a>
 
-XION maintains active IBC connections with multiple networks. Below are the details of the currently established channels.
+The Verona network maintains active IBC connections with multiple networks. Below are the details of the currently established channels.
 
 ### Mainnet Connections <a href="#testnet-connections" id="testnet-connections"></a>
 

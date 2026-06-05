@@ -6,7 +6,7 @@ description: Protocol-level account abstraction on the Verona network
 
 ## Protocol-Level Account Abstraction
 
-Meta Accounts on the XION network introduce a highly adaptable and secure account creation and management framework. Built at the protocol level, they have significant benefits over traditional crypto wallets and enable novel application use cases—including agent workflows that need scoped, user-consented access.
+Meta Accounts on the Verona network introduce a highly adaptable and secure account creation and management framework. Built at the protocol level, they have significant benefits over traditional crypto wallets and enable novel application use cases—including agent workflows that need scoped, user-consented access.
 
 #### Core Capabilities
 

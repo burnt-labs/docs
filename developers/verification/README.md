@@ -4,7 +4,7 @@ icon: badge-check
 
 # Verification
 
-This section covers how to integrate the **Truth Engine** into your application on the XION network. Whether you are building a consumer app, an agent workflow that needs verified context, or a DeFi protocol that assesses creditworthiness, these guides walk through full integration.
+This section covers how to integrate the **Truth Engine** into your application on the Verona network. Whether you are building a consumer app, an agent workflow that needs verified context, or a DeFi protocol that assesses creditworthiness, these guides walk through full integration.
 
 Conceptual background: [Truth Engine](../../about-verona/concepts/verification-infrastructure/README.md) · Product surface: [Burnt Verified](../../about-verona/surfaces/burnt-verified.md)
 
@@ -12,7 +12,7 @@ Conceptual background: [Truth Engine](../../about-verona/concepts/verification-i
 
 #### [Publishing ZK Verification Keys](publishing-zk-verification-keys.md)
 
-Publish and manage verification keys (vkeys) for custom ZK circuits on XION. This is **infrastructure-level** guidance for advanced use cases requiring custom ZK proving systems (Groth16, Gnark, UltraHonk).
+Publish and manage verification keys (vkeys) for custom ZK circuits on the Verona network. This is **infrastructure-level** guidance for advanced use cases requiring custom ZK proving systems (Groth16, Gnark, UltraHonk).
 
 > **Note**: Most applications use pre-configured vkeys for standard verification features (zkTLS, zkEmail, App Attestations). This guide is for developers building custom ZK circuits.
 

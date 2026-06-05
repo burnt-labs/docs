@@ -5,9 +5,9 @@ icon: terminal
 
 # Verona Agent Toolkit
 
-Verona Agent Toolkit (CLI package `xion-toolkit`) is a CLI-first toolkit for building on the XION network with Meta Accounts and gasless workflows.
+Verona Agent Toolkit (CLI package `xion-toolkit`) is a CLI-first toolkit for building on the Verona network with Meta Accounts and gasless workflows.
 
-This guide is for developers who are new to XION but already comfortable with CLI tools and AI coding agents.
+This guide is for developers who are new to Verona but already comfortable with CLI tools and AI coding agents.
 
 {% hint style="warning" %}
 **Beta:** Verona Agent Toolkit is in **beta**. It supports **testnet** (default) and **mainnet**. Use testnet for development and the faucet; switch to mainnet when you are ready for production (see [Networks](#networks) below).

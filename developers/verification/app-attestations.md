@@ -7,7 +7,7 @@ hidden: true
 
 ## Overview
 
-This section will cover how to verify mobile app authenticity and integrity using app attestations on XION. App attestations allow you to prove that your app is running in a genuine environment and has not been tampered with.
+This section will cover how to verify mobile app authenticity and integrity using app attestations on the Verona network. App attestations allow you to prove that your app is running in a genuine environment and has not been tampered with.
 
 ***
 

@@ -31,7 +31,7 @@ Join the [**Xion Discord server**](https://discord.gg/burnt) to discuss your pro
 
 ### **Xion Ecosystem Telegram Group (General Community Chat)**
 
-The [**Xion Developer Ecosystem Telegram**](https://t.me/+5KA8xBuU5wYzZjU0) channel is the main space for discussions about the Xion network on telegram. This is a great place to engage with **validators, developers, and users** who are interested in new projects launching on Xion.
+The [**Xion Developer Ecosystem Telegram**](https://t.me/+5KA8xBuU5wYzZjU0) channel is the main space for discussions about the Verona network on telegram. This is a great place to engage with **validators, developers, and users** who are interested in new projects launching on Verona.
 
 **Use Telegram to:**
 

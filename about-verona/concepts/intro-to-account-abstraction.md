@@ -1,5 +1,5 @@
 ---
-description: Protocol-level account abstraction on the XION network
+description: Protocol-level account abstraction on the Verona network
 ---
 
 # Intro to Account Abstraction
@@ -34,7 +34,7 @@ Traditional blockchain wallets are the single largest barrier to mainstream adop
 
 #### How the Network Solves This
 
-Account abstraction moves account logic from the application layer to the protocol layer. Every account on the XION network is a smart contract (a "Meta Account") with programmable authentication, permissions, and recovery.
+Account abstraction moves account logic from the application layer to the protocol layer. Every account on the Verona network is a smart contract (a "Meta Account") with programmable authentication, permissions, and recovery.
 
 **For users, this means:**
 
@@ -59,7 +59,7 @@ Account abstraction moves account logic from the application layer to the protoc
 
 **Session Keys:** Applications can request time-limited, permission-scoped session keys. This allows operations like in-game actions or automated transactions without requiring the user to approve every single interaction. Session keys expire automatically and can be revoked at any time.
 
-**Treasury Contracts:** XION's mechanism for gas abstraction. Your application deploys a Treasury contract that sponsors transaction fees for your users. You configure which operations to sponsor, set spending limits, and fund the Treasury. Your users never see gas fees.
+**Treasury Contracts:** The Verona network's mechanism for gas abstraction. Your application deploys a Treasury contract that sponsors transaction fees for your users. You configure which operations to sponsor, set spending limits, and fund the Treasury. Your users never see gas fees.
 
 **Account Recovery:** Unlike traditional wallets, Meta Accounts support configurable recovery. If a user loses their authentication device, they can recover access through pre-configured recovery methods (additional email, social login, trusted contacts, time-locked recovery).
 

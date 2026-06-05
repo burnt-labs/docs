@@ -1,6 +1,6 @@
 # Run a Node
 
-Operate a node on the **XION** network (`xiond`). Chain IDs such as `xion-testnet-2` are unchanged under the Verona rebrand.
+Operate a node on the **Verona** network (`xiond`). Chain IDs such as `xion-testnet-2` are unchanged under the Verona rebrand.
 
 ## Section Content
 

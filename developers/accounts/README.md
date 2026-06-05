@@ -7,11 +7,11 @@ icon: screwdriver-wrench
 
 Welcome to **Build on Verona — Accounts**.
 
-This section covers Meta Accounts, authentication methods, gasless transactions, and building web, mobile, backend, or agent-driven applications on the **XION** network.
+This section covers Meta Accounts, authentication methods, gasless transactions, and building web, mobile, backend, or agent-driven applications on the **Verona** network.
 
-### What are XION Accounts?
+### What are Meta Accounts?
 
-XION Accounts (Meta Accounts) are the foundation of the XION blockchain experience. They provide:
+Meta Accounts are the foundation of the Verona network experience. They provide:
 
 * **Multiple Authentication Methods**: Email, social login, and more
 * **Gasless Transactions**: Users can interact with apps without holding native tokens
@@ -56,7 +56,7 @@ Create mobile applications with React Native and Meta Account authentication.
 
 Integrate XION with your backend services using RESTful APIs or CosmJS.
 
-* [Interact with XION via your Backend Service ](backend-app/backend-using-cosmjs.md)- Learn how to interact with the XION blockchain from a backend environment using CosmJS
+* [Interact with XION via your Backend Service ](backend-app/backend-using-cosmjs.md)- Learn how to interact with the Verona network from a backend environment using CosmJS
 * [Account Abstraction for RESTful API with Backend Session](backend-app/build-restapi-with-account-abstraction-and-backend-session.md) - Build an application with a Web2 experience using XION Integration in backend
 
 #### AI Agent and CLI Path

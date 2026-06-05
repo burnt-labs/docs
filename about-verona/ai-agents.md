@@ -18,7 +18,7 @@ Follow this guide https://raw.githubusercontent.com/burnt-labs/xion-agent-toolki
 ```
 
 {% hint style="info" %}
-This setup is designed for AI-assisted development with Meta Accounts, Treasury management, and OAuth2 client management. It is not limited to one IDE. On-chain operations still use XION network names and `xiond` where applicable.
+This setup is designed for AI-assisted development with Meta Accounts, Treasury management, and OAuth2 client management. It is not limited to one IDE. On-chain operations still use chain IDs such as `xion-testnet-2` and the `xiond` CLI where applicable.
 {% endhint %}
 
 ## What this gives you

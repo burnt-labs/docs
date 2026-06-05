@@ -2,14 +2,14 @@
 
 ### Verify Mobile Application Data with Cryptographic Proofs
 
-App Attestations are a **Truth Engine** module on the XION network. They enable zero-knowledge verification of data from mobile applications—rideshare ratings, fitness metrics, delivery history, and more—without exposing underlying app credentials or full datasets.
+App Attestations are a **Truth Engine** module on the Verona network. They enable zero-knowledge verification of data from mobile applications—rideshare ratings, fitness metrics, delivery history, and more—without exposing underlying app credentials or full datasets.
 
 #### How App Attestations Work
 
 1. **App Data Access.** The user's mobile device accesses the relevant data from a target application through authenticated API calls or secure enclave access.
 2. **Attestation Generation.** The attestation framework creates a cryptographic proof of the specific data point the user wants to verify. This proof is generated in a secure execution environment on the device.
 3. **Claim Extraction.** The proof extracts only the specific claim (e.g., "Strava weekly mileage above 20 miles") without including any other app data.
-4. **On-Chain Verification.** The attestation is submitted to XION and verified. A valid attestation creates an on-chain record.
+4. **On-Chain Verification.** The attestation is submitted on chain and verified. A valid attestation creates an on-chain record.
 
 #### What Can Be Verified
 
@@ -53,4 +53,4 @@ App Attestations are a **Truth Engine** module on the XION network. They enable 
 * **Secure execution.** Proofs are generated within the device's secure enclave or trusted execution environment.
 * **App-authenticated data.** The attestation verifies data from authenticated API sessions, not user-provided screenshots or manually entered values.
 * **Minimal disclosure.** Only the specific claim is included in the proof. No app credentials, full data sets, or account identifiers are exposed.
-* **Device binding.** Attestations are bound to the user's device and XION account, preventing proof transfer or replay.
+* **Device binding.** Attestations are bound to the user's device and Meta Account, preventing proof transfer or replay.

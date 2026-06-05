@@ -4,7 +4,7 @@ icon: sack-dollar
 
 # Payments
 
-The Payments layer provides tools and integrations for handling payments, stablecoins, and on/off ramps on the **XION** network.
+The Payments layer provides tools and integrations for handling payments, stablecoins, and on/off ramps on the **Verona** network.
 
 ### Overview
 

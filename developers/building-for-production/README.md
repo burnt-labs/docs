@@ -8,7 +8,7 @@ Deploy applications to **XION Mainnet** after testing on `xion-testnet-2`. Produ
 
 This section outlines the key differences between **Testnet** and **Mainnet**, the requirements for deployment, and best practices to ensure your contracts are approved and adopted by the community.
 
-In XION, **Production** means deploying your app to **Mainnet**—the live network where real users and real value live. **Testnet** is like a **sandbox** or staging environment: you can deploy and test freely with no cost and no governance gates. When you're ready to go live, you deploy to Mainnet (Production) through a governed process.
+On the Verona network, **Production** means deploying your app to **Mainnet**—the live network where real users and real value live. **Testnet** is like a **sandbox** or staging environment: you can deploy and test freely with no cost and no governance gates. When you're ready to go live, you deploy to Mainnet (Production) through a governed process.
 
 ## **Testnet: A Space for Development & Refinement**
 

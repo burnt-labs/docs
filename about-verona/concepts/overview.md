@@ -26,7 +26,7 @@ Two problems block mainstream intelligent applications:
 
 ### Architecture at a Glance
 
-Verona’s architecture has two primary layers on the XION network:
+Verona’s architecture has two primary layers:
 
 **Verification Layer (Truth Engine)**
 
@@ -64,7 +64,7 @@ See [Surfaces](../surfaces/README.md) and [Rebrand: XION → Verona](../rebrand-
 
 ### For Developers: What This Means
 
-Building on Verona / XION gives you:
+Building on Verona gives you:
 
 1. **Verification primitives** to prove real-world data privately—credentials, data sources, and trust between parties without seeing sensitive underlying information.
 2. **Abstraction primitives** for Web2-quality UX—Meta Accounts, gas sponsorship, familiar login and payment flows.

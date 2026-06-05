@@ -5,7 +5,7 @@ icon: terminal
 
 # Interacting with the chain using the daemon CLI (`xiond`)
 
-`xiond` is the command-line interface (CLI) daemon for interacting with the **XION blockchain**. It allows users to manage accounts, send transactions, query blockchain data, and operate validator nodes.
+`xiond` is the command-line interface (CLI) daemon for interacting with the **Verona network**. It allows users to manage accounts, send transactions, query blockchain data, and operate validator nodes.
 
 ## Prerequisites
 
@@ -110,7 +110,7 @@ For additional options, see:
 
 For **mainnet** usage, fund your wallet from supported exchanges before broadcasting transactions.
 
-## Connect to different XION networks
+## Connect to different Verona networks
 
 For chain IDs and public RPC nodes, see:
 

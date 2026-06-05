@@ -1,6 +1,6 @@
 # Integrate Credit Card Payments for Digital Assets in your Mobile App using Crossmint
 
-This guide demonstrates how to enable credit card purchases for Digital Assets on the XION blockchain using Crossmint's payment infrastructure. We'll use a React Native mobile app as our primary example, showing real-world implementation patterns and solutions to common challenges.
+This guide demonstrates how to enable credit card purchases for Digital Assets on the Verona network using Crossmint's payment infrastructure. We'll use a React Native mobile app as our primary example, showing real-world implementation patterns and solutions to common challenges.
 
 
 
@@ -16,7 +16,7 @@ Let’s dig deeper into the components:
 
 * **Mobile App (React Native)**: This is your Digital Asset storefront, where users browse collections and initiate purchases.
 * **Crossmint Checkout**: A drop-in payment solution that supports fiat (credit/debit) and crypto. It handles compliance, processing, and minting.
-* **XION Blockchain**: The final destination where the Digital Asset is minted and stored in the user’s wallet.
+* **Verona network**: The final destination where the Digital Asset is minted and stored in the user’s wallet.
 
 Here’s what happens under the hood:
 

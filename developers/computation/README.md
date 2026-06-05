@@ -4,7 +4,7 @@ icon: user-robot
 
 # Computation
 
-The Computation layer covers CosmWasm smart contracts, business logic, and workflows on the **XION** network (`xiond`, `xion-testnet-2`).
+The Computation layer covers CosmWasm smart contracts, business logic, and workflows on the **Verona** network (`xiond`, `xion-testnet-2`).
 
 ### Contract development notes
 
@@ -24,7 +24,7 @@ Rebuild the contract (and re-run the [CosmWasm optimizer](local-development/depl
 
 ### Overview
 
-Smart contracts on XION are built using CosmWasm and enable:
+Smart contracts on the Verona network are built using CosmWasm and enable:
 
 * **Business Logic**: Automate workflows and processes
 * **State Management**: Store and manage application state

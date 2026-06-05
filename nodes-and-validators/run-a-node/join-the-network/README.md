@@ -2,9 +2,9 @@
 description: How to join the network with a configured daemon
 ---
 
-# Join the Xion Network
+# Join the Verona network
 
-With a configured Xion Daemon, we can attempt to join one of the Xion Networks.
+With a configured Xion Daemon, we can attempt to join one of the Verona networks.
 
 ## Select a Network
 

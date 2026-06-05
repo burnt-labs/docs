@@ -2,7 +2,7 @@
 
 The **Token Factory module** provides a simple framework for creating and managing **custom native tokens**. It allows users to create, mint, distribute and interact with their own tokens seamlessly. Each token is uniquely tied to its creator’s address and follows the standardized format `factory/{creator address}/{subdenom}.`
 
-The module is particularly useful for **developers** and **projects** looking to **issue chain-native assets** without the complexity of deploying custom smart contracts. Regardless of the token’s intended use the **Token Factory** streamlines the entire **lifecycle**, ensuring a secure and scalable approach to token management on XION.
+The module is particularly useful for **developers** and **projects** looking to **issue chain-native assets** without the complexity of deploying custom smart contracts. Regardless of the token’s intended use the **Token Factory** streamlines the entire **lifecycle**, ensuring a secure and scalable approach to token management on the Verona network.
 
 ## **Prerequisites**
 
@@ -34,7 +34,7 @@ xiond tx tokenfactory create-denom <your-denom> --from <wallet-name> --chain-id 
 
 * `<your-denom>` – The unique token name (e.g., `customtoken`).
 * `<wallet-name>` – Your configured wallet name in `xiond`.
-* `<chain-id>` – The chain ID of the XION network.
+* `<chain-id>` – The chain ID of the Verona network.
 * `<node>` – The ID or address of the blockchain node you are connecting to.
 * `--gas auto` – Automatically estimates the gas required for the transaction.
 * `<gas-adjustment>` – Adjusts the estimated gas amount by **30%** to account for possible variations in actual consumption.
@@ -263,7 +263,7 @@ xiond tx tokenfactory mint <amount><denom> --from <wallet-name> --chain-id <chai
 * `<amount>` – The quantity of tokens to mint.
 * `<denom>` – The full denomination (including `factory/<creator-address>/<denom>`).
 * `<wallet-name>` – Your configured wallet name.
-* `<chain-id>` – The chain ID of the XION network.
+* `<chain-id>` – The chain ID of the Verona network.
 * `<node>` – The ID or address of the blockchain node you are connecting to.
 * `--gas auto` – Automatically estimates the gas required for the transaction.
 * `<gas-adjustment>` – Adjusts the estimated gas amount by **30%** to account for possible variations in actual consumption.
@@ -357,7 +357,7 @@ pagination:
 
 ## **Sending Tokens to Another Address**
 
-Once you have minted tokens, you may want to **transfer them to another wallet**, whether for payments, rewards, or distribution to users. The **bank send transaction** allows you to send your custom tokens (or any other assets in your wallet) to another address on the **XION blockchain**.
+Once you have minted tokens, you may want to **transfer them to another wallet**, whether for payments, rewards, or distribution to users. The **bank send transaction** allows you to send your custom tokens (or any other assets in your wallet) to another address on the **Verona network**.
 
 To send tokens, use the following command:
 
@@ -373,7 +373,7 @@ xiond tx bank send <your-address> <recipient-address> <amount><denom> --node <no
 * **`<denom>`** – The full token denomination, including the `factory/{creator-address}/{denom}` prefix.
 * **`<node>`** – The RPC node used to broadcast the transaction.
 * **`<wallet-name>`** – The name of your configured wallet in `xiond`.
-* **`<chain-id>`** – The XION network’s chain ID.
+* **`<chain-id>`** – The Verona network’s chain ID.
 * **`--gas auto`** – Enables automatic gas estimation.
 * **`<gas-adjustment>`** – Adjusts the estimated gas usage (e.g., `1.5` for 50% buffer).
 * **`<gas-prices>`** – Sets the gas fee rate in `uxion`.

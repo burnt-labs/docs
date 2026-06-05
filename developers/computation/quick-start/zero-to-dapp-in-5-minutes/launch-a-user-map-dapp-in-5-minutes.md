@@ -1,6 +1,6 @@
-# Launch a User Map App on XION in 5 Minutes
+# Launch a User Map App on Verona in 5 Minutes
 
-Building an app on XION typically involves three main components:
+Building an app on Verona typically involves three main components:
 
 * **A smart contract** – Contains the core business logic of your app.
 * **A Treasury contract** – Enables gasless transactions using **Fee Grants**, making onboarding smoother for users. It also handles **Authorization Grants**, which allow your frontend to execute transactions on behalf of the user, enabling a more traditional application-like experience through our OAuth2-style **Abstraxion** solution.

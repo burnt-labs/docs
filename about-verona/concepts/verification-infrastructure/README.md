@@ -2,7 +2,7 @@
 
 ### The Truth Engine: Verify Anything on the Internet, Privately
 
-The **Truth Engine** is Verona's verification stack on the XION network. It applies zero-knowledge proofs to three distinct data sources, enabling applications and authorized agents to verify claims without exposing underlying information.
+The **Truth Engine** is Verona's verification stack on the Verona network. It applies zero-knowledge proofs to three distinct data sources, enabling applications and authorized agents to verify claims without exposing underlying information.
 
 #### Why Verification Matters for Developers
 
@@ -23,7 +23,7 @@ This creates an entirely new class of applications that were previously impossib
 The verification flow follows a consistent pattern across all three pillars of the Truth Engine:
 
 1. **User generates proof.** The user's device creates a zero-knowledge proof from a data source (website, email, or mobile app). This happens client-side; the raw data never leaves the user's device.
-2. **Proof is submitted on-chain.** The ZK proof is submitted to XION where it is verified by the protocol. If valid, the verified claim is recorded on-chain as an attestation.
+2. **Proof is submitted on-chain.** The ZK proof is submitted to the Verona network where it is verified by the protocol. If valid, the verified claim is recorded on-chain as an attestation.
 3. **Application reads the attestation.** Your smart contract or application queries the on-chain attestation to confirm the claim. You receive a binary answer ("this user has a 4.8+ Uber rating") without any access to the underlying data ("their exact rating, trip history, or account details").
 4. **Application takes action.** Based on the verified claim, your application triggers logic: unlock a reward, grant access, adjust pricing, issue credentials, or any other programmable response.
 

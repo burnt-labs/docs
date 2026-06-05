@@ -1,6 +1,6 @@
 # Token Factory
 
-When creating tokens on XION, developers have two main options: [**CW20 smart contracts**](https://github.com/CosmWasm/cw-plus/blob/main/packages/cw20/README.md) or the [**Token Factory module**](https://github.com/strangelove-ventures/tokenfactory). While CW20 has been widely used in the Cosmos ecosystem, Token Factory provides a **simpler,** more **efficient,** and **scalable** alternative.
+When creating tokens on the Verona network, developers have two main options: [**CW20 smart contracts**](https://github.com/CosmWasm/cw-plus/blob/main/packages/cw20/README.md) or the [**Token Factory module**](https://github.com/strangelove-ventures/tokenfactory). While CW20 has been widely used in the Cosmos ecosystem, Token Factory provides a **simpler,** more **efficient,** and **scalable** alternative.
 
 
 

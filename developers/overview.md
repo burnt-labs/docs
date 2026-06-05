@@ -10,7 +10,7 @@ Welcome to **Build on Verona**. If you're coming from Web2 development, this pag
 
 ### What you build on
 
-Verona gives developers access to verified facts that users own and authorize. The XION network provides the underlying account, verification, computation, and payment primitives that make those facts usable in applications and agent workflows.
+Verona gives developers access to verified facts that users own and authorize. The Verona network provides the underlying account, verification, computation, and payment primitives that make those facts usable in applications and agent workflows.
 
 Think of the stack as infrastructure for applications that need:
 
@@ -47,7 +47,7 @@ These primitives work together to create consumer and agentic applications:
 
 #### Computation: Trustless Backend Logic
 
-**What it is:** Smart contracts on the XION network run like serverless functions — they execute trustlessly, manage state, and can integrate with external data sources via oracles.
+**What it is:** Smart contracts on the Verona network run like serverless functions — they execute trustlessly, manage state, and can integrate with external data sources via oracles.
 
 **Key benefits:**
 

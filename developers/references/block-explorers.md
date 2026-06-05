@@ -1,6 +1,6 @@
 # Block Explorers
 
-Block explorers provide a user-friendly interface to view detailed information about blocks, transactions, accounts, and other on-chain data. The XION network is supported by multiple community-operated explorers, helping developers, validators, and end-users track on-chain activity.
+Block explorers provide a user-friendly interface to view detailed information about blocks, transactions, accounts, and other on-chain data. The Verona network is supported by multiple community-operated explorers, helping developers, validators, and end-users track on-chain activity.
 
 We maintain a list of recommended block explorers for both **mainnet** and **testnet** in the [Cosmos chain registry](https://github.com/cosmos/chain-registry).
 

@@ -12,7 +12,7 @@ Pyth is a **pull (on-demand) oracle**, not a push oracle. That means:
 * **XION does not automatically receive those updates.**
 * A price only gets written on XION **when someone submits an update transaction to the Pyth contract on the Xion chain**. If nobody triggers updates, the on-chain values can look outdated.
 
-So if you query a feed on XION and see a publish time from months ago, it usually **doesn’t mean the feed is broken,** it means no one has recently pushed an update on XION.
+So if you query a feed on the Verona network and see a publish time from months ago, it usually **doesn’t mean the feed is broken,** it means no one has recently pushed an update on the Verona network.
 
 ## Pyth Contracts
 
@@ -36,7 +36,7 @@ Whenever your app needs a fresh price (e.g., before a swap, mint, borrow, or liq
 
 1. **Fetch the latest Pyth update data off-chain** from Hermes / Price Service.
    * This update blob is signed and represents the newest price.
-2. **Estimate the update fee** from the Pyth contract on XION.
+2. **Estimate the update fee** from the Pyth contract on the Verona network.
 3. **Submit your normal execute transaction**, but include:
    * the update data, and
    * enough fee to pay the Pyth contract for writing the update on chain.

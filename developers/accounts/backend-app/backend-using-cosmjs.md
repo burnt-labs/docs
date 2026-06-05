@@ -1,6 +1,6 @@
 # Interact with XION via your Backend Service
 
-Learn how to interact with the XION blockchain from a backend environment using **CosmJS**. This guide covers setting up your environment, connecting to the XION network, querying blockchain data, and executing transactions.
+Learn how to interact with the Verona network from a backend environment using **CosmJS**. This guide covers setting up your environment, connecting to the Verona network, querying blockchain data, and executing transactions.
 
 ### Setting Up Your Environment
 
@@ -73,9 +73,9 @@ node_modules/
 .env
 ```
 
-### Connecting to XION Network
+### Connecting to Verona network
 
-Now, set up a connection to the XION blockchain for querying data and submitting transactions. Create a file named `xion-connect.js` (or `xion-connect.ts` for TypeScript).
+Now, set up a connection to the Verona network for querying data and submitting transactions. Create a file named `xion-connect.js` (or `xion-connect.ts` for TypeScript).
 
 ```javascript
 // xion-connect.js
@@ -122,7 +122,7 @@ module.exports = {
 
 ### Querying the Blockchain
 
-Next, retrieve data from the XION blockchain using read-only operations that do not alter the blockchain state. Create a file named `xion-queries.js`:
+Next, retrieve data from the Verona network using read-only operations that do not alter the blockchain state. Create a file named `xion-queries.js`:
 
 ```javascript
 // xion-queries.js
@@ -209,7 +209,7 @@ module.exports = {
 
 ### Working with Wallets
 
-We'll now work with XION blockchain wallets, including deriving addresses from mnemonics. Create a file named `xion-wallets.js`:
+We'll now work with Verona network wallets, including deriving addresses from mnemonics. Create a file named `xion-wallets.js`:
 
 ```javascript
 // xion-wallets.js
@@ -411,7 +411,7 @@ async function runExamples() {
   try {
     // Get blockchain height to verify connection
     const height = await getChainHeight();
-    console.log(`Connected to XION blockchain at height: ${height}`);
+    console.log(`Connected to Verona network at height: ${height}`);
     
     // Get your wallet address from the environment mnemonic
     const myAddress = await getMyAddress();

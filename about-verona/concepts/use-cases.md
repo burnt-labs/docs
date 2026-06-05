@@ -2,7 +2,7 @@
 
 ### Real-World Applications Enabled by Verification + Abstraction
 
-**Verona** packages the XION network's Truth Engine and Generalized Abstraction for applications and agents that need **grounded, user-consented facts**. The use cases below show what becomes possible when zero-knowledge verification and complete abstraction work together—many were previously impossible or impractical on other networks.
+**Verona** packages the Verona network's Truth Engine and Generalized Abstraction for applications and agents that need **grounded, user-consented facts**. The use cases below show what becomes possible when zero-knowledge verification and complete abstraction work together—many were previously impossible or impractical on other networks.
 
 #### For Consumer Applications
 

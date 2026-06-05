@@ -7,7 +7,7 @@ icon: cubes
 
 
 
-**Mob** is a multi-platform signing client for the XION blockchain with first-class session-key support. It's written in Rust and exposed through Mozilla's [UniFFI](https://github.com/mozilla/uniffi-rs) and has native libraries for **Kotlin, Swift, Python, Ruby, and any other UniFFI target,** plus the Rust crate itself for server and CLI use. Mobile, backend, scripts, desktop, automation: same SDK, same surface, same code paths.
+**Mob** is a multi-platform signing client for the Verona network with first-class session-key support. It's written in Rust and exposed through Mozilla's [UniFFI](https://github.com/mozilla/uniffi-rs) and has native libraries for **Kotlin, Swift, Python, Ruby, and any other UniFFI target,** plus the Rust crate itself for server and CLI use. Mobile, backend, scripts, desktop, automation: same SDK, same surface, same code paths.
 
 It's the native equivalent of [xion.js](https://github.com/burnt-labs/xion.js) which is our JavaScript signing client without being tied to JavaScript or a web view.
 

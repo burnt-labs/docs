@@ -23,7 +23,7 @@ By deploying a marketplace contract, developers can either create a **permission
 
 
 
-These smart contracts provide marketplace functionality for CW721 NFTs on XION. Each is tailored for specific use cases, whether you're creating an open market, a curated gallery, or a single-collection storefront.
+These smart contracts provide marketplace functionality for CW721 NFTs on the Verona network. Each is tailored for specific use cases, whether you're creating an open market, a curated gallery, or a single-collection storefront.
 
 #### 1. **cw721-marketplace**
 

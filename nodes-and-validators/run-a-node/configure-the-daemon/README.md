@@ -46,7 +46,7 @@ $ xiond init my-awesome-moniker \
 
 Take note of the `node_key.json` and `priv_validator_key.json`files.
 
-The combination of these two private keys serves to uniquely identify your node on the Xion Network. If the purpose of your node is ephemeral, such that it can be discarded with no adverse effects, then these files can be discarded and regenerated at will.
+The combination of these two private keys serves to uniquely identify your node on the Verona network. If the purpose of your node is ephemeral, such that it can be discarded with no adverse effects, then these files can be discarded and regenerated at will.
 
 However, if the purpose of your node is persistent, such as running a Validator, then protecting and preserving these files becomes paramount.
 {% endhint %}

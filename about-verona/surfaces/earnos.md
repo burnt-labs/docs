@@ -19,7 +19,7 @@ Typical integration patterns:
 
 1. Verify a user action or attribute with the [Truth Engine](../concepts/verification-infrastructure/README.md)
 2. Map the proof to your app’s business rules (campaign, tier, payout)
-3. Settle or record outcomes on XION (`xion-testnet-2` for development)
+3. Settle or record outcomes on the Verona network (`xion-testnet-2` for development)
 
 {% hint style="warning" %}
 Do not describe unannounced token products or partner programs as live. Follow legal and marketing review before publishing yield, interest, or revenue figures in your own apps or docs.

@@ -4,7 +4,7 @@ icon: graduation-cap
 
 # Concepts
 
-[Verona](https://verona.burnt.com/) is the intelligence layer for AI—the product narrative for the **XION** network. It combines verified facts users control with protocol-level abstraction so apps and agents can act on trustworthy context.
+[Verona](https://verona.burnt.com/) is the intelligence layer for AI—the product narrative for the **Verona** network. It combines verified facts users control with protocol-level abstraction so apps and agents can act on trustworthy context.
 
 Two foundational layers power the stack:
 

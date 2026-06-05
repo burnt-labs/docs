@@ -1,6 +1,6 @@
 # Deploying Your First Smart Contract on XION
 
-This guide will walk you through the process of deploying a smart contract on the **XION** network. The deployment process involves **compiling** an **optimized** version of your contract code, **uploading** this optimized code to the blockchain, and then creating an **instance** of the contract. Once instantiated, the contract will have its own **unique address** and **data store**, allowing you to interact with it through transactions and queries.
+This guide will walk you through the process of deploying a smart contract on the **Verona** network. The deployment process involves **compiling** an **optimized** version of your contract code, **uploading** this optimized code to the blockchain, and then creating an **instance** of the contract. Once instantiated, the contract will have its own **unique address** and **data store**, allowing you to interact with it through transactions and queries.
 
 
 
@@ -20,7 +20,7 @@ To execute transactions on-chain, you need at least one funded account. This sec
 
 ### Generate an Account Key Pair
 
-To interact with the XION blockchain, you need a cryptographic key pair, consisting of a **public key** and a **private key**. The public key is used to derive your address, while the private key is required to sign transactions.
+To interact with the Verona network, you need a cryptographic key pair, consisting of a **public key** and a **private key**. The public key is used to derive your address, while the private key is required to sign transactions.
 
 #### **Generate a New Key Pair**
 
@@ -77,7 +77,7 @@ targets = ["wasm32-unknown-unknown"]
 Then rebuild and re-run the optimizer below before `xiond tx wasm store`.
 {% endhint %}
 
-To demonstrate the deployment process, we’ll use a simple [**Counter**](https://github.com/burnt-labs/cw-counter) smart contract. This contract provides an example of state management on the XION blockchain. It allows you to:
+To demonstrate the deployment process, we’ll use a simple [**Counter**](https://github.com/burnt-labs/cw-counter) smart contract. This contract provides an example of state management on the Verona network. It allows you to:
 
 * Set an initial counter value
 * Increment or reset the counter

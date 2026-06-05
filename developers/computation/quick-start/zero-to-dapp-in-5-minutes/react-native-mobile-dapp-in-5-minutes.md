@@ -1,4 +1,4 @@
-# React Native Mobile App on XION in 5 Minutes
+# React Native Mobile App on Verona in 5 Minutes
 
 Building a **Mobile App** on XION typically involves three main components:
 

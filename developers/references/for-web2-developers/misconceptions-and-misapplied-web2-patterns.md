@@ -2,7 +2,7 @@
 
 As **Web2** developers begin building in **Web3**, it's natural to lean on familiar tools, frameworks, and mental models. This however often lead to **misapplied patterns** that don’t align with the decentralized nature of blockchain development, especially when working with XION.
 
-This guide outlines common misconceptions and design patterns brought over from Web2 that **don’t translate well to Web3**, and explains how to rethink your approach for building secure, performant, and user-friendly apps on XION.
+This guide outlines common misconceptions and design patterns brought over from Web2 that **don’t translate well to Web3**, and explains how to rethink your approach for building secure, performant, and user-friendly apps on Verona.
 
 
 

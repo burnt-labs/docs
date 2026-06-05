@@ -4,7 +4,7 @@
 
 > **Note:** This section was previously titled "Generalized Chain Abstraction." The abstraction layer is broader than cross-chain interoperability. It encompasses every functional barrier that prevents mainstream adoption: accounts, signatures, gas, payments, devices, and interoperability. The term "Generalized Abstraction" reflects this full scope.
 
-**Verona** is the intelligence-layer narrative for the **XION** network. Generalized Abstraction is embedded directly in that network's protocol—unlike application-layer solutions that add complexity on top of existing chains. Every application built on the network automatically inherits full abstraction without additional development effort.
+**Verona** is the intelligence-layer narrative for the **Verona** network. Generalized Abstraction is embedded directly in that network's protocol—unlike application-layer solutions that add complexity on top of existing chains. Every application built on the network automatically inherits full abstraction without additional development effort.
 
 #### Why Protocol-Level Abstraction Matters
 
@@ -36,7 +36,7 @@ _Detailed in: [Intro to Account Abstraction](intro-to-account-abstraction.md) an
 
 **2. Signature Abstraction**
 
-XION supports all major cryptographic signature schemes natively at the protocol level.
+The Verona network supports all major cryptographic signature schemes natively at the protocol level.
 
 * Applications request familiar actions ("confirm purchase," "approve transfer") rather than raw transaction signatures
 * Cross-curve compatibility: secp256k1, ed25519, secp256r1 (WebAuthn/passkeys), and more
