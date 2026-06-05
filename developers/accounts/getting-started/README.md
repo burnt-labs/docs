@@ -8,7 +8,7 @@ Onboarding is one of the biggest barriers in Blockchain adoption. For many users
 
 XION **Meta Accounts** are designed to solve this. Unlike traditional externally owned accounts (EOAs), Meta Accounts are **smart contract accounts,** which allow users can sign up and log in using familiar authenticators like **email, social login, wallets, or passkeys**. This removes the complexity of key management and lets users focus on what really matters: using your app.
 
-You can learn more about XION's Meta Accounts [here](../../../xions-core/concepts/xions-meta-accounts.md).
+You can learn more about XION's Meta Accounts [here](../../../about-verona/concepts/meta-accounts.md).
 
 ### Key Features
 

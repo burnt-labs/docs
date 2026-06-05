@@ -2,8 +2,37 @@ root: ./
 
 redirects:
   develop/get-started-guide: developers/learn/overview-of-xion.md
-  developers/learn/overview-of-xion: xions-core/learn/README.md
-  developers/getting-started-advanced/your-first-dapp/xion-typescript: developers/getting-started-advanced/your-first-dapp/xion-backend-using-cosmjs.md
-  developers/computation/local-development/interact-with-xion-chain-setup-xion-daemon: developers/tools/xiond-cli.md
-  developers/references/mob-a-multi-platform-signing-client-library-for-xion: developers/tools/mob-a-multi-platform-signing-client-library-for-xion.md
-  xions-core/concepts/verification-infrastructure/zk-module-zktls: xions-core/concepts/verification-infrastructure/zktls.md
+  developers/learn/overview-of-xion: about-verona/concepts/overview.md
+  developers/getting-started-advanced/your-first-dapp/xion-typescript: developers/accounts/backend-app/backend-using-cosmjs.md
+  developers/computation/local-development/interact-with-xion-chain-setup-xion-daemon: developers/tools/daemon-cli.md
+  developers/references/mob-a-multi-platform-signing-client-library-for-xion: developers/tools/mob-signing-client.md
+  xions-core/concepts/verification-infrastructure/zk-module-zktls: about-verona/concepts/verification-infrastructure/zktls.md
+  xions-core: about-verona/concepts/overview.md
+  xions-core/concepts/overview: about-verona/concepts/overview.md
+  xions-core/concepts/xions-meta-accounts: about-verona/concepts/meta-accounts.md
+  xions-core/ai-agents: about-verona/ai-agents.md
+  developers/tools/xion-toolkit: developers/tools/verona-toolkit.md
+  developers/tools/xiond-cli: developers/tools/daemon-cli.md
+  developers/tools/mob-a-multi-platform-signing-client-library-for-xion: developers/tools/mob-signing-client.md
+  developers/computation/xion-quick-start: developers/computation/quick-start/README.md
+  developers/accounts/backend-app/xion-backend-using-cosmjs: developers/accounts/backend-app/backend-using-cosmjs.md
+  developers/accounts/mobile-app/set-up-your-xion-mobile-development-environment: developers/accounts/mobile-app/set-up-mobile-development-environment.md
+  developers/accounts/mobile-app/building-a-react-native-mobile-app-with-abstraxion-xion.js: developers/accounts/mobile-app/building-a-react-native-mobile-app-with-abstraxion.md
+  developers/computation/re-using-existing-contracts/deployed-contracts-on-xion: developers/computation/re-using-existing-contracts/deployed-contracts.md
+  developers/computation/integrations/websockets/websockets-with-xion-real-time-communication: developers/computation/integrations/websockets/websockets-real-time-communication.md
+  developers/verification/internet-verification/zktls-integration-using-reclaim-in-a-xion-mobile-app: developers/verification/internet-verification/zktls-integration-using-reclaim-in-a-mobile-app.md
+  developers/verification/internet-verification/zktls-integration-using-opacity-in-a-xion-mobile-app: developers/verification/internet-verification/zktls-integration-using-opacity-in-a-mobile-app.md
+  developers/payments/ach-and-bank-transfers/build-a-brale-ach-on-off-ramp-app-on-xion: developers/payments/ach-and-bank-transfers/build-a-brale-ach-on-off-ramp-app.md
+  developers/building-for-production/xion-testnet-your-development-playground: developers/building-for-production/testnet-playground.md
+  developers/building-for-production/deploying-to-xion-mainnet: developers/building-for-production/deploying-to-mainnet/README.md
+  developers/references/xion-testnet: developers/references/testnet-tokens.md
+  developers/references/xion-token-contract-addresses-on-evm-chains: developers/references/token-contract-addresses-on-evm-chains.md
+  developers/references/ibc-denoms-on-xion-networks: developers/references/ibc-denoms.md
+  developers/references/for-web2-developers/recommended-architecture-for-dapps-on-xion: developers/references/for-web2-developers/recommended-architecture-for-dapps.md
+  developers/computation/xion-quick-start/zero-to-dapp-in-5-minutes/launch-a-user-map-dapp-on-xion-in-5-minutes: developers/computation/quick-start/zero-to-dapp-in-5-minutes/launch-a-user-map-dapp-in-5-minutes.md
+  developers/computation/xion-quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-on-xion-in-5-minutes: developers/computation/quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-in-5-minutes.md
+  nodes-and-validators/run-a-node/build-the-xion-daemon: nodes-and-validators/run-a-node/build-the-daemon.md
+  nodes-and-validators/run-a-node/download-the-xion-daemon: nodes-and-validators/run-a-node/download-the-daemon.md
+  nodes-and-validators/run-a-node/configure-the-xion-daemon: nodes-and-validators/run-a-node/configure-the-daemon/README.md
+  nodes-and-validators/run-a-node/join-the-xion-network: nodes-and-validators/run-a-node/join-the-network/README.md
+  nodes-and-validators/become-a-validator/obtain-a-xion-wallet-address: nodes-and-validators/become-a-validator/obtain-a-wallet-address.md

@@ -13,7 +13,7 @@ Before proceeding, make sure you have the following:
 2. **An Active Account:**\
    Set up an account using `xiond` by following the [Generate an account](https://docs.burnt.com/xion/developers/featured-guides/setup-local-environment/interact-with-xion-chain-setup-xion-daemon#generate-an-account) guide. You will use this account to execute transactions.
 3. **A Funded Account:**\
-   You need an account with sufficient **native XION tokens** to cover transaction fees. You can obtain testnet tokens through the [**XION testnet faucet**](../../../references/xion-testnet.md).
+   You need an account with sufficient **native XION tokens** to cover transaction fees. You can obtain testnet tokens through the [**XION testnet faucet**](../../../references/testnet-tokens.md).
 
 ## **Creating a Token**
 

@@ -1,11 +1,11 @@
 ---
-description: Quick start and user guide for Xion Agent Toolkit
+description: Quick start and user guide for Verona Agent Toolkit
 icon: terminal
 ---
 
-# Xion Agent Toolkit
+# Verona Agent Toolkit
 
-Xion Agent Toolkit is a CLI-first toolkit for building on XION with Meta Accounts and gasless workflows.
+Verona Agent Toolkit (CLI package `xion-toolkit`) is a CLI-first toolkit for building on the XION network with Meta Accounts and gasless workflows.
 
 This guide is for developers who are new to XION but already comfortable with CLI tools and AI coding agents.
 
@@ -19,7 +19,7 @@ This page focuses on practical onboarding and high-signal workflows. For complet
 
 ## Why use this toolkit
 
-Xion Agent Toolkit is useful when you want to:
+Verona Agent Toolkit is useful when you want to:
 
 - Automate **Treasury management** from terminal or scripts
 - Manage **OAuth2 clients** for your app lifecycle
@@ -28,7 +28,7 @@ Xion Agent Toolkit is useful when you want to:
 
 If you need conceptual background first, see:
 
-- [Generalized Abstraction](../../xions-core/concepts/generalized-abstraction.md)
+- [Generalized Abstraction](../../about-verona/concepts/generalized-abstraction.md)
 - [Enabling Gasless Transactions with Treasury](../accounts/getting-started/treasury-contracts.md)
 
 ## Installation

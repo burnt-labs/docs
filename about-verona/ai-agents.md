@@ -1,24 +1,24 @@
 ---
-description: Use AI agents with XION through Xion Agent Toolkit
+description: Use AI agents on Verona through the Verona Agent Toolkit
 icon: robot
 ---
 
 # AI Agent Quick Start
 
-Want to let an AI agent operate on XION with a gasless workflow?
+Want to let an AI agent operate on the network with a gasless workflow?
 
 {% hint style="warning" %}
-**Beta:** Xion Agent Toolkit is in **beta**. It supports **testnet** (default) and **mainnet**—use `--network mainnet` or `xion-toolkit config set-network mainnet` for production. Start on testnet for development; the faucet is testnet-only.
+**Beta:** Verona Agent Toolkit (CLI package `xion-toolkit`) is in **beta**. It supports **testnet** (default) and **mainnet**—use `--network mainnet` or `xion-toolkit config set-network mainnet` for production. Start on testnet for development; the faucet is testnet-only.
 {% endhint %}
 
 Copy the instruction below into your AI coding assistant:
 
 ```text
-Follow this guide https://raw.githubusercontent.com/burnt-labs/xion-agent-toolkit/main/INSTALL-FOR-AGENTS.md to install and configure the Xion Agent Toolkit skills for AI agents.
+Follow this guide https://raw.githubusercontent.com/burnt-labs/xion-agent-toolkit/main/INSTALL-FOR-AGENTS.md to install and configure the Verona Agent Toolkit skills for AI agents.
 ```
 
 {% hint style="info" %}
-This setup is designed for AI-assisted development on XION with Meta Accounts, Treasury management, and OAuth2 client management. It is not limited to one IDE.
+This setup is designed for AI-assisted development with Meta Accounts, Treasury management, and OAuth2 client management. It is not limited to one IDE. On-chain operations still use XION network names and `xiond` where applicable.
 {% endhint %}
 
 ## What this gives you
@@ -51,14 +51,19 @@ flowchart TD
   </thead>
   <tbody>
     <tr>
-      <td><strong>Xion Agent Toolkit Tutorial</strong><br>Step-by-step guide for installation, auth, treasury workflows, OAuth2 client management, and troubleshooting.</td>
-      <td><a href="../developers/tools/xion-toolkit.md">xion-toolkit</a></td>
+      <td><strong>Verona Agent Toolkit Tutorial</strong><br>Step-by-step guide for installation, auth, treasury workflows, OAuth2 client management, and troubleshooting.</td>
+      <td><a href="../developers/tools/verona-toolkit.md">verona-toolkit</a></td>
     </tr>
   </tbody>
 </table>
 
+## Related
+
+* [Ask & Ask MCP](surfaces/ask-and-mcp.md) — agent and MCP direction
+* [Build on Verona](../developers/overview.md)
+
 ## References
 
-- [Xion Agent Toolkit Repository](https://github.com/burnt-labs/xion-agent-toolkit)
+- [Verona Agent Toolkit Repository](https://github.com/burnt-labs/xion-agent-toolkit)
 - [Install for AI Agents](https://raw.githubusercontent.com/burnt-labs/xion-agent-toolkit/main/INSTALL-FOR-AGENTS.md)
 - [CLI Reference](https://github.com/burnt-labs/xion-agent-toolkit/blob/main/docs/cli-reference.md)

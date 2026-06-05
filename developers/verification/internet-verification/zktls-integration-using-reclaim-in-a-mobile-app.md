@@ -17,7 +17,7 @@ Before you begin, ensure you have the following installed and configured:
 * [**Node.js** (LTS version recommended) and **npm**](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 * An Android Emulator via [Android Studio](https://docs.expo.dev/get-started/set-up-your-environment?platform=android\&device=physical\&mode=development-build\&buildEnv=local#set-up-an-android-device-with-a-development-build), iOS Simulator via [Xcode](https://docs.expo.dev/get-started/set-up-your-environment?platform=ios\&device=physical\&mode=development-build\&buildEnv=local#set-up-an-ios-device-with-a-development-build), **or** a physical mobile device for testing
 
-The following [guide](https://docs.expo.dev/guides/local-app-development) will help you set up your local development environment for Expo. We also have a guide to help [Set up your XION Mobile Development Environment](../../accounts/mobile-app/set-up-your-xion-mobile-development-environment.md), which shows how to get your Android emulator and iOS simulator set up.
+The following [guide](https://docs.expo.dev/guides/local-app-development) will help you set up your local development environment for Expo. We also have a guide to help [Set up your XION Mobile Development Environment](../../accounts/mobile-app/set-up-mobile-development-environment.md), which shows how to get your Android emulator and iOS simulator set up.
 
 
 
@@ -91,7 +91,7 @@ You can find the RUM contract here [https://github.com/burnt-labs/contracts/pull
 * **Verification Address**: Which is the address of the verification contract that will be called to verify if the proof is valid.
 * **Claim Key**: This is an element in the proof dataset that will be stored on chain. This comes from picking out the value from the `claimData.context` within the proof. For this guide we will be using the `followers_count` key.
 
-We have deployed a version of the RUM contract on Testnet with `CODE_ID` being `1289`. If you are using the [provided verification contract instance](zktls-integration-using-reclaim-in-a-xion-mobile-app.md#reclaims-verification-contract), you only need to update the `claim_key` parameter.\
+We have deployed a version of the RUM contract on Testnet with `CODE_ID` being `1289`. If you are using the [provided verification contract instance](zktls-integration-using-reclaim-in-a-mobile-app.md#reclaims-verification-contract), you only need to update the `claim_key` parameter.\
 If you are using your own verification contract, you must update both the `claim_key` and `verification_addr` parameters.
 
 ```javascript

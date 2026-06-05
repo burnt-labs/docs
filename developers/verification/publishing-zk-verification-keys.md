@@ -5,7 +5,7 @@ icon: key
 
 # Publishing ZK Verification Keys
 
-This guide explains how to publish verification keys (vkeys) for zero-knowledge proving systems to XION using the `xiond` CLI. Verification keys are a core component of XION's [Verification Infrastructure](../../xions-core/concepts/verification-infrastructure/), enabling on-chain proof verification.
+This guide explains how to publish verification keys (vkeys) for zero-knowledge proving systems to XION using the `xiond` CLI. Verification keys are a core component of XION's [Verification Infrastructure](../../about-verona/concepts/verification-infrastructure/), enabling on-chain proof verification.
 
 ## Overview
 
@@ -35,7 +35,7 @@ Before verifying zero-knowledge proofs on XION, you must publish the correspondi
 ## Prerequisites
 
 1. **xiond installed** — See [Setting up your Local Environment](../computation/local-development/setting-up-env/installation-prerequisites-setup-local-environment.md)
-2. **A funded account** — You need XION tokens to pay transaction fees ([request testnet tokens](../references/xion-testnet.md))
+2. **A funded account** — You need XION tokens to pay transaction fees ([request testnet tokens](../references/testnet-tokens.md))
 3. **Your verification key file** — Generated from your ZK circuit
 
 ### Environment Setup
@@ -420,6 +420,6 @@ xiond query zk verify-ultrahonk --help
 
 ## Next Steps
 
-- Learn about [XION's Verification Infrastructure](../../xions-core/concepts/verification-infrastructure/)
+- Learn about [XION's Verification Infrastructure](../../about-verona/concepts/verification-infrastructure/)
 - Explore [zkTLS Integration](internet-verification/) for internet data verification
-- See [Interacting with Xion Chain using Xion Daemon](../tools/xiond-cli.md) for general CLI usage
+- See [Interacting with Xion Chain using Xion Daemon](../tools/daemon-cli.md) for general CLI usage

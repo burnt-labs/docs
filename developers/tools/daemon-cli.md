@@ -106,7 +106,7 @@ You can request testnet tokens with:
 
 For additional options, see:
 
-- [Requesting XION Testnet Tokens](../references/xion-testnet.md)
+- [Requesting XION Testnet Tokens](../references/testnet-tokens.md)
 
 For **mainnet** usage, fund your wallet from supported exchanges before broadcasting transactions.
 
@@ -199,4 +199,4 @@ xiond query tx <txhash> --node <node-url>
 ## Next steps
 
 - [Deploying Your First Smart Contract on XION](../computation/local-development/deploy-a-cosmwasm-smart-contract.md)
-- [Xion Agent Toolkit Tutorial](./xion-toolkit.md)
+- [Verona Agent Toolkit Tutorial](./verona-toolkit.md)

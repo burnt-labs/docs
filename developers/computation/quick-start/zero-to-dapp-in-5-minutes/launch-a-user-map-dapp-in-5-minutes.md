@@ -50,7 +50,7 @@ Behind the scenes, this:
 * Deploys a **Treasury contract** with a configured **Fee Grant** to enable gasless transactions and also **Authorization Grants** for users to give the frontend approval to interact with the **User Map** contract on their behalf
 * Funds the **Treasury contract** to pay transaction fees for users via the **Fee Grant**
 
-These 4 environment variables will be generated which will you will need to add to the frontend project `.env.local` [environment file](launch-a-user-map-dapp-on-xion-in-5-minutes.md#set-up-environment-variables):
+These 4 environment variables will be generated which will you will need to add to the frontend project `.env.local` [environment file](launch-a-user-map-dapp-in-5-minutes.md#set-up-environment-variables):
 
 ```env
 NEXT_PUBLIC_CONTRACT_ADDRESS=...

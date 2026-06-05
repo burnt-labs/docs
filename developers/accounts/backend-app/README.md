@@ -18,6 +18,6 @@ Xion provides a variety of ways to integrate, allowing you to choose the approac
 
 | Approach                                         | With frontend | With backend | Using MetaAccount(Account Abstraction) + Gasless Transaction | Example Guide                                                                                                             |
 | ------------------------------------------------ | ------------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
-| Direct Blockchain Interaction                    | No            | Yes          | No                                                           | [Interact with XION via your Backend Service](xion-backend-using-cosmjs.md)                                               |
+| Direct Blockchain Interaction                    | No            | Yes          | No                                                           | [Interact with XION via your Backend Service](backend-using-cosmjs.md)                                               |
 | Web2 Experience with XION Integration in backend | Optional      | Yes          | Yes                                                          | [Account Abstraction for RESTful API with Backend Session](build-restapi-with-account-abstraction-and-backend-session.md) |
 

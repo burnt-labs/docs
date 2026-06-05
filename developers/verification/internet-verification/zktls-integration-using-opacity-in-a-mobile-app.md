@@ -17,7 +17,7 @@ Before you begin, ensure you have the following installed and configured:
 * [**Node.js** (LTS version recommended) and **npm**](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 * An Android Emulator via [Android Studio](https://docs.expo.dev/get-started/set-up-your-environment?platform=android\&device=physical\&mode=development-build\&buildEnv=local#set-up-an-android-device-with-a-development-build), iOS Simulator via [Xcode](https://docs.expo.dev/get-started/set-up-your-environment?platform=ios\&device=physical\&mode=development-build\&buildEnv=local#set-up-an-ios-device-with-a-development-build), **or** a physical mobile device for testing
 
-The following [guide](https://docs.expo.dev/guides/local-app-development) will help you set up your local development environment for Expo. We also have a guide to help [Set up your XION Mobile Development Environment](../../accounts/mobile-app/set-up-your-xion-mobile-development-environment.md), which shows how to get your Android emulator and iOS simulator set up.
+The following [guide](https://docs.expo.dev/guides/local-app-development) will help you set up your local development environment for Expo. We also have a guide to help [Set up your XION Mobile Development Environment](../../accounts/mobile-app/set-up-mobile-development-environment.md), which shows how to get your Android emulator and iOS simulator set up.
 
 
 

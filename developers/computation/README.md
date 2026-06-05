@@ -34,14 +34,14 @@ Smart contracts on XION are built using CosmWasm and enable:
 
 Get started quickly with pre-built app templates:
 
-* [zero-to-dapp-in-5-minutes](xion-quick-start/zero-to-dapp-in-5-minutes/ "mention")
+* [zero-to-dapp-in-5-minutes](quick-start/zero-to-dapp-in-5-minutes/ "mention")
 
 ### Local Development
 
 Learn how to set up your development environment and deploy your first contract:
 
 * [setting-up-env](local-development/setting-up-env/ "mention")
-* [xiond-cli.md](../tools/xiond-cli.md "mention")
+* [xiond-cli.md](../tools/daemon-cli.md "mention")
 * [deploy-a-cosmwasm-smart-contract.md](local-development/deploy-a-cosmwasm-smart-contract.md "mention")
 
 ### Contract Library

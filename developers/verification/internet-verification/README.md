@@ -29,7 +29,7 @@ Zero Knowledge Proofs allow users to prove a fact is true, without revealing any
 
 XION integrates zkTLS via the [Reclaim Protocol](https://reclaimprotocol.org), allowing mobile users to generate zk-proofs of identity or status, and enabling smart contracts on XION to verify them.
 
-Get started with our guide on [zkTLS Integration using Reclaim in a Xion Mobile App](zktls-integration-using-reclaim-in-a-xion-mobile-app.md).
+Get started with our guide on [zkTLS Integration using Reclaim in a Xion Mobile App](zktls-integration-using-reclaim-in-a-mobile-app.md).
 
 ## zkFetch: Prove Anything Behind an API
 

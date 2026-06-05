@@ -9,7 +9,7 @@ icon: mobile
 
 {% hint style="success" %}
 Get a mobile app up and running fast:\
-[**Build a React Native Mobile app on XION in 5 Minutes**](https://docs.burnt.com/xion/developers/xion-quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-on-xion-in-5-minutes)
+[**Build a React Native Mobile app in 5 Minutes**](https://docs.burnt.com/xion/developers/computation/quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-in-5-minutes)
 
 This guide is designed to give developers instant look at a working app on XION, without needing to write or compile code, set up a local dev environment, or build out a frontend.
 {% endhint %}

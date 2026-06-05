@@ -339,7 +339,7 @@ Depending on your goals, here are two paths you can take next:
 
 ### Launch a Mobile app in 5 Minutes
 
-If you're looking to get something up and running **quickly**, follow our streamlined quick-start guide: [**Launch a Mobile dApp in 5 Minutes**](https://docs.burnt.com/xion/developers/xion-quick-start/zero-to-dapp-in-5-minutes/launch-a-user-map-dapp-on-xion-in-5-minutes)**.**
+If you're looking to get something up and running **quickly**, follow our streamlined quick-start guide: [**Launch a Mobile dApp in 5 Minutes**](https://docs.burnt.com/xion/developers/computation/quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-in-5-minutes)**.**
 
 \
 This guide walks you through:

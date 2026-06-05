@@ -24,4 +24,4 @@ You'll start by understanding the fundamental architectural differences between 
 
 * [Web2 vs Web3 App Architecture: A Comparison](web2-vs-web3-app-architecture-a-comparison.md)
 * [Misconceptions and Misapplied Web2 Patterns](misconceptions-and-misapplied-web2-patterns.md)
-* [Recommended Architecture for Apps on XION](recommended-architecture-for-dapps-on-xion.md)
+* [Recommended Architecture for Apps on XION](recommended-architecture-for-dapps.md)

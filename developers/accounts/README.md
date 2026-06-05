@@ -45,8 +45,8 @@ Build React applications with account abstraction and gasless transactions.
 
 Create mobile applications with React Native and Meta Account authentication.
 
-* [Set up your XION Mobile Development Environment](mobile-app/set-up-your-xion-mobile-development-environment.md) - Configure your development environment for mobile app development
-* [Building a React Native Mobile App with Abstraxion (Xion.js)](mobile-app/building-a-react-native-mobile-app-with-abstraxion-xion.js.md) - Build a React Native mobile app with Meta Account login and gasless UX
+* [Set up your XION Mobile Development Environment](mobile-app/set-up-mobile-development-environment.md) - Configure your development environment for mobile app development
+* [Building a React Native Mobile App with Abstraxion (Xion.js)](mobile-app/building-a-react-native-mobile-app-with-abstraxion.md) - Build a React Native mobile app with Meta Account login and gasless UX
 * [Create Mobile App and Integrate Meta Account Authentication](mobile-app/create-mobile-app-and-integrate-meta-account-authentication.md) - Integrate Meta Account authentication into your mobile app
 * [Mobile Development – Common Errors & Fixes](mobile-app/mobile-development-common-errors-and-fixes.md) - Troubleshoot common issues in mobile development
 
@@ -58,12 +58,12 @@ Create mobile applications with React Native and Meta Account authentication.
 
 Integrate XION with your backend services using RESTful APIs or CosmJS.
 
-* [Interact with XION via your Backend Service ](backend-app/xion-backend-using-cosmjs.md)- Learn how to interact with the XION blockchain from a backend environment using CosmJS
+* [Interact with XION via your Backend Service ](backend-app/backend-using-cosmjs.md)- Learn how to interact with the XION blockchain from a backend environment using CosmJS
 * [Account Abstraction for RESTful API with Backend Session](backend-app/build-restapi-with-account-abstraction-and-backend-session.md) - Build an application with a Web2 experience using XION Integration in backend
 
 #### AI Agent and CLI Path
 
 Use this path if your team works from terminal-first workflows or coding agents:
 
-* [AI Agent Quick Start](../../xions-core/ai-agents.md) - One-step copy instruction to let AI agents install and use Xion Agent Toolkit skills
-* [Xion Agent Toolkit Tutorial](../tools/xion-toolkit.md) - Guided setup for auth, Treasury management, and OAuth2 client management
+* [AI Agent Quick Start](../../about-verona/ai-agents.md) - One-step copy instruction to let AI agents install and use Xion Agent Toolkit skills
+* [Xion Agent Toolkit Tutorial](../tools/verona-toolkit.md) - Guided setup for auth, Treasury management, and OAuth2 client management

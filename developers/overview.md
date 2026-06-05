@@ -4,11 +4,13 @@ icon: lightbulb
 
 # Overview
 
-Welcome to XION! If you're coming from Web2 development, this page will help you understand what XION is and how it can transform your applications.
+Welcome to **Build on Verona**. If you're coming from Web2 development, this page explains the network, primitives, and how to ship consumer and agentic applications.
 
-### What is XION?
+**Verona** is the intelligence-layer brand; the underlying network and CLI use **XION** naming (`xion-testnet-1`, `xiond`, on-chain addresses). See [What is Verona?](../about-verona/concepts/overview.md) and [Rebrand: XION → Verona](../about-verona/rebrand-from-xion.md).
 
-XION is a blockchain platform designed specifically for building consumer applications. Unlike traditional blockchains that require users to manage wallets, seed phrases, and gas fees, XION provides a familiar Web2 experience while unlocking the power of Web3.
+### What you build on
+
+The XION network is a blockchain platform designed for consumer and verification-heavy applications. Unlike traditional blockchains that require users to manage wallets, seed phrases, and gas fees, XION provides a familiar Web2 experience while unlocking the power of Web3.
 
 Think of XION as a complete backend infrastructure that gives you:
 
@@ -174,7 +176,7 @@ Now that you understand the big picture, here's how to start building:
    * [Mobile App Getting Started](accounts/mobile-app/)
 2. **Smart Contracts**: Build your backend logic
    * [Computation Layer Overview](computation/)
-   * [Quick Start Guide](computation/xion-quick-start/zero-to-dapp-in-5-minutes/)
+   * [Quick Start Guide](computation/quick-start/zero-to-dapp-in-5-minutes/)
    * [Local Development Guide](computation/local-development/)
    * [Re-using Existing Contracts](computation/re-using-existing-contracts/)
    * [Integrations](computation/integrations/)
@@ -190,10 +192,10 @@ Libraries and CLIs for app and automation workflows:
 
 * [Tools & SDKs overview](tools/)
 * [xion.js](https://github.com/burnt-labs/xion.js) — Web App and Mobile App guides under [Accounts](accounts/)
-* [Mob signing library](tools/mob-a-multi-platform-signing-client-library-for-xion.md)
-* [AI Agent Quick Start](../xions-core/ai-agents.md)
-* [Xion Agent Toolkit](tools/xion-toolkit.md)
-* [xiond CLI](tools/xiond-cli.md)
+* [Mob signing library](tools/mob-signing-client.md)
+* [AI Agent Quick Start](../about-verona/ai-agents.md)
+* [Verona Agent Toolkit](tools/verona-toolkit.md)
+* [Daemon CLI (`xiond`)](tools/daemon-cli.md)
 
 ### Key Concepts for Web2 Developers
 
