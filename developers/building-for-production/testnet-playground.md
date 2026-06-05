@@ -1,6 +1,6 @@
-# Xion Testnet: Your Development Playground
+# Testnet: Your Development Playground
 
-The **Xion Testnet** is a permissionless environment designed for developers to build, test, and refine their decentralized applications (apps) before deploying to **Mainnet**. It allows you to safely experiment with smart contracts, receive community feedback, and ensure your app is secure and functional.
+The **XION testnet** (`xion-testnet-1`) is a permissionless environment for building, testing, and refining applications before deploying to **Mainnet**.
 
 
 
@@ -17,8 +17,8 @@ Testnet serves as a critical step in the development process, offering:
 
 ## **Testnet Resources**
 
-To begin building on Xion's Testnet, you'll need these essential resources. First, set up your development environment by following our [Complete Environment Setup Guide](https://docs.burnt.com/xion/developers/featured-guides/setup-local-environment) to configure everything for smart contract development and chain interaction.
+To begin building on testnet, set up your development environment using the [local environment setup guide](../computation/local-development/setting-up-env/installation-prerequisites-setup-local-environment.md).
 
-You'll need XION test tokens to interact with the network. These are free and available through the [Testnet Faucet](https://docs.burnt.com/xion/developers/section-overview/xion-testnet). Once funded, you can connect to the Testnet using public endpoints to execute transactions and queries. Find all [Endpoint Details Here](https://docs.burnt.com/xion/developers/section-overview/public-endpoints-and-resources#testnet-2).
+You'll need XION test tokens to interact with the network. These are free and available through [Requesting Testnet Tokens](../references/testnet-tokens.md). Once funded, connect using [Public Endpoints & Resources](../references/public-endpoints-and-resources.md#testnet-2).
 
-To monitor activity, use our [Block Explorers](https://docs.burnt.com/xion/developers/section-overview/block-explorers) to track accounts, transactions, proposals and validators. For cross-chain functionality, Xion supports Inter-Blockchain Communication. Explore connected chains and assets through our [IBC Channels ](https://docs.burnt.com/xion/developers/section-overview/ibc-denoms-on-xion-networks)section.
+Monitor activity with [Block Explorers](../references/block-explorers.md). For cross-chain functionality, explore [IBC Denoms](../references/ibc-denoms.md).

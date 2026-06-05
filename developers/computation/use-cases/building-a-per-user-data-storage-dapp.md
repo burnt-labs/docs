@@ -164,7 +164,7 @@ The compiled contract will be located at `artifacts/user_map.wasm`.
 
 ### **Upload Optimized Contract On-chain** <a href="#upload-optimized-contract-on-chain" id="upload-optimized-contract-on-chain"></a>
 
-To learn how to set up a wallet see the following section on [generating an account](https://docs.burnt.com/xion/developers/featured-guides/your-first-contract/deploy-a-cosmwasm-smart-contract#generate-an-account) using **xiond**. Next, set your **wallet address** or **key name** by executing the following in your terminal:
+To learn how to set up a wallet see the following section on [generating an account](../local-development/deploy-a-cosmwasm-smart-contract.md#generate-an-account) using **xiond**. Next, set your **wallet address** or **key name** by executing the following in your terminal:
 
 ```sh
 WALLET="your-wallet-address-or-key-name-here"
@@ -324,7 +324,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 Once the preview is to your liking click the "**Create**" button to create the Treasury contract.
 
 {% hint style="info" %}
-Learn more about Treasury Contracts [here](https://docs.burnt.com/xion/developers/featured-guides/your-first-dapp/create-a-gas-less-user-experience).
+Learn more about Treasury Contracts [here](../../accounts/getting-started/treasury-contracts.md).
 {% endhint %}
 
 ## Building the Frontend

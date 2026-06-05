@@ -27,6 +27,6 @@ You will build:
 
 A collection of quick start templates to help you launch apps on XION to give you an idea of the Abstraction workflow.
 
-* [Overview](https://docs.burnt.com/xion/developers/computation/quick-start/zero-to-dapp-in-5-minutes): Start here for a breakdown of all the available templates and how to use them.
-* [Launch a User Map app](https://docs.burnt.com/xion/developers/computation/quick-start/zero-to-dapp-in-5-minutes/launch-a-user-map-dapp-in-5-minutes): Launch a web based app that lets users store and retrieve data using the [user map](https://github.com/burnt-labs/contracts/tree/main/contracts/user_map) smart contract.
-* [Build a React Native Mobile app](https://docs.burnt.com/xion/developers/computation/quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-in-5-minutes): Create a mobile app with Meta Account login and gasless UX using Abstraxion and interacting with an instance of the [user map](https://github.com/burnt-labs/contracts/tree/main/contracts/user_map) contract.
+* [Overview](zero-to-dapp-in-5-minutes/README.md): Start here for a breakdown of all the available templates and how to use them.
+* [Launch a User Map app](zero-to-dapp-in-5-minutes/launch-a-user-map-dapp-in-5-minutes.md): Launch a web based app that lets users store and retrieve data using the [user map](https://github.com/burnt-labs/contracts/tree/main/contracts/user_map) smart contract.
+* [Build a React Native Mobile app](zero-to-dapp-in-5-minutes/react-native-mobile-dapp-in-5-minutes.md): Create a mobile app with Meta Account login and gasless UX using Abstraxion and interacting with an instance of the [user map](https://github.com/burnt-labs/contracts/tree/main/contracts/user_map) contract.

@@ -16,7 +16,7 @@ Among these, we recommend **VS Code** for its excellent Rust support, ease of co
 
 ## Prerequisites
 
-* Before proceeding, ensure that the **Rust compiler (rustc)** is installed. You can refer to the [Installation Guide](https://docs.burnt.com/xion/developers/featured-guides/setup-local-environment/installation-prerequisites-setup-local-environment#rust) for step-by-step instructions on setting up Rust before continuing.
+* Before proceeding, ensure that the **Rust compiler (rustc)** is installed. You can refer to the [Installation Guide](installation-prerequisites-setup-local-environment.md#rust) for step-by-step instructions on setting up Rust before continuing.
 
 
 

@@ -8,8 +8,8 @@ This guide will walk you through the process of deploying a smart contract on th
 
 Before deploying your smart contract on-chain, ensure you have completed the following setup steps:
 
-* **Set up your local environment**: Follow the [installation and setup guide](https://docs.burnt.com/xion/developers/featured-guides/setup-local-environment/installation-prerequisites-setup-local-environment) to configure your development environment.
-* **Install the XION daemon**: Set up the XION CLI by following the [installation instructions](https://docs.burnt.com/xion/developers/featured-guides/setup-local-environment/interact-with-xion-chain-setup-xion-daemon) to interact with the blockchain.
+* **Set up your local environment**: Follow the [installation and setup guide](setting-up-env/installation-prerequisites-setup-local-environment.md) to configure your development environment.
+* **Install the XION daemon**: Set up the XION CLI by following the [installation instructions](../tools/daemon-cli.md) to interact with the blockchain.
 * Make sure you have [Docker](https://www.docker.com/get-started) installed and running, as it is required to compile your contract.
 
 
@@ -55,7 +55,7 @@ You can obtain testnet tokens through one of the following methods:
 * **Discord Faucet**: Request tokens by using the faucet bot in the **XION Discord**.
 * **Faucet Web Page**: Visit the [XION Faucet](https://faucet.xion.burnt.com/) and follow the instructions to receive testnet tokens.
 
-For more details on accessing testnet tokens, see our [Faucet Page](https://docs.burnt.com/xion/developers/section-overview/xion-testnet).
+For more details on accessing testnet tokens, see our [Faucet Page](../references/testnet-tokens.md).
 
 #### **Mainnet Tokens**
 

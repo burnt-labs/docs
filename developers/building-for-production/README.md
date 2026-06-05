@@ -22,7 +22,7 @@ By leveraging Testnet, developers can refine their apps to the highest standards
 
 ## **Mainnet: A Secure & Permissioned Environment**
 
-Unlike **Testnet**, the **Xion Mainnet is permissioned**, meaning contracts cannot be deployed freely. Instead, contracts must go through a [**governance proposal process**](/broken/pages/uCsfMKNiJ1QdhQn7Ic6g), where the Xion community reviews and votes on whether a contract should be stored on-chain.
+Unlike **Testnet**, the **Xion Mainnet is permissioned**, meaning contracts cannot be deployed freely. Instead, contracts must go through a [**governance proposal process**](deploying-to-mainnet/smart-contract-audits-process-costs-and-support.md), where the Xion community reviews and votes on whether a contract should be stored on-chain.
 
 To protect users and maintain the security of the network, **audited contracts** have the highest chance of being considered for approval. This ensures that **Mainnet** hosts only **secure and reliable** apps.
 
@@ -33,4 +33,4 @@ To increase the chances of passing governance and deploying on Mainnet, develope
 1. **Use existing, battle-tested contracts** – Where possible, developers should build on top of widely used and audited contracts to simplify the review process.
 2. **Engage with the community** – Early discussions with the community can help identify concerns and improve the likelihood of governance approval.
 3. **Conduct a security audit** – A professional third-party audit is highly recommended to ensure the contract has no vulnerabilities.
-4. **Follow the governance process** – Refer to the [official guidelines](/broken/pages/uCsfMKNiJ1QdhQn7Ic6g) for detailed steps.
+4. **Follow the governance process** – Refer to [Smart Contract Audits: Process, Costs & Support](deploying-to-mainnet/smart-contract-audits-process-costs-and-support.md) and the [archived governance guide](../../others/archived/governance/governance-process-to-deploying-smart-contracts-to-mainnet.md) for detailed steps.

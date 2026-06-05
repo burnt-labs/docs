@@ -1472,7 +1472,7 @@ For a list of available RPC endpoints for each network, see the [Public Endpoint
 * **Treasury Contracts Documentation**: [Enabling Gasless Transactions with Treasury Contracts](getting-started/treasury-contracts.md)
 * **Xion Developer Portal (testnet)**: [https://dev.testnet.burnt.com/](https://dev.testnet.burnt.com/) (Treasury contracts)
 * **Xion Developer Portal (mainnet)**: [https://dev.burnt.com/](https://dev.burnt.com/) (Treasury contracts)
-* [Xion Agent Toolkit](../tools/verona-toolkit.md) — CLI for testnet/mainnet (`--network mainnet`) including OAuth2 client management
+* [Verona Agent Toolkit](../tools/verona-toolkit.md) — CLI for testnet/mainnet (`--network mainnet`) including OAuth2 client management
 
 {% hint style="success" %}
 If you have any questions or encounter issues, feel free to ask in our [**Telegram Developer Group**](https://t.me/+SC47NRhVz9Q2MDg0) or on [**Discord**](https://discord.com/invite/burnt) in our [**Dev Chat channel**](https://discord.com/channels/823953904512401469/1308977704586186762).

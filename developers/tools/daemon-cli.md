@@ -3,7 +3,7 @@ description: Use xiond CLI to query and transact on XION
 icon: terminal
 ---
 
-# Interacting with Xion Chain using Xion Daemon
+# Interacting with the chain using the daemon CLI (`xiond`)
 
 `xiond` is the command-line interface (CLI) daemon for interacting with the **XION blockchain**. It allows users to manage accounts, send transactions, query blockchain data, and operate validator nodes.
 

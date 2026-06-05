@@ -9,9 +9,9 @@ The module is particularly useful for **developers** and **projects** looking to
 Before proceeding, make sure you have the following:
 
 1. **XION Daemon (`xiond`) Installed:**\
-   Ensure that `xiond` is installed on your system. If not, follow the [Setting up your Local Development Environment](https://docs.burnt.com/xion/developers/featured-guides/setup-local-environment/installation-prerequisites-setup-local-environment#xiond) guide to set it up.
+   Ensure that `xiond` is installed on your system. If not, follow the [Setting up your Local Development Environment](../../local-development/setting-up-env/installation-prerequisites-setup-local-environment.md#xiond) guide to set it up.
 2. **An Active Account:**\
-   Set up an account using `xiond` by following the [Generate an account](https://docs.burnt.com/xion/developers/featured-guides/setup-local-environment/interact-with-xion-chain-setup-xion-daemon#generate-an-account) guide. You will use this account to execute transactions.
+   Set up an account using `xiond` by following the [Generate an account](../../tools/daemon-cli.md#generate-an-account) guide. You will use this account to execute transactions.
 3. **A Funded Account:**\
    You need an account with sufficient **native XION tokens** to cover transaction fees. You can obtain testnet tokens through the [**XION testnet faucet**](../../../references/testnet-tokens.md).
 

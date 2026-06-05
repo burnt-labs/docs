@@ -63,4 +63,4 @@ Account abstraction moves account logic from the application layer to the protoc
 
 **Account Recovery:** Unlike traditional wallets, Meta Accounts support configurable recovery. If a user loses their authentication device, they can recover access through pre-configured recovery methods (additional email, social login, trusted contacts, time-locked recovery).
 
-Detailed implementation guides are in the [Developer](/broken/pages/bFL2eEMYjRSn0lbLFgv4) section.
+Detailed implementation guides are in [Build on Verona — Accounts](../../developers/accounts/getting-started/).

@@ -169,5 +169,5 @@ This will launch the project in Visual Studio Code. From there, open a terminal 
 
 ## Install `xiond` Binary
 
-You can now follow this [guide](https://docs.burnt.com/xion/developers/featured-guides/setup-local-environment/installation-prerequisites-setup-local-environment#xiond) to install `xiond` within the Ubuntu environment. It's preferable to use the **Debian based** installer.
+You can now follow this [guide](installation-prerequisites-setup-local-environment.md#xiond) to install `xiond` within the Ubuntu environment. It's preferable to use the **Debian based** installer.
 

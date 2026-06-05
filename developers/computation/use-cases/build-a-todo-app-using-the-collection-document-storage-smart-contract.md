@@ -247,7 +247,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 You will need to enter a `Redirect URL` along with an `ICON URL`. After those fields are set click the "**Create**" button to finally create the treasury contract instance. You will be taken to the dahsboard where you will see the newly created Treasury Contract instance. You can click on an instance to get the treasury contract address which will be required for setting up the frontend.
 
 {% hint style="info" %}
-Learn more about Treasury Contracts [here](https://docs.burnt.com/xion/developers/featured-guides/your-first-dapp/create-a-gas-less-user-experience).
+Learn more about Treasury Contracts [here](../../accounts/getting-started/treasury-contracts.md).
 {% endhint %}
 
 

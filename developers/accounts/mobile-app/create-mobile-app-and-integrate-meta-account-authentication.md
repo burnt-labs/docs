@@ -339,7 +339,7 @@ Depending on your goals, here are two paths you can take next:
 
 ### Launch a Mobile app in 5 Minutes
 
-If you're looking to get something up and running **quickly**, follow our streamlined quick-start guide: [**Launch a Mobile dApp in 5 Minutes**](https://docs.burnt.com/xion/developers/computation/quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-in-5-minutes)**.**
+If you're looking to get something up and running **quickly**, follow our streamlined quick-start guide: [**Launch a Mobile dApp in 5 Minutes**](../../computation/quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-in-5-minutes.md)**.**
 
 \
 This guide walks you through:
@@ -354,7 +354,7 @@ It’s the fastest way to see the full app lifecycle in action.
 
 ### Deep Dive: How the Mobile app is built
 
-If you want to understand **how the mobile app works under the hood**, explore this step-by-step tutorial: [**Building a React Native Mobile App with Abstraxion (Xion.js)**](https://docs.burnt.com/xion/developers/learn-and-build/mobile-development/building-a-react-native-mobile-app-with-abstraxion-xion.js)**.**
+If you want to understand **how the mobile app works under the hood**, explore this step-by-step tutorial: [**Building a React Native Mobile App with Abstraxion**](building-a-react-native-mobile-app-with-abstraxion.md)**.**
 
 \
 This guide breaks down:

@@ -15,7 +15,7 @@ In this guide, we will walk through building a basic app using the [Abstraxion l
 
 The **`AbstraxionProvider`** examples below use **`authentication.type: "auto"`** (recommended for new apps). For other modes and terminology, see the section hub [Web App Development](README.md).
 
-To better understand Account Abstraction you can visit the [Introduction to Account Abstraction](https://docs.burnt.com/xion/developers/learn/intro-to-account-abstraction) page.
+To better understand Account Abstraction you can visit the [Introduction to Account Abstraction](../../about-verona/concepts/intro-to-account-abstraction.md) page.
 
 The [xion.js `demo-app`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app) is a **Next.js** reference; **this tutorial uses Vite + React** so you can follow the same patterns without a framework lock-in.
 

@@ -32,7 +32,7 @@ Before you begin, make sure you have the following installed:
 
 ## Create Instance of User Map and Treasury Contracts
 
-**Compiling** and **instantiating** smart contracts can feel like huge tasks, especially for new developers. You typically need to set up your development environment with tools like [**Docker**](https://docs.burnt.com/xion/developers/xion-quick-start/setup-local-environment/installation-prerequisites-setup-local-environment#docker) and [**xiond**](https://docs.burnt.com/xion/developers/xion-quick-start/setup-local-environment/installation-prerequisites-setup-local-environment#xiond), and go through the full process of compiling, deploying, and instantiating your contracts manually. On top of that, creating and configuring a Treasury contract via the [**Dev Portal**](https://dev.testnet.burnt.com) can be overwhelming if you're just getting started.
+**Compiling** and **instantiating** smart contracts can feel like huge tasks, especially for new developers. You typically need to set up your development environment with tools like [**Docker**](../../local-development/setting-up-env/installation-prerequisites-setup-local-environment.md#docker) and [**xiond**](../../local-development/setting-up-env/installation-prerequisites-setup-local-environment.md#xiond), and go through the full process of compiling, deploying, and instantiating your contracts manually. On top of that, creating and configuring a Treasury contract via the [**Dev Portal**](https://dev.testnet.burnt.com) can be overwhelming if you're just getting started.
 
 To make this much easier, we’ve created a [**quick launch frontend solution**](https://quickstart.dev.testnet.burnt.com) for this **User Map** app that takes care of all the heavy lifting, so you can skip the setup pain and focus on experimenting with a real, working app.
 
@@ -132,4 +132,4 @@ Once connected, the interface will allow you to:
 
 ***
 
-For a detailed breakdown of the contract’s design, execution messages, and frontend setup see [Full Guide – Building a Per-User Data Storage app](https://docs.burnt.com/xion/developers/learn-and-build/use-cases/building-a-per-user-data-storage-dapp).
+For a detailed breakdown of the contract’s design, execution messages, and frontend setup see [Full Guide – Building a Per-User Data Storage app](../../use-cases/building-a-per-user-data-storage-dapp.md).
