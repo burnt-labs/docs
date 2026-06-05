@@ -53,7 +53,7 @@ Your account is not fully registered on-chain until it is involved in a transact
 You can obtain testnet tokens through one of the following methods:
 
 * **Discord Faucet**: Request tokens by using the faucet bot in the **XION Discord**.
-* **Faucet Web Page**: Visit the [XION Faucet](https://faucet.xion.burnt.com/) and follow the instructions to receive testnet tokens.
+* **Faucet Web Page**: Visit the [Verona Faucet](https://faucet.xion.burnt.com/) and follow the instructions to receive testnet tokens.
 
 For more details on accessing testnet tokens, see our [Faucet Page](../../references/testnet-tokens.md).
 

@@ -360,7 +360,7 @@ Before using this in production:
 ### Additional Resources
 
 * Verona Docs: [Welcome to Verona](../../../README.md)
-* XION Developer Portal: https://dev.testnet.burnt.com
+* Developer Portal: https://dev.testnet.burnt.com
 * Brale API Docs: https://docs.brale.xyz
 * Brale Webhook Events: https://docs.brale.xyz/webhooks/webhook-events
 * Brale Quick Start: https://docs.brale.xyz/overview/quick-start/

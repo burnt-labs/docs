@@ -39,7 +39,7 @@ Before deploying to mainnet, ensure you have:
 Contract deployment on XION mainnet requires following a governance process. Here are the mandatory steps:
 
 1. **Create a Signaling Proposal**
-   * Post your proposal in the [Mainnet Contract Deployments category](https://discourse.xion.burnt.com/c/govpros/mainnet-contract-deployments/6) on the XION forum
+   * Post your proposal in the [Mainnet Contract Deployments category](https://discourse.xion.burnt.com/c/govpros/mainnet-contract-deployments/6) on the Verona forum
    * Announce your signaling proposal in the ["XION Developer Ecosystem" Telegram channel](https://t.me/+5KA8xBuU5wYzZjU0)
    * Wait for community feedback and respond accordingly
 2. **Submit Governance Proposal**

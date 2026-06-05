@@ -73,7 +73,7 @@ Create a `.env.local` file in your project root:
 # Database
 DATABASE_URL="file:./dev.db"
 
-# XION Configuration
+# Configuration
 XION_NETWORK="testnet"
 XION_REDIRECT_URL="http://localhost:3000/api/callback/grant_session"
 XION_TREASURY="xion1..." # Your treasury address
@@ -909,7 +909,7 @@ Create production environment variables:
 # Production Database
 DATABASE_URL="postgresql://user:password@host:port/database"
 
-# XION Configuration
+# Configuration
 XION_NETWORK="mainnet"
 XION_REDIRECT_URL="https://yourdomain.com/api/callback/grant_session"
 XION_TREASURY="xion1..."

@@ -102,7 +102,7 @@ xiond keys show <keyname> -a
 You can request testnet tokens with:
 
 - **Discord faucet**
-- **Web faucet**: [XION Faucet](https://faucet.xion.burnt.com/)
+- **Web faucet**: [Verona Faucet](https://faucet.xion.burnt.com/)
 
 For additional options, see:
 

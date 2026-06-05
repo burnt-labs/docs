@@ -59,7 +59,7 @@ You **MUST enable the "IS OAUTH2 APP" toggle** in the Treasury contract's Update
 
 **To enable the OAuth2 toggle:**
 
-1. Navigate to your Treasury contract in the [Xion Developer Portal (testnet)](https://dev.testnet.burnt.com/) or [Xion Developer Portal (mainnet)](https://dev.burnt.com/). Use the portal that matches your target network.
+1. Navigate to your Treasury contract in the [Developer Portal (testnet)](https://dev.testnet.burnt.com/) or [Developer Portal (mainnet)](https://dev.burnt.com/). Use the portal that matches your target network.
 2. Click the **"Update Params"** button
 3. Enable the **"IS OAUTH2 APP"** toggle switch
 4. Save the changes
@@ -1470,8 +1470,8 @@ For a list of available RPC endpoints for each network, see the [Public Endpoint
 * **Xion Types Repository**: [https://github.com/burnt-labs/xion-types](https://github.com/burnt-labs/xion-types)
 * **Xion Types TypeScript Guide**: [https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/GUIDE.md](https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/GUIDE.md)
 * **Treasury Contracts Documentation**: [Enabling Gasless Transactions with Treasury Contracts](getting-started/treasury-contracts.md)
-* **Xion Developer Portal (testnet)**: [https://dev.testnet.burnt.com/](https://dev.testnet.burnt.com/) (Treasury contracts)
-* **Xion Developer Portal (mainnet)**: [https://dev.burnt.com/](https://dev.burnt.com/) (Treasury contracts)
+* **Developer Portal (testnet)**: [https://dev.testnet.burnt.com/](https://dev.testnet.burnt.com/) (Treasury contracts)
+* **Developer Portal (mainnet)**: [https://dev.burnt.com/](https://dev.burnt.com/) (Treasury contracts)
 * [Verona Agent Toolkit](../tools/verona-toolkit.md) — CLI for testnet/mainnet (`--network mainnet`) including OAuth2 client management
 
 {% hint style="success" %}

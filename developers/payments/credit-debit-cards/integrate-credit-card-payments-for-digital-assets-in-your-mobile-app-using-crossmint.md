@@ -119,7 +119,7 @@ To successfully integrate the **Abstraxion SDK** into the app, we first need to 
 
 ### Steps to Deploy a Treasury Contract <a href="#steps-to-deploy-a-treasury-contract" id="steps-to-deploy-a-treasury-contract"></a>
 
-1. Login to the [XION Developer Portal](https://dev.testnet.burnt.com/).
+1. Login to the [Developer Portal](https://dev.testnet.burnt.com/).
 2. Click the **"New Treasury"** button to create a new treasury contract instance.
 3. **Select the appropriate configurations**. The default "**Fee Grant (Allowance)**" and "**Grant Config (Permission)**" should be enough for this application.
 
@@ -151,7 +151,7 @@ npm install
 2. Copy the **`.env.example`** file and name it **`.env.local`** and set the values with the correct information:
 
 ```javascript
-# XION Configuration
+# Configuration
 EXPO_PUBLIC_TREASURY_CONTRACT_ADDRESS="your-treasury-contract-address"
 EXPO_PUBLIC_RPC_ENDPOINT="https://rpc.xion-testnet-2.burnt.com:443"
 EXPO_PUBLIC_REST_ENDPOINT="https://api.xion-testnet-2.burnt.com"
