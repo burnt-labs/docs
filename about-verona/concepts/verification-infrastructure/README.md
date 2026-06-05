@@ -2,7 +2,7 @@
 
 ### The Truth Engine: Verify Anything on the Internet, Privately
 
-XION's verification infrastructure, collectively called the Truth Engine, is what makes XION useful. It applies zero-knowledge proofs to three distinct data sources, enabling applications to verify any data on the internet without exposing the underlying information.
+The **Truth Engine** is Verona's verification stack on the XION network. It applies zero-knowledge proofs to three distinct data sources, enabling applications and authorized agents to verify claims without exposing underlying information.
 
 #### Why Verification Matters for Developers
 
@@ -65,7 +65,7 @@ const attestation = await submitProofOnChain(proof);
 // execute logic based on the result
 ```
 
-Specific integration guides, SDKs, example contracts, and client libraries for each technology are available in the [Developer Documentation](../developers/).
+Specific integration guides, SDKs, example contracts, and client libraries for each technology are available in [Build on Verona](../../../developers/verification/README.md).
 
 #### Composability
 

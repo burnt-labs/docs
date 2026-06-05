@@ -4,11 +4,12 @@ description: Key Terms and Concepts
 
 # Architecture & Tech Glossary
 
-### Verification Terms
+### Product Terms
 
-| Term                           | Definition                                                                                                                                                           |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Truth Engine**               | XION's verification infrastructure comprising zkTLS (web data), zkEmail (authenticated email), and App Attestations (mobile apps). Enables private, cryptographic verification of real-world data from the internet. |
+| Term      | Definition                                                                                                                                                                      |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Verona** | The intelligence-layer brand for the XION network. Narrative and product surfaces (EarnOS, Burnt Verified, Ask & MCP, Data Backpack); on-chain identifiers remain **XION**. |
+| **Truth Engine** | Verification infrastructure comprising zkTLS (web data), zkEmail (authenticated email), and App Attestations (mobile apps). Enables private, cryptographic verification of real-world data. |
 | **zkTLS**                      | Zero-knowledge verification for web data. Creates proofs over TLS-encrypted sessions from any website, enabling claims about ratings, balances, loyalty status, and more without exposing raw data.              |
 | **DKIM Module (zkEmail)**      | Verification module that creates zero-knowledge proofs over email contents using DKIM signatures. Proves email-based claims without exposing the email.              |
 | **App Attestation**            | Verification module that creates cryptographic proofs of mobile application data. Proves in-app state without exposing app credentials or full data.                 |

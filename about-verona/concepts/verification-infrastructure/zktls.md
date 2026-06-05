@@ -90,12 +90,12 @@ zkTLS doesn't work in isolation. It forms one pillar of XION's comprehensive ver
 
 Together, they enable **composable verified profiles**. A user can combine an Uber rating (zkTLS), employment confirmation (DKIM), and fitness milestones (App Attestation) into a rich, privacy-first identity that any application can query with permission.
 
-This composability, anchored to Meta Accounts, is what makes XION the Trust Layer for the Internet.
+This composability, anchored to Meta Accounts, is what grounds verified intelligence for applications and agents on the network.
 
 #### Get Started with zkTLS
 
 Ready to build applications that understand real users without invading their privacy?
 
-Head to the [Developer Documentation](../developers/) to explore integration patterns, SDKs, example contracts, and live demos. Whether you're building the next generation of loyalty programs, reputation systems, or data marketplaces, zkTLS provides the foundational truth layer.
+Head to [Build on Verona — Verification](../../../developers/verification/README.md) to explore integration patterns, SDKs, example contracts, and live demos.
 
 **The internet is full of valuable signals. zkTLS lets you use them — privately, portably, and programmatically.**

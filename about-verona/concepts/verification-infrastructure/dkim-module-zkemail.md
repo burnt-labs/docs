@@ -2,7 +2,7 @@
 
 ### Verify Email Contents Cryptographically Without Exposing Inbox Data
 
-The DKIM Module enables zero-knowledge proofs over email contents by leveraging DKIM (DomainKeys Identified Mail) signatures that email providers already attach to outgoing messages.
+The DKIM Module is one pillar of the **Truth Engine** on the XION network. It enables zero-knowledge proofs over email contents by leveraging DKIM (DomainKeys Identified Mail) signatures that email providers already attach to outgoing messages.
 
 #### How the DKIM Module Works
 

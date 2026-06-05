@@ -1,5 +1,5 @@
 ---
-description: XION's protocol-level account abstraction solution
+description: Protocol-level account abstraction on the XION network
 ---
 
 # Intro to Account Abstraction
@@ -21,7 +21,7 @@ The second type of account, smart contract accounts (SCAs), are governed by code
 
 ### Replacing Wallets with Programmable Accounts
 
-Account abstraction is the foundation of XION's user experience. Instead of requiring users to create cryptocurrency wallets, manage private keys, and secure seed phrases, XION provides Meta Accounts: protocol-level smart contract accounts that behave like familiar Web2 accounts while retaining the full power of Web3.
+Account abstraction is the foundation of the user experience on the network. Instead of requiring users to create cryptocurrency wallets, manage private keys, and secure seed phrases, Meta Accounts provide protocol-level smart contract accounts that behave like familiar Web2 accounts while retaining the full power of on-chain logic.
 
 #### The Problem with Traditional Wallets
 
@@ -32,9 +32,9 @@ Traditional blockchain wallets are the single largest barrier to mainstream adop
 * **Device lock-in.** Most wallets are tied to a specific device or browser extension. Switching devices requires manual key transfer.
 * **No programmability.** Traditional wallets are static. They cannot enforce spending limits, require multi-factor authentication for large transactions, or delegate limited access to applications.
 
-#### How XION Solves This
+#### How the Network Solves This
 
-XION's account abstraction moves account logic from the application layer to the protocol layer. Every account on XION is a smart contract (a "Meta Account") with programmable authentication, permissions, and recovery.
+Account abstraction moves account logic from the application layer to the protocol layer. Every account on the XION network is a smart contract (a "Meta Account") with programmable authentication, permissions, and recovery.
 
 **For users, this means:**
 

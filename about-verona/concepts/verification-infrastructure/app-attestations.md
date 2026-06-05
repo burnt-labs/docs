@@ -2,7 +2,7 @@
 
 ### Verify Mobile Application Data with Cryptographic Proofs
 
-App Attestations enable zero-knowledge verification of data from mobile applications. Mobile apps hold some of the most valuable verified data on the internet (rideshare ratings, fitness metrics, delivery history, streaming habits, financial app data), and App Attestations make this data provable without exposing it.
+App Attestations are a **Truth Engine** module on the XION network. They enable zero-knowledge verification of data from mobile applications—rideshare ratings, fitness metrics, delivery history, and more—without exposing underlying app credentials or full datasets.
 
 #### How App Attestations Work
 

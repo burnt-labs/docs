@@ -1,12 +1,12 @@
 ---
-description: Protocol-Level Account Abstraction
+description: Protocol-level account abstraction on the Verona network
 ---
 
-# XION's Meta Accounts
+# Meta Accounts
 
 ## Protocol-Level Account Abstraction
 
-XION's modular Meta Accounts introduce a highly adaptable and secure account creation and management framework. Built at the protocol level, Meta Accounts have significant benefits over traditional crypto wallets and enable novel Web3 application use cases.
+Meta Accounts on the XION network introduce a highly adaptable and secure account creation and management framework. Built at the protocol level, they have significant benefits over traditional crypto wallets and enable novel application use cases—including agent workflows that need scoped, user-consented access.
 
 #### Core Capabilities
 
@@ -19,17 +19,17 @@ XION's modular Meta Accounts introduce a highly adaptable and secure account cre
 
 #### How Meta Accounts Interact with Verification
 
-Meta Accounts serve as the identity anchor for XION's verification infrastructure. When a user generates a zero-knowledge proof (via zkTLS, zkEmail, or App Attestations), the resulting attestation is bound to their Meta Account. This creates a persistent, verified identity layer:
+Meta Accounts serve as the identity anchor for the Truth Engine. When a user generates a zero-knowledge proof (via zkTLS, zkEmail, or App Attestations), the resulting attestation is bound to their Meta Account. This creates a persistent, verified identity layer:
 
 * Attestations accumulate over time, building a rich verified profile
 * Applications can query multiple attestations for a single Meta Account
 * Users control which attestations are shared with which applications
-* Verified credentials are portable across all applications on XION
+* Verified credentials are portable across applications on the network
 
-This connection between Meta Accounts and verification is what enables the "Trust Layer" functionality. The account is the container for verified trust, and abstraction is what makes it accessible to everyone.
+This connection between Meta Accounts and verification is what grounds **Verona's intelligence layer**: the account holds verified facts, and abstraction makes them accessible to users and authorized agents.
 
 #### Start Building
 
-Follow the Account Abstraction guide in the [Developer](/broken/pages/bFL2eEMYjRSn0lbLFgv4) section to start building with [Meta Accounts](../../developers/accounts/getting-started/) today. The Abstraxion SDK provides a complete integration for web and mobile platforms.
+Follow the [Getting Started with Meta Accounts](../../developers/accounts/getting-started/) guide to build with Meta Accounts today. The Abstraxion SDK provides a complete integration for web and mobile platforms.
 
 _For technical deep-dive into Meta Account architecture, see_ [_Meta Accounts Design_](meta-accounts-design.md)_._

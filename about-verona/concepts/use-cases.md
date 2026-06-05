@@ -2,7 +2,7 @@
 
 ### Real-World Applications Enabled by Verification + Abstraction
 
-The following use cases demonstrate what becomes possible when zero-knowledge verification and complete abstraction work together. Each use case was previously impossible or impractical to build on other blockchains.
+**Verona** packages the XION network's Truth Engine and Generalized Abstraction for applications and agents that need **grounded, user-consented facts**. The use cases below show what becomes possible when zero-knowledge verification and complete abstraction work together—many were previously impossible or impractical on other networks.
 
 #### For Consumer Applications
 
@@ -77,3 +77,19 @@ _Technical approach:_ App Attestations verify in-game achievements and rankings.
 Gaming and betting applications can use attestations to verify outcomes, prevent cheating, and ensure fair play without relying on centralized referees.
 
 _Technical approach:_ Game state attestations provide cryptographic proof of outcomes. Smart contracts resolve bets and distribute winnings based on verified results.
+
+#### For Agents and Intelligent Applications
+
+These patterns extend to **authorized agents** that need grounded context without raw data access:
+
+**Verified Context for AI Agents**
+
+Agents can request scoped attestations (income range, loyalty tier, account standing) bound to a Meta Account instead of relying on unverified user input or scraped data.
+
+_Technical approach:_ Users generate proofs via zkTLS, zkEmail, or App Attestations. Attestations are stored against the Meta Account and exposed to agents through application consent flows and emerging [Ask & MCP](../surfaces/ask-and-mcp.md) rails. See [Data Backpack](../surfaces/data-backpack.md) for the portable-storage direction.
+
+**EarnOS-Style Verified Participation**
+
+Reward and revenue-sharing flows can require cryptographic proof of eligibility before settlement on chain.
+
+_Technical approach:_ Combine verification modules with Treasury-sponsored transactions so users never manage gas. See [EarnOS](../surfaces/earnos.md) and [Build on Verona — Verification](../../developers/verification/README.md).

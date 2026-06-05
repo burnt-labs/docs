@@ -1,10 +1,10 @@
 # Generalized Abstraction
 
-### Protocol-Level Abstraction That Makes Web3 Invisible
+### Protocol-Level Abstraction That Makes the Network Invisible
 
-> **Note:** This section was previously titled "Generalized Chain Abstraction." XION's abstraction layer is broader than cross-chain interoperability. It encompasses every functional barrier that prevents mainstream adoption: accounts, signatures, gas, payments, devices, and interoperability. The term "Generalized Abstraction" reflects this full scope.
+> **Note:** This section was previously titled "Generalized Chain Abstraction." The abstraction layer is broader than cross-chain interoperability. It encompasses every functional barrier that prevents mainstream adoption: accounts, signatures, gas, payments, devices, and interoperability. The term "Generalized Abstraction" reflects this full scope.
 
-XION's Generalized Abstraction layer embeds critical blockchain functionalities directly into the protocol. Unlike application-layer solutions that add complexity on top of existing chains, XION's abstractions are native to the L1 itself. This eliminates the need for third-party workarounds and creates a frictionless experience for both developers and users.
+**Verona** is the intelligence-layer narrative for the **XION** network. Generalized Abstraction is embedded directly in that network's protocol—unlike application-layer solutions that add complexity on top of existing chains. Every application built on the network automatically inherits full abstraction without additional development effort.
 
 #### Why Protocol-Level Abstraction Matters
 
