@@ -4,7 +4,9 @@ icon: badge-check
 
 # Verification
 
-This section covers how to integrate XION's verification infrastructure (the Truth Engine) into your application. Whether you are building a consumer app that needs to verify user identity, an advertising platform that needs to confirm real humans, or a DeFi protocol that needs to assess creditworthiness, these guides walk you through the full integration.
+This section covers how to integrate the **Truth Engine** into your application on the XION network. Whether you are building a consumer app, an agent workflow that needs verified context, or a DeFi protocol that assesses creditworthiness, these guides walk through full integration.
+
+Conceptual background: [Truth Engine](../../about-verona/concepts/verification-infrastructure/README.md) · Product surface: [Burnt Verified](../../about-verona/surfaces/burnt-verified.md)
 
 ### ZK Infrastructure
 

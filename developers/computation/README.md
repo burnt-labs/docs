@@ -4,7 +4,7 @@ icon: user-robot
 
 # Computation
 
-The Computation Layer covers smart contracts (automations), business logic, and workflows on XION.
+The Computation layer covers CosmWasm smart contracts, business logic, and workflows on the **XION** network (`xiond`, `xion-testnet-1`).
 
 ### Contract development notes
 
@@ -41,7 +41,7 @@ Get started quickly with pre-built app templates:
 Learn how to set up your development environment and deploy your first contract:
 
 * [setting-up-env](local-development/setting-up-env/ "mention")
-* [xiond-cli.md](../tools/daemon-cli.md "mention")
+* [daemon-cli.md](../tools/daemon-cli.md "mention")
 * [deploy-a-cosmwasm-smart-contract.md](local-development/deploy-a-cosmwasm-smart-contract.md "mention")
 
 ### Contract Library

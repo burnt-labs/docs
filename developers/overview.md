@@ -210,9 +210,9 @@ If you're coming from Web2, here are some concepts that map to what you already 
 | **Smart Contract**    | Backend API / Serverless Function | Trustless code that runs on the blockchain                           |
 | **Abstraxion**        | XION's Auth & Transaction SDK     | The JavaScript SDK for integrating XION into your app                |
 
-### Why Build on XION?
+### Why Build on Verona / XION?
 
-XION is designed for developers who want to build consumer applications, not just DeFi protocols. Here's what makes it different:
+The network is designed for developers building consumer and verification-heavy applications—not only DeFi protocols. Here's what makes it different:
 
 * **Familiar UX**: Your users don't need to know they're using blockchain technology
 * **No Gas Fees for Users**: You can sponsor transactions or use fee grants

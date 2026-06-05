@@ -1,15 +1,13 @@
 ---
-description: Get Started with Xion Accounts
+description: Meta Accounts, auth, and gasless transactions on Verona
 icon: screwdriver-wrench
 ---
 
 # Accounts
 
-Welcome to XION!
+Welcome to **Build on Verona — Accounts**.
 
-The XION ecosystem is built to support both beginner-friendly onboarding and advanced development workflows.
-
-This section covers everything you need to know about XION, Meta Accounts, authentication methods, gasless transactions, and building applications on XION. It was created specifically for teams building **custom frontends** that deeply integrate with the XION blockchain.
+This section covers Meta Accounts, authentication methods, gasless transactions, and building web, mobile, backend, or agent-driven applications on the **XION** network.
 
 ### What are XION Accounts?
 
@@ -45,8 +43,8 @@ Build React applications with account abstraction and gasless transactions.
 
 Create mobile applications with React Native and Meta Account authentication.
 
-* [Set up your XION Mobile Development Environment](mobile-app/set-up-mobile-development-environment.md) - Configure your development environment for mobile app development
-* [Building a React Native Mobile App with Abstraxion (Xion.js)](mobile-app/building-a-react-native-mobile-app-with-abstraxion.md) - Build a React Native mobile app with Meta Account login and gasless UX
+* [Set up your Mobile Development Environment](mobile-app/set-up-mobile-development-environment.md) - Configure your development environment for mobile app development
+* [Building a React Native Mobile App with Abstraxion](mobile-app/building-a-react-native-mobile-app-with-abstraxion.md) - Build a React Native mobile app with Meta Account login and gasless UX
 * [Create Mobile App and Integrate Meta Account Authentication](mobile-app/create-mobile-app-and-integrate-meta-account-authentication.md) - Integrate Meta Account authentication into your mobile app
 * [Mobile Development – Common Errors & Fixes](mobile-app/mobile-development-common-errors-and-fixes.md) - Troubleshoot common issues in mobile development
 
@@ -65,5 +63,5 @@ Integrate XION with your backend services using RESTful APIs or CosmJS.
 
 Use this path if your team works from terminal-first workflows or coding agents:
 
-* [AI Agent Quick Start](../../about-verona/ai-agents.md) - One-step copy instruction to let AI agents install and use Xion Agent Toolkit skills
-* [Xion Agent Toolkit Tutorial](../tools/verona-toolkit.md) - Guided setup for auth, Treasury management, and OAuth2 client management
+* [AI Agent Quick Start](../../about-verona/ai-agents.md) - One-step copy instruction for Verona Agent Toolkit skills
+* [Verona Agent Toolkit Tutorial](../tools/verona-toolkit.md) - Guided setup for auth, Treasury management, and OAuth2 client management

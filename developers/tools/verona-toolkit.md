@@ -10,7 +10,7 @@ Verona Agent Toolkit (CLI package `xion-toolkit`) is a CLI-first toolkit for bui
 This guide is for developers who are new to XION but already comfortable with CLI tools and AI coding agents.
 
 {% hint style="warning" %}
-**Beta:** Xion Agent Toolkit is in **beta**. It supports **testnet** (default) and **mainnet**. Use testnet for development and the faucet; switch to mainnet when you are ready for production (see [Networks](#networks) below).
+**Beta:** Verona Agent Toolkit is in **beta**. It supports **testnet** (default) and **mainnet**. Use testnet for development and the faucet; switch to mainnet when you are ready for production (see [Networks](#networks) below).
 {% endhint %}
 
 {% hint style="info" %}
@@ -68,7 +68,7 @@ For full installation detail:
 
 ## Networks
 
-Xion Agent Toolkit targets **testnet** by default and also supports **mainnet**. Pick the network that matches your Treasury and OAuth2 setup.
+Verona Agent Toolkit targets **testnet** by default and also supports **mainnet**. Pick the network that matches your Treasury and OAuth2 setup.
 
 | Network | CLI flag / config | Notes |
 | ------- | ----------------- | ----- |
@@ -85,7 +85,7 @@ xion-toolkit --network mainnet status
 xion-toolkit config set-network mainnet
 ```
 
-For full CLI flags and configuration, see the [Xion Agent Toolkit repository](https://github.com/burnt-labs/xion-agent-toolkit) and [Configuration](https://github.com/burnt-labs/xion-agent-toolkit/blob/main/docs/configuration.md) docs.
+For full CLI flags and configuration, see the [Verona Agent Toolkit repository](https://github.com/burnt-labs/xion-agent-toolkit) and [Configuration](https://github.com/burnt-labs/xion-agent-toolkit/blob/main/docs/configuration.md) docs.
 
 {% hint style="info" %}
 **OAuth2 client portal by network:** Manage OAuth2 clients in the [testnet portal](https://oauth2.testnet.burnt.com/) or [mainnet portal](https://oauth2.burnt.com/). See [OAuth2 App Development](../accounts/oauth2-app.md).
@@ -162,7 +162,7 @@ Use this command group to create, update, query, and manage OAuth2 client owners
 If you want your AI agent to set everything up, copy this exact instruction:
 
 ```text
-Follow this guide https://raw.githubusercontent.com/burnt-labs/xion-agent-toolkit/main/INSTALL-FOR-AGENTS.md to install and configure the Xion Agent Toolkit skills for AI agents.
+Follow this guide https://raw.githubusercontent.com/burnt-labs/xion-agent-toolkit/main/INSTALL-FOR-AGENTS.md to install and configure the Verona Agent Toolkit skills for AI agents.
 ```
 
 Recommended skills for this guide:
@@ -215,7 +215,7 @@ For complete error handling details:
 
 ## Detailed references
 
-- [Xion Agent Toolkit Repository](https://github.com/burnt-labs/xion-agent-toolkit)
+- [Verona Agent Toolkit Repository](https://github.com/burnt-labs/xion-agent-toolkit)
 - [CLI Reference](https://github.com/burnt-labs/xion-agent-toolkit/blob/main/docs/cli-reference.md)
 - [Quick Reference](https://github.com/burnt-labs/xion-agent-toolkit/blob/main/docs/QUICK-REFERENCE.md)
 - [Skills Guide](https://github.com/burnt-labs/xion-agent-toolkit/blob/main/docs/skills-guide.md)
