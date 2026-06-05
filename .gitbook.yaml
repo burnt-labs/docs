@@ -36,3 +36,32 @@ redirects:
   nodes-and-validators/run-a-node/configure-the-xion-daemon: nodes-and-validators/run-a-node/configure-the-daemon/README.md
   nodes-and-validators/run-a-node/join-the-xion-network: nodes-and-validators/run-a-node/join-the-network/README.md
   nodes-and-validators/become-a-validator/obtain-a-xion-wallet-address: nodes-and-validators/become-a-validator/obtain-a-wallet-address.md
+  xions-core/concepts/README: about-verona/concepts/overview.md
+  xions-core/concepts/generalized-abstraction: about-verona/concepts/generalized-abstraction.md
+  xions-core/concepts/verification-infrastructure: about-verona/concepts/verification-infrastructure/README.md
+  xions-core/concepts/verification-infrastructure/README: about-verona/concepts/verification-infrastructure/README.md
+  xions-core/concepts/intro-to-account-abstraction: about-verona/concepts/intro-to-account-abstraction.md
+  xions-core/concepts/meta-accounts-design: about-verona/concepts/meta-accounts-design.md
+  xions-core/concepts/architecture-and-tech-glossary: about-verona/concepts/architecture-and-tech-glossary.md
+  xions-core/concepts/use-cases: about-verona/concepts/use-cases.md
+  xions-core/concepts/verification-infrastructure/dkim-module-zkemail: about-verona/concepts/verification-infrastructure/dkim-module-zkemail.md
+  xions-core/concepts/verification-infrastructure/app-attestations: about-verona/concepts/verification-infrastructure/app-attestations.md
+  developers/featured-guides/setup-local-environment: developers/computation/local-development/setting-up-env/installation-prerequisites-setup-local-environment.md
+  developers/featured-guides/setup-local-environment/installation-prerequisites-setup-local-environment: developers/computation/local-development/setting-up-env/installation-prerequisites-setup-local-environment.md
+  developers/featured-guides/setup-local-environment/interact-with-xion-chain-setup-xion-daemon: developers/tools/daemon-cli.md
+  developers/featured-guides/your-first-contract/deploy-a-cosmwasm-smart-contract: developers/computation/local-development/deploy-a-cosmwasm-smart-contract.md
+  developers/featured-guides/your-first-dapp/create-a-gas-less-user-experience: developers/accounts/getting-started/treasury-contracts.md
+  developers/section-overview/xion-testnet: developers/references/testnet-tokens.md
+  developers/section-overview/block-explorers: developers/references/block-explorers.md
+  developers/section-overview/public-endpoints-and-resources: developers/references/public-endpoints-and-resources.md
+  developers/section-overview/ibc-denoms-on-xion-networks: developers/references/ibc-denoms.md
+  developers/section-overview/governance/deploy-contract-mainnet: developers/building-for-production/deploying-to-mainnet/README.md
+  developers/learn/intro-to-account-abstraction: about-verona/concepts/intro-to-account-abstraction.md
+  developers/learn-and-build/use-cases/building-a-per-user-data-storage-dapp: developers/computation/use-cases/building-a-per-user-data-storage-dapp.md
+  developers/learn-and-build/token-factory: developers/computation/integrations/token-factory/README.md
+  developers/learn-and-build/mobile-development/building-a-react-native-mobile-app-with-abstraxion-xion.js: developers/accounts/mobile-app/building-a-react-native-mobile-app-with-abstraxion.md
+  developers/building-for-mainnet: developers/building-for-production/README.md
+  developers/computation/xion-quick-start/zero-to-dapp-in-5-minutes: developers/computation/quick-start/zero-to-dapp-in-5-minutes/README.md
+  about-verona/rebrand-from-xion: about-verona/rebrand-from-xion.md
+  about-verona/surfaces: about-verona/surfaces/README.md
+  about-verona/token-and-revenue: about-verona/token-and-revenue.md
