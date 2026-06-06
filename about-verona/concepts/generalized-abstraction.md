@@ -48,9 +48,9 @@ The Verona network supports all major cryptographic signature schemes natively a
 The parameterized fee layer removes gas fees from the user experience entirely.
 
 * **Fee grants:** Applications sponsor transaction fees for their users via Treasury contracts
-* **Multi-token fees:** Fees can be paid in any token (USDC, $VER, or custom tokens), with automatic conversion
+* **Multi-token fees:** Fees can be paid in any token (USDC, $VERONA, or custom tokens), with automatic conversion
 * **Predictable pricing:** Applications can build transaction costs into product pricing rather than exposing variable gas fees
-* **No native token requirement:** Users never need to acquire $VER (Previously $XION) to use applications
+* **No native token requirement:** Users never need to acquire $VERONA (Previously $XION) to use applications
 
 _For developers: Treasury contracts are the primary mechanism for sponsoring gas. See the Developer > Getting Started section for Treasury contract setup and configuration._
 

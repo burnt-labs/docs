@@ -31,7 +31,7 @@ Before deploying to mainnet, ensure you have:
 
 1. Thoroughly tested your contract on testnet
 2. Conducted security audits if necessary
-3. $VER tokens in your wallet for deployment fees
+3. $VERONA tokens in your wallet for deployment fees
 4. The compiled `.wasm` file of your smart contract (must be identical to the version deployed and tested on testnet)
 
 ### Required Governance Steps <a href="#required-governance-steps" id="required-governance-steps"></a>

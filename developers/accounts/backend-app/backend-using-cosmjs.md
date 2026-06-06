@@ -535,7 +535,7 @@ When implementing these functions in a production backend environment:
 const transferResult = await sendTokens(
   "your wallet mnemonic",
   "recipient_burnt_address",
-  "1000000", // 1 $VER (Previously $XION) (1,000,000 uxion)
+  "1000000", // 1 $VERONA (Previously $XION) (1,000,000 uxion)
   "uxion"
 );
 console.log(`Transfer hash: ${transferResult.transactionHash}`);

@@ -35,7 +35,7 @@ Before verifying zero-knowledge proofs on the Verona network, you must publish t
 ## Prerequisites
 
 1. **xiond installed** — See [Setting up your Local Environment](../computation/local-development/setting-up-env/installation-prerequisites-setup-local-environment.md)
-2. **A funded account** — You need $VER tokens to pay transaction fees ([request testnet tokens](../references/testnet-tokens.md))
+2. **A funded account** — You need $VERONA tokens to pay transaction fees ([request testnet tokens](../references/testnet-tokens.md))
 3. **Your verification key file** — Generated from your ZK circuit
 
 ### Environment Setup

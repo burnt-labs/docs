@@ -63,3 +63,12 @@ redirects:
   developers/learn-and-build/mobile-development/building-a-react-native-mobile-app-with-abstraxion-xion.js: developers/accounts/mobile-app/building-a-react-native-mobile-app-with-abstraxion.md
   developers/building-for-mainnet: developers/building-for-production/README.md
   developers/computation/xion-quick-start/zero-to-dapp-in-5-minutes: developers/computation/quick-start/zero-to-dapp-in-5-minutes/README.md
+  developers/computation/xion-quick-start/zero-to-dapp-in-5-minutes/build-a-todo-app-using-the-collection-document-storage-smart-contract: developers/computation/quick-start/zero-to-dapp-in-5-minutes/build-a-todo-app-using-the-collection-document-storage-smart-contract.md
+  developers/building-for-production/deploying-to-xion-mainnet/community-engagement-building-support-for-your-dapp: developers/building-for-production/deploying-to-mainnet/community-engagement-building-support-for-your-dapp.md
+  developers/building-for-production/deploying-to-xion-mainnet/smart-contract-audits-process-costs-and-support: developers/building-for-production/deploying-to-mainnet/smart-contract-audits-process-costs-and-support.md
+  developers/computation/local-development/setting-up-env/README: developers/computation/local-development/setting-up-env/README.md
+  nodes-and-validators/run-a-node/configure-the-xion-daemon/app.toml: nodes-and-validators/run-a-node/configure-the-daemon/app.toml.md
+  nodes-and-validators/run-a-node/configure-the-xion-daemon/client.toml: nodes-and-validators/run-a-node/configure-the-daemon/client.toml.md
+  nodes-and-validators/run-a-node/configure-the-xion-daemon/config.toml: nodes-and-validators/run-a-node/configure-the-daemon/config.toml.md
+  developers/getting-started-advanced/your-first-dapp/xion-backend-using-cosmjs: developers/accounts/backend-app/backend-using-cosmjs.md
+  xions-core/learn/README: about-verona/concepts/overview.md

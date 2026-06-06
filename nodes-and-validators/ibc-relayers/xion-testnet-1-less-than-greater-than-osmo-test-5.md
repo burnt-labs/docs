@@ -36,7 +36,7 @@ balances:
   - denom: ibc/484532EB74866F3FB8A71F909F7B1B470FE2E66313DA0A1F9EE5B7C5C046D195
 ```
 
-* XION on Osmosis
+* $VERONA on Osmosis
 
 ```
 balances:

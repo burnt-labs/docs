@@ -59,7 +59,7 @@ For more details on accessing testnet tokens, see our [Faucet Page](../../refere
 
 #### **Mainnet Tokens**
 
-If you’re deploying contracts on **Verona Mainnet**, you can acquire $VER tokens through various **decentralized** and **centralized exchanges**.
+If you’re deploying contracts on **Verona Mainnet**, you can acquire $VERONA tokens through various **decentralized** and **centralized exchanges**.
 
 
 

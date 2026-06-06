@@ -106,7 +106,7 @@ You can request testnet tokens with:
 
 For additional options, see:
 
-- [Requesting $VER Testnet Tokens](../references/testnet-tokens.md)
+- [Requesting $VERONA Testnet Tokens](../references/testnet-tokens.md)
 
 For **mainnet** usage, fund your wallet from supported exchanges before broadcasting transactions.
 

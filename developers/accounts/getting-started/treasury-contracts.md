@@ -22,13 +22,13 @@ The **Fee Grant module** allows an account (**granter**) to cover gas fees for a
 
 #### **How Fee Grants Work?**
 
-1. The **treasury contract holds a balance of $VER tokens** to cover gas fees.
+1. The **treasury contract holds a balance of $VERONA tokens** to cover gas fees.
 2. The **contract grants fee sponsorship** for specific transactions.
 3. The **user (grantee) submits a transaction**, and the **treasury contract pays the gas fee automatically**.
 
 #### **Key Benefits of Fee Grants**
 
-* **Frictionless onboarding** – Users can interact with the app immediately without needing $VER tokens.
+* **Frictionless onboarding** – Users can interact with the app immediately without needing $VERONA tokens.
 * **Better user experience** – Reduces complexity and improves adoption for non-crypto-native users.
 * **Controlled sponsorship** – apps can define limits on gas fee coverage.
 
@@ -167,7 +167,7 @@ These two parameters are required and so you need to fill in the values:
 Once those parameters have been added you can scroll down to the bottom of the page and click the "**Create**" button to create your treasury contract instance. Once created, the contract will appear on the **Dashboard**.
 
 {% hint style="success" %}
-**Fund the Treasury Contract**: Transfer **$VER tokens** to the contract to ensure it can cover gas fees for fee grants.
+**Fund the Treasury Contract**: Transfer **$VERONA tokens** to the contract to ensure it can cover gas fees for fee grants.
 {% endhint %}
 
 ## Editing a Treasury Contract

@@ -222,7 +222,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 
 1. Enter a **"Description"** in the respective field. This will reflect the intended purpose of the request.
 2. For the **"Allowance Type"** select "**Basic Allowance**".
-3. In the **"Spend Limit"** field, enter **`0.1`** and select `$VER` as the token.
+3. In the **"Spend Limit"** field, enter **`0.1`** and select `$VERONA` as the token.
 4. Click the **"Save"** button to apply the configuration.
 
 #### **Permission**

@@ -7,6 +7,8 @@ icon: arrows-rotate
 
 Verona is the next chapter of the same network you may know as **XION**. The rebrand reflects a deliberate shift in narrative—from “trust layer for the internet” to **the intelligence layer for AI**—while preserving on-chain compatibility and developer tooling.
 
+This is a **brand and ticker rename**, not a new token or contract migration.
+
 ## What changed
 
 | Area | Before (XION) | Now (Verona) |
@@ -14,7 +16,7 @@ Verona is the next chapter of the same network you may know as **XION**. The reb
 | **Positioning** | Trust Layer for the Internet | Intelligence layer for AI |
 | **Primary user story** | Verify data, abstract blockchain UX | User-owned verified facts reusable by authorized agents |
 | **Documentation brand** | XION throughout | Verona in narrative; XION where chain precision is required |
-| **Native token symbol** | $XION | $VER (on-chain denom `uxion` unchanged) |
+| **Native token symbol** | $XION | $VERONA (on-chain denom `uxion` unchanged) |
 | **Product surfaces** | Infrastructure-first | EarnOS, Burnt Verified, Ask & Ask MCP, Data Backpack |
 
 ## What did not change
@@ -24,7 +26,7 @@ Developers should assume continuity for:
 * **Chain IDs and network names** — e.g. `xion-testnet-2`, IBC paths, and relayer docs
 * **CLI and daemon** — `xiond` remains the node and transaction CLI
 * **Meta Accounts, Abstraxion, CosmWasm** — same primitives, updated doc paths where renamed
-* **Contract addresses and existing deployments** — no migration is implied by this documentation rebrand
+* **Contract addresses and token balances** — existing holdings stay on the same chain; only the display name and ticker update to Verona / $VERONA
 
 {% hint style="info" %}
 If you see **Verona** in prose and **XION** in a command, config file, or address, that is intentional. Use XION naming anywhere the chain, CLI, or an on-chain identifier must match exactly.

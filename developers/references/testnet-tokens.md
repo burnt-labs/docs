@@ -1,6 +1,6 @@
-# Requesting $VER Testnet Tokens
+# Requesting $VERONA Testnet Tokens
 
-**$VER** testnet tokens (Previously $XION) are required for paying transaction fees on the **Verona Testnet**. They have **no real-world monetary value** and exist purely for testing purposes. Below are the steps to acquire these tokens from the official Verona testnet faucet.
+**$VERONA** testnet tokens (Previously $XION) are required for paying transaction fees on the **Verona Testnet**. They have **no real-world monetary value** and exist purely for testing purposes. Below are the steps to acquire these tokens from the official Verona testnet faucet.
 
 
 

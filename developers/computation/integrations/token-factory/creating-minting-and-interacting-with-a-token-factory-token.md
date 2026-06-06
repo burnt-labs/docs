@@ -13,12 +13,12 @@ Before proceeding, make sure you have the following:
 2. **An Active Account:**\
    Set up an account using `xiond` by following the [Generate an account](../../../tools/daemon-cli.md#generate-an-account) guide. You will use this account to execute transactions.
 3. **A Funded Account:**\
-   You need an account with sufficient **native $VER tokens (Previously $XION)** to cover transaction fees. You can obtain testnet tokens through the [**Verona testnet faucet**](../../../references/testnet-tokens.md).
+   You need an account with sufficient **native $VERONA tokens (Previously $XION)** to cover transaction fees. You can obtain testnet tokens through the [**Verona testnet faucet**](../../../references/testnet-tokens.md).
 
 ## **Creating a Token**
 
 {% hint style="info" %}
-Creating a new Token Factory token requires a **1000 $VER fee (Previously $XION)** (on both **Testnet** and **Mainnet**). This fee protects Verona users by:
+Creating a new Token Factory token requires a **1000 $VERONA fee (Previously $XION)** (on both **Testnet** and **Mainnet**). This fee protects Verona users by:
 
 * **Reducing spam** and malicious token creation.
 * **Encouraging meaningful token projects**, ensuring a higher-quality ecosystem.
@@ -139,7 +139,7 @@ Before minting new tokens, it is important to **configure the token’s metadata
 
 **Updatable Fields:**
 
-* **`ticker-symbol`** – The short symbol representing the token (e.g., `$VER`).
+* **`ticker-symbol`** – The short symbol representing the token (e.g., `$VERONA`).
 * **`description`** – A brief description of the token.
 * **`exponent`** – The decimal precision used for display purposes.
 
