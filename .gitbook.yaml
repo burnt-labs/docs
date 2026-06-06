@@ -63,5 +63,3 @@ redirects:
   developers/learn-and-build/mobile-development/building-a-react-native-mobile-app-with-abstraxion-xion.js: developers/accounts/mobile-app/building-a-react-native-mobile-app-with-abstraxion.md
   developers/building-for-mainnet: developers/building-for-production/README.md
   developers/computation/xion-quick-start/zero-to-dapp-in-5-minutes: developers/computation/quick-start/zero-to-dapp-in-5-minutes/README.md
-  about-verona/rebrand-from-xion: about-verona/rebrand-from-xion.md
-  about-verona/surfaces: about-verona/surfaces/README.md
