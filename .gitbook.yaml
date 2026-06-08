@@ -37,6 +37,7 @@ redirects:
   nodes-and-validators/run-a-node/join-the-xion-network: nodes-and-validators/run-a-node/join-the-network/README.md
   nodes-and-validators/run-a-node/join-the-network/xion-testnet-1: nodes-and-validators/run-a-node/join-the-network/xion-testnet-2.md
   nodes-and-validators/become-a-validator/obtain-a-xion-wallet-address: nodes-and-validators/become-a-validator/obtain-a-wallet-address.md
+  xions-core/learn/README: about-verona/concepts/overview.md
   xions-core/concepts/README: about-verona/concepts/overview.md
   xions-core/concepts/generalized-abstraction: about-verona/concepts/generalized-abstraction.md
   xions-core/concepts/verification-infrastructure: about-verona/concepts/verification-infrastructure/README.md
@@ -71,4 +72,3 @@ redirects:
   nodes-and-validators/run-a-node/configure-the-xion-daemon/client.toml: nodes-and-validators/run-a-node/configure-the-daemon/client.toml.md
   nodes-and-validators/run-a-node/configure-the-xion-daemon/config.toml: nodes-and-validators/run-a-node/configure-the-daemon/config.toml.md
   developers/getting-started-advanced/your-first-dapp/xion-backend-using-cosmjs: developers/accounts/backend-app/backend-using-cosmjs.md
-  xions-core/learn/README: about-verona/concepts/overview.md

@@ -1,31 +1,41 @@
 ---
-description: User-owned data and verified participation
+description: Ero by EarnOS — verified participation on Verona
 icon: coins
 ---
 
-# EarnOS
+# Ero (EarnOS)
 
-EarnOS is Verona’s surface for **user-owned data and verified participation**. It connects verified actions on and off chain to reward and attribution models built around user consent.
+**Ero by EarnOS, built on Verona,** is the flagship consumer surface for **user-owned, verified participation**. People earn for what they already do online: activity is cryptographically verified, and the data underneath is never exposed.
+
+EarnOS is the surface; **Ero** is the live product experience. Together they demonstrate the full thesis in one flow—verification, ownership, reuse, and real economic activity on the same network developers integrate against.
+
+## What Ero shows
+
+* Users connect everyday accounts (for example ride-share or delivery apps) and verify attributes with the [Truth Engine](../concepts/verification-infrastructure/README.md)
+* Verified facts stay **user-owned** on the network and can be reused where the user consents
+* Rewards and campaigns map to **proof of eligibility**, not self-reported claims
+* [Meta Accounts](../concepts/meta-accounts.md) handle identity and consent boundaries without wallet friction
 
 ## For developers
 
-EarnOS builds on verification primitives you already use on the network:
+Ero builds on the same primitives as any Verona application:
 
-* **zkTLS, zkEmail, and app attestations** to prove eligibility without exposing raw data
-* **Meta Accounts** for identity and consent boundaries
-* **CosmWasm** for on-chain settlement, attribution, and policy
+* **zkTLS, zkEmail, zkPassport, and app attestations** for eligibility without raw data exposure
+* **Meta Accounts** for authentication and permission scopes
+* **CosmWasm** and Treasury patterns for on-chain settlement and gasless UX (`xion-testnet-2` for development)
 
 Typical integration patterns:
 
-1. Verify a user action or attribute with the [Truth Engine](../concepts/verification-infrastructure/README.md)
-2. Map the proof to your app’s business rules (campaign, tier, payout)
-3. Settle or record outcomes on the Verona network (`xion-testnet-2` for development)
+1. Verify a user action or attribute with the Truth Engine
+2. Map the proof to your app's business rules (campaign, tier, payout, agent gate)
+3. Settle or record outcomes on the Verona network
 
 {% hint style="warning" %}
-Do not describe unannounced token products or partner programs as live. Follow legal and marketing review before publishing reward, revenue, or token figures in your own apps or docs.
+Do not describe unannounced token products, partner programs, or revenue figures as live in your own apps or docs. Follow legal and marketing review before publishing reward, revenue-share, or token numbers.
 {% endhint %}
 
 ## Related docs
 
+* [Surfaces](README.md)
 * [Verification guides](../../developers/verification/README.md)
 * [Meta Accounts](../concepts/meta-accounts.md)

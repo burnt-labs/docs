@@ -2,74 +2,83 @@
 
 ### What is Verona?
 
-Verona is the **intelligence layer for AI**. It turns user-owned, cryptographically verified facts into reusable context that authorized agents and applications can act on—without exposing raw private data.
+**Making AI Intelligent.** Verona is the **intelligence layer for AI**—a network where facts about the real world are proven once, owned by the user, and reusable by any agent they authorize, with the data underneath never exposed.
 
-The network behind Verona runs on Cosmos SDK, CometBFT, and CosmWasm infrastructure. It combines zero-knowledge verification (the **Truth Engine**) with **Generalized Abstraction** so verification is both powerful and accessible to mainstream users.
+Verona makes user-verified data **portable, private, and programmable**, so agents can transact on information the user actually owns. In public language, Verona is a **network and a layer**, not “another chain.” The chain is how it works; the layer is what it is.
 
-**Making AI Intelligent** captures the goal: agents need grounded facts, not unverified scrapes. Verona supplies verification rails, portable user context (Data Backpack direction), and product surfaces (EarnOS, Burnt Verified, Ask & MCP) on top of the same developer stack Meta Account and CosmWasm builders use today.
+**Verify once · Reuse everywhere · Expose nothing.**
 
-The internet has a trust crisis: bots, ad fraud, and platforms monetizing user data while users receive little in return. Traditional Web2 infrastructure cannot fix this at scale—verification usually requires sharing underlying data, central authorities can fail, and tampering is hard to detect.
+### The gap
 
-Verona addresses this with Web3 verification. Zero-knowledge proofs let data be checked cryptographically without revealing it, without trusting a single intermediary, and without tampering. Receivers of a proof can trust the claim knowing the user could not have fabricated or altered the source.
+Today's AI is capable—until it counts. Agents need **provable information** to act and cannot store sensitive data. Scraped text, self-reported forms, and one-off KYC checks do not scale: every new app makes the user prove the same thing again, and every broker stores another copy.
 
-Powerful verification is useless if people cannot reach it. That is why Generalized Abstraction is embedded at the protocol level: accounts, signatures, gas, payments, devices, and interoperability are abstracted. Users log in with email, pay with familiar methods, and avoid blockchain complexity.
+Verona treats a verification as a **durable, user-owned asset** on the network—not a disposable check that dies on use.
 
-The result is infrastructure that is **useful** (verification for real-world problems) and **usable** (invisible to end users)—now framed for developers building agentic and intelligent applications.
+### The unlock
 
-### Why Verona Exists
+**One proof, and the whole network trusts it.** Verify a fact once, at its source. You own it; any agent you authorize acts on it; the data underneath never shows.
 
-Two problems block mainstream intelligent applications:
+The **Truth Engine** generates zero-knowledge proofs across four surfaces:
 
-**1. Intelligence is not grounded enough.** Models and agents lack durable, verifiable user context. Verona makes verification the core primitive—identity without doxxing, portable reputation, user-controlled data sharing, and fraud-resistant workflows.
+| Surface | Module | What it proves |
+| ------- | ------ | -------------- |
+| **Websites** | zkTLS | What a site shows about you—without handing over the login |
+| **Email** | zkEmail (DKIM) | What landed in your inbox—without opening it up |
+| **Passports** | zkPassport | Who you are—without copying the document |
+| **Apps** | App Attestations | What you did in an app—without exposing the account |
 
-**2. Web3 is still too visible.** Even improved UX often exposes wallets, gas, and chain concepts. Verona’s abstraction layer keeps the network as infrastructure while apps and agents consume verified facts through familiar interfaces.
+Verified claims are recorded on the network, bound to the user's **Meta Account**, and reusable by any application or agent the user permits.
 
-### Architecture at a Glance
+### Why abstraction still matters
 
-Verona’s architecture has two primary layers:
+Powerful verification is useless if people cannot reach it. **Generalized Abstraction** is embedded at the protocol level: accounts, signatures, gas, payments, devices, and interoperability are abstracted so users log in with email, pay with familiar methods, and rarely see blockchain mechanics.
 
-**Verification Layer (Truth Engine)**
+The network runs on Cosmos SDK, CometBFT, and CosmWasm. Builders still use chain-precise identifiers where required (`xion-testnet-2`, `xiond`, on-chain addresses).
 
-The Truth Engine is verification infrastructure built into the protocol. It applies zero-knowledge proofs to three data sources:
+### Who Verona is for
 
-* **zkTLS:** Verifies real-world data from websites using zero-knowledge proofs over TLS sessions. Prove ratings, balance ranges, loyalty tiers, or social metrics without exposing underlying information.
-* **DKIM Module (zkEmail):** Verifies email contents using DKIM signatures email providers already attach. Prove receipts, notifications, or employment verification without revealing full messages.
-* **App Attestations:** Verifies mobile application data through cryptographic attestation of in-app state. Prove fitness, delivery, or streaming habits from mobile apps.
+**Humans** — Turn everyday proof into assets you own. [Ero](../surfaces/earnos.md) (by EarnOS) is the live consumer surface: verified activity without exposing raw data.
 
-**Abstraction Layer**
+**Enterprises** — Make decisions on records cryptographically verified at the source. No one touches the data underneath; you never carry the liability. See [Burnt Verified](../surfaces/burnt-verified.md).
 
-Generalized Abstraction embeds critical network functionality in the protocol:
+**Agents** — Act on what the user has already verified, without rechecking or holding sensitive data. Prescription refills, flight check-in, loan workflows, and similar actions become possible when context is provable and permissioned.
 
-* **Account Abstraction:** Meta Accounts replace traditional wallets. Users authenticate via email, FaceID, passkeys, or social login.
-* **Signature Abstraction:** Supports multiple cryptographic curves. Applications request familiar actions ("confirm purchase"), not raw transaction signatures.
-* **Gas Abstraction:** Apps sponsor transactions, accept fees in various tokens, or embed fees in pricing. Users rarely see gas.
-* **Payment Abstraction:** Credit cards, Apple Pay, and fiat displays—with conversion and settlement handled invisibly.
-* **Device Abstraction:** Seamless cross-device access without browser extensions or device-specific setup.
-* **Interoperability Abstraction:** Cross-ecosystem operations without users managing bridges, wrapped tokens, or multiple accounts.
+**Developers** — Build on a network of verified facts. Intelligence owned by users, permissioned to your app. Read a proof, have an agent act on it, settle when it acts—proof, action, and settlement in one flow. No collecting data, no storing it, no carrying the liability.
+
+### Architecture at a glance
+
+**Verification layer (Truth Engine)**
+
+Protocol-level zero-knowledge verification across websites, email, passports, and apps. See [Truth Engine](verification-infrastructure/README.md).
+
+**Abstraction layer**
+
+Generalized Abstraction embeds account, signature, gas, payment, device, and interoperability abstraction in the protocol. See [Meta Accounts](meta-accounts.md) and [Intro to Account Abstraction](intro-to-account-abstraction.md).
 
 <figure><img src="../../.gitbook/assets/XION Infrastructure Graphic Chain Abstraction 2.png" alt=""><figcaption></figcaption></figure>
 
-**Consensus & Execution**
+**Consensus and execution**
 
-The network runs on Cosmos SDK with CometBFT consensus and CosmWasm smart contract execution. It uses Proof of Stake with inflation calculated against staked tokens. IBC (Inter-Blockchain Communication) provides native interoperability. 
+Cosmos SDK with CometBFT consensus and CosmWasm smart contract execution. Proof of Stake with inflation calculated against staked tokens. IBC provides native interoperability.
 
-### Key Differentiators
+### Surfaces into one network
 
-* **Integrated verification infrastructure.** zkTLS, zkEmail, and app attestations are protocol-level modules—not bolt-on services.
-* **Protocol-level abstraction.** Account, gas, signature, payment, and device abstraction are part of the network, not app-layer patches.
-* **Real-world traction.** Production verification products and ecosystem applications already demonstrate Verona's verification-and-reuse model.
-* **Intelligence-layer surfaces.** EarnOS, Burnt Verified, Ask & MCP, and Data Backpack package verification for users and agents.
+Product **surfaces** are doors into the same Truth Engine—not separate products:
 
-See [Surfaces](../surfaces/README.md) and [Rebrand: XION → Verona](../rebrand-from-xion.md) for the product narrative.
+* **[Ero](../surfaces/earnos.md)** (EarnOS) — Consumer proof: verified participation and user-owned data flows.
+* **[Burnt Verified](../surfaces/burnt-verified.md)** — Enterprise proof: income, employment, and credential verification without document custody.
 
-### For Developers: What This Means
+See [Surfaces](../surfaces/README.md) for Phase 1 entry points.
+
+### For developers: what this means
 
 Building on Verona gives you:
 
-1. **Verification primitives** to prove real-world data privately—credentials, data sources, and trust between parties without seeing sensitive underlying information.
-2. **Abstraction primitives** for Web2-quality UX—Meta Accounts, gas sponsorship, familiar login and payment flows.
-3. **Agent-ready tooling** via the [Verona Agent Toolkit](../../developers/tools/verona-toolkit.md) and [For AI Agents](../ai-agents.md).
-4. **CosmWasm smart contracts** for on-chain logic with mature Rust tooling.
-5. **An existing ecosystem** to launch into rather than starting from zero.
+1. **Verification primitives** — Prove real-world data privately; trust between parties without seeing sensitive underlying information.
+2. **Reusable attestations** — One verification, many authorized consumers—agents and apps query proofs instead of re-running KYC.
+3. **Abstraction primitives** — Meta Accounts, gas sponsorship, familiar login and payment flows.
+4. **Agent-ready tooling** — [Verona Agent Toolkit](../../developers/tools/verona-toolkit.md) and [For AI Agents](../ai-agents.md).
+5. **CosmWasm smart contracts** — On-chain logic with mature Rust tooling.
+6. **An existing ecosystem** — Production verification usage across major brands and millions of users on the engine.
 
 Continue to [Truth Engine](verification-infrastructure/README.md), [Meta Accounts](meta-accounts.md), and [Build on Verona](../../developers/overview.md).

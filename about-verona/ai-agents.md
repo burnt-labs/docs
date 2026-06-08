@@ -5,6 +5,8 @@ icon: robot
 
 # AI Agent Quick Start
 
+**Agents that can finally act.** An agent needs provable information to act—and it cannot hold your sensitive data. Verona lets agents act on what the user has already verified, without rechecking, by reading scoped attestations from the network instead of scraping or storing raw records.
+
 Want to let an AI agent operate on the network with a gasless workflow?
 
 {% hint style="warning" %}
@@ -27,6 +29,7 @@ This setup is designed for AI-assisted development with Meta Accounts, Treasury 
 - **Treasury management** for gasless operations and delegated permissions
 - **OAuth2 client management** for app registration and lifecycle
 - **Agent-friendly workflows** through skills like `xion-dev`, `xion-oauth2`, `xion-treasury`, and `xion-oauth2-client`
+- **A path to verified context** — combine toolkit flows with [Truth Engine](concepts/verification-infrastructure/README.md) attestations so agents act on proofs, not guesses
 
 ## High-level flow
 
@@ -59,7 +62,8 @@ flowchart TD
 
 ## Related
 
-* [Ask & Ask MCP](surfaces/ask-and-mcp.md) — agent and MCP direction
+* [What is Verona?](concepts/overview.md) — the gap, the unlock, and developer primitives
+* [Burnt Verified](surfaces/burnt-verified.md) — verified credentials for agent workflows
 * [Build on Verona](../developers/overview.md)
 
 ## References

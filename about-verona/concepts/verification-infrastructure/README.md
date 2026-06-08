@@ -1,54 +1,55 @@
 # Verification Infrastructure
 
-### The Truth Engine: Verify Anything on the Internet, Privately
+### The Truth Engine
 
-The **Truth Engine** is Verona's verification stack on the Verona network. It applies zero-knowledge proofs to three distinct data sources, enabling applications and authorized agents to verify claims without exposing underlying information.
+The **Truth Engine** is Verona's verification stack. It turns internet data into **provable facts**, stores them on the decentralized network the user owns, and lets any authorized agent or service **reuse** them without ever holding the data underneath.
 
-#### Why Verification Matters for Developers
+**Verify once · Reuse everywhere · Expose nothing.**
 
-Traditional applications face a fundamental limitation: they cannot verify external data without trusting a centralized authority or requiring users to hand over sensitive information. Want to verify a user's income? They upload bank statements. Want to confirm their reputation on another platform? They share login credentials. Want to know if they are a real human? You rely on CAPTCHAs that bots increasingly bypass.
+#### Why verification matters
 
-Zero-knowledge verification changes this entirely. Your application can receive cryptographic proof that a claim is true without ever accessing the data behind it. The proof is mathematically guaranteed to be authentic, meaning the user cannot fabricate or tamper with it.
+Traditional applications cannot verify external data without trusting a centralized authority or requiring users to hand over sensitive information. Want income for a lease? Upload bank statements. Want reputation from another platform? Share login credentials. Every new app re-verifies; every broker stores another copy.
 
-This creates an entirely new class of applications that were previously impossible to build:
+Zero-knowledge verification changes this. Your application receives cryptographic proof that a claim is true without accessing the data behind it. The user cannot fabricate or tamper with the proof. One verification becomes a **durable, user-owned attestation** reusable across the network.
 
-* Loyalty programs that recognize competitor status without the competitor's cooperation
-* Advertising platforms that verify real humans without invasive tracking
-* Lending applications that confirm income ranges without seeing exact figures
-* Marketplaces where reputation is portable and verifiable across platforms
-* Data monetization systems where users control exactly what they share
+This enables applications that were previously impossible or impractical:
 
-#### How It Works (High Level)
+* Loyalty and reputation portable across platforms without source cooperation
+* Lending and underwriting on income ranges without exact figures
+* Enterprise decisions on cryptographically verified records—non-custodial, no document storage
+* Agent workflows that act on provable facts without becoming data custodians
+* User-controlled sharing of verified attributes instead of raw exports
 
-The verification flow follows a consistent pattern across all three pillars of the Truth Engine:
+#### How it works (high level)
 
-1. **User generates proof.** The user's device creates a zero-knowledge proof from a data source (website, email, or mobile app). This happens client-side; the raw data never leaves the user's device.
-2. **Proof is submitted on-chain.** The ZK proof is submitted to the Verona network where it is verified by the protocol. If valid, the verified claim is recorded on-chain as an attestation.
-3. **Application reads the attestation.** Your smart contract or application queries the on-chain attestation to confirm the claim. You receive a binary answer ("this user has a 4.8+ Uber rating") without any access to the underlying data ("their exact rating, trip history, or account details").
-4. **Application takes action.** Based on the verified claim, your application triggers logic: unlock a reward, grant access, adjust pricing, issue credentials, or any other programmable response.
+The flow is consistent across all Truth Engine modules:
 
-#### The Three Verification Modules
+1. **User generates proof.** The user's device creates a zero-knowledge proof from a data source (website, email, passport, or mobile app). Raw data stays on the device.
+2. **Proof is verified on-chain.** The proof is submitted to the Verona network and verified by the protocol. Valid claims are recorded as attestations bound to the user's Meta Account.
+3. **Application or agent reads the attestation.** Your contract, API, or agent runtime queries the attestation and receives a scoped answer—not the underlying record.
+4. **Action and settlement.** Based on the verified claim, your logic unlocks access, triggers an agent action, adjusts pricing, issues credentials, or settles on chain.
 
-The Truth Engine provides three complementary verification technologies. Together, they allow applications to verify virtually any data on the internet privately.
+#### The four verification surfaces
 
-| Module                    | Data Source | What It Verifies                                | Example                                                           |
-| ------------------------- | ----------- | ----------------------------------------------- | ----------------------------------------------------------------- |
-| **zkTLS**     | Any website | Data displayed in TLS-encrypted web sessions    | Uber rating, bank balance range, social media metrics             |
-| **DKIM Module** (zkEmail) | Email inbox | Email contents authenticated by DKIM signatures | Purchase receipts, account confirmations, employment verification |
-| **App Attestations**      | Mobile apps | In-app data and state                           | Fitness achievements, delivery history, streaming habits          |
+| Surface | Module | Data source | Example claim |
+| ------- | ------ | ----------- | ------------- |
+| **Websites** | **zkTLS** | TLS-encrypted web sessions | Uber rating above 4.5, balance in range |
+| **Email** | **zkEmail** (DKIM) | DKIM-signed email | Payroll notification, purchase receipt |
+| **Passports** | **zkPassport** | Identity documents | Age or citizenship without copying the document |
+| **Apps** | **App Attestations** | Mobile app state | Fitness activity, delivery history |
 
-See the dedicated pages for [zkTLS](./zktls.md), [zkEmail (DKIM)](./dkim-module-zkemail.md), and App Attestations.
+Developer integration guides today cover [zkTLS](./zktls.md), [zkEmail (DKIM)](./dkim-module-zkemail.md), and [App Attestations](./app-attestations.md). zkPassport is part of the Truth Engine roadmap; contact the team for early access patterns.
 
-#### Developer Integration Pattern
+#### Developer integration pattern
 
-All three verification technologies follow the same high-level integration pattern:
+All modules follow the same high-level integration pattern:
 
 ```
 // Pseudocode: Generic verification flow
 
 // 1. Your frontend requests a proof from the user
 const proofRequest = {
-  module: "zk_tls" | "dkim" | "app_attestation",
+  module: "zk_tls" | "dkim" | "zk_passport" | "app_attestation",
   claim: "uber_rating_above_4.5",
   // Module-specific parameters
 };
@@ -59,18 +60,15 @@ const proof = await userGenerateProof(proofRequest);
 // 3. Proof is submitted and verified on-chain
 const attestation = await submitProofOnChain(proof);
 
-// 4. Your smart contract reads the attestation
-// In your CosmWasm contract:
+// 4. Your smart contract or agent reads the attestation
 // query the attestation registry for the user's verified claim
 // execute logic based on the result
 ```
 
-Specific integration guides, SDKs, example contracts, and client libraries for each technology are available in [Build on Verona](../../../developers/verification/README.md).
+Specific integration guides, SDKs, and example contracts: [Build on Verona — Verification](../../../developers/verification/README.md).
 
 #### Composability
 
-Verification proofs are composable. A single user can generate multiple proofs from different sources and combine them into a rich, verified profile:
+Proofs compose. A user can combine attestations from different surfaces into a rich, verified profile—Uber rating (zkTLS) + income range (zkEmail) + identity attribute (zkPassport) + fitness activity (App Attestation)—with zero sensitive data exposed.
 
-* Prove Uber rating (zkTLS) + Prove income range (zkEmail) + Prove fitness activity (App Attestation) = Verified, multi-dimensional user profile with zero sensitive data exposed.
-
-Applications can require any combination of proofs before granting access or triggering logic. This composability is what enables complex use cases like privacy-preserving underwriting, multi-factor reputation systems, and cross-platform loyalty.
+Applications require any combination of proofs before granting access or triggering agent logic. That composability powers privacy-preserving underwriting, multi-factor reputation, and cross-platform loyalty on one network.

@@ -1,6 +1,7 @@
 ---
 description: Query and MCP rails for authorized agent context
 icon: message-bot
+hidden: true
 ---
 
 # Ask & Ask MCP

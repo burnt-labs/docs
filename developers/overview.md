@@ -6,11 +6,11 @@ icon: lightbulb
 
 Welcome to **Build on Verona**. If you're coming from Web2 development, this page explains the network, primitives, and how to ship consumer and agentic applications.
 
-**Verona** is the intelligence-layer brand; the underlying network and CLI use **XION** on-chain naming (`xion-testnet-2`, `xiond`, on-chain addresses). See [What is Verona?](../about-verona/concepts/overview.md) and [Rebrand: XION → Verona](../about-verona/rebrand-from-xion.md).
+**Verona** is the intelligence layer for AI. In narrative, it is a **network and layer**—not “another chain.” The underlying network and CLI still use **XION** on-chain naming (`xion-testnet-2`, `xiond`, on-chain addresses). See [What is Verona?](../about-verona/concepts/overview.md).
 
 ### What you build on
 
-Verona gives developers access to verified facts that users own and authorize. The Verona network provides the underlying account, verification, computation, and payment primitives that make those facts usable in applications and agent workflows.
+Verona gives developers a network of **verified facts** that users own and permission to apps and agents. Read a proof, have an agent act on it, settle when it acts—proof, action, and settlement on one network. Account, verification, computation, and payment primitives make that flow usable without collecting or storing sensitive source data.
 
 Think of the stack as infrastructure for applications that need:
 

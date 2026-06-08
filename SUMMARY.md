@@ -5,22 +5,19 @@
 ## About Verona
 
 * [What is Verona?](about-verona/concepts/overview.md)
-* [Rebrand: XION → Verona](about-verona/rebrand-from-xion.md)
+  * [Use Cases](about-verona/concepts/use-cases.md)
+  * [Architecture & Glossary](about-verona/concepts/architecture-and-tech-glossary.md)
 * [Truth Engine](about-verona/concepts/verification-infrastructure/README.md)
   * [zkTLS](about-verona/concepts/verification-infrastructure/zktls.md)
   * [zkEmail](about-verona/concepts/verification-infrastructure/dkim-module-zkemail.md)
   * [App Attestations](about-verona/concepts/verification-infrastructure/app-attestations.md)
 * [How the Network Works](about-verona/concepts/generalized-abstraction.md)
-* [Intro to Account Abstraction](about-verona/concepts/intro-to-account-abstraction.md)
-* [Meta Accounts](about-verona/concepts/meta-accounts.md)
-* [Meta Accounts Design](about-verona/concepts/meta-accounts-design.md)
-* [Architecture & Glossary](about-verona/concepts/architecture-and-tech-glossary.md)
-* [Use Cases](about-verona/concepts/use-cases.md)
+  * [Intro to Account Abstraction](about-verona/concepts/intro-to-account-abstraction.md)
+  * [Meta Accounts](about-verona/concepts/meta-accounts.md)
+  * [Meta Accounts Design](about-verona/concepts/meta-accounts-design.md)
 * [Surfaces](about-verona/surfaces/README.md)
-  * [EarnOS](about-verona/surfaces/earnos.md)
+  * [Ero (EarnOS)](about-verona/surfaces/earnos.md)
   * [Burnt Verified](about-verona/surfaces/burnt-verified.md)
-  * [Ask & Ask MCP](about-verona/surfaces/ask-and-mcp.md)
-  * [Data Backpack](about-verona/surfaces/data-backpack.md)
 * [For AI Agents](about-verona/ai-agents.md)
 
 ## Build on Verona
@@ -146,6 +143,7 @@
 
 ## Others
 
+* [Rebrand: XION → Verona](others/rebrand-from-xion.md)
 * [Resources](others/resources.md)
 * [Archived](others/archived/README.md)
   * [(Old)Concepts Overview](others/archived/old-concepts-overview.md)

@@ -8,10 +8,13 @@ description: Key Terms and Concepts
 
 | Term      | Definition                                                                                                                                                                      |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Verona** | The intelligence-layer brand and documentation name for the network. Narrative and product surfaces (EarnOS, Burnt Verified, Ask & MCP, Data Backpack); on-chain identifiers remain **XION**. |
-| **Truth Engine** | Verification infrastructure comprising zkTLS (web data), zkEmail (authenticated email), and App Attestations (mobile apps). Enables private, cryptographic verification of real-world data. |
+| **Verona** | The intelligence layer for AI—the network and layer (not “another chain” in narrative). Verified facts are user-owned and reusable by authorized agents. Product surfaces include Ero (EarnOS) and Burnt Verified; on-chain identifiers remain **XION**. |
+| **Truth Engine** | Verification infrastructure comprising zkTLS (websites), zkEmail (email), zkPassport (identity documents), and App Attestations (mobile apps). Turns claims into provable, reusable facts without exposing underlying data. |
+| **Ero (EarnOS)** | The live consumer surface on Verona. Users verify everyday activity and participate in reward flows with user-owned proofs; EarnOS is the product surface, Ero is the consumer experience. |
+| **Burnt Verified** | The enterprise verification surface—income, employment, and credentials verified at the source without document custody. |
 | **zkTLS**                      | Zero-knowledge verification for web data. Creates proofs over TLS-encrypted sessions from any website, enabling claims about ratings, balances, loyalty status, and more without exposing raw data.              |
 | **DKIM Module (zkEmail)**      | Verification module that creates zero-knowledge proofs over email contents using DKIM signatures. Proves email-based claims without exposing the email.              |
+| **zkPassport**                 | Verification module for identity documents. Proves attributes such as age or citizenship without copying or storing the passport or ID.                          |
 | **App Attestation**            | Verification module that creates cryptographic proofs of mobile application data. Proves in-app state without exposing app credentials or full data.                 |
 | **Attestation**                | An on-chain record of a verified claim. Created when a zero-knowledge proof is successfully verified by the protocol. Queryable by smart contracts.                  |
 | **Zero-Knowledge Proof (ZKP)** | A cryptographic method that allows one party to prove a statement is true without revealing any information beyond the truth of the statement itself.                |

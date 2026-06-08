@@ -1,6 +1,7 @@
 ---
 description: Portable, user-controlled verified facts
 icon: backpack
+hidden: true
 ---
 
 # Data Backpack
