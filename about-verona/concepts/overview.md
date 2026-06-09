@@ -79,6 +79,10 @@ Building on Verona gives you:
 3. **Abstraction primitives** — Meta Accounts, gas sponsorship, familiar login and payment flows.
 4. **Agent-ready tooling** — [Verona Agent Toolkit](../../developers/tools/verona-toolkit.md) and [For AI Agents](../ai-agents.md).
 5. **CosmWasm smart contracts** — On-chain logic with mature Rust tooling.
-6. **An existing ecosystem** — Production verification usage across major brands and millions of users on the engine.
+6. **An existing ecosystem** — Production verification usage across brands including Uber, Amazon, and Nike, and millions of users on the engine.
+
+### Network economics (high level)
+
+$VERONA secures the network through Proof of Stake. Because end-user flows are often gas-sponsored, token value is designed to track **network revenue and usage**—revenue share from ecosystem apps, enterprise verification, and agent activity—rather than raw transaction gas alone. Stakers and validators participate in that growth through staking rewards and governance. See [Architecture & Glossary](architecture-and-tech-glossary.md) and [Rebrand: XION → Verona](../../others/rebrand-from-xion.md) for rename and Phase 2 boundaries.
 
 Continue to [Truth Engine](verification-infrastructure/README.md), [Meta Accounts](meta-accounts.md), and [Build on Verona](../../developers/overview.md).

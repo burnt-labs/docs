@@ -5,9 +5,9 @@ icon: coins
 
 # Ero (EarnOS)
 
-**Ero by EarnOS, built on Verona,** is the flagship consumer surface for **user-owned, verified participation**. People earn for what they already do online: activity is cryptographically verified, and the data underneath is never exposed.
+**Ero** (by EarnOS), built on Verona, is the **flagship consumer launch** for **user-owned, verified participation**. People earn for what they already do online: activity is cryptographically verified, and the data underneath is never exposed.
 
-EarnOS is the surface; **Ero** is the live product experience. Together they demonstrate the full thesis in one flow—verification, ownership, reuse, and real economic activity on the same network developers integrate against.
+**EarnOS** is the product surface; **Ero** is the live consumer experience users open at launch. Together they demonstrate verification, ownership, reuse, and real economic activity on the same network validators secure and developers build on.
 
 ## What Ero shows
 
