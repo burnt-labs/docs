@@ -4,7 +4,7 @@ description: Making AI Intelligent — the intelligence layer for AI
 
 # Welcome to Verona
 
-[Verona](https://verona.burnt.com/) is the intelligence layer for AI. It makes user-verified data portable, private, and programmable, so agents can transact on information the user actually owns.
+[Verona](https://verona.dev/) is the intelligence layer for AI. It makes user-verified data portable, private, and programmable, so agents can transact on information the user actually owns.
 
 **Making AI Intelligent** is the through-line. **Verify once · Reuse everywhere · Expose nothing.**
 
