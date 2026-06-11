@@ -1,6 +1,6 @@
 ---
 description: Additional resources and relevant links
-hidden: true
+icon: cubes-stacked
 ---
 
 # Resources
@@ -11,6 +11,7 @@ hidden: true
 
 **Developer Ecosystem (Telegram)**: [https://t.me/+5KA8xBuU5wYzZjU0](https://t.me/+5KA8xBuU5wYzZjU0)
 
+**Verona Media Kit**: [https://github.com/burnt-labs/media-kit](https://github.com/burnt-labs/media-kit)
+
 **Guild**: [https://guild.xyz/burnt](https://guild.xyz/burnt)
 
-**Verona Media Kit**: [https://github.com/burnt-labs/media-kit](https://github.com/burnt-labs/media-kit)

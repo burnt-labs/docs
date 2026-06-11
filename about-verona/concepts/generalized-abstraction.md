@@ -1,4 +1,9 @@
-# Generalized Abstraction
+---
+description: Protocol-level abstraction — accounts, gas, payments, and more
+icon: diagram-project
+---
+
+# How the Network Works
 
 ### Protocol-Level Abstraction That Makes the Network Invisible
 
@@ -32,7 +37,7 @@ Meta Accounts replace traditional crypto wallets with protocol-level smart contr
 * Multi-device access without transferring keys
 * Account recovery through configurable methods
 
-_Detailed in: [Intro to Account Abstraction](intro-to-account-abstraction.md) and [Meta Accounts](meta-accounts.md)._
+_Detailed in:_ [_Intro to Account Abstraction_](intro-to-account-abstraction.md) _and_ [_Meta Accounts_](meta-accounts.md)_._
 
 **2. Signature Abstraction**
 

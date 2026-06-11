@@ -1,4 +1,9 @@
-# Overview
+---
+description: Intelligence layer overview — Making AI Intelligent
+icon: eye
+---
+
+# What is Verona?
 
 ### What is Verona?
 
@@ -20,12 +25,12 @@ Verona treats a verification as a **durable, user-owned asset** on the network�
 
 The **Truth Engine** generates zero-knowledge proofs across four surfaces:
 
-| Surface | Module | What it proves |
-| ------- | ------ | -------------- |
-| **Websites** | zkTLS | What a site shows about you—without handing over the login |
-| **Email** | zkEmail (DKIM) | What landed in your inbox—without opening it up |
-| **Passports** | zkPassport | Who you are—without copying the document |
-| **Apps** | App Attestations | What you did in an app—without exposing the account |
+| Surface       | Module           | What it proves                                             |
+| ------------- | ---------------- | ---------------------------------------------------------- |
+| **Websites**  | zkTLS            | What a site shows about you—without handing over the login |
+| **Email**     | zkEmail (DKIM)   | What landed in your inbox—without opening it up            |
+| **Passports** | zkPassport       | Who you are—without copying the document                   |
+| **Apps**      | App Attestations | What you did in an app—without exposing the account        |
 
 Verified claims are recorded on the network, bound to the user's **Meta Account**, and reusable by any application or agent the user permits.
 
@@ -49,7 +54,7 @@ The network runs on Cosmos SDK, CometBFT, and CosmWasm. Builders still use chain
 
 **Verification layer (Truth Engine)**
 
-Protocol-level zero-knowledge verification across websites, email, passports, and apps. See [Truth Engine](verification-infrastructure/README.md).
+Protocol-level zero-knowledge verification across websites, email, passports, and apps. See [Truth Engine](verification-infrastructure/).
 
 **Abstraction layer**
 
@@ -65,10 +70,10 @@ Cosmos SDK with CometBFT consensus and CosmWasm smart contract execution. Proof 
 
 Product **surfaces** are doors into the same Truth Engine—not separate products:
 
-* **[Ero](../surfaces/earnos.md)** (EarnOS) — Consumer proof: verified participation and user-owned data flows.
-* **[Burnt Verified](../surfaces/burnt-verified.md)** — Enterprise proof: income, employment, and credential verification without document custody.
+* [**Ero**](../surfaces/earnos.md) (EarnOS) — Consumer proof: verified participation and user-owned data flows.
+* [**Burnt Verified**](../surfaces/burnt-verified.md) — Enterprise proof: income, employment, and credential verification without document custody.
 
-See [Surfaces](../surfaces/README.md) for Phase 1 entry points.
+See [Surfaces](../surfaces/) for Phase 1 entry points.
 
 ### For developers: what this means
 
@@ -85,4 +90,4 @@ Building on Verona gives you:
 
 $VERONA secures the network through Proof of Stake. Because end-user flows are often gas-sponsored, token value is designed to track **network revenue and usage**—revenue share from ecosystem apps, enterprise verification, and agent activity—rather than raw transaction gas alone. Stakers and validators participate in that growth through staking rewards and governance. See [Architecture & Glossary](architecture-and-tech-glossary.md) and [Rebrand: XION → Verona](../../others/rebrand-from-xion.md) for rename and Phase 2 boundaries.
 
-Continue to [Truth Engine](verification-infrastructure/README.md), [Meta Accounts](meta-accounts.md), and [Build on Verona](../../developers/overview.md).
+Continue to [Truth Engine](verification-infrastructure/), [Meta Accounts](meta-accounts.md), and [Build on Verona](../../developers/overview.md).

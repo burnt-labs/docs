@@ -1,4 +1,9 @@
-# Verification Infrastructure
+---
+description: Zero-knowledge verification — verify once, reuse everywhere
+icon: shield-halved
+---
+
+# Truth Engine
 
 ### The Truth Engine
 
@@ -31,14 +36,14 @@ The flow is consistent across all Truth Engine modules:
 
 #### The four verification surfaces
 
-| Surface | Module | Data source | Example claim |
-| ------- | ------ | ----------- | ------------- |
-| **Websites** | **zkTLS** | TLS-encrypted web sessions | Uber rating above 4.5, balance in range |
-| **Email** | **zkEmail** (DKIM) | DKIM-signed email | Payroll notification, purchase receipt |
-| **Passports** | **zkPassport** | Identity documents | Age or citizenship without copying the document |
-| **Apps** | **App Attestations** | Mobile app state | Fitness activity, delivery history |
+| Surface       | Module               | Data source                | Example claim                                   |
+| ------------- | -------------------- | -------------------------- | ----------------------------------------------- |
+| **Websites**  | **zkTLS**            | TLS-encrypted web sessions | Uber rating above 4.5, balance in range         |
+| **Email**     | **zkEmail** (DKIM)   | DKIM-signed email          | Payroll notification, purchase receipt          |
+| **Passports** | **zkPassport**       | Identity documents         | Age or citizenship without copying the document |
+| **Apps**      | **App Attestations** | Mobile app state           | Fitness activity, delivery history              |
 
-Developer integration guides today cover [zkTLS](./zktls.md), [zkEmail (DKIM)](./dkim-module-zkemail.md), and [App Attestations](./app-attestations.md). zkPassport is part of the Truth Engine roadmap; contact the team for early access patterns.
+Developer integration guides today cover [zkTLS](zktls.md), [zkEmail (DKIM)](dkim-module-zkemail.md), and [App Attestations](app-attestations.md). zkPassport is part of the Truth Engine roadmap; contact the team for early access patterns.
 
 #### Developer integration pattern
 
@@ -65,7 +70,7 @@ const attestation = await submitProofOnChain(proof);
 // execute logic based on the result
 ```
 
-Specific integration guides, SDKs, and example contracts: [Build on Verona — Verification](../../../developers/verification/README.md).
+Specific integration guides, SDKs, and example contracts: [Build on Verona — Verification](../../../developers/verification/).
 
 #### Composability
 
