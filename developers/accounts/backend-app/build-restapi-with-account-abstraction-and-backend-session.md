@@ -2,7 +2,7 @@
 
 In this guide, we will walk through building a RESTful API app with session management using the [Abstraxion Core library](https://www.npmjs.com/package/@burnt-labs/abstraxion-core), demonstrating how to create a web2 user experience without any web3 interactive behavior in frontend. It also includes the Abstraxion account and gasless transaction experience for users, but all the blockchain related implementation will be handled in the backend.
 
-To better understand Account Abstraction you can visit the[Introduction to Account Abstraction](https://docs.burnt.com/xion/developers/learn/intro-to-account-abstraction) page.
+To better understand Account Abstraction you can visit the [Introduction to Account Abstraction](../../../about-verona/concepts/intro-to-account-abstraction.md) page.
 
 A fully functional demo of this app is also available in the [Xion.js](https://github.com/burnt-labs/xion.js/tree/main/apps/backend-session) repository.
 
@@ -73,7 +73,7 @@ Create a `.env.local` file in your project root:
 # Database
 DATABASE_URL="file:./dev.db"
 
-# XION Configuration
+# Configuration
 XION_NETWORK="testnet"
 XION_REDIRECT_URL="http://localhost:3000/api/callback/grant_session"
 XION_TREASURY="xion1..." # Your treasury address
@@ -716,7 +716,7 @@ export const DELETE = createApiWrapper(
 );
 ```
 
-#### 4. XION MetaAccount Authentication Callback Handler
+#### 4. MetaAccount Authentication Callback Handler
 
 Create the OAuth callback handler:
 
@@ -813,7 +813,7 @@ export const POST = createApiWrapper(
       // Convert amount to micro units
       const amountNum = parseFloat(amount);
       const microAmount = Math.floor(amountNum * 1_000_000).toString();
-      const denomMicro = denom === "XION" ? "uxion" : "uusdc";
+      const denomMicro = denom === "VER" || denom === "XION" ? "uxion" : "uusdc";
 
       // Create the bank send message
       const msgSend: MsgSend = {
@@ -864,7 +864,7 @@ export const POST = createApiWrapper(
 );
 ```
 
-> Note: For this example, we are using the `MsgSend` message to send XION tokens. So please make sure in your treasury permission, you have granted the `Send Token` permission. Learn more about how to grant permissions.
+> Note: For this example, we are using the `MsgSend` message to send $VERONA tokens. So please make sure in your treasury permission, you have granted the `Send Token` permission. Learn more about how to grant permissions.
 
 ## Testing Your API
 
@@ -880,7 +880,7 @@ curl -X POST http://localhost:3000/api/wallet/connect \
   -d '{
     "permissions": {
       "contracts": ["contract1"],
-      "bank": [{"denom": "XION", "amount": "1000"}]
+      "bank": [{"denom": "uxion", "amount": "1000"}]
     }
   }'
 
@@ -895,7 +895,7 @@ curl -X POST http://localhost:3000/api/wallet/transaction/send \
   -d '{
     "to": "xion1...",
     "amount": "100",
-    "denom": "XION"
+    "denom": "uxion"
   }'
 ```
 
@@ -909,7 +909,7 @@ Create production environment variables:
 # Production Database
 DATABASE_URL="postgresql://user:password@host:port/database"
 
-# XION Configuration
+# Configuration
 XION_NETWORK="mainnet"
 XION_REDIRECT_URL="https://yourdomain.com/api/callback/grant_session"
 XION_TREASURY="xion1..."
@@ -983,7 +983,7 @@ All API responses follow this format:
    * Ensure `ENCRYPTION_KEY` is base64 encoded
    * Key must be exactly 32 bytes (256 bits)
    * Use the provided script to generate keys
-3. **XION Network Issues**
+3. **Verona network Issues**
    * Verify `XION_NETWORK` is correct
    * Check network connectivity
    * Ensure treasury address is valid
@@ -1000,6 +1000,6 @@ Now that you have a fully functional RESTful API with account abstraction and ba
 3. **Implement additional security features** like 2FA or biometric authentication
 4. **Scale the application** with load balancers and multiple instances
 
-This implementation provides a solid foundation for building Web3 applications with Web2 user experience, leveraging XION's account abstraction capabilities while maintaining security and scalability.
+This implementation provides a solid foundation for building Web3 applications with Web2 user experience, leveraging Verona's account abstraction capabilities while maintaining security and scalability.
 
 For more detailed implementation examples, comprehensive error handling, advanced features, and complete source code, please refer to the [backend-session demo repository](https://github.com/burnt-labs/xion.js/tree/main/apps/backend-session).

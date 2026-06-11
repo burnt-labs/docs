@@ -1,15 +1,15 @@
 ---
-description: Publish and manage zero-knowledge verification keys on XION using xiond
+description: Publish and manage zero-knowledge verification keys on Verona using xiond
 icon: key
 ---
 
 # Publishing ZK Verification Keys
 
-This guide explains how to publish verification keys (vkeys) for zero-knowledge proving systems to XION using the `xiond` CLI. Verification keys are a core component of XION's [Verification Infrastructure](../../xions-core/concepts/verification-infrastructure/), enabling on-chain proof verification.
+This guide explains how to publish verification keys (vkeys) for zero-knowledge proving systems to Verona using the `xiond` CLI. Verification keys are a core component of the [Truth Engine](../../about-verona/concepts/verification-infrastructure/), enabling on-chain proof verification.
 
 ## Overview
 
-Before verifying zero-knowledge proofs on XION, you must publish the corresponding verification key to the chain. Each vkey is:
+Before verifying zero-knowledge proofs on the Verona network, you must publish the corresponding verification key to the chain. Each vkey is:
 
 - Identified by a unique name
 - Associated with a specific proving system
@@ -20,7 +20,7 @@ Before verifying zero-knowledge proofs on XION, you must publish the correspondi
 **This guide is for developers who need to:**
 
 - Use **custom ZK circuits** (Circom, Gnark, Noir) for specialized verification logic
-- Publish verification keys for any ZK proving system supported by XION
+- Publish verification keys for any ZK proving system supported by Verona
 
 > **Note**: Most verification integrations use pre-configured vkeys managed by the protocol. This guide is primarily for **advanced use cases** requiring custom circuits. If you're integrating standard verification features, start with the [Internet Verification (zkTLS)](internet-verification/) guides instead.
 
@@ -35,7 +35,7 @@ Before verifying zero-knowledge proofs on XION, you must publish the correspondi
 ## Prerequisites
 
 1. **xiond installed** — See [Setting up your Local Environment](../computation/local-development/setting-up-env/installation-prerequisites-setup-local-environment.md)
-2. **A funded account** — You need XION tokens to pay transaction fees ([request testnet tokens](../references/xion-testnet.md))
+2. **A funded account** — You need $VERONA tokens to pay transaction fees ([request testnet tokens](../references/testnet-tokens.md))
 3. **Your verification key file** — Generated from your ZK circuit
 
 ### Environment Setup
@@ -114,7 +114,7 @@ Your `vkey.json` should have this structure:
 # Export vkey from SnarkJS
 snarkjs zkey export verificationkey circuit.zkey vkey.json
 
-# Publish to XION
+# Publish to Verona
 xiond tx zk add-vkey \
   email_auth \
   ./vkey.json \
@@ -420,6 +420,6 @@ xiond query zk verify-ultrahonk --help
 
 ## Next Steps
 
-- Learn about [XION's Verification Infrastructure](../../xions-core/concepts/verification-infrastructure/)
+- Learn about the [Truth Engine](../../about-verona/concepts/verification-infrastructure/)
 - Explore [zkTLS Integration](internet-verification/) for internet data verification
-- See [Interacting with Xion Chain using Xion Daemon](../tools/xiond-cli.md) for general CLI usage
+- See [Daemon CLI (`xiond`)](../tools/daemon-cli.md) for general CLI usage

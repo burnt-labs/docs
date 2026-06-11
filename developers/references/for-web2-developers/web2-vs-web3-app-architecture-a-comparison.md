@@ -8,9 +8,9 @@ In contrast, Web3 applications follow a decentralized architecture. Business log
 
 Additionally, in Web3 **every interaction with the blockchain incurs a transaction fee**, known as **gas**. This fee is required to execute smart contract logic, store data, or trigger on-chain changes, adding an economic layer to app interactions that developers must account for.
 
-The table below outlines how the core components of a Web2 app compare to those in a Web3 app built on XION:
+The table below outlines how the core components of a Web2 app compare to those in a Web3 app built on Verona:
 
-| Component           | Web2 Architecture             | Web3 Architecture (on XION)                          |
+| Component           | Web2 Architecture             | Web3 Architecture (on Verona)                          |
 | ------------------- | ----------------------------- | ---------------------------------------------------- |
 | Backend Logic       | Laravel, Express.js, Django   | CosmWasm Smart Contracts                             |
 | Database            | MySQL, PostgreSQL, MongoDB    | On-chain Contract State                              |
@@ -27,7 +27,7 @@ The table below outlines how the core components of a Web2 app compare to those 
 
 ## Architectural Mindset Shift
 
-Shifting from **Web2** to **Web3** development, especially on XION, requires a new way of thinking about **infrastructure**, **data**, **trust**, and **control**.
+Shifting from **Web2** to **Web3** development, especially on Verona, requires a new way of thinking about **infrastructure**, **data**, **trust**, and **control**.
 
 ### Web2
 
@@ -36,9 +36,9 @@ Shifting from **Web2** to **Web3** development, especially on XION, requires a n
 * **Trust is enforced by infrastructure**: Firewalls, authentication systems, and permission models are used to establish and maintain security.
 * **Users expect free or subscription-based access**: Most Web2 applications are free to use (ad-supported) or follow a subscription-based model where users pay for premium features or services. Users generally aren’t charged per interaction.
 
-### Web3 (on XION)
+### Web3 (on Verona)
 
-* **The blockchain becomes your backend**: Your application logic is deployed as smart contracts on the XION network, not hosted on private servers.
+* **The blockchain becomes your backend**: Your application logic is deployed as smart contracts on the Verona network, not hosted on private servers.
 * **Data is public by default**: All state is stored on-chain and is accessible to anyone, ensuring transparency and auditability.
 * **Users are in control**: There are no centralized accounts, users manage their own wallets and sign transactions to interact with your app.
 * **Logic is deterministic and immutable**: Smart contracts stores the business logic of your app and run exactly as written. Changes require deliberate migrations/upgrades.
@@ -48,9 +48,9 @@ Shifting from **Web2** to **Web3** development, especially on XION, requires a n
 
 ***
 
-As you transition to building on XION, your focus shifts away from traditional backend services and toward designing smart contracts that define the core logic of your application. You no longer need to manage user accounts or credentials, wallets handle authentication, authorization and identity natively. The frontend takes on a more central role, often interacting directly with smart contracts to trigger application logic. Every interaction with the blockchain incurs a gas fee and results in an immutable state change once confirmed. Because of this, testing, versioning, and managing contract migrations become essential skills for maintaining and evolving your app over time.
+As you transition to building on Verona, your focus shifts away from traditional backend services and toward designing smart contracts that define the core logic of your application. You no longer need to manage user accounts or credentials, wallets handle authentication, authorization and identity natively. The frontend takes on a more central role, often interacting directly with smart contracts to trigger application logic. Every interaction with the blockchain incurs a gas fee and results in an immutable state change once confirmed. Because of this, testing, versioning, and managing contract migrations become essential skills for maintaining and evolving your app over time.
 
 Transitioning from Web2 to Web3 development requires more than new tools, it requires a new **mental model**. Instead of thinking in terms of centralized logic, storage, and identity, think in terms of **decentralized contracts**, **public state**, and **user-owned keys**.
 
-By leaving behind these Web2 patterns and embracing Web3-native architecture, you’ll build apps on XION that are secure, trustless, and truly user-centric.
+By leaving behind these Web2 patterns and embracing Web3-native architecture, you’ll build apps on Verona that are secure, trustless, and truly user-centric.
 

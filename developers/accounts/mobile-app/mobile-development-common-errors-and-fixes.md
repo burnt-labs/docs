@@ -156,7 +156,7 @@ npx expo run:android
 ```
 
 **Recommended Tip:**\
-Avoid placing your project in folders with capital letters or special characters (e.g., `D:\Application\Xion`) to reduce CMake path issues.
+Avoid placing your project in folders with capital letters or special characters (e.g., `D:\Application\Verona`) to reduce CMake path issues.
 
 
 

@@ -9,7 +9,7 @@ description: >-
 Treasury contracts introduce an OAuth-like authentication flow fully on-chain, allowing developers to create intricate allowance systems that enable delegated authorization. This allows an account (the granter who is the end user) to grant permission to another account (the grantee, the treasury contract) to execute specific types of transactions on their behalf. These contracts also enable a gasless experience for end users via fee grants. This guide walks you through using the developer portal to deploy your app’s first treasury contract.
 
 {% hint style="info" %}
-Each treasury contract deployment is designed for a single app. Think of it like setting up OAuth for your application, where your app requests access to data from the XION chain on behalf of the user, without accessing any private information.
+Each treasury contract deployment is designed for a single app. Think of it like setting up OAuth for your application, where your app requests access to data from the Verona chain on behalf of the user, without accessing any private information.
 {% endhint %}
 
 ## **Understanding Fee Grants and Authorizations**
@@ -22,13 +22,13 @@ The **Fee Grant module** allows an account (**granter**) to cover gas fees for a
 
 #### **How Fee Grants Work?**
 
-1. The **treasury contract holds a balance of XION tokens** to cover gas fees.
+1. The **treasury contract holds a balance of $VERONA tokens** to cover gas fees.
 2. The **contract grants fee sponsorship** for specific transactions.
 3. The **user (grantee) submits a transaction**, and the **treasury contract pays the gas fee automatically**.
 
 #### **Key Benefits of Fee Grants**
 
-* **Frictionless onboarding** – Users can interact with the app immediately without needing XION tokens.
+* **Frictionless onboarding** – Users can interact with the app immediately without needing $VERONA tokens.
 * **Better user experience** – Reduces complexity and improves adoption for non-crypto-native users.
 * **Controlled sponsorship** – apps can define limits on gas fee coverage.
 
@@ -167,7 +167,7 @@ These two parameters are required and so you need to fill in the values:
 Once those parameters have been added you can scroll down to the bottom of the page and click the "**Create**" button to create your treasury contract instance. Once created, the contract will appear on the **Dashboard**.
 
 {% hint style="success" %}
-**Fund the Treasury Contract**: Transfer **XION tokens** to the contract to ensure it can cover gas fees for fee grants.
+**Fund the Treasury Contract**: Transfer **$VERONA tokens** to the contract to ensure it can cover gas fees for fee grants.
 {% endhint %}
 
 ## Editing a Treasury Contract

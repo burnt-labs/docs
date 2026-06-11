@@ -15,7 +15,7 @@ Before getting started, ensure you have the following installed:
 
 ## What Are Meta Accounts?
 
-Meta Accounts are smart contract accounts created and managed by XION’s Abstraxion system. They abstract away traditional blockchain complexity and provide:
+Meta Accounts are smart contract accounts created and managed by Verona’s Abstraxion system. They abstract away traditional blockchain complexity and provide:
 
 * **An oAuth2 style login mechanism** (no wallet required) that allows for login via email, social accounts, passkeys and crypto wallets
 * **Instant execution of pre-approved smart contract calls**
@@ -59,7 +59,7 @@ EXPO_PUBLIC_REST_ENDPOINT="https://api.xion-testnet-2.burnt.com"
 
 * **EXPO\_PUBLIC\_CONTRACT\_ADDRESS -** The address of the smart contract your app will interact with.
 * **EXPO\_PUBLIC\_TREASURY\_CONTRACT\_ADDRESS -** The treasury contract associated with the above contract. It enables gasless transactions using fee grants and handles authorization permissions, allowing your app to execute transactions on behalf of the Meta Account holder—delivering a seamless user experience.
-* **EXPO\_PUBLIC\_RPC\_ENDPOINT -** The RPC endpoint used to communicate with the XION blockchain.
+* **EXPO\_PUBLIC\_RPC\_ENDPOINT -** The RPC endpoint used to communicate with the Verona network.
 * **EXPO\_PUBLIC\_REST\_ENDPOINT -** The REST endpoint for querying chain state via HTTP.
 
 You can access these values in your code using `process.env.`. For example:
@@ -197,7 +197,7 @@ function AppContent() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Xion Abstraxion Demo</Text>
+      <Text style={styles.title}>Verona Abstraxion Demo</Text>
       
       {account ? (
         <View style={styles.userInfo}>
@@ -220,7 +220,7 @@ function AppContent() {
           disabled={isConnecting}
         >
           <Text style={styles.buttonText}>
-            {isConnecting ? 'Connecting...' : 'Login with Xion'}
+            {isConnecting ? 'Connecting...' : 'Login with Verona'}
           </Text>
         </TouchableOpacity>
       )}
@@ -288,7 +288,7 @@ Here's what has been added:
 
 **Login Functionality**
 
-* A **“Login with Xion”** button appears when the user is not logged in.
+* A **“Login with Verona”** button appears when the user is not logged in.
 * Utilizes the `useAbstraxionSigningClient` hook to handle authentication.
 * Displays a loading state while connecting.
 
@@ -324,8 +324,8 @@ Here's what has been added:
 {% endtab %}
 {% endtabs %}
 
-1. Click the **“Login with Xion”** button.
-2. Complete the Xion Abstraxion authentication flow.
+1. Click the **“Login with Verona”** button.
+2. Complete the Verona Abstraxion authentication flow.
 3. Upon success, your address should appear along with a **“Logout”** button.
 4. Click **“Logout”** to disconnect the session.
 
@@ -339,7 +339,7 @@ Depending on your goals, here are two paths you can take next:
 
 ### Launch a Mobile app in 5 Minutes
 
-If you're looking to get something up and running **quickly**, follow our streamlined quick-start guide: [**Launch a Mobile dApp in 5 Minutes**](https://docs.burnt.com/xion/developers/xion-quick-start/zero-to-dapp-in-5-minutes/launch-a-user-map-dapp-on-xion-in-5-minutes)**.**
+If you're looking to get something up and running **quickly**, follow our streamlined quick-start guide: [**Launch a Mobile dApp in 5 Minutes**](../../computation/quick-start/zero-to-dapp-in-5-minutes/react-native-mobile-dapp-in-5-minutes.md)**.**
 
 \
 This guide walks you through:
@@ -354,7 +354,7 @@ It’s the fastest way to see the full app lifecycle in action.
 
 ### Deep Dive: How the Mobile app is built
 
-If you want to understand **how the mobile app works under the hood**, explore this step-by-step tutorial: [**Building a React Native Mobile App with Abstraxion (Xion.js)**](https://docs.burnt.com/xion/developers/learn-and-build/mobile-development/building-a-react-native-mobile-app-with-abstraxion-xion.js)**.**
+If you want to understand **how the mobile app works under the hood**, explore this step-by-step tutorial: [**Building a React Native Mobile App with Abstraxion**](building-a-react-native-mobile-app-with-abstraxion.md)**.**
 
 \
 This guide breaks down:

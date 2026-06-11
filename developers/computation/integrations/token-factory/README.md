@@ -1,6 +1,6 @@
 # Token Factory
 
-When creating tokens on XION, developers have two main options: [**CW20 smart contracts**](https://github.com/CosmWasm/cw-plus/blob/main/packages/cw20/README.md) or the [**Token Factory module**](https://github.com/strangelove-ventures/tokenfactory). While CW20 has been widely used in the Cosmos ecosystem, Token Factory provides a **simpler,** more **efficient,** and **scalable** alternative.
+When creating tokens on the Verona network, developers have two main options: [**CW20 smart contracts**](https://github.com/CosmWasm/cw-plus/blob/main/packages/cw20/README.md) or the [**Token Factory module**](https://github.com/strangelove-ventures/tokenfactory). While CW20 has been widely used in the Cosmos ecosystem, Token Factory provides a **simpler,** more **efficient,** and **scalable** alternative.
 
 
 
@@ -16,9 +16,9 @@ The CW20 token standard is analogous to Ethereum's ERC20 standard and is widely 
 
 ## **Token Factory Module**
 
-The Token Factory module is a built-in feature of the Xion ecosystem, providing a more streamlined approach to token creation and management. Key features include:
+The Token Factory module is a built-in feature of the Verona ecosystem, providing a more streamlined approach to token creation and management. Key features include:
 
-* **Permissionless Token Creation**: Any account can create a new native token, similar to the Xion native token managed by the bank module. Tokens are uniquely identified using the format `factory/{creator address}/{subdenom}`, preventing name collisions.
+* **Permissionless Token Creation**: Any account can create a new native token, similar to the Verona native token managed by the bank module. Tokens are uniquely identified using the format `factory/{creator address}/{subdenom}`, preventing name collisions.
 * **Administrative Control**: The original creator of a token is granted "admin" privileges, allowing them to:
   * **Mint**: Issue new tokens to any account.
   * **Burn**: Remove tokens from circulation from any account.

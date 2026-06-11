@@ -1,21 +1,21 @@
 ---
 description: >-
-  This guide provides a comprehensive walkthrough for integrating Xion into your
+  This guide provides a comprehensive walkthrough for integrating Verona into your
   application by OAuth2 authentication.
 icon: passport
 ---
 
 # OAuth2 App Development
 
-This guide provides a comprehensive walkthrough for integrating Xion into your application by OAuth2 authentication. By following this guide, you'll enable secure and efficient user authentication, leveraging the OAuth2 protocol to provide a Web2-style experience with blockchain capabilities.
+This guide provides a comprehensive walkthrough for integrating Verona into your application by OAuth2 authentication. By following this guide, you'll enable secure and efficient user authentication, leveraging the OAuth2 protocol to provide a Web2-style experience with blockchain capabilities.
 
-A fully functional demo of OAuth2 integration is available in the [Xion OAuth2 App Demo](https://github.com/burnt-labs/xion-oauth2-app-demo) repository.
+A fully functional demo of OAuth2 integration is available in the [Verona OAuth2 App Demo](https://github.com/burnt-labs/xion-oauth2-app-demo) repository.
 
 ## 1. Understanding OAuth2 and Its Benefits
 
 OAuth 2.0 is an industry-standard protocol for authorization, designed to provide specific authorization flows for web applications, desktop applications, mobile phones, and living room devices. The specification and its extensions are being developed within the IETF OAuth Working Group. For more information about OAuth 2.0, visit [oauth.net/2/](https://oauth.net/2/).
 
-**Benefits of OAuth2 Integration with Xion:**
+**Benefits of OAuth2 Integration with Verona:**
 
 * **No Wallet Management**: Eliminates the complexity of wallet installation, seed phrase management, and transaction signing for end users
 * **Web2 User Experience**: Users can authenticate using familiar Web2 methods (social logins, email, passkeys) without needing to manage blockchain wallets or private keys
@@ -24,15 +24,15 @@ OAuth 2.0 is an industry-standard protocol for authorization, designed to provid
 * **Delegated Authorization**: Allows applications to execute transactions on behalf of users with explicit permissions
 * **Scalability**: Facilitates integration with multiple services and platforms, promoting interoperability
 
-Xion OAuth2 currently supports the **Authorization Code flow** with **PKCE (Proof Key for Code Exchange)** for enhanced security. This flow is recommended for both public and confidential clients.
+Verona OAuth2 currently supports the **Authorization Code flow** with **PKCE (Proof Key for Code Exchange)** for enhanced security. This flow is recommended for both public and confidential clients.
 
 {% hint style="info" %}
-**OAuth2 flow support**: Xion OAuth2 supports the **Authorization Code** flow (with PKCE for public clients). The token endpoint also supports **`grant_type=refresh_token`**: after a successful code exchange, the JSON response may include a `refresh_token` you can use to obtain new access tokens without sending the user through the login screen again. Access token lifetime is typically on the order of one day; refresh token lifetime is longer (see `expires_in` on each response). If you do not store or use `refresh_token`, fall back to re-running the authorization flow when the access token expires.
+**OAuth2 flow support**: Verona OAuth2 supports the **Authorization Code** flow (with PKCE for public clients). The token endpoint also supports **`grant_type=refresh_token`**: after a successful code exchange, the JSON response may include a `refresh_token` you can use to obtain new access tokens without sending the user through the login screen again. Access token lifetime is typically on the order of one day; refresh token lifetime is longer (see `expires_in` on each response). If you do not store or use `refresh_token`, fall back to re-running the authorization flow when the access token expires.
 {% endhint %}
 
 ## 2. Prerequisites - Treasury Contract Setup
 
-Before integrating OAuth2 with Xion Auth, you must first deploy and configure a **Treasury Contract**. The Treasury contract manages gasless transactions and permission grants, which are essential for the OAuth2 flow.
+Before integrating OAuth2 with Verona Auth, you must first deploy and configure a **Treasury Contract**. The Treasury contract manages gasless transactions and permission grants, which are essential for the OAuth2 flow.
 
 For detailed instructions on deploying a Treasury contract, refer to the [Treasury Contracts Documentation](getting-started/treasury-contracts.md).
 
@@ -59,7 +59,7 @@ You **MUST enable the "IS OAUTH2 APP" toggle** in the Treasury contract's Update
 
 **To enable the OAuth2 toggle:**
 
-1. Navigate to your Treasury contract in the [Xion Developer Portal (testnet)](https://dev.testnet.burnt.com/) or [Xion Developer Portal (mainnet)](https://dev.burnt.com/). Use the portal that matches your target network.
+1. Navigate to your Treasury contract in the [Developer Portal (testnet)](https://dev.testnet.burnt.com/) or [Developer Portal (mainnet)](https://dev.burnt.com/). Use the portal that matches your target network.
 2. Click the **"Update Params"** button
 3. Enable the **"IS OAUTH2 APP"** toggle switch
 4. Save the changes
@@ -82,7 +82,7 @@ For more information on configuring Treasury permissions, see the [Treasury Cont
 
 ## 3. Creating OAuth2 Clients
 
-Once your Treasury contract is configured, you can create OAuth2 clients in the **XION OAuth2 Portal**. The portal allows you to manage OAuth2 clients that will authenticate users and access protected APIs.
+Once your Treasury contract is configured, you can create OAuth2 clients in the **Verona OAuth2 Portal**. The portal allows you to manage OAuth2 clients that will authenticate users and access protected APIs.
 
 ### 3.1. Accessing the OAuth2 Portal
 
@@ -91,7 +91,7 @@ Once your Treasury contract is configured, you can create OAuth2 clients in the 
 
 <figure><img src="../../.gitbook/assets/OAuth2-1.png" alt="" width="375"><figcaption><p>OAuth2 Portal login screen</p></figcaption></figure>
 
-To access the portal, click **"Connect with XION"** and authenticate using your Xion account. After authentication, you'll be redirected to the OAuth2 Clients Dashboard.
+To access the portal, click **"Connect with Verona"** and authenticate using your Verona account. After authentication, you'll be redirected to the OAuth2 Clients Dashboard.
 
 {% hint style="info" %}
 Use the **testnet** portal while developing and the **mainnet** portal for production OAuth2 clients. Your app must use the OAuth2 server URL, discovery endpoints, and protected API base URL for the same network as your Treasury contract.
@@ -273,7 +273,7 @@ window.location.href = authUrl.toString()
 * `response_type`: Always `"code"` for Authorization Code flow
 * `code_challenge`: (Public Clients) Base64url-encoded SHA256 hash of code\_verifier
 * `code_challenge_method`: (Public Clients) Always `"S256"` for SHA256
-* `scope`: XION's OAuth2 Protected API scopes (e.g., `"xion:transactions:submit"`)
+* `scope`: Verona's OAuth2 Protected API scopes (e.g., `"xion:transactions:submit"`)
 * `state`: Random string for CSRF protection
 
 #### Step 3: Callback - Handle Authorization Code
@@ -920,7 +920,7 @@ export default async function handler(
 
 ## 5. OAuth2 Protected APIs
 
-Once you have an access token, you can use it to access protected OAuth2 APIs. These APIs allow you to interact with the XION blockchain on behalf of authenticated users.
+Once you have an access token, you can use it to access protected OAuth2 APIs. These APIs allow you to interact with the Verona network on behalf of authenticated users.
 
 ### API Base URL
 
@@ -951,7 +951,7 @@ headers: {
 
 **Endpoint**: `GET /api/v1/me`
 
-Returns the authenticated user's **MetaAccount address** (`id`), **authenticators** registered on that account, and **balances** (e.g. XION and USDC) resolved by the service.
+Returns the authenticated user's **MetaAccount address** (`id`), **authenticators** registered on that account, and **balances** (e.g. Verona and USDC) resolved by the service.
 
 **Request:**
 
@@ -1182,7 +1182,7 @@ export const transactionApi = {
 
 To submit transactions via the OAuth2 API, you need to construct transaction messages using protobuf-based types from the `@burnt-labs/xion-types` package. These messages are then encoded and sent to the transaction API endpoint.
 
-### Installing Xion Types
+### Installing Verona Types
 
 ```bash
 # npm
@@ -1200,7 +1200,7 @@ bun add @burnt-labs/xion-types
 
 ### Understanding Transaction Messages
 
-Transaction messages in Xion use protobuf encoding. Each message has:
+Transaction messages on Verona use protobuf encoding. Each message has:
 
 * **`typeUrl`**: The protobuf message type URL (e.g., `"/cosmos.bank.v1beta1.MsgSend"`)
 * **`value`**: The protobuf-encoded message value
@@ -1221,7 +1221,7 @@ For example:
 
 Before constructing transaction messages, ensure the corresponding permissions are configured in your Treasury contract. See the [Treasury Contracts Documentation](getting-started/treasury-contracts.md) for details on configuring permissions.
 
-The OAuth2 service may accept additional Cosmos message types when your Treasury grants allow them (for example staking, governance, or XION-specific bank messages). The exhaustive list depends on the server version—use [OAuth2 Protected API Documentation](https://oauth2.testnet.burnt.com/protected-api-docs) and your Treasury configuration as the source of truth.
+The OAuth2 service may accept additional Cosmos message types when your Treasury grants allow them (for example staking, governance, or Verona-specific bank messages). The exhaustive list depends on the server version—use [OAuth2 Protected API Documentation](https://oauth2.testnet.burnt.com/protected-api-docs) and your Treasury configuration as the source of truth.
 
 ### Message Construction Examples
 
@@ -1400,7 +1400,7 @@ While the OAuth2 API provides endpoints for submitting transactions and querying
 
 ### Using CosmJS for Queries
 
-CosmJS is the standard library for interacting with Cosmos SDK-based blockchains, including Xion. For detailed instructions on using CosmJS with Xion, refer to the Interact with XION via your Backend Service guide, specifically the "Querying the Blockchain" section.
+CosmJS is the standard library for interacting with Cosmos SDK-based blockchains, including Verona. For detailed instructions on using CosmJS with Verona, refer to the Interact with Verona via your Backend Service guide, specifically the "Querying the Blockchain" section.
 
 ### Installation
 
@@ -1448,7 +1448,7 @@ async function queryContract(contractAddress: string, queryMsg: any) {
 * **Comprehensive Query Support**: CosmJS provides access to all Cosmos SDK query endpoints
 * **No Authentication Required**: Queries don't require OAuth2 tokens
 * **Standard Library**: Well-documented and widely used in the Cosmos ecosystem
-* **Direct RPC Access**: Connects directly to Xion RPC nodes
+* **Direct RPC Access**: Connects directly to Verona RPC nodes
 
 {% hint style="info" %}
 **Future OAuth2 Query Endpoints**: The OAuth2 API may add query endpoints in future iterations based on product requirements. However, CosmJS already covers most use cases for querying blockchain data.
@@ -1467,12 +1467,12 @@ For a list of available RPC endpoints for each network, see the [Public Endpoint
 * **OAuth2 Protected API docs (testnet)**: [https://oauth2.testnet.burnt.com/protected-api-docs](https://oauth2.testnet.burnt.com/protected-api-docs)
 * **OAuth2 Protected API docs (mainnet)**: [https://oauth2.burnt.com/protected-api-docs](https://oauth2.burnt.com/protected-api-docs)
 * **OAuth2 App Examples**: [https://github.com/burnt-labs/xion-oauth2-app-demo](https://github.com/burnt-labs/xion-oauth2-app-demo)
-* **Xion Types Repository**: [https://github.com/burnt-labs/xion-types](https://github.com/burnt-labs/xion-types)
-* **Xion Types TypeScript Guide**: [https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/GUIDE.md](https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/GUIDE.md)
+* **Verona Types Repository**: [https://github.com/burnt-labs/xion-types](https://github.com/burnt-labs/xion-types)
+* **Verona Types TypeScript Guide**: [https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/GUIDE.md](https://github.com/burnt-labs/xion-types/blob/main/examples/typescript/GUIDE.md)
 * **Treasury Contracts Documentation**: [Enabling Gasless Transactions with Treasury Contracts](getting-started/treasury-contracts.md)
-* **Xion Developer Portal (testnet)**: [https://dev.testnet.burnt.com/](https://dev.testnet.burnt.com/) (Treasury contracts)
-* **Xion Developer Portal (mainnet)**: [https://dev.burnt.com/](https://dev.burnt.com/) (Treasury contracts)
-* [Xion Agent Toolkit](../tools/xion-toolkit.md) — CLI for testnet/mainnet (`--network mainnet`) including OAuth2 client management
+* **Developer Portal (testnet)**: [https://dev.testnet.burnt.com/](https://dev.testnet.burnt.com/) (Treasury contracts)
+* **Developer Portal (mainnet)**: [https://dev.burnt.com/](https://dev.burnt.com/) (Treasury contracts)
+* [Verona Agent Toolkit](../tools/verona-toolkit.md) — CLI for testnet/mainnet (`--network mainnet`) including OAuth2 client management
 
 {% hint style="success" %}
 If you have any questions or encounter issues, feel free to ask in our [**Telegram Developer Group**](https://t.me/+SC47NRhVz9Q2MDg0) or on [**Discord**](https://discord.com/invite/burnt) in our [**Dev Chat channel**](https://discord.com/channels/823953904512401469/1308977704586186762).

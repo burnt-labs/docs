@@ -22,9 +22,9 @@ Beyond cost savings, these battle-tested solutions accelerate development by pro
 
 Developers can leverage the following repositories to find contracts that are **audited, widely used, or community-validated**:
 
-### **Xion Mainnet Contracts Repository**
+### **Verona Mainnet Contracts Repository**
 
-* [**Xion Contracts Repository**](https://github.com/burnt-labs/contracts) – This repository lists **all contracts deployed on Mainnet** along with their **Code IDs**, making it easy for developers to instantiate existing contracts instead of deploying new ones.
+* [**Verona Contracts Repository**](https://github.com/burnt-labs/contracts) – This repository lists **all contracts deployed on Mainnet** along with their **Code IDs**, making it easy for developers to instantiate existing contracts instead of deploying new ones.
 * **Before using a contract on Mainnet, you should first test its equivalent on Testnet.** Ensure your integration works correctly before submitting a governance proposal for Mainnet deployment. Within the contracts repository you will see the version being used under the release column and the link will take you to the actual code you will need to deploy on Testnet.
 
 ### **Commonly Used CosmWasm Contracts**

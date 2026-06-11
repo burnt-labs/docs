@@ -2,23 +2,23 @@
 
 The **Token Factory module** provides a simple framework for creating and managing **custom native tokens**. It allows users to create, mint, distribute and interact with their own tokens seamlessly. Each token is uniquely tied to its creator’s address and follows the standardized format `factory/{creator address}/{subdenom}.`
 
-The module is particularly useful for **developers** and **projects** looking to **issue chain-native assets** without the complexity of deploying custom smart contracts. Regardless of the token’s intended use the **Token Factory** streamlines the entire **lifecycle**, ensuring a secure and scalable approach to token management on XION.
+The module is particularly useful for **developers** and **projects** looking to **issue chain-native assets** without the complexity of deploying custom smart contracts. Regardless of the token’s intended use the **Token Factory** streamlines the entire **lifecycle**, ensuring a secure and scalable approach to token management on the Verona network.
 
 ## **Prerequisites**
 
 Before proceeding, make sure you have the following:
 
-1. **XION Daemon (`xiond`) Installed:**\
-   Ensure that `xiond` is installed on your system. If not, follow the [Setting up your Local Development Environment](https://docs.burnt.com/xion/developers/featured-guides/setup-local-environment/installation-prerequisites-setup-local-environment#xiond) guide to set it up.
+1. **Verona Daemon (`xiond`) Installed:**\
+   Ensure that `xiond` is installed on your system. If not, follow the [Setting up your Local Development Environment](../../local-development/setting-up-env/installation-prerequisites-setup-local-environment.md#xiond) guide to set it up.
 2. **An Active Account:**\
-   Set up an account using `xiond` by following the [Generate an account](https://docs.burnt.com/xion/developers/featured-guides/setup-local-environment/interact-with-xion-chain-setup-xion-daemon#generate-an-account) guide. You will use this account to execute transactions.
+   Set up an account using `xiond` by following the [Generate an account](../../../tools/daemon-cli.md#generate-an-account) guide. You will use this account to execute transactions.
 3. **A Funded Account:**\
-   You need an account with sufficient **native XION tokens** to cover transaction fees. You can obtain testnet tokens through the [**XION testnet faucet**](../../../references/xion-testnet.md).
+   You need an account with sufficient **native $VERONA tokens (Previously $XION)** to cover transaction fees. You can obtain testnet tokens through the [**Verona testnet faucet**](../../../references/testnet-tokens.md).
 
 ## **Creating a Token**
 
 {% hint style="info" %}
-Creating a new Token Factory token requires a **1000 XION fee** (on both **Testnet** and **Mainnet**). This fee protects XION users by:
+Creating a new Token Factory token requires a **1000 $VERONA fee (Previously $XION)** (on both **Testnet** and **Mainnet**). This fee protects Verona users by:
 
 * **Reducing spam** and malicious token creation.
 * **Encouraging meaningful token projects**, ensuring a higher-quality ecosystem.
@@ -34,11 +34,11 @@ xiond tx tokenfactory create-denom <your-denom> --from <wallet-name> --chain-id 
 
 * `<your-denom>` – The unique token name (e.g., `customtoken`).
 * `<wallet-name>` – Your configured wallet name in `xiond`.
-* `<chain-id>` – The chain ID of the XION network.
+* `<chain-id>` – The chain ID of the Verona network.
 * `<node>` – The ID or address of the blockchain node you are connecting to.
 * `--gas auto` – Automatically estimates the gas required for the transaction.
 * `<gas-adjustment>` – Adjusts the estimated gas amount by **30%** to account for possible variations in actual consumption.
-* `<gas-prices>` – The fee rate for gas in **uxion** (the smallest unit of XION).
+* `<gas-prices>` – The fee rate for gas in **uxion** (the smallest unit of Verona).
 
 **Example:**
 
@@ -139,7 +139,7 @@ Before minting new tokens, it is important to **configure the token’s metadata
 
 **Updatable Fields:**
 
-* **`ticker-symbol`** – The short symbol representing the token (e.g., `XION`).
+* **`ticker-symbol`** – The short symbol representing the token (e.g., `$VERONA`).
 * **`description`** – A brief description of the token.
 * **`exponent`** – The decimal precision used for display purposes.
 
@@ -263,11 +263,11 @@ xiond tx tokenfactory mint <amount><denom> --from <wallet-name> --chain-id <chai
 * `<amount>` – The quantity of tokens to mint.
 * `<denom>` – The full denomination (including `factory/<creator-address>/<denom>`).
 * `<wallet-name>` – Your configured wallet name.
-* `<chain-id>` – The chain ID of the XION network.
+* `<chain-id>` – The chain ID of the Verona network.
 * `<node>` – The ID or address of the blockchain node you are connecting to.
 * `--gas auto` – Automatically estimates the gas required for the transaction.
 * `<gas-adjustment>` – Adjusts the estimated gas amount by **30%** to account for possible variations in actual consumption.
-* `<gas-prices>` – The fee rate for gas in **uxion** (the smallest unit of XION).
+* `<gas-prices>` – The fee rate for gas in **uxion** (the smallest unit of Verona).
 
 **Example:**
 
@@ -327,7 +327,7 @@ If your **exponent** was set to **6**, then **`1000000000000`** would mint **1 m
 
 ## **Querying Token Balance**
 
-Once you have minted or received tokens, you may want to **check your wallet’s balance** to see the amount of **native XION, custom tokens, and IBC-transferred assets** you hold. The **bank balance query** allows you to retrieve a complete breakdown of all tokens associated with your address.
+Once you have minted or received tokens, you may want to **check your wallet’s balance** to see the amount of **native Verona, custom tokens, and IBC-transferred assets** you hold. The **bank balance query** allows you to retrieve a complete breakdown of all tokens associated with your address.
 
 To check the token balances for an account execute:
 
@@ -357,7 +357,7 @@ pagination:
 
 ## **Sending Tokens to Another Address**
 
-Once you have minted tokens, you may want to **transfer them to another wallet**, whether for payments, rewards, or distribution to users. The **bank send transaction** allows you to send your custom tokens (or any other assets in your wallet) to another address on the **XION blockchain**.
+Once you have minted tokens, you may want to **transfer them to another wallet**, whether for payments, rewards, or distribution to users. The **bank send transaction** allows you to send your custom tokens (or any other assets in your wallet) to another address on the **Verona network**.
 
 To send tokens, use the following command:
 
@@ -373,7 +373,7 @@ xiond tx bank send <your-address> <recipient-address> <amount><denom> --node <no
 * **`<denom>`** – The full token denomination, including the `factory/{creator-address}/{denom}` prefix.
 * **`<node>`** – The RPC node used to broadcast the transaction.
 * **`<wallet-name>`** – The name of your configured wallet in `xiond`.
-* **`<chain-id>`** – The XION network’s chain ID.
+* **`<chain-id>`** – The Verona network’s chain ID.
 * **`--gas auto`** – Enables automatic gas estimation.
 * **`<gas-adjustment>`** – Adjusts the estimated gas usage (e.g., `1.5` for 50% buffer).
 * **`<gas-prices>`** – Sets the gas fee rate in `uxion`.
@@ -390,4 +390,4 @@ xiond tx bank send xion1ka5... xion193h... 500factory/xion1ka5.../mytoken --node
 * The transaction is **broadcasted to the network** via the specified RPC node.
 * If successful, the **recipient’s balance** is updated, and the sender’s balance is **reduced accordingly**.
 
-You have successfully **created**, **updated**, **minted** and **transferred** a token using the **XION Token Factory module**. With this foundation, you can now integrate your token into your smart contracts and **app frontends** seamlessly.
+You have successfully **created**, **updated**, **minted** and **transferred** a token using the **Verona Token Factory module**. With this foundation, you can now integrate your token into your smart contracts and **app frontends** seamlessly.

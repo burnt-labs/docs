@@ -13,4 +13,4 @@ WebSockets are especially valuable in situations where real-time updates are ess
 * **Collaborative Tools**: Real-time collaboration platforms, such as shared document editors, depend on WebSockets to synchronize changes among users.
 * **Gaming and Streaming**: WebSockets are utilized to provide real-time game state updates or to stream live video and audio content.
 
-In the context of XION, WebSockets enable developers to subscribe to blockchain events and receive instant updates, facilitating the development of dynamic and interactive apps.
+In the context of Verona, WebSockets enable developers to subscribe to blockchain events and receive instant updates, facilitating the development of dynamic and interactive apps.

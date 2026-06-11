@@ -164,7 +164,7 @@ The compiled contract will be located at `artifacts/user_map.wasm`.
 
 ### **Upload Optimized Contract On-chain** <a href="#upload-optimized-contract-on-chain" id="upload-optimized-contract-on-chain"></a>
 
-To learn how to set up a wallet see the following section on [generating an account](https://docs.burnt.com/xion/developers/featured-guides/your-first-contract/deploy-a-cosmwasm-smart-contract#generate-an-account) using **xiond**. Next, set your **wallet address** or **key name** by executing the following in your terminal:
+To learn how to set up a wallet see the following section on [generating an account](../local-development/deploy-a-cosmwasm-smart-contract.md#generate-an-account) using **xiond**. Next, set your **wallet address** or **key name** by executing the following in your terminal:
 
 ```sh
 WALLET="your-wallet-address-or-key-name-here"
@@ -289,8 +289,8 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 
 ### Steps to Deploy a Treasury Contract <a href="#steps-to-deploy-a-treasury-contract" id="steps-to-deploy-a-treasury-contract"></a>
 
-1. Login to the [XION Developer Portal](https://dev.testnet2.burnt.com/).
-2. Click othen **"New Treasury"** button to create a new treasury contract.
+1. Login to the [Developer Portal](https://dev.testnet2.burnt.com/).
+2. Click the **"New Treasury"** button to create a new treasury contract.
 3. **Select the appropriate configuration** based on your use case. The following "**Fee Grant**" and "**Grant Config**" sections gives a recommended configuration that works for most scenarios:
 
 #### **Fee Grant**
@@ -324,7 +324,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 Once the preview is to your liking click the "**Create**" button to create the Treasury contract.
 
 {% hint style="info" %}
-Learn more about Treasury Contracts [here](https://docs.burnt.com/xion/developers/featured-guides/your-first-dapp/create-a-gas-less-user-experience).
+Learn more about Treasury Contracts [here](../../accounts/getting-started/treasury-contracts.md).
 {% endhint %}
 
 ## Building the Frontend
@@ -356,8 +356,8 @@ NEXT_PUBLIC_REST_URL="https://api.xion-testnet-2.burnt.com"
 | ------------------------------- | --------------------------------------------------------------------------- |
 | NEXT\_PUBLIC\_TREASURY\_ADDRESS | Treasury address used for gasless transactions and grantz authorization     |
 | NEXT\_PUBLIC\_CONTRACT\_ADDRESS | Address of your deployed User Map smart contract                            |
-| NEXT\_PUBLIC\_RPC\_URL          | RPC endpoint for Xion (default: `https://rpc.xion-testnet-2.burnt.com:443`) |
-| NEXT\_PUBLIC\_REST\_URL         | REST endpoint for Xion (default: `https://api.xion-testnet-2.burnt.com`)    |
+| NEXT\_PUBLIC\_RPC\_URL          | RPC endpoint for Verona (default: `https://rpc.xion-testnet-2.burnt.com:443`) |
+| NEXT\_PUBLIC\_REST\_URL         | REST endpoint for Verona (default: `https://api.xion-testnet-2.burnt.com`)    |
 
 3. Build and start the application:
 
@@ -367,7 +367,7 @@ npm run dev
 
 ### Frontend: Main Page Breakdown
 
-The `src/app/page.tsx` file is the **core** of the frontend. It connects the wallet, submits JSON data to the User Map smart contract, and queries stored data, all using **Xion’s Abstraxion** toolkit.
+The `src/app/page.tsx` file is the **core** of the frontend. It connects the wallet, submits JSON data to the User Map smart contract, and queries stored data, all using **Verona’s Abstraxion** toolkit.
 
 #### **Environment Setup**
 

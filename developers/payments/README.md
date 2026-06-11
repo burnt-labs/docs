@@ -4,11 +4,11 @@ icon: sack-dollar
 
 # Payments
 
-The Payments Layer provides tools and integrations for handling payments, stablecoins, and on/off ramps on XION.
+The Payments layer provides tools and integrations for handling payments, stablecoins, and on/off ramps on the **Verona** network.
 
 ### Overview
 
-XION's Payments Layer enables:
+Verona's Payments Layer enables:
 
 * **On-Ramps**: Credit card payments, Crossmint integration
 * **Stablecoins**: Native stablecoin support

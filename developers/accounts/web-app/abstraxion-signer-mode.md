@@ -11,7 +11,7 @@ vars:
 
 # Abstraxion signer mode
 
-**Signer mode** (`authentication.type: "signer"`) runs Meta Account flows **without** redirecting the user to the full-page XION dashboard.
+**Signer mode** (`authentication.type: "signer"`) runs Meta Account flows **without** redirecting the user to the full-page Verona dashboard.
 
 ## Outcomes to read alongside this page
 
@@ -103,7 +103,7 @@ If your **`SignerAuthentication`** type still lists **`aaApiUrl`** / **`smartAcc
 
 ### Top-level `config` & environment variables
 
-**`chainId`** is required. **`normalizeAbstraxionConfig`** fills **`rpcUrl`**, **`restUrl`**, **`gasPrice`**, and **`feeGranter`** from **`@burnt-labs/constants`** when omitted for a known XION **`chainId`**.
+**`chainId`** is required. **`normalizeAbstraxionConfig`** fills **`rpcUrl`**, **`restUrl`**, **`gasPrice`**, and **`feeGranter`** from **`@burnt-labs/constants`** when omitted for a known Verona **`chainId`**.
 
 **`aaApiUrl`** and **`smartAccountContract`** are **not** filled by that same helper in the public SDK today—treat them as **documented presets per network** (same values as the **`chainId` block** in **[`apps/demo-app/.env.example`](https://github.com/burnt-labs/xion.js/blob/main/apps/demo-app/.env.example)**): copy or merge them in app config. You override only for **custom** AA / wasm.
 

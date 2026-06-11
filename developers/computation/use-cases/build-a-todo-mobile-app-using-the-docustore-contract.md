@@ -93,8 +93,8 @@ EXPO_PUBLIC_REST_ENDPOINT="https://api.xion-testnet-2.burnt.com"
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | EXPO\_PUBLIC\_TREASURY\_CONTRACT\_ADDRESS  | Treasury contract instance used for gasless transactions and grantz authorization to execute transactions via the DocuStore smart contract instance on behalf of users. |
 | EXPO\_PUBLIC\_DOCUSTORE\_CONTRACT\_ADDRESS | Address of the DocuStore smart contract instance.                                                                                                                       |
-| EXPO\_PUBLIC\_RPC\_ENDPOINT                | RPC endpoint for Xion (default: `https://rpc.xion-testnet-2.burnt.com:443`)                                                                                             |
-| EXPO\_PUBLIC\_REST\_ENDPOINT               | REST endpoint for Xion (default: `https://api.xion-testnet-2.burnt.com`)                                                                                                |
+| EXPO\_PUBLIC\_RPC\_ENDPOINT                | RPC endpoint for Verona (default: `https://rpc.xion-testnet-2.burnt.com:443`)                                                                                             |
+| EXPO\_PUBLIC\_REST\_ENDPOINT               | REST endpoint for Verona (default: `https://api.xion-testnet-2.burnt.com`)                                                                                                |
 
 
 

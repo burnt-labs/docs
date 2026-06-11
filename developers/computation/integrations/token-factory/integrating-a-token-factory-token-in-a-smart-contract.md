@@ -11,8 +11,8 @@ This guide will walk you through integrating a **Token Factory token** into a **
 
 Before deploying your smart contract on-chain, ensure you have completed the following setup steps:
 
-* **Set up your local environment**: Follow the [installation and setup guide](https://docs.burnt.com/xion/developers/featured-guides/setup-local-environment/installation-prerequisites-setup-local-environment) to configure your development environment.
-* **Install the XION daemon**: Set up the XION CLI by following the [installation instructions](https://docs.burnt.com/xion/developers/featured-guides/setup-local-environment/interact-with-xion-chain-setup-xion-daemon) to interact with the blockchain.
+* **Set up your local environment**: Follow the [installation and setup guide](../../local-development/setting-up-env/installation-prerequisites-setup-local-environment.md) to configure your development environment.
+* **Install the Verona daemon (`xiond`)**: Set up the `xiond` CLI by following the [installation instructions](../../../tools/daemon-cli.md) to interact with the blockchain.
 * Make sure you have [Docker](https://www.docker.com/get-started) installed and running, as it is required to compile your contract.
 
 

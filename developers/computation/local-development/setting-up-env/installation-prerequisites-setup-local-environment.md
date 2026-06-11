@@ -1,6 +1,6 @@
-# Setting up your Local Smart Contract Development Environment for XION
+# Setting up your Local Smart Contract Development Environment for Verona Network
 
-A properly configured local development environment is essential for building and testing smart contracts on XION. This guide covers the necessary tools, dependencies, and configurations needed to get started.
+A properly configured local development environment is essential for building and testing smart contracts on the Verona network. This guide covers the necessary tools, dependencies, and configurations needed to get started.
 
 The following tools will be installed:
 
@@ -8,11 +8,11 @@ The following tools will be installed:
 * [**cargo-generate**](installation-prerequisites-setup-local-environment.md#cargo-generate) – A tool for quickly setting up new Rust projects from templates.
 * [**Go**](installation-prerequisites-setup-local-environment.md#go) – Required for interacting with blockchain tooling and dependencies.
 * [**Docker**](installation-prerequisites-setup-local-environment.md#docker) – Used for optimizing Rust smart contracts via the Rust Optimizer.
-* [**xiond**](installation-prerequisites-setup-local-environment.md#xiond) – The XION blockchain daemon for running a local node, deploying smart contracts, and interacting with the blockchain.
+* [**xiond**](installation-prerequisites-setup-local-environment.md#xiond) – The Verona network daemon for running a local node, deploying smart contracts, and interacting with the blockchain.
 
 Each section provides step-by-step installation instructions for macOS, Debian-based Linux, Red Hat-based Linux and Arch Linux.
 
-Once these dependencies are installed, you will have everything needed to start developing on XION.
+Once these dependencies are installed, you will have everything needed to start developing on Verona.
 
 ## **Prerequisites**
 
@@ -20,7 +20,7 @@ Once these dependencies are installed, you will have everything needed to start 
 
 ## **Rust**
 
-[Rust](https://www.rust-lang.org/) is the programming language for developing smart contracts on XION. Known for its performance, security, and memory safety, Rust is well-suited for blockchain development. To build, test, and deploy smart contracts, developers need a properly configured Rust toolchain.
+[Rust](https://www.rust-lang.org/) is the programming language for developing smart contracts on the Verona network. Known for its performance, security, and memory safety, Rust is well-suited for blockchain development. To build, test, and deploy smart contracts, developers need a properly configured Rust toolchain.
 
 The recommended way to install Rust is through [**rustup**](https://rustup.rs/), the official Rust toolchain installer.
 
@@ -90,12 +90,12 @@ You should see output similar to the following (your exact version may differ):
 rustc 1.86.0
 ```
 
-Your global Rust install does not need to match **1.86** exactly, but each **contract repo** should pin **1.86** for WASM builds that upload to XION (see below).
+Your global Rust install does not need to match **1.86** exactly, but each **contract repo** should pin **1.86** for WASM builds that upload to Verona (see below).
 
-### Pin the Rust toolchain for XION
+### Pin the Rust toolchain for Verona Network
 
 {% hint style="warning" %}
-WASM built with the **latest stable Rust** may fail to upload to XION because the chain does not support WebAssembly **bulk memory**. If `xiond tx wasm store` or validation fails after a Rust upgrade, create `rust-toolchain.toml` at your **contract project root** (not only in your global Rust install):
+WASM built with the **latest stable Rust** may fail to upload to Verona because the chain does not support WebAssembly **bulk memory**. If `xiond tx wasm store` or validation fails after a Rust upgrade, create `rust-toolchain.toml` at your **contract project root** (not only in your global Rust install):
 {% endhint %}
 
 ```toml
@@ -104,13 +104,13 @@ channel = "1.86"
 targets = ["wasm32-unknown-unknown"]
 ```
 
-**Why 1.86?** Rust **1.87+** may enable bulk memory for `wasm32-unknown-unknown`, which XION rejects today. **1.86** is the latest stable release known to produce upload-compatible WASM for XION at the time of writing (May 2026). Re-test uploads and update this pin when you upgrade Rust or when XION adds bulk memory support.
+**Why 1.86?** Rust **1.87+** may enable bulk memory for `wasm32-unknown-unknown`, which the Verona network rejects today. **1.86** is the latest stable release known to produce upload-compatible WASM for Verona at the time of writing (May 2026). Re-test uploads and update this pin when you upgrade Rust or when Verona adds bulk memory support.
 
 Commit this file with your contract repo so CI and teammates use the same toolchain, then rebuild before deploying.
 
 ## Cargo
 
-Cargo is Rust's package manager and build system, essential for compiling and managing dependencies in XION smart contract development. When installing Rust using **rustup** which we did earlier, Cargo is automatically included. However, if Cargo is missing or needs to be installed separately, follow the steps below.
+Cargo is Rust's package manager and build system, essential for compiling and managing dependencies in Verona smart contract development. When installing Rust using **rustup** which we did earlier, Cargo is automatically included. However, if Cargo is missing or needs to be installed separately, follow the steps below.
 
 ### **Check if Cargo is Installed**
 
@@ -150,7 +150,7 @@ If Rust is installed via **rustup**, install Cargo with:
 
 ## **Cargo Generate**
 
-**cargo-generate** is a Rust tool that simplifies the creation of new Rust projects from pre-existing templates. It is particularly useful for setting up smart contract projects on XION by automating the scaffolding process.
+**cargo-generate** is a Rust tool that simplifies the creation of new Rust projects from pre-existing templates. It is particularly useful for setting up smart contract projects on Verona by automating the scaffolding process.
 
 Execute the following command to install **cargo-generate**:
 
@@ -174,7 +174,7 @@ cargo generate-generate 0.17.3
 
 ## **Go**
 
-**Go** is required for certain blockchain development tasks, including working with XION’s tooling and dependencies for example `xiond`. Follow the installation steps below for your operating system:
+**Go** is required for certain blockchain development tasks, including working with Verona’s tooling and dependencies for example `xiond`. Follow the installation steps below for your operating system:
 
 {% tabs %}
 {% tab title="macOS" %}
@@ -224,7 +224,7 @@ After setting up your environment, restart your terminal to apply the changes.
 
 ## Docker
 
-Docker is required for optimizing Rust smart contracts using the [**Rust Optimizer**](https://github.com/CosmWasm/optimizer), which ensures that contracts are compiled efficiently for deployment on **XION**. It can also be used to run `xiond`. You can install Docker for your operating system [here](https://docs.docker.com/get-docker/).
+Docker is required for optimizing Rust smart contracts using the [**Rust Optimizer**](https://github.com/CosmWasm/optimizer), which ensures that contracts are compiled efficiently for deployment on **Verona**. It can also be used to run `xiond`. You can install Docker for your operating system [here](https://docs.docker.com/get-docker/).
 
 {% hint style="warning" %}
 For Linux users, it's recommended to run the Docker daemon in [**Rootless Mode**](https://docs.docker.com/engine/security/rootless/)**.**
@@ -232,7 +232,7 @@ For Linux users, it's recommended to run the Docker daemon in [**Rootless Mode**
 
 ## xiond
 
-`xiond` is the core command-line tool for running and interacting with the **XION blockchain**. It serves as the blockchain daemon, enabling developers and node operators to manage network operations, deploy smart contracts, and interact with the XION ecosystem.
+`xiond` is the core command-line tool for running and interacting with the **Verona network**. It serves as the blockchain daemon, enabling developers and node operators to manage network operations, deploy smart contracts, and interact with the Verona ecosystem.
 
 To install `xiond`, you can either use an [**installer**](installation-prerequisites-setup-local-environment.md#installers), download a [**pre-built binary**](installation-prerequisites-setup-local-environment.md#use-pre-built-binary)**,** [**build it from source**](installation-prerequisites-setup-local-environment.md#build-from-source) or utilize a [**docker**](installation-prerequisites-setup-local-environment.md#run-xiond-with-docker) build. Ensure that you use the release corresponding to the version of `xiond` being used on the network where you will be interacting with.
 

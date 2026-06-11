@@ -1,6 +1,6 @@
-# Setting up your XION Developer Environment on Windows (WSL2 + Ubuntu)
+# Setting up your Verona Network Developer Environment on Windows (WSL2 + Ubuntu)
 
-This guide walks you through setting up a local XION developer environment on a Windows machine using **WSL2** with **Ubuntu**. This is the recommended setup for Windows users who want to work with `xiond`, build and interact with their CosmWasm smart contracts.
+This guide walks you through setting up a local Verona developer environment on a Windows machine using **WSL2** with **Ubuntu**. This is the recommended setup for Windows users who want to work with `xiond`, build and interact with their CosmWasm smart contracts.
 
 
 
@@ -125,7 +125,7 @@ _Be sure to add the period at the end of the command to open the current directo
 
 ## Optimize Contract: Example
 
-In this example, we’ll walk through the steps to compile a Xion smart contract using the setup described above.
+In this example, we’ll walk through the steps to compile a Verona smart contract using the setup described above.
 
 ### **Clone the Repository** <a href="#clone-the-repository" id="clone-the-repository"></a>
 
@@ -169,5 +169,5 @@ This will launch the project in Visual Studio Code. From there, open a terminal 
 
 ## Install `xiond` Binary
 
-You can now follow this [guide](https://docs.burnt.com/xion/developers/featured-guides/setup-local-environment/installation-prerequisites-setup-local-environment#xiond) to install `xiond` within the Ubuntu environment. It's preferable to use the **Debian based** installer.
+You can now follow this [guide](installation-prerequisites-setup-local-environment.md#xiond) to install `xiond` within the Ubuntu environment. It's preferable to use the **Debian based** installer.
 

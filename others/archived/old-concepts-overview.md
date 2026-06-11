@@ -19,8 +19,8 @@ With its user-centric design, XION paves the way for decentralized technology to
 
 Key innovations that set XION apart include:
 
-* [**Generalized Chain Abstraction**](../../xions-core/concepts/generalized-abstraction.md) – A unified protocol layer simplifying blockchain interactions.
-* [**Meta-Accounts**](../../xions-core/concepts/xions-meta-accounts.md) – Eliminating private key dependencies for easier access.
+* [**Generalized Chain Abstraction**](../../about-verona/concepts/generalized-abstraction.md) – A unified protocol layer simplifying blockchain interactions.
+* [**Meta-Accounts**](../../about-verona/concepts/meta-accounts.md) – Eliminating private key dependencies for easier access.
 * **Signature Device Abstraction** – Enabling multiple authentication methods, from email to biometrics.
 * **Parameterized Fee Layer** – Allowing flexible fee payments and gasless transactions.
 * **Abstracted Interoperability** – Enabling seamless multichain interactions from a single account.

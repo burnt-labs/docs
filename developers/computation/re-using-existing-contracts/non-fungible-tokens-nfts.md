@@ -1,9 +1,9 @@
 # Non-Fungible Tokens (NFTs)
 
-NFTs are unique digital assets, and similar to the ERC-721 standard on Ethereum, the CosmWasm ecosystem uses the CW721 standard. XION supports this NFT standard, with several ready-to-use contracts available in the [**cw-nfts**](https://github.com/public-awesome/cw-nfts) repository. These contracts enable teams to deploy NFT collections with minimal customization while benefiting from enhanced security and reliability.
+NFTs are unique digital assets, and similar to the ERC-721 standard on Ethereum, the CosmWasm ecosystem uses the CW721 standard. Verona supports this NFT standard, with several ready-to-use contracts available in the [**cw-nfts**](https://github.com/public-awesome/cw-nfts) repository. These contracts enable teams to deploy NFT collections with minimal customization while benefiting from enhanced security and reliability.
 
 {% hint style="success" %}
-Reusing these contracts **without modification** may reduce or eliminate the need for a security audit before deploying to XION Mainnet.
+Reusing these contracts **without modification** may reduce or eliminate the need for a security audit before deploying to Verona Mainnet.
 {% endhint %}
 
 ## Available CW721 Contract Variants

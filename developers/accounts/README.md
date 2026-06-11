@@ -1,19 +1,17 @@
 ---
-description: Get Started with Xion Accounts
+description: Meta Accounts, auth, and gasless transactions on Verona
 icon: screwdriver-wrench
 ---
 
 # Accounts
 
-Welcome to XION!
+Welcome to **Build on Verona — Accounts**.
 
-The XION ecosystem is built to support both beginner-friendly onboarding and advanced development workflows.
+This section covers Meta Accounts, authentication methods, gasless transactions, and building web, mobile, backend, or agent-driven applications on the **Verona** network.
 
-This section covers everything you need to know about XION, Meta Accounts, authentication methods, gasless transactions, and building applications on XION. It was created specifically for teams building **custom frontends** that deeply integrate with the XION blockchain.
+### What are Meta Accounts?
 
-### What are XION Accounts?
-
-XION Accounts (Meta Accounts) are the foundation of the XION blockchain experience. They provide:
+Meta Accounts are the foundation of the Verona network experience. They provide:
 
 * **Multiple Authentication Methods**: Email, social login, and more
 * **Gasless Transactions**: Users can interact with apps without holding native tokens
@@ -45,25 +43,25 @@ Build React applications with account abstraction and gasless transactions.
 
 Create mobile applications with React Native and Meta Account authentication.
 
-* [Set up your XION Mobile Development Environment](mobile-app/set-up-your-xion-mobile-development-environment.md) - Configure your development environment for mobile app development
-* [Building a React Native Mobile App with Abstraxion (Xion.js)](mobile-app/building-a-react-native-mobile-app-with-abstraxion-xion.js.md) - Build a React Native mobile app with Meta Account login and gasless UX
+* [Set up your Mobile Development Environment](mobile-app/set-up-mobile-development-environment.md) - Configure your development environment for mobile app development
+* [Building a React Native Mobile App with Abstraxion](mobile-app/building-a-react-native-mobile-app-with-abstraxion.md) - Build a React Native mobile app with Meta Account login and gasless UX
 * [Create Mobile App and Integrate Meta Account Authentication](mobile-app/create-mobile-app-and-integrate-meta-account-authentication.md) - Integrate Meta Account authentication into your mobile app
 * [Mobile Development – Common Errors & Fixes](mobile-app/mobile-development-common-errors-and-fixes.md) - Troubleshoot common issues in mobile development
 
 #### OAuth2 App Development
 
-* [Build an Xion OAuth2 Application](oauth2-app.md) - Build an application with a Web2 experience using XION OAuth2 Fully-Managed API
+* [Build a Verona OAuth2 Application](oauth2-app.md) - Build an application with a Web2 experience using Verona OAuth2 Fully-Managed API
 
 #### Backend App Development
 
-Integrate XION with your backend services using RESTful APIs or CosmJS.
+Integrate Verona with your backend services using RESTful APIs or CosmJS.
 
-* [Interact with XION via your Backend Service ](backend-app/xion-backend-using-cosmjs.md)- Learn how to interact with the XION blockchain from a backend environment using CosmJS
-* [Account Abstraction for RESTful API with Backend Session](backend-app/build-restapi-with-account-abstraction-and-backend-session.md) - Build an application with a Web2 experience using XION Integration in backend
+* [Interact with Verona via your Backend Service ](backend-app/backend-using-cosmjs.md)- Learn how to interact with the Verona network from a backend environment using CosmJS
+* [Account Abstraction for RESTful API with Backend Session](backend-app/build-restapi-with-account-abstraction-and-backend-session.md) - Build an application with a Web2 experience using Verona Integration in backend
 
 #### AI Agent and CLI Path
 
 Use this path if your team works from terminal-first workflows or coding agents:
 
-* [AI Agent Quick Start](../../xions-core/ai-agents.md) - One-step copy instruction to let AI agents install and use Xion Agent Toolkit skills
-* [Xion Agent Toolkit Tutorial](../tools/xion-toolkit.md) - Guided setup for auth, Treasury management, and OAuth2 client management
+* [AI Agent Quick Start](../../about-verona/ai-agents.md) - One-step copy instruction for Verona Agent Toolkit skills
+* [Verona Agent Toolkit Tutorial](../tools/verona-toolkit.md) - Guided setup for auth, Treasury management, and OAuth2 client management

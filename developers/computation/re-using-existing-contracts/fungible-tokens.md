@@ -1,11 +1,11 @@
 # Fungible Tokens
 
-The CW20 standard defines a fungible token interface for smart contracts in the CosmWasm ecosystem, similar to Ethereum’s ERC-20. On XION, you can deploy your own CW20 contracts or use the built-in [Token Factory module](../integrations/token-factory/) to create native tokens without writing custom logic.
+The CW20 standard defines a fungible token interface for smart contracts in the CosmWasm ecosystem, similar to Ethereum’s ERC-20. On Verona, you can deploy your own CW20 contracts or use the built-in [Token Factory module](../integrations/token-factory/) to create native tokens without writing custom logic.
 
 This guide explains when and how to deploy CW20 token contracts using production-ready implementations from the [cw-plus](https://github.com/CosmWasm/cw-plus) and [cw-tokens](https://github.com/CosmWasm/cw-tokens) repositories.
 
 {% hint style="success" %}
-Reusing these contracts **without modification** may reduce or eliminate the need for a security audit before deploying to XION Mainnet.
+Reusing these contracts **without modification** may reduce or eliminate the need for a security audit before deploying to Verona Mainnet.
 {% endhint %}
 
 ## When to use CW20 Contracts vs Token Factory

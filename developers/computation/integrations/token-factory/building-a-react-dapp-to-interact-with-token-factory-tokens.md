@@ -1,6 +1,6 @@
 # Building a React dApp to Interact with Token Factory Tokens
 
-This guide walks through creating a React-based decentralized application (app) that interacts with a token created using the XION Token Factory. This app will:
+This guide walks through creating a React-based decentralized application (app) that interacts with a token created using the Verona Token Factory. This app will:
 
 * Authenticate users with a **Meta Account** that would have received a token created via the Token Factory. See the following [guide](creating-minting-and-interacting-with-a-token-factory-token.md) on how to create your token.
 * Display the **token balance** for the logged-in user
@@ -45,7 +45,7 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 
 ### Steps to Deploy a Treasury Contract
 
-1. Login to the [XION Developer Portal](https://dev.testnet.burnt.com/).
+1. Login to the [Developer Portal](https://dev.testnet.burnt.com/).
 2. Click on **"New Treasury"** to create a new treasury contract.
 3. **Select the appropriate configuration** based on your use case. The following "**Fee Grant**" and "**Grant Config**" images gives a recommended configuration that works for this particular use case:
 
@@ -346,7 +346,7 @@ const getTokenBalance = async () => {
 };
 ```
 
-* Queries the **XION blockchain** for the user’s **Token Factory token balance**.
+* Queries the **Verona network** for the user’s **Token Factory token balance**.
 * Uses the **Abstraxion Client** (`queryClient.getBalance()`).
 * **Updates the `balance` state** with the retrieved amount.
 
