@@ -152,7 +152,7 @@ This is the larger direction of the network: verified data as economic infrastru
 
 ## 7 Token
 
-There is two tokens, VERONA, and a stablecoin.
+There are two tokens: VERONA and a stablecoin.
 
 ### 7.1 A value-generating network
 
