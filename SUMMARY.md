@@ -18,6 +18,12 @@
 * [Surfaces](about-verona/surfaces/README.md)
   * [Ero (EarnOS)](about-verona/surfaces/earnos.md)
   * [Burnt Verified](about-verona/surfaces/burnt-verified.md)
+* [Lite Paper](about-verona/lite-paper/overview.md)
+  * [English](about-verona/lite-paper/en.md)
+  * [简体中文](about-verona/lite-paper/zh-CN.md)
+  * [日本語](about-verona/lite-paper/ja.md)
+  * [한국어](about-verona/lite-paper/ko.md)
+  * [Español](about-verona/lite-paper/es.md)
 * [For AI Agents](about-verona/ai-agents.md)
 
 ## Build on Verona
