@@ -1,7 +1,5 @@
 ---
-description: >-
-  Verona Lite Paper — the intelligence layer for AI. Verified facts about the
-  real world, owned by the user, reusable by any agent.
+description: 'How Verona makes AI intelligent: verified facts any agent can act on.'
 icon: file-lines
 layout:
   width: wide
@@ -23,15 +21,9 @@ layout:
     visible: true
 ---
 
-# Lite Paper
+# Verona litepaper
 
-## Making AI intelligent
-
-Verona is the **intelligence layer for AI**—a network where facts about the real world are proven once, owned by the user, and reusable by any agent they authorize, with the data underneath never exposed.
-
-It makes user-verified data **portable, private, and programmable**, so agents can transact on information the user actually owns. Verify once at the source. You own the result. Any agent you authorize reuses it—without the underlying data ever being exposed.
-
-**Verify once · Reuse everywhere · Expose nothing.**
+Verona is the **intelligence layer for AI**. Prove a fact once, at the source, from a website, an email, a passport, an app, and the proof is yours. Any agent can reuse it without seeing the data underneath, and every contract is checked against a machine-verified spec. An internet of agents only works if the information holds up.  Verona is the part that holds up.
 
 ## Read the lite paper
 
