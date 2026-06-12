@@ -34,7 +34,7 @@ Private settlement. Facts and the actions taken on them settle on one chain with
 
 Formal verification. The chain is built to be verified against machine-checked specifications, so an agent can rely on it.
 
-Programmable payments. Agents settle value automatically as part of an action, in stablecoin
+Programmable payments. Agents settle value automatically as part of an action, in stablecoin.
 
 ## 2 Core architecture
 
