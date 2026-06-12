@@ -9,10 +9,6 @@ Verona is the next chapter of the same network you may know as **XION**. The reb
 
 This is a **brand and ticker rename**, not a new token or contract migration. On-chain identifiers (`uxion`, `xiond`, chain IDs), **validator set**, contract addresses, and balances stay as they are.
 
-{% hint style="warning" %}
-A separate **Phase 2** event (Commonware migration and Tokenomics 2.0, including a token swap) is planned for months 6–8. That will be communicated with dedicated technical notice and lead time. The June rename and any future swap are **distinct events**.
-{% endhint %}
-
 ## The story (short)
 
 1. **Proof as provocation** — Burnt Banksy burned an original Banksy and minted the moment as an NFT, showing that digital scarcity could be made real on a global stage.
@@ -23,14 +19,14 @@ A separate **Phase 2** event (Commonware migration and Tokenomics 2.0, including
 
 ## What changed
 
-| Area | Before (XION) | Now (Verona) |
-|------|---------------|--------------|
-| **Positioning** | Trust Layer for the Internet / chain abstraction | Intelligence layer for AI |
-| **Primary user story** | Verify data, abstract blockchain UX | User-owned verified facts reusable by authorized agents |
-| **Public framing** | Often described as a chain | A **network and layer**—the chain is how it works |
-| **Documentation brand** | XION throughout | Verona in narrative; XION where chain precision is required |
-| **Native token symbol** | $XION | $VERONA (on-chain denom `uxion` unchanged) |
-| **Product surfaces** | Infrastructure-first | Ero (EarnOS), Burnt Verified |
+| Area                    | Before (XION)                                    | Now (Verona)                                                |
+| ----------------------- | ------------------------------------------------ | ----------------------------------------------------------- |
+| **Positioning**         | Trust Layer for the Internet / chain abstraction | Intelligence layer for AI                                   |
+| **Primary user story**  | Verify data, abstract blockchain UX              | User-owned verified facts reusable by authorized agents     |
+| **Public framing**      | Often described as a chain                       | A **network and layer**—the chain is how it works           |
+| **Documentation brand** | XION throughout                                  | Verona in narrative; XION where chain precision is required |
+| **Native token symbol** | $XION                                            | $VERONA (on-chain denom `uxion` unchanged)                  |
+| **Product surfaces**    | Infrastructure-first                             | Ero (EarnOS), Burnt Verified                                |
 
 ## What did not change
 
@@ -65,6 +61,6 @@ Network value capture is designed around **ecosystem revenue**—revenue share f
 ## Where to go next
 
 * [What is Verona?](../about-verona/concepts/overview.md) — architecture and developer implications
-* [Surfaces](../about-verona/surfaces/README.md) — Ero and Burnt Verified
+* [Surfaces](../about-verona/surfaces/) — Ero and Burnt Verified
 * [Build on Verona](../developers/overview.md) — accounts, verification, computation guides
 * [For AI Agents](../about-verona/ai-agents.md) — Verona Agent Toolkit quick start
