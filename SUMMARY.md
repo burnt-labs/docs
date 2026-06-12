@@ -18,7 +18,7 @@
 * [Surfaces](about-verona/surfaces/README.md)
   * [Ero (EarnOS)](about-verona/surfaces/earnos.md)
   * [Burnt Verified](about-verona/surfaces/burnt-verified.md)
-* [Verona litepaper](about-verona/lite-paper/README.md)
+* [Verona Litepaper](about-verona/lite-paper/README.md)
   * [English](about-verona/lite-paper/en.md)
   * [简体中文](about-verona/lite-paper/zh-cn.md)
   * [日本語](about-verona/lite-paper/ja.md)
