@@ -24,8 +24,6 @@ To get started, create a Crossmint staging account so you can test the integrati
 4. Once your account is created you will be asked to create your first project
 5. Once your project is created you will be taken to your console's overview page
 
-
-
 ### Create API Key
 
 From the sidebar, click "**Integrate**", then click "**API Keys**".
@@ -52,8 +50,6 @@ Click the "**Create new key**" button under the "**Client-side keys**" section. 
 
 Then click "**Save client key**" Your client key will now appear in the client key list.
 
-
-
 ### Create Collection
 
 The Crossmint team has enabled the creation of NFT collections directly within the Console. These collections are based on the [**CW-721 Metadata Onchain**](https://github.com/public-awesome/cw-nfts/tree/main/contracts/cw721-metadata-onchain) contract. You can also import a custom NFT contract, as long as it is built on the [**CW-721 Metadata Onchain**](https://github.com/public-awesome/cw-nfts/tree/main/contracts/cw721-metadata-onchain) standard.
@@ -71,8 +67,6 @@ To create your collection, follow these steps:
 6. On "**Payment settings**" enter a price for the collection, select who pays the fees and enter an address that will receive the revenue from sales
 7. Review details and click the "**Create collection**" button to complete the process
 
-
-
 ### Create an NFT
 
 On the "**Token collections**" page select the collection created above. The NFTs tab is selected by default, click "**manual upload**" and in the window that pops up enter the NFT information.
@@ -81,15 +75,13 @@ On the "**Token collections**" page select the collection created above. The NFT
 
 Click the "**Create NFT**" button when done.
 
-
-
 ### Update Checkout Settings
 
 Click the "**Checkout**" tab and make sure the "**NFT Price**" and "**Recipient address**" are filled in and then click "**Save changes**".
 
 Also make sure "**Enable Credit Card payments"** is enabled under "**Payment methods**".
 
-<figure><img src="../../../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (88).png" alt=""><figcaption></figcaption></figure>
 
 ## Deploy a Treasury Contract <a href="#deploying-a-treasury-contract-for-gasless-transactions" id="deploying-a-treasury-contract-for-gasless-transactions"></a>
 
@@ -102,8 +94,6 @@ Before integrating the **Abstraxion SDK** into the application, we first need to
 3. **Select the appropriate configurations**. The default "**Fee Grant (Allowance)**" and "**Grant Config (Permission)**" should be enough for this application.
 
 You will then copy the treasury contract address which will be required in the frontend setup below.
-
-
 
 ## Building the Frontend <a href="#building-the-frontend" id="building-the-frontend"></a>
 
@@ -141,8 +131,6 @@ NEXT_PUBLIC_CROSSMINT_API_KEY=your_crossmint_api_key
 | NEXT\_PUBLIC\_RPC\_URL            | RPC endpoint for Xion (default: `https://rpc.xion-testnet-2.burnt.com:443`) |
 | NEXT\_PUBLIC\_REST\_URL           | REST endpoint for Xion (default: `https://api.xion-testnet-2.burnt.com`)    |
 | NEXT\_PUBLIC\_CROSSMINT\_API\_KEY | Crossmint API key (https://www.crossmint.com/console)                       |
-
-
 
 3. Update collection list:
 

@@ -1,4 +1,4 @@
-# React Native Mobile App on Verona in 5 Minutes
+# React Native Mobile App in 5 Minutes
 
 Building a **Mobile App** on Verona typically involves three main components:
 
@@ -7,8 +7,6 @@ Building a **Mobile App** on Verona typically involves three main components:
 * **Mobile Frontend** – This is your App’s interface, used to display data and trigger transactions via the smart contract.
 
 As a beginner to Verona development, getting a fully functional App up and running should be simple and shouldn’t require any complex setup. With this in mind, we’ve created a [**quick launch frontend solution**](https://quickstart.dev.testnet.burnt.com) that handles the creation of both the **User Map** and **Treasury** contracts with the Treasury contract being fully configured. We've also created a fully functional [**React Native Mobile App**](https://github.com/burnt-labs/abstraxion-expo-demo) for interacting with the **User Map** contract.
-
-
 
 ## What is the User Map App?
 
@@ -21,8 +19,6 @@ Think of it like a basic key-value store:
 
 You can find the source code here: [github.com/burnt-labs/contracts/tree/main/contracts/user\_map](https://github.com/burnt-labs/contracts/tree/main/contracts/user_map).
 
-
-
 ## Prerequisites
 
 Before you begin, ensure you have the following installed and configured:
@@ -32,8 +28,6 @@ Before you begin, ensure you have the following installed and configured:
 
 The following [guide](https://docs.expo.dev/guides/local-app-development) will help you set up your local development environment for Expo. We also have a guide in the docs on [Set up your Verona Mobile Development Environment](../../../accounts/mobile-app/set-up-mobile-development-environment.md), which shows how to get your Android emulator and iOS simulator set up.
 
-
-
 ## Create Instance of User Map and Treasury Contracts
 
 **Compiling** and **instantiating** smart contracts can feel like huge tasks, especially for new developers. You typically need to set up your development environment with tools like **Docker** and **xiond**, and go through the full process of compiling, deploying, and instantiating your contracts manually. On top of that, creating and configuring a Treasury contract via the [**Dev Portal**](https://dev.testnet.burnt.com) can be overwhelming if you're just getting started.
@@ -42,7 +36,7 @@ To make this much easier, we’ve created a [**quick launch frontend solution**]
 
 1. Go to [https://quickstart.dev.testnet.burnt.com](https://quickstart.dev.testnet.burnt.com) and log in using your **Meta Account**
 
-<figure><img src="../../../../.gitbook/assets/image (103).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (102).png" alt=""><figcaption></figcaption></figure>
 
 2. Click the **Launch User Map & Fund Treasury** button
 

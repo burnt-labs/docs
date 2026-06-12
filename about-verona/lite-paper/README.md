@@ -15,9 +15,15 @@ layout:
     visible: true
   pagination:
     visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Verona Lite Paper
+# Lite Paper
 
 ## Making AI intelligent
 
@@ -31,12 +37,12 @@ It makes user-verified data **portable, private, and programmable**, so agents c
 
 Choose your language:
 
-| Language    | Description |
-| ----------- | ----------- |
-| [**English**](en.md) | Full lite paper — June 2026 |
-| [**简体中文**](zh-CN.md) | 完整 Lite Paper — 2026 年 6 月 |
-| [**日本語**](ja.md)  | ライトペーパー全文 — 2026 年 6 月  |
-| [**한국어**](ko.md)  | 라이트페이퍼 전문 — 2026년 6월  |
+| Language             | Description                         |
+| -------------------- | ----------------------------------- |
+| [**English**](en.md) | Full lite paper — June 2026         |
+| [**简体中文**](zh-cn.md) | 完整 Lite Paper — 2026 年 6 月          |
+| [**日本語**](ja.md)     | ライトペーパー全文 — 2026 年 6 月              |
+| [**한국어**](ko.md)     | 라이트페이퍼 전문 — 2026년 6월                |
 | [**Español**](es.md) | Lite paper completo — junio de 2026 |
 
 {% hint style="info" %}

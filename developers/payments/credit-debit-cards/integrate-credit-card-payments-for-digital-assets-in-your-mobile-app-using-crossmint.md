@@ -2,8 +2,6 @@
 
 This guide demonstrates how to enable credit card purchases for Digital Assets on the Verona network using Crossmint's payment infrastructure. We'll use a React Native mobile app as our primary example, showing real-world implementation patterns and solutions to common challenges.
 
-
-
 ## Architecture Overview
 
 Here’s a high-level breakdown of how the flow works from the user’s perspective:
@@ -28,8 +26,6 @@ Here’s what happens under the hood:
 
 This architecture lets you offer a familiar ecommerce-like UX.
 
-
-
 ## Prerequisites
 
 Before diving in, let’s make sure you have the essentials ready.
@@ -46,8 +42,6 @@ Make sure you have the following installed:
 * Node.js v18+ and npm
 * iOS or Android emulator (or a physical device)
 * VS Code (recommended)
-
-
 
 ## Crossmint Setup
 
@@ -75,7 +69,7 @@ This step is **crucial**, especially for mobile apps.
 * Under **Client-side keys** click **Create new key** button
 * For **App type** select **Mobile**
 * For Origin enter your **iOS bundle ID** or **Android package name**
-* Under scopes, select only: `orders.create`&#x20;
+* Under scopes, select only: `orders.create`
 * Click the **Create client key** button
 
 ### 4. Create Collection
@@ -109,9 +103,7 @@ Click the "**Checkout**" tab and make sure the "**NFT Price**" and "**Recipient 
 
 Also make sure "**Enable Credit Card payments"** is enabled under "**Payment methods**".
 
-<figure><img src="../../../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../../.gitbook/assets/image (88).png" alt=""><figcaption></figcaption></figure>
 
 ## Deploy a Treasury Contract <a href="#deploying-a-treasury-contract-for-gasless-transactions" id="deploying-a-treasury-contract-for-gasless-transactions"></a>
 
@@ -124,8 +116,6 @@ To successfully integrate the **Abstraxion SDK** into the app, we first need to 
 3. **Select the appropriate configurations**. The default "**Fee Grant (Allowance)**" and "**Grant Config (Permission)**" should be enough for this application.
 
 You will then copy the treasury contract address which will be required in the app setup below.
-
-
 
 ## Building the Mobile App <a href="#building-the-frontend" id="building-the-frontend"></a>
 
@@ -166,8 +156,6 @@ EXPO_PUBLIC_CROSSMINT_API_KEY="your-crossmint-api-key"
 | EXPO\_PUBLIC\_RPC\_ENDPOINT               | RPC endpoint for Xion (default: `https://rpc.xion-testnet-2.burnt.com:443`) |
 | EXPO\_PUBLIC\_REST\_ENDPOINT              | REST endpoint for Xion (default: `https://api.xion-testnet-2.burnt.com`)    |
 | EXPO\_PUBLIC\_CROSSMINT\_API\_KEY         | Crossmint API key (https://www.crossmint.com/console)                       |
-
-
 
 3. Update collection list:
 

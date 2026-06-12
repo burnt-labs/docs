@@ -1,14 +1,10 @@
-# Setting up your Verona Network Developer Environment on Windows (WSL2 + Ubuntu)
+# Setting up Smart Contract Development on Windows (WSL2 + Ubuntu)
 
 This guide walks you through setting up a local Verona developer environment on a Windows machine using **WSL2** with **Ubuntu**. This is the recommended setup for Windows users who want to work with `xiond`, build and interact with their CosmWasm smart contracts.
-
-
 
 ## Prerequisites
 
 1. **Windows 10 or 11 (64-bit)**
-
-
 
 ## Install WSL2 with Ubuntu
 
@@ -29,7 +25,7 @@ If you want to install a different Linux distribution or another version of Ubun
 wsl --list --online
 ```
 
-To change the distribution installed, enter:&#x20;
+To change the distribution installed, enter:
 
 ```powershell
 wsl --install -d <Distribution Name>
@@ -61,8 +57,6 @@ You can list your installed Linux distributions and check the version of WSL eac
 wsl -l -v
 ```
 
-
-
 ## Set up your Linux username and password <a href="#set-up-your-linux-username-and-password" id="set-up-your-linux-username-and-password"></a>
 
 Click the Windows **start menu** button and in the search field enter "**Ubuntu**".
@@ -87,8 +81,6 @@ sudo apt update && sudo apt upgrade
 sudo apt install -y build-essential pkg-config libssl-dev curl git jq unzip wget
 ```
 
-
-
 ## Install Docker (for CosmWasm Optimizer)
 
 Follow [Docker's official instructions for WSL2](https://docs.docker.com/desktop/windows/wsl/) or install Docker Desktop and enable **WSL2 backend**. The general steps include:
@@ -96,7 +88,7 @@ Follow [Docker's official instructions for WSL2](https://docs.docker.com/desktop
 1. Download and install the latest version of [Docker Desktop for Windows](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe).
 2. Follow the usual installation instructions to install Docker Desktop. Depending on which version of Windows you are using, Docker Desktop may prompt you to turn on WSL 2 during installation. Read the information displayed on the screen and turn on the WSL 2 feature to continue.
 
-<figure><img src="../../../../.gitbook/assets/Screenshot 2025-05-01 155509 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Screenshot 2025-05-01 155509.png" alt=""><figcaption></figcaption></figure>
 
 3. Start Docker Desktop from the **Windows Start** menu.
 4. Navigate to **Settings**.
@@ -110,8 +102,6 @@ Once installed, make sure docker is running. You can verify that docker is insta
 ```bash
 docker --version
 ```
-
-
 
 ## Setting up Visual Studio Code <a href="#use-visual-studio-code" id="use-visual-studio-code"></a>
 
@@ -165,9 +155,6 @@ code .
 
 This will launch the project in Visual Studio Code. From there, open a terminal within the IDE and run the Docker command above.
 
-
-
 ## Install `xiond` Binary
 
 You can now follow this [guide](installation-prerequisites-setup-local-environment.md#xiond) to install `xiond` within the Ubuntu environment. It's preferable to use the **Debian based** installer.
-
