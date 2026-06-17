@@ -8,7 +8,7 @@ description: Obtain funds from the xion-testnet-1 faucet (for validators only)
 
 Your first step should be to join the community over on Discord:
 
-<table data-view="cards"><thead><tr><th></th><th align="center"></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td align="center">Discord</td><td></td><td></td><td><a href="https://discord.gg/burnt">https://discord.gg/burnt</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th align="center"></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td align="center">Discord</td><td></td><td></td><td><a href="https://discord.gg/verona">https://discord.gg/verona</a></td></tr></tbody></table>
 
 ## Obtain the Validator Role
 

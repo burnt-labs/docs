@@ -28,4 +28,4 @@ For more details on how to submit a PR or update existing entries, refer to the 
 
 
 
-If you have any questions or need more help, feel free to reach out in our [Discord channel](https://discord.gg/...) or open an issue on [GitHub](https://github.com/burnt-labs/xion).
+If you have any questions or need more help, feel free to reach out in our [Discord channel](https://discord.gg/verona) or open an issue on [GitHub](https://github.com/burnt-labs/xion).

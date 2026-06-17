@@ -25,7 +25,7 @@ Guides for developers building apps, agents, and integrations on the network.
 
 ## Help & Support
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Discord Developer Support</strong></td><td>Chat with developers on Discord.</td><td></td><td><a href="https://discord.gg/burnt">https://discord.gg/burnt</a></td></tr><tr><td><strong>Telegram Developer Support</strong></td><td>Chat with developers on Telegram.</td><td></td><td><a href="https://t.me/+5KA8xBuU5wYzZjU0">https://t.me/+5KA8xBuU5wYzZjU0</a></td></tr><tr><td><strong>Found an issue in the docs?</strong></td><td>Report it, or submit a pull request on the page where you found it.</td><td></td><td><a href="https://github.com/burnt-labs/docs/issues/new">https://github.com/burnt-labs/docs/issues/new</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Discord Developer Support</strong></td><td>Chat with developers on Discord.</td><td></td><td><a href="https://discord.gg/verona">https://discord.gg/verona</a></td></tr><tr><td><strong>Telegram Developer Support</strong></td><td>Chat with developers on Telegram.</td><td></td><td><a href="https://t.me/+5KA8xBuU5wYzZjU0">https://t.me/+5KA8xBuU5wYzZjU0</a></td></tr><tr><td><strong>Found an issue in the docs?</strong></td><td>Report it, or submit a pull request on the page where you found it.</td><td></td><td><a href="https://github.com/burnt-labs/docs/issues/new">https://github.com/burnt-labs/docs/issues/new</a></td></tr></tbody></table>
 
 ## Why Verona
 

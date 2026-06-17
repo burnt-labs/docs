@@ -20,7 +20,7 @@ Finally, collaboration with other developers accelerates innovation. By working 
 
 ### **Verona Developer Discord (Real-Time Chat & Support)**
 
-Join the [**Verona Discord server**](https://discord.gg/burnt) to discuss your project, ask technical questions, and get real-time feedback from developers and general community members.
+Join the [**Verona Discord server**](https://discord.gg/verona) to discuss your project, ask technical questions, and get real-time feedback from developers and general community members.
 
 **Use the appropriate channels to:**
 

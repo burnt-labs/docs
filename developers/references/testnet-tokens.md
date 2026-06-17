@@ -2,8 +2,6 @@
 
 **$VERONA** testnet tokens (Previously $XION) are required for paying transaction fees on the **Verona Testnet**. They have **no real-world monetary value** and exist purely for testing purposes. Below are the steps to acquire these tokens from the official Verona testnet faucet.
 
-
-
 ## Faucet Website
 
 You can request Verona testnet tokens directly from the official [Verona faucet](https://faucet.xion.burnt.com). Once on the site:
@@ -18,7 +16,7 @@ Please note that only **one request** can be made every **24 hours**.
 
 ## <mark style="color:$info;">Discord Faucet(Deprecated)</mark>
 
-<mark style="color:$info;">Once you have</mark> [<mark style="color:$info;">set up a discord account</mark>](https://discord.gg/burnt)<mark style="color:$info;">, you can also request testnet tokens through our Discord faucet. The following are the steps to take:</mark>
+<mark style="color:$info;">Once you have</mark> [<mark style="color:$info;">set up a discord account</mark>](https://discord.gg/verona)<mark style="color:$info;">, you can also request testnet tokens through our Discord faucet. The following are the steps to take:</mark>
 
 1. <mark style="color:$info;">Get the</mark> <mark style="color:$info;"></mark><mark style="color:$info;">**@Builder**</mark> <mark style="color:$info;"></mark><mark style="color:$info;">roles at</mark>[ <mark style="color:$info;">⁠🧰｜builder-role</mark>](https://discord.com/channels/823953904512401469/1308970464500125767)
 2. <mark style="color:$info;">You'll then have access to the ⁠</mark>[<mark style="color:$info;">🚰｜xion-faucet</mark>](https://discord.com/channels/823953904512401469/1308980450722840636) <mark style="color:$info;">channel</mark>

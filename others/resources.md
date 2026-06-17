@@ -7,7 +7,7 @@ icon: cubes-stacked
 
 **Website**: [https://burnt.com](https://burnt.com)
 
-**Discord**: [https://discord.gg/burnt](https://discord.gg/burnt)
+**Discord**: [https://discord.gg/verona](https://discord.gg/verona)
 
 **Developer Ecosystem (Telegram)**: [https://t.me/+5KA8xBuU5wYzZjU0](https://t.me/+5KA8xBuU5wYzZjU0)
 
