@@ -30,7 +30,7 @@ The intended pattern is that agents do not scrape or guess. They request scoped 
 * Scopes, consent, and audit patterns for production agents
 
 {% hint style="info" %}
-MCP integration is a Month 1 narrative priority; server endpoints and tool schemas will be added to this page as they are finalized. Tooling names may still reference `xion-toolkit` in CLI until the toolkit release catches up with the Verona brand.
+MCP integration is a Month 1 narrative priority; server endpoints and tool schemas will be added to this page as they are finalized.
 {% endhint %}
 
 ## Related docs

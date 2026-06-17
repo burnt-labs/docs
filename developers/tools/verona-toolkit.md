@@ -5,7 +5,7 @@ icon: terminal
 
 # Verona Agent Toolkit
 
-Verona Agent Toolkit (CLI package `xion-toolkit`) is a CLI-first toolkit for building on the Verona network with Meta Accounts and gasless workflows.
+Verona Agent Toolkit (CLI package `verona-toolkit`) is a CLI-first toolkit for building on the Verona network with Meta Accounts and gasless workflows.
 
 This guide is for developers who are new to Verona but already comfortable with CLI tools and AI coding agents.
 
@@ -39,32 +39,35 @@ If you need conceptual background first, see:
 
 ```bash
 curl --proto '=https' --tlsv1.2 -LsSf \
-  https://github.com/burnt-labs/xion-agent-toolkit/releases/latest/download/xion-agent-toolkit-installer.sh | sh
+  https://github.com/burnt-labs/verona-agent-toolkit/releases/latest/download/verona-agent-toolkit-installer.sh | sh
 ```
 
 **Windows (PowerShell)**
 
 ```powershell
-powershell -c "irm https://github.com/burnt-labs/xion-agent-toolkit/releases/latest/download/xion-agent-toolkit-installer.ps1 | iex"
+powershell -c "irm https://github.com/burnt-labs/verona-agent-toolkit/releases/latest/download/verona-agent-toolkit-installer.ps1 | iex"
 ```
 
 ### Install skills for AI agents
 
 ```bash
-npx skills add burnt-labs/xion-agent-toolkit -g
+npx skills add burnt-labs/verona-agent-toolkit -g
+verona-toolkit auth login
 ```
+
+Bundled skills include `verona-dev`, `verona-toolkit-init`, `verona-oauth2`, `verona-oauth2-client`, `verona-treasury`, `verona-faucet`, and `verona-asset`. See [Skills Guide](https://github.com/burnt-labs/verona-agent-toolkit/blob/main/docs/skills-guide.md) for routing and advanced chain operations via optional [xion-skills](https://github.com/burnt-labs/xion-skills).
 
 ### Verify install
 
 ```bash
-xion-toolkit --version
-xion-toolkit --help
+verona-toolkit --version
+verona-toolkit --help
 ```
 
 For full installation detail:
 
-- [README](https://github.com/burnt-labs/xion-agent-toolkit/blob/main/README.md)
-- [INSTALL-FOR-AGENTS.md](https://raw.githubusercontent.com/burnt-labs/xion-agent-toolkit/main/INSTALL-FOR-AGENTS.md)
+- [README](https://github.com/burnt-labs/verona-agent-toolkit/blob/main/README.md)
+- [INSTALL-FOR-AGENTS.md](https://raw.githubusercontent.com/burnt-labs/verona-agent-toolkit/main/INSTALL-FOR-AGENTS.md)
 
 ## Networks
 
@@ -72,20 +75,20 @@ Verona Agent Toolkit targets **testnet** by default and also supports **mainnet*
 
 | Network | CLI flag / config | Notes |
 | ------- | ----------------- | ----- |
-| **Testnet** | Default, or `--network testnet`, or `xion-toolkit config set-network testnet` | Use for development; faucet and test tokens are available |
-| **Mainnet** | `--network mainnet`, or `xion-toolkit config set-network mainnet` | Production Meta Accounts, Treasuries, and OAuth2 clients |
+| **Testnet** | Default, or `--network testnet`, or `verona-toolkit config set-network testnet` | Use for development; faucet and test tokens are available |
+| **Mainnet** | `--network mainnet`, or `verona-toolkit config set-network mainnet` | Production Meta Accounts, Treasuries, and OAuth2 clients |
 
 Examples:
 
 ```bash
 # One-off mainnet command
-xion-toolkit --network mainnet status
+verona-toolkit --network mainnet status
 
 # Persist default network
-xion-toolkit config set-network mainnet
+verona-toolkit config set-network mainnet
 ```
 
-For full CLI flags and configuration, see the [Verona Agent Toolkit repository](https://github.com/burnt-labs/xion-agent-toolkit) and [Configuration](https://github.com/burnt-labs/xion-agent-toolkit/blob/main/docs/configuration.md) docs.
+For full CLI flags and configuration, see the [Verona Agent Toolkit repository](https://github.com/burnt-labs/verona-agent-toolkit) and [Configuration](https://github.com/burnt-labs/verona-agent-toolkit/blob/main/docs/configuration.md) docs.
 
 {% hint style="info" %}
 **OAuth2 client portal by network:** Manage OAuth2 clients in the [testnet portal](https://oauth2.testnet.burnt.com/) or [mainnet portal](https://oauth2.burnt.com/). See [OAuth2 App Development](../accounts/oauth2-app.md).
@@ -96,9 +99,9 @@ For full CLI flags and configuration, see the [Verona Agent Toolkit repository](
 Use OAuth2-based auth with local encrypted credentials:
 
 ```bash
-xion-toolkit auth login
-xion-toolkit auth status
-xion-toolkit auth refresh
+verona-toolkit auth login
+verona-toolkit auth status
+verona-toolkit auth refresh
 ```
 
 Recommended pattern:
@@ -110,7 +113,7 @@ Recommended pattern:
 If you plan to manage OAuth2 clients, authenticate with:
 
 ```bash
-xion-toolkit auth login --dev-mode
+verona-toolkit auth login --dev-mode
 ```
 
 ## Quick start (Treasury + OAuth2 client)
@@ -118,26 +121,26 @@ xion-toolkit auth login --dev-mode
 ### 1) Check your environment
 
 ```bash
-xion-toolkit status
-xion-toolkit account info
+verona-toolkit status
+verona-toolkit account info
 ```
 
 ### 2) Claim testnet tokens (optional, testnet only)
 
 ```bash
-xion-toolkit faucet claim
+verona-toolkit faucet claim
 ```
 
 ### 3) Create and fund a Treasury
 
 ```bash
-xion-toolkit treasury create \
+verona-toolkit treasury create \
   --name "My Treasury" \
   --redirect-url "https://your-app.example/callback"
 ```
 
 ```bash
-xion-toolkit treasury fund xion1... --amount 1000000uxion
+verona-toolkit treasury fund xion1... --amount 1000000uxion
 ```
 
 ### 4) Configure Treasury permissions
@@ -145,14 +148,14 @@ xion-toolkit treasury fund xion1... --amount 1000000uxion
 Use `grant-config` and `fee-config` commands to define delegated actions and fee sponsorship.
 
 ```bash
-xion-toolkit treasury grant-config --help
-xion-toolkit treasury fee-config --help
+verona-toolkit treasury grant-config --help
+verona-toolkit treasury fee-config --help
 ```
 
 ### 5) Manage OAuth2 clients
 
 ```bash
-xion-toolkit oauth2 client --help
+verona-toolkit oauth2 client --help
 ```
 
 Use this command group to create, update, query, and manage OAuth2 client ownership/managers for your app.
@@ -162,15 +165,18 @@ Use this command group to create, update, query, and manage OAuth2 client owners
 If you want your AI agent to set everything up, copy this exact instruction:
 
 ```text
-Follow this guide https://raw.githubusercontent.com/burnt-labs/xion-agent-toolkit/main/INSTALL-FOR-AGENTS.md to install and configure the Verona Agent Toolkit skills for AI agents.
+Follow this guide https://raw.githubusercontent.com/burnt-labs/verona-agent-toolkit/main/INSTALL-FOR-AGENTS.md to install and configure the Verona Agent Toolkit skills for AI agents.
 ```
 
 Recommended skills for this guide:
 
-- `xion-dev`
-- `xion-oauth2`
-- `xion-treasury`
-- `xion-oauth2-client`
+- `verona-dev`
+- `verona-toolkit-init`
+- `verona-oauth2`
+- `verona-treasury`
+- `verona-oauth2-client`
+- `verona-faucet`
+- `verona-asset`
 
 ## Workflow map
 
@@ -186,37 +192,39 @@ flowchart TD
 ## Common how-to tasks
 
 - **Switch network** (`testnet` or `mainnet`)
-  - `xion-toolkit config set-network testnet`
-  - `xion-toolkit config set-network mainnet`
+  - `verona-toolkit config set-network testnet`
+  - `verona-toolkit config set-network mainnet`
   - Or pass `--network mainnet` (or `testnet`) on any command
 - **Use machine-readable output**
-  - `xion-toolkit --output json <command>`
+  - `verona-toolkit --output json <command>`
 - **Disable prompts for automation**
-  - `xion-toolkit --no-interactive <command>`
+  - `verona-toolkit --no-interactive <command>`
 - **Track a transaction**
-  - `xion-toolkit tx wait <TX_HASH>`
+  - `verona-toolkit tx wait <TX_HASH>`
 - **Backup Treasury setup**
-  - `xion-toolkit treasury export <TREASURY_ADDR>`
+  - `verona-toolkit treasury export <TREASURY_ADDR>`
+- **Install shell completions**
+  - `verona-toolkit completions --install`
 
 ## Troubleshooting
 
 - **CLI not found**
-  - Add your install path to `PATH` and open a new shell session
+  - Ensure `$HOME/.cargo/bin` is on your `PATH`, then open a new shell session
 - **Token expired**
-  - Run `xion-toolkit auth refresh`
+  - Run `verona-toolkit auth refresh`
 - **Port already in use during login**
-  - Run `xion-toolkit auth login --port 54322`
+  - Run `verona-toolkit auth login --port 54322`
 - **Scope error for OAuth2 client commands**
-  - Re-login with `xion-toolkit auth login --dev-mode`
+  - Re-login with `verona-toolkit auth login --dev-mode`
 
 For complete error handling details:
 
-- [Error Codes](https://github.com/burnt-labs/xion-agent-toolkit/blob/main/docs/ERROR-CODES.md)
+- [Error Codes](https://github.com/burnt-labs/verona-agent-toolkit/blob/main/docs/ERROR-CODES.md)
 
 ## Detailed references
 
-- [Verona Agent Toolkit Repository](https://github.com/burnt-labs/xion-agent-toolkit)
-- [CLI Reference](https://github.com/burnt-labs/xion-agent-toolkit/blob/main/docs/cli-reference.md)
-- [Quick Reference](https://github.com/burnt-labs/xion-agent-toolkit/blob/main/docs/QUICK-REFERENCE.md)
-- [Skills Guide](https://github.com/burnt-labs/xion-agent-toolkit/blob/main/docs/skills-guide.md)
-- [Install for AI Agents](https://raw.githubusercontent.com/burnt-labs/xion-agent-toolkit/main/INSTALL-FOR-AGENTS.md)
+- [Verona Agent Toolkit Repository](https://github.com/burnt-labs/verona-agent-toolkit)
+- [CLI Reference](https://github.com/burnt-labs/verona-agent-toolkit/blob/main/docs/cli-reference.md)
+- [Quick Reference](https://github.com/burnt-labs/verona-agent-toolkit/blob/main/docs/QUICK-REFERENCE.md)
+- [Skills Guide](https://github.com/burnt-labs/verona-agent-toolkit/blob/main/docs/skills-guide.md)
+- [Install for AI Agents](https://raw.githubusercontent.com/burnt-labs/verona-agent-toolkit/main/INSTALL-FOR-AGENTS.md)

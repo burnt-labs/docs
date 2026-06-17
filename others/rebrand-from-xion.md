@@ -27,6 +27,7 @@ This is a **brand and ticker rename**, not a new token or contract migration. On
 | **Documentation brand** | XION throughout                                  | Verona in narrative; XION where chain precision is required |
 | **Native token symbol** | $XION                                            | $VERONA (on-chain denom `uxion` unchanged)                  |
 | **Product surfaces**    | Infrastructure-first                             | Ero (EarnOS), Burnt Verified                                |
+| **Agent toolkit**       | `xion-agent-toolkit` repo; `xion-toolkit` CLI    | [`verona-agent-toolkit`](https://github.com/burnt-labs/verona-agent-toolkit); `verona-toolkit` CLI |
 
 ## What did not change
 
