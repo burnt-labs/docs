@@ -99,10 +99,7 @@ xiond keys show <keyname> -a
 
 ## Fund your account
 
-You can request testnet tokens with:
-
-- **Discord faucet**
-- **Web faucet**: [Verona Faucet](https://faucet.xion.burnt.com/)
+You can request testnet tokens with the [Verona Faucet](https://faucet.xion.burnt.com/).
 
 For additional options, see:
 

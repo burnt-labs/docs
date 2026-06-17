@@ -50,10 +50,7 @@ Your account is not fully registered on-chain until it is involved in a transact
 
 #### **Request Testnet Tokens**
 
-You can obtain testnet tokens through one of the following methods:
-
-* **Discord Faucet**: Request tokens by using the faucet bot in the [**Verona Discord**](https://discord.gg/verona).
-* **Faucet Web Page**: Visit the [Verona Faucet](https://faucet.xion.burnt.com/) and follow the instructions to receive testnet tokens.
+You can obtain testnet tokens from the [Verona Faucet](https://faucet.xion.burnt.com). Follow the instructions on the site to receive testnet tokens.
 
 For more details on accessing testnet tokens, see our [Faucet Page](../../references/testnet-tokens.md).
 
