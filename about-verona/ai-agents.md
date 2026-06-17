@@ -48,11 +48,7 @@ flowchart TD
 
 ## Continue to full guide
 
-
-|                                                                                                                                                 |                                                            |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| **Verona Agent Toolkit Tutorial** Step-by-step guide for installation, auth, treasury workflows, OAuth2 client management, and troubleshooting. | [verona-toolkit.md](../developers/tools/verona-toolkit.md) |
-
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Verona Agent Toolkit Tutorial</strong><br>Step-by-step guide for installation, auth, treasury workflows, OAuth2 client management, and troubleshooting.</td><td><a href="../developers/tools/verona-toolkit.md">verona-toolkit.md</a></td></tr></tbody></table>
 
 ## Related
 
