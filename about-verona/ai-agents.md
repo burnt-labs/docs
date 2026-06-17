@@ -1,6 +1,6 @@
 ---
 description: Use AI agents on Verona through the Verona Agent Toolkit
-hidden: true
+hidden: false
 icon: robot
 ---
 
@@ -11,13 +11,13 @@ icon: robot
 Want to let an AI agent operate on the network with a gasless workflow?
 
 {% hint style="warning" %}
-**Beta:** Verona Agent Toolkit (CLI package `xion-toolkit`) is in **beta**. It supports **testnet** (default) and **mainnet**—use `--network mainnet` or `xion-toolkit config set-network mainnet` for production. Start on testnet for development; the faucet is testnet-only.
+**Beta:** Verona Agent Toolkit (CLI package `verona-toolkit`) is in **beta**. It supports **testnet** (default) and **mainnet**—use `--network mainnet` or `verona-toolkit config set-network mainnet` for production. Start on testnet for development; the faucet is testnet-only.
 {% endhint %}
 
 Copy the instruction below into your AI coding assistant:
 
 ```
-Follow this guide https://raw.githubusercontent.com/burnt-labs/xion-agent-toolkit/main/INSTALL-FOR-AGENTS.md to install and configure the Verona Agent Toolkit skills for AI agents.
+Follow this guide https://raw.githubusercontent.com/burnt-labs/verona-agent-toolkit/main/INSTALL-FOR-AGENTS.md to install and configure the Verona Agent Toolkit skills for AI agents.
 ```
 
 {% hint style="info" %}
@@ -26,23 +26,25 @@ This setup is designed for AI-assisted development with Meta Accounts, Treasury 
 
 ## What this gives you
 
-* **Meta Account auth** via OAuth2 (no private key management)
-* **Treasury management** for gasless operations and delegated permissions
-* **OAuth2 client management** for app registration and lifecycle
-* **Agent-friendly workflows** through skills like `xion-dev`, `xion-oauth2`, `xion-treasury`, and `xion-oauth2-client`
-* **A path to verified context** — combine toolkit flows with [Truth Engine](concepts/verification-infrastructure/) attestations so agents act on proofs, not guesses
+- **Meta Account auth** via OAuth2 (no private key management)
+- **Treasury management** for gasless operations and delegated permissions
+- **OAuth2 client management** for app registration and lifecycle
+- **Agent-friendly workflows** through skills like `verona-dev`, `verona-oauth2`, `verona-treasury`, `verona-oauth2-client`, `verona-faucet`, and `verona-asset`
+- **A path to verified context** — combine toolkit flows with [Truth Engine](concepts/verification-infrastructure/) attestations so agents act on proofs, not guesses
 
 ## High-level flow
 
 ```mermaid
 flowchart TD
     start[Developer or AI Agent] --> copy[Copy one-line install instruction]
-    copy --> auth[Authenticate with xion-toolkit]
+    copy --> auth[Authenticate with verona-toolkit]
     auth --> treasury[Treasury management]
     treasury --> oauth[OAuth2 client management]
     oauth --> gasless[Run gasless app operations]
     gasless --> next[Continue in full tutorial]
 ```
+
+
 
 ## Continue to full guide
 
@@ -50,12 +52,13 @@ flowchart TD
 
 ## Related
 
-* [What is Verona?](concepts/overview.md) — the gap, the unlock, and developer primitives
-* [Burnt Verified](surfaces/burnt-verified.md) — verified credentials for agent workflows
-* [Build on Verona](../developers/overview.md)
+- [What is Verona?](concepts/overview.md) — the gap, the unlock, and developer primitives
+- [Burnt Verified](surfaces/burnt-verified.md) — verified credentials for agent workflows
+- [Build on Verona](../developers/overview.md)
 
 ## References
 
-* [Verona Agent Toolkit Repository](https://github.com/burnt-labs/xion-agent-toolkit)
-* [Install for AI Agents](https://raw.githubusercontent.com/burnt-labs/xion-agent-toolkit/main/INSTALL-FOR-AGENTS.md)
-* [CLI Reference](https://github.com/burnt-labs/xion-agent-toolkit/blob/main/docs/cli-reference.md)
+- [Verona Agent Toolkit Repository](https://github.com/burnt-labs/verona-agent-toolkit)
+- [Install for AI Agents](https://raw.githubusercontent.com/burnt-labs/verona-agent-toolkit/main/INSTALL-FOR-AGENTS.md)
+- [CLI Reference](https://github.com/burnt-labs/verona-agent-toolkit/blob/main/docs/cli-reference.md)
+
