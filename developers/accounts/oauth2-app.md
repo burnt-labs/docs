@@ -89,7 +89,7 @@ Once your Treasury contract is configured, you can create OAuth2 clients from th
 * **Testnet**: [https://dev.testnet.burnt.com/oauth2-clients](https://dev.testnet.burnt.com/oauth2-clients)
 * **Mainnet**: [https://dev.burnt.com/oauth2-clients](https://dev.burnt.com/oauth2-clients)
 
-<figure><img src="../../.gitbook/assets/verona-oauth2-1.png" alt="" width="375"><figcaption><p>Developer Portal login screen</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/verona-portal.png" alt="" width="375"><figcaption><p>Developer Portal login screen</p></figcaption></figure>
 
 To access the Developer Portal, click **"Connect with Verona"** and authenticate using your Verona account. After authentication, you'll be redirected to the OAuth2 Clients Dashboard.
 
@@ -103,7 +103,7 @@ Use the **testnet** portal while developing and the **mainnet** portal for produ
 
     After logging in, you'll see the OAuth2 Clients Dashboard showing all your created clients.
 
-    <figure><img src="../../.gitbook/assets/OAuth2-2.png" alt=""><figcaption><p>OAuth2 Clients Dashboard with Create Client button</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/verona-oauth2-1.png" alt=""><figcaption><p>OAuth2 Clients Dashboard with Create Client button</p></figcaption></figure>
 2.  **Click "Create Client"**
 
     Click the **"Create Client"** button located in the top right corner of the dashboard.
@@ -111,7 +111,7 @@ Use the **testnet** portal while developing and the **mainnet** portal for produ
 
     The client creation form will appear.
 
-    <figure><img src="../../.gitbook/assets/OAuth2-3.png" alt="" width="375"><figcaption><p>OAuth2 Client creation form</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/verona-oauth2-2.png" alt="" width="375"><figcaption><p>OAuth2 Client creation form</p></figcaption></figure>
 
     **You need to complete the following fields:**
 
