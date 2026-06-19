@@ -82,16 +82,16 @@ For more information on configuring Treasury permissions, see the [Treasury Cont
 
 ## 3. Creating OAuth2 Clients
 
-Once your Treasury contract is configured, you can create OAuth2 clients in the **Verona OAuth2 Portal**. The portal allows you to manage OAuth2 clients that will authenticate users and access protected APIs.
+Once your Treasury contract is configured, you can create OAuth2 clients from the **Developer Portal**. The Developer Portal allows you to manage OAuth2 clients that will authenticate users and access protected APIs.
 
-### 3.1. Accessing the OAuth2 Portal
+### 3.1. Accessing OAuth2 Client Management
 
-* **Testnet**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/)
-* **Mainnet**: [https://oauth2.burnt.com/](https://oauth2.burnt.com/)
+* **Testnet**: [https://dev.testnet.burnt.com/oauth2-clients](https://dev.testnet.burnt.com/oauth2-clients)
+* **Mainnet**: [https://dev.burnt.com/oauth2-clients](https://dev.burnt.com/oauth2-clients)
 
-<figure><img src="../../.gitbook/assets/OAuth2-1.png" alt="" width="375"><figcaption><p>OAuth2 Portal login screen</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/verona-oauth2-1.png" alt="" width="375"><figcaption><p>OAuth2 Clients management screen</p></figcaption></figure>
 
-To access the portal, click **"Connect with Verona"** and authenticate using your Verona account. After authentication, you'll be redirected to the OAuth2 Clients Dashboard.
+To access the Developer Portal, click **"Connect with Verona"** and authenticate using your Verona account. After authentication, you'll be redirected to the OAuth2 Clients Dashboard.
 
 {% hint style="info" %}
 Use the **testnet** portal while developing and the **mainnet** portal for production OAuth2 clients. Your app must use the OAuth2 server URL, discovery endpoints, and protected API base URL for the same network as your Treasury contract.
@@ -103,7 +103,7 @@ Use the **testnet** portal while developing and the **mainnet** portal for produ
 
     After logging in, you'll see the OAuth2 Clients Dashboard showing all your created clients.
 
-    <figure><img src="../../.gitbook/assets/OAuth2-2.png" alt=""><figcaption><p>OAuth2 Clients Dashboard with Create Client button</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/verona-oauth2-2.png" alt=""><figcaption><p>OAuth2 Clients Dashboard with Create Client button</p></figcaption></figure>
 2.  **Click "Create Client"**
 
     Click the **"Create Client"** button located in the top right corner of the dashboard.
@@ -189,7 +189,7 @@ The OAuth2 Authorization Code flow with PKCE follows these standard steps:
 
 #### Step 0: Endpoints
 
-First of all, the OAuth2 API endpoints are the same as the OAuth2 portal:
+The OAuth2 API endpoints are:
 
 * **Testnet**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/)
 * **Mainnet**: [https://oauth2.burnt.com/](https://oauth2.burnt.com/)
@@ -1462,8 +1462,8 @@ For a list of available RPC endpoints for each network, see the [Public Endpoint
 
 * **OAuth2 API (testnet)**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/)
 * **OAuth2 API (mainnet)**: [https://oauth2.burnt.com/](https://oauth2.burnt.com/)
-* **OAuth2 Portal (testnet)**: [https://oauth2.testnet.burnt.com/](https://oauth2.testnet.burnt.com/) (client management)
-* **OAuth2 Portal (mainnet)**: [https://oauth2.burnt.com/](https://oauth2.burnt.com/) (client management)
+* **OAuth2 Client Management (testnet)**: [https://dev.testnet.burnt.com/oauth2-clients](https://dev.testnet.burnt.com/oauth2-clients)
+* **OAuth2 Client Management (mainnet)**: [https://dev.burnt.com/oauth2-clients](https://dev.burnt.com/oauth2-clients)
 * **OAuth2 Protected API docs (testnet)**: [https://oauth2.testnet.burnt.com/protected-api-docs](https://oauth2.testnet.burnt.com/protected-api-docs)
 * **OAuth2 Protected API docs (mainnet)**: [https://oauth2.burnt.com/protected-api-docs](https://oauth2.burnt.com/protected-api-docs)
 * **OAuth2 App Examples**: [https://github.com/burnt-labs/xion-oauth2-app-demo](https://github.com/burnt-labs/xion-oauth2-app-demo)
