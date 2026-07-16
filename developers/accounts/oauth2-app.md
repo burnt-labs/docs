@@ -1,7 +1,8 @@
 ---
 description: >-
-  This guide provides a comprehensive walkthrough for integrating Verona into your
-  application by OAuth2 authentication.
+  This guide provides a comprehensive walkthrough for integrating Verona into
+  your application by OAuth2 authentication.
+hidden: true
 icon: passport
 ---
 
@@ -46,7 +47,7 @@ The on-chain Treasury parameter **`redirect_url`** is the **single source of tru
 
 Your application's **`redirect_uri`** authorization parameter **must exactly match** the Treasury `redirect_url` (scheme, host, path, and trailing slash). This is where users are redirected after successful authentication.
 
-The OAuth2 authorization endpoint **fails closed** on mismatch: if `redirect_uri` does not equal the bound Treasury's current `redirect_url`, authorization is rejected even if an older stored value differed. Fix the Treasury on-chain first, sync the client (see [§3.4](#3.4.-updating-redirect-uri-or-branding)), then use the updated URI in your app.
+The OAuth2 authorization endpoint **fails closed** on mismatch: if `redirect_uri` does not equal the bound Treasury's current `redirect_url`, authorization is rejected even if an older stored value differed. Fix the Treasury on-chain first, sync the client (see [§3.4](oauth2-app.md#3.4.-updating-redirect-uri-or-branding)), then use the updated URI in your app.
 
 <figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Treasury contract configuration showing redirect URI</p></figcaption></figure>
 
@@ -111,7 +112,7 @@ Managing OAuth2 clients calls the manager API with a **Session JWT**. That sessi
 If the account only has authenticators that cannot prove ownership this way (for example passkey-only today), client management will fail after Connect. Add an **EthWallet** authenticator to the Meta Account, then retry.
 
 {% hint style="warning" %}
-**Manager vs end-user login**: End users of *your* OAuth2 app can still sign in with the Web2 / social / passkey flows you configure. The EthWallet (or equivalent) requirement applies to **you as the OAuth2 client administrator** managing clients in the Developer Portal (and to any script that calls the manager API with a session from challenge + verify).
+**Manager vs end-user login**: End users of _your_ OAuth2 app can still sign in with the Web2 / social / passkey flows you configure. The EthWallet (or equivalent) requirement applies to **you as the OAuth2 client administrator** managing clients in the Developer Portal (and to any script that calls the manager API with a session from challenge + verify).
 {% endhint %}
 
 {% hint style="info" %}

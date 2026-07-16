@@ -33,7 +33,7 @@ Learn about Meta Account settings, features, and authentication methods.
 
 Build React applications with account abstraction and gasless transactions.
 
-* [Web App Development — integration hub](web-app/README.md) - Authentication modes (`auto`, `signer`, `embedded`), env vars, and links to the xion.js demo app
+* [Web App Development — integration hub](web-app/) - Authentication modes (`auto`, `signer`, `embedded`), env vars, and links to the xion.js demo app
 * [Account Abstraction with Gasless Transactions](web-app/build-react-dapp-with-account-abstraxion.md) - Build a React dApp using the Abstraxion library with gasless transactions
 * [Abstraxion modes and opportunities](web-app/abstraxion-modes-opportunities.md) - Dashboard-first defaults, then signer + session vs signer + `requireAuth`; verify in `demo-app`
 * [Abstraxion signer mode](web-app/abstraxion-signer-mode.md) - `type: "signer"`, `getSignerConfig`, and wallet-led integrations
@@ -47,10 +47,6 @@ Create mobile applications with React Native and Meta Account authentication.
 * [Building a React Native Mobile App with Abstraxion](mobile-app/building-a-react-native-mobile-app-with-abstraxion.md) - Build a React Native mobile app with Meta Account login and gasless UX
 * [Create Mobile App and Integrate Meta Account Authentication](mobile-app/create-mobile-app-and-integrate-meta-account-authentication.md) - Integrate Meta Account authentication into your mobile app
 * [Mobile Development – Common Errors & Fixes](mobile-app/mobile-development-common-errors-and-fixes.md) - Troubleshoot common issues in mobile development
-
-#### OAuth2 App Development
-
-* [Build a Verona OAuth2 Application](oauth2-app.md) - Build an application with a Web2 experience using Verona OAuth2 Fully-Managed API
 
 #### Backend App Development
 
