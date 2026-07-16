@@ -96,7 +96,23 @@ Once your Treasury contract is configured, you can create OAuth2 clients from th
 
 <figure><img src="../../.gitbook/assets/verona-portal.png" alt="" width="375"><figcaption><p>Developer Portal login screen</p></figcaption></figure>
 
-To access the Developer Portal, click **"Connect with Verona"** and authenticate using your Verona account. After authentication, you'll be redirected to the OAuth2 Clients Dashboard.
+To access the Developer Portal, click **"Connect with Verona"** and authenticate using your Verona Meta Account. After authentication, you'll be redirected to the OAuth2 Clients Dashboard.
+
+#### Manager login requirement (challenge + verify)
+
+Managing OAuth2 clients calls the manager API with a **Session JWT**. That session is minted only via **`POST /auth/challenge`** then **`POST /auth/verify`** (unsigned “sdk-session” minting is disabled). The portal signs the challenge with an authenticator registered on your Meta Account.
+
+**Your manager Meta Account must include at least one authenticator that can complete challenge + verify**, for example:
+
+* **EthWallet** (recommended) — MetaMask or another Ethereum wallet that can `personal_sign` the challenge; use the same address registered as the EthWallet authenticator
+* **Secp256K1** — a Cosmos wallet (for example Keplr / Leap) registered as a Secp256K1 authenticator
+* **JWT** — a fresh identity-provider JWT that matches an on-chain JWT authenticator (when your login path supplies one)
+
+If the account only has authenticators that cannot prove ownership this way (for example passkey-only today), client management will fail after Connect. Add an **EthWallet** authenticator to the Meta Account, then retry.
+
+{% hint style="warning" %}
+**Manager vs end-user login**: End users of *your* OAuth2 app can still sign in with the Web2 / social / passkey flows you configure. The EthWallet (or equivalent) requirement applies to **you as the OAuth2 client administrator** managing clients in the Developer Portal (and to any script that calls the manager API with a session from challenge + verify).
+{% endhint %}
 
 {% hint style="info" %}
 Use the **testnet** portal while developing and the **mainnet** portal for production OAuth2 clients. Your app must use the OAuth2 server URL, discovery endpoints, and protected API base URL for the same network as your Treasury contract.
