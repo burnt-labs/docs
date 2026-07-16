@@ -208,9 +208,7 @@ Redirect URI, logo, and client (homepage) URI are **not editable** on the OAuth2
 **To change redirect URI or branding:**
 
 1. **Update the Treasury on-chain first** — In the [Developer Portal (testnet)](https://dev.testnet.burnt.com/) or [Developer Portal (mainnet)](https://dev.burnt.com/), open your Treasury contract, click **Update Params**, and set `redirect_url`, `icon_url`, and/or `display_url` as needed. Keep **IS OAUTH2 APP** enabled.
-2. **Sync the OAuth2 client** — After the on-chain update confirms:
-   * **Developer Portal**: Open the client in the OAuth2 Clients dashboard and click **Sync from Treasury** (available on client details and while editing).
-   * **API or CLI**: Call `POST /mgr-api/clients/{clientId}/sync-from-treasury` (for example via `verona-toolkit` or the oauth2-api-service `manage-clients.js sync-from-treasury` command).
+2. **Sync the OAuth2 client** — After the on-chain update confirms, open the client in the OAuth2 Clients dashboard and click **Sync from Treasury** (available on client details and while editing).
 3. **Update your application** — Use the new `redirect_url` value as the `redirect_uri` in authorization and token requests.
 
 {% hint style="info" %}
