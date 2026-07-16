@@ -48,6 +48,10 @@ Create mobile applications with React Native and Meta Account authentication.
 * [Create Mobile App and Integrate Meta Account Authentication](mobile-app/create-mobile-app-and-integrate-meta-account-authentication.md) - Integrate Meta Account authentication into your mobile app
 * [Mobile Development – Common Errors & Fixes](mobile-app/mobile-development-common-errors-and-fixes.md) - Troubleshoot common issues in mobile development
 
+#### **OAuth2 App Development**
+
+* ​[Build a Verona OAuth2 Application](https://app.gitbook.com/o/-MYHVr_KzNLwJObSYyGU/s/B5Z5ijJgMx0GJO3l1Il9/~/diff/~/revisions/IKVpY4b27hWnM9vm8zy9/build-on-verona/accounts/oauth2-app) - Build an application with a Web2 experience using Verona OAuth2 Fully-Managed API
+
 #### Backend App Development
 
 Integrate Verona with your backend services using RESTful APIs or CosmJS.

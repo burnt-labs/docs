@@ -2,7 +2,6 @@
 description: >-
   This guide provides a comprehensive walkthrough for integrating Verona into
   your application by OAuth2 authentication.
-hidden: true
 icon: passport
 ---
 
