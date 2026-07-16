@@ -42,14 +42,19 @@ When configuring your Treasury contract, there are two **critical requirements**
 
 #### 2.1.1. Redirect URI Configuration
 
-The **`redirect_uri`** parameter configured in your Treasury contract **MUST exactly match** the redirect URI used in your OAuth2 application. This redirect URI is where users will be redirected after successful authentication.
+The on-chain Treasury parameter **`redirect_url`** is the **single source of truth** for your OAuth2 client's redirect URI. When you create or sync an OAuth2 client, the service copies `redirect_url` into the client's allowed redirect URIs. You cannot set redirect URIs independently through the Developer Portal or client-management API.
+
+Your application's **`redirect_uri`** authorization parameter **must exactly match** the Treasury `redirect_url` (scheme, host, path, and trailing slash). This is where users are redirected after successful authentication.
+
+The OAuth2 authorization endpoint **fails closed** on mismatch: if `redirect_uri` does not equal the bound Treasury's current `redirect_url`, authorization is rejected even if an older stored value differed. Fix the Treasury on-chain first, sync the client (see [§3.4](#3.4.-updating-redirect-uri-or-branding)), then use the updated URI in your app.
 
 <figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Treasury contract configuration showing redirect URI</p></figcaption></figure>
 
 **Example:**
 
-* If your OAuth2 app uses `http://localhost:3000/callback` as the redirect URI
-* Your Treasury contract's redirect URI must also be set to `http://localhost:3000/callback`
+* If your OAuth2 app uses `http://localhost:3000/callback` as the `redirect_uri`
+* Your Treasury contract's `redirect_url` must also be set to `http://localhost:3000/callback`
+* Set `redirect_url` on the Treasury **before** creating the OAuth2 client
 
 #### 2.1.2. OAuth2 App Toggle
 
@@ -91,7 +96,23 @@ Once your Treasury contract is configured, you can create OAuth2 clients from th
 
 <figure><img src="../../.gitbook/assets/verona-portal.png" alt="" width="375"><figcaption><p>Developer Portal login screen</p></figcaption></figure>
 
-To access the Developer Portal, click **"Connect with Verona"** and authenticate using your Verona account. After authentication, you'll be redirected to the OAuth2 Clients Dashboard.
+To access the Developer Portal, click **"Connect with Verona"** and authenticate using your Verona Meta Account. After authentication, you'll be redirected to the OAuth2 Clients Dashboard.
+
+#### Manager login requirement (challenge + verify)
+
+Managing OAuth2 clients calls the manager API with a **Session JWT**. That session is minted only via **`POST /auth/challenge`** then **`POST /auth/verify`** (unsigned “sdk-session” minting is disabled). The portal signs the challenge with an authenticator registered on your Meta Account.
+
+**Your manager Meta Account must include at least one authenticator that can complete challenge + verify**, for example:
+
+* **EthWallet** (recommended) — MetaMask or another Ethereum wallet that can `personal_sign` the challenge; use the same address registered as the EthWallet authenticator
+* **Secp256K1** — a Cosmos wallet (for example Keplr / Leap) registered as a Secp256K1 authenticator
+* **JWT** — a fresh identity-provider JWT that matches an on-chain JWT authenticator (when your login path supplies one)
+
+If the account only has authenticators that cannot prove ownership this way (for example passkey-only today), client management will fail after Connect. Add an **EthWallet** authenticator to the Meta Account, then retry.
+
+{% hint style="warning" %}
+**Manager vs end-user login**: End users of *your* OAuth2 app can still sign in with the Web2 / social / passkey flows you configure. The EthWallet (or equivalent) requirement applies to **you as the OAuth2 client administrator** managing clients in the Developer Portal (and to any script that calls the manager API with a session from challenge + verify).
+{% endhint %}
 
 {% hint style="info" %}
 Use the **testnet** portal while developing and the **mainnet** portal for production OAuth2 clients. Your app must use the OAuth2 server URL, discovery endpoints, and protected API base URL for the same network as your Treasury contract.
@@ -115,9 +136,16 @@ Use the **testnet** portal while developing and the **mainnet** portal for produ
 
     **You need to complete the following fields:**
 
-    * **Treasury Address**: Select a Treasury contract from your existing deployments or enter a new Treasury address. The redirect URI from this Treasury will be used as your OAuth2 redirect URI.
-    * **Client Name** (optional): A descriptive name for your application. If not provided, the name of this client will be untitled.
-    * **Client URI** (optional): Your application's homepage URL
+    * **Treasury Address**: Select a Treasury contract from your existing deployments or enter a new Treasury address. The Treasury must already have **`redirect_url`** and **`icon_url`** configured on-chain (via **Update Params** in the Developer Portal). You must be a Treasury admin to bind it.
+    * **Client Name** (optional): A descriptive name for your application. If not provided, the client name defaults to untitled. The portal may suggest a name from the Treasury `display_url`.
+
+    **Treasury-derived values (read-only at create):**
+
+    After you select a Treasury, the form shows **Treasury Information** copied from on-chain params. You do not enter these separately:
+
+    * **Redirect URI** ← Treasury `redirect_url`
+    * **Logo URI** ← Treasury `icon_url`
+    * **Client URI** (homepage) ← Treasury `display_url` (optional on-chain)
 
     **Default Configuration:**
 
@@ -172,6 +200,20 @@ Use the **testnet** portal while developing and the **mainnet** portal for produ
 * Can optionally use PKCE in addition to client\_secret
 
 **Security**: The `client_secret` is stored securely on the server and never exposed to the client.
+
+### 3.4. Updating Redirect URI or Branding
+
+Redirect URI, logo, and client (homepage) URI are **not editable** on the OAuth2 client record. They always follow the bound Treasury's on-chain params (`redirect_url`, `icon_url`, `display_url`).
+
+**To change redirect URI or branding:**
+
+1. **Update the Treasury on-chain first** — In the [Developer Portal (testnet)](https://dev.testnet.burnt.com/) or [Developer Portal (mainnet)](https://dev.burnt.com/), open your Treasury contract, click **Update Params**, and set `redirect_url`, `icon_url`, and/or `display_url` as needed. Keep **IS OAUTH2 APP** enabled.
+2. **Sync the OAuth2 client** — After the on-chain update confirms, open the client in the OAuth2 Clients dashboard and click **Sync from Treasury** (available on client details and while editing).
+3. **Update your application** — Use the new `redirect_url` value as the `redirect_uri` in authorization and token requests.
+
+{% hint style="info" %}
+Client metadata you **can** still edit in the portal (name, policy URI, terms of service URI, JWKS URI, contacts, managers) does not include redirect, logo, or client URI. Those fields only change through Treasury on-chain updates followed by **Sync from Treasury**.
+{% endhint %}
 
 ## 4. OAuth2 Integration Examples
 
@@ -269,7 +311,7 @@ window.location.href = authUrl.toString()
 **OAuth2 Authorization Parameters:**
 
 * `client_id`: Your OAuth2 client ID
-* `redirect_uri`: Must match the redirect URI configured in your Treasury contract
+* `redirect_uri`: Must **exactly equal** the bound Treasury's on-chain `redirect_url` (the single source of truth). Authorization is rejected if they differ.
 * `response_type`: Always `"code"` for Authorization Code flow
 * `code_challenge`: (Public Clients) Base64url-encoded SHA256 hash of code\_verifier
 * `code_challenge_method`: (Public Clients) Always `"S256"` for SHA256
@@ -415,7 +457,7 @@ async function refreshAccessToken(refreshToken: string): Promise<TokenInfo> {
 
 * `grant_type`: `"authorization_code"` for the initial exchange, or `"refresh_token"` to rotate access tokens
 * `code`: Authorization code (authorization\_code grant only)
-* `redirect_uri`: Must match the redirect\_uri used in the authorization request (authorization\_code grant only)
+* `redirect_uri`: Must match the `redirect_uri` used in the authorization request, which must equal the Treasury `redirect_url` (authorization\_code grant only)
 * `client_id`: Your OAuth2 client ID
 * `client_secret`: Confidential clients only (authorization\_code or refresh\_token, depending on provider policy)
 * `code_verifier`: Public clients with PKCE (authorization\_code grant)
