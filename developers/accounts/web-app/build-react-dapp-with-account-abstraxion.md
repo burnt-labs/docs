@@ -3,21 +3,21 @@ description: End-to-end React (Vite) tutorial — Treasury, Counter contract, au
 vars:
   doc_type: tutorial
   primary_auth_mode: auto
-  sdk_packages: "@burnt-labs/abstraxion, @burnt-labs/abstraxion-core"
-  demo_app_routes: "/, /loading-states"
-  demo_app_routes_note: "/ is monorepo demo hub; /loading-states shows hook-first auth without legacy modal"
+  sdk_packages: "@burnt-labs/abstraxion-react"
+  demo_app_routes: "/auto"
+  demo_app_routes_note: "Live hook-first auth at sdk-react.demos.burnt.com/auto; source in demos/react"
   required_env_vars: "VITE_CHAIN_ID, VITE_RPC_URL, VITE_REST_URL, VITE_GAS_PRICE, VITE_TREASURY_ADDRESS, VITE_AUTH_APP_URL"
 ---
 
 # Account Abstraction with Gasless Transactions
 
-In this guide, we will walk through building a basic app using the [Abstraxion library](https://www.npmjs.com/package/@burnt-labs/abstraxion), demonstrating how to create an Abstraxion account which can be done via a social account like Google, browser wallets (Keplr, Metamask, OKX etc.), email address, passkey and other authentication options. We will also implement a gasless transaction experience for users by leveraging Verona's fee grants through a Treasury contract.
+In this guide, we will walk through building a basic app using the [Abstraxion React library](https://www.npmjs.com/package/@burnt-labs/abstraxion-react), demonstrating how to create an Abstraxion account which can be done via a social account like Google, browser wallets (Keplr, Metamask, OKX etc.), email address, passkey and other authentication options. We will also implement a gasless transaction experience for users by leveraging Verona's fee grants through a Treasury contract.
 
 The **`AbstraxionProvider`** examples below use **`authentication.type: "auto"`** (recommended for new apps). For other modes and terminology, see the section hub [Web App Development](README.md).
 
 To better understand Account Abstraction you can visit the [Introduction to Account Abstraction](../../../about-verona/concepts/intro-to-account-abstraction.md) page.
 
-The [xion.js `demo-app`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app) is a **Next.js** reference; **this tutorial uses Vite + React** so you can follow the same patterns without a framework lock-in.
+The [xion.js `demos/react`](https://github.com/burnt-labs/xion.js/tree/main/demos/react) reference uses the same **Vite + React** stack as this tutorial. Legacy Next.js routes in [`apps/demo-app`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app) remain for migration reference only.
 
 For **authentication modes** (`auto`, `signer`, `embedded`, etc.), see the section hub: [Web App Development](README.md).
 
@@ -29,7 +29,7 @@ Before getting started, ensure you have the following installed:
 
 ## Setting up the project
 
-This guide targets **React with [Vite](https://vitejs.dev/)** and **TypeScript**. Abstraxion is framework-agnostic; if you prefer **Next.js**, use the same provider config and component code in a client layout/page—see [xion.js `demo-app`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app).
+This guide targets **React with [Vite](https://vitejs.dev/)** and **TypeScript**. For non-React stacks, use **`@burnt-labs/abstraxion-js`** directly. If you prefer **Next.js**, use the same provider config and component code in a client layout/page—see [`demos/react`](https://github.com/burnt-labs/xion.js/tree/main/demos/react).
 
 ### Step 1: Create a Vite + React + TypeScript app
 
@@ -51,10 +51,10 @@ Point Tailwind at your sources (see [Tailwind v3 + Vite](https://v3.tailwindcss.
 ### Step 3: Install Abstraxion
 
 ```bash
-npm i @burnt-labs/abstraxion
+npm i @burnt-labs/abstraxion-react
 ```
 
-`@burnt-labs/abstraxion` depends on **`@burnt-labs/abstraxion-core`** for signing and session primitives. You normally do not install `abstraxion-core` separately; keep both on compatible versions when upgrading.
+`@burnt-labs/abstraxion-react` builds on **`@burnt-labs/abstraxion-js`** (installed transitively). You normally install only `abstraxion-react` for React web apps.
 
 ### Step 4: Start the dev server
 
@@ -131,7 +131,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import { AbstraxionProvider } from "@burnt-labs/abstraxion";
+import { AbstraxionProvider } from "@burnt-labs/abstraxion-react";
 
 const abstraxionConfig = {
   chainId: import.meta.env.VITE_CHAIN_ID!,
@@ -169,7 +169,7 @@ If you **omit** the entire `authentication` field, the SDK defaults to the legac
 
 ### Optional: Next.js instead of Vite
 
-Use the same **`abstraxionConfig`** shape in a **client** root layout, reading **`process.env.NEXT_PUBLIC_*`** instead of **`import.meta.env.VITE_*`**. The official [demo app](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app) is Next-based; if you hit bundler errors such as `UnhandledSchemeError` for `node:url`, apply the [Next.js config workaround](https://gist.githubusercontent.com/probablyangg/4c520e376cdddf6991951e233d1f9bb6/raw/fa0ecaf1b2e52876610be9d36a8aeaaef53f0dd5/next.config.js) from the earlier version of this guide.
+Use the same **`abstraxionConfig`** shape in a **client** root layout, reading **`process.env.NEXT_PUBLIC_*`** instead of **`import.meta.env.VITE_*`**. See [`demos/react`](https://github.com/burnt-labs/xion.js/tree/main/demos/react) for the Vite reference; if you hit bundler errors such as `UnhandledSchemeError` for `node:url` on Next.js, apply the [Next.js config workaround](https://gist.githubusercontent.com/probablyangg/4c520e376cdddf6991951e233d1f9bb6/raw/fa0ecaf1b2e52876610be9d36a8aeaaef53f0dd5/next.config.js) from the earlier version of this guide.
 
 ## Adding hooks to the main screen
 
@@ -177,7 +177,7 @@ Replace the contents of **`src/App.tsx`** with the following code. It uses **`lo
 
 ```typescript
 import { useEffect } from "react";
-import { useAbstraxionAccount } from "@burnt-labs/abstraxion";
+import { useAbstraxionAccount } from "@burnt-labs/abstraxion-react";
 
 export default function App(): JSX.Element {
   const { data: account, login, logout, isLoading } = useAbstraxionAccount();
@@ -246,7 +246,7 @@ import {
   useAbstraxionAccount,
   useAbstraxionSigningClient,
   useAbstraxionClient,
-} from "@burnt-labs/abstraxion";
+} from "@burnt-labs/abstraxion-react";
 
 const contractAddress = "YOUR_COUNTER_CONTRACT_ADDRESS_HERE";
 
@@ -352,7 +352,7 @@ import {
   useAbstraxionAccount,
   useAbstraxionSigningClient,
   useAbstraxionClient,
-} from "@burnt-labs/abstraxion";
+} from "@burnt-labs/abstraxion-react";
 import type { ExecuteResult } from "@cosmjs/cosmwasm-stargate";
 
 const contractAddress = "YOUR_COUNTER_CONTRACT_ADDRESS_HERE";
@@ -547,7 +547,7 @@ By default, the `gas-adjustment` applied to the `auto` value is typically **1.3*
 
 To update the gas adjustment in the **execute** call, replace `auto` with your desired adjustment value. The transaction will still use automatic gas estimation but will apply the specified gas adjustment instead of the default.
 
-**Session key vs direct signing:** This tutorial uses the default **`useAbstraxionSigningClient()`** path (gasless / session-style signing with Treasury). For **user-pays-gas** flows, `useAbstraxionSigningClient({ requireAuth: true })`, and **explicit fee simulation** (`simulate`, `calculateFee`) instead of `"auto"`, see the demo route **`/direct-signing-demo`** in [xion.js `apps/demo-app`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/direct-signing-demo).
+**Session key vs direct signing:** This tutorial uses the default **`useAbstraxionSigningClient()`** path (gasless / session-style signing with Treasury). For **user-pays-gas** flows, `useAbstraxionSigningClient({ requireAuth: true })`, and **explicit fee simulation** (`simulate`, `calculateFee`) instead of `"auto"`, compare hooks in [`demos/react`](https://github.com/burnt-labs/xion.js/tree/main/demos/react) (see also [Web App Development](README.md#when-to-use-which-mode)).
 
 If everything is configured correctly, you should see the transaction results displayed as shown in the previous section.
 
