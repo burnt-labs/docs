@@ -47,7 +47,6 @@
     * [Interact via your Backend Service](developers/accounts/backend-app/backend-using-cosmjs.md)
     * [Account Abstraction for RESTful API with Backend Session](developers/accounts/backend-app/build-restapi-with-account-abstraction-and-backend-session.md)
 * [Tools & SDKs](developers/tools/README.md)
-  * [For AI Agents — Dev Plugin skills](about-verona/ai-agents.md)
   * [Mob: multi-platform signing client](developers/tools/mob-signing-client.md)
   * [Verona Agent Toolkit (CLI)](developers/tools/verona-toolkit.md)
   * [Interacting with the chain using the daemon CLI](developers/tools/daemon-cli.md)
