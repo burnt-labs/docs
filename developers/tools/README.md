@@ -6,6 +6,8 @@ icon: wrench
 
 Libraries and CLIs for building on Verona—whether you ship a web or mobile app, automate from the terminal, or integrate native signing in Python, Kotlin, Swift, or Rust.
 
+**Code Agents:** install skills from [verona-dev-plugin](https://github.com/burnt-labs/verona-dev-plugin) ([INSTALL.md](https://github.com/burnt-labs/verona-dev-plugin/blob/main/INSTALL.md)); see the [stack selection table](../overview.md#stack-selection) on the developers overview.
+
 ## xion.js
 
 [**xion.js**](https://github.com/burnt-labs/xion.js) is Verona’s JavaScript monorepo for Meta Accounts, gasless transactions, and Abstraxion. It powers React web apps and React Native mobile apps with shared packages (`@burnt-labs/abstraxion-react`, `@burnt-labs/abstraxion-js`, `@burnt-labs/abstraxion-react-native`) and reference demos in [`demos/react`](https://github.com/burnt-labs/xion.js/tree/main/demos/react).
