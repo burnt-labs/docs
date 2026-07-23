@@ -7,7 +7,7 @@ vars:
   sdk_packages: "@burnt-labs/abstraxion-react"
   demo_app_routes: "/auto, /embedded, /signer-mode, /saas"
   demo_repo: https://github.com/burnt-labs/xion.js/tree/main/demos/react
-  required_env_vars_dashboard_auth: "NEXT_PUBLIC_CHAIN_ID, NEXT_PUBLIC_RPC_URL, NEXT_PUBLIC_REST_URL, NEXT_PUBLIC_GAS_PRICE, NEXT_PUBLIC_TREASURY_ADDRESS, NEXT_PUBLIC_AUTH_APP_URL"
+  required_env_vars_dashboard_auth: "VITE_CHAIN_ID / NEXT_PUBLIC_CHAIN_ID, VITE_RPC_URL / NEXT_PUBLIC_RPC_URL, VITE_REST_URL / NEXT_PUBLIC_REST_URL, VITE_GAS_PRICE / NEXT_PUBLIC_GAS_PRICE, VITE_TREASURY_ADDRESS / NEXT_PUBLIC_TREASURY_ADDRESS, VITE_AUTH_APP_URL / NEXT_PUBLIC_AUTH_APP_URL"
   required_env_when: "auto, popup, or explicit redirect"
 ---
 

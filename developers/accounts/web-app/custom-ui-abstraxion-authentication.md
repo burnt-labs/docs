@@ -6,7 +6,7 @@ vars:
   primary_auth_note: "recommended default; hook flags apply across auto, popup, and redirect"
   sdk_packages: "@burnt-labs/abstraxion-react"
   demo_app_routes: "/auto"
-  required_env_vars: "NEXT_PUBLIC_CHAIN_ID, NEXT_PUBLIC_RPC_URL, NEXT_PUBLIC_REST_URL, NEXT_PUBLIC_GAS_PRICE, NEXT_PUBLIC_TREASURY_ADDRESS, NEXT_PUBLIC_AUTH_APP_URL"
+  required_env_vars: "VITE_CHAIN_ID / NEXT_PUBLIC_CHAIN_ID, VITE_RPC_URL / NEXT_PUBLIC_RPC_URL, VITE_REST_URL / NEXT_PUBLIC_REST_URL, VITE_GAS_PRICE / NEXT_PUBLIC_GAS_PRICE, VITE_TREASURY_ADDRESS / NEXT_PUBLIC_TREASURY_ADDRESS, VITE_AUTH_APP_URL / NEXT_PUBLIC_AUTH_APP_URL"
   required_env_when: "dashboard auth (auto, popup, or redirect)"
 ---
 

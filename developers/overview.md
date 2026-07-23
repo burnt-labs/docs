@@ -214,7 +214,7 @@ Pick a default package or tool from the table below. Full decision rules (DR-1�
 | React Native / Expo | `@burnt-labs/abstraxion-react-native` |
 | Native / server signing | [mob](https://github.com/burnt-labs/mob) |
 | Headless OAuth2 | oauth2 flows — see plugin `references/` |
-| Agent CLI | `verona-toolkit` ([releases](https://github.com/burnt-labs/verona-agent-toolkit)) |
+| Agent CLI | `verona-toolkit` ([releases](https://github.com/burnt-labs/verona-agent-toolkit/releases)) |
 | Chain node / validator ops | `xiond` ([daemon CLI](tools/daemon-cli.md)) |
 
 `@burnt-labs/abstraxion-core` is the connector and iframe protocol layer — use for headless or custom UI wiring, not as the primary React install.
