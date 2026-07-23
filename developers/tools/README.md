@@ -6,7 +6,11 @@ icon: wrench
 
 Libraries and CLIs for building on Verona—whether you ship a web or mobile app, automate from the terminal, or integrate native signing in Python, Kotlin, Swift, or Rust.
 
-**Code Agents:** install skills from [verona-dev-plugin](https://github.com/burnt-labs/verona-dev-plugin) ([INSTALL.md](https://github.com/burnt-labs/verona-dev-plugin/blob/main/INSTALL.md)); see the [stack selection table](../overview.md#stack-selection) on the developers overview.
+## Code agents
+
+For AI coding agents, install **skills** from [verona-dev-plugin](https://github.com/burnt-labs/verona-dev-plugin) per [INSTALL.md](https://github.com/burnt-labs/verona-dev-plugin/blob/main/INSTALL.md)—not from the toolkit repo. The plugin routes app SDK work vs CLI automation; stack decision rules live in plugin `references/`. See the [stack selection table](../overview.md#stack-selection) on the developers overview.
+
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Verona Dev Plugin — agent skills</strong></td><td>Install once per host (Cursor, Codex, Claude Code, Kimi). Shared <code>skills/</code> tree for Meta Accounts, treasury, OAuth2, app SDK guides, and toolkit CLI workflows.</td><td><a href="../../about-verona/ai-agents.md">ai-agents.md</a></td></tr><tr><td><strong>Verona Agent Toolkit — CLI</strong></td><td><code>verona-toolkit</code> binary for Treasury, OAuth2 clients, and gasless automation from the terminal. Pair with the Dev Plugin for agent-driven CLI ops—not a skills install path. <strong>Beta</strong>.</td><td><a href="verona-toolkit.md">verona-toolkit.md</a></td></tr></tbody></table>
 
 ## xion.js
 
@@ -24,6 +28,6 @@ If you are building in JavaScript or TypeScript, start here—then follow the pl
 
 ## CLI tools
 
-For direct chain interaction, scripting, validator workflows, or AI-agent automation, use the command-line tools below. They complement the SDKs above rather than replacing app integration paths.
+For direct chain interaction, scripting, and validator workflows, use the command-line tools below. They complement the SDKs above rather than replacing app integration paths. For agent skills, use the [Dev Plugin](#code-agents) section—not toolkit install docs.
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Verona Agent Toolkit</strong></td><td>Gasless development with Meta Accounts, Treasury management, and OAuth2 client management (<code>verona-toolkit</code> CLI). <strong>Beta</strong>—testnet (default) and mainnet (<code>--network mainnet</code>); faucet is testnet-only.</td><td><a href="verona-toolkit.md">verona-toolkit.md</a></td></tr><tr><td><strong>Daemon CLI (<code>xiond</code>)</strong></td><td>Traditional chain CLI for querying and transacting directly with Verona endpoints.</td><td><a href="daemon-cli.md">daemon-cli.md</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Verona Agent Toolkit (<code>verona-toolkit</code>)</strong></td><td>CLI for gasless development with Meta Accounts, Treasury management, and OAuth2 client management. <strong>Beta</strong>—testnet (default) and mainnet (<code>--network mainnet</code>); faucet is testnet-only.</td><td><a href="verona-toolkit.md">verona-toolkit.md</a></td></tr><tr><td><strong>Daemon CLI (<code>xiond</code>)</strong></td><td>Traditional chain CLI for querying and transacting directly with Verona endpoints.</td><td><a href="daemon-cli.md">daemon-cli.md</a></td></tr></tbody></table>
