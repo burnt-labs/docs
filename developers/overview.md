@@ -186,6 +186,39 @@ Now that you understand the big picture, here's how to start building:
 4. **Add Payments**: Enable credit card and crypto payments
    * [Credit / Debit Card Integration](payments/credit-debit-cards/)
 
+### For AI / Code Agents
+
+{% hint style="info" %}
+**Source over prose:** When package names, auth modes, or demo routes conflict with this site, prefer the [xion.js README](https://github.com/burnt-labs/xion.js) and [`demos/react`](https://github.com/burnt-labs/xion.js/tree/main/demos/react) reference implementation. For native or server signing outside JavaScript, prefer [mob](https://github.com/burnt-labs/mob).
+{% endhint %}
+
+Code Agents should install **[verona-dev-plugin](https://github.com/burnt-labs/verona-dev-plugin)** for Verona integration skills and stack decision rules — follow [INSTALL.md](https://github.com/burnt-labs/verona-dev-plugin/blob/main/INSTALL.md) in the plugin repo. Do not rely on legacy bare `@burnt-labs/abstraxion` or `@burnt-labs/ui` names that may still appear in older pages.
+
+* **App SDK source:** [xion.js](https://github.com/burnt-labs/xion.js) (`@burnt-labs/abstraxion-react`, `@burnt-labs/abstraxion-js`, `@burnt-labs/abstraxion-react-native`)
+* **Native signing:** [mob](https://github.com/burnt-labs/mob)
+* **Agent skills home:** [verona-dev-plugin](https://github.com/burnt-labs/verona-dev-plugin) ([INSTALL.md](https://github.com/burnt-labs/verona-dev-plugin/blob/main/INSTALL.md))
+* **CLI automation (Treasury, OAuth2 clients):** [`verona-toolkit`](tools/verona-toolkit.md) — complementary to the Dev Plugin, not a replacement for its skills
+
+Human-oriented Dev Plugin install: [For AI Agents](../about-verona/ai-agents.md). CLI walkthrough: [verona-toolkit](tools/verona-toolkit.md).
+
+### Stack selection
+
+Pick a default package or tool from the table below. Full decision rules (DR-1–DR-8) live in the Dev Plugin only — do not duplicate them here:
+
+**[verona-dev-plugin `skills/verona-dev/references/`](https://github.com/burnt-labs/verona-dev-plugin/tree/main/skills/verona-dev/references)**
+
+| Need | Package / tool |
+| ---- | -------------- |
+| React web | `@burnt-labs/abstraxion-react` |
+| Non-React JS (Svelte, Vue, vanilla) | `@burnt-labs/abstraxion-js` |
+| React Native / Expo | `@burnt-labs/abstraxion-react-native` |
+| Native / server signing | [mob](https://github.com/burnt-labs/mob) |
+| Headless OAuth2 | oauth2 flows — see plugin `references/` |
+| Agent CLI | `verona-toolkit` ([releases](https://github.com/burnt-labs/verona-agent-toolkit/releases)) |
+| Chain node / validator ops | `xiond` ([daemon CLI](tools/daemon-cli.md)) |
+
+`@burnt-labs/abstraxion-core` is the connector and iframe protocol layer — use for headless or custom UI wiring, not as the primary React install.
+
 ### Tools & SDKs
 
 Libraries and CLIs for app and automation workflows:
@@ -193,8 +226,9 @@ Libraries and CLIs for app and automation workflows:
 * [Tools & SDKs overview](tools/)
 * [xion.js](https://github.com/burnt-labs/xion.js) — Web App and Mobile App guides under [Accounts](accounts/)
 * [Mob signing library](tools/mob-signing-client.md)
-* [AI Agent Quick Start](../about-verona/ai-agents.md)
-* [Verona Agent Toolkit](tools/verona-toolkit.md)
+* [verona-dev-plugin](https://github.com/burnt-labs/verona-dev-plugin) — Code Agent skills ([INSTALL.md](https://github.com/burnt-labs/verona-dev-plugin/blob/main/INSTALL.md)); stack rules in plugin `references/`
+* [For AI Agents](../about-verona/ai-agents.md) — human-oriented Verona Dev Plugin install
+* [Verona Agent Toolkit](tools/verona-toolkit.md) — CLI for Treasury, OAuth2 clients, and gasless automation
 * [Daemon CLI (`xiond`)](tools/daemon-cli.md)
 
 ### Key Concepts for Web2 Developers

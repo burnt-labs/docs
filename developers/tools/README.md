@@ -6,11 +6,17 @@ icon: wrench
 
 Libraries and CLIs for building on Verona—whether you ship a web or mobile app, automate from the terminal, or integrate native signing in Python, Kotlin, Swift, or Rust.
 
+## Code agents
+
+For AI coding agents, install **skills** from [verona-dev-plugin](https://github.com/burnt-labs/verona-dev-plugin) per [INSTALL.md](https://github.com/burnt-labs/verona-dev-plugin/blob/main/INSTALL.md)—not from the toolkit repo. The plugin routes app SDK work vs CLI automation; stack decision rules live in plugin `references/`. See the [stack selection table](../overview.md#stack-selection) on the developers overview.
+
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Verona Dev Plugin — agent skills</strong></td><td>Install once per host (Cursor, Codex, Claude Code, Kimi). Shared <code>skills/</code> tree for Meta Accounts, treasury, OAuth2, app SDK guides, and toolkit CLI workflows.</td><td><a href="../../about-verona/ai-agents.md">ai-agents.md</a></td></tr><tr><td><strong>Verona Agent Toolkit — CLI</strong></td><td><code>verona-toolkit</code> binary for Treasury, OAuth2 clients, and gasless automation from the terminal. Pair with the Dev Plugin for agent-driven CLI ops—not a skills install path. <strong>Beta</strong>.</td><td><a href="verona-toolkit.md">verona-toolkit.md</a></td></tr></tbody></table>
+
 ## xion.js
 
-[**xion.js**](https://github.com/burnt-labs/xion.js) is Verona’s JavaScript monorepo for Meta Accounts, gasless transactions, and Abstraxion. It powers React web apps and React Native mobile apps with shared packages (`@burnt-labs/abstraxion`, `@burnt-labs/abstraxion-core`, `@burnt-labs/abstraxion-react-native`) and a reference [`demo-app`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app).
+[**xion.js**](https://github.com/burnt-labs/xion.js) is Verona’s JavaScript monorepo for Meta Accounts, gasless transactions, and Abstraxion. It powers React web apps and React Native mobile apps with shared packages (`@burnt-labs/abstraxion-react`, `@burnt-labs/abstraxion-js`, `@burnt-labs/abstraxion-react-native`) and reference demos in [`demos/react`](https://github.com/burnt-labs/xion.js/tree/main/demos/react).
 
-If you are building in JavaScript or TypeScript, start here—then follow the platform guides below for end-to-end integration.
+If you are building in JavaScript or TypeScript, start here—then follow the platform guides below for end-to-end integration. For React web auth modes, try the [live demos](https://sdk-react.demos.burnt.com/) (`/auto`, `/embedded`, `/signer-mode`, `/saas`) or the [Web App hub](../accounts/web-app/#live-demos).
 
 <table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Web App Development</strong></td><td>React + Abstraxion: Meta Accounts, Treasury gasless flows, auth modes (<code>auto</code>, <code>signer</code>, <code>embedded</code>), and tutorials backed by <code>xion.js</code>.</td><td><a href="../accounts/web-app/">web-app</a></td></tr><tr><td><strong>Mobile App Development</strong></td><td>React Native + Expo with Abstraxion: environment setup, Meta Account auth, gasless UX, and common mobile fixes.</td><td><a href="../accounts/mobile-app/">mobile-app</a></td></tr></tbody></table>
 
@@ -22,6 +28,6 @@ If you are building in JavaScript or TypeScript, start here—then follow the pl
 
 ## CLI tools
 
-For direct chain interaction, scripting, validator workflows, or AI-agent automation, use the command-line tools below. They complement the SDKs above rather than replacing app integration paths.
+For direct chain interaction, scripting, and validator workflows, use the command-line tools below. They complement the SDKs above rather than replacing app integration paths. For agent skills, use the [Dev Plugin](#code-agents) section—not toolkit install docs.
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Verona Agent Toolkit</strong></td><td>Gasless development with Meta Accounts, Treasury management, and OAuth2 client management (<code>verona-toolkit</code> CLI). <strong>Beta</strong>—testnet (default) and mainnet (<code>--network mainnet</code>); faucet is testnet-only.</td><td><a href="verona-toolkit.md">verona-toolkit.md</a></td></tr><tr><td><strong>Daemon CLI (<code>xiond</code>)</strong></td><td>Traditional chain CLI for querying and transacting directly with Verona endpoints.</td><td><a href="daemon-cli.md">daemon-cli.md</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Verona Agent Toolkit (<code>verona-toolkit</code>)</strong></td><td>CLI for gasless development with Meta Accounts, Treasury management, and OAuth2 client management. <strong>Beta</strong>—testnet (default) and mainnet (<code>--network mainnet</code>); faucet is testnet-only.</td><td><a href="verona-toolkit.md">verona-toolkit.md</a></td></tr><tr><td><strong>Daemon CLI (<code>xiond</code>)</strong></td><td>Traditional chain CLI for querying and transacting directly with Verona endpoints.</td><td><a href="daemon-cli.md">daemon-cli.md</a></td></tr></tbody></table>
