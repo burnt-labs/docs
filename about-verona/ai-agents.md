@@ -1,5 +1,5 @@
 ---
-description: Use AI agents on Verona through the Verona Agent Toolkit
+description: Use AI agents on Verona through the Verona Dev Plugin
 hidden: false
 icon: robot
 ---
@@ -8,47 +8,47 @@ icon: robot
 
 **Agents that can finally act.** An agent needs provable information to act—and it cannot hold your sensitive data. Verona lets agents act on what the user has already verified, without rechecking, by reading scoped attestations from the network instead of scraping or storing raw records.
 
-Want to let an AI agent operate on the network with a gasless workflow?
-
-{% hint style="warning" %}
-**Beta:** Verona Agent Toolkit (CLI package `verona-toolkit`) is in **beta**. It supports **testnet** (default) and **mainnet**—use `--network mainnet` or `verona-toolkit config set-network mainnet` for production. Start on testnet for development; the faucet is testnet-only.
-{% endhint %}
+Want to let an AI coding agent work on Verona with the right skills, routing, and gasless workflows?
 
 Copy the instruction below into your AI coding assistant:
 
 ```
-Follow this guide https://raw.githubusercontent.com/burnt-labs/verona-agent-toolkit/main/INSTALL-FOR-AGENTS.md to install and configure the Verona Agent Toolkit skills for AI agents.
+Follow this guide https://raw.githubusercontent.com/burnt-labs/verona-dev-plugin/main/INSTALL.md to install and configure the Verona Dev Plugin for AI coding agents.
 ```
 
 {% hint style="info" %}
-This setup is designed for AI-assisted development with Meta Accounts, Treasury management, and OAuth2 client management. It is not limited to one IDE. On-chain operations still use chain IDs such as `xion-testnet-2` and the `xiond` CLI where applicable.
+The plugin supports **Cursor**, **Codex**, **Claude Code**, and **Kimi**. Host-specific install steps live in [INSTALL.md](https://github.com/burnt-labs/verona-dev-plugin/blob/main/INSTALL.md) — do not improvise paths or marketplace flows from memory.
+{% endhint %}
+
+{% hint style="warning" %}
+**Beta:** The `verona-toolkit` CLI (installed via plugin skills when needed) is in **beta**. It supports **testnet** (default) and **mainnet**—use `--network mainnet` or `verona-toolkit config set-network mainnet` for production. Start on testnet for development; the faucet is testnet-only.
 {% endhint %}
 
 ## What this gives you
 
-- **Meta Account auth** via OAuth2 (no private key management)
-- **Treasury management** for gasless operations and delegated permissions
-- **OAuth2 client management** for app registration and lifecycle
-- **Agent-friendly workflows** through skills like `verona-dev`, `verona-oauth2`, `verona-treasury`, `verona-oauth2-client`, `verona-faucet`, and `verona-asset`
-- **A path to verified context** — combine toolkit flows with [Truth Engine](concepts/verification-infrastructure/) attestations so agents act on proofs, not guesses
+- **One plugin, shared skills** — Meta Account auth, treasury, OAuth2 clients, app SDK guides, and `xiond` helpers under a single `skills/` tree
+- **Session entry via `verona-dev`** — routes app development vs toolkit CLI work so the agent picks the right lane
+- **Host-native install** — Cursor, Codex, Claude Code, and Kimi each discover the plugin through their manifest conventions (see INSTALL.md)
+- **A path to verified context** — combine plugin workflows with [Truth Engine](concepts/verification-infrastructure/) attestations so agents act on proofs, not guesses
 
 ## High-level flow
 
 ```mermaid
 flowchart TD
     start[Developer or AI Agent] --> copy[Copy one-line install instruction]
-    copy --> auth[Authenticate with verona-toolkit]
-    auth --> treasury[Treasury management]
-    treasury --> oauth[OAuth2 client management]
-    oauth --> gasless[Run gasless app operations]
-    gasless --> next[Continue in full tutorial]
+    copy --> install[Install verona-dev-plugin per INSTALL.md]
+    install --> reload[Reload host / trust hooks if required]
+    reload --> entry[verona-dev skill loads at session start]
+    entry --> route{Task type?}
+    route -->|App / SDK| dev[verona-dev references + verona-bin]
+    route -->|CLI ops| toolkit[Toolkit skills e.g. oauth2 treasury]
+    dev --> next[Continue in plugin skills or docs]
+    toolkit --> next
 ```
-
-
 
 ## Continue to full guide
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Verona Agent Toolkit Tutorial</strong><br>Step-by-step guide for installation, auth, treasury workflows, OAuth2 client management, and troubleshooting.</td><td><a href="../developers/tools/verona-toolkit.md">verona-toolkit.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Verona Dev Plugin — Install</strong><br>Host-specific install, session hooks, legacy skill cleanup, and updates.</td><td><a href="https://github.com/burnt-labs/verona-dev-plugin/blob/main/INSTALL.md">INSTALL.md</a></td></tr><tr><td><strong>Verona Agent Toolkit Tutorial</strong><br>CLI reference for auth, treasury, OAuth2 client management, and troubleshooting when the agent routes to toolkit skills.</td><td><a href="../developers/tools/verona-toolkit.md">verona-toolkit.md</a></td></tr></tbody></table>
 
 ## Related
 
@@ -58,7 +58,6 @@ flowchart TD
 
 ## References
 
-- [Verona Agent Toolkit Repository](https://github.com/burnt-labs/verona-agent-toolkit)
-- [Install for AI Agents](https://raw.githubusercontent.com/burnt-labs/verona-agent-toolkit/main/INSTALL-FOR-AGENTS.md)
-- [CLI Reference](https://github.com/burnt-labs/verona-agent-toolkit/blob/main/docs/cli-reference.md)
-
+- [Verona Dev Plugin Repository](https://github.com/burnt-labs/verona-dev-plugin)
+- [Install the plugin (INSTALL.md)](https://github.com/burnt-labs/verona-dev-plugin/blob/main/INSTALL.md)
+- [Verona Agent Toolkit Repository](https://github.com/burnt-labs/verona-agent-toolkit) — CLI binary distribution and command reference
