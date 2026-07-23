@@ -104,9 +104,9 @@ Instead, you use the Abstraxion SDK, which wraps all six abstraction layers into
 
 ```typescript
 // Your user logs in with email. That's it.
-import { useAbstraxion } from '@burnt-labs/abstraxion';
+import { useAbstraxionAccount } from '@burnt-labs/abstraxion-react';
 
-const { login, isConnected, account } = useAbstraxion();
+const { login, isConnected, data: account } = useAbstraxionAccount();
 
 // Login triggers Meta Account creation/connection
 // Gas is sponsored by your Treasury contract

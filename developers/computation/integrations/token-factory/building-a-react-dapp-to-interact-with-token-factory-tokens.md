@@ -25,10 +25,10 @@ cd xion-token-dapp
 
 ### **Install Dependencies**
 
-Install the Abstraxion SDK:
+Install the Abstraxion React SDK:
 
 ```sh
-npm install @burnt-labs/abstraxion
+npm install @burnt-labs/abstraxion-react
 ```
 
 ### **Start the Development Server**
@@ -81,6 +81,10 @@ Learn more about Treasury Contracts [here](../../../../others/archived/create-a-
 
 To enable account abstraction and gasless transactions, integrate the **Abstraxion provider** into your application.
 
+{% hint style="warning" %}
+The snippets below use legacy **`<Abstraxion />`** modal and **`@burnt-labs/ui`** buttons for historical continuity. **`@burnt-labs/ui` is deprecated** in v1—new apps should use **`login()`** with your own UI ([Custom UI guide](../../../accounts/web-app/custom-ui-abstraxion-authentication.md)) and **`@burnt-labs/abstraxion-react`** only.
+{% endhint %}
+
 ### **Configure the Abstraxion Provider**
 
 Replace the contents of `src/app/layout.tsx` with the following:
@@ -89,8 +93,7 @@ Replace the contents of `src/app/layout.tsx` with the following:
 "use client";
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { AbstraxionProvider } from "@burnt-labs/abstraxion";
-import "@burnt-labs/abstraxion/dist/index.css";
+import { AbstraxionProvider } from "@burnt-labs/abstraxion-react";
 import "@burnt-labs/ui/dist/index.css";
 
 const inter = Inter({ subsets: ['latin'] });
@@ -128,7 +131,7 @@ import {
   useAbstraxionSigningClient,
   useAbstraxionClient,
   useModal,
-} from "@burnt-labs/abstraxion";
+} from "@burnt-labs/abstraxion-react";
 import { Button } from "@burnt-labs/ui";
 import "@burnt-labs/ui/dist/index.css";
 import type { ExecuteResult } from "@cosmjs/cosmwasm-stargate";

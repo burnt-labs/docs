@@ -6,11 +6,13 @@ icon: wrench
 
 Libraries and CLIs for building on Verona—whether you ship a web or mobile app, automate from the terminal, or integrate native signing in Python, Kotlin, Swift, or Rust.
 
+**Code Agents:** install skills from [verona-dev-plugin](https://github.com/burnt-labs/verona-dev-plugin) ([INSTALL.md](https://github.com/burnt-labs/verona-dev-plugin/blob/main/INSTALL.md)); see the [stack selection table](../overview.md#stack-selection) on the developers overview.
+
 ## xion.js
 
-[**xion.js**](https://github.com/burnt-labs/xion.js) is Verona’s JavaScript monorepo for Meta Accounts, gasless transactions, and Abstraxion. It powers React web apps and React Native mobile apps with shared packages (`@burnt-labs/abstraxion`, `@burnt-labs/abstraxion-core`, `@burnt-labs/abstraxion-react-native`) and a reference [`demo-app`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app).
+[**xion.js**](https://github.com/burnt-labs/xion.js) is Verona’s JavaScript monorepo for Meta Accounts, gasless transactions, and Abstraxion. It powers React web apps and React Native mobile apps with shared packages (`@burnt-labs/abstraxion-react`, `@burnt-labs/abstraxion-js`, `@burnt-labs/abstraxion-react-native`) and reference demos in [`demos/react`](https://github.com/burnt-labs/xion.js/tree/main/demos/react).
 
-If you are building in JavaScript or TypeScript, start here—then follow the platform guides below for end-to-end integration.
+If you are building in JavaScript or TypeScript, start here—then follow the platform guides below for end-to-end integration. For React web auth modes, try the [live demos](https://sdk-react.demos.burnt.com/) (`/auto`, `/embedded`, `/signer-mode`, `/saas`) or the [Web App hub](../accounts/web-app/#live-demos).
 
 <table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Web App Development</strong></td><td>React + Abstraxion: Meta Accounts, Treasury gasless flows, auth modes (<code>auto</code>, <code>signer</code>, <code>embedded</code>), and tutorials backed by <code>xion.js</code>.</td><td><a href="../accounts/web-app/">web-app</a></td></tr><tr><td><strong>Mobile App Development</strong></td><td>React Native + Expo with Abstraxion: environment setup, Meta Account auth, gasless UX, and common mobile fixes.</td><td><a href="../accounts/mobile-app/">mobile-app</a></td></tr></tbody></table>
 

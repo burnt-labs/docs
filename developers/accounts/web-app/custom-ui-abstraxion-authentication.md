@@ -1,11 +1,11 @@
 ---
-description: Hook-first Abstraxion auth — loading flags, login(), session lifecycle (demo /loading-states)
+description: Hook-first Abstraxion auth — loading flags, login(), session lifecycle (live /auto demo)
 vars:
   doc_type: guide
   primary_auth_mode: auto
   primary_auth_note: "recommended default; hook flags apply across auto, popup, and redirect"
-  sdk_packages: "@burnt-labs/abstraxion, @burnt-labs/abstraxion-core"
-  demo_app_routes: "/loading-states"
+  sdk_packages: "@burnt-labs/abstraxion-react"
+  demo_app_routes: "/auto"
   required_env_vars: "NEXT_PUBLIC_CHAIN_ID, NEXT_PUBLIC_RPC_URL, NEXT_PUBLIC_REST_URL, NEXT_PUBLIC_GAS_PRICE, NEXT_PUBLIC_TREASURY_ADDRESS, NEXT_PUBLIC_AUTH_APP_URL"
   required_env_when: "dashboard auth (auto, popup, or redirect)"
 ---
@@ -14,7 +14,7 @@ vars:
 
 This guide is about **your own buttons, copy, and loading states**—using **`useAbstraxionAccount`** (and optionally **`useAbstraxionSigningClient`**) with **`login()`**, not the legacy **`<Abstraxion />`** modal / **`@burnt-labs/ui`** bundle. It goes deeper on **granular loading flags** and **redirect return** handling than the [Account abstraction tutorial](build-react-dapp-with-account-abstraxion.md) (which already uses the same hook-first connect pattern). It does **not** walk through choosing or comparing **`authentication.type`**; that belongs in the section hub.
 
-**Live reference:** [xion.js `apps/demo-app` — `/loading-states`](https://github.com/burnt-labs/xion.js/tree/main/apps/demo-app/src/app/loading-states).
+**Live reference:** [sdk-react.demos.burnt.com/auto](https://sdk-react.demos.burnt.com/auto) (hook-first connect; source in [`demos/react`](https://github.com/burnt-labs/xion.js/tree/main/demos/react)).
 
 **Prerequisite:** You have already wrapped the app with **`AbstraxionProvider`** and set **`authentication`** (for dashboard Meta Account login, **`auto`** is the usual default). See [Web App Development](README.md) for the mode glossary, env vars, and when to use **`signer`** or **embedded**—those topics are not repeated here. The **`login()`**, **`?granted=true`**, and flag patterns below apply to **dashboard-style** flows (`auto` / `popup` / `redirect`); for **`type: "signer"`**, start from [Abstraxion signer mode](abstraxion-signer-mode.md).
 
@@ -47,7 +47,7 @@ const { data: account, login, logout, isConnecting, isLoading } =
   useAbstraxionAccount();
 ```
 
-You do **not** need `@burnt-labs/abstraxion/dist/index.css` for hook-only UIs built with your own components.
+You do **not** need a separate Abstraxion CSS bundle for hook-only UIs built with your own components.
 
 ## Optional: finishing login after redirect
 
@@ -65,7 +65,7 @@ useEffect(() => {
 ## Example: minimal custom UI
 
 ```typescript
-import { useAbstraxionAccount, useAbstraxionSigningClient } from "@burnt-labs/abstraxion";
+import { useAbstraxionAccount, useAbstraxionSigningClient } from "@burnt-labs/abstraxion-react";
 
 const btnClass =
   "w-full rounded-md border border-zinc-600 bg-zinc-900 px-4 py-2 text-white disabled:opacity-50";

@@ -36,6 +36,6 @@ The [`@burnt-labs/abstraxion-react-native`](https://www.npmjs.com/package/@burnt
 * **Handles Secure Auth Flows** – Support for email, social logins, wallet and passkey authentication.
 * **Simplifies Blockchain Interactions** – Manages signing and gasless transaction flows using Meta Accounts and Treasury contracts.
 * **Session Persistence** – Built-in support for persistent logins using `AsyncStorage`.
-* **Abstraxion Hooks** – React Native optimized hooks with the exact same interfaces as `@burnt-labs/abstraxion`.
+* **Abstraxion Hooks** – React Native optimized hooks with the same interfaces as **`@burnt-labs/abstraxion-react`** on web.
 
 With this package, developers can quickly create friendly onboarding experiences and interact with smart contracts as easily as making a POST request in a traditional app.
