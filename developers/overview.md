@@ -199,7 +199,7 @@ Code Agents should install **[verona-dev-plugin](https://github.com/burnt-labs/v
 * **Agent skills home:** [verona-dev-plugin](https://github.com/burnt-labs/verona-dev-plugin) ([INSTALL.md](https://github.com/burnt-labs/verona-dev-plugin/blob/main/INSTALL.md))
 * **CLI automation (Treasury, OAuth2 clients):** [`verona-toolkit`](tools/verona-toolkit.md) — complementary to the Dev Plugin, not a replacement for its skills
 
-Human-oriented toolkit walkthrough: [For AI Agents](../about-verona/ai-agents.md).
+Human-oriented Dev Plugin install: [For AI Agents](../about-verona/ai-agents.md). CLI walkthrough: [verona-toolkit](tools/verona-toolkit.md).
 
 ### Stack selection
 
@@ -227,7 +227,7 @@ Libraries and CLIs for app and automation workflows:
 * [xion.js](https://github.com/burnt-labs/xion.js) — Web App and Mobile App guides under [Accounts](accounts/)
 * [Mob signing library](tools/mob-signing-client.md)
 * [verona-dev-plugin](https://github.com/burnt-labs/verona-dev-plugin) — Code Agent skills ([INSTALL.md](https://github.com/burnt-labs/verona-dev-plugin/blob/main/INSTALL.md)); stack rules in plugin `references/`
-* [For AI Agents](../about-verona/ai-agents.md) — human-oriented `verona-toolkit` quick start
+* [For AI Agents](../about-verona/ai-agents.md) — human-oriented Verona Dev Plugin install
 * [Verona Agent Toolkit](tools/verona-toolkit.md) — CLI for Treasury, OAuth2 clients, and gasless automation
 * [Daemon CLI (`xiond`)](tools/daemon-cli.md)
 
