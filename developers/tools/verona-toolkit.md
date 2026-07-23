@@ -23,7 +23,7 @@ Verona Agent Toolkit is useful when you want to:
 
 - Automate **Treasury management** from terminal or scripts
 - Manage **OAuth2 clients** for your app lifecycle
-- Work with AI agents using a repeatable, documented setup
+- Pair with AI coding agents via [verona-dev-plugin](https://github.com/burnt-labs/verona-dev-plugin) ([INSTALL.md](https://github.com/burnt-labs/verona-dev-plugin/blob/main/INSTALL.md))
 - Build gasless flows without handling private keys directly
 
 If you need conceptual background first, see:
@@ -48,14 +48,21 @@ curl --proto '=https' --tlsv1.2 -LsSf \
 powershell -c "irm https://github.com/burnt-labs/verona-agent-toolkit/releases/latest/download/verona-agent-toolkit-installer.ps1 | iex"
 ```
 
-### Install skills for AI agents
+### AI agents and skills
+
+Agent skills for Verona—including toolkit CLI workflows—ship in **[verona-dev-plugin](https://github.com/burnt-labs/verona-dev-plugin)**. Install the plugin per [INSTALL.md](https://github.com/burnt-labs/verona-dev-plugin/blob/main/INSTALL.md); host-specific steps live there only.
+
+{% hint style="info" %}
+**Migration:** Skills that were previously installed from `verona-agent-toolkit` (for example via `npx skills add`) now live in the Dev Plugin. Use [INSTALL.md](https://github.com/burnt-labs/verona-dev-plugin/blob/main/INSTALL.md) instead of legacy `INSTALL-FOR-AGENTS.md` from the toolkit repo.
+{% endhint %}
+
+After the plugin is installed, authenticate the CLI:
 
 ```bash
-npx skills add burnt-labs/verona-agent-toolkit -g
 verona-toolkit auth login
 ```
 
-Bundled skills include `verona-dev`, `verona-toolkit-init`, `verona-oauth2`, `verona-oauth2-client`, `verona-treasury`, `verona-faucet`, and `verona-asset`. See [Skills Guide](https://github.com/burnt-labs/verona-agent-toolkit/blob/main/docs/skills-guide.md) for routing and advanced chain operations via optional [xion-skills](https://github.com/burnt-labs/xion-skills).
+For the full agent onboarding path, see [For AI Agents](../../about-verona/ai-agents.md).
 
 ### Verify install
 
@@ -64,10 +71,9 @@ verona-toolkit --version
 verona-toolkit --help
 ```
 
-For full installation detail:
+For full CLI installation detail:
 
 - [README](https://github.com/burnt-labs/verona-agent-toolkit/blob/main/README.md)
-- [INSTALL-FOR-AGENTS.md](https://raw.githubusercontent.com/burnt-labs/verona-agent-toolkit/main/INSTALL-FOR-AGENTS.md)
 
 ## Networks
 
@@ -162,27 +168,21 @@ Use this command group to create, update, query, and manage OAuth2 client owners
 
 ## AI agent workflow
 
-If you want your AI agent to set everything up, copy this exact instruction:
+This page covers the **CLI**. For agent skills, routing, and host install, use the Dev Plugin—not bare `npx skills add` against the toolkit repo.
+
+Copy this instruction into your AI coding assistant:
 
 ```text
-Follow this guide https://raw.githubusercontent.com/burnt-labs/verona-agent-toolkit/main/INSTALL-FOR-AGENTS.md to install and configure the Verona Agent Toolkit skills for AI agents.
+Follow this guide https://raw.githubusercontent.com/burnt-labs/verona-dev-plugin/main/INSTALL.md to install and configure the Verona Dev Plugin for AI coding agents.
 ```
 
-Recommended skills for this guide:
-
-- `verona-dev`
-- `verona-toolkit-init`
-- `verona-oauth2`
-- `verona-treasury`
-- `verona-oauth2-client`
-- `verona-faucet`
-- `verona-asset`
+The plugin bundles skills such as `verona-dev`, `verona-toolkit-init`, `verona-oauth2`, `verona-oauth2-client`, `verona-treasury`, `verona-faucet`, and `verona-asset`. When your task needs CLI operations, the agent can run `verona-toolkit` commands from this guide after `verona-toolkit auth login`.
 
 ## Workflow map
 
 ```mermaid
 flowchart TD
-    install[Install CLI and skills] --> auth[Authenticate]
+    install[Install CLI] --> auth[Authenticate]
     auth --> treasury[Treasury management]
     treasury --> oauth[OAuth2 client management]
     oauth --> integrate[Integrate with app]
@@ -223,8 +223,8 @@ For complete error handling details:
 
 ## Detailed references
 
-- [Verona Agent Toolkit Repository](https://github.com/burnt-labs/verona-agent-toolkit)
+- [Verona Dev Plugin Repository](https://github.com/burnt-labs/verona-dev-plugin) — agent skills ([INSTALL.md](https://github.com/burnt-labs/verona-dev-plugin/blob/main/INSTALL.md))
+- [Verona Agent Toolkit Repository](https://github.com/burnt-labs/verona-agent-toolkit) — CLI binary distribution and command reference
 - [CLI Reference](https://github.com/burnt-labs/verona-agent-toolkit/blob/main/docs/cli-reference.md)
 - [Quick Reference](https://github.com/burnt-labs/verona-agent-toolkit/blob/main/docs/QUICK-REFERENCE.md)
-- [Skills Guide](https://github.com/burnt-labs/verona-agent-toolkit/blob/main/docs/skills-guide.md)
-- [Install for AI Agents](https://raw.githubusercontent.com/burnt-labs/verona-agent-toolkit/main/INSTALL-FOR-AGENTS.md)
+- [For AI Agents](../../about-verona/ai-agents.md)
