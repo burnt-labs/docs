@@ -27,7 +27,7 @@ You can find the source code here: [github.com/burnt-labs/contracts/tree/main/co
 
 Before you begin, make sure you have the following installed:
 
-* [Node.js](https://nodejs.org) (v18+)
+* [Node.js](https://nodejs.org) (v24+)
 * [Git](https://git-scm.com)
 
 ## Create Instance of User Map and Treasury Contracts

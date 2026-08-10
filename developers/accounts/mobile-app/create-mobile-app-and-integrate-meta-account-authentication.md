@@ -8,7 +8,7 @@ This guide walks you through how to integrate Meta Account authentication into y
 
 Before getting started, ensure you have the following installed:
 
-* [Node.js](https://nodejs.org/en/) (v16 or later)
+* [Node.js](https://nodejs.org/en/) (v24 or later)
 * A code editor like [VS Code](https://code.visualstudio.com/)
 
 

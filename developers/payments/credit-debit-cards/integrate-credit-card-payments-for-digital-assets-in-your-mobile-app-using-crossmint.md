@@ -39,7 +39,7 @@ Before diving in, let’s make sure you have the essentials ready.
 
 Make sure you have the following installed:
 
-* Node.js v18+ and npm
+* Node.js v24+ and npm
 * iOS or Android emulator (or a physical device)
 * VS Code (recommended)
 

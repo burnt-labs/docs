@@ -39,7 +39,7 @@ Let's run the starter application as it was designed using the Coingecko API.
 
 #### 1. Prerequisites
 
-1. Make sure you have Node.js installed (v14 or higher)
+1. Make sure you have Node.js installed (v24 or higher)
 2. Ensure your **.env** file has valid Reclaim credentials which includes the `REACT_APP_RECLAIM_APP_ID` and `REACT_APP_RECLAIM_APP_SECRET`. To get these values you’ll need to:
    1. Visit [Reclaim](https://dev.reclaimprotocol.org/explore) and sign in.
    2. Create a new application.
