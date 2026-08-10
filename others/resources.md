@@ -1,19 +1,17 @@
 ---
 description: Additional resources and relevant links
+icon: cubes-stacked
 ---
 
 # Resources
 
-**Website**: [https://xion.burnt.com](https://xion.burnt.com)
+**Website**: [https://burnt.com](https://burnt.com)
 
-**Blog**: [https://xion.burnt.com/blog](https://xion.burnt.com/blog)
+**Discord**: [https://discord.gg/verona](https://discord.gg/verona)
 
-**Twitter**: [https://twitter.com/burnt\_xion](https://twitter.com/burnt\_xion)
+**Developer Ecosystem (Telegram)**: [https://t.me/+5KA8xBuU5wYzZjU0](https://t.me/+5KA8xBuU5wYzZjU0)
 
-**Discord**: [https://discord.gg/burnt](https://discord.gg/burnt)
+**Verona Media Kit**: [https://github.com/burnt-labs/media-kit](https://github.com/burnt-labs/media-kit)
 
 **Guild**: [https://guild.xyz/burnt](https://guild.xyz/burnt)
 
-**XION Brand Kit**: [https://drive.google.com/drive/folders/1QJdAVN3vCD7Cu28h6SaKvDeY8PY7xA0w?usp=sharing](https://drive.google.com/drive/folders/1QJdAVN3vCD7Cu28h6SaKvDeY8PY7xA0w?usp=sharing)
-
-**Whitepaper:** [xion.burnt.com/whitepaper.pdf](https://xion.burnt.com/whitepaper.pdf)
