@@ -13,7 +13,7 @@ While setting up a rudimentary validator node is easy, running a production-grad
 This section assumes that:
 
 * You've successfully setup a Full Node
-* You've joined one of the Xion Networks and have synced the chain
+* You've joined one of the Verona networks and have synced the chain
 * You've funded a wallet on the Full Node
 
 
@@ -31,7 +31,7 @@ $ xiond tx staking create-validator \
     --security-contact "email@copypaste.com" \
     --website "www.copypaste.com" \
     --details "I copy-pasted this command." \
-    --chain-id "xion-testnet-1" \
+    --chain-id "xion-testnet-2" \
     --commission-rate "0.05" \
     --commission-max-rate "0.25" \
     --commission-max-change-rate "0.1" \
@@ -57,7 +57,7 @@ $ xiond query tendermint-validator-set | grep "$(xiond tendermint show-validator
 {% hint style="info" %}
 :warning: **Active Set is 100 Validators**
 
-The Active Set for the Xion Networks cuts off at 100 Validators.
+The Active Set for the Verona networks cuts off at 100 Validators.
 
 If you're not in the active set, you will need to court delegations to increase your total stake, such that it is greater than the total stake of the 100th Validator.
 {% endhint %}
