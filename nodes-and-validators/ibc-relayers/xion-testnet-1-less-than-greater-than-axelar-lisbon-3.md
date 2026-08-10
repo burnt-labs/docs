@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # xion-testnet-1 <=> axelar-lisbon-3
 
 **Channel information**
@@ -32,7 +36,7 @@ balances:
   denom: ibc/33517D439F5E545A1AAB148FAE43AAE17CF68FFB9BC97AE0048A3E3B64518C58
 ```
 
-* XION on Axelar
+* $VERONA on Axelar
 
 ```
 balances:

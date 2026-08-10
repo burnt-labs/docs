@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # xion-testnet-1 <=> injective-888
 
 **Channel Information**
@@ -32,7 +36,7 @@ balances:
   denom: ibc/05314A48723E06A1B1B666066B6BEC89F3708E8854DF2E5E9193387AA9653036
 ```
 
-* XION on Injective
+* $VERONA on Injective
 
 ```
 balances:
