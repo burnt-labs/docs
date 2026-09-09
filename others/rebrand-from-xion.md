@@ -57,7 +57,7 @@ The technical stack you build on today is the foundation for that intelligence l
 
 **$VERONA** (Previously $XION) is the network's native token for **staking, governance, and settlement** (on-chain denom `uxion`). End-user applications typically sponsor gas via Treasury contracts, so value is not primarily a "gas token" story.
 
-Network value capture is designed around **ecosystem revenue**—revenue share from apps on the network, enterprise verification revenue, and agent-driven on-chain activity—routing into **buyback and burn** over time. Specific buyback percentages and emission schedules are not final until Phase 2 messaging.
+Network value capture is designed around **ecosystem revenue**—revenue share from apps on the network, enterprise verification revenue, and agent-driven on-chain activity. Specific figures are not final until Phase 2 messaging.
 
 ## Where to go next
 
