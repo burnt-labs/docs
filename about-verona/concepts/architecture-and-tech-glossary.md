@@ -50,4 +50,3 @@ description: Key Terms and Concepts
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **$VERONA**        | The native token of the Verona network (Previously $XION). Used for staking, governance, and on-chain settlement (denom `uxion`). End users typically experience **gasless** flows when applications sponsor fees via Treasury contracts; see [Treasury contracts](../../developers/accounts/getting-started/treasury-contracts.md). |
 | **Revenue Share**  | Agreements where application or verification revenue can flow back to the protocol. Specific figures should only be published after marketing and legal approval. |
-| **Buyback & Burn** | The mechanism by which ecosystem revenue is used to purchase and permanently remove $VERONA from circulation, creating deflationary pressure.     |

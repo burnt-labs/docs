@@ -12,7 +12,7 @@ Junio de 2026
 
 Verona es la capa de inteligencia para la IA. Hace que los datos verificados por el usuario sean portables, privados y programables, de modo que cualquier agente pueda realizar transacciones sobre información que el usuario realmente posee.
 
-Hoy un agente puede hablar, pero no puede actuar, porque lo único que necesita, un hecho verificado que esté autorizado a usar, no existe en una forma que pueda alcanzar. Verona hace que ese hecho exista. Un hecho se verifica una vez en su fuente, el usuario lo posee, y cualquier agente autorizado por el usuario lo reutiliza sin que los datos subyacentes queden expuestos. La red combina verificación en la fuente, ejecución confiable, liquidación privada, verificación formal y pagos programables en stablecoin, y ya genera ingresos a partir de aplicaciones reales. Verifica una vez, reutiliza en todas partes, no expongas nada.
+Hoy un agente puede hablar, pero no puede actuar, porque lo único que necesita, un hecho verificado que esté autorizado a usar, no existe en una forma que pueda alcanzar. Verona hace que ese hecho exista. Un hecho se verifica una vez en su fuente, el usuario lo posee, y cualquier agente autorizado por el usuario lo reutiliza sin que los datos subyacentes queden expuestos. La red combina verificación en la fuente, ejecución confiable, liquidación privada, verificación formal y pagos programables en stablecoin. Verifica una vez, reutiliza en todas partes, no expongas nada.
 
 ## 1 Introducción
 
@@ -155,40 +155,6 @@ Verona tiene un token de red, VERONA, y una unidad de liquidación estable, una 
 VERONA es el token nativo de red que impulsa la capa de inteligencia para la IA. Paga la ejecución bajo la superficie, coordina el acceso y la seguridad, y acumula valor a partir de la actividad verificada, es decir, ingresos, en la red. La stablecoin nativa es la unidad que usuarios, aplicaciones, agentes y empresas usan para pagar, recibir y liquidar en una denominación estable.
 
 Aplicaciones, agentes y empresas pueden interactuar mediante rieles familiares como fiat o stablecoin. Debajo de esa experiencia, la actividad verificada crea ingresos de red, y los ingresos de red crean demanda de VERONA, lo que a su vez aumenta la seguridad de la red.
-
-### 7.1 Una red que genera valor
-
-Verona recibe una parte de los ingresos de los casos de uso y aplicaciones que impulsa, porque la red tiene éxito cuando esas aplicaciones tienen éxito, y no gana nada con el spam. Verona genera ingresos hoy, y esos ingresos contribuirán a una recompra y quema programática. El valor y la seguridad de la red se acumulan a partir de actividad económica real, no de contar transacciones.
-
-### 7.2 Fuentes de ingresos
-
-Verona genera ingresos hoy y está diseñada para expandir sus superficies de ingresos a medida que la red crece entre aplicaciones, agentes, marketplaces y productos de inteligencia autorizada. Los ingresos se aportan a la recompra y quema programática del token.
-
-- Participación en ingresos de aplicaciones del ecosistema. Un porcentaje predefinido de los ingresos de un proyecto se toma como tarifa de plataforma. Estas tarifas son un contribuyente importante para asegurar la seguridad y perfeccionar la inteligencia de Verona Network.
-
-- Tarifas de verificación. Aplicaciones, agentes y empresas pueden pagar para verificar hechos en la fuente, comprobar predicados, actualizar hechos que necesitan estado vigente, verificar procedencia o confirmar validez y estado de revocación. Esto incluye zkTLS para una sesión web, zkEmail para correo electrónico, zkPassport para identidad, una App o Enclave Attestation para una aplicación, una Photo Attestation para una imagen real y auténtica, y zkDCap para una prueba en cadena de una atestación de hardware.
-
-- Contratos empresariales. Pagos directos de marcas y empresas por infraestructura de verificación: prevención de fraude, segmentación verificada, verificación de usuarios e infraestructura de fidelización.
-
-- Tarifas por reutilización de datos verificados. Un hecho verificado una vez puede ser reutilizado por destinatarios autorizados. La reutilización puede generar tarifas cuando un hecho verificado se presenta, transforma, vuelve a cifrar, actualiza o delega a un agente.
-
-- Tarifas de interacción de agentes y liquidación de acciones. Los agentes realizan acciones en cadena para operar en nombre de un usuario. A medida que los agentes transaccionan sobre datos verificados, la liquidación genera tarifas. Los agentes pueden actuar sobre hechos verificados, cambiar permisos, liquidar pagos, presentar credenciales y transaccionar con servicios u otros agentes.
-
-- Inteligencia empresarial y cómputo privado. Las empresas pagan para computar sobre hechos autorizados sin verlos nunca en claro. El cómputo se ejecuta dentro de un entorno de ejecución confiable (TEE), de modo que los hechos subyacentes nunca salen del control del usuario y el propio cálculo es verificable. La empresa obtiene inteligencia a la que no podría acceder de otro modo, mientras los usuarios conservan la propiedad de los datos de los que se deriva. Las cargas de trabajo pueden incluir consultas agregadas, puntuación verificada, decisiones de elegibilidad, modelos de fraude, derivaciones entre fuentes e inteligencia permanente que se actualiza a medida que cambian los hechos.
-
-- Retornos de reservas de liquidación. La capa de liquidación estable de la red está totalmente respaldada, y los retornos generados por esas reservas pueden contribuir a los ingresos de la red, cuando estén disponibles y sean legalmente permisibles.
-
-### 7.3 La stablecoin nativa
-
-Verona tendrá un dólar digital uno a uno, totalmente respaldado, de un emisor regulado. Lleva retornos generados por reservas bajo una estructura escalonada. Los agentes pueden usarlo para pagar verificación, acceso a pruebas, cómputo y acciones completadas. Las empresas pueden usarlo para pagar flujos de verificación e inteligencia autorizada. Los usuarios pueden recibir beneficios estables cuando los hechos que autorizan crean valor económico.
-
-### 7.4 Cómo se acumula el valor y aumenta la seguridad de la red
-
-Los ingresos de red financian recompras y quemas. Verona no depende de emisiones perpetuas como su motor económico central.
-
-![](../../.gitbook/assets/litepaper-image10.png)
-
-Los tokens se recompran con ingresos y se aportan a la quema programática. A medida que los ingresos crecen hasta cubrir el costo de operar la red, cae la parte inflacionaria de las recompensas.
 
 ## 8 Conclusión
 
