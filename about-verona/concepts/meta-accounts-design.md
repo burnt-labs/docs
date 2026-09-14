@@ -56,7 +56,7 @@ The temporary key generated on the app side which is granted ContractExecutionAu
 
 <summary>FeeGrantTreasury</summary>
 
-A account a app may user to sponsor transactions submitted by the UserSessionKey.
+An account an app may use to sponsor transactions submitted by the UserSessionKey.
 
 </details>
 
