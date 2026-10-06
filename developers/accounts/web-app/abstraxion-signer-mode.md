@@ -123,4 +123,4 @@ If your **`SignerAuthentication`** type still lists **`aaApiUrl`** / **`smartAcc
 | No | `NEXT_PUBLIC_TURNKEY_ORG_ID` / `VITE_TURNKEY_ORG_ID` | Turnkey demo wiring only |
 | No | `NEXT_PUBLIC_TURNKEY_API_BASE_URL` / `VITE_TURNKEY_API_BASE_URL` | Turnkey demo wiring only |
 
-**Next.js:** if a server layout reads **`process.env` at runtime**, use **`export const dynamic = "force-dynamic"`**. The **demo** reads the AA API URL and code id from env; if **`AA_API_URL`** / **`CODE_ID`** are missing in the browser, it shows a **setup notice** instead of signer mode. Your app can instead **hardcode or merge** the `.env.example` preset for your **`chainId`** and omit those env vars.
+**Next.js:** if a server layout reads **`process.env` at runtime**, use **`export const dynamic = "force-dynamic"`**. The **demo** reads the AA API URL and code id from env; if **`VITE_AA_API_URL`** / **`VITE_CODE_ID`** (Vite) or **`NEXT_PUBLIC_AA_API_URL`** / **`NEXT_PUBLIC_CODE_ID`** (Next.js) are missing in the browser, it shows a **setup notice** instead of signer mode. Your app can instead **hardcode or merge** the `.env.example` preset for your **`chainId`** and omit those env vars.
