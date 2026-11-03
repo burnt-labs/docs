@@ -152,9 +152,9 @@ This is the larger direction of the network: verified data as economic infrastru
 
 Verona has one network token, VERONA, and one stable settlement unit, a native stablecoin. They do different jobs.
 
-Verona is the native network token powering the intelligence layer for AI. It pays for execution under the hood, coordinates access and security, and accrues value from verified activity (i.e. revenue) on the network. The native stablecoin is the unit users, applications, agents, and enterprises use to pay, receive, and settle in a stable denomination.
+Verona is the native network token powering the intelligence layer for AI. It pays for execution under the hood, coordinates access and security on the network. The native stablecoin is the unit users, applications, agents, and enterprises use to pay, receive, and settle in a stable denomination.
 
-Applications, agents, and enterprises can interact through familiar rails like fiat or stablecoin. Underneath that experience, verified activity creates network revenue, and network revenue creates demand for VERONA, which in turn increases network security.
+Applications, agents, and enterprises can interact through familiar rails like fiat or stablecoin. Underneath that experience, verified activity generates value for the network, and that value creates demand for VERONA, which in turn increases network security.
 
 ## 8 Conclusion
 
