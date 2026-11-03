@@ -152,9 +152,9 @@ Esta es la dirección más amplia de la red: datos verificados como infraestruct
 
 Verona tiene un token de red, VERONA, y una unidad de liquidación estable, una stablecoin nativa. Cumplen funciones distintas.
 
-VERONA es el token nativo de red que impulsa la capa de inteligencia para la IA. Paga la ejecución bajo la superficie, coordina el acceso y la seguridad, y acumula valor a partir de la actividad verificada, es decir, ingresos, en la red. La stablecoin nativa es la unidad que usuarios, aplicaciones, agentes y empresas usan para pagar, recibir y liquidar en una denominación estable.
+VERONA es el token nativo de red que impulsa la capa de inteligencia para la IA. Paga la ejecución bajo la superficie y coordina el acceso y la seguridad en la red. La stablecoin nativa es la unidad que usuarios, aplicaciones, agentes y empresas usan para pagar, recibir y liquidar en una denominación estable.
 
-Aplicaciones, agentes y empresas pueden interactuar mediante rieles familiares como fiat o stablecoin. Debajo de esa experiencia, la actividad verificada crea ingresos de red, y los ingresos de red crean demanda de VERONA, lo que a su vez aumenta la seguridad de la red.
+Aplicaciones, agentes y empresas pueden interactuar mediante rieles familiares como fiat o stablecoin. Debajo de esa experiencia, la actividad verificada genera valor para la red, y ese valor crea demanda de VERONA, lo que a su vez aumenta la seguridad de la red.
 
 ## 8 Conclusión
 
