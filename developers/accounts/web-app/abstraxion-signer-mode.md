@@ -95,8 +95,8 @@ Match **`SignerModePage.tsx`** or extend it. Full commented env: **[`demos/react
 | Yes | **`type`** | Must be **`"signer"`**. |
 | Yes | **`getSignerConfig`** | Your async factory → **`SignerConfig`**. |
 | Preset/override | **`aaApiUrl`** | Must still be provided by your app at runtime, typically from the **preset URL** for your **`chainId`** from `.env.example` (or via override). **Demo** config reads **`VITE_AA_API_URL`** or **`NEXT_PUBLIC_AA_API_URL`**. |
-| Preset/override | **`smartAccountContract`** | Must still be provided by your app at runtime, typically from the **preset wasm** for that network + AA API from `.env.example` (or via override). **`codeId` / `checksum`** must match the AA API you use. |
-| No | **`indexer`** | Set when using **`VITE_INDEXER_URL`** / **`NEXT_PUBLIC_INDEXER_URL`** (+ type/token per `.env.example`); else RPC discovery. |
+| Preset/override | **`smartAccountContract`** | **`{ codeId, addressPrefix }`**, needed to create accounts. **Addresses come from the AA API** at **`aaApiUrl`**: the SDK asks it for the address to create (`GET /api/v2/account/address/...`) and for existing accounts (`GET /api/v2/account/check/...`), so you configure no contract checksum. **`checksum`** is deprecated and ignored; **`codeId`** is still part of the type but does not choose the address. |
+| No | **`indexer`** | Set when using **`VITE_INDEXER_URL`** / **`NEXT_PUBLIC_INDEXER_URL`** (+ type/token per `.env.example`). Used for discovery only when **`smartAccountContract`** is omitted; with it set, the AA API is the only discovery source. |
 | No | **`treasuryIndexer`** | **`{ url }`** when treasury indexer env is set. |
 
 If your **`SignerAuthentication`** type still lists **`aaApiUrl`** / **`smartAccountContract`**, populate them from the **same `chainId` preset** (not new values you invent)—equivalent to copying the block for that network from **[`demos/react/.env.example`](https://github.com/burnt-labs/xion.js/blob/main/demos/react/.env.example)** into config.
@@ -105,14 +105,13 @@ If your **`SignerAuthentication`** type still lists **`aaApiUrl`** / **`smartAcc
 
 **`chainId`** is required. **`normalizeAbstraxionConfig`** fills **`rpcUrl`**, **`restUrl`**, **`gasPrice`**, and **`feeGranter`** from **`@burnt-labs/constants`** when omitted for a known Verona **`chainId`**.
 
-**`aaApiUrl`** and **`smartAccountContract`** are **not** filled by that same helper in the public SDK today—treat them as **documented presets per network** (same values as the **`chainId` block** in **[`demos/react/.env.example`](https://github.com/burnt-labs/xion.js/blob/main/demos/react/.env.example)**): copy or merge them in app config. You override only for **custom** AA / wasm.
+**`aaApiUrl`** and **`smartAccountContract`** are **not** filled by that same helper in the public SDK today—treat them as **documented presets per network** (same values as the **`chainId` block** in **[`demos/react/.env.example`](https://github.com/burnt-labs/xion.js/blob/main/demos/react/.env.example)**): copy or merge them in app config. You override only for a **custom** AA API.
 
 | Required? | Variable | Maps to |
 | --------- | -------- | ------- |
 | Yes | `NEXT_PUBLIC_CHAIN_ID` or `VITE_CHAIN_ID` | `config.chainId` — required network id; enables RPC/REST/gas/fee-granter **defaults** via **`normalizeAbstraxionConfig`** when those env vars are unset. |
 | No | `NEXT_PUBLIC_AA_API_URL` / `VITE_AA_API_URL` | `authentication.aaApiUrl` — **override**; demo reads from env. |
-| No | `NEXT_PUBLIC_CODE_ID` / `VITE_CODE_ID` | `authentication.smartAccountContract.codeId` — **override**; demo reads from env. |
-| No | `NEXT_PUBLIC_CHECKSUM` / `VITE_CHECKSUM` | `authentication.smartAccountContract.checksum` — **override**; demo reads from env. |
+| No | `NEXT_PUBLIC_CODE_ID` / `VITE_CODE_ID` | `authentication.smartAccountContract.codeId` — demo reads from env; it does not affect the account address. |
 | No | `NEXT_PUBLIC_ADDRESS_PREFIX` / `VITE_ADDRESS_PREFIX` | `authentication.smartAccountContract.addressPrefix` (demo → **`xion`** if unset) |
 | No | `NEXT_PUBLIC_RPC_URL` / `VITE_RPC_URL` | `config.rpcUrl` |
 | No | `NEXT_PUBLIC_REST_URL` / `VITE_REST_URL` | `config.restUrl` |
@@ -124,4 +123,4 @@ If your **`SignerAuthentication`** type still lists **`aaApiUrl`** / **`smartAcc
 | No | `NEXT_PUBLIC_TURNKEY_ORG_ID` / `VITE_TURNKEY_ORG_ID` | Turnkey demo wiring only |
 | No | `NEXT_PUBLIC_TURNKEY_API_BASE_URL` / `VITE_TURNKEY_API_BASE_URL` | Turnkey demo wiring only |
 
-**Next.js:** if a server layout reads **`process.env` at runtime**, use **`export const dynamic = "force-dynamic"`**. The **demo** reads AA / wasm from env; if **`CODE_ID`** / **`CHECKSUM`** are missing in the browser, it **logs an error**. Your app can instead **hardcode or merge** the `.env.example` preset for your **`chainId`** and omit those env vars.
+**Next.js:** if a server layout reads **`process.env` at runtime**, use **`export const dynamic = "force-dynamic"`**. The **demo** reads the AA API URL and code id from env; if **`VITE_AA_API_URL`** / **`VITE_CODE_ID`** (Vite) or **`NEXT_PUBLIC_AA_API_URL`** / **`NEXT_PUBLIC_CODE_ID`** (Next.js) are missing in the browser, it shows a **setup notice** instead of signer mode. Your app can instead **hardcode or merge** the `.env.example` preset for your **`chainId`** and omit those env vars.
