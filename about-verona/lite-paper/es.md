@@ -12,7 +12,7 @@ Junio de 2026
 
 Verona es la capa de inteligencia para la IA. Hace que los datos verificados por el usuario sean portables, privados y programables, de modo que cualquier agente pueda realizar transacciones sobre información que el usuario realmente posee.
 
-Hoy un agente puede hablar, pero no puede actuar, porque lo único que necesita, un hecho verificado que esté autorizado a usar, no existe en una forma que pueda alcanzar. Verona hace que ese hecho exista. Un hecho se verifica una vez en su fuente, el usuario lo posee, y cualquier agente autorizado por el usuario lo reutiliza sin que los datos subyacentes queden expuestos. La red combina verificación en la fuente, ejecución confiable, liquidación privada, verificación formal y pagos programables en stablecoin. Verifica una vez, reutiliza en todas partes, no expongas nada.
+Hoy un agente puede hablar, pero no puede actuar, porque lo único que necesita, un hecho verificado que esté autorizado a usar, no existe en una forma que pueda alcanzar. Verona hace que ese hecho exista. Un hecho se verifica una vez en su fuente, el usuario lo posee, y cualquier agente autorizado por el usuario lo reutiliza sin que los datos subyacentes queden expuestos. La red combina verificación en la fuente, ejecución confiable, liquidación privada de datos, verificación formal y pagos programables en stablecoin. Verifica una vez, reutiliza en todas partes, no expongas nada.
 
 ## 1 Introducción
 
@@ -30,7 +30,7 @@ Verona verifica un hecho una vez, entrega la propiedad al usuario y permite que 
 
 - Hechos verificados como primitivo - Una verificación se convierte en un activo duradero que el usuario posee, no en una comprobación de un solo uso.
 
-- Liquidación privada - Los hechos y las acciones realizadas sobre ellos se liquidan en una cadena con estado público y privado híbrido.
+- Liquidación privada de datos - Los hechos verificados y las acciones realizadas sobre ellos se liquidan en una cadena con estado público y privado híbrido. La privacidad se aplica a los datos, no al dinero: los saldos y las transferencias de VERONA son siempre públicos.
 
 - Verificación formal - La cadena se comprueba contra especificaciones verificadas por máquina, de modo que un agente pueda confiar en ella.
 
@@ -56,13 +56,13 @@ Los datos almacenados solo pueden transformarse en la respuesta que el destinata
 
 ![](../../.gitbook/assets/litepaper-image1.png)
 
-### 2.3 Liquidación privada
+### 2.3 Liquidación privada de datos
 
-Los hechos y las acciones realizadas sobre ellos se liquidan en una única cadena con estado público y privado híbrido.
+Los hechos verificados y las acciones realizadas sobre ellos se liquidan en una única cadena con estado público y privado híbrido. El estado privado contiene datos, no dinero.
 
-![](../../.gitbook/assets/litepaper-image9.png)
+Lo que debe ser público es público. Lo que debe permanecer confidencial (los términos de un acuerdo, el contenido de un hecho verificado) permanece confidencial en la misma cadena. Como las claves se mantienen en enclaves de hardware y la pila de procedencia es abierta, los datos privados pueden producir salidas públicas en las que otros pueden confiar y sobre las que pueden actuar. No hay un segundo sistema añadido para la privacidad. Es una sola cadena.
 
-Lo que debe ser público es público. Lo que debe permanecer confidencial (saldos, términos, el contenido de un hecho verificado) permanece confidencial en la misma cadena. Como las claves se mantienen en enclaves de hardware y la pila de procedencia es abierta, los datos privados pueden producir salidas públicas en las que otros pueden confiar y sobre las que pueden actuar. No hay un segundo sistema añadido para la privacidad. Es una sola cadena.
+La privacidad en Verona se aplica solo a los datos. No se utiliza para la liquidación monetaria y no se extiende al token VERONA: todos los saldos y transferencias de VERONA se registran en el estado público y cualquiera puede verlos y verificarlos a través de exploradores de bloques públicos, como en cualquier otra blockchain pública.
 
 ### 2.4 Verificación formal
 

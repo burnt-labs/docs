@@ -12,7 +12,7 @@ June 2026
 
 Verona is the intelligence layer for AI. It makes user-verified data portable, private, and programmable, so any agent can transact on information the user actually owns.
 
-Today an agent can talk but it cannot act, because the one thing it needs, a verified fact it is allowed to use, does not exist in a form it can reach. Verona makes that fact exist. A fact is verified once at its source, the user owns it, and any agent the user authorizes reuses it without the underlying data ever being exposed. The network combines verification at the source, trusted execution, private settlement, formal verification, and programmable payments in stablecoin. Verify once, reuse everywhere, expose nothing.
+Today an agent can talk but it cannot act, because the one thing it needs, a verified fact it is allowed to use, does not exist in a form it can reach. Verona makes that fact exist. A fact is verified once at its source, the user owns it, and any agent the user authorizes reuses it without the underlying data ever being exposed. The network combines verification at the source, trusted execution, private data settlement, formal verification, and programmable payments in stablecoin. Verify once, reuse everywhere, expose nothing.
 
 ## 1 Introduction
 
@@ -30,7 +30,7 @@ Verona verifies a fact once, hands ownership to the user, and lets any agent the
 
 - Verified facts as a primitive - A verification becomes a durable asset the user owns, not a one-time check.
 
-- Private settlement - Facts and the actions taken on them settle on one chain with hybrid public and private state.
+- Private data settlement - Verified facts and the actions taken on them settle on one chain with hybrid public and private state. Privacy covers data, not money: VERONA balances and transfers are always public.
 
 - Formal verification - The chain is checked against machine-checked specifications, so an agent can rely on it.
 
@@ -56,13 +56,13 @@ Stored data can only be transformed into the answer a recipient needs, which lea
 
 ![](../../.gitbook/assets/litepaper-image1.png)
 
-### 2.3 Private settlement
+### 2.3 Private data settlement
 
-Facts and the actions taken on them settle on a single chain with hybrid public and private state.
+Verified facts and the actions taken on them settle on a single chain with hybrid public and private state. The private state holds data, not money.
 
-![](../../.gitbook/assets/litepaper-image9.png)
+What should be public is public. What should stay confidential (the terms of an agreement, the content of a verified fact) stays confidential on the same chain. Because keys are held in hardware enclaves and the provenance stack is open, private data can produce public outputs that others can trust and act on. There is no second system bolted on for privacy. It is one chain.
 
-What should be public is public. What should stay confidential (balances, terms, the content of a verified fact) stays confidential on the same chain. Because keys are held in hardware enclaves and the provenance stack is open, private data can produce public outputs that others can trust and act on. There is no second system bolted on for privacy. It is one chain.
+Privacy on Verona applies only to data. It is not used for monetary settlement and does not extend to the VERONA token: every VERONA balance and transfer is recorded in public state and can be seen and verified by anyone through public block explorers, as on any other public blockchain.
 
 ### 2.4 Formal verification
 
