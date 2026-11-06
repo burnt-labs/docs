@@ -1,5 +1,7 @@
 # Verona Litepaper
 
+Last updated: November 6, 2026.
+
 ## Making AI intelligent
 
 The intelligence layer for AI. Verified facts about the real world, owned by the user, reusable by any agent.
@@ -96,7 +98,7 @@ Verona compounds because every participant adds value to the same pool of verifi
 
 - Source systems and verifiers expand what the network can know. Payroll providers, identity systems, banks, email, passports, apps, devices, commerce platforms, and healthcare systems each produce a proof matched to the fact being verified, and every new source makes the facts on the network broader and better.
 
-- Token and network participants run the economic layer underneath, providing settlement, security, and liquidity for everything above it.
+- Token and network participants run the economic layer underneath, providing settlement, security, and liquidity for everything above it. Staking rewards are funded by protocol issuance, not by platform or verification fees, and do not vary with network performance.
 
 ## 4 What it powers
 
@@ -154,7 +156,7 @@ Verona has one network token, VERONA, and one stable settlement unit, a native s
 
 Verona is the native network token powering the intelligence layer for AI. It pays for execution under the hood, coordinates access and security on the network. The native stablecoin is the unit users, applications, agents, and enterprises use to pay, receive, and settle in a stable denomination.
 
-Applications, agents, and enterprises can interact through familiar rails like fiat or stablecoin. Underneath that experience, verified activity generates value for the network, and that value creates demand for VERONA, which in turn increases network security.
+Applications, agents, and enterprises can interact through familiar rails like fiat or stablecoin. Underneath that experience, network activity settles with VERONA as gas, and VERONA staking and bonding secure the network.
 
 ## 8 Conclusion
 
