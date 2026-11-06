@@ -1,5 +1,7 @@
 # Verona Litepaper
 
+Última actualización: 6 de noviembre de 2026.
+
 ## Hacer que la IA sea inteligente
 
 La capa de inteligencia para la IA. Hechos verificados sobre el mundo real, propiedad del usuario y reutilizables por cualquier agente.
@@ -96,7 +98,7 @@ Verona se compone porque cada participante añade valor al mismo conjunto de hec
 
 - Los sistemas fuente y verificadores amplían lo que la red puede saber. Proveedores de nómina, sistemas de identidad, bancos, correo electrónico, pasaportes, aplicaciones, dispositivos, plataformas de comercio y sistemas de salud producen cada uno una prueba adaptada al hecho que se verifica, y cada nueva fuente hace que los hechos en la red sean más amplios y mejores.
 
-- Los participantes del token y de la red operan la capa económica subyacente, proporcionando liquidación, seguridad y liquidez para todo lo que está encima.
+- Los participantes del token y de la red operan la capa económica subyacente, proporcionando liquidación, seguridad y liquidez para todo lo que está encima. Las recompensas de staking se financian con la emisión del protocolo, no con comisiones de la plataforma ni de verificación, y no varían según el rendimiento de la red.
 
 ## 4 Qué impulsa
 
@@ -154,7 +156,7 @@ Verona tiene un token de red, VERONA, y una unidad de liquidación estable, una 
 
 VERONA es el token nativo de red que impulsa la capa de inteligencia para la IA. Paga la ejecución bajo la superficie y coordina el acceso y la seguridad en la red. La stablecoin nativa es la unidad que usuarios, aplicaciones, agentes y empresas usan para pagar, recibir y liquidar en una denominación estable.
 
-Aplicaciones, agentes y empresas pueden interactuar mediante rieles familiares como fiat o stablecoin. Debajo de esa experiencia, la actividad verificada genera valor para la red, y ese valor crea demanda de VERONA, lo que a su vez aumenta la seguridad de la red.
+Aplicaciones, agentes y empresas pueden interactuar mediante rieles familiares como fiat o stablecoin. Debajo de esa experiencia, la actividad de la red se liquida con VERONA como gas, y el staking y el bonding de VERONA protegen la red.
 
 ## 8 Conclusión
 
